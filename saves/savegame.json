@@ -1,0 +1,86 @@
+{
+    "nord_df": [
+        {
+            "Team": "Berlin EisB\u00e4ren",
+            "Players": [
+                {
+                    "Name": "Player A",
+                    "Offense": 85,
+                    "Defense": 75,
+                    "Speed": 72,
+                    "Chemistry": 70
+                },
+                {
+                    "Name": "Player B",
+                    "Offense": 80,
+                    "Defense": 73,
+                    "Speed": 70,
+                    "Chemistry": 68
+                }
+            ],
+            "Momentum": 0,
+            "Points": 0,
+            "Goals For": 0,
+            "Goals Against": 0
+        }
+    ],
+    "sued_df": [
+        {
+            "Team": "Ingolstadt Indigo Panther",
+            "Players": [
+                {
+                    "Name": "Player G",
+                    "Offense": 82,
+                    "Defense": 74,
+                    "Speed": 71,
+                    "Chemistry": 69
+                },
+                {
+                    "Name": "Player H",
+                    "Offense": 78,
+                    "Defense": 72,
+                    "Speed": 70,
+                    "Chemistry": 68
+                }
+            ],
+            "Momentum": 0,
+            "Points": 0,
+            "Goals For": 0,
+            "Goals Against": 0
+        }
+    ],
+    "nord_schedule": [],
+    "sued_schedule": [],
+    "player_stats": [
+        {
+            "Player": "Player A",
+            "Team": "Berlin EisB\u00e4ren",
+            "Goals": 0,
+            "Assists": 0,
+            "Points": 0
+        },
+        {
+            "Player": "Player B",
+            "Team": "Berlin EisB\u00e4ren",
+            "Goals": 0,
+            "Assists": 0,
+            "Points": 0
+        },
+        {
+            "Player": "Player G",
+            "Team": "Ingolstadt Indigo Panther",
+            "Goals": 0,
+            "Assists": 0,
+            "Points": 0
+        },
+        {
+            "Player": "Player H",
+            "Team": "Ingolstadt Indigo Panther",
+            "Goals": 0,
+            "Assists": 0,
+            "Points": 0
+        }
+    ],
+    "spieltag": 2,
+    "playoffs": []
+}
