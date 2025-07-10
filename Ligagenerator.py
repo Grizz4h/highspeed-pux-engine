@@ -8,6 +8,7 @@ import os
 # -------------------------------
 
 def save_progress(filename, data):
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, 'w') as f:
         json.dump(data, f, indent=4)
 
@@ -20,7 +21,7 @@ def load_progress(filename):
 
 # -------------------------------
 # 🏒 2. TEAMS (BEISPIEL)
-# ➔ Deine echten Kader bitte hier einfügen
+# ➔ Füge hier deine echten Teams ein
 # -------------------------------
 
 nord_teams = [
@@ -570,6 +571,8 @@ def create_round_robin_schedule(teams):
 # -------------------------------
 
 def calculate_team_strength(team, is_home=False):
+    if not team["Players"]:
+        return 50
     offense = sum(p["Offense"] for p in team["Players"]) / len(team["Players"])
     defense = sum(p["Defense"] for p in team["Players"]) / len(team["Players"])
     speed = sum(p["Speed"] for p in team["Players"]) / len(team["Players"])
@@ -605,6 +608,7 @@ if progress:
     sued_schedule = progress["sued_schedule"]
     player_stats_df = pd.DataFrame(progress["player_stats"])
     spieltag = progress["spieltag"]
+    playoffs = progress.get("playoffs", [])
 else:
     print("🎮 Neues Spiel gestartet.\n")
     nord_df = pd.DataFrame(nord_teams)
@@ -628,12 +632,11 @@ else:
     player_stats_df = pd.DataFrame(player_stats)
 
     spieltag = 1
+    playoffs = []
 
 # -------------------------------
 # ▶️ 6. SPIELTAG SIMULATION
 # -------------------------------
-
-input(f"👉 Enter zum Simulieren von Spieltag {spieltag}...\n")
 
 def simulate_match(df, home_team, away_team):
     home_row = df[df["Team"] == home_team].iloc[0]
@@ -646,7 +649,6 @@ def simulate_match(df, home_team, away_team):
     home_score = max(0, int(random.gauss(prob_home * 5, 1)))
     away_score = max(0, int(random.gauss((1 - prob_home) * 5, 1)))
 
-    # Tabelle updaten
     df.loc[df["Team"] == home_team, "Goals For"] += home_score
     df.loc[df["Team"] == home_team, "Goals Against"] += away_score
     df.loc[df["Team"] == away_team, "Goals For"] += away_score
@@ -675,43 +677,82 @@ def simulate_match(df, home_team, away_team):
 
     return f"{home_team} {home_score} - {away_score} {away_team}"
 
-# NORD
-print(f"\n=== Spieltag {spieltag} Ergebnisse Nord ===")
-for match in nord_schedule[:len(nord_df)//2]:
-    print(simulate_match(nord_df, match[0], match[1]))
-nord_schedule = nord_schedule[len(nord_df)//2:]
+# ===============================
+# ▶️ 7. HAUPTSCHLEIFE
+# ===============================
 
-# SÜD
-print(f"\n=== Spieltag {spieltag} Ergebnisse Süd ===")
-for match in sued_schedule[:len(sued_df)//2]:
-    print(simulate_match(sued_df, match[0], match[1]))
-sued_schedule = sued_schedule[len(sued_df)//2:]
+while True:
 
-# Tabellen
-print("\n=== Tabelle Nord ===")
-print(nord_df[["Team", "Points", "Goals For", "Goals Against"]].sort_values(by=["Points", "Goals For"], ascending=False))
+    if nord_schedule or sued_schedule:
+        input(f"👉 Enter zum Simulieren von Spieltag {spieltag}...\n")
 
-print("\n=== Tabelle Süd ===")
-print(sued_df[["Team", "Points", "Goals For", "Goals Against"]].sort_values(by=["Points", "Goals For"], ascending=False))
+        print(f"\n=== Spieltag {spieltag} Ergebnisse Nord ===")
+        for match in nord_schedule[:len(nord_df)//2]:
+            print(simulate_match(nord_df, match[0], match[1]))
+        nord_schedule = nord_schedule[len(nord_df)//2:]
 
-# Top Scorer
-print("\n=== Top Scorer ===")
-player_stats_df["Points"] = player_stats_df["Goals"] + player_stats_df["Assists"]
-print(player_stats_df.sort_values(by="Points", ascending=False))
+        print(f"\n=== Spieltag {spieltag} Ergebnisse Süd ===")
+        for match in sued_schedule[:len(sued_df)//2]:
+            print(simulate_match(sued_df, match[0], match[1]))
+        sued_schedule = sued_schedule[len(sued_df)//2:]
 
-spieltag += 1
+        # Tabellenanzeige
+        print("\n=== Tabelle Nord ===")
+        print(nord_df[["Team", "Points", "Goals For", "Goals Against"]].sort_values(by=["Points", "Goals For"], ascending=False))
 
-# -------------------------------
-# 💾 7. SAVE PROGRESS
-# -------------------------------
+        print("\n=== Tabelle Süd ===")
+        print(sued_df[["Team", "Points", "Goals For", "Goals Against"]].sort_values(by=["Points", "Goals For"], ascending=False))
 
-progress = {
-    "nord_df": nord_df.to_dict(orient="records"),
-    "sued_df": sued_df.to_dict(orient="records"),
-    "nord_schedule": nord_schedule,
-    "sued_schedule": sued_schedule,
-    "player_stats": player_stats_df.to_dict(orient="records"),
-    "spieltag": spieltag
-}
-save_progress(savefile, progress)
-print("\n✅ Fortschritt gespeichert.")
+        # Top 20 Scorer
+        player_stats_df["Points"] = player_stats_df["Goals"] + player_stats_df["Assists"]
+        print("\n=== Top 20 Scorer ===")
+        print(player_stats_df.sort_values(by="Points", ascending=False).head(20))
+
+        spieltag += 1
+
+    else:
+        # -------------------------------
+        # 🏆 8. PLAYOFFS
+        # -------------------------------
+
+        if not playoffs:
+            print("\n🏆 Saison beendet – Playoffs starten!")
+
+            nord_top4 = nord_df.sort_values(by=["Points", "Goals For"], ascending=False).head(4)
+            sued_top4 = sued_df.sort_values(by=["Points", "Goals For"], ascending=False).head(4)
+
+            playoffs = [
+                (nord_top4.iloc[0]["Team"], sued_top4.iloc[3]["Team"]),
+                (nord_top4.iloc[1]["Team"], sued_top4.iloc[2]["Team"]),
+                (nord_top4.iloc[2]["Team"], sued_top4.iloc[1]["Team"]),
+                (nord_top4.iloc[3]["Team"], sued_top4.iloc[0]["Team"])
+            ]
+
+        round_num = 1
+        while playoffs:
+            input(f"\n👉 Enter für Playoffs Runde {round_num}...\n")
+            next_round = []
+
+            for teamA, teamB in playoffs:
+                winner = simulate_match(nord_df, teamA, teamB) if teamA in nord_df["Team"].values else simulate_match(sued_df, teamA, teamB)
+                next_round.append(winner.split(" ")[0])
+
+            if len(next_round) == 1:
+                print(f"\n🏆🏆🏆 **Champion der Saison:** {next_round[0]} 🏆🏆🏆")
+                playoffs = []
+            else:
+                playoffs = [(next_round[i], next_round[i+1]) for i in range(0, len(next_round), 2)]
+            round_num += 1
+
+    # 💾 Fortschritt speichern
+    progress = {
+        "nord_df": nord_df.to_dict(orient="records"),
+        "sued_df": sued_df.to_dict(orient="records"),
+        "nord_schedule": nord_schedule,
+        "sued_schedule": sued_schedule,
+        "player_stats": player_stats_df.to_dict(orient="records"),
+        "spieltag": spieltag,
+        "playoffs": playoffs
+    }
+    save_progress(savefile, progress)
+    print("✅ Fortschritt gespeichert.")
