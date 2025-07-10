@@ -19,8 +19,8 @@ def load_progress(filename):
         return None
 
 # -------------------------------
-# 🏒 2. TEAMS (BEISPIEL)
-# ➔ Deine echten Kader bitte hier einfügen
+# 🏒 2. TEAMS & KADER (BEISPIEL)
+# ➔ Bitte mit deinen echten Kadern ersetzen
 # -------------------------------
 
 nord_teams = [
@@ -540,33 +540,57 @@ sued_teams = [
 ]
 
 # -------------------------------
-# 📅 3. ROUND-ROBIN SCHEDULE FUNKTION
+# 📊 3. INITIALISIERUNG
 # -------------------------------
 
-def create_round_robin_schedule(teams):
-    teams = teams.copy()
-    num_teams = len(teams)
-    if num_teams % 2 != 0:
-        teams.append({"Team": "BYE"})
-    num_days = len(teams) - 1
-    half = len(teams) // 2
-    schedule = []
+savefile = 'saves/savegame.json'
+progress = load_progress(savefile)
 
-    for day in range(num_days * 2):
-        pairs = []
-        for i in range(half):
-            t1 = teams[i]
-            t2 = teams[-i-1]
-            if day % 2 == 0:
-                pairs.append((t1["Team"], t2["Team"]))
-            else:
-                pairs.append((t2["Team"], t1["Team"]))
-        schedule.extend(pairs)
-        teams.insert(1, teams.pop())
-    return schedule
+if progress:
+    print("✅ Savegame geladen.\n")
+    nord_df = pd.DataFrame(progress["nord_df"])
+    sued_df = pd.DataFrame(progress["sued_df"])
+    nord_schedule = progress["nord_schedule"]
+    sued_schedule = progress["sued_schedule"]
+    player_stats_df = pd.DataFrame(progress["player_stats"])
+    spieltag = progress["spieltag"]
+    playoffs = progress["playoffs"]
+else:
+    print("🎮 Neues Spiel gestartet.\n")
+
+    def init_df(teams):
+        df = pd.DataFrame(teams)
+        df["Points"] = 0
+        df["Goals For"] = 0
+        df["Goals Against"] = 0
+        return df
+
+    nord_df = init_df(nord_teams)
+    sued_df = init_df(sued_teams)
+
+    def create_schedule(df):
+        schedule = []
+        for i in range(len(df)):
+            for j in range(i+1, len(df)):
+                schedule.append({"Home": df.loc[i, "Team"], "Away": df.loc[j, "Team"]})
+        random.shuffle(schedule)
+        return schedule
+
+    nord_schedule = create_schedule(nord_df)
+    sued_schedule = create_schedule(sued_df)
+
+    # Spieler Stats initialisieren
+    player_stats = []
+    for team in nord_teams + sued_teams:
+        for p in team["Players"]:
+            player_stats.append({"Player": p["Name"], "Team": team["Team"], "Goals": 0, "Assists": 0, "Points": 0})
+    player_stats_df = pd.DataFrame(player_stats)
+
+    spieltag = 1
+    playoffs = []
 
 # -------------------------------
-# 🔢 4. TEAMSTÄRKE-BERECHNUNG
+# ⚙️ 4. TEAMSTÄRKE-BERECHNUNG
 # -------------------------------
 
 def calculate_team_strength(team, is_home=False):
@@ -591,49 +615,8 @@ def calculate_team_strength(team, is_home=False):
     return round(total_strength, 2)
 
 # -------------------------------
-# 💾 5. SAVEGAME INITIALISIERUNG
+# 🎮 5. SPIELTAG SIMULATION
 # -------------------------------
-
-savefile = 'saves/savegame.json'
-progress = load_progress(savefile)
-
-if progress:
-    print("✅ Savegame geladen.\n")
-    nord_df = pd.DataFrame(progress["nord_df"])
-    sued_df = pd.DataFrame(progress["sued_df"])
-    nord_schedule = progress["nord_schedule"]
-    sued_schedule = progress["sued_schedule"]
-    player_stats_df = pd.DataFrame(progress["player_stats"])
-    spieltag = progress["spieltag"]
-else:
-    print("🎮 Neues Spiel gestartet.\n")
-    nord_df = pd.DataFrame(nord_teams)
-    nord_df["Points"] = 0
-    nord_df["Goals For"] = 0
-    nord_df["Goals Against"] = 0
-
-    sued_df = pd.DataFrame(sued_teams)
-    sued_df["Points"] = 0
-    sued_df["Goals For"] = 0
-    sued_df["Goals Against"] = 0
-
-    nord_schedule = create_round_robin_schedule(nord_teams)
-    sued_schedule = create_round_robin_schedule(sued_teams)
-
-    # Spieler Stats initialisieren
-    player_stats = []
-    for team in nord_teams + sued_teams:
-        for p in team["Players"]:
-            player_stats.append({"Player": p["Name"], "Team": team["Team"], "Goals": 0, "Assists": 0, "Points": 0})
-    player_stats_df = pd.DataFrame(player_stats)
-
-    spieltag = 1
-
-# -------------------------------
-# ▶️ 6. SPIELTAG SIMULATION
-# -------------------------------
-
-input(f"👉 Enter zum Simulieren von Spieltag {spieltag}...\n")
 
 def simulate_match(df, home_team, away_team):
     home_row = df[df["Team"] == home_team].iloc[0]
@@ -654,20 +637,23 @@ def simulate_match(df, home_team, away_team):
 
     if home_score > away_score:
         df.loc[df["Team"] == home_team, "Points"] += 3
+        home_row["Momentum"] += 1
+        away_row["Momentum"] = max(away_row["Momentum"] - 1, 0)
     elif away_score > home_score:
         df.loc[df["Team"] == away_team, "Points"] += 3
+        away_row["Momentum"] += 1
+        home_row["Momentum"] = max(home_row["Momentum"] - 1, 0)
     else:
         df.loc[df["Team"] == home_team, "Points"] += 1
         df.loc[df["Team"] == away_team, "Points"] += 1
 
-    # Spieler Stats aktualisieren
+    # Spieler Stats
     for team_name, goals in [(home_team, home_score), (away_team, away_score)]:
-        team_row = df[df["Team"] == team_name].iloc[0]
-        players = team_row["Players"]
+        players = home_row["Players"] if team_name == home_team else away_row["Players"]
         for _ in range(goals):
             weighted = []
             for p in players:
-                weighted += [p["Name"]] * max(1, p["Offense"] // 5)
+                weighted += [p["Name"]] * (p["Offense"] // 5)
             scorer = random.choice(weighted)
             assist = random.choice(weighted)
             player_stats_df.loc[player_stats_df["Player"] == scorer, "Goals"] += 1
@@ -675,22 +661,25 @@ def simulate_match(df, home_team, away_team):
 
     return f"{home_team} {home_score} - {away_score} {away_team}"
 
-# NORD
+# -------------------------------
+# ▶️ 6. SPIELTAG ABLAUF
+# -------------------------------
+
+input(f"👉 Enter zum Simulieren von Spieltag {spieltag}...")
+
 print(f"\n=== Spieltag {spieltag} Ergebnisse Nord ===")
 for match in nord_schedule[:len(nord_df)//2]:
-    print(simulate_match(nord_df, match[0], match[1]))
+    print(simulate_match(nord_df, match["Home"], match["Away"]))
 nord_schedule = nord_schedule[len(nord_df)//2:]
 
-# SÜD
 print(f"\n=== Spieltag {spieltag} Ergebnisse Süd ===")
 for match in sued_schedule[:len(sued_df)//2]:
-    print(simulate_match(sued_df, match[0], match[1]))
+    print(simulate_match(sued_df, match["Home"], match["Away"]))
 sued_schedule = sued_schedule[len(sued_df)//2:]
 
 # Tabellen
 print("\n=== Tabelle Nord ===")
 print(nord_df[["Team", "Points", "Goals For", "Goals Against"]].sort_values(by=["Points", "Goals For"], ascending=False))
-
 print("\n=== Tabelle Süd ===")
 print(sued_df[["Team", "Points", "Goals For", "Goals Against"]].sort_values(by=["Points", "Goals For"], ascending=False))
 
@@ -700,6 +689,85 @@ player_stats_df["Points"] = player_stats_df["Goals"] + player_stats_df["Assists"
 print(player_stats_df.sort_values(by="Points", ascending=False))
 
 spieltag += 1
+
+# ➡️ Playoffs automatisch nach 9 Spieltagen starten
+if spieltag > 9 and not playoffs:
+    print("\n🏆 Saison beendet! Starte Playoffs...")
+
+    # Top 4 jeder Division bestimmen
+    nord_top4 = nord_df.sort_values(by=["Points", "Goals For"], ascending=False).head(4)
+    sued_top4 = sued_df.sort_values(by=["Points", "Goals For"], ascending=False).head(4)
+
+    # Kreuzpaarungen definieren
+    playoffs = [
+        (nord_top4.iloc[0]["Team"], sued_top4.iloc[3]["Team"]),
+        (nord_top4.iloc[1]["Team"], sued_top4.iloc[2]["Team"]),
+        (nord_top4.iloc[2]["Team"], sued_top4.iloc[1]["Team"]),
+        (nord_top4.iloc[3]["Team"], sued_top4.iloc[0]["Team"]),
+    ]
+
+
+def simulate_playoff_match(teamA, teamB):
+    # Suche die Team-Daten aus beiden DataFrames
+    home_row = nord_df[nord_df["Team"] == teamA].iloc[0] if teamA in nord_df["Team"].values else sued_df[sued_df["Team"] == teamA].iloc[0]
+    away_row = nord_df[nord_df["Team"] == teamB].iloc[0] if teamB in nord_df["Team"].values else sued_df[sued_df["Team"] == teamB].iloc[0]
+
+    # Stärke berechnen
+    home_strength = calculate_team_strength(home_row, is_home=True)
+    away_strength = calculate_team_strength(away_row, is_home=False)
+
+    prob_home = home_strength / (home_strength + away_strength)
+
+    # Playoffs: kein Unentschieden, falls Gleichstand ➔ Overtime/Random
+    home_score = max(0, int(random.gauss(prob_home * 5, 1)))
+    away_score = max(0, int(random.gauss((1 - prob_home) * 5, 1)))
+
+    if home_score == away_score:
+        if random.random() < 0.5:
+            home_score += 1
+        else:
+            away_score += 1
+
+    # Spieler Stats aktualisieren (analog zu simulate_match)
+    for team_name, goals in [(teamA, home_score), (teamB, away_score)]:
+        players = home_row["Players"] if team_name == teamA else away_row["Players"]
+        for _ in range(goals):
+            weighted = []
+            for p in players:
+                weighted += [p["Name"]] * (p["Offense"] // 5)
+            scorer = random.choice(weighted)
+            assist = random.choice(weighted)
+            player_stats_df.loc[player_stats_df["Player"] == scorer, "Goals"] += 1
+            player_stats_df.loc[player_stats_df["Player"] == assist, "Assists"] += 1
+
+    # Ergebnis ausgeben
+    print(f"{teamA} {home_score} - {away_score} {teamB}")
+
+    # Gewinner zurückgeben
+    return teamA if home_score > away_score else teamB
+
+
+if playoffs:
+    input(f"👉 Enter zur Simulation der Playoffs Runde...")
+    next_round = []
+    for teamA, teamB in playoffs:
+        winner = simulate_playoff_match(teamA, teamB)
+        next_round.append(winner)
+    # Halbfinale vorbereiten
+
+    playoffs = [(next_round[i], next_round[i+1]) for i in range(0, len(next_round), 2)]
+    if len(playoffs) == 1 and len(playoffs[0]) == 2:
+        print("\n🏆 Finale erreicht!")
+    elif len(playoffs) == 1:
+        print(f"\n🏆 Champion: {playoffs[0][0]}")
+        playoffs = []
+        
+print("\n=== Spiele pro Team bisher ===")
+for team in nord_df["Team"]:
+    games_played = len([m for m in progress["nord_schedule"] if m["Home"] == team or m["Away"] == team])
+    print(f"{team}: {games_playe
+    d} Spiele noch offen")
+       
 
 # -------------------------------
 # 💾 7. SAVE PROGRESS
@@ -711,7 +779,9 @@ progress = {
     "nord_schedule": nord_schedule,
     "sued_schedule": sued_schedule,
     "player_stats": player_stats_df.to_dict(orient="records"),
-    "spieltag": spieltag
+    "spieltag": spieltag,
+    "playoffs": playoffs
 }
+
 save_progress(savefile, progress)
 print("\n✅ Fortschritt gespeichert.")
