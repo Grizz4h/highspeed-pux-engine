@@ -1,35 +1,28 @@
-# -*- coding: utf-8 -*-
-"""DEL‑Style Eishockey‑Liga‑Simulation
--------------------------------------------------
-• Zwei Conferences (Nord/Süd) mit einfachem Double‑Round‑Robin und Play‑offs
-• Scorer‑Tabelle auf Spieler‑Ebene
-• Save‑/Load‑Funktion (JSON) für Spielfortschritt
-
-👉 Füge deine Team‑Daten in die Listen `nord_teams` und `sued_teams` ein (vgl. Beispiel) 👈
-"""
-
-import os
-import json
-import random
+# ================================================
+#  LIGA-SIMULATOR  –  Round-Robin + Play-offs
+# ================================================
+import os, json, random
 import pandas as pd
 
-# 1. ---------------- SAVE / LOAD ----------------
+# ------------------------------------------------
+# ⚙️ 1  SAVE / LOAD
+# ------------------------------------------------
+SAVEFILE = "saves/savegame.json"
 
-def save_progress(filename: str, data: dict) -> None:
-    os.makedirs(os.path.dirname(filename), exist_ok=True)
-    with open(filename, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+def save_progress(payload: dict):
+    os.makedirs(os.path.dirname(SAVEFILE), exist_ok=True)
+    with open(SAVEFILE, "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=4)
 
-
-def load_progress(filename: str):
-    if os.path.exists(filename) and os.path.getsize(filename) > 0:
-        with open(filename, "r", encoding="utf-8") as f:
+def load_progress():
+    if os.path.exists(SAVEFILE) and os.path.getsize(SAVEFILE) > 0:
+        with open(SAVEFILE, "r", encoding="utf-8") as f:
             return json.load(f)
     return None
 
-
-# 2. ---------------- TEAMS (Beispiel‑Struktur) ----------------
-
+# ------------------------------------------------
+# 🏒 2  TEAMLISTEN (➡️ hier deine echten Teams einsetzen)
+# ------------------------------------------------
 nord_teams = [
     {"Team": "Berlin EisBären", "Players": [
     {"Name": "Jako Hildran", "Offense": 42, "Defense": 80, "Speed": 55, "Chemistry": 68},
@@ -546,223 +539,234 @@ sued_teams = [
     # ➡️ weitere Süd Teams
 ]
 
+# ------------------------------------------------
+# 📅 3  ROUND-ROBIN-SCHEDULE
+# ------------------------------------------------
+def create_round_robin_schedule(teams: list[dict]) -> list[tuple[str,str]]:
+    """Ein vollständiger Hin- & Rückrundenplan."""
+    teams = teams.copy()
+    if len(teams) % 2:                # Bye-Slot für ungerade Anzahl
+        teams.append({"Team": "BYE"})
+    days = len(teams) - 1
+    half = len(teams) // 2
+    schedule = []
 
-# 3. ---------------- ROUND‑ROBIN SCHEDULE ----------------
-
-def create_round_robin_schedule(teams: list[dict]) -> list[tuple[str, str]]:
-    """Erstellt einen doppelt‑rundigen Spielplan (Hin‑ & Rückspiel)."""
-    t = teams.copy()
-    if len(t) % 2:
-        t.append({"Team": "BYE"})  # Dummy‑Team für ungerade Anzahl
-    days = len(t) - 1
-    half = len(t) // 2
-    schedule: list[tuple[str, str]] = []
-    for day in range(days * 2):
+    for d in range(days * 2):         # doppelte Anzahl = Heim/Auswärts
         pairs = []
         for i in range(half):
-            home, away = t[i]["Team"], t[-i - 1]["Team"]
-            pairs.append((home, away) if day % 2 == 0 else (away, home))
+            t1, t2 = teams[i]["Team"], teams[-i-1]["Team"]
+            pairs.append((t1, t2) if d % 2 == 0 else (t2, t1))
         schedule.extend(pairs)
-        t.insert(1, t.pop())  # Drehen
-    return [p for p in schedule if "BYE" not in p]
+        teams.insert(1, teams.pop())  # Round-Robin Rotation
+    return schedule
 
-
-# 4. ---------------- TEAM‑STÄRKE ----------------
-
-def calculate_team_strength(team_row: pd.Series, *, is_home: bool = False) -> float:
+# ------------------------------------------------
+# 🔢 4  TEAMSTÄRKE
+# ------------------------------------------------
+def calc_strength(team_row, home=False) -> float:
     players = team_row["Players"]
     if not players:
         return 50.0
-    offense = sum(p["Offense"] for p in players) / len(players)
-    defense = sum(p["Defense"] for p in players) / len(players)
-    speed = sum(p["Speed"] for p in players) / len(players)
-    chemistry = sum(p["Chemistry"] for p in players) / len(players)
+    off  = sum(p["Offense"]   for p in players) / len(players)
+    de   = sum(p["Defense"]   for p in players) / len(players)
+    spd  = sum(p["Speed"]     for p in players) / len(players)
+    chem = sum(p["Chemistry"] for p in players) / len(players)
 
-    base = offense * 0.4 + defense * 0.3 + speed * 0.2 + chemistry * 0.1
-
-    # Dynamische Modifikatoren
-    form = random.uniform(-5, 5)           # Tagesform ±5 %
-    momentum = team_row.get("Momentum", 0)  # Lauf
-    home_adv = 3 if is_home else 0         # Heimbonus
-    fan_support = random.uniform(-1, 2)    # Publikums‑Boost
+    base = off*0.4 + de*0.3 + spd*0.2 + chem*0.1
+    form = random.uniform(-5, 5)
+    mom  = team_row.get("Momentum", 0)
+    home_adv = 3 if home else 0
+    fan  = random.uniform(-1, 2)
 
     total = base
-    for bonus in (form, momentum, home_adv, fan_support):
-        total *= 1 + bonus / 100
-    return total
+    total *= (1 + form/100)
+    total *= (1 + mom/100)
+    total *= (1 + home_adv/100)
+    total *= (1 + fan/100)
+    return round(total, 2)
 
-
-# 5. ---------------- SPIEL‑SIMULATION ----------------
-
-def simulate_match(df: pd.DataFrame, home_team: str, away_team: str, player_stats: pd.DataFrame) -> str:
-    home_row = df.loc[df["Team"] == home_team].iloc[0]
-    away_row = df.loc[df["Team"] == away_team].iloc[0]
-
-    s_home = calculate_team_strength(home_row, is_home=True)
-    s_away = calculate_team_strength(away_row)
-
-    p_home = s_home / (s_home + s_away)
-    g_home = max(0, int(random.gauss(p_home * 5, 1)))
-    g_away = max(0, int(random.gauss((1 - p_home) * 5, 1)))
-
-    # Tabelle aktualisieren
-    df.loc[df["Team"] == home_team, ["Goals For", "Goals Against"]] += [g_home, g_away]
-    df.loc[df["Team"] == away_team, ["Goals For", "Goals Against"]] += [g_away, g_home]
-
-    if g_home > g_away:
-        df.loc[df["Team"] == home_team, "Points"] += 3
-    elif g_home < g_away:
-        df.loc[df["Team"] == away_team, "Points"] += 3
-    else:
-        df.loc[df["Team"].isin([home_team, away_team]), "Points"] += 1
-
-    # Spieler‑Stats
-    for team_name, goals in ((home_team, g_home), (away_team, g_away)):
-        roster = df.loc[df["Team"] == team_name, "Players"].iloc[0]
-        weights = [max(1, p["Offense"] // 5) for p in roster]
-        names = [p["Name"] for p in roster]
-        for _ in range(goals):
-            scorer = random.choices(names, weights)[0]
-            assister = random.choice([n for n in names if n != scorer])
-            player_stats.loc[player_stats["Player"] == scorer, "Goals"] += 1
-            player_stats.loc[player_stats["Player"] == assister, "Assists"] += 1
-
-    return f"{home_team} {g_home} : {g_away} {away_team}"
-
-
-# 6. ---------------- PLAY‑OFFS ----------------
-
-def simulate_playoff_round(pairings: list[tuple[str, str]], nord_df: pd.DataFrame, sued_df: pd.DataFrame) -> list[str]:
-    winners: list[str] = []
-    for a, b in pairings:
-        df_a = nord_df if (nord_df["Team"] == a).any() else sued_df
-        df_b = nord_df if (nord_df["Team"] == b).any() else sued_df
-        row_a, row_b = df_a.loc[df_a["Team"] == a].iloc[0], df_b.loc[df_b["Team"] == b].iloc[0]
-        s_a, s_b = calculate_team_strength(row_a), calculate_team_strength(row_b)
-        p_a = s_a / (s_a + s_b)
-        g_a = max(0, int(random.gauss(p_a * 5, 1)))
-        g_b = max(0, int(random.gauss((1 - p_a) * 5, 1)))
-        print(f"{a} {g_a} : {g_b} {b}")
-        winners.append(a if g_a > g_b else b)
-    return winners
-
-
-def run_playoffs(nord_df: pd.DataFrame, sued_df: pd.DataFrame) -> str:
-    nord_top = nord_df.sort_values(["Points", "Goals For"], ascending=False).head(4)["Team"].tolist()
-    sued_top = sued_df.sort_values(["Points", "Goals For"], ascending=False).head(4)["Team"].tolist()
-
-    pairings = [
-        (nord_top[0], sued_top[3]),
-        (nord_top[1], sued_top[2]),
-        (nord_top[2], sued_top[1]),
-        (nord_top[3], sued_top[0]),
-    ]
-    round_no = 1
-    while len(pairings) > 1:
-        print(f"\n=== PLAY‑OFF RUNDE {round_no} ===")
-        winners = simulate_playoff_round(pairings, nord_df, sued_df)
-        pairings = [(winners[i], winners[i + 1]) for i in range(0, len(winners), 2)]
-        round_no += 1
-
-    print("\n=== FINALE ===")
-    champion = simulate_playoff_round(pairings, nord_df, sued_df)[0]
-    print(f"\n🏆🏆🏆 Champion: {champion} 🏆🏆🏆\n")
-    return champion
-
-
-# 7. ---------------- INITIALISIERUNG ----------------
-
-def initialise_game():
-    if not nord_teams or not sued_teams:
-        raise ValueError("Bitte füge Team‑Daten in nord_teams und sued_teams ein.")
-
-    nord_df, sued_df = pd.DataFrame(nord_teams), pd.DataFrame(sued_teams)
+# ------------------------------------------------
+# 💾 5  SAVEGAME INITIALISIEREN / LADEN
+# ------------------------------------------------
+data = load_progress()
+if data:
+    print("✅ Savegame geladen.\n")
+    nord_df       = pd.DataFrame(data["nord_df"])
+    sued_df       = pd.DataFrame(data["sued_df"])
+    nord_schedule = data["nord_schedule"]
+    sued_schedule = data["sued_schedule"]
+    player_stats  = pd.DataFrame(data["player_stats"])
+    spieltag      = data["spieltag"]
+else:
+    print("🎮 Neues Spiel gestartet.\n")
+    # DataFrames
+    nord_df = pd.DataFrame(nord_teams)
+    sued_df = pd.DataFrame(sued_teams)
     for df in (nord_df, sued_df):
-        df["Points"], df["Goals For"], df["Goals Against"] = 0, 0, 0
+        df[["Points","Goals For","Goals Against"]] = 0
 
+    # Schedules
     nord_schedule = create_round_robin_schedule(nord_teams)
     sued_schedule = create_round_robin_schedule(sued_teams)
 
-    stats_rows = [
-        {"Player": p["Name"], "Team": t["Team"], "Goals": 0, "Assists": 0, "Points": 0}
-        for t in nord_teams + sued_teams for p in t["Players"]
+    # Spieler-Statistik
+    rows = []
+    for t in nord_teams + sued_teams:
+        for p in t["Players"]:
+            rows.append({"Player": p["Name"], "Team": t["Team"],
+                         "Goals": 0, "Assists": 0, "Points": 0})
+    player_stats = pd.DataFrame(rows)
+    spieltag = 1
+
+# ------------------------------------------------
+# ▶️ 6  SPIEL-SIMULATION  (inkl. fairer Scorer-Stats)
+# ------------------------------------------------
+def update_player_stats(team_name, goals, df):
+    roster_full = df.loc[df["Team"] == team_name, "Players"].iloc[0]
+    # max 18 Schaden-Verteiler (12 F + 6 D) – fair bei Kadergrößen
+    roster = random.sample(roster_full, 18) if len(roster_full) > 18 else roster_full
+
+    names   = [p["Name"] for p in roster]
+    weights = [max(1, p["Offense"]//5) for p in roster]  # Offense-Gewichtung
+
+    for _ in range(goals):
+        scorer   = random.choices(names, weights)[0]
+        assister = random.choice([n for n in names if n != scorer])
+        player_stats.loc[player_stats["Player"]==scorer,   "Goals"]   += 1
+        player_stats.loc[player_stats["Player"]==assister, "Assists"] += 1
+
+def simulate_match(df, home, away) -> str:
+    row_h = df[df["Team"] == home].iloc[0]
+    row_a = df[df["Team"] == away].iloc[0]
+
+    s_h = calc_strength(row_h, home=True)
+    s_a = calc_strength(row_a, home=False)
+    p_h = s_h / (s_h + s_a)
+
+    g_h = max(0, int(random.gauss(p_h*5, 1)))
+    g_a = max(0, int(random.gauss((1-p_h)*5, 1)))
+
+    # Tabelle updaten
+    df.loc[df["Team"] == home, "Goals For"]     += g_h
+    df.loc[df["Team"] == home, "Goals Against"] += g_a
+    df.loc[df["Team"] == away, "Goals For"]     += g_a
+    df.loc[df["Team"] == away, "Goals Against"] += g_h
+
+    if   g_h > g_a: df.loc[df["Team"] == home, "Points"] += 3
+    elif g_a > g_h: df.loc[df["Team"] == away, "Points"] += 3
+    else:
+        df.loc[df["Team"].isin([home, away]), "Points"] += 1
+
+    # Spieler-Stats
+    update_player_stats(home, g_h, df)
+    update_player_stats(away, g_a, df)
+
+    return f"{home} {g_h} : {g_a} {away}"
+
+# ------------------------------------------------
+# 🏆 7  PLAY-OFF-FUNKTION
+# ------------------------------------------------
+def simulate_playoff_match(teamA, teamB, nord_df, sued_df):
+    dfA = nord_df if teamA in nord_df["Team"].values else sued_df
+    dfB = nord_df if teamB in nord_df["Team"].values else sued_df
+
+    rowA, rowB = dfA[dfA["Team"]==teamA].iloc[0], dfB[dfB["Team"]==teamB].iloc[0]
+    sA, sB = calc_strength(rowA), calc_strength(rowB)
+    pA = sA / (sA + sB)
+    gA = max(0, int(random.gauss(pA*5, 1)))
+    gB = max(0, int(random.gauss((1-pA)*5, 1)))
+
+    update_player_stats(teamA, gA, dfA)
+    update_player_stats(teamB, gB, dfB)
+
+    print(f"{teamA} {gA} : {gB} {teamB}")
+    return teamA if gA > gB else teamB
+
+def run_playoffs(nord_df, sued_df):
+    nord_top4 = nord_df.sort_values(["Points","Goals For"], ascending=False).head(4)
+    sued_top4 = sued_df.sort_values(["Points","Goals For"], ascending=False).head(4)
+
+    pairings = [
+        (nord_top4.iloc[0]["Team"], sued_top4.iloc[3]["Team"]),
+        (nord_top4.iloc[1]["Team"], sued_top4.iloc[2]["Team"]),
+        (nord_top4.iloc[2]["Team"], sued_top4.iloc[1]["Team"]),
+        (nord_top4.iloc[3]["Team"], sued_top4.iloc[0]["Team"])
     ]
-    player_stats = pd.DataFrame(stats_rows)
-    return nord_df, sued_df, nord_schedule, sued_schedule, player_stats, 1
 
-
-# 8. ---------------- SAVE ODER NEU ----------------
-
-def load_or_new(savefile: str):
-    data = load_progress(savefile)
-    if data:
-        nord_df = pd.DataFrame(data["nord_df"])
-        sued_df = pd.DataFrame(data["sued_df"])
-        nord_schedule = data["nord_schedule"]
-        sued_schedule = data["sued_schedule"]
-        player_stats = pd.DataFrame(data["player_stats"])
-        spieltag = data["spieltag"]
-        return nord_df, sued_df, nord_schedule, sued_schedule, player_stats, spieltag
-    return initialise_game()
-
-
-# 9. ---------------- HAUPTSCHLEIFE ----------------
-
-def main():
-    savefile = "saves/savegame.json"
-    nord_df, sued_df, nord_schedule, sued_schedule, player_stats, spieltag = load_or_new(savefile)
-    print("Simulation gestartet – Strg‑C zum Beenden.\n")
-
+    rnd = 1
     while True:
-        if nord_schedule or sued_schedule:
-            input(f"👉 Enter zum Simulieren von Spieltag {spieltag}…")
-            print(f"\n=== Spieltag {spieltag} – Nord ===")
-            for m in nord_schedule[: len(nord_df) // 2]:
-                print(simulate_match(nord_df, m[0], m[1], player_stats))
-            nord_schedule = nord_schedule[len(nord_df) // 2 :]
+        print(f"\n=== PLAY-OFF RUNDE {rnd} ===")
+        next_round = []
 
-            print(f"\n=== Spieltag {spieltag} – Süd ===")
-            for m in sued_schedule[: len(sued_df) // 2]:
-                print(simulate_match(sued_df, m[0], m[1], player_stats))
-            sued_schedule = sued_schedule[len(sued_df) // 2 :]
+        for a,b in pairings:
+            next_round.append(simulate_playoff_match(a, b, nord_df, sued_df))
 
-            # Tabellen
-            print("\n=== Tabelle Nord ===")
-            print(
-                nord_df[["Team", "Points", "Goals For", "Goals Against"]]
-                .sort_values(["Points", "Goals For"], ascending=False)
-                .reset_index(drop=True)
-            )
-            print("\n=== Tabelle Süd ===")
-            print(
-                sued_df[["Team", "Points", "Goals For", "Goals Against"]]
-                .sort_values(["Points", "Goals For"], ascending=False)
-                .reset_index(drop=True)
-            )
+        if len(next_round) == 1:
+            print(f"\n🏆🏆🏆 Champion: {next_round[0]} 🏆🏆🏆")
+            return next_round[0]
 
-            # Top‑Scorer
-            player_stats["Points"] = player_stats["Goals"] + player_stats["Assists"]
-            print("\n=== Top 20 Scorer ===")
-            print(player_stats.sort_values("Points", ascending=False).head(20).reset_index(drop=True))
+        # Neue Paarungen -> 1 vs 2, 3 vs 4, …
+        pairings = [(next_round[i], next_round[i+1])
+                    for i in range(0, len(next_round), 2)]
+        rnd += 1
 
-            spieltag += 1
-        else:
-            # Play‑offs starten
-            run_playoffs(nord_df, sued_df)
-            break
-
-        # Fortschritt sichern
-        progress = {
+        # Save nach jeder Runde
+        save_progress({
             "nord_df": nord_df.to_dict("records"),
             "sued_df": sued_df.to_dict("records"),
-            "nord_schedule": nord_schedule,
-            "sued_schedule": sued_schedule,
             "player_stats": player_stats.to_dict("records"),
             "spieltag": spieltag,
-        }
-        save_progress(savefile, progress)
-        print("💾 Speichert...")
+            "nord_schedule": nord_schedule,
+            "sued_schedule": sued_schedule
+        })
 
+        input("\n👉  Enter für nächste Play-off-Runde …")
 
-if __name__ == "__main__":
-    main()
+# ------------------------------------------------
+# ================= HAUPTSCHLEIFE =================
+# ------------------------------------------------
+while True:
+
+    if nord_schedule or sued_schedule:
+        input(f"👉  Enter zum Simulieren von Spieltag {spieltag}…")
+
+        print(f"\n=== Spieltag {spieltag} Ergebnisse Nord ===")
+        for m in nord_schedule[:len(nord_df)//2]:
+            print(simulate_match(nord_df, *m))
+        nord_schedule = nord_schedule[len(nord_df)//2:]
+
+        print(f"\n=== Spieltag {spieltag} Ergebnisse Süd ===")
+        for m in sued_schedule[:len(sued_df)//2]:
+            print(simulate_match(sued_df, *m))
+        sued_schedule = sued_schedule[len(sued_df)//2:]
+
+        # Tabellen
+        print("\n=== Tabelle Nord ===")
+        print(nord_df[["Team","Points","Goals For","Goals Against"]]
+              .sort_values(["Points","Goals For"], ascending=False))
+
+        print("\n=== Tabelle Süd ===")
+        print(sued_df[["Team","Points","Goals For","Goals Against"]]
+              .sort_values(["Points","Goals For"], ascending=False))
+
+        # Top-Scorer
+        player_stats["Points"] = player_stats["Goals"] + player_stats["Assists"]
+        print("\n=== Top-20 Scorer ===")
+        print(player_stats.sort_values("Points", ascending=False).head(20))
+
+        # Fortschritt speichern
+        save_progress({
+            "nord_df": nord_df.to_dict("records"),
+            "sued_df": sued_df.to_dict("records"),
+            "player_stats": player_stats.to_dict("records"),
+            "spieltag": spieltag + 1,
+            "nord_schedule": nord_schedule,
+            "sued_schedule": sued_schedule
+        })
+
+        spieltag += 1
+
+    else:
+        print("\n🏆  Saison beendet – Play-offs starten!")
+        run_playoffs(nord_df, sued_df)
+        break   # Ende – bei Bedarf neu starten
