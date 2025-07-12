@@ -237,13 +237,24 @@ nord_teams = [
     {"Name": "Ol Mebov", "Offense": 60, "Defense": 58, "Speed": 66, "Chemistry": 66}
     ], "Momentum": 0},
     {"Team": "Düsseldorfer Aurora", "Players": [
-    {"Name": "Leo Humrik", "Offense": 39, "Defense": 75, "Speed": 54, "Chemistry": 67},
-    {"Name": "Kev Magrik", "Offense": 62, "Defense": 73, "Speed": 64, "Chemistry": 68},
-    {"Name": "Ry Olsev", "Offense": 71, "Defense": 62, "Speed": 70, "Chemistry": 68},
-    {"Name": "Kev Orendrik", "Offense": 68, "Defense": 61, "Speed": 69, "Chemistry": 67},
-    {"Name": "Col Smithov", "Offense": 72, "Defense": 63, "Speed": 71, "Chemistry": 68},
-    {"Name": "Erik Bradov", "Offense": 70, "Defense": 62, "Speed": 70, "Chemistry": 68},
-    {"Name": "Nik Lunov", "Offense": 65, "Defense": 60, "Speed": 67, "Chemistry": 66}
+    {"Name": "Niklas Lunemann", "Offense": 25, "Defense": 80, "Speed": 55, "Chemistry": 60},
+    {"Name": "Leon Hümer", "Offense": 22, "Defense": 75, "Speed": 52, "Chemistry": 58},
+    {"Name": "Nicolas Geitner", "Offense": 40, "Defense": 74, "Speed": 60, "Chemistry": 65},
+    {"Name": "Kevin Maginot", "Offense": 44, "Defense": 76, "Speed": 63, "Chemistry": 66},
+    {"Name": "Kristian Blumenschein", "Offense": 42, "Defense": 75, "Speed": 61, "Chemistry": 65},
+    {"Name": "Emil Quaas", "Offense": 43, "Defense": 74, "Speed": 62, "Chemistry": 64},
+    {"Name": "Moritz Kukuk", "Offense": 38, "Defense": 70, "Speed": 59, "Chemistry": 63},
+    {"Name": "Max Balinson", "Offense": 45, "Defense": 78, "Speed": 64, "Chemistry": 67},
+    {"Name": "Maximilian Faber", "Offense": 48, "Defense": 79, "Speed": 65, "Chemistry": 68},
+    {"Name": "Lucas Lessio", "Offense": 70, "Defense": 60, "Speed": 72, "Chemistry": 75},
+    {"Name": "Leon Niederberger", "Offense": 62, "Defense": 62, "Speed": 68, "Chemistry": 70},
+    {"Name": "Michael Clarke", "Offense": 68, "Defense": 61, "Speed": 70, "Chemistry": 72},
+    {"Name": "Erik Bradford", "Offense": 66, "Defense": 64, "Speed": 69, "Chemistry": 71},
+    {"Name": "Lenny Boos", "Offense": 58, "Defense": 58, "Speed": 66, "Chemistry": 68},
+    {"Name": "Colin Smith", "Offense": 69, "Defense": 63, "Speed": 70, "Chemistry": 72},
+    {"Name": "Ture Linden", "Offense": 64, "Defense": 60, "Speed": 68, "Chemistry": 70},
+    {"Name": "Kevin Orendorz", "Offense": 61, "Defense": 60, "Speed": 67, "Chemistry": 69},
+    {"Name": "Ryan Olsen", "Offense": 72, "Defense": 62, "Speed": 71, "Chemistry": 73}
     ], "Momentum": 0},
     {"Team": "Kassel Zenith", "Players": [
     {"Name": "Bran Maxvik", "Offense": 42, "Defense": 79, "Speed": 55, "Chemistry": 68},
@@ -264,22 +275,24 @@ nord_teams = [
     {"Name": "Yan Valentik", "Offense": 68, "Defense": 61, "Speed": 69, "Chemistry": 67},
     {"Name": "Jak Weidrik", "Offense": 67, "Defense": 61, "Speed": 69, "Chemistry": 67}
     ], "Momentum": 0},
-    {"Team": "Bad Nauheim Ferox", "Players": [
-    {"Name": "Fin Beckov", "Offense": 40, "Defense": 77, "Speed": 54, "Chemistry": 67},
-    {"Name": "Ger Kuhnov", "Offense": 42, "Defense": 79, "Speed": 55, "Chemistry": 68},
-    {"Name": "Mar Erkov", "Offense": 60, "Defense": 72, "Speed": 63, "Chemistry": 67},
-    {"Name": "Chris Fischrik", "Offense": 62, "Defense": 74, "Speed": 64, "Chemistry": 68},
-    {"Name": "Sim Gnypov", "Offense": 58, "Defense": 70, "Speed": 62, "Chemistry": 66},
-    {"Name": "Gar Prudov", "Offense": 63, "Defense": 73, "Speed": 64, "Chemistry": 68},
-    {"Name": "Pat Seifrik", "Offense": 61, "Defense": 71, "Speed": 63, "Chemistry": 67},
-    {"Name": "Park Bowlik", "Offense": 74, "Defense": 63, "Speed": 71, "Chemistry": 69},
-    {"Name": "Marc Elsayev", "Offense": 68, "Defense": 61, "Speed": 69, "Chemistry": 67},
-    {"Name": "Jord Hickov", "Offense": 72, "Defense": 62, "Speed": 70, "Chemistry": 68},
-    {"Name": "Zac Kaisov", "Offense": 67, "Defense": 61, "Speed": 69, "Chemistry": 67},
-    {"Name": "Dav Kochik", "Offense": 69, "Defense": 61, "Speed": 69, "Chemistry": 67},
-    {"Name": "Jul Lautrik", "Offense": 66, "Defense": 60, "Speed": 67, "Chemistry": 66},
-    {"Name": "Tay Vausik", "Offense": 68, "Defense": 61, "Speed": 68, "Chemistry": 67},
-    {"Name": "Jus Volevik", "Offense": 65, "Defense": 60, "Speed": 67, "Chemistry": 66}
+    {"Team": "Kassel Zenith", "Players": [
+    {"Name": "Bran Maxvik", "Offense": 42, "Defense": 79, "Speed": 55, "Chemistry": 68},
+    {"Name": "Phil Maurik", "Offense": 40, "Defense": 77, "Speed": 54, "Chemistry": 67},
+    {"Name": "Tim Bendrov", "Offense": 60, "Defense": 73, "Speed": 63, "Chemistry": 67},
+    {"Name": "And Bodnov", "Offense": 62, "Defense": 74, "Speed": 64, "Chemistry": 68},
+    {"Name": "Mark Frevik", "Offense": 58, "Defense": 70, "Speed": 62, "Chemistry": 66},
+    {"Name": "Sim Schutzik", "Offense": 63, "Defense": 73, "Speed": 64, "Chemistry": 68},
+    {"Name": "Bod Wildrik", "Offense": 61, "Defense": 71, "Speed": 63, "Chemistry": 67},
+    {"Name": "Ale Ahlrik", "Offense": 67, "Defense": 61, "Speed": 69, "Chemistry": 67},
+    {"Name": "Lau Braunik", "Offense": 68, "Defense": 61, "Speed": 69, "Chemistry": 67},
+    {"Name": "Han Detskov", "Offense": 65, "Defense": 60, "Speed": 68, "Chemistry": 67},
+    {"Name": "Hun Garlov", "Offense": 71, "Defense": 62, "Speed": 70, "Chemistry": 68},
+    {"Name": "Tris Keckov", "Offense": 72, "Defense": 63, "Speed": 71, "Chemistry": 69},
+    {"Name": "Dar Mieskov", "Offense": 69, "Defense": 61, "Speed": 69, "Chemistry": 67},
+    {"Name": "Mac Rutkov", "Offense": 66, "Defense": 60, "Speed": 68, "Chemistry": 67},
+    {"Name": "Dom Turgov", "Offense": 70, "Defense": 62, "Speed": 70, "Chemistry": 68},
+    {"Name": "Yan Valentik", "Offense": 68, "Defense": 61, "Speed": 69, "Chemistry": 67},
+    {"Name": "Jak Weidrik", "Offense": 67, "Defense": 61, "Speed": 69, "Chemistry": 67}
     ], "Momentum": 0},
     # ➡️ weitere Nord Teams
 ]
