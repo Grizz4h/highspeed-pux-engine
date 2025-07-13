@@ -4633,7 +4633,7 @@
             "Player": "Max Glotzen",
             "Team": "K\u00f6ln Blitzhaie",
             "Goals": 1,
-            "Assists": 2,
+            "Assists": 3,
             "Points": 2
         },
         {
@@ -4738,13 +4738,13 @@
             "Player": "Fred Stormvik",
             "Team": "K\u00f6ln Blitzhaie",
             "Goals": 2,
-            "Assists": 1,
+            "Assists": 2,
             "Points": 3
         },
         {
             "Player": "Juha Tyrvain",
             "Team": "K\u00f6ln Blitzhaie",
-            "Goals": 4,
+            "Goals": 5,
             "Assists": 3,
             "Points": 6
         },
@@ -4765,7 +4765,7 @@
         {
             "Player": "Kev Niedik",
             "Team": "K\u00f6ln Blitzhaie",
-            "Goals": 0,
+            "Goals": 1,
             "Assists": 3,
             "Points": 3
         },
@@ -5046,7 +5046,7 @@
             "Player": "Ste Raabik",
             "Team": "Krefeld Kernschlag",
             "Goals": 0,
-            "Assists": 0,
+            "Assists": 1,
             "Points": 0
         },
         {
@@ -5115,7 +5115,7 @@
         {
             "Player": "Max Newtov",
             "Team": "Krefeld Kernschlag",
-            "Goals": 0,
+            "Goals": 1,
             "Assists": 2,
             "Points": 1
         },
@@ -5186,7 +5186,7 @@
             "Player": "Kevin Maginot",
             "Team": "D\u00fcsseldorfer Aurora",
             "Goals": 3,
-            "Assists": 3,
+            "Assists": 4,
             "Points": 5
         },
         {
@@ -5213,7 +5213,7 @@
         {
             "Player": "Max Balinson",
             "Team": "D\u00fcsseldorfer Aurora",
-            "Goals": 4,
+            "Goals": 5,
             "Assists": 1,
             "Points": 5
         },
@@ -5235,14 +5235,14 @@
             "Player": "Leon Niederberger",
             "Team": "D\u00fcsseldorfer Aurora",
             "Goals": 3,
-            "Assists": 2,
+            "Assists": 3,
             "Points": 4
         },
         {
             "Player": "Michael Clarke",
             "Team": "D\u00fcsseldorfer Aurora",
             "Goals": 5,
-            "Assists": 3,
+            "Assists": 4,
             "Points": 6
         },
         {
@@ -5262,7 +5262,7 @@
         {
             "Player": "Colin Smith",
             "Team": "D\u00fcsseldorfer Aurora",
-            "Goals": 1,
+            "Goals": 2,
             "Assists": 3,
             "Points": 4
         },
@@ -5283,7 +5283,7 @@
         {
             "Player": "Ryan Olsen",
             "Team": "D\u00fcsseldorfer Aurora",
-            "Goals": 4,
+            "Goals": 5,
             "Assists": 2,
             "Points": 5
         },
@@ -6152,7 +6152,7 @@
             "Player": "Ev Fitzpatov",
             "Team": "M\u00fcnchen FluxBullen",
             "Goals": 0,
-            "Assists": 0,
+            "Assists": 1,
             "Points": 0
         },
         {
@@ -6179,7 +6179,7 @@
         {
             "Player": "Kon Abelvik",
             "Team": "M\u00fcnchen FluxBullen",
-            "Goals": 1,
+            "Goals": 2,
             "Assists": 2,
             "Points": 2
         },
@@ -6564,8 +6564,8 @@
         {
             "Player": "Tom Larkov",
             "Team": "Schwenningen Sturmfl\u00fcgel",
-            "Goals": 2,
-            "Assists": 2,
+            "Goals": 3,
+            "Assists": 3,
             "Points": 4
         },
         {
@@ -6606,7 +6606,7 @@
         {
             "Player": "Vik Buchrik",
             "Team": "Schwenningen Sturmfl\u00fcgel",
-            "Goals": 3,
+            "Goals": 5,
             "Assists": 0,
             "Points": 2
         },
@@ -6621,7 +6621,7 @@
             "Player": "Bret Richov",
             "Team": "Schwenningen Sturmfl\u00fcgel",
             "Goals": 1,
-            "Assists": 2,
+            "Assists": 3,
             "Points": 1
         },
         {
@@ -6684,7 +6684,7 @@
             "Player": "Zach Senyk",
             "Team": "Schwenningen Sturmfl\u00fcgel",
             "Goals": 3,
-            "Assists": 2,
+            "Assists": 3,
             "Points": 4
         },
         {
@@ -6704,7 +6704,7 @@
         {
             "Player": "Phil Hungrov",
             "Team": "Schwenningen Sturmfl\u00fcgel",
-            "Goals": 4,
+            "Goals": 5,
             "Assists": 2,
             "Points": 5
         },
@@ -6712,7 +6712,7 @@
             "Player": "Tys Spinkov",
             "Team": "Schwenningen Sturmfl\u00fcgel",
             "Goals": 1,
-            "Assists": 1,
+            "Assists": 2,
             "Points": 2
         },
         {
@@ -6978,7 +6978,7 @@
             "Player": "Jul Kornik",
             "Team": "Landshut Lichtkern",
             "Goals": 1,
-            "Assists": 0,
+            "Assists": 1,
             "Points": 1
         },
         {
@@ -6998,7 +6998,7 @@
         {
             "Player": "Jak Mayenov",
             "Team": "Landshut Lichtkern",
-            "Goals": 4,
+            "Goals": 5,
             "Assists": 2,
             "Points": 5
         },
