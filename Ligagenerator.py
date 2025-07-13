@@ -296,6 +296,7 @@ nord_teams = [
     {"Name": "Just Macpharik", "Offense": 64, "Defense": 66, "Speed": 65, "Chemistry": 67},
     {"Name": "Rik Gaidelov", "Offense": 61, "Defense": 65, "Speed": 63, "Chemistry": 64},
     {"Name": "Phil Kuhnekov", "Offense": 63, "Defense": 66, "Speed": 64, "Chemistry": 65}
+    {"Name": "Tay Vausik", "Offense": 68, "Defense": 61, "Speed": 68, "Chemistry": 67}
     ], "Momentum": 0},
     # ➡️ weitere Nord Teams
 ]
