@@ -4394,7 +4394,7 @@
         {
             "Player": "Andre Jenikov",
             "Team": "Iserlohn Miners",
-            "Goals": 1,
+            "Goals": 2,
             "Assists": 0,
             "Points": 1
         },
@@ -4402,20 +4402,20 @@
             "Player": "Zach Osbren",
             "Team": "Iserlohn Miners",
             "Goals": 1,
-            "Assists": 1,
+            "Assists": 2,
             "Points": 1
         },
         {
             "Player": "Hub Labrov",
             "Team": "Iserlohn Miners",
-            "Goals": 1,
+            "Goals": 3,
             "Assists": 4,
             "Points": 4
         },
         {
             "Player": "Emil Quarnik",
             "Team": "Iserlohn Miners",
-            "Goals": 1,
+            "Goals": 2,
             "Assists": 2,
             "Points": 2
         },
@@ -4514,7 +4514,7 @@
             "Player": "Max Brunnik",
             "Team": "Iserlohn Miners",
             "Goals": 0,
-            "Assists": 3,
+            "Assists": 4,
             "Points": 3
         },
         {
@@ -4549,7 +4549,7 @@
             "Player": "Sven Ziegrov",
             "Team": "Iserlohn Miners",
             "Goals": 2,
-            "Assists": 2,
+            "Assists": 3,
             "Points": 3
         },
         {
@@ -4562,7 +4562,7 @@
         {
             "Player": "Brand Trockik",
             "Team": "Iserlohn Miners",
-            "Goals": 2,
+            "Goals": 3,
             "Assists": 1,
             "Points": 3
         },
@@ -4570,7 +4570,7 @@
             "Player": "Leo Bussov",
             "Team": "Iserlohn Miners",
             "Goals": 1,
-            "Assists": 0,
+            "Assists": 2,
             "Points": 1
         },
         {
@@ -4640,7 +4640,7 @@
             "Player": "Vel Vittanov",
             "Team": "K\u00f6ln Blitzhaie",
             "Goals": 1,
-            "Assists": 3,
+            "Assists": 4,
             "Points": 2
         },
         {
@@ -4681,15 +4681,15 @@
         {
             "Player": "Mat Papov",
             "Team": "K\u00f6ln Blitzhaie",
-            "Goals": 3,
+            "Goals": 4,
             "Assists": 5,
             "Points": 8
         },
         {
             "Player": "Mor Mullov",
             "Team": "K\u00f6ln Blitzhaie",
-            "Goals": 2,
-            "Assists": 2,
+            "Goals": 3,
+            "Assists": 3,
             "Points": 3
         },
         {
@@ -4772,8 +4772,8 @@
         {
             "Player": "Park Tuomik",
             "Team": "K\u00f6ln Blitzhaie",
-            "Goals": 0,
-            "Assists": 0,
+            "Goals": 1,
+            "Assists": 1,
             "Points": 0
         },
         {
@@ -5073,7 +5073,7 @@
         {
             "Player": "Nic Fockik",
             "Team": "Krefeld Kernschlag",
-            "Goals": 0,
+            "Goals": 1,
             "Assists": 2,
             "Points": 2
         },
@@ -5094,7 +5094,7 @@
         {
             "Player": "Jon Matsov",
             "Team": "Krefeld Kernschlag",
-            "Goals": 2,
+            "Goals": 3,
             "Assists": 0,
             "Points": 2
         },
@@ -5144,14 +5144,14 @@
             "Player": "Mark Zengerik",
             "Team": "Krefeld Kernschlag",
             "Goals": 2,
-            "Assists": 2,
+            "Assists": 3,
             "Points": 3
         },
         {
             "Player": "Leon Korvik",
             "Team": "Krefeld Kernschlag",
             "Goals": 4,
-            "Assists": 1,
+            "Assists": 2,
             "Points": 5
         },
         {
@@ -5172,7 +5172,7 @@
             "Player": "Leon H\u00fcmer",
             "Team": "D\u00fcsseldorfer Aurora",
             "Goals": 0,
-            "Assists": 1,
+            "Assists": 2,
             "Points": 1
         },
         {
@@ -5199,7 +5199,7 @@
         {
             "Player": "Emil Quaas",
             "Team": "D\u00fcsseldorfer Aurora",
-            "Goals": 3,
+            "Goals": 4,
             "Assists": 1,
             "Points": 3
         },
@@ -5738,7 +5738,7 @@
         {
             "Player": "Seb Zwicklo",
             "Team": "Augsburg Ferox",
-            "Goals": 3,
+            "Goals": 4,
             "Assists": 3,
             "Points": 4
         },
@@ -5914,7 +5914,7 @@
             "Player": "Anre Hakulin",
             "Team": "Augsburg Ferox",
             "Goals": 1,
-            "Assists": 3,
+            "Assists": 4,
             "Points": 2
         },
         {
@@ -6158,7 +6158,7 @@
         {
             "Player": "Sim Wolvik",
             "Team": "M\u00fcnchen FluxBullen",
-            "Goals": 0,
+            "Goals": 1,
             "Assists": 1,
             "Points": 1
         },
@@ -6187,20 +6187,20 @@
             "Player": "Jak Webrov",
             "Team": "M\u00fcnchen FluxBullen",
             "Goals": 1,
-            "Assists": 2,
+            "Assists": 3,
             "Points": 2
         },
         {
             "Player": "Jon Blumov",
             "Team": "M\u00fcnchen FluxBullen",
-            "Goals": 2,
+            "Goals": 3,
             "Assists": 0,
             "Points": 1
         },
         {
             "Player": "Sten Fischrik",
             "Team": "M\u00fcnchen FluxBullen",
-            "Goals": 0,
+            "Goals": 1,
             "Assists": 0,
             "Points": 0
         },
@@ -6250,14 +6250,14 @@
             "Player": "Ben Smithov",
             "Team": "M\u00fcnchen FluxBullen",
             "Goals": 3,
-            "Assists": 0,
+            "Assists": 1,
             "Points": 3
         },
         {
             "Player": "Nik Maulik",
             "Team": "M\u00fcnchen FluxBullen",
             "Goals": 2,
-            "Assists": 1,
+            "Assists": 2,
             "Points": 3
         },
         {
@@ -6284,22 +6284,22 @@
         {
             "Player": "Niko Kramrik",
             "Team": "M\u00fcnchen FluxBullen",
-            "Goals": 3,
+            "Goals": 4,
             "Assists": 2,
             "Points": 4
         },
         {
             "Player": "Veit Oswalden",
             "Team": "M\u00fcnchen FluxBullen",
-            "Goals": 4,
-            "Assists": 4,
+            "Goals": 5,
+            "Assists": 5,
             "Points": 6
         },
         {
             "Player": "Yas Ehlivik",
             "Team": "M\u00fcnchen FluxBullen",
             "Goals": 3,
-            "Assists": 1,
+            "Assists": 2,
             "Points": 2
         },
         {
@@ -6319,8 +6319,8 @@
         {
             "Player": "Chris Desovik",
             "Team": "M\u00fcnchen FluxBullen",
-            "Goals": 2,
-            "Assists": 2,
+            "Goals": 3,
+            "Assists": 3,
             "Points": 4
         },
         {
@@ -6551,7 +6551,7 @@
             "Player": "Dan Schwik",
             "Team": "Schwenningen Sturmfl\u00fcgel",
             "Goals": 1,
-            "Assists": 2,
+            "Assists": 3,
             "Points": 3
         },
         {
@@ -6586,7 +6586,7 @@
             "Player": "Will Webrik",
             "Team": "Schwenningen Sturmfl\u00fcgel",
             "Goals": 2,
-            "Assists": 1,
+            "Assists": 2,
             "Points": 2
         },
         {
@@ -6599,7 +6599,7 @@
         {
             "Player": "Mir H\u00f6ffvik",
             "Team": "Schwenningen Sturmfl\u00fcgel",
-            "Goals": 3,
+            "Goals": 4,
             "Assists": 3,
             "Points": 6
         },
@@ -6711,7 +6711,7 @@
         {
             "Player": "Tys Spinkov",
             "Team": "Schwenningen Sturmfl\u00fcgel",
-            "Goals": 1,
+            "Goals": 2,
             "Assists": 2,
             "Points": 2
         },
@@ -6922,7 +6922,7 @@
             "Player": "Phil Dietrov",
             "Team": "Landshut Lichtkern",
             "Goals": 0,
-            "Assists": 3,
+            "Assists": 4,
             "Points": 3
         },
         {
@@ -6935,14 +6935,14 @@
         {
             "Player": "Alex Derschik",
             "Team": "Landshut Lichtkern",
-            "Goals": 4,
-            "Assists": 3,
+            "Goals": 5,
+            "Assists": 5,
             "Points": 6
         },
         {
             "Player": "And Schwarzov",
             "Team": "Landshut Lichtkern",
-            "Goals": 0,
+            "Goals": 1,
             "Assists": 2,
             "Points": 2
         },
@@ -6963,7 +6963,7 @@
         {
             "Player": "Dav Elsnov",
             "Team": "Landshut Lichtkern",
-            "Goals": 6,
+            "Goals": 7,
             "Assists": 4,
             "Points": 5
         },
@@ -6977,8 +6977,8 @@
         {
             "Player": "Jul Kornik",
             "Team": "Landshut Lichtkern",
-            "Goals": 1,
-            "Assists": 1,
+            "Goals": 2,
+            "Assists": 2,
             "Points": 1
         },
         {
@@ -6991,15 +6991,15 @@
         {
             "Player": "Tob Lindvik",
             "Team": "Landshut Lichtkern",
-            "Goals": 1,
-            "Assists": 4,
+            "Goals": 3,
+            "Assists": 5,
             "Points": 4
         },
         {
             "Player": "Jak Mayenov",
             "Team": "Landshut Lichtkern",
-            "Goals": 5,
-            "Assists": 2,
+            "Goals": 6,
+            "Assists": 3,
             "Points": 5
         },
         {
@@ -7027,7 +7027,7 @@
             "Player": "Lui Scheibrik",
             "Team": "Landshut Lichtkern",
             "Goals": 4,
-            "Assists": 4,
+            "Assists": 5,
             "Points": 7
         },
         {
