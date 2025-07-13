@@ -150,12 +150,10 @@ nord_teams = [
     {"Name": "Jos Currik", "Offense": 70, "Defense": 61, "Speed": 70, "Chemistry": 68},
     {"Name": "Fred Stormvik", "Offense": 77, "Defense": 64, "Speed": 72, "Chemistry": 71},
     {"Name": "Juha Tyrvain", "Offense": 73, "Defense": 62, "Speed": 71, "Chemistry": 69},
-    {"Name": "Tim Wohlgard", "Offense": 71, "Defense": 63, "Speed": 70, "Chemistry": 68},
     {"Name": "Eli Lindvik", "Offense": 68, "Defense": 61, "Speed": 69, "Chemistry": 67},
     {"Name": "Kev Niedik", "Offense": 65, "Defense": 60, "Speed": 67, "Chemistry": 66},
     {"Name": "Park Tuomik", "Offense": 69, "Defense": 61, "Speed": 70, "Chemistry": 68},
     {"Name": "Marc Munzenk", "Offense": 64, "Defense": 59, "Speed": 66, "Chemistry": 66},
-    {"Name": "Alex Grennov", "Offense": 74, "Defense": 62, "Speed": 71, "Chemistry": 69},
     {"Name": "Greg Maclov", "Offense": 72, "Defense": 61, "Speed": 70, "Chemistry": 68},
     {"Name": "Hak Haenel", "Offense": 66, "Defense": 60, "Speed": 67, "Chemistry": 67}
     ], "Momentum": 0},
