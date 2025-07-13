@@ -20,6 +20,56 @@ def load_progress():
             return json.load(f)
     return None
 
+import json
+import os
+
+def speichere_spieltag_json(spieltag_nummer, nord_df, sued_df, nord_matches, sued_matches, ordner="spieltage"):
+    os.makedirs(ordner, exist_ok=True)
+
+    def get_ergebnisse(matches, df):
+        ergebnisse = []
+        for home, away in matches:
+            row_home = df[df["Team"] == home].iloc[0]
+            row_away = df[df["Team"] == away].iloc[0]
+            gf_home = row_home["Goals For"]
+            ga_home = row_home["Goals Against"]
+            gf_away = row_away["Goals For"]
+            ga_away = row_away["Goals Against"]
+            # Aktuelles Match-Ergebnis berechnen
+            goals_home = gf_home - row_home.get("prev_GF", 0)
+            goals_away = gf_away - row_away.get("prev_GF", 0)
+            ergebnisse.append({
+                "heim": home,
+                "auswärts": away,
+                "ergebnis": f"{goals_home}:{goals_away}"
+            })
+            # Update für nächsten Spieltag
+            df.loc[df["Team"] == home, "prev_GF"] = gf_home
+            df.loc[df["Team"] == away, "prev_GF"] = gf_away
+        return ergebnisse
+
+    # Initialisiere prev_GF, wenn es noch nicht existiert
+    if "prev_GF" not in nord_df.columns:
+        nord_df["prev_GF"] = 0
+    if "prev_GF" not in sued_df.columns:
+        sued_df["prev_GF"] = 0
+
+    nord_ergebnisse = get_ergebnisse(nord_matches, nord_df)
+    sued_ergebnisse = get_ergebnisse(sued_matches, sued_df)
+
+    data = {
+        "spieltag": spieltag_nummer,
+        "nord": nord_ergebnisse,
+        "sued": sued_ergebnisse
+    }
+
+    filename = os.path.join(ordner, f"spieltag_{spieltag_nummer:02}.json")
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=4, ensure_ascii=False)
+
+    print(f"📁 Spieltag {spieltag_nummer} gespeichert unter {filename}")
+
+
 # ------------------------------------------------
 # 🏒 2  TEAMLISTEN (➡️ hier deine echten Teams einsetzen)
 # ------------------------------------------------
@@ -810,6 +860,12 @@ while True:
             "nord_schedule": nord_schedule,
             "sued_schedule": sued_schedule
         })
+
+        # Spieltag speichern als JSON für Webseite
+        nord_matches = nord_schedule[:len(nord_df)//2]
+        sued_matches = sued_schedule[:len(sued_df)//2]
+        speichere_spieltag_json(spieltag, nord_df, sued_df, nord_matches, sued_matches)
+
 
         spieltag += 1
 

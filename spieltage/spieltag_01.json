@@ -1,0 +1,57 @@
+{
+    "spieltag": 1,
+    "nord": [
+        {
+            "heim": "Kassel Zenith",
+            "auswärts": "Berlin EisBären",
+            "ergebnis": "3:3"
+        },
+        {
+            "heim": "Düsseldorfer Aurora",
+            "auswärts": "Bad Nauheim Ferox",
+            "ergebnis": "2:1"
+        },
+        {
+            "heim": "Krefeld Kernschlag",
+            "auswärts": "Bremerhaven Forge",
+            "ergebnis": "2:2"
+        },
+        {
+            "heim": "Wolfsburg Voltsturm",
+            "auswärts": "Frankfurt Core",
+            "ergebnis": "2:1"
+        },
+        {
+            "heim": "Köln Blitzhaie",
+            "auswärts": "Iserlohn Miners",
+            "ergebnis": "2:2"
+        }
+    ],
+    "sued": [
+        {
+            "heim": "Regensburg Pulse",
+            "auswärts": "Ingolstadt Indigo Panther",
+            "ergebnis": "2:2"
+        },
+        {
+            "heim": "Landshut Lichtkern",
+            "auswärts": "Ravensburg Zenith Falcons",
+            "ergebnis": "1:1"
+        },
+        {
+            "heim": "Straubing Forest Tigers",
+            "auswärts": "Augsburg Ferox",
+            "ergebnis": "2:1"
+        },
+        {
+            "heim": "Schwenningen Sturmflügel",
+            "auswärts": "Mannheim Ventus",
+            "ergebnis": "2:1"
+        },
+        {
+            "heim": "Nürnberg Eistiger",
+            "auswärts": "München FluxBullen",
+            "ergebnis": "2:1"
+        }
+    ]
+}
