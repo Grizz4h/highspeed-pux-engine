@@ -188,6 +188,7 @@ def simulate_match(df, home, away) -> str:
     # Tabelle updaten
     df.loc[df["Team"] == home, "Goals For"]     += g_h
     df.loc[df["Team"] == home, "Goals Against"] += g_a
+    
     df.loc[df["Team"] == away, "Goals For"]     += g_a
     df.loc[df["Team"] == away, "Goals Against"] += g_h
 
