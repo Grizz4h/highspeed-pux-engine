@@ -1,78 +1,12 @@
 {
-  "timestamp": "2025-07-14T13:05:38.705008",
+  "timestamp": "2025-07-14T13:05:40.727192",
   "saison": 1,
-  "spieltag": 18,
-  "results": [
-    {
-      "home": "Bremerhaven Forge",
-      "away": "Berlin EisBären",
-      "g_home": 2,
-      "g_away": 0,
-      "conference": "Nord"
-    },
-    {
-      "home": "Bad Nauheim Ferox",
-      "away": "Frankfurt Core",
-      "g_home": 2,
-      "g_away": 2,
-      "conference": "Nord"
-    },
-    {
-      "home": "Kassel Zenith",
-      "away": "Iserlohn Miners",
-      "g_home": 1,
-      "g_away": 2,
-      "conference": "Nord"
-    },
-    {
-      "home": "Düsseldorfer Aurora",
-      "away": "Köln Blitzhaie",
-      "g_home": 2,
-      "g_away": 0,
-      "conference": "Nord"
-    },
-    {
-      "home": "Krefeld Kernschlag",
-      "away": "Wolfsburg Voltsturm",
-      "g_home": 2,
-      "g_away": 3,
-      "conference": "Nord"
-    },
-    {
-      "home": "Augsburg Ferox",
-      "away": "Ingolstadt Indigo Panther",
-      "g_home": 3,
-      "g_away": 2,
-      "conference": "Süd"
-    },
-    {
-      "home": "Ravensburg Zenith Falcons",
-      "away": "Mannheim Ventus",
-      "g_home": 1,
-      "g_away": 2,
-      "conference": "Süd"
-    },
-    {
-      "home": "Regensburg Pulse",
-      "away": "München FluxBullen",
-      "g_home": 1,
-      "g_away": 3,
-      "conference": "Süd"
-    },
-    {
-      "home": "Landshut Lichtkern",
-      "away": "Nürnberg Eistiger",
-      "g_home": 2,
-      "g_away": 2,
-      "conference": "Süd"
-    },
-    {
-      "home": "Straubing Forest Tigers",
-      "away": "Schwenningen Sturmflügel",
-      "g_home": 4,
-      "g_away": 2,
-      "conference": "Süd"
-    }
+  "runde": 1,
+  "spiele": [
+    "Frankfurt Core 3:2 Ingolstadt Indigo Panther",
+    "Bremerhaven Forge 2:1 Nürnberg Eistiger",
+    "Iserlohn Miners 2:1 Augsburg Ferox",
+    "Köln Blitzhaie 0:3 Schwenningen Sturmflügel"
   ],
   "tabelle_nord": [
     {
@@ -220,8 +154,22 @@
   ],
   "top_scorer": [
     {
+      "Player": "Phil Feistik",
+      "Team": "Schwenningen Sturmflügel",
+      "Goals": 2,
+      "Assists": 7,
+      "Points": 9
+    },
+    {
       "Player": "Eric Cornik",
       "Team": "Iserlohn Miners",
+      "Goals": 6,
+      "Assists": 3,
+      "Points": 9
+    },
+    {
+      "Player": "Jak Ustrov",
+      "Team": "Nürnberg Eistiger",
       "Goals": 6,
       "Assists": 3,
       "Points": 9
@@ -234,17 +182,10 @@
       "Points": 8
     },
     {
-      "Player": "Phil Feistik",
-      "Team": "Schwenningen Sturmflügel",
-      "Goals": 2,
-      "Assists": 6,
-      "Points": 8
-    },
-    {
-      "Player": "Jak Ustrov",
-      "Team": "Nürnberg Eistiger",
-      "Goals": 6,
-      "Assists": 2,
+      "Player": "Mate Mrazek",
+      "Team": "Ravensburg Zenith Falcons",
+      "Goals": 3,
+      "Assists": 5,
       "Points": 8
     },
     {
@@ -255,10 +196,10 @@
       "Points": 8
     },
     {
-      "Player": "Mate Mrazek",
-      "Team": "Ravensburg Zenith Falcons",
-      "Goals": 3,
-      "Assists": 5,
+      "Player": "Kevin Orendorz",
+      "Team": "Düsseldorfer Aurora",
+      "Goals": 4,
+      "Assists": 4,
       "Points": 8
     },
     {
@@ -269,18 +210,25 @@
       "Points": 8
     },
     {
-      "Player": "Kevin Orendorz",
-      "Team": "Düsseldorfer Aurora",
-      "Goals": 4,
-      "Assists": 4,
-      "Points": 8
-    },
-    {
       "Player": "Den Pfargen",
       "Team": "Ravensburg Zenith Falcons",
       "Goals": 4,
       "Assists": 4,
       "Points": 8
+    },
+    {
+      "Player": "Phil Samulov",
+      "Team": "Straubing Forest Tigers",
+      "Goals": 3,
+      "Assists": 4,
+      "Points": 7
+    },
+    {
+      "Player": "Bjo Kruvik",
+      "Team": "Wolfsburg Voltsturm",
+      "Goals": 2,
+      "Assists": 5,
+      "Points": 7
     },
     {
       "Player": "Michael Clarke",
@@ -297,10 +245,10 @@
       "Points": 7
     },
     {
-      "Player": "Phil Samulov",
-      "Team": "Straubing Forest Tigers",
-      "Goals": 3,
-      "Assists": 4,
+      "Player": "Ken Olimvik",
+      "Team": "Schwenningen Sturmflügel",
+      "Goals": 2,
+      "Assists": 5,
       "Points": 7
     },
     {
@@ -318,13 +266,6 @@
       "Points": 7
     },
     {
-      "Player": "Bjo Kruvik",
-      "Team": "Wolfsburg Voltsturm",
-      "Goals": 2,
-      "Assists": 5,
-      "Points": 7
-    },
-    {
       "Player": "Mor Kottik",
       "Team": "Regensburg Pulse",
       "Goals": 4,
@@ -332,29 +273,22 @@
       "Points": 7
     },
     {
-      "Player": "Ken Olimvik",
-      "Team": "Schwenningen Sturmflügel",
-      "Goals": 2,
-      "Assists": 5,
-      "Points": 7
-    },
-    {
-      "Player": "Ale Ahlrik",
-      "Team": "Kassel Zenith",
-      "Goals": 0,
-      "Assists": 6,
-      "Points": 6
-    },
-    {
-      "Player": "Reid McNelov",
-      "Team": "Frankfurt Core",
-      "Goals": 2,
-      "Assists": 4,
-      "Points": 6
-    },
-    {
       "Player": "Yan Wenzik",
       "Team": "Landshut Lichtkern",
+      "Goals": 3,
+      "Assists": 3,
+      "Points": 6
+    },
+    {
+      "Player": "Lou Aubren",
+      "Team": "Köln Blitzhaie",
+      "Goals": 1,
+      "Assists": 5,
+      "Points": 6
+    },
+    {
+      "Player": "Fred Stormvik",
+      "Team": "Köln Blitzhaie",
       "Goals": 3,
       "Assists": 3,
       "Points": 6

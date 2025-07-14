@@ -72,13 +72,9 @@ def save_spieltag_data(spieltag, nord_df, sued_df, player_stats_df, saison_numme
 
 # ------------------------------------------------
 # 🏒 2  TEAMLISTEN (➡️ hier deine echten Teams einsetzen)
-# ------------------------------------------------
-
+# ------------------------------------------------ 
 
 from realeTeams import nord_teams, sued_teams
-
-
-
 
 # ------------------------------------------------
 # 📅 3  ROUND-ROBIN-SCHEDULE
