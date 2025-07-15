@@ -301,6 +301,8 @@ def run_simulation(max_seasons:int|None=None,interactive:bool=True)->None:
             stats=init_stats()
             spieltag=1
 
+        
+
 # ---------------- SELF‑TESTS -------------------
 
 def _self_tests()->None:
