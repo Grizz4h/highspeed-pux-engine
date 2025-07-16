@@ -43,6 +43,7 @@ SAVEFILE     = Path("saves/savegame.json")
 SPIELTAG_DIR = Path("spieltage")
 PLAYOFF_DIR  = Path("playoffs")
 
+
 # ------------------------------------------------
 # 2  TEAMS LADEN
 # ------------------------------------------------
@@ -66,6 +67,20 @@ def get_next_season_number() -> int:
         if p.is_dir() and p.name.startswith("saison_") and p.name.split("_")[1].isdigit()
     ]
     return max(nums, default=0) + 1
+
+# ---------- SAVE / LOAD HELPER ----------
+
+def save_state(state: Dict[str, Any]) -> None:
+    SAVEFILE.parent.mkdir(parents=True, exist_ok=True)
+    with SAVEFILE.open("w", encoding="utf-8") as f:
+        json.dump(state, f, indent=2, ensure_ascii=False)
+
+def load_state() -> Dict[str, Any] | None:
+    if SAVEFILE.exists() and SAVEFILE.stat().st_size > 0:
+        with SAVEFILE.open("r", encoding="utf-8") as f:
+            return json.load(f)
+    return None
+
 
 # 3  EXPORT‑HILFEN
 # ------------------------------------------------
@@ -206,9 +221,12 @@ def init_stats()->pd.DataFrame:
         for t in nord_teams+sued_teams for p in t["Players"]
     ])
 
-# ---------------- PLAY‑OFFS ---------------------
+# ---------------- PLAY-OFFS ---------------------
 
-def simulate_playoff_match(a: str, b: str, nord: pd.DataFrame, sued: pd.DataFrame, stats: pd.DataFrame) -> Tuple[str, str]:
+def simulate_playoff_match(a: str, b: str,
+                           nord: pd.DataFrame,
+                           sued: pd.DataFrame,
+                           stats: pd.DataFrame) -> Tuple[str, str]:
     dfA = nord if a in list(nord["Team"]) else sued
     dfB = nord if b in list(nord["Team"]) else sued
     pA = calc_strength(dfA[dfA["Team"] == a].iloc[0])
@@ -221,40 +239,72 @@ def simulate_playoff_match(a: str, b: str, nord: pd.DataFrame, sued: pd.DataFram
     return f"{a} {gA}:{gB} {b}", (a if gA > gB else b)
 
 
-def run_playoffs(season: int, nord: pd.DataFrame, sued: pd.DataFrame, stats: pd.DataFrame, *, interactive: bool = True) -> None:
-    """Interaktive Play‑offs: <Enter> vor jeder Runde."""
+def run_playoffs(season: int,
+                 nord: pd.DataFrame,
+                 sued: pd.DataFrame,
+                 stats: pd.DataFrame,
+                 *,
+                 interactive: bool = True) -> None:
+    """Interaktive Play-offs: <Enter> vor jeder Runde und Autosave."""
     nord4 = nord.sort_values(["Points", "Goals For"], ascending=False).head(4)
     sued4 = sued.sort_values(["Points", "Goals For"], ascending=False).head(4)
+
     pairings = [
         (nord4.iloc[0]["Team"], sued4.iloc[3]["Team"]),
         (nord4.iloc[1]["Team"], sued4.iloc[2]["Team"]),
         (nord4.iloc[2]["Team"], sued4.iloc[1]["Team"]),
         (nord4.iloc[3]["Team"], sued4.iloc[0]["Team"]),
     ]
+
     rnd = 1
     while True:
         if interactive:
-            input(f"➡️ Enter für Play‑off‑Runde {rnd} (Saison {season}) …")
-        print(f"\n=== PLAY‑OFF RUNDE {rnd} (Saison {season}) ===")
+            input(f"➡️  Enter für Play-off-Runde {rnd} (Saison {season}) …")
+
+        print(f"\n=== PLAY-OFF RUNDE {rnd} (Saison {season}) ===")
         results: List[str] = []
         winners: List[str] = []
+
         for a, b in pairings:
             res, win = simulate_playoff_match(a, b, nord, sued, stats)
             print(res)
             results.append(res)
             winners.append(win)
-        _save_json(PLAYOFF_DIR / f"saison_{season}", f"runde_{rnd:02}.json", {
-            "timestamp": datetime.now().isoformat(),
-            "saison": season,
-            "runde": rnd,
-            "spiele": results,
-            **_export_tables(nord, sued, stats),
-        })
+
+        # JSON-Dump für die Runde
+        _save_json(
+            PLAYOFF_DIR / f"saison_{season}",
+            f"runde_{rnd:02}.json",
+            {
+                "timestamp": datetime.now().isoformat(),
+                "saison": season,
+                "runde": rnd,
+                "spiele": results,
+                **_export_tables(nord, sued, stats),
+            },
+        )
+
+        # 🔒 Autosave nach der Runde
+        save_state(
+            {
+                "season": season,
+                "spieltag": f"Playoff_Runde_{rnd}",  # rein informativ
+                "nord": nord.to_dict("records"),
+                "sued": sued.to_dict("records"),
+                "nsched": [],  # Regular-Season-Schedules leer
+                "ssched": [],
+                "stats": stats.to_dict("records"),
+            }
+        )
+
+        # Champion ermitteln oder nächste Runde vorbereiten
         if len(winners) == 1:
-            print(f"\n🏆 Champion Saison {season}: {winners[0]} 🏆\n")
+            print(f"\n🏆  Champion Saison {season}: {winners[0]}  🏆\n")
             break
+
         pairings = [(winners[i], winners[i + 1]) for i in range(0, len(winners), 2)]
         rnd += 1
+
 
 # ---------------- SAISON LOOP ------------------
 
@@ -266,15 +316,31 @@ def _init_frames()->Tuple[pd.DataFrame,pd.DataFrame]:
     return n,s
 
 
-def run_simulation(max_seasons:int|None=None,interactive:bool=True)->None:
+def run_simulation(max_seasons:int|None=None, interactive:bool=True)->None:
     _ensure_dirs()
-    season=get_next_season_number()
-    nord,sued=_init_frames()
-    nsched=create_schedule(nord_teams)
-    ssched=create_schedule(sued_teams)
-    stats=init_stats()
-    spieltag=1
-    max_spieltage=(len(nord_teams)-1)*2
+
+    # 👉  Versuch, ein Savegame zu laden
+    state = load_state()
+
+    if state:
+        print(f"🔄  Savegame geladen – Saison {state['season']}, Spieltag {state['spieltag']}")
+        season    = state["season"]
+        spieltag  = state["spieltag"]
+        nord      = pd.DataFrame(state["nord"])
+        sued      = pd.DataFrame(state["sued"])
+        nsched    = state["nsched"]
+        ssched    = state["ssched"]
+        stats     = pd.DataFrame(state["stats"])
+    else:
+        season    = get_next_season_number()
+        spieltag  = 1
+        nord,sued = _init_frames()
+        nsched    = create_schedule(nord_teams)
+        ssched    = create_schedule(sued_teams)
+        stats     = init_stats()
+
+    max_spieltage = (len(nord_teams)-1)*2
+
     while max_seasons is None or season<=max_seasons:
         if interactive:
             input(f"➡️  Enter für Spieltag {spieltag} (Saison {season}) …")
@@ -297,6 +363,17 @@ def run_simulation(max_seasons:int|None=None,interactive:bool=True)->None:
         _print_tables(nord,sued,stats)
         save_spieltag_json(season,spieltag,results_json,nord,sued,stats)
         spieltag+=1
+        # ---- Autosave nach Spieltag ----
+        save_state({
+            "season": season,
+            "spieltag": spieltag,          # schon um +1 erhöht
+            "nord": nord.to_dict("records"),
+            "sued": sued.to_dict("records"),
+            "nsched": nsched,
+            "ssched": ssched,
+            "stats": stats.to_dict("records"),
+})
+
         if spieltag>max_spieltage:
             print("\n🏁 Reguläre Saison beendet – Play‑offs!")
             run_playoffs(season,nord,sued,stats,interactive=interactive)
