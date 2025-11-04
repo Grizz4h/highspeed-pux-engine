@@ -1,0 +1,363 @@
+{
+  "timestamp": "2025-11-04T23:17:23.759528",
+  "saison": 1,
+  "spieltag": 4,
+  "results": [
+    {
+      "home": "Krefeld Kernschlag",
+      "away": "Whiteout Berlin",
+      "g_home": 3,
+      "g_away": 2,
+      "conference": "Nord"
+    },
+    {
+      "home": "Wolfsburg Voltsturm",
+      "away": "Düsseldorfer Aurora",
+      "g_home": 4,
+      "g_away": 3,
+      "conference": "Nord"
+    },
+    {
+      "home": "Köln Blitzhaie",
+      "away": "Kassel Zenit",
+      "g_home": 2,
+      "g_away": 2,
+      "conference": "Nord"
+    },
+    {
+      "home": "Iserlohn Miners",
+      "away": "Bad Nauheim Devils",
+      "g_home": 1,
+      "g_away": 1,
+      "conference": "Nord"
+    },
+    {
+      "home": "Frankfurt Core",
+      "away": "Bremerhaven Trident",
+      "g_home": 1,
+      "g_away": 3,
+      "conference": "Nord"
+    },
+    {
+      "home": "Straubing Forest Tigers",
+      "away": "Novadelta Panther",
+      "g_home": 1,
+      "g_away": 2,
+      "conference": "Süd"
+    },
+    {
+      "home": "Schwenningen Sturmflügel",
+      "away": "Landshut Lichtkern",
+      "g_home": 1,
+      "g_away": 3,
+      "conference": "Süd"
+    },
+    {
+      "home": "Nürnberg Eistiger",
+      "away": "Regensburg Pulse",
+      "g_home": 1,
+      "g_away": 4,
+      "conference": "Süd"
+    },
+    {
+      "home": "München FluxBullen",
+      "away": "Ravensburg Zenit Falken",
+      "g_home": 3,
+      "g_away": 3,
+      "conference": "Süd"
+    },
+    {
+      "home": "Mannheim Ventus",
+      "away": "Augsburg Ferox",
+      "g_home": 3,
+      "g_away": 2,
+      "conference": "Süd"
+    }
+  ],
+  "tabelle_nord": [
+    {
+      "Team": "Wolfsburg Voltsturm",
+      "Points": 10,
+      "GF": 11,
+      "GA": 8,
+      "GD": 3
+    },
+    {
+      "Team": "Bremerhaven Trident",
+      "Points": 9,
+      "GF": 10,
+      "GA": 7,
+      "GD": 3
+    },
+    {
+      "Team": "Bad Nauheim Devils",
+      "Points": 7,
+      "GF": 8,
+      "GA": 7,
+      "GD": 1
+    },
+    {
+      "Team": "Iserlohn Miners",
+      "Points": 7,
+      "GF": 6,
+      "GA": 4,
+      "GD": 2
+    },
+    {
+      "Team": "Krefeld Kernschlag",
+      "Points": 6,
+      "GF": 8,
+      "GA": 8,
+      "GD": 0
+    },
+    {
+      "Team": "Düsseldorfer Aurora",
+      "Points": 4,
+      "GF": 9,
+      "GA": 10,
+      "GD": -1
+    },
+    {
+      "Team": "Kassel Zenit",
+      "Points": 4,
+      "GF": 8,
+      "GA": 9,
+      "GD": -1
+    },
+    {
+      "Team": "Köln Blitzhaie",
+      "Points": 4,
+      "GF": 7,
+      "GA": 8,
+      "GD": -1
+    },
+    {
+      "Team": "Whiteout Berlin",
+      "Points": 3,
+      "GF": 6,
+      "GA": 8,
+      "GD": -2
+    },
+    {
+      "Team": "Frankfurt Core",
+      "Points": 2,
+      "GF": 5,
+      "GA": 9,
+      "GD": -4
+    }
+  ],
+  "tabelle_sued": [
+    {
+      "Team": "Landshut Lichtkern",
+      "Points": 12,
+      "GF": 10,
+      "GA": 4,
+      "GD": 6
+    },
+    {
+      "Team": "Augsburg Ferox",
+      "Points": 7,
+      "GF": 13,
+      "GA": 8,
+      "GD": 5
+    },
+    {
+      "Team": "Regensburg Pulse",
+      "Points": 7,
+      "GF": 10,
+      "GA": 9,
+      "GD": 1
+    },
+    {
+      "Team": "Mannheim Ventus",
+      "Points": 7,
+      "GF": 7,
+      "GA": 6,
+      "GD": 1
+    },
+    {
+      "Team": "Schwenningen Sturmflügel",
+      "Points": 6,
+      "GF": 9,
+      "GA": 9,
+      "GD": 0
+    },
+    {
+      "Team": "Straubing Forest Tigers",
+      "Points": 5,
+      "GF": 10,
+      "GA": 7,
+      "GD": 3
+    },
+    {
+      "Team": "Novadelta Panther",
+      "Points": 4,
+      "GF": 6,
+      "GA": 9,
+      "GD": -3
+    },
+    {
+      "Team": "München FluxBullen",
+      "Points": 3,
+      "GF": 7,
+      "GA": 11,
+      "GD": -4
+    },
+    {
+      "Team": "Ravensburg Zenit Falken",
+      "Points": 2,
+      "GF": 9,
+      "GA": 11,
+      "GD": -2
+    },
+    {
+      "Team": "Nürnberg Eistiger",
+      "Points": 1,
+      "GF": 6,
+      "GA": 13,
+      "GD": -7
+    }
+  ],
+  "top_scorer": [
+    {
+      "Player": "Jul Napravik",
+      "Team": "Frankfurt Core",
+      "Goals": 3,
+      "Assists": 1,
+      "Points": 4
+    },
+    {
+      "Player": "Zig Jeglov",
+      "Team": "Bremerhaven Trident",
+      "Goals": 1,
+      "Assists": 2,
+      "Points": 3
+    },
+    {
+      "Player": "Chris Hanken",
+      "Team": "Augsburg Ferox",
+      "Goals": 1,
+      "Assists": 2,
+      "Points": 3
+    },
+    {
+      "Player": "Matt Whitov",
+      "Team": "Wolfsburg Voltsturm",
+      "Goals": 2,
+      "Assists": 1,
+      "Points": 3
+    },
+    {
+      "Player": "Han Weitzik",
+      "Team": "Wolfsburg Voltsturm",
+      "Goals": 1,
+      "Assists": 2,
+      "Points": 3
+    },
+    {
+      "Player": "Chris Desovik",
+      "Team": "München FluxBullen",
+      "Goals": 2,
+      "Assists": 1,
+      "Points": 3
+    },
+    {
+      "Player": "Seb Zwinko",
+      "Team": "Augsburg Ferox",
+      "Goals": 3,
+      "Assists": 0,
+      "Points": 3
+    },
+    {
+      "Player": "Ture Linden",
+      "Team": "Düsseldorfer Aurora",
+      "Goals": 1,
+      "Assists": 2,
+      "Points": 3
+    },
+    {
+      "Player": "Den Pfargen",
+      "Team": "Ravensburg Zenit Falken",
+      "Goals": 1,
+      "Assists": 2,
+      "Points": 3
+    },
+    {
+      "Player": "Thom Reichik",
+      "Team": "Ravensburg Zenit Falken",
+      "Goals": 1,
+      "Assists": 2,
+      "Points": 3
+    },
+    {
+      "Player": "Dom Uhren",
+      "Team": "Bremerhaven Trident",
+      "Goals": 1,
+      "Assists": 1,
+      "Points": 2
+    },
+    {
+      "Player": "Dav Kubek",
+      "Team": "Regensburg Pulse",
+      "Goals": 1,
+      "Assists": 1,
+      "Points": 2
+    },
+    {
+      "Player": "Oli Rovin",
+      "Team": "Regensburg Pulse",
+      "Goals": 0,
+      "Assists": 2,
+      "Points": 2
+    },
+    {
+      "Player": "Olo Lisskov",
+      "Team": "Regensburg Pulse",
+      "Goals": 2,
+      "Assists": 0,
+      "Points": 2
+    },
+    {
+      "Player": "Just Scotrik",
+      "Team": "Straubing Forest Tigers",
+      "Goals": 0,
+      "Assists": 2,
+      "Points": 2
+    },
+    {
+      "Player": "Mich Connov",
+      "Team": "Straubing Forest Tigers",
+      "Goals": 1,
+      "Assists": 1,
+      "Points": 2
+    },
+    {
+      "Player": "Jon Langov",
+      "Team": "Landshut Lichtkern",
+      "Goals": 0,
+      "Assists": 2,
+      "Points": 2
+    },
+    {
+      "Player": "Vik Buchrik",
+      "Team": "Schwenningen Sturmflügel",
+      "Goals": 1,
+      "Assists": 1,
+      "Points": 2
+    },
+    {
+      "Player": "Kris Wilkov",
+      "Team": "Frankfurt Core",
+      "Goals": 0,
+      "Assists": 2,
+      "Points": 2
+    },
+    {
+      "Player": "Zach Osbren",
+      "Team": "Iserlohn Miners",
+      "Goals": 1,
+      "Assists": 1,
+      "Points": 2
+    }
+  ]
+}

@@ -3,7 +3,7 @@
 # -------------------------------
 
 nord_teams = [
-    {"Team": "Berlin EisBären", "Players": [
+    {"Team": "Whiteout Berlin", "Players": [
     {"Name": "Jako Hildran", "Offense": 42, "Defense": 80, "Speed": 55, "Chemistry": 68},
     {"Name": "Jon Stetvik", "Offense": 38, "Defense": 75, "Speed": 54, "Chemistry": 66},
     {"Name": "Anto Brandik", "Offense": 35, "Defense": 73, "Speed": 53, "Chemistry": 65},
@@ -34,7 +34,7 @@ nord_teams = [
     {"Name": "Fred Tiffelov", "Offense": 71, "Defense": 63, "Speed": 70, "Chemistry": 69},
     {"Name": "Gab Fontanov", "Offense": 68, "Defense": 61, "Speed": 68, "Chemistry": 67}
     ], "Momentum": 0},
-    {"Team": "Bremerhaven Forge", "Players": [
+    {"Team": "Bremerhaven Trident", "Players": [
     {"Name": "Krist Gudlavik", "Offense": 42, "Defense": 80, "Speed": 55, "Chemistry": 68},
     {"Name": "Max Franzen", "Offense": 40, "Defense": 76, "Speed": 54, "Chemistry": 66},
     {"Name": "Seb Grafen", "Offense": 36, "Defense": 73, "Speed": 53, "Chemistry": 65},
@@ -233,7 +233,7 @@ nord_teams = [
     {"Name": "Kevin Orendorz", "Offense": 61, "Defense": 60, "Speed": 67, "Chemistry": 69},
     {"Name": "Ryan Olsen", "Offense": 72, "Defense": 62, "Speed": 71, "Chemistry": 73}
     ], "Momentum": 0},
-    {"Team": "Kassel Zenith", "Players": [
+    {"Team": "Kassel Zenit", "Players": [
     {"Name": "Bran Maxvik", "Offense": 42, "Defense": 79, "Speed": 55, "Chemistry": 68},
     {"Name": "Phil Maurik", "Offense": 40, "Defense": 77, "Speed": 54, "Chemistry": 67},
     {"Name": "Tim Bendrov", "Offense": 60, "Defense": 73, "Speed": 63, "Chemistry": 67},
@@ -252,7 +252,7 @@ nord_teams = [
     {"Name": "Yan Valentik", "Offense": 68, "Defense": 61, "Speed": 69, "Chemistry": 67},
     {"Name": "Jak Weidrik", "Offense": 67, "Defense": 61, "Speed": 69, "Chemistry": 67}
     ], "Momentum": 0},
-    {"Team": "Bad Nauheim Ferox", "Players": [
+    {"Team": "Bad Nauheim Devils", "Players": [
     {"Name": "Fin Beckov", "Offense": 40, "Defense": 77, "Speed": 54, "Chemistry": 67},
     {"Name": "Ger Kuhnov", "Offense": 42, "Defense": 79, "Speed": 55, "Chemistry": 68},
     {"Name": "Mar Erkov", "Offense": 60, "Defense": 72, "Speed": 63, "Chemistry": 67},
@@ -280,7 +280,7 @@ nord_teams = [
 ]
 
 sued_teams = [
-    {"Team": "Ingolstadt Indigo Panther", "Players": [
+    {"Team": "Novadelta Panther", "Players": [
     {"Name": "Niko Pertanov", "Offense": 35, "Defense": 70, "Speed": 50, "Chemistry": 60},
     {"Name": "Devon Willark", "Offense": 40, "Defense": 75, "Speed": 55, "Chemistry": 65},
     {"Name": "Bret Brokan", "Offense": 45, "Defense": 78, "Speed": 60, "Chemistry": 68},
@@ -541,7 +541,7 @@ sued_teams = [
     {"Name": "Tys Mosrik", "Offense": 65, "Defense": 60, "Speed": 68, "Chemistry": 66},
     {"Name": "Dav Morlen", "Offense": 68, "Defense": 64, "Speed": 70, "Chemistry": 68}
     ], "Momentum": 0},
-    {"Team": "Ravensburg Zenith Falcons", "Players": [
+    {"Team": "Ravensburg Zenit Falken", "Players": [
     {"Name": "Ily Sharov", "Offense": 42, "Defense": 79, "Speed": 55, "Chemistry": 68},
     {"Name": "Sim Sezik", "Offense": 61, "Defense": 72, "Speed": 63, "Chemistry": 67},
     {"Name": "Rob Czarnov", "Offense": 72, "Defense": 63, "Speed": 71, "Chemistry": 69},
