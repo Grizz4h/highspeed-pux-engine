@@ -1,6 +1,6 @@
 {
-  "season": 5,
-  "spieltag": 1,
+  "season": 6,
+  "spieltag": 14,
   "nord": [
     {
       "Team": "Whiteout Berlin",
@@ -210,9 +210,9 @@
         }
       ],
       "Momentum": 0,
-      "Points": 0,
-      "Goals For": 0,
-      "Goals Against": 0
+      "Points": 17,
+      "Goals For": 29,
+      "Goals Against": 32
     },
     {
       "Team": "Bremerhaven Trident",
@@ -422,9 +422,9 @@
         }
       ],
       "Momentum": 0,
-      "Points": 0,
-      "Goals For": 0,
-      "Goals Against": 0
+      "Points": 17,
+      "Goals For": 28,
+      "Goals Against": 29
     },
     {
       "Team": "Frankfurt Core",
@@ -613,9 +613,9 @@
         }
       ],
       "Momentum": 0,
-      "Points": 0,
-      "Goals For": 0,
-      "Goals Against": 0
+      "Points": 14,
+      "Goals For": 28,
+      "Goals Against": 33
     },
     {
       "Team": "Iserlohn Miners",
@@ -839,9 +839,9 @@
         }
       ],
       "Momentum": 0,
-      "Points": 0,
-      "Goals For": 0,
-      "Goals Against": 0
+      "Points": 20,
+      "Goals For": 31,
+      "Goals Against": 26
     },
     {
       "Team": "Köln Blitzhaie",
@@ -1051,9 +1051,9 @@
         }
       ],
       "Momentum": 0,
-      "Points": 0,
-      "Goals For": 0,
-      "Goals Against": 0
+      "Points": 13,
+      "Goals For": 24,
+      "Goals Against": 28
     },
     {
       "Team": "Wolfsburg Voltsturm",
@@ -1256,9 +1256,9 @@
         }
       ],
       "Momentum": 0,
-      "Points": 0,
-      "Goals For": 0,
-      "Goals Against": 0
+      "Points": 10,
+      "Goals For": 22,
+      "Goals Against": 31
     },
     {
       "Team": "Krefeld Kernschlag",
@@ -1433,9 +1433,9 @@
         }
       ],
       "Momentum": 0,
-      "Points": 0,
-      "Goals For": 0,
-      "Goals Against": 0
+      "Points": 25,
+      "Goals For": 28,
+      "Goals Against": 17
     },
     {
       "Team": "Düsseldorfer Aurora",
@@ -1568,9 +1568,9 @@
         }
       ],
       "Momentum": 0,
-      "Points": 0,
-      "Goals For": 0,
-      "Goals Against": 0
+      "Points": 26,
+      "Goals For": 30,
+      "Goals Against": 24
     },
     {
       "Team": "Kassel Zenit",
@@ -1696,9 +1696,9 @@
         }
       ],
       "Momentum": 0,
-      "Points": 0,
-      "Goals For": 0,
-      "Goals Against": 0
+      "Points": 16,
+      "Goals For": 24,
+      "Goals Against": 31
     },
     {
       "Team": "Bad Nauheim Devils",
@@ -1859,9 +1859,9 @@
         }
       ],
       "Momentum": 0,
-      "Points": 0,
-      "Goals For": 0,
-      "Goals Against": 0
+      "Points": 21,
+      "Goals For": 34,
+      "Goals Against": 27
     }
   ],
   "sued": [
@@ -2038,9 +2038,9 @@
         }
       ],
       "Momentum": 0,
-      "Points": 0,
-      "Goals For": 0,
-      "Goals Against": 0
+      "Points": 12,
+      "Goals For": 24,
+      "Goals Against": 27
     },
     {
       "Team": "Augsburg Ferox",
@@ -2250,9 +2250,9 @@
         }
       ],
       "Momentum": 0,
-      "Points": 0,
-      "Goals For": 0,
-      "Goals Against": 0
+      "Points": 12,
+      "Goals For": 21,
+      "Goals Against": 28
     },
     {
       "Team": "Mannheim Ventus",
@@ -2476,9 +2476,9 @@
         }
       ],
       "Momentum": 0,
-      "Points": 0,
-      "Goals For": 0,
-      "Goals Against": 0
+      "Points": 17,
+      "Goals For": 24,
+      "Goals Against": 26
     },
     {
       "Team": "München FluxBullen",
@@ -2688,9 +2688,9 @@
         }
       ],
       "Momentum": 0,
-      "Points": 0,
-      "Goals For": 0,
-      "Goals Against": 0
+      "Points": 23,
+      "Goals For": 29,
+      "Goals Against": 24
     },
     {
       "Team": "Nürnberg Eistiger",
@@ -2872,9 +2872,9 @@
         }
       ],
       "Momentum": 0,
-      "Points": 0,
-      "Goals For": 0,
-      "Goals Against": 0
+      "Points": 22,
+      "Goals For": 23,
+      "Goals Against": 18
     },
     {
       "Team": "Schwenningen Sturmflügel",
@@ -3091,9 +3091,9 @@
         }
       ],
       "Momentum": 0,
-      "Points": 0,
-      "Goals For": 0,
-      "Goals Against": 0
+      "Points": 20,
+      "Goals For": 28,
+      "Goals Against": 24
     },
     {
       "Team": "Straubing Forest Tigers",
@@ -3282,9 +3282,9 @@
         }
       ],
       "Momentum": 0,
-      "Points": 0,
-      "Goals For": 0,
-      "Goals Against": 0
+      "Points": 23,
+      "Goals For": 22,
+      "Goals Against": 21
     },
     {
       "Team": "Landshut Lichtkern",
@@ -3417,9 +3417,9 @@
         }
       ],
       "Momentum": 0,
-      "Points": 0,
-      "Goals For": 0,
-      "Goals Against": 0
+      "Points": 13,
+      "Goals For": 26,
+      "Goals Against": 29
     },
     {
       "Team": "Regensburg Pulse",
@@ -3643,9 +3643,9 @@
         }
       ],
       "Momentum": 0,
-      "Points": 0,
-      "Goals For": 0,
-      "Goals Against": 0
+      "Points": 18,
+      "Goals For": 26,
+      "Goals Against": 25
     },
     {
       "Team": "Ravensburg Zenit Falken",
@@ -3778,272 +3778,12 @@
         }
       ],
       "Momentum": 0,
-      "Points": 0,
-      "Goals For": 0,
-      "Goals Against": 0
+      "Points": 22,
+      "Goals For": 21,
+      "Goals Against": 22
     }
   ],
   "nsched": [
-    [
-      "Whiteout Berlin",
-      "Bad Nauheim Devils"
-    ],
-    [
-      "Bremerhaven Trident",
-      "Kassel Zenit"
-    ],
-    [
-      "Frankfurt Core",
-      "Düsseldorfer Aurora"
-    ],
-    [
-      "Iserlohn Miners",
-      "Krefeld Kernschlag"
-    ],
-    [
-      "Köln Blitzhaie",
-      "Wolfsburg Voltsturm"
-    ],
-    [
-      "Kassel Zenit",
-      "Whiteout Berlin"
-    ],
-    [
-      "Düsseldorfer Aurora",
-      "Bad Nauheim Devils"
-    ],
-    [
-      "Krefeld Kernschlag",
-      "Bremerhaven Trident"
-    ],
-    [
-      "Wolfsburg Voltsturm",
-      "Frankfurt Core"
-    ],
-    [
-      "Köln Blitzhaie",
-      "Iserlohn Miners"
-    ],
-    [
-      "Whiteout Berlin",
-      "Düsseldorfer Aurora"
-    ],
-    [
-      "Kassel Zenit",
-      "Krefeld Kernschlag"
-    ],
-    [
-      "Bad Nauheim Devils",
-      "Wolfsburg Voltsturm"
-    ],
-    [
-      "Bremerhaven Trident",
-      "Köln Blitzhaie"
-    ],
-    [
-      "Frankfurt Core",
-      "Iserlohn Miners"
-    ],
-    [
-      "Krefeld Kernschlag",
-      "Whiteout Berlin"
-    ],
-    [
-      "Wolfsburg Voltsturm",
-      "Düsseldorfer Aurora"
-    ],
-    [
-      "Köln Blitzhaie",
-      "Kassel Zenit"
-    ],
-    [
-      "Iserlohn Miners",
-      "Bad Nauheim Devils"
-    ],
-    [
-      "Frankfurt Core",
-      "Bremerhaven Trident"
-    ],
-    [
-      "Whiteout Berlin",
-      "Wolfsburg Voltsturm"
-    ],
-    [
-      "Krefeld Kernschlag",
-      "Köln Blitzhaie"
-    ],
-    [
-      "Düsseldorfer Aurora",
-      "Iserlohn Miners"
-    ],
-    [
-      "Kassel Zenit",
-      "Frankfurt Core"
-    ],
-    [
-      "Bad Nauheim Devils",
-      "Bremerhaven Trident"
-    ],
-    [
-      "Köln Blitzhaie",
-      "Whiteout Berlin"
-    ],
-    [
-      "Iserlohn Miners",
-      "Wolfsburg Voltsturm"
-    ],
-    [
-      "Frankfurt Core",
-      "Krefeld Kernschlag"
-    ],
-    [
-      "Bremerhaven Trident",
-      "Düsseldorfer Aurora"
-    ],
-    [
-      "Bad Nauheim Devils",
-      "Kassel Zenit"
-    ],
-    [
-      "Whiteout Berlin",
-      "Iserlohn Miners"
-    ],
-    [
-      "Köln Blitzhaie",
-      "Frankfurt Core"
-    ],
-    [
-      "Wolfsburg Voltsturm",
-      "Bremerhaven Trident"
-    ],
-    [
-      "Krefeld Kernschlag",
-      "Bad Nauheim Devils"
-    ],
-    [
-      "Düsseldorfer Aurora",
-      "Kassel Zenit"
-    ],
-    [
-      "Frankfurt Core",
-      "Whiteout Berlin"
-    ],
-    [
-      "Bremerhaven Trident",
-      "Iserlohn Miners"
-    ],
-    [
-      "Bad Nauheim Devils",
-      "Köln Blitzhaie"
-    ],
-    [
-      "Kassel Zenit",
-      "Wolfsburg Voltsturm"
-    ],
-    [
-      "Düsseldorfer Aurora",
-      "Krefeld Kernschlag"
-    ],
-    [
-      "Whiteout Berlin",
-      "Bremerhaven Trident"
-    ],
-    [
-      "Frankfurt Core",
-      "Bad Nauheim Devils"
-    ],
-    [
-      "Iserlohn Miners",
-      "Kassel Zenit"
-    ],
-    [
-      "Köln Blitzhaie",
-      "Düsseldorfer Aurora"
-    ],
-    [
-      "Wolfsburg Voltsturm",
-      "Krefeld Kernschlag"
-    ],
-    [
-      "Bad Nauheim Devils",
-      "Whiteout Berlin"
-    ],
-    [
-      "Kassel Zenit",
-      "Bremerhaven Trident"
-    ],
-    [
-      "Düsseldorfer Aurora",
-      "Frankfurt Core"
-    ],
-    [
-      "Krefeld Kernschlag",
-      "Iserlohn Miners"
-    ],
-    [
-      "Wolfsburg Voltsturm",
-      "Köln Blitzhaie"
-    ],
-    [
-      "Whiteout Berlin",
-      "Kassel Zenit"
-    ],
-    [
-      "Bad Nauheim Devils",
-      "Düsseldorfer Aurora"
-    ],
-    [
-      "Bremerhaven Trident",
-      "Krefeld Kernschlag"
-    ],
-    [
-      "Frankfurt Core",
-      "Wolfsburg Voltsturm"
-    ],
-    [
-      "Iserlohn Miners",
-      "Köln Blitzhaie"
-    ],
-    [
-      "Düsseldorfer Aurora",
-      "Whiteout Berlin"
-    ],
-    [
-      "Krefeld Kernschlag",
-      "Kassel Zenit"
-    ],
-    [
-      "Wolfsburg Voltsturm",
-      "Bad Nauheim Devils"
-    ],
-    [
-      "Köln Blitzhaie",
-      "Bremerhaven Trident"
-    ],
-    [
-      "Iserlohn Miners",
-      "Frankfurt Core"
-    ],
-    [
-      "Whiteout Berlin",
-      "Krefeld Kernschlag"
-    ],
-    [
-      "Düsseldorfer Aurora",
-      "Wolfsburg Voltsturm"
-    ],
-    [
-      "Kassel Zenit",
-      "Köln Blitzhaie"
-    ],
-    [
-      "Bad Nauheim Devils",
-      "Iserlohn Miners"
-    ],
-    [
-      "Bremerhaven Trident",
-      "Frankfurt Core"
-    ],
     [
       "Wolfsburg Voltsturm",
       "Whiteout Berlin"
@@ -4146,266 +3886,6 @@
     ]
   ],
   "ssched": [
-    [
-      "Novadelta Panther",
-      "Ravensburg Zenit Falken"
-    ],
-    [
-      "Augsburg Ferox",
-      "Regensburg Pulse"
-    ],
-    [
-      "Mannheim Ventus",
-      "Landshut Lichtkern"
-    ],
-    [
-      "München FluxBullen",
-      "Straubing Forest Tigers"
-    ],
-    [
-      "Nürnberg Eistiger",
-      "Schwenningen Sturmflügel"
-    ],
-    [
-      "Regensburg Pulse",
-      "Novadelta Panther"
-    ],
-    [
-      "Landshut Lichtkern",
-      "Ravensburg Zenit Falken"
-    ],
-    [
-      "Straubing Forest Tigers",
-      "Augsburg Ferox"
-    ],
-    [
-      "Schwenningen Sturmflügel",
-      "Mannheim Ventus"
-    ],
-    [
-      "Nürnberg Eistiger",
-      "München FluxBullen"
-    ],
-    [
-      "Novadelta Panther",
-      "Landshut Lichtkern"
-    ],
-    [
-      "Regensburg Pulse",
-      "Straubing Forest Tigers"
-    ],
-    [
-      "Ravensburg Zenit Falken",
-      "Schwenningen Sturmflügel"
-    ],
-    [
-      "Augsburg Ferox",
-      "Nürnberg Eistiger"
-    ],
-    [
-      "Mannheim Ventus",
-      "München FluxBullen"
-    ],
-    [
-      "Straubing Forest Tigers",
-      "Novadelta Panther"
-    ],
-    [
-      "Schwenningen Sturmflügel",
-      "Landshut Lichtkern"
-    ],
-    [
-      "Nürnberg Eistiger",
-      "Regensburg Pulse"
-    ],
-    [
-      "München FluxBullen",
-      "Ravensburg Zenit Falken"
-    ],
-    [
-      "Mannheim Ventus",
-      "Augsburg Ferox"
-    ],
-    [
-      "Novadelta Panther",
-      "Schwenningen Sturmflügel"
-    ],
-    [
-      "Straubing Forest Tigers",
-      "Nürnberg Eistiger"
-    ],
-    [
-      "Landshut Lichtkern",
-      "München FluxBullen"
-    ],
-    [
-      "Regensburg Pulse",
-      "Mannheim Ventus"
-    ],
-    [
-      "Ravensburg Zenit Falken",
-      "Augsburg Ferox"
-    ],
-    [
-      "Nürnberg Eistiger",
-      "Novadelta Panther"
-    ],
-    [
-      "München FluxBullen",
-      "Schwenningen Sturmflügel"
-    ],
-    [
-      "Mannheim Ventus",
-      "Straubing Forest Tigers"
-    ],
-    [
-      "Augsburg Ferox",
-      "Landshut Lichtkern"
-    ],
-    [
-      "Ravensburg Zenit Falken",
-      "Regensburg Pulse"
-    ],
-    [
-      "Novadelta Panther",
-      "München FluxBullen"
-    ],
-    [
-      "Nürnberg Eistiger",
-      "Mannheim Ventus"
-    ],
-    [
-      "Schwenningen Sturmflügel",
-      "Augsburg Ferox"
-    ],
-    [
-      "Straubing Forest Tigers",
-      "Ravensburg Zenit Falken"
-    ],
-    [
-      "Landshut Lichtkern",
-      "Regensburg Pulse"
-    ],
-    [
-      "Mannheim Ventus",
-      "Novadelta Panther"
-    ],
-    [
-      "Augsburg Ferox",
-      "München FluxBullen"
-    ],
-    [
-      "Ravensburg Zenit Falken",
-      "Nürnberg Eistiger"
-    ],
-    [
-      "Regensburg Pulse",
-      "Schwenningen Sturmflügel"
-    ],
-    [
-      "Landshut Lichtkern",
-      "Straubing Forest Tigers"
-    ],
-    [
-      "Novadelta Panther",
-      "Augsburg Ferox"
-    ],
-    [
-      "Mannheim Ventus",
-      "Ravensburg Zenit Falken"
-    ],
-    [
-      "München FluxBullen",
-      "Regensburg Pulse"
-    ],
-    [
-      "Nürnberg Eistiger",
-      "Landshut Lichtkern"
-    ],
-    [
-      "Schwenningen Sturmflügel",
-      "Straubing Forest Tigers"
-    ],
-    [
-      "Ravensburg Zenit Falken",
-      "Novadelta Panther"
-    ],
-    [
-      "Regensburg Pulse",
-      "Augsburg Ferox"
-    ],
-    [
-      "Landshut Lichtkern",
-      "Mannheim Ventus"
-    ],
-    [
-      "Straubing Forest Tigers",
-      "München FluxBullen"
-    ],
-    [
-      "Schwenningen Sturmflügel",
-      "Nürnberg Eistiger"
-    ],
-    [
-      "Novadelta Panther",
-      "Regensburg Pulse"
-    ],
-    [
-      "Ravensburg Zenit Falken",
-      "Landshut Lichtkern"
-    ],
-    [
-      "Augsburg Ferox",
-      "Straubing Forest Tigers"
-    ],
-    [
-      "Mannheim Ventus",
-      "Schwenningen Sturmflügel"
-    ],
-    [
-      "München FluxBullen",
-      "Nürnberg Eistiger"
-    ],
-    [
-      "Landshut Lichtkern",
-      "Novadelta Panther"
-    ],
-    [
-      "Straubing Forest Tigers",
-      "Regensburg Pulse"
-    ],
-    [
-      "Schwenningen Sturmflügel",
-      "Ravensburg Zenit Falken"
-    ],
-    [
-      "Nürnberg Eistiger",
-      "Augsburg Ferox"
-    ],
-    [
-      "München FluxBullen",
-      "Mannheim Ventus"
-    ],
-    [
-      "Novadelta Panther",
-      "Straubing Forest Tigers"
-    ],
-    [
-      "Landshut Lichtkern",
-      "Schwenningen Sturmflügel"
-    ],
-    [
-      "Regensburg Pulse",
-      "Nürnberg Eistiger"
-    ],
-    [
-      "Ravensburg Zenit Falken",
-      "München FluxBullen"
-    ],
-    [
-      "Augsburg Ferox",
-      "Mannheim Ventus"
-    ],
     [
       "Schwenningen Sturmflügel",
       "Novadelta Panther"
@@ -4512,25 +3992,25 @@
       "Player": "Jako Hildran",
       "Team": "Whiteout Berlin",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 3
     },
     {
       "Player": "Jon Stetvik",
       "Team": "Whiteout Berlin",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Anto Brandik",
       "Team": "Whiteout Berlin",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Lino Veylar",
       "Team": "Whiteout Berlin",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Adan Smitrov",
@@ -4541,7 +4021,7 @@
     {
       "Player": "Mitch Reinov",
       "Team": "Whiteout Berlin",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
@@ -4566,12 +4046,12 @@
       "Player": "Korb Geibrov",
       "Team": "Whiteout Berlin",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Oliv Galipek",
       "Team": "Whiteout Berlin",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
@@ -4583,85 +4063,85 @@
     {
       "Player": "Nor Panok",
       "Team": "Whiteout Berlin",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 3,
+      "Assists": 2
     },
     {
       "Player": "Ty Ronnvik",
       "Team": "Whiteout Berlin",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Len Bergvik",
       "Team": "Whiteout Berlin",
-      "Goals": 0,
+      "Goals": 3,
       "Assists": 0
     },
     {
       "Player": "Man Wiedran",
       "Team": "Whiteout Berlin",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Blan Byrik",
       "Team": "Whiteout Berlin",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Mat Lednov",
       "Team": "Whiteout Berlin",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Yan Veilov",
       "Team": "Whiteout Berlin",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Max Schafrik",
       "Team": "Whiteout Berlin",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Er Hordvik",
       "Team": "Whiteout Berlin",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Mich Bartov",
       "Team": "Whiteout Berlin",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Eli Scheinik",
       "Team": "Whiteout Berlin",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 5
     },
     {
       "Player": "Zach Boychov",
       "Team": "Whiteout Berlin",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Mar Noeblen",
       "Team": "Whiteout Berlin",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Leo Pfoedrik",
       "Team": "Whiteout Berlin",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
@@ -4673,32 +4153,32 @@
     {
       "Player": "Fred Tiffelov",
       "Team": "Whiteout Berlin",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Gab Fontanov",
       "Team": "Whiteout Berlin",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Krist Gudlavik",
       "Team": "Bremerhaven Trident",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Max Franzen",
       "Team": "Bremerhaven Trident",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Seb Grafen",
       "Team": "Bremerhaven Trident",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Mat Lowen",
@@ -4715,38 +4195,38 @@
     {
       "Player": "Ray Bettan",
       "Team": "Bremerhaven Trident",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Lud Bystrom",
       "Team": "Bremerhaven Trident",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 3,
+      "Assists": 3
     },
     {
       "Player": "Vlad Eminov",
       "Team": "Bremerhaven Trident",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 4
     },
     {
       "Player": "Niko Appendik",
       "Team": "Bremerhaven Trident",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Matt Abtek",
       "Team": "Bremerhaven Trident",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Nick Jensik",
       "Team": "Bremerhaven Trident",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Max Rauskin",
@@ -4758,7 +4238,7 @@
       "Player": "Phil Brugsen",
       "Team": "Bremerhaven Trident",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Nino Kindrik",
@@ -4769,14 +4249,14 @@
     {
       "Player": "Jan Urbenko",
       "Team": "Bremerhaven Trident",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Zig Jeglov",
       "Team": "Bremerhaven Trident",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Ros Maurik",
@@ -4787,74 +4267,74 @@
     {
       "Player": "Mar Khairin",
       "Team": "Bremerhaven Trident",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Max Goertik",
       "Team": "Bremerhaven Trident",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Fab Herrik",
       "Team": "Bremerhaven Trident",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Dom Uhren",
       "Team": "Bremerhaven Trident",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Marl Quinov",
       "Team": "Bremerhaven Trident",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Mark Vikstad",
       "Team": "Bremerhaven Trident",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Fel Maegard",
       "Team": "Bremerhaven Trident",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Alex Frison",
       "Team": "Bremerhaven Trident",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Chris Wejsen",
       "Team": "Bremerhaven Trident",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Ced Schemik",
       "Team": "Bremerhaven Trident",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Jus Buesen",
       "Team": "Bremerhaven Trident",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Mih Verlik",
       "Team": "Bremerhaven Trident",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Tom Grevvik",
@@ -4866,84 +4346,84 @@
       "Player": "Juh Olkinov",
       "Team": "Frankfurt Core",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Cod Brenik",
       "Team": "Frankfurt Core",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Rod Shumakov",
       "Team": "Frankfurt Core",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Reid McNelov",
       "Team": "Frankfurt Core",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 3
     },
     {
       "Player": "Kev Maginov",
       "Team": "Frankfurt Core",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Mark Laurik",
       "Team": "Frankfurt Core",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Phil Bidan",
       "Team": "Frankfurt Core",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Max Matuskin",
       "Team": "Frankfurt Core",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Lua Nievik",
       "Team": "Frankfurt Core",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Dan Wirten",
       "Team": "Frankfurt Core",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "And Welinov",
       "Team": "Frankfurt Core",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Nath Burnik",
       "Team": "Frankfurt Core",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 3
     },
     {
       "Player": "Cart Profkin",
       "Team": "Frankfurt Core",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Cart Rowson",
       "Team": "Frankfurt Core",
-      "Goals": 0,
+      "Goals": 4,
       "Assists": 0
     },
     {
@@ -4955,62 +4435,62 @@
     {
       "Player": "Seb Cimmerik",
       "Team": "Frankfurt Core",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Mark Schweik",
       "Team": "Frankfurt Core",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Lin Froberg",
       "Team": "Frankfurt Core",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 3,
+      "Assists": 1
     },
     {
       "Player": "Jul Napravik",
       "Team": "Frankfurt Core",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 2
     },
     {
       "Player": "Dan Pfafgut",
       "Team": "Frankfurt Core",
-      "Goals": 0,
+      "Goals": 3,
       "Assists": 0
     },
     {
       "Player": "Dom Bokkan",
       "Team": "Frankfurt Core",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Erik Browik",
       "Team": "Frankfurt Core",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Kev Bickar",
       "Team": "Frankfurt Core",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Kris Wilkov",
       "Team": "Frankfurt Core",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Cam Bracen",
       "Team": "Frankfurt Core",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Hend Hanek",
@@ -5027,74 +4507,74 @@
     {
       "Player": "Ol Blumvik",
       "Team": "Iserlohn Miners",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Andre Jenikov",
       "Team": "Iserlohn Miners",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Zach Osbren",
       "Team": "Iserlohn Miners",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Hub Labrov",
       "Team": "Iserlohn Miners",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Emil Quarnik",
       "Team": "Iserlohn Miners",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Brand Gormov",
       "Team": "Iserlohn Miners",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Jo Hussvik",
       "Team": "Iserlohn Miners",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Mari Bauken",
       "Team": "Iserlohn Miners",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Stan Dietrov",
       "Team": "Iserlohn Miners",
-      "Goals": 0,
+      "Goals": 3,
       "Assists": 0
     },
     {
       "Player": "Colt Jobkin",
       "Team": "Iserlohn Miners",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Col Ugben",
       "Team": "Iserlohn Miners",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Dan Geigrov",
       "Team": "Iserlohn Miners",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Shan Gersov",
@@ -5105,50 +4585,50 @@
     {
       "Player": "Tyl Bolik",
       "Team": "Iserlohn Miners",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 2
     },
     {
       "Player": "Mac Rutkov",
       "Team": "Iserlohn Miners",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 3,
+      "Assists": 3
     },
     {
       "Player": "Nol Saffrik",
       "Team": "Iserlohn Miners",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Eric Cornik",
       "Team": "Iserlohn Miners",
-      "Goals": 0,
+      "Goals": 3,
       "Assists": 0
     },
     {
       "Player": "Jake Virtanov",
       "Team": "Iserlohn Miners",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Max Brunnik",
       "Team": "Iserlohn Miners",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Jon Brovik",
       "Team": "Iserlohn Miners",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 4
     },
     {
       "Player": "Len Nielvik",
       "Team": "Iserlohn Miners",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Chris Thomik",
@@ -5159,86 +4639,86 @@
     {
       "Player": "Bray Burkov",
       "Team": "Iserlohn Miners",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Sven Ziegrov",
       "Team": "Iserlohn Miners",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Manu Albenk",
       "Team": "Iserlohn Miners",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Brand Trockik",
       "Team": "Iserlohn Miners",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Leo Bussov",
       "Team": "Iserlohn Miners",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Tar Jentzov",
       "Team": "Iserlohn Miners",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 3
     },
     {
       "Player": "Mike Dalcol",
       "Team": "Iserlohn Miners",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Mirk Pantov",
       "Team": "Köln Blitzhaie",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Juli Hudakov",
       "Team": "Köln Blitzhaie",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Tobi Ancik",
       "Team": "Köln Blitzhaie",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Den Dojen",
       "Team": "Köln Blitzhaie",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Luk Stuhrik",
       "Team": "Köln Blitzhaie",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Jan Senhenk",
       "Team": "Köln Blitzhaie",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Max Glotzen",
       "Team": "Köln Blitzhaie",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Vel Vittanov",
@@ -5262,73 +4742,73 @@
       "Player": "Ed Tropov",
       "Team": "Köln Blitzhaie",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Brad Austik",
       "Team": "Köln Blitzhaie",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "No Munzenk",
       "Team": "Köln Blitzhaie",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Mat Papov",
       "Team": "Köln Blitzhaie",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Mor Mullov",
       "Team": "Köln Blitzhaie",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Nik Lunenko",
       "Team": "Köln Blitzhaie",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Rob Calstern",
       "Team": "Köln Blitzhaie",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 4
     },
     {
       "Player": "Max Kammrik",
       "Team": "Köln Blitzhaie",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Just Schutzen",
       "Team": "Köln Blitzhaie",
-      "Goals": 0,
+      "Goals": 3,
       "Assists": 0
     },
     {
       "Player": "Lou Aubren",
       "Team": "Köln Blitzhaie",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 5,
+      "Assists": 1
     },
     {
       "Player": "Jos Currik",
       "Team": "Köln Blitzhaie",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 3,
+      "Assists": 1
     },
     {
       "Player": "Fred Stormvik",
       "Team": "Köln Blitzhaie",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Juha Tyrvain",
@@ -5339,8 +4819,8 @@
     {
       "Player": "Eli Lindvik",
       "Team": "Köln Blitzhaie",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Kev Niedik",
@@ -5351,62 +4831,62 @@
     {
       "Player": "Park Tuomik",
       "Team": "Köln Blitzhaie",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Marc Munzenk",
       "Team": "Köln Blitzhaie",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 3
     },
     {
       "Player": "Greg Maclov",
       "Team": "Köln Blitzhaie",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Hak Haenel",
       "Team": "Köln Blitzhaie",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Dust Strahlov",
       "Team": "Wolfsburg Voltsturm",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Luc Erdvik",
       "Team": "Wolfsburg Voltsturm",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "En Albrov",
       "Team": "Wolfsburg Voltsturm",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 3
     },
     {
       "Player": "Han Weitzik",
       "Team": "Wolfsburg Voltsturm",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Jon Ramik",
       "Team": "Wolfsburg Voltsturm",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Bjo Kruvik",
       "Team": "Wolfsburg Voltsturm",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Rya Oconvik",
@@ -5417,7 +4897,7 @@
     {
       "Player": "Jan Mosrik",
       "Team": "Wolfsburg Voltsturm",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
@@ -5429,26 +4909,26 @@
     {
       "Player": "Jul Melkov",
       "Team": "Wolfsburg Voltsturm",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Rya Butovik",
       "Team": "Wolfsburg Voltsturm",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Fab Pfohlik",
       "Team": "Wolfsburg Voltsturm",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 2
     },
     {
       "Player": "Jim Lambrov",
       "Team": "Wolfsburg Voltsturm",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Luc Dumov",
@@ -5459,25 +4939,25 @@
     {
       "Player": "Tan Kaspov",
       "Team": "Wolfsburg Voltsturm",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Rob Vebrik",
       "Team": "Wolfsburg Voltsturm",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Ger Fausik",
       "Team": "Wolfsburg Voltsturm",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Dar Archik",
       "Team": "Wolfsburg Voltsturm",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
@@ -5490,13 +4970,13 @@
       "Player": "Nick Caamov",
       "Team": "Wolfsburg Voltsturm",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Jul Chrovik",
       "Team": "Wolfsburg Voltsturm",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 3,
+      "Assists": 4
     },
     {
       "Player": "Jul Ramovik",
@@ -5507,7 +4987,7 @@
     {
       "Player": "And Mielik",
       "Team": "Wolfsburg Voltsturm",
-      "Goals": 0,
+      "Goals": 3,
       "Assists": 0
     },
     {
@@ -5526,13 +5006,13 @@
       "Player": "Tim Ruckik",
       "Team": "Wolfsburg Voltsturm",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Spen Machik",
       "Team": "Wolfsburg Voltsturm",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Matt Whitov",
@@ -5543,38 +5023,38 @@
     {
       "Player": "Fel Bickov",
       "Team": "Krefeld Kernschlag",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Jul Schultik",
       "Team": "Krefeld Kernschlag",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Max Adamov",
       "Team": "Krefeld Kernschlag",
-      "Goals": 0,
+      "Goals": 4,
       "Assists": 0
     },
     {
       "Player": "Erik Buschik",
       "Team": "Krefeld Kernschlag",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Zac Dybowik",
       "Team": "Krefeld Kernschlag",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Car Konzik",
       "Team": "Krefeld Kernschlag",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 2
     },
     {
       "Player": "Mic Köhlov",
@@ -5591,26 +5071,26 @@
     {
       "Player": "Dav Vandanov",
       "Team": "Krefeld Kernschlag",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Dan Bruchov",
       "Team": "Krefeld Kernschlag",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Dav Cernik",
       "Team": "Krefeld Kernschlag",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Nic Fockik",
       "Team": "Krefeld Kernschlag",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Max Hopsik",
@@ -5622,301 +5102,301 @@
       "Player": "Phil Kuhnov",
       "Team": "Krefeld Kernschlag",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 3
     },
     {
       "Player": "Jon Matsov",
       "Team": "Krefeld Kernschlag",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Roo Makitov",
       "Team": "Krefeld Kernschlag",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Mar Mullerov",
       "Team": "Krefeld Kernschlag",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 3,
+      "Assists": 1
     },
     {
       "Player": "Max Newtov",
       "Team": "Krefeld Kernschlag",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Mat Santov",
       "Team": "Krefeld Kernschlag",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 4
     },
     {
       "Player": "Tim Schuzik",
       "Team": "Krefeld Kernschlag",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 3,
+      "Assists": 2
     },
     {
       "Player": "Alex Weisvik",
       "Team": "Krefeld Kernschlag",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Mark Zengerik",
       "Team": "Krefeld Kernschlag",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Leon Korvik",
       "Team": "Krefeld Kernschlag",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 2
     },
     {
       "Player": "Ol Mebov",
       "Team": "Krefeld Kernschlag",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Niklas Lunemann",
       "Team": "Düsseldorfer Aurora",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Leon Hümer",
       "Team": "Düsseldorfer Aurora",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Nicolas Geitner",
       "Team": "Düsseldorfer Aurora",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 3
     },
     {
       "Player": "Kevin Maginot",
       "Team": "Düsseldorfer Aurora",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 4
     },
     {
       "Player": "Kristian Blumenschein",
       "Team": "Düsseldorfer Aurora",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Emil Quaas",
       "Team": "Düsseldorfer Aurora",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Moritz Kukuk",
       "Team": "Düsseldorfer Aurora",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Max Balinson",
       "Team": "Düsseldorfer Aurora",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Maximilian Faber",
       "Team": "Düsseldorfer Aurora",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Lucas Lessio",
       "Team": "Düsseldorfer Aurora",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 4,
+      "Assists": 2
     },
     {
       "Player": "Leon Niederberger",
       "Team": "Düsseldorfer Aurora",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Michael Clarke",
       "Team": "Düsseldorfer Aurora",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 5,
+      "Assists": 1
     },
     {
       "Player": "Erik Bradford",
       "Team": "Düsseldorfer Aurora",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 3
     },
     {
       "Player": "Lenny Boos",
       "Team": "Düsseldorfer Aurora",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Colin Smith",
       "Team": "Düsseldorfer Aurora",
-      "Goals": 0,
+      "Goals": 4,
       "Assists": 0
     },
     {
       "Player": "Ture Linden",
       "Team": "Düsseldorfer Aurora",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 2
     },
     {
       "Player": "Kevin Orendorz",
       "Team": "Düsseldorfer Aurora",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Ryan Olsen",
       "Team": "Düsseldorfer Aurora",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 4,
+      "Assists": 1
     },
     {
       "Player": "Bran Maxvik",
       "Team": "Kassel Zenit",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Phil Maurik",
       "Team": "Kassel Zenit",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 3
     },
     {
       "Player": "Tim Bendrov",
       "Team": "Kassel Zenit",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "And Bodnov",
       "Team": "Kassel Zenit",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Mark Frevik",
       "Team": "Kassel Zenit",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 3,
+      "Assists": 2
     },
     {
       "Player": "Sim Schutzik",
       "Team": "Kassel Zenit",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 3,
+      "Assists": 2
     },
     {
       "Player": "Bod Wildrik",
       "Team": "Kassel Zenit",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Ale Ahlrik",
       "Team": "Kassel Zenit",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Lau Braunik",
       "Team": "Kassel Zenit",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Han Detskov",
       "Team": "Kassel Zenit",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Hun Garlov",
       "Team": "Kassel Zenit",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Tris Keckov",
       "Team": "Kassel Zenit",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Dar Mieskov",
       "Team": "Kassel Zenit",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 3,
+      "Assists": 3
     },
     {
       "Player": "Mac Rutkov",
       "Team": "Kassel Zenit",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 3,
+      "Assists": 3
     },
     {
       "Player": "Dom Turgov",
       "Team": "Kassel Zenit",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Yan Valentik",
       "Team": "Kassel Zenit",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Jak Weidrik",
       "Team": "Kassel Zenit",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Fin Beckov",
       "Team": "Bad Nauheim Devils",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 2
     },
     {
       "Player": "Ger Kuhnov",
       "Team": "Bad Nauheim Devils",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Mar Erkov",
       "Team": "Bad Nauheim Devils",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 3,
+      "Assists": 1
     },
     {
       "Player": "Chris Fischrik",
       "Team": "Bad Nauheim Devils",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Sim Gnypov",
@@ -5927,110 +5407,110 @@
     {
       "Player": "Gar Prudov",
       "Team": "Bad Nauheim Devils",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 3,
+      "Assists": 3
     },
     {
       "Player": "Pat Seifrik",
       "Team": "Bad Nauheim Devils",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Park Bowlik",
       "Team": "Bad Nauheim Devils",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Marc Elsayev",
       "Team": "Bad Nauheim Devils",
-      "Goals": 0,
+      "Goals": 3,
       "Assists": 0
     },
     {
       "Player": "Jord Hickov",
       "Team": "Bad Nauheim Devils",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 6,
+      "Assists": 3
     },
     {
       "Player": "Zac Kaisov",
       "Team": "Bad Nauheim Devils",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Dav Kochik",
       "Team": "Bad Nauheim Devils",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 3
     },
     {
       "Player": "Jul Lautrik",
       "Team": "Bad Nauheim Devils",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Tay Vausik",
       "Team": "Bad Nauheim Devils",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 3,
+      "Assists": 1
     },
     {
       "Player": "Jus Volevik",
       "Team": "Bad Nauheim Devils",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Dea Dogev",
       "Team": "Bad Nauheim Devils",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 2
     },
     {
       "Player": "Vinc Grunov",
       "Team": "Bad Nauheim Devils",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Tjar Kolschik",
       "Team": "Bad Nauheim Devils",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 3
     },
     {
       "Player": "Just Macpharik",
       "Team": "Bad Nauheim Devils",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 4
     },
     {
       "Player": "Rik Gaidelov",
       "Team": "Bad Nauheim Devils",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Phil Kuhnekov",
       "Team": "Bad Nauheim Devils",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Tay Vausik",
       "Team": "Bad Nauheim Devils",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 3,
+      "Assists": 1
     },
     {
       "Player": "Niko Pertanov",
       "Team": "Novadelta Panther",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Devon Willark",
@@ -6047,26 +5527,26 @@
     {
       "Player": "Sam Ruvek",
       "Team": "Novadelta Panther",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Morgon Elvik",
       "Team": "Novadelta Panther",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Leo Hütten",
       "Team": "Novadelta Panther",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Aleks Bretan",
       "Team": "Novadelta Panther",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Petr Spornik",
@@ -6077,86 +5557,86 @@
     {
       "Player": "Kris Jandro",
       "Team": "Novadelta Panther",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Edwin Tropov",
       "Team": "Novadelta Panther",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Filip Krausen",
       "Team": "Novadelta Panther",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Mils Powlek",
       "Team": "Novadelta Panther",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Ken Agostinov",
       "Team": "Novadelta Panther",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Johan Krausen",
       "Team": "Novadelta Panther",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Abbo Girdunov",
       "Team": "Novadelta Panther",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Charl Bertraux",
       "Team": "Novadelta Panther",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Enrik Henrova",
       "Team": "Novadelta Panther",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Luka Hauven",
       "Team": "Novadelta Panther",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Dan Pietto",
       "Team": "Novadelta Panther",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 3
     },
     {
       "Player": "Aust Keaten",
       "Team": "Novadelta Panther",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Rilan Barvik",
       "Team": "Novadelta Panther",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 2
     },
     {
       "Player": "Dano Schmolik",
       "Team": "Novadelta Panther",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Sam Kharbintli",
@@ -6179,13 +5659,13 @@
     {
       "Player": "Madis Bovik",
       "Team": "Augsburg Ferox",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Seb Zwicklo",
       "Team": "Augsburg Ferox",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
@@ -6197,32 +5677,32 @@
     {
       "Player": "Leo Vandlin",
       "Team": "Augsburg Ferox",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 2
     },
     {
       "Player": "Nolo Zajak",
       "Team": "Augsburg Ferox",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Max Rennik",
       "Team": "Augsburg Ferox",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Tom Schevik",
       "Team": "Augsburg Ferox",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Rilo McKurt",
       "Team": "Augsburg Ferox",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Nik Grassik",
@@ -6239,8 +5719,8 @@
     {
       "Player": "Alex Grenno",
       "Team": "Augsburg Ferox",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Seb Zwinko",
@@ -6251,20 +5731,20 @@
     {
       "Player": "Alex Blanko",
       "Team": "Augsburg Ferox",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Tim Wohlgard",
       "Team": "Augsburg Ferox",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Kris Collen",
       "Team": "Augsburg Ferox",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 3,
+      "Assists": 2
     },
     {
       "Player": "Don Busdek",
@@ -6276,7 +5756,7 @@
       "Player": "Anton Louvis",
       "Team": "Augsburg Ferox",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Rilo Damian",
@@ -6287,55 +5767,55 @@
     {
       "Player": "Kody Kunak",
       "Team": "Augsburg Ferox",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Tom Trevik",
       "Team": "Augsburg Ferox",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Chris Hanken",
       "Team": "Augsburg Ferox",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Moriz Elian",
       "Team": "Augsburg Ferox",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Flor Elian",
       "Team": "Augsburg Ferox",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Niko Baptik",
       "Team": "Augsburg Ferox",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Luka Tosten",
       "Team": "Augsburg Ferox",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Mark Zenger",
       "Team": "Augsburg Ferox",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Anre Hakulin",
       "Team": "Augsburg Ferox",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
@@ -6348,25 +5828,25 @@
       "Player": "Alex Gravik",
       "Team": "Mannheim Ventus",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Arn Tiefenov",
       "Team": "Mannheim Ventus",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Leo Willik",
       "Team": "Mannheim Ventus",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Fel Brukov",
       "Team": "Mannheim Ventus",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Nik Cicekov",
@@ -6377,13 +5857,13 @@
     {
       "Player": "Tob Fohrik",
       "Team": "Mannheim Ventus",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Jon Gilmov",
       "Team": "Mannheim Ventus",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
@@ -6396,73 +5876,73 @@
       "Player": "Jyr Jokipaak",
       "Team": "Mannheim Ventus",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Zac Leskov",
       "Team": "Mannheim Ventus",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Tim Lovrik",
       "Team": "Mannheim Ventus",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Luk Kalben",
       "Team": "Mannheim Ventus",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Pal Mayrov",
       "Team": "Mannheim Ventus",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Fab Pilun",
       "Team": "Mannheim Ventus",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Aust Ortegik",
       "Team": "Mannheim Ventus",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Kris Reichov",
       "Team": "Mannheim Ventus",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 3
     },
     {
       "Player": "Stef Loiben",
       "Team": "Mannheim Ventus",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Jord Szvarik",
       "Team": "Mannheim Ventus",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Eric Ubanov",
       "Team": "Mannheim Ventus",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Luk Espozik",
       "Team": "Mannheim Ventus",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Kris Bennov",
@@ -6474,7 +5954,7 @@
       "Player": "Mat Plachtov",
       "Team": "Mannheim Ventus",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Sam Soramov",
@@ -6486,13 +5966,13 @@
       "Player": "Yan Proskik",
       "Team": "Mannheim Ventus",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 3
     },
     {
       "Player": "Mark Hennik",
       "Team": "Mannheim Ventus",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Tom Kuhnov",
@@ -6503,79 +5983,79 @@
     {
       "Player": "Dust Wilhof",
       "Team": "Mannheim Ventus",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Marc Michaelov",
       "Team": "Mannheim Ventus",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Dan Fischvik",
       "Team": "Mannheim Ventus",
-      "Goals": 0,
+      "Goals": 3,
       "Assists": 0
     },
     {
       "Player": "Rya Macinnov",
       "Team": "Mannheim Ventus",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Max Heimrik",
       "Team": "Mannheim Ventus",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Math Niedrov",
       "Team": "München FluxBullen",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Ev Fitzpatov",
       "Team": "München FluxBullen",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 3
     },
     {
       "Player": "Sim Wolvik",
       "Team": "München FluxBullen",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Dom Bittrov",
       "Team": "München FluxBullen",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Will Butchik",
       "Team": "München FluxBullen",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Kon Abelvik",
       "Team": "München FluxBullen",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 3
     },
     {
       "Player": "Jak Webrov",
       "Team": "München FluxBullen",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Jon Blumov",
       "Team": "München FluxBullen",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
@@ -6593,37 +6073,37 @@
     {
       "Player": "Max Daubrik",
       "Team": "München FluxBullen",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Les Lanstrik",
       "Team": "München FluxBullen",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Will Riedik",
       "Team": "München FluxBullen",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Tob Riedov",
       "Team": "München FluxBullen",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Mark Eisenshik",
       "Team": "München FluxBullen",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 3
     },
     {
       "Player": "Ben Smithov",
       "Team": "München FluxBullen",
-      "Goals": 0,
+      "Goals": 3,
       "Assists": 0
     },
     {
@@ -6636,24 +6116,24 @@
       "Player": "Niko Heigrov",
       "Team": "München FluxBullen",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Taro Hirovek",
       "Team": "München FluxBullen",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "And Ederov",
       "Team": "München FluxBullen",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Niko Kramrik",
       "Team": "München FluxBullen",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
@@ -6677,32 +6157,32 @@
     {
       "Player": "Adam Brovik",
       "Team": "München FluxBullen",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 2
     },
     {
       "Player": "Chris Desovik",
       "Team": "München FluxBullen",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 3
     },
     {
       "Player": "Fil Varejkik",
       "Team": "München FluxBullen",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 3
     },
     {
       "Player": "Max Kastrov",
       "Team": "München FluxBullen",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Alex Blankov",
       "Team": "München FluxBullen",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 4,
+      "Assists": 2
     },
     {
       "Player": "Nik Treutov",
@@ -6714,7 +6194,7 @@
       "Player": "Dan Allavik",
       "Team": "Nürnberg Eistiger",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 6
     },
     {
       "Player": "Leo Hungrov",
@@ -6731,13 +6211,13 @@
     {
       "Player": "Marc Webrov",
       "Team": "Nürnberg Eistiger",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Ow Headrov",
       "Team": "Nürnberg Eistiger",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
@@ -6749,67 +6229,67 @@
     {
       "Player": "Hay Shawrik",
       "Team": "Nürnberg Eistiger",
-      "Goals": 0,
+      "Goals": 5,
       "Assists": 0
     },
     {
       "Player": "Con Braunov",
       "Team": "Nürnberg Eistiger",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Jus Bottik",
       "Team": "Nürnberg Eistiger",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Max Merklik",
       "Team": "Nürnberg Eistiger",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Evan Barrakov",
       "Team": "Nürnberg Eistiger",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Rya Stoavik",
       "Team": "Nürnberg Eistiger",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Col Maiev",
       "Team": "Nürnberg Eistiger",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Luk Ribaren",
       "Team": "Nürnberg Eistiger",
-      "Goals": 0,
+      "Goals": 3,
       "Assists": 0
     },
     {
       "Player": "Eug Alanik",
       "Team": "Nürnberg Eistiger",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Jos Ehamov",
       "Team": "Nürnberg Eistiger",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Jak Ustrov",
       "Team": "Nürnberg Eistiger",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
@@ -6821,56 +6301,56 @@
     {
       "Player": "Rom Kechrik",
       "Team": "Nürnberg Eistiger",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 2
     },
     {
       "Player": "Sam Dovik",
       "Team": "Nürnberg Eistiger",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Will Grabov",
       "Team": "Nürnberg Eistiger",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Jer Mckenik",
       "Team": "Nürnberg Eistiger",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Mar Rassik",
       "Team": "Nürnberg Eistiger",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 3
     },
     {
       "Player": "Char Gerardik",
       "Team": "Nürnberg Eistiger",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Mike Bitzov",
       "Team": "Schwenningen Sturmflügel",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Joac Erikov",
       "Team": "Schwenningen Sturmflügel",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Jord Murik",
       "Team": "Schwenningen Sturmflügel",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Dar Boylen",
@@ -6881,26 +6361,26 @@
     {
       "Player": "Dan Schwik",
       "Team": "Schwenningen Sturmflügel",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Ark Dziamov",
       "Team": "Schwenningen Sturmflügel",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Tom Larkov",
       "Team": "Schwenningen Sturmflügel",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Alex Trivik",
       "Team": "Schwenningen Sturmflügel",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Ben Marshik",
@@ -6911,26 +6391,26 @@
     {
       "Player": "Will Webrik",
       "Team": "Schwenningen Sturmflügel",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Phil Feistik",
       "Team": "Schwenningen Sturmflügel",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Mir Höffvik",
       "Team": "Schwenningen Sturmflügel",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 3
     },
     {
       "Player": "Vik Buchrik",
       "Team": "Schwenningen Sturmflügel",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Dan Neumov",
@@ -6941,49 +6421,49 @@
     {
       "Player": "Bret Richov",
       "Team": "Schwenningen Sturmflügel",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Ken Olimvik",
       "Team": "Schwenningen Sturmflügel",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 3,
+      "Assists": 1
     },
     {
       "Player": "Lou Majrik",
       "Team": "Schwenningen Sturmflügel",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Leo Bauvik",
       "Team": "Schwenningen Sturmflügel",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Alex Karakov",
       "Team": "Schwenningen Sturmflügel",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 3,
+      "Assists": 1
     },
     {
       "Player": "Boaz Bassik",
       "Team": "Schwenningen Sturmflügel",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 2
     },
     {
       "Player": "Bran McMillik",
       "Team": "Schwenningen Sturmflügel",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Matt Puempov",
       "Team": "Schwenningen Sturmflügel",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
@@ -6995,62 +6475,62 @@
     {
       "Player": "Zach Senyk",
       "Team": "Schwenningen Sturmflügel",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Tyl Spinkov",
       "Team": "Schwenningen Sturmflügel",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Seb Uvirik",
       "Team": "Schwenningen Sturmflügel",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Phil Hungrov",
       "Team": "Schwenningen Sturmflügel",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Tys Spinkov",
       "Team": "Schwenningen Sturmflügel",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Ste Majrik",
       "Team": "Schwenningen Sturmflügel",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Bar Cicekov",
       "Team": "Schwenningen Sturmflügel",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Flor Buglik",
       "Team": "Straubing Forest Tigers",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 3
     },
     {
       "Player": "Zan McIntov",
       "Team": "Straubing Forest Tigers",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 3
     },
     {
       "Player": "Pasc Seidrik",
       "Team": "Straubing Forest Tigers",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Nic Geitrov",
@@ -7061,31 +6541,31 @@
     {
       "Player": "Alex Grennov",
       "Team": "Straubing Forest Tigers",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Stef Daschik",
       "Team": "Straubing Forest Tigers",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Mar Zimmerik",
       "Team": "Straubing Forest Tigers",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Ad Klenov",
       "Team": "Straubing Forest Tigers",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Phil Samulov",
       "Team": "Straubing Forest Tigers",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
@@ -7097,13 +6577,13 @@
     {
       "Player": "Nels Nogrik",
       "Team": "Straubing Forest Tigers",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Marc Brandov",
       "Team": "Straubing Forest Tigers",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
@@ -7115,31 +6595,31 @@
     {
       "Player": "Josh Samanskik",
       "Team": "Straubing Forest Tigers",
-      "Goals": 0,
+      "Goals": 3,
       "Assists": 0
     },
     {
       "Player": "Mich Clarkov",
       "Team": "Straubing Forest Tigers",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 3
     },
     {
       "Player": "Tim Brunov",
       "Team": "Straubing Forest Tigers",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Just Scotrik",
       "Team": "Straubing Forest Tigers",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Mich Connov",
       "Team": "Straubing Forest Tigers",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
@@ -7152,24 +6632,24 @@
       "Player": "Dan Leonik",
       "Team": "Straubing Forest Tigers",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Lin Brandik",
       "Team": "Straubing Forest Tigers",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Trav Denisov",
       "Team": "Straubing Forest Tigers",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 2
     },
     {
       "Player": "Elis Hedrik",
       "Team": "Straubing Forest Tigers",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
@@ -7181,8 +6661,8 @@
     {
       "Player": "JC Liprik",
       "Team": "Straubing Forest Tigers",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 3
     },
     {
       "Player": "Tim Fleishik",
@@ -7193,50 +6673,50 @@
     {
       "Player": "Jon Langov",
       "Team": "Landshut Lichtkern",
-      "Goals": 0,
+      "Goals": 3,
       "Assists": 0
     },
     {
       "Player": "Phil Dietrov",
       "Team": "Landshut Lichtkern",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Wad Bergov",
       "Team": "Landshut Lichtkern",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 3,
+      "Assists": 3
     },
     {
       "Player": "Alex Derschik",
       "Team": "Landshut Lichtkern",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "And Schwarzov",
       "Team": "Landshut Lichtkern",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Stan Dietrov",
       "Team": "Landshut Lichtkern",
-      "Goals": 0,
+      "Goals": 3,
       "Assists": 0
     },
     {
       "Player": "Seo Parkov",
       "Team": "Landshut Lichtkern",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Dav Elsnov",
       "Team": "Landshut Lichtkern",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Tor Immov",
@@ -7247,74 +6727,74 @@
     {
       "Player": "Jul Kornik",
       "Team": "Landshut Lichtkern",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 3
     },
     {
       "Player": "Jes Koskov",
       "Team": "Landshut Lichtkern",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Tob Lindvik",
       "Team": "Landshut Lichtkern",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 2
     },
     {
       "Player": "Jak Mayenov",
       "Team": "Landshut Lichtkern",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Pasc Stekov",
       "Team": "Landshut Lichtkern",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Yan Wenzik",
       "Team": "Landshut Lichtkern",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 2
     },
     {
       "Player": "Luk Gausik",
       "Team": "Landshut Lichtkern",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Lui Scheibrik",
       "Team": "Landshut Lichtkern",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 3
     },
     {
       "Player": "Mar Tabrov",
       "Team": "Landshut Lichtkern",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Fab Marxin",
       "Team": "Regensburg Pulse",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Oli Rovin",
       "Team": "Regensburg Pulse",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Dav Kubek",
       "Team": "Regensburg Pulse",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 3
     },
     {
       "Player": "Eet Laurikov",
@@ -7326,12 +6806,12 @@
       "Player": "Kim Saffrov",
       "Team": "Regensburg Pulse",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Jon Neffrin",
       "Team": "Regensburg Pulse",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
@@ -7343,26 +6823,26 @@
     {
       "Player": "Fab Kosov",
       "Team": "Regensburg Pulse",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Mor Kottik",
       "Team": "Regensburg Pulse",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Sen Gilov",
       "Team": "Regensburg Pulse",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 3,
+      "Assists": 2
     },
     {
       "Player": "Xav Tippanov",
       "Team": "Regensburg Pulse",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 3
     },
     {
       "Player": "Jak Webrik",
@@ -7374,7 +6854,7 @@
       "Player": "And Buhlan",
       "Team": "Regensburg Pulse",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Kor Schuvik",
@@ -7385,20 +6865,20 @@
     {
       "Player": "Pat Demarin",
       "Team": "Regensburg Pulse",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Cris Schmidov",
       "Team": "Regensburg Pulse",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Mar Schmidik",
       "Team": "Regensburg Pulse",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Mat Gieslik",
@@ -7409,20 +6889,20 @@
     {
       "Player": "Tim Kosov",
       "Team": "Regensburg Pulse",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Con Ontarik",
       "Team": "Regensburg Pulse",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Ale Angarev",
       "Team": "Regensburg Pulse",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Yum Grimov",
@@ -7433,104 +6913,104 @@
     {
       "Player": "Pie Pretin",
       "Team": "Regensburg Pulse",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Olo Lisskov",
       "Team": "Regensburg Pulse",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Nik Gajovik",
       "Team": "Regensburg Pulse",
-      "Goals": 0,
+      "Goals": 3,
       "Assists": 0
     },
     {
       "Player": "And Schemrik",
       "Team": "Regensburg Pulse",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Kev Slezik",
       "Team": "Regensburg Pulse",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Cor Trivik",
       "Team": "Regensburg Pulse",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Tyl Wongsen",
       "Team": "Regensburg Pulse",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Tys Mosrik",
       "Team": "Regensburg Pulse",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Dav Morlen",
       "Team": "Regensburg Pulse",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 3
     },
     {
       "Player": "Ily Sharov",
       "Team": "Ravensburg Zenit Falken",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 3
     },
     {
       "Player": "Sim Sezik",
       "Team": "Ravensburg Zenit Falken",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Rob Czarnov",
       "Team": "Ravensburg Zenit Falken",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 2
     },
     {
       "Player": "Ansel Gergov",
       "Team": "Ravensburg Zenit Falken",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Erik Karlov",
       "Team": "Ravensburg Zenit Falken",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Nick Lattik",
       "Team": "Ravensburg Zenit Falken",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 2
     },
     {
       "Player": "Thom Reichik",
       "Team": "Ravensburg Zenit Falken",
-      "Goals": 0,
+      "Goals": 1,
       "Assists": 0
     },
     {
       "Player": "Julo Eikner",
       "Team": "Ravensburg Zenit Falken",
       "Goals": 0,
-      "Assists": 0
+      "Assists": 1
     },
     {
       "Player": "Luk Yungar",
@@ -7541,20 +7021,20 @@
     {
       "Player": "Flor Kettov",
       "Team": "Ravensburg Zenit Falken",
-      "Goals": 0,
+      "Goals": 2,
       "Assists": 0
     },
     {
       "Player": "Phil Masrov",
       "Team": "Ravensburg Zenit Falken",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Den Pfargen",
       "Team": "Ravensburg Zenit Falken",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Pato Demetsky",
@@ -7565,32 +7045,32 @@
     {
       "Player": "Erik Jinarson",
       "Team": "Ravensburg Zenit Falken",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Mate Mrazek",
       "Team": "Ravensburg Zenit Falken",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 4,
+      "Assists": 3
     },
     {
       "Player": "Fab Sartos",
       "Team": "Ravensburg Zenit Falken",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 2,
+      "Assists": 1
     },
     {
       "Player": "Mar Schmidrik",
       "Team": "Ravensburg Zenit Falken",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     },
     {
       "Player": "Alvo Voyev",
       "Team": "Ravensburg Zenit Falken",
-      "Goals": 0,
-      "Assists": 0
+      "Goals": 1,
+      "Assists": 1
     }
   ],
   "history": [
@@ -7613,6 +7093,11 @@
       "season": 4,
       "champion": "München FluxBullen",
       "finished_at": "2025-11-05T23:59:15.441435"
+    },
+    {
+      "season": 5,
+      "champion": "Straubing Forest Tigers",
+      "finished_at": "2025-11-06T10:02:07.145508"
     }
   ],
   "phase": "regular"

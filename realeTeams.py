@@ -214,24 +214,24 @@ nord_teams = [
     {"Name": "Ol Mebov", "Offense": 60, "Defense": 58, "Speed": 66, "Chemistry": 66}
     ], "Momentum": 0},
     {"Team": "Düsseldorfer Aurora", "Players": [
-    {"Name": "Niklas Lunemann", "Offense": 25, "Defense": 80, "Speed": 55, "Chemistry": 60},
-    {"Name": "Leon Hümer", "Offense": 22, "Defense": 75, "Speed": 52, "Chemistry": 58},
-    {"Name": "Nicolas Geitner", "Offense": 40, "Defense": 74, "Speed": 60, "Chemistry": 65},
-    {"Name": "Kevin Maginot", "Offense": 44, "Defense": 76, "Speed": 63, "Chemistry": 66},
-    {"Name": "Kristian Blumenschein", "Offense": 42, "Defense": 75, "Speed": 61, "Chemistry": 65},
-    {"Name": "Emil Quaas", "Offense": 43, "Defense": 74, "Speed": 62, "Chemistry": 64},
-    {"Name": "Moritz Kukuk", "Offense": 38, "Defense": 70, "Speed": 59, "Chemistry": 63},
-    {"Name": "Max Balinson", "Offense": 45, "Defense": 78, "Speed": 64, "Chemistry": 67},
-    {"Name": "Maximilian Faber", "Offense": 48, "Defense": 79, "Speed": 65, "Chemistry": 68},
-    {"Name": "Lucas Lessio", "Offense": 70, "Defense": 60, "Speed": 72, "Chemistry": 75},
-    {"Name": "Leon Niederberger", "Offense": 62, "Defense": 62, "Speed": 68, "Chemistry": 70},
-    {"Name": "Michael Clarke", "Offense": 68, "Defense": 61, "Speed": 70, "Chemistry": 72},
-    {"Name": "Erik Bradford", "Offense": 66, "Defense": 64, "Speed": 69, "Chemistry": 71},
-    {"Name": "Lenny Boos", "Offense": 58, "Defense": 58, "Speed": 66, "Chemistry": 68},
-    {"Name": "Colin Smith", "Offense": 69, "Defense": 63, "Speed": 70, "Chemistry": 72},
-    {"Name": "Ture Linden", "Offense": 64, "Defense": 60, "Speed": 68, "Chemistry": 70},
-    {"Name": "Kevin Orendorz", "Offense": 61, "Defense": 60, "Speed": 67, "Chemistry": 69},
-    {"Name": "Ryan Olsen", "Offense": 72, "Defense": 62, "Speed": 71, "Chemistry": 73}
+    {"Name": "Niko Lunen", "Offense": 25, "Defense": 80, "Speed": 55, "Chemistry": 60},
+    {"Name": "Leon Hümberg", "Offense": 22, "Defense": 75, "Speed": 52, "Chemistry": 58},
+    {"Name": "Nico Geitmar", "Offense": 40, "Defense": 74, "Speed": 60, "Chemistry": 65},
+    {"Name": "Kev Magnar", "Offense": 44, "Defense": 76, "Speed": 63, "Chemistry": 66},
+    {"Name": "Kristo Blumert", "Offense": 42, "Defense": 75, "Speed": 61, "Chemistry": 65},
+    {"Name": "Emil Quarn", "Offense": 43, "Defense": 74, "Speed": 62, "Chemistry": 64},
+    {"Name": "Moris Kuck", "Offense": 38, "Defense": 70, "Speed": 59, "Chemistry": 63},
+    {"Name": "Max Balnor", "Offense": 45, "Defense": 78, "Speed": 64, "Chemistry": 67},
+    {"Name": "Milan Farber", "Offense": 48, "Defense": 79, "Speed": 65, "Chemistry": 68},
+    {"Name": "Lukas Lessin", "Offense": 70, "Defense": 60, "Speed": 72, "Chemistry": 75},
+    {"Name": "Leo Nierden", "Offense": 62, "Defense": 62, "Speed": 68, "Chemistry": 70},
+    {"Name": "Mikael Clarn", "Offense": 68, "Defense": 61, "Speed": 70, "Chemistry": 72},
+    {"Name": "Erik Branford", "Offense": 66, "Defense": 64, "Speed": 69, "Chemistry": 71},
+    {"Name": "Lenn Bors", "Offense": 58, "Defense": 58, "Speed": 66, "Chemistry": 68},
+    {"Name": "Colen Smitt", "Offense": 69, "Defense": 63, "Speed": 70, "Chemistry": 72},
+    {"Name": "Turo Lindes", "Offense": 64, "Defense": 60, "Speed": 68, "Chemistry": 70},
+    {"Name": "Ken Ormars", "Offense": 61, "Defense": 60, "Speed": 67, "Chemistry": 69},
+    {"Name": "Ryan Olmen", "Offense": 72, "Defense": 62, "Speed": 71, "Chemistry": 73}
     ], "Momentum": 0},
     {"Team": "Kassel Zenit", "Players": [
     {"Name": "Bran Maxvik", "Offense": 42, "Defense": 79, "Speed": 55, "Chemistry": 68},
@@ -250,7 +250,8 @@ nord_teams = [
     {"Name": "Mac Rutkov", "Offense": 66, "Defense": 60, "Speed": 68, "Chemistry": 67},
     {"Name": "Dom Turgov", "Offense": 70, "Defense": 62, "Speed": 70, "Chemistry": 68},
     {"Name": "Yan Valentik", "Offense": 68, "Defense": 61, "Speed": 69, "Chemistry": 67},
-    {"Name": "Jak Weidrik", "Offense": 67, "Defense": 61, "Speed": 69, "Chemistry": 67}
+    {"Name": "Jak Weidrik", "Offense": 67, "Defense": 61, "Speed": 69, "Chemistry": 67},
+    {"Name": "Luo Dresdl", "Offense": 65, "Defense": 58, "Speed": 69, "Chemistry": 67}
     ], "Momentum": 0},
     {"Team": "Bad Nauheim Devils", "Players": [
     {"Name": "Fin Beckov", "Offense": 40, "Defense": 77, "Speed": 54, "Chemistry": 67},
