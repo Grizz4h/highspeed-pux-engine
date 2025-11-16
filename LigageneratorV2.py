@@ -273,6 +273,19 @@ def prepare_lineups_for_matches(df: pd.DataFrame, matches: List[Tuple[str, str]]
         lineup = build_lineup(players)
         df.at[idx, "Lineup"] = lineup
 
+        # --- Debug-Check pro Team ----------------------------
+        d_count = sum(1 for p in lineup if p["PositionGroup"] == "D")
+        f_count = sum(1 for p in lineup if p["PositionGroup"] == "F")
+        g_count = sum(1 for p in lineup if p["PositionGroup"] == "G")
+
+        if (d_count != 8) or (f_count != 12) or (g_count != 1):
+            print(f"\n[DEBUG][Lineup Warnung] Team: {team_name}")
+            print(f"   → {d_count}D / {f_count}F / {g_count}G  (Soll: 8D / 12F / 1G)")
+
+       
+# -----------------------------------------------------
+
+
 
 ### DEBUG-Helfer: Tabellenansicht & Stärkevergleich & JSON-Payload
 

@@ -143,7 +143,7 @@ def team_logo_dataurl(team: str, size: int = 24, scale: int = 2) -> Optional[str
 # - run_simulation(max_seasons=..., interactive=False)
 # - read_tables_for_ui()
 # - load_state()
-import PlayoffSerie as sim
+import LigageneratorV2 as sim
 
 # ============================================================
 # Sidebar – Steuerung
