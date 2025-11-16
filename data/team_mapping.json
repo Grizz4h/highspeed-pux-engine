@@ -16,7 +16,7 @@
     "conference": "Nord"
   },
   {
-    "league": "DEL",
+    "league": "DEL2",
     "real_team_name": "Krefeld Pinguine",
     "real_code": "KEV",
     "highspeed_name": "Krefeld Kernschlag",
@@ -24,7 +24,7 @@
     "conference": "Nord"
   },
   {
-    "league": "DEL",
+    "league": "DEL2",
     "real_team_name": "Düsseldorfer EG",
     "real_code": "DEG",
     "highspeed_name": "Düsseldorf Aurora",
@@ -48,17 +48,17 @@
     "conference": "Nord"
   },
   {
-    "league": "DEL",
+    "league": "DEL2",
     "real_team_name": "Kassel Huskies",
-    "real_code": "KAS",
+    "real_code": "ECK",
     "highspeed_name": "Kassel Zenit",
     "highspeed_code": "KZE",
     "conference": "Nord"
   },
   {
-    "league": "DEL",
+    "league": "DEL2",
     "real_team_name": "EC Bad Nauheim",
-    "real_code": "BN",
+    "real_code": "ECN",
     "highspeed_name": "Bad Nauheim Devils",
     "highspeed_code": "BND",
     "conference": "Nord"
@@ -66,7 +66,7 @@
   {
     "league": "DEL",
     "real_team_name": "Fischtown Pinguins Bremerhaven",
-    "real_code": "BRE",
+    "real_code": "BHV",
     "highspeed_name": "Bremerhaven Trident",
     "highspeed_code": "BTR",
     "conference": "Nord"
@@ -99,7 +99,7 @@
   {
     "league": "DEL",
     "real_team_name": "Augsburger Panther",
-    "real_code": "AUG",
+    "real_code": "AEV",
     "highspeed_name": "Augsburg Ferox",
     "highspeed_code": "AFX",
     "conference": "Sued"

@@ -2,29 +2,39 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from collections import defaultdict
-import pprint
+from typing import Any, Dict, List, Tuple, Optional
 
-# -------------------------
+# ------------------------------------------------------------
 # Pfade
-# -------------------------
-DATA_DIR = Path("data")
+# ------------------------------------------------------------
+
+BASE_DIR = Path(".")
+DATA_DIR = BASE_DIR / "data"
+
 PLAYERS_FILE = DATA_DIR / "players_rated.json"
 TEAM_MAPPING_FILE = DATA_DIR / "team_mapping.json"
-PLAYER_MAPPING_FILE = DATA_DIR / "mapping_player_names.json"
-
-OUTPUT_FILE = Path("realeTeams_live.py")
-
-# Deine Nord/Süd-Fake-Teams
+NAME_MAPPING_FILE = DATA_DIR / "mapping_player_names.json"
+OUTPUT_FILE = BASE_DIR / "realeTeams_live.py"
 
 
-# -------------------------
-# Team-Mapping laden
-# -------------------------
-def load_team_mapping() -> tuple[dict[str, str], dict[str, str]]:
+# ------------------------------------------------------------
+# Loader
+# ------------------------------------------------------------
+
+def load_players() -> List[Dict[str, Any]]:
+    if not PLAYERS_FILE.exists():
+        raise FileNotFoundError(f"{PLAYERS_FILE} nicht gefunden.")
+    raw = json.loads(PLAYERS_FILE.read_text(encoding="utf-8"))
+    if not isinstance(raw, list):
+        raise ValueError("players_rated.json muss eine Liste sein.")
+    return raw
+
+
+def load_team_mapping() -> Tuple[List[Dict[str, Any]],
+                                 Dict[Tuple[str, str], Dict[str, Any]],
+                                 Dict[Tuple[str, str], Dict[str, Any]]]:
     """
-    Liest data/team_mapping.json im Format:
-
+    team_mapping.json:
     [
       {
         "league": "DEL",
@@ -38,233 +48,242 @@ def load_team_mapping() -> tuple[dict[str, str], dict[str, str]]:
     ]
 
     Rückgabe:
-      - name_map:      z.B. {"BER": "Whiteout Berlin", "DEL|BER": "Whiteout Berlin", ...}
-      - conference_map: z.B. {"Whiteout Berlin": "Nord", "Novadelta Panther": "Sued", ...}
+      - liste aller Einträge
+      - dict_by_code[(league, real_code)] -> mapping
+      - dict_by_name[(league, real_team_name)] -> mapping
     """
     if not TEAM_MAPPING_FILE.exists():
-        print(f"⚠️  {TEAM_MAPPING_FILE} nicht gefunden – verwende Team-Code als Namen.")
-        return {}, {}
+        raise FileNotFoundError(f"{TEAM_MAPPING_FILE} nicht gefunden.")
 
     raw = json.loads(TEAM_MAPPING_FILE.read_text(encoding="utf-8"))
-
     if not isinstance(raw, list):
-        print("⚠️  team_mapping.json ist kein Array – erwarte Liste von Objekten.")
-        return {}, {}
+        raise ValueError("team_mapping.json muss eine Liste sein.")
 
-    name_map: dict[str, str] = {}
-    conference_map: dict[str, str] = {}
+    by_code: Dict[Tuple[str, str], Dict[str, Any]] = {}
+    by_name: Dict[Tuple[str, str], Dict[str, Any]] = {}
 
-    for item in raw:
-        if not isinstance(item, dict):
-            continue
+    for entry in raw:
+        league = str(entry.get("league", "")).strip()
+        real_code = entry.get("real_code")
+        real_name = entry.get("real_team_name")
 
-        league = item.get("league")         # "DEL" / "DEL2"
-        real_code = item.get("real_code")   # z. B. "BER"
-        high_name = item.get("highspeed_name")  # "Whiteout Berlin"
-        high_code = item.get("highspeed_code")  # z. B. "WOB"
-        conf = item.get("conference")       # "Nord" / "Sued"
+        if league and real_code:
+            by_code[(league, str(real_code).strip())] = entry
+        if league and real_name:
+            by_name[(league, str(real_name).strip())] = entry
 
-        # Mapping Code -> Highspeed-Name
-        if isinstance(real_code, str) and isinstance(high_name, str):
-            name_map[real_code] = high_name
-            if isinstance(league, str):
-                name_map[f"{league}|{real_code}"] = high_name
-
-        # optional: Highspeed-Code auch mappen
-        if isinstance(high_code, str) and isinstance(high_name, str):
-            name_map[high_code] = high_name
-
-        # Conference-Mapping
-        if isinstance(high_name, str) and isinstance(conf, str):
-            conference_map[high_name] = conf
-
-    if not name_map:
-        print("⚠️  Konnte aus team_mapping.json keine Team-Namen-Mappings extrahieren.")
-    if not conference_map:
-        print("⚠️  Konnte aus team_mapping.json keine Conference-Mappings extrahieren.")
-
-    return name_map, conference_map
+    return raw, by_code, by_name
 
 
-# -------------------------
-# Spieler-Mapping laden
-# -------------------------
-def load_player_mapping() -> dict[str, str]:
+def load_name_mapping() -> Dict[str, str]:
     """
-    Erwartetes Format (Liste):
-
+    mapping_player_names.json:
     [
-      { "real": "Konrad Abeltshauser", "fake": "Konradu Abeltshausdunov" },
+      { "real": "Riley Barber", "fake": "Rilan Barvik" },
       ...
     ]
+    → Rückgabe: { "Riley Barber": "Rilan Barvik", ... }
     """
-    if not PLAYER_MAPPING_FILE.exists():
-        print(f"⚠️  {PLAYER_MAPPING_FILE} nicht gefunden – verwende Realnamen.")
+    if not NAME_MAPPING_FILE.exists():
+        print(f"⚠️  {NAME_MAPPING_FILE} nicht gefunden – echte Namen werden verwendet.")
         return {}
 
-    raw = json.loads(PLAYER_MAPPING_FILE.read_text(encoding="utf-8"))
+    raw = json.loads(NAME_MAPPING_FILE.read_text(encoding="utf-8"))
     if not isinstance(raw, list):
-        print("⚠️  mapping_player_names.json ist kein Array – erwarte Liste von Objekten.")
-        return {}
+        raise ValueError("mapping_player_names.json muss eine Liste sein.")
 
-    mapping: dict[str, str] = {}
-    for item in raw:
-        if not isinstance(item, dict):
-            continue
-        real = item.get("real")
-        fake = item.get("fake")
-        if isinstance(real, str) and isinstance(fake, str):
-            mapping[real.strip()] = fake.strip()
-
-    if not mapping:
-        print("⚠️  Keine Spieler-Mappings gefunden – verwende Realnamen.")
+    mapping: Dict[str, str] = {}
+    for entry in raw:
+        real = str(entry.get("real", "")).strip()
+        fake = str(entry.get("fake", "")).strip()
+        if real and fake:
+            mapping[real] = fake
     return mapping
 
 
-def resolve_team_name(team_code: str | None, league: str, team_map: dict[str, str]) -> str:
-    """Sorgt dafür, dass immer ein String als Teamname zurückkommt."""
-    code = (str(team_code).strip() if team_code is not None else "")
+# ------------------------------------------------------------
+# Hilfen
+# ------------------------------------------------------------
 
-    # 1) Liga-spezifisches Mapping: "DEL|BER"
-    if code and league:
-        key = f"{league}|{code}"
-        if key in team_map:
-            return team_map[key]
-
-    # 2) Nur Code: "BER"
-    if code and code in team_map:
-        return team_map[code]
-
-    # 3) Fallback: zumindest der Code, oder Dummy
-    if code:
-        return code
-    if league:
-        return f"{league}_UNKNOWN"
-    return "UNKNOWN_TEAM"
+def get_fake_name(real_name: str, name_map: Dict[str, str]) -> str:
+    """
+    Holt Fake-Namen aus mapping_player_names.json.
+    Fallback: realer Name, wenn kein Mapping (mit Warnung).
+    """
+    if real_name in name_map:
+        return name_map[real_name]
+    print(f"⚠️  Kein Fake-Name-Mapping für Spieler '{real_name}' – verwende Realnamen.")
+    return real_name
 
 
-def resolve_fake_player_name(name_real: str | None, player_map: dict[str, str]) -> str:
-    if not name_real:
-        return "Unknown Player"
-    key = name_real.strip()
-    if key in player_map:
-        return player_map[key]
-    # Fallback: Realname
-    return name_real
+def derive_position_group(player: Dict[str, Any]) -> str:
+    """
+    PositionGroup aus den vorhandenen Feldern ableiten – robust.
+    Erwartet idealerweise 'position_group' im players_rated.json.
+    Fallback: aus position_raw / position.
+    """
+    pg = player.get("position_group")
+    if isinstance(pg, str) and pg:
+        return pg.upper()
 
-# -------------------------
-# Hauptfunktion: aus players_rated → realeTeams_live
-# -------------------------
-def build_realeTeams_from_ratings() -> tuple[list[dict], list[dict]]:
-    if not PLAYERS_FILE.exists():
-        raise FileNotFoundError(f"{PLAYERS_FILE} nicht gefunden")
+    pos_raw = str(player.get("position_raw") or player.get("position") or "").upper()
 
-    players = json.loads(PLAYERS_FILE.read_text(encoding="utf-8"))
-    if not isinstance(players, list):
-        raise ValueError("players_rated.json muss eine Liste von Spielern enthalten")
+    # Sehr grobe Heuristik:
+    if pos_raw.startswith("G") or pos_raw == "GK":
+        return "G"
+    if pos_raw.startswith("D"):
+        return "D"
+    return "F"
 
-    team_map, conference_map = load_team_mapping()
-    player_map = load_player_mapping()
 
-    teams_dict: dict[str, dict] = {}
-    players_by_team: dict[str, list] = defaultdict(list)
+def build_realeTeams_from_ratings() -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+    players = load_players()
+    _, team_by_code, team_by_name = load_team_mapping()
+    name_map = load_name_mapping()
+
+    teams: Dict[str, Dict[str, Any]] = {}  # key: highspeed_code
+    unknown_team_keys = set()  # zum Sammeln von Teams ohne Mapping
 
     for p in players:
-        if not isinstance(p, dict):
+        league = str(p.get("league", "")).strip()
+        if league not in ("DEL", "DEL2"):
+            continue  # andere Ligen aktuell ignorieren
+
+        # ---- Teamcode / Teamname aus players_rated.json
+        raw_code = p.get("team_code")
+        raw_name = p.get("team_name")
+
+        # beides kann None sein; bei DEL oft: code=None, name="MUC"
+        # bei DEL2 oft: code="SCB", name=None
+        code_candidate = None
+        if isinstance(raw_code, str) and raw_code.strip():
+            code_candidate = raw_code.strip()
+        elif isinstance(raw_name, str) and raw_name.strip():
+            # hier ist 'team_name' in deiner Datenbasis bei DEL ein Kürzel wie "MUC"
+            code_candidate = raw_name.strip()
+
+        mapping_entry: Optional[Dict[str, Any]] = None
+
+        # 1) Versuch: über Code (BER, WOB, MUC, EVL, etc.)
+        if code_candidate:
+            mapping_entry = team_by_code.get((league, code_candidate))
+
+        # 2) Versuch: über "vollen" Namen (falls du irgendwann echte Namen in team_name speicherst)
+        if mapping_entry is None and isinstance(raw_name, str) and raw_name.strip():
+            mapping_entry = team_by_name.get((league, raw_name.strip()))
+
+        if mapping_entry is None:
+            key = (league, code_candidate or "NONE", raw_name or "NONE")
+            if key not in unknown_team_keys:
+                unknown_team_keys.add(key)
+            # Spieler bleiben in players_rated.json, aber wir nehmen sie nicht in realeTeams auf
             continue
 
-        league = p.get("league", "")  # "DEL" / "DEL2"
-        team_code = p.get("team_code")  # z. B. "BER", "FRB"
-        name_real = p.get("name_real", "Unknown Player")
+        high_name = mapping_entry.get("highspeed_name")
+        high_code = mapping_entry.get("highspeed_code")
+        conference = mapping_entry.get("conference", "")
 
-        fake_team = resolve_team_name(team_code, league, team_map)
-        fake_name = resolve_fake_player_name(name_real, player_map)
+        if not high_name or not high_code:
+            # kaputte Mappingzeilen wollen wir nicht
+            continue
 
-        player_entry = {
-            "Name": fake_name,
-            # diese vier Felder nutzt der Generator aktuell:
-            "Offense": p.get("rating_offense", 50),
-            "Defense": p.get("rating_defense", 50),
-            "Speed": p.get("rating_speed", 50),
-            "Chemistry": p.get("rating_chemistry", 50),
-            # Zusatzinfos für später:
-            "Overall": p.get("rating_overall", 50),
-            "League": league,
-            "TeamCode": team_code,
-            "Number": p.get("number"),
-            "Nation": p.get("nation"),
-            "PositionRaw": p.get("position_raw"),
-            "PositionGroup": p.get("position_group"),  # "F", "D", "G"
-            "GP": p.get("gp", 0),
-            "Goals": p.get("goals", 0),
-            "Assists": p.get("assists", 0),
-            "Points": p.get("points", 0),
-            "PlusMinus": p.get("plus_minus", 0),
-            "PIM": p.get("pim", 0),
-            "FO_Won": p.get("fo_won", 0),
-            "FO_Lost": p.get("fo_lost", 0),
-            "FO_Pct": p.get("fo_pct", 0.0),
-            "Type": p.get("type"),  # "skater" / "goalie"
-            "Minutes": p.get("minutes", 0.0),
-            "Wins": p.get("wins", 0),
-            "Losses": p.get("losses", 0),
-            "Shutouts": p.get("shutouts", 0),
-            "GoalsAgainst": p.get("goals_against", 0),
-            "GAA": p.get("gaa", 0.0),
-            "ShotsAgainst": p.get("shots_against", 0),
-            "Saves": p.get("saves", 0),
-            "SV_Pct": p.get("sv_pct", 0.0),
-        }
-
-        players_by_team[fake_team].append(player_entry)
-
-        if fake_team not in teams_dict:
-            teams_dict[fake_team] = {
-                "Team": fake_team,
-                "League": league,
-                "TeamCode": team_code,
-                "Players": players_by_team[fake_team],
-                "Momentum": 0,
+        # Team-Container in Dict anlegen
+        if high_code not in teams:
+            teams[high_code] = {
+                "Team": high_name,
+                "Code": high_code,
+                "Conference": conference,
+                "Players": [],
             }
 
-    nord_list: list[dict] = []
-    sued_list: list[dict] = []
-    others: list[str] = []
+        # Fake-Name & Positionsgruppe
+        real_name = str(p.get("name_real") or p.get("name_raw") or "").strip()
+        if not real_name:
+            # zur Sicherheit: wenn echt gar kein Name drin ist, überspringen
+            continue
+        fake_name = get_fake_name(real_name, name_map)
+        pos_group = derive_position_group(p)
 
-    for team_name, team_data in sorted(teams_dict.items(), key=lambda kv: str(kv[0])):
-        conf = conference_map.get(team_name, "").lower()
-        if conf.startswith("nord"):
-            nord_list.append(team_data)
-        elif conf.startswith("sued") or conf.startswith("süd"):
-            sued_list.append(team_data)
+        # Spiele
+        gp = p.get("gp")
+        if gp is None:
+            gp = p.get("games", 0)
+        try:
+            gp = int(gp)
+        except Exception:
+            gp = 0
+
+        # Ratings (bereits aus build_ratings.py berechnet)
+        r_off = p.get("rating_offense", 40)
+        r_def = p.get("rating_defense", 40)
+        r_spd = p.get("rating_speed", 40)
+        r_chem = p.get("rating_chemistry", 40)
+        r_ovr = p.get("rating_overall", 50)
+
+        player_obj = {
+            "Name": fake_name,
+            "NameReal": real_name,
+            "Number": p.get("number"),
+            "Nation": p.get("nation"),
+            "PositionRaw": p.get("position_raw") or p.get("position"),
+            "PositionGroup": pos_group,
+            "GamesPlayed": gp,
+            # Originalwerte optional mitgeben, kann später für Stats / UI hilfreich sein
+            "League": league,
+            "TeamCodeReal": code_candidate,
+            "TeamNameRaw": raw_name,
+            # Ratings → exakt die Keys, die dein Generator nutzt:
+            "Offense": r_off,
+            "Defense": r_def,
+            "Speed": r_spd,
+            "Chemistry": r_chem,
+            "Overall": r_ovr,
+        }
+
+        teams[high_code]["Players"].append(player_obj)
+
+    # ---- Warnungen für Teams ohne Mapping
+    if unknown_team_keys:
+        print("ℹ️  Teams ohne Mapping in team_mapping.json (werden ignoriert):")
+        for league, code_candidate, raw_name in sorted(unknown_team_keys):
+            print(f"   - league={league} code={code_candidate!r} name={raw_name!r}")
+
+    # ---- Aufteilen in Nord / Süd
+    nord_teams: List[Dict[str, Any]] = []
+    sued_teams: List[Dict[str, Any]] = []
+
+    for code, t in sorted(teams.items(), key=lambda kv: kv[0]):
+        conf = (t.get("Conference") or "").lower()
+        if conf == "nord":
+            nord_teams.append(t)
+        elif conf in ("sued", "süd"):
+            sued_teams.append(t)
         else:
-            others.append(team_name)
+            print(f"⚠️  Team ohne gültige Conference (Nord/Sued): {t['Team']} – Conference={t.get('Conference')}")
+
+    print(f"✅ Teams insgesamt: {len(teams)}")
+    print(f"   → Nord: {len(nord_teams)}")
+    print(f"   → Süd : {len(sued_teams)}")
+
+    return nord_teams, sued_teams
 
 
-    print(f"✅ Teams insgesamt: {len(teams_dict)}")
-    print(f"   → Nord: {len(nord_list)}")
-    print(f"   → Süd : {len(sued_list)}")
-    if others:
-        print("ℹ️  Teams außerhalb deiner 10+10 Highspeed-Teams (werden ignoriert):")
-        for t in others:
-            print("   -", t)
-
-    return nord_list, sued_list
-
-
-def write_realeTeams_py(nord: list[dict], sued: list[dict]) -> None:
-    content_lines = [
-        "# AUTO-GENERATED from data/players_rated.json",
-        "# Bitte nicht manuell bearbeiten – Skript: build_realeTeams_from_ratings.py",
+def write_realeTeams_py(nord: List[Dict[str, Any]], sued: List[Dict[str, Any]]) -> None:
+    """
+    schreibt realeTeams_live.py mit nord_teams / sued_teams als Python-Listen.
+    """
+    content = [
+        "# Diese Datei wurde automatisch aus players_rated.json erzeugt.",
+        "# Enthält die aktuellen REALEN Kader als HIGHspeed-Teams (Nord/Süd).",
         "",
         "nord_teams = ",
-        pprint.pformat(nord, width=120, sort_dicts=False),
+        json.dumps(nord, indent=2, ensure_ascii=False),
         "",
         "sued_teams = ",
-        pprint.pformat(sued, width=120, sort_dicts=False),
+        json.dumps(sued, indent=2, ensure_ascii=False),
         "",
     ]
-    OUTPUT_FILE.write_text("\n".join(content_lines), encoding="utf-8")
+    OUTPUT_FILE.write_text("\n".join(content), encoding="utf-8")
     print(f"💾 Datei geschrieben: {OUTPUT_FILE}")
 
 

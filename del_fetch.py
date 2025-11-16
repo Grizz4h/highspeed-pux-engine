@@ -6,18 +6,21 @@ auf eine gemeinsame Baseline normalisieren.
 - Quelle Goalies: https://www.penny-del.org/statistik/saison-2025-26/hauptrunde/goaliestats/basis
 
 Baseline-Skater-Felder (für DEL und DEL2 kompatibel):
-  league, team (optional), number, name_raw, nation, position,
+  league, team (Code), number, name_raw, nation, position,
   games, goals, assists, points, plus_minus, pim,
   faceoff_won, faceoff_total, faceoff_pct
 
 Baseline-Goalie-Felder:
-  league, team (optional), number, name_raw, nation, position,
+  league, team (Code), number, name_raw, nation, position,
   games, minutes, wins, losses, shutouts,
   goals_against, gaa, shots_against, saves, save_pct
 
 Output:
   data/del_skaters.json
   data/del_goalies.json
+
+Benötigt:
+  data/del_team_id_map.json   (Mapping Logo-ID -> Team-Code)
 """
 
 from __future__ import annotations
@@ -46,9 +49,11 @@ OUT_DIR = Path("data")
 OUT_SKATERS = OUT_DIR / "del_skaters.json"
 OUT_GOALIES = OUT_DIR / "del_goalies.json"
 
+TEAM_ID_MAP_FILE = OUT_DIR / "del_team_id_map.json"
+
 
 # ------------------------------------------------------------
-#  Helpers
+#  Helpers: HTTP & Parsing
 # ------------------------------------------------------------
 
 def fetch_html(url: str) -> str:
@@ -117,19 +122,125 @@ def parse_float_percent(val: Any) -> Optional[float]:
 
 
 # ------------------------------------------------------------
+#  Team-ID-Mapping (Logo-ID -> Team-Code)
+# ------------------------------------------------------------
+
+def load_team_id_map() -> Dict[int, str]:
+    """
+    Lädt data/del_team_id_map.json.
+
+    Dein Format:
+
+    {
+      "1":  { "real": "ERC Ingolstadt", "real_code": "ING", "fake": "Novadelta Panther", "fake_code": "NDP" },
+      "2":  { "real": "Adler Mannheim", "real_code": "MAN", "fake": "Mannheim Ventus", "fake_code": "MVE" },
+      ...
+    }
+
+    → Wir verwenden hier den real_code (ING, MAN, …) als 'team'-Feld
+      in den DEL-Skater-/Goalie-JSONs.
+    """
+    if not TEAM_ID_MAP_FILE.exists():
+        raise FileNotFoundError(
+            f"team-id-map-Datei nicht gefunden: {TEAM_ID_MAP_FILE} "
+            f"(erwartet Mapping Logo-ID -> Team-Meta mit real_code/fake_code)"
+        )
+
+    raw = json.loads(TEAM_ID_MAP_FILE.read_text(encoding="utf-8"))
+    mapping: Dict[int, str] = {}
+
+    if isinstance(raw, dict):
+        # Keys = Logo-ID als String, Values = Dict mit real/real_code/fake/fake_code
+        for k, v in raw.items():
+            try:
+                logo_id = int(k)
+            except ValueError:
+                print(f"[WARN] Ungültiger Logo-ID-Key in del_team_id_map.json: {k!r}")
+                continue
+
+            if not isinstance(v, dict):
+                print(f"[WARN] Unerwarteter Wert für Logo-ID {logo_id}: {v!r}")
+                continue
+
+            # Standard: real_code benutzen
+            code_val = v.get("real_code") or v.get("real") or v.get("fake_code")
+            if not code_val:
+                print(f"[WARN] Kein real_code/fake_code für Logo-ID {logo_id}: {v}")
+                continue
+
+            code = str(code_val).strip().upper()
+            if not code:
+                print(f"[WARN] Leerer Code für Logo-ID {logo_id} in del_team_id_map.json")
+                continue
+
+            mapping[logo_id] = code
+
+    else:
+        raise ValueError(
+            f"del_team_id_map.json hat unerwartetes Format (Typ {type(raw)}). "
+            "Für dein aktuelles Setup wird ein Dict erwartet."
+        )
+
+    print(f"✅ del_team_id_map geladen: {len(mapping)} Logo-IDs")
+    for lid, code in sorted(mapping.items()):
+        print(f"   - ID {lid}: {code}")
+    return mapping
+
+
+
+# ------------------------------------------------------------
+#  Team-IDs aus Player-/Goalie-Stats-HTML
+# ------------------------------------------------------------
+
+def extract_team_ids_from_stats_html(html: str) -> List[Optional[int]]:
+    """
+    Geht über die <tbody>-Zeilen der Stats-Tabelle (Skater oder Goalies) und
+    extrahiert pro <tr> das erste Vorkommen von 'team_X' aus dem <img src>.
+
+    Fehlt ein Logo in einer Zeile, wird die letzte bekannte ID durchgereicht.
+    """
+    start = html.find("<tbody")
+    end = html.find("</tbody>", start)
+    if start == -1 or end == -1:
+        raise RuntimeError("Keine <tbody> in Stats-HTML gefunden")
+
+    tbody = html[start:end]
+    rows = re.findall(r"<tr[^>]*>(.*?)</tr>", tbody, flags=re.S)
+
+    team_ids: List[Optional[int]] = []
+    current: Optional[int] = None
+
+    for row_html in rows:
+        m = re.search(r'team_(\d+)[^"]*\.(?:png|svg)', row_html)
+        if m:
+            current = int(m.group(1))
+        team_ids.append(current)
+
+    ids_clean = sorted({i for i in team_ids if i is not None})
+    print(f"🧩 Team-IDs aus Stats-HTML: {len(team_ids)} Zeilen, IDs = {ids_clean}")
+    return team_ids
+
+
+# ------------------------------------------------------------
 #  Normalisierung DEL-SKATER
 # ------------------------------------------------------------
 
-def normalize_del_skaters(df: pd.DataFrame) -> List[Dict[str, Any]]:
+def normalize_del_skaters(
+    df: pd.DataFrame,
+    team_ids: List[Optional[int]],
+    logo_id_to_code: Dict[int, str],
+) -> List[Dict[str, Any]]:
     """
     Erwartete Spalten laut HTML-Snapshot:
       ['#','Team','#.1','Spieler','Nat','POS','GP','G','A','P','PIM','+','-','+/-','FOW','FOW%']
+
+    df: DataFrame aus pandas.read_html(...)
+    team_ids: pro Zeile eine Logo-ID (oder None), gleiche Länge wie df
+    logo_id_to_code: Mapping {logo_id: 'ING' | 'MUC' | ...} aus del_team_id_map.json
     """
-    # Umbenennen für Klarheit
     df = df.rename(
         columns={
             "#": "Rank",
-            "Team": "Team",
             "#.1": "No",
             "Spieler": "Player",
             "Nat": "Nation",
@@ -147,24 +258,33 @@ def normalize_del_skaters(df: pd.DataFrame) -> List[Dict[str, Any]]:
         }
     )
 
-    players: List[Dict[str, Any]] = []
+    if len(team_ids) != len(df):
+        print(
+            f"⚠️ team_ids-Länge ({len(team_ids)}) passt nicht zu df-Zeilen ({len(df)}). "
+            f"Ich versuche trotzdem zu mappen."
+        )
 
-    for _, row in df.iterrows():
+    players: List[Dict[str, Any]] = []
+    unknown_logo_ids: set[int] = set()
+
+    for idx, (_, row) in enumerate(df.iterrows()):
         name = str(row.get("Player", "")).strip()
         if not name or name == "nan":
             continue
 
-        # Name "Nachname,  Vorname" glätten
+        # Name "Nachname, Vorname" glätten
         name = re.sub(r"\s+", " ", name)
 
-        # Team-Kürzel aus der "Team"-Spalte holen
-        team_raw = str(row.get("Team", "")).strip()
-        if not team_raw or team_raw.lower() == "nan":
-            # Spieler ohne Team ignorieren
-            continue
-        team = team_raw.upper()
-
-        print("DEL Skater Teams:", sorted(df["Team"].dropna().unique()))
+        # Team über Logo-ID
+        logo_id: Optional[int] = team_ids[idx] if idx < len(team_ids) else None
+        team_code: Optional[str] = None
+        if logo_id is not None:
+            team_code = logo_id_to_code.get(logo_id)
+            if team_code is None:
+                unknown_logo_ids.add(logo_id)
+                print(f"[WARN] DEL-Skater {name}: Logo-ID {logo_id} nicht im ID-Mapping")
+        else:
+            print(f"[WARN] DEL-Skater {name}: keine Logo-ID in dieser Zeile gefunden")
 
         # Faceoffs: "102 / 206" oder "-/-"
         fow_raw = str(row.get("FOW_raw", "")).strip()
@@ -183,6 +303,7 @@ def normalize_del_skaters(df: pd.DataFrame) -> List[Dict[str, Any]]:
 
         fow_pct = parse_float_percent(row.get("FOW_pct_raw"))
 
+        # Plus/Minus
         plus_minus: Optional[int]
         if pd.notna(row.get("PlusMinus")):
             plus_minus = int(row["PlusMinus"])
@@ -194,7 +315,8 @@ def normalize_del_skaters(df: pd.DataFrame) -> List[Dict[str, Any]]:
         players.append(
             {
                 "league": "DEL",
-                "team": team,  
+                "team": team_code,
+                "team_logo_id": logo_id,
                 "number": int(row["No"]) if pd.notna(row.get("No")) else None,
                 "name_raw": name,
                 "nation": str(row.get("Nation", "")).strip() or None,
@@ -211,6 +333,11 @@ def normalize_del_skaters(df: pd.DataFrame) -> List[Dict[str, Any]]:
             }
         )
 
+    if unknown_logo_ids:
+        print("\n⚠️ Unbekannte Logo-IDs bei Skatern (in del_team_id_map.json nicht vorhanden):")
+        for lid in sorted(unknown_logo_ids):
+            print(f"   - Logo-ID {lid}")
+
     return players
 
 
@@ -218,15 +345,22 @@ def normalize_del_skaters(df: pd.DataFrame) -> List[Dict[str, Any]]:
 #  Normalisierung DEL-GOALIES
 # ------------------------------------------------------------
 
-def normalize_del_goalies(df: pd.DataFrame) -> List[Dict[str, Any]]:
+def normalize_del_goalies(
+    df: pd.DataFrame,
+    team_ids: List[Optional[int]],
+    logo_id_to_code: Dict[int, str],
+) -> List[Dict[str, Any]]:
     """
     Erwartete Spalten laut HTML-Snapshot:
       ['#','Team','#.1','Spieler','Nat','POS','GP','Min.','S','N','SO','GT','GTS','SV','SV%']
+
+    df: DataFrame aus pandas.read_html(...)
+    team_ids: pro Zeile eine Logo-ID (oder None), gleiche Länge wie df
+    logo_id_to_code: Mapping {logo_id: 'ING' | 'MUC' | ...} aus del_team_id_map.json
     """
     df = df.rename(
         columns={
             "#": "Rank",
-            "Team": "Team",
             "#.1": "No",
             "Spieler": "Player",
             "Nat": "Nation",
@@ -243,22 +377,31 @@ def normalize_del_goalies(df: pd.DataFrame) -> List[Dict[str, Any]]:
         }
     )
 
-    goalies: List[Dict[str, Any]] = []
+    if len(team_ids) != len(df):
+        print(
+            f"⚠️ team_ids-Länge ({len(team_ids)}) passt nicht zu df-Zeilen ({len(df)}). "
+            f"Ich versuche trotzdem zu mappen."
+        )
 
-    for _, row in df.iterrows():
+    goalies: List[Dict[str, Any]] = []
+    unknown_logo_ids: set[int] = set()
+
+    for idx, (_, row) in enumerate(df.iterrows()):
         name = str(row.get("Player", "")).strip()
         if not name or name == "nan":
             continue
 
         name = re.sub(r"\s+", " ", name)
 
-        # Team-Kürzel aus der "Team"-Spalte holen
-        team_raw = str(row.get("Team", "")).strip()
-        if not team_raw or team_raw.lower() == "nan":
-            continue
-        team = team_raw.upper()
-
-        print("DEL Goalie Teams:", sorted(df["Team"].dropna().unique()))
+        logo_id: Optional[int] = team_ids[idx] if idx < len(team_ids) else None
+        team_code: Optional[str] = None
+        if logo_id is not None:
+            team_code = logo_id_to_code.get(logo_id)
+            if team_code is None:
+                unknown_logo_ids.add(logo_id)
+                print(f"[WARN] DEL-Goalie {name}: Logo-ID {logo_id} nicht im ID-Mapping")
+        else:
+            print(f"[WARN] DEL-Goalie {name}: keine Logo-ID in dieser Zeile gefunden")
 
         minutes = parse_minutes_str(str(row.get("Min", "")).strip())
         sv_pct = parse_float_percent(row.get("SV_pct"))
@@ -267,7 +410,6 @@ def normalize_del_goalies(df: pd.DataFrame) -> List[Dict[str, Any]]:
         sv = int(row["SV"]) if pd.notna(row.get("SV")) else 0
         shots_against = sv + ga
 
-        # GAA-Feld kann z. B. "2.38" oder "2,38" oder "2.38 " sein
         raw_gaa = row.get("GAA")
         if pd.notna(raw_gaa):
             try:
@@ -280,7 +422,8 @@ def normalize_del_goalies(df: pd.DataFrame) -> List[Dict[str, Any]]:
         goalies.append(
             {
                 "league": "DEL",
-                "team": team,
+                "team": team_code,
+                "team_logo_id": logo_id,
                 "number": int(row["No"]) if pd.notna(row.get("No")) else None,
                 "name_raw": name,
                 "nation": str(row.get("Nation", "")).strip() or None,
@@ -298,6 +441,11 @@ def normalize_del_goalies(df: pd.DataFrame) -> List[Dict[str, Any]]:
             }
         )
 
+    if unknown_logo_ids:
+        print("\n⚠️ Unbekannte Logo-IDs bei Goalies (in del_team_id_map.json nicht vorhanden):")
+        for lid in sorted(unknown_logo_ids):
+            print(f"   - Logo-ID {lid}")
+
     return goalies
 
 
@@ -308,15 +456,22 @@ def normalize_del_goalies(df: pd.DataFrame) -> List[Dict[str, Any]]:
 def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
+    # ---- Team-ID-Mapping laden ----
+    print("=== del_team_id_map laden ===")
+    logo_id_map = load_team_id_map()
+
     # ---- Skater ----
-    print("=== DEL Skater laden (HTML) ===")
+    print("\n=== DEL Skater laden (HTML) ===")
     html_players = fetch_html(DEL_SKATERS_URL)
+    team_ids_skaters = extract_team_ids_from_stats_html(html_players)
+
     df_players = parse_html_table(html_players)
     print(f"🔎 Skater-Tabelle: {len(df_players)} Zeilen, Spalten: {list(df_players.columns)}")
 
-    skaters = normalize_del_skaters(df_players)
+    skaters = normalize_del_skaters(df_players, team_ids_skaters, logo_id_map)
     print(f"✅ Normalisierte Skater: {len(skaters)}")
-    print("   Beispiel:", skaters[0] if skaters else "keine Daten")
+    if skaters:
+        print("   Beispiel Skater:", skaters[0])
 
     OUT_SKATERS.write_text(json.dumps(skaters, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"💾 Skater-JSON gespeichert → {OUT_SKATERS}")
@@ -324,12 +479,15 @@ def main() -> None:
     # ---- Goalies ----
     print("\n=== DEL Goalies laden (HTML) ===")
     html_goalies = fetch_html(DEL_GOALIES_URL)
+    team_ids_goalies = extract_team_ids_from_stats_html(html_goalies)
+
     df_goalies = parse_html_table(html_goalies)
     print(f"🔎 Goalie-Tabelle: {len(df_goalies)} Zeilen, Spalten: {list(df_goalies.columns)}")
 
-    goalies = normalize_del_goalies(df_goalies)
+    goalies = normalize_del_goalies(df_goalies, team_ids_goalies, logo_id_map)
     print(f"✅ Normalisierte Goalies: {len(goalies)}")
-    print("   Beispiel:", goalies[0] if goalies else "keine Daten")
+    if goalies:
+        print("   Beispiel Goalie:", goalies[0])
 
     OUT_GOALIES.write_text(json.dumps(goalies, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"💾 Goalie-JSON gespeichert → {OUT_GOALIES}")
