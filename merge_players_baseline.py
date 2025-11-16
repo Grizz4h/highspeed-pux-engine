@@ -93,14 +93,30 @@ def _to_float(val: Any) -> float:
 
 
 def _pos_group_from_raw(pos: Optional[str]) -> Optional[str]:
+    """
+    Mappt Roh-Positionsstrings wie
+      - "DE", "DE (U21)", "D"
+      - "FO", "FO (U21)", "C", "LW", "RW"
+      - "GK", "G"
+    sauber auf "D", "F", "G".
+    """
     if not pos:
         return None
-    p = pos.strip().upper()
-    if p in ("D", "DE", "V"):
+
+    p = str(pos).strip().upper()     # z.B. "DE (U21)"
+    base = p.split()[0]              # -> "DE"
+
+    # Verteidiger
+    if base in ("D", "DE", "V", "DEF", "VERTEIDIGER"):
         return "D"
-    if p in ("G", "GK", "T"):
+
+    # Goalies
+    if base in ("G", "GK", "T", "TORHÜTER", "TORWART"):
         return "G"
+
+    # alles andere = Stürmer
     return "F"
+
 
 
 # ----------------- DEL2: schon Baseline, nur leicht säubern -----------------
@@ -309,6 +325,36 @@ def load_del_goalies() -> List[Dict[str, Any]]:
     print(f"✅ DEL Goalies: {len(result)} Datensätze normalisiert")
     return result
 
+def dedupe_goalies(players):
+    """
+    Entfernt doppelte Goalies:
+    - Wenn ein Spieler zweimal vorkommt (einmal als Skater, einmal als Goalie),
+      dann behalten wir NUR die Goalie-Version.
+    """
+    by_key = {}  # key = (name_real, number)
+
+    cleaned = []
+    for p in players:
+        key = (p.get("name_real") or p.get("NameReal"), p.get("number") or p.get("Number"))
+
+        if key not in by_key:
+            by_key[key] = p
+            cleaned.append(p)
+        else:
+            existing = by_key[key]
+
+            # echte Goalie-Version bevorzugen
+            is_goalie_p = p.get("type") == "goalie" or str(p.get("position_group", "")).upper() == "G"
+            is_goalie_existing = existing.get("type") == "goalie" or str(existing.get("position_group", "")).upper() == "G"
+
+            if is_goalie_p and not is_goalie_existing:
+                # Ersetze Skater-Version durch Goalie-Version
+                cleaned.remove(existing)
+                cleaned.append(p)
+                by_key[key] = p
+            # sonst Skater/Müll ignorieren
+
+    return cleaned
 
 # ----------------- Main -----------------
 
@@ -316,21 +362,41 @@ def load_del_goalies() -> List[Dict[str, Any]]:
 def main() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
+    # 1. Einzelquellen laden
     del2_players = load_del2_players()
-    del_skaters = load_del_skaters()
-    del_goalies = load_del_goalies()
+    del_skaters  = load_del_skaters()
+    del_goalies  = load_del_goalies()
 
-    all_players = del2_players + del_skaters + del_goalies
-    print(f"\n📊 Gesamt: {len(all_players)} Spieler/Goalies in der Baseline-Datenbank")
+    # 2. Alles zusammenwerfen
+    all_players_raw = del2_players + del_skaters + del_goalies
 
-    OUT_FILE.write_text(json.dumps(all_players, indent=2, ensure_ascii=False), encoding="utf-8")
+    # 3. Goalie-Duplikate bereinigen
+    all_players = dedupe_goalies(all_players_raw)
+
+    print(f"\n📊 Gesamt (nach Dedupe): {len(all_players)} Spieler/Goalies in der Baseline-Datenbank")
+
+    # 4. Schreiben
+    OUT_FILE.write_text(
+        json.dumps(all_players, indent=2, ensure_ascii=False),
+        encoding="utf-8"
+    )
     print(f"💾 Baseline-JSON gespeichert → {OUT_FILE}")
 
+    # 5. Mini-Debug-Ausgabe
     if all_players:
         print("\nBeispiel-Einträge:")
         for rec in all_players[:5]:
-            print(" -", rec["league"], rec["type"], rec["name_real"], "POS:", rec["position_group"], "GP:", rec["gp"])
+            print(
+                " -",
+                rec["league"],
+                rec["type"],
+                rec["name_real"],
+                "POS:", rec["position_group"],
+                "GP:", rec["gp"],
+            )
+
 
 
 if __name__ == "__main__":
     main()
+

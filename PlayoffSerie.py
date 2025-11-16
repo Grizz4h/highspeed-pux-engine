@@ -99,15 +99,25 @@ def _save_json(folder: Path, name: str, payload: Dict[str, Any]) -> None:
         json.dump(payload, f, indent=2, ensure_ascii=False)
     print("📦 JSON gespeichert →", folder / name)
 
-def save_spieltag_json(season: int, gameday: int, results: List[Dict[str, Any]],
-                       nord: pd.DataFrame, sued: pd.DataFrame, stats: pd.DataFrame) -> None:
-    payload = {
+def save_spieltag_json(
+    season: int,
+    gameday: int,
+    results: List[Dict[str, Any]],
+    nord: pd.DataFrame,
+    sued: pd.DataFrame,
+    stats: pd.DataFrame,
+    *,
+    debug: Optional[Dict[str, Any]] = None,  # <<< DEBUG-Hook
+) -> None:
+    payload: Dict[str, Any] = {
         "timestamp": datetime.now().isoformat(),
         "saison": season,
         "spieltag": gameday,
         "results": results,
         **_export_tables(nord, sued, stats),
     }
+    if debug is not None:
+        payload["debug"] = debug  # komplette Debug-Struktur pro Spieltag
     _save_json(SPIELTAG_DIR / f"saison_{season}", f"spieltag_{gameday:02}.json", payload)
 
 # ------------------------------------------------
@@ -196,25 +206,56 @@ def build_lineup(players: List[Dict[str, Any]],
         if key not in seen_ids:
             seen_ids.add(key)
             unique_lineup.append(p)
+    # --- Debug-Check --------------------------------------
+    d_count = sum(1 for p in unique_lineup if p["PositionGroup"] == "D")
+    f_count = sum(1 for p in unique_lineup if p["PositionGroup"] == "F")
+    g_count = sum(1 for p in unique_lineup if p["PositionGroup"] == "G")
+
+    if (d_count != n_def) or (f_count != n_fwd) or (g_count != n_goalies):
+        print(f"[DEBUG][Lineup Warnung] {d_count}D / {f_count}F / {g_count}G "
+              f"(soll: {n_def}D / {n_fwd}F / {n_goalies}G)")
+
+        # BONUS: Zeige, welche Positionen fehlen
+        if d_count < n_def:
+            print("   -> FEHLENDE Verteidiger:", n_def - d_count)
+        if f_count < n_fwd:
+            print("   -> FEHLENDE Stürmer:", n_fwd - f_count)
+        if g_count < n_goalies:
+            print("   -> KEIN GOALIE verfügbar!")
+
+    # -------------------------------------------------------
 
     return unique_lineup
 
+def _get_lineup_for_team(df: pd.DataFrame, team_name: str) -> List[Dict[str, Any]]:
+    """
+    Holt das Lineup eines Teams:
+      - wenn df["Lineup"] existiert und Liste → das
+      - sonst df["Players"]
+    """
+    mask = df["Team"] == team_name
+    if not mask.any():
+        print(f"[WARN] _get_lineup_for_team: Team '{team_name}' nicht in df gefunden")
+        return []
+
+    row = df.loc[mask].iloc[0]
+    if "Lineup" in row and isinstance(row["Lineup"], list) and row["Lineup"]:
+        return row["Lineup"]
+    return row["Players"]
 
 def prepare_lineups_for_matches(df: pd.DataFrame, matches: List[Tuple[str, str]]) -> None:
     """
     Für alle Teams, die an diesem Spieltag in 'matches' beteiligt sind,
     wird eine Lineup-Liste (8D/12F/1G) gebaut und in df["Lineup"] abgelegt.
     """
-
-    # Falls Spalte noch nicht existiert, anlegen
-    if "Lineup" not in df.columns:
-        df["Lineup"] = None
-
-    # Alle Teams, die heute spielen
-    teams_today: set[str] = set()
+    teams_today = set()
     for home, away in matches:
         teams_today.add(home)
         teams_today.add(away)
+
+    # sicherstellen, dass es die Spalte "Lineup" gibt
+    if "Lineup" not in df.columns:
+        df["Lineup"] = None
 
     for team_name in teams_today:
         mask = df["Team"] == team_name
@@ -224,25 +265,109 @@ def prepare_lineups_for_matches(df: pd.DataFrame, matches: List[Tuple[str, str]]
 
         idx_list = df.index[mask].tolist()
         if not idx_list:
-            print(f"[WARN] prepare_lineups_for_matches: Kein Index für Team '{team_name}' gefunden (Index-Problem)")
+            print(f"[WARN] prepare_lineups_for_matches: Kein Index für Team '{team_name}' gefunden")
             continue
 
-        idx = idx_list[0]
-        row = df.loc[idx]
-
-        players = row.get("Players")
-        if not isinstance(players, list) or not players:
-            print(f"[WARN] prepare_lineups_for_matches: Team '{team_name}' hat keinen gültigen Players-Roster")
-            continue
-
-        # HIER: Lineup wirklich bauen (8D / 12F / 1G, mit GP-Weight + Randomness)
-        lineup = build_lineup(players, n_def=8, n_fwd=12, n_goalies=1)
-
+        idx = idx_list[0]  # genau eine Zeile pro Team
+        players = df.at[idx, "Players"]
+        lineup = build_lineup(players)
         df.at[idx, "Lineup"] = lineup
 
 
+### DEBUG-Helfer: Tabellenansicht & Stärkevergleich & JSON-Payload
 
+def _build_lineup_table(df: pd.DataFrame, matches: List[Tuple[str, str]]) -> pd.DataFrame:
+    """
+    Erzeugt eine flache Tabelle:
+      Team | Rolle (Home/Away) | Gegner | Name | Pos | GP | OVR
+    für alle Lineups eines Spieltags.
+    """
+    rows: List[Dict[str, Any]] = []
+    for home, away in matches:
+        for team_name, role, opponent in [(home, "Home", away), (away, "Away", home)]:
+            lineup = _get_lineup_for_team(df, team_name)
+            for p in lineup:
+                rows.append({
+                    "Team": team_name,
+                    "Rolle": role,
+                    "Gegner": opponent,
+                    "Name": p.get("NameReal") or p.get("Name"),
+                    "Pos": p.get("PositionGroup") or p.get("PositionRaw"),
+                    "GP": p.get("GamesPlayed"),
+                    "OVR": p.get("Overall"),
+                })
+    if not rows:
+        return pd.DataFrame(columns=["Team", "Rolle", "Gegner", "Name", "Pos", "GP", "OVR"])
+    df_out = pd.DataFrame(rows)
+    # Sortierung: nach Team, Rolle, OVR runter
+    df_out = df_out.sort_values(["Team", "Rolle", "OVR"], ascending=[True, True, False])
+    return df_out
 
+def _build_strength_panel(df: pd.DataFrame, matches: List[Tuple[str, str]]) -> pd.DataFrame:
+    """
+    Stärkevergleich-Panel:
+      Home | Away | Home_OVR | Away_OVR | Diff
+    basiert auf Durchschnitt der Overall-Ratings im Lineup.
+    """
+    rows: List[Dict[str, Any]] = []
+    for home, away in matches:
+        lu_home = _get_lineup_for_team(df, home)
+        lu_away = _get_lineup_for_team(df, away)
+
+        def avg_ovr(lineup: List[Dict[str, Any]]) -> float:
+            vals = [p.get("Overall") for p in lineup if isinstance(p.get("Overall"), (int, float))]
+            if not vals:
+                return 0.0
+            return round(sum(vals) / len(vals), 1)
+
+        home_ovr = avg_ovr(lu_home)
+        away_ovr = avg_ovr(lu_away)
+
+        rows.append({
+            "Home": home,
+            "Away": away,
+            "Home_OVR": home_ovr,
+            "Away_OVR": away_ovr,
+            "Diff": round(home_ovr - away_ovr, 1),
+        })
+
+    if not rows:
+        return pd.DataFrame(columns=["Home", "Away", "Home_OVR", "Away_OVR", "Diff"])
+    return pd.DataFrame(rows)
+
+def _build_debug_matches_payload(df: pd.DataFrame, matches: List[Tuple[str, str]]) -> List[Dict[str, Any]]:
+    """
+    JSON-Debug-Struktur pro Match:
+      - Home/Away
+      - Lineups (komplett)
+      - Durchschnitts-OVR
+    """
+    debug_matches: List[Dict[str, Any]] = []
+
+    for home, away in matches:
+        lu_home = _get_lineup_for_team(df, home)
+        lu_away = _get_lineup_for_team(df, away)
+
+        def avg_ovr(lineup: List[Dict[str, Any]]) -> float:
+            vals = [p.get("Overall") for p in lineup if isinstance(p.get("Overall"), (int, float))]
+            if not vals:
+                return 0.0
+            return round(sum(vals) / len(vals), 1)
+
+        debug_matches.append({
+            "home": {
+                "team": home,
+                "avg_overall": avg_ovr(lu_home),
+                "lineup": lu_home,
+            },
+            "away": {
+                "team": away,
+                "avg_overall": avg_ovr(lu_away),
+                "lineup": lu_away,
+            },
+        })
+
+    return debug_matches
 
 
 def calc_strength(row: pd.Series, home: bool = False) -> float:
@@ -311,7 +436,6 @@ def update_player_stats(team:str,goals:int,df:pd.DataFrame,stats:pd.DataFrame)->
         stats.loc[stats["Player"]==assister,"Assists"] += 1
 
 def simulate_match(df:pd.DataFrame,home:str,away:str,stats:pd.DataFrame,conf:str)->Tuple[str,Dict[str,Any]]:
-    r_h=r_a=None
     r_h=df[df["Team"]==home].iloc[0]
     r_a=df[df["Team"]==away].iloc[0]
     p_home=calc_strength(r_h,True)/(calc_strength(r_h,True)+calc_strength(r_a))
@@ -361,8 +485,10 @@ def simulate_playoff_match(a: str, b: str,
     prepare_lineups_for_matches(dfA, [(a, a)])  # Dummy-Paarung nur für Team a
     prepare_lineups_for_matches(dfB, [(b, b)])  # Dummy-Paarung nur für Team b
 
-    pA = calc_strength(dfA[dfA["Team"] == a].iloc[0])
-    pB = calc_strength(dfB[dfB["Team"] == b].iloc[0])
+    rA = dfA[dfA["Team"] == a].iloc[0]
+    rB = dfB[dfB["Team"] == b].iloc[0]
+    pA = calc_strength(rA, True)
+    pB = calc_strength(rB, False)
     prob = pA / (pA + pB)
     gA = max(0, int(random.gauss(prob * 5, 1)))
     gB = max(0, int(random.gauss((1 - prob) * 5, 1)))
@@ -489,22 +615,60 @@ def step_regular_season_once() -> Dict[str, Any]:
 
     results_json=[]
 
+    # --- NORD ---
     print("\n— Nord —")
     today_nord_matches = nsched[:len(nord)//2]
     prepare_lineups_for_matches(nord, today_nord_matches)
+
+    # DEBUG: Lineup-Tabelle + Stärkevergleich
+    lineup_table_nord = _build_lineup_table(nord, today_nord_matches)
+    if not lineup_table_nord.empty:
+        print("\n📋 Lineups Nord (heute):")
+        print(lineup_table_nord.to_string(index=False))
+    strength_nord = _build_strength_panel(nord, today_nord_matches)
+    if not strength_nord.empty:
+        print("\n⚖️ Stärkevergleich Nord:")
+        print(strength_nord.to_string(index=False))
+
     for m in today_nord_matches:
         s,j=simulate_match(nord,*m,stats,"Nord"); print(s); results_json.append(j)
     nsched=nsched[len(nord)//2:]
 
+    # --- SÜD ---
     print("\n— Süd —")
     today_sued_matches = ssched[:len(sued)//2]
     prepare_lineups_for_matches(sued, today_sued_matches)
+
+    lineup_table_sued = _build_lineup_table(sued, today_sued_matches)
+    if not lineup_table_sued.empty:
+        print("\n📋 Lineups Süd (heute):")
+        print(lineup_table_sued.to_string(index=False))
+    strength_sued = _build_strength_panel(sued, today_sued_matches)
+    if not strength_sued.empty:
+        print("\n⚖️ Stärkevergleich Süd:")
+        print(strength_sued.to_string(index=False))
+
     for m in today_sued_matches:
         s,j=simulate_match(sued,*m,stats,"Süd"); print(s); results_json.append(j)
     ssched=ssched[len(sued)//2:]
 
     _print_tables(nord,sued,stats)
-    save_spieltag_json(season,spieltag,results_json,nord,sued,stats)
+
+    # JSON-Debug-Payload pro Spieltag
+    debug_payload = {
+        "nord_matches": _build_debug_matches_payload(nord, today_nord_matches),
+        "sued_matches": _build_debug_matches_payload(sued, today_sued_matches),
+    }
+
+    save_spieltag_json(
+        season,
+        spieltag,
+        results_json,
+        nord,
+        sued,
+        stats,
+        debug=debug_payload,
+    )
     spieltag+=1
     save_state({
         "season": season, "spieltag": spieltag,
@@ -616,20 +780,27 @@ if __name__ == "__main__":
 
     print("\nBedienung:")
     print("  [Enter]  → nächsten Spieltag simulieren")
-    print("  p       → komplette Playoffs simulieren und neue Saison starten")
+    print("  p       → EINE Playoff-Runde simulieren")
+    print("  f       → komplette Playoffs simulieren und neue Saison starten")
     print("  q       → beenden")
 
     while True:
-        cmd = input("\nEingabe ([Enter]/p/q): ").strip().lower()
+        cmd = input("\nEingabe ([Enter]/p/f/q): ").strip().lower()
 
         if cmd == "q":
             print("👋 Ende.")
             break
 
         elif cmd == "p":
+            res = step_playoffs_round_once()
+            print(f"▶️  Playoff-Runde: {res}")
+            if res.get("status") == "champion":
+                print(f"🏆 Champion: {res.get('champion')}")
+                print(f"➡️ Neue Saison {res.get('next_season')} wurde initialisiert.")
+
+        elif cmd == "f":
             res = simulate_full_playoffs_and_advance()
-            print(f"⚙️  Playoffs-Run: {res}")
-            # danach ist automatisch neue Saison angelegt
+            print(f"⚙️  Playoffs-Run (vollständig): {res}")
             state = load_state()
             print(f"🔁 Neue Saison {state['season']} gestartet (Spieltag {state['spieltag']}).")
 
@@ -637,5 +808,4 @@ if __name__ == "__main__":
             res = step_regular_season_once()
             print(f"▶️  Spieltag-Result: {res}")
             if res.get("status") == "season_over":
-                print("🏁 Hauptrunde beendet. Mit 'p' kannst du die Playoffs simulieren.")
-
+                print("🏁 Hauptrunde beendet. Mit 'p' kannst du die Playoffs rundenweise simulieren oder mit 'f' komplett durchlaufen lassen.")
