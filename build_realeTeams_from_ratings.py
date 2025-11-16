@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import pprint
 from pathlib import Path
 from typing import Any, Dict, List, Tuple, Optional
 
@@ -15,6 +16,7 @@ PLAYERS_FILE = DATA_DIR / "players_rated.json"
 TEAM_MAPPING_FILE = DATA_DIR / "team_mapping.json"
 NAME_MAPPING_FILE = DATA_DIR / "mapping_player_names.json"
 OUTPUT_FILE = BASE_DIR / "realeTeams_live.py"
+WEB_OUTPUT_FILE = BASE_DIR / "realeTeams_web.py"
 
 
 # ------------------------------------------------------------
@@ -291,7 +293,52 @@ def write_realeTeams_py(nord: List[Dict[str, Any]], sued: List[Dict[str, Any]]) 
 def main() -> None:
     nord, sued = build_realeTeams_from_ratings()
     write_realeTeams_py(nord, sued)
+def write_realeTeams_web_py(nord: List[Dict[str, Any]], sued: List[Dict[str, Any]]) -> None:
+    """
+    schreibt realeTeams_web.py mit nord_teams / sued_teams im Web-Format:
+    - Team
+    - Players: Name, Offense, Defense, Speed, Chemistry
+    - Momentum: 0
+    """
 
+    def to_web_team(team: Dict[str, Any]) -> Dict[str, Any]:
+        return {
+            "Team": team.get("Team"),
+            "Momentum": 0,
+            "Players": [
+                {
+                    "Name": p.get("Name"),
+                    "Offense": p.get("Offense"),
+                    "Defense": p.get("Defense"),
+                    "Speed": p.get("Speed"),
+                    "Chemistry": p.get("Chemistry"),
+                }
+                for p in team.get("Players", [])
+            ],
+        }
+
+    nord_web = [to_web_team(t) for t in nord]
+    sued_web = [to_web_team(t) for t in sued]
+
+    nord_str = pprint.pformat(nord_web, width=120, sort_dicts=False)
+    sued_str = pprint.pformat(sued_web, width=120, sort_dicts=False)
+
+    content = [
+        "# Diese Datei wurde automatisch aus players_rated.json erzeugt.",
+        "# Web-Format: reduzierte Kader für die Webseite.",
+        "",
+        f"nord_teams = {nord_str}",
+        "",
+        f"sued_teams = {sued_str}",
+        "",
+    ]
+    WEB_OUTPUT_FILE.write_text("\n".join(content), encoding="utf-8")
+    print(f"💾 Datei geschrieben: {WEB_OUTPUT_FILE}")
+    
+def main() -> None:
+    nord, sued = build_realeTeams_from_ratings()
+    write_realeTeams_py(nord, sued)        # vollständige Version
+    write_realeTeams_web_py(nord, sued)    # abgespeckte Web-Version
 
 if __name__ == "__main__":
     main()

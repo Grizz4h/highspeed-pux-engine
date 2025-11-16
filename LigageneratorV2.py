@@ -171,12 +171,12 @@ def _weighted_pick_by_gp(players: List[Dict[str, Any]], count: int, jitter_facto
 
 
 def build_lineup(players: List[Dict[str, Any]],
-                 n_def: int = 8,
+                 n_def: int = 7,
                  n_fwd: int = 12,
                  n_goalies: int = 1) -> List[Dict[str, Any]]:
     """
     Baut ein Lineup pro Spiel:
-      - 8 Defender
+      - 7 Defender
       - 12 Forwards
       - 1 Goalie
     Wenn zu wenig Spieler einer Gruppe vorhanden sind, nehmen wir so viele wie möglich.
@@ -207,13 +207,14 @@ def build_lineup(players: List[Dict[str, Any]],
             seen_ids.add(key)
             unique_lineup.append(p)
     # --- Debug-Check --------------------------------------
-    d_count = sum(1 for p in unique_lineup if p["PositionGroup"] == "D")
-    f_count = sum(1 for p in unique_lineup if p["PositionGroup"] == "F")
-    g_count = sum(1 for p in unique_lineup if p["PositionGroup"] == "G")
+    d_count = sum(1 for p in lineup if p["PositionGroup"] == "D")
+    f_count = sum(1 for p in lineup if p["PositionGroup"] == "F")
+    g_count = sum(1 for p in lineup if p["PositionGroup"] == "G")
 
-    if (d_count != n_def) or (f_count != n_fwd) or (g_count != n_goalies):
-        print(f"[DEBUG][Lineup Warnung] {d_count}D / {f_count}F / {g_count}G "
-              f"(soll: {n_def}D / {n_fwd}F / {n_goalies}G)")
+    if (d_count != 7) or (f_count != 12) or (g_count != 1):
+        print(f"\n[DEBUG][Lineup Warnung] Team: {team_name}")
+        print(f"   → {d_count}D / {f_count}F / {g_count}G  (Soll: 7D / 12F / 1G)")
+
 
         # BONUS: Zeige, welche Positionen fehlen
         if d_count < n_def:
@@ -273,14 +274,7 @@ def prepare_lineups_for_matches(df: pd.DataFrame, matches: List[Tuple[str, str]]
         lineup = build_lineup(players)
         df.at[idx, "Lineup"] = lineup
 
-        # --- Debug-Check pro Team ----------------------------
-        d_count = sum(1 for p in lineup if p["PositionGroup"] == "D")
-        f_count = sum(1 for p in lineup if p["PositionGroup"] == "F")
-        g_count = sum(1 for p in lineup if p["PositionGroup"] == "G")
 
-        if (d_count != 8) or (f_count != 12) or (g_count != 1):
-            print(f"\n[DEBUG][Lineup Warnung] Team: {team_name}")
-            print(f"   → {d_count}D / {f_count}F / {g_count}G  (Soll: 8D / 12F / 1G)")
 
        
 # -----------------------------------------------------
