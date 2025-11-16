@@ -234,12 +234,16 @@ def build_goalie_ratings(players: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         minutes = _to_float(g.get("minutes"))
         min_list.append(minutes)
 
+        # GAA
         gaa = g.get("gaa")
         gaa_val = _to_float(gaa) if gaa is not None else 0.0
         gaa_list.append(gaa_val)
 
-        sv_pct = g.get("sv_pct")
-        sv_pct_val = _to_float(sv_pct) if sv_pct is not None else 0.0
+        # Save% – robust: erst sv_pct, sonst save_pct
+        sv_src = g.get("sv_pct")
+        if sv_src is None:
+            sv_src = g.get("save_pct")
+        sv_pct_val = _to_float(sv_src) if sv_src is not None else 0.0
         svpct_list.append(sv_pct_val)
 
         shots_against = _to_int(g.get("shots_against"))
@@ -266,10 +270,17 @@ def build_goalie_ratings(players: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
 
         gp = _to_int(g.get("gp"))
         minutes = _to_float(g.get("minutes"))
+
+        # GAA
         gaa = g.get("gaa")
         gaa_val = _to_float(gaa) if gaa is not None else 0.0
-        sv_pct = g.get("sv_pct")
-        sv_pct_val = _to_float(sv_pct) if sv_pct is not None else 0.0
+
+        # Save% – wieder robust lesen
+        sv_src = g.get("sv_pct")
+        if sv_src is None:
+            sv_src = g.get("save_pct")
+        sv_pct_val = _to_float(sv_src) if sv_src is not None else 0.0
+
         shots_against = _to_int(g.get("shots_against"))
         wins = _to_int(g.get("wins"))
         shutouts = _to_int(g.get("shutouts"))
@@ -282,17 +293,16 @@ def build_goalie_ratings(players: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         wins_norm = _norm(float(wins), wins_min, wins_max)
         so_norm = _norm(float(shutouts), so_min, so_max)
 
-        # Offense bei Goalies: symbolisch, z. B. Puckhandling, spielt bei dir kaum eine Rolle.
-        # Wir setzen sie schwach aus Workload/Feldspiel ab, aber generell nicht so wichtig.
+        # Offense bei Goalies: symbolisch (Puckhandling / Aktivität)
         offense_score = 0.3 * shots_norm + 0.2 * gp_norm + 0.5 * min_norm
 
-        # Defense: Save% und GAA sind Kern
+        # Defense: Save% + GAA im Fokus
         defense_score = 0.55 * sv_norm + 0.35 * gaa_norm + 0.10 * shots_norm
 
-        # "Speed": Reaktionsfähigkeit / Aktivität → aus Save%, Shots und TOI
+        # "Speed": Reaktion / Aktivität
         speed_score = 0.5 * sv_norm + 0.3 * shots_norm + 0.2 * gp_norm
 
-        # Chemistry: wie sehr vertraut das Team ihm? → Spiele, Minuten, Wins, Shutouts
+        # Chemistry: Vertrauen → Spiele, Minuten, Wins, Shutouts
         chem_score = 0.35 * gp_norm + 0.35 * min_norm + 0.2 * wins_norm + 0.1 * so_norm
 
         overall = 0.15 * offense_score + 0.55 * defense_score + 0.30 * speed_score
@@ -303,9 +313,13 @@ def build_goalie_ratings(players: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         base["rating_chemistry"] = _rating(chem_score)
         base["rating_overall"] = _rating(overall)
 
+        # Wichtig: Fangquote sauber in players_rated.json hinterlegen
+        base["save_pct"] = sv_pct_val
+
         rated.append(base)
 
     return rated
+
 
 
 # ----------------- Main -----------------

@@ -238,6 +238,13 @@ def build_realeTeams_from_ratings() -> Tuple[List[Dict[str, Any]], List[Dict[str
             "Speed": r_spd,
             "Chemistry": r_chem,
             "Overall": r_ovr,
+
+            "Minutes": p.get("minutes"),
+            "GoalsAgainst": p.get("goals_against"),
+            "ShotsAgainst": p.get("shots_against"),
+            "Saves": p.get("saves"),
+            "SavePct": p.get("save_pct"),
+            "GAA": p.get("gaa"),
         }
 
         teams[high_code]["Players"].append(player_obj)

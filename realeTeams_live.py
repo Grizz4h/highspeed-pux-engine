@@ -1,8 +1,7 @@
 # Diese Datei wurde automatisch aus players_rated.json erzeugt.
 # Enthält die aktuellen REALEN Kader als HIGHspeed-Teams (Nord/Süd).
 
-nord_teams = 
-[
+nord_teams = [
   {
     "Team": "Bad Nauheim Devils",
     "Code": "BND",
@@ -18,12 +17,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 64,
         "Defense": 83,
         "Speed": 76,
         "Chemistry": 85,
-        "Overall": 75
+        "Overall": 75,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jorde Hickmotik",
@@ -35,12 +40,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 68,
         "Defense": 87,
         "Speed": 73,
         "Chemistry": 85,
-        "Overall": 75
+        "Overall": 75,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Juliano Lautenschlagov",
@@ -52,12 +63,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 62,
         "Defense": 85,
         "Speed": 71,
         "Chemistry": 85,
-        "Overall": 71
+        "Overall": 71,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Parkera Bowlestto",
@@ -69,12 +86,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 53,
         "Defense": 76,
         "Speed": 70,
         "Chemistry": 79,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Zachi Kaisdunov",
@@ -86,12 +109,18 @@ nord_teams =
         "GamesPlayed": 13,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 55,
         "Defense": 78,
         "Speed": 68,
         "Chemistry": 78,
-        "Overall": 65
+        "Overall": 65,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Andre Biresven",
@@ -103,12 +132,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 54,
         "Defense": 76,
         "Speed": 69,
         "Chemistry": 80,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Davisa Kochik",
@@ -120,12 +155,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 49,
         "Defense": 70,
         "Speed": 68,
         "Chemistry": 77,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Raphaelo Jakovlov",
@@ -137,12 +178,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 52,
         "Defense": 81,
         "Speed": 67,
         "Chemistry": 81,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Taylori Vausan",
@@ -154,12 +201,18 @@ nord_teams =
         "GamesPlayed": 9,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 52,
         "Defense": 84,
         "Speed": 62,
         "Chemistry": 75,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Lukasu Ribarov",
@@ -171,12 +224,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 49,
         "Defense": 83,
         "Speed": 66,
         "Chemistry": 84,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Justinu Volekinov",
@@ -188,12 +247,18 @@ nord_teams =
         "GamesPlayed": 10,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 49,
         "Defense": 85,
         "Speed": 60,
         "Chemistry": 80,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Sebu Bengtsvik",
@@ -205,12 +270,18 @@ nord_teams =
         "GamesPlayed": 6,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 45,
         "Defense": 88,
         "Speed": 57,
         "Chemistry": 74,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Marcu ElSaysen",
@@ -222,12 +293,18 @@ nord_teams =
         "GamesPlayed": 12,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 44,
         "Defense": 89,
         "Speed": 60,
         "Chemistry": 84,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Garreta Prudenvik",
@@ -239,12 +316,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 44,
         "Defense": 79,
         "Speed": 63,
         "Chemistry": 83,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Mariusi Erken",
@@ -256,12 +339,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 44,
         "Defense": 74,
         "Speed": 63,
         "Chemistry": 81,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Phe Kuhneksen",
@@ -273,12 +362,18 @@ nord_teams =
         "GamesPlayed": 7,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 45,
         "Defense": 78,
         "Speed": 54,
         "Chemistry": 69,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Simona Gnypov",
@@ -290,12 +385,18 @@ nord_teams =
         "GamesPlayed": 12,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 44,
         "Defense": 80,
         "Speed": 59,
         "Chemistry": 80,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Christophera Fischven",
@@ -307,29 +408,41 @@ nord_teams =
         "GamesPlayed": 7,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 45,
         "Defense": 75,
         "Speed": 54,
         "Chemistry": 71,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Lui Niehustto",
         "NameReal": "Lua Niehus",
-        "Number": null,
+        "Number": None,
         "Nation": "nan",
         "PositionRaw": "DE (U21)",
         "PositionGroup": "F",
         "GamesPlayed": 3,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 44,
         "Defense": 66,
         "Speed": 50,
         "Chemistry": 61,
-        "Overall": 52
+        "Overall": 52,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Kevine Handschdunov",
@@ -341,12 +454,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 43,
         "Defense": 85,
         "Speed": 61,
         "Chemistry": 84,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Sebu Cimmermven",
@@ -358,12 +477,18 @@ nord_teams =
         "GamesPlayed": 2,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 44,
         "Defense": 79,
         "Speed": 51,
         "Chemistry": 65,
-        "Overall": 56
+        "Overall": 56,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Kevine Bickar",
@@ -375,12 +500,18 @@ nord_teams =
         "GamesPlayed": 2,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 85,
         "Speed": 43,
         "Chemistry": 67,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Tjarka Kölschov",
@@ -392,12 +523,18 @@ nord_teams =
         "GamesPlayed": 2,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 43,
         "Chemistry": 67,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Fabianu Nifosan",
@@ -409,12 +546,18 @@ nord_teams =
         "GamesPlayed": 4,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 82,
         "Speed": 45,
         "Chemistry": 71,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Xavera Tippsen",
@@ -426,12 +569,18 @@ nord_teams =
         "GamesPlayed": 7,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 78,
         "Speed": 49,
         "Chemistry": 72,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Phe Bidoulov",
@@ -443,12 +592,18 @@ nord_teams =
         "GamesPlayed": 11,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 84,
         "Speed": 54,
         "Chemistry": 81,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Geraldo Kuhnnik",
@@ -460,12 +615,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 85,
         "Speed": 60,
         "Chemistry": 84,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Finni Becklek",
@@ -477,12 +638,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 60,
         "Chemistry": 84,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Rike Gaidven",
@@ -494,12 +661,18 @@ nord_teams =
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Fabio Kosvik",
@@ -511,12 +684,18 @@ nord_teams =
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Time Kosvik",
@@ -528,12 +707,18 @@ nord_teams =
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Deano Dögdunov",
@@ -545,12 +730,18 @@ nord_teams =
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Pata Seifervik",
@@ -562,12 +753,18 @@ nord_teams =
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 80,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Geraldo Kuhnnik",
@@ -579,12 +776,18 @@ nord_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 95,
         "Defense": 91,
         "Speed": 96,
         "Chemistry": 89,
-        "Overall": 93
+        "Overall": 93,
+        "Minutes": 807.65,
+        "GoalsAgainst": 32,
+        "ShotsAgainst": 434,
+        "Saves": 402,
+        "SavePct": 92.63,
+        "GAA": 2.38
       },
       {
         "Name": "Finni Becklek",
@@ -596,12 +799,18 @@ nord_teams =
         "GamesPlayed": 3,
         "League": "DEL2",
         "TeamCodeReal": "ECN",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 48,
         "Defense": 74,
         "Speed": 70,
         "Chemistry": 46,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": 91.93333333333334,
+        "GoalsAgainst": 9,
+        "ShotsAgainst": 57,
+        "Saves": 48,
+        "SavePct": 84.21,
+        "GAA": 5.87
       }
     ]
   },
@@ -625,7 +834,13 @@ nord_teams =
         "Defense": 82,
         "Speed": 78,
         "Chemistry": 92,
-        "Overall": 75
+        "Overall": 75,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ale Frieov",
@@ -642,7 +857,13 @@ nord_teams =
         "Defense": 89,
         "Speed": 76,
         "Chemistry": 92,
-        "Overall": 74
+        "Overall": 74,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Andyo Miellek",
@@ -659,7 +880,13 @@ nord_teams =
         "Defense": 82,
         "Speed": 76,
         "Chemistry": 89,
-        "Overall": 71
+        "Overall": 71,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Zigi Jeglicen",
@@ -676,7 +903,13 @@ nord_teams =
         "Defense": 83,
         "Speed": 76,
         "Chemistry": 88,
-        "Overall": 71
+        "Overall": 71,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Christiana Wejsen",
@@ -693,7 +926,13 @@ nord_teams =
         "Defense": 70,
         "Speed": 75,
         "Chemistry": 80,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Miha Verlicinov",
@@ -710,7 +949,13 @@ nord_teams =
         "Defense": 85,
         "Speed": 74,
         "Chemistry": 89,
-        "Overall": 70
+        "Overall": 70,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Nicolasa Krämmov",
@@ -727,7 +972,13 @@ nord_teams =
         "Defense": 96,
         "Speed": 74,
         "Chemistry": 98,
-        "Overall": 74
+        "Overall": 74,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Akite Hirosdunov",
@@ -744,7 +995,13 @@ nord_teams =
         "Defense": 79,
         "Speed": 72,
         "Chemistry": 82,
-        "Overall": 70
+        "Overall": 70,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jano Urbasik",
@@ -761,7 +1018,13 @@ nord_teams =
         "Defense": 86,
         "Speed": 70,
         "Chemistry": 82,
-        "Overall": 71
+        "Overall": 71,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Mati Abttli",
@@ -778,7 +1041,13 @@ nord_teams =
         "Defense": 83,
         "Speed": 73,
         "Chemistry": 89,
-        "Overall": 71
+        "Overall": 71,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ludwu Byströov",
@@ -795,7 +1064,13 @@ nord_teams =
         "Defense": 96,
         "Speed": 72,
         "Chemistry": 97,
-        "Overall": 76
+        "Overall": 76,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Maxe Görtzik",
@@ -812,7 +1087,13 @@ nord_teams =
         "Defense": 92,
         "Speed": 72,
         "Chemistry": 94,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Rossa Mauerven",
@@ -829,7 +1110,13 @@ nord_teams =
         "Defense": 82,
         "Speed": 70,
         "Chemistry": 89,
-        "Overall": 68
+        "Overall": 68,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Nicholasu Jenvik",
@@ -846,7 +1133,13 @@ nord_teams =
         "Defense": 76,
         "Speed": 70,
         "Chemistry": 84,
-        "Overall": 65
+        "Overall": 65,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Phe Bruggissik",
@@ -863,7 +1156,13 @@ nord_teams =
         "Defense": 70,
         "Speed": 64,
         "Chemistry": 72,
-        "Overall": 62
+        "Overall": 62,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Vlo Emingik",
@@ -880,7 +1179,13 @@ nord_teams =
         "Defense": 84,
         "Speed": 66,
         "Chemistry": 86,
-        "Overall": 68
+        "Overall": 68,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Coltu Conradtli",
@@ -897,7 +1202,13 @@ nord_teams =
         "Defense": 88,
         "Speed": 63,
         "Chemistry": 74,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Nine Kindik",
@@ -914,7 +1225,13 @@ nord_teams =
         "Defense": 83,
         "Speed": 68,
         "Chemistry": 86,
-        "Overall": 62
+        "Overall": 62,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Justinu Büsingsen",
@@ -931,7 +1248,13 @@ nord_teams =
         "Defense": 84,
         "Speed": 61,
         "Chemistry": 80,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Rayanu Bettahsen",
@@ -948,7 +1271,13 @@ nord_teams =
         "Defense": 88,
         "Speed": 51,
         "Chemistry": 77,
-        "Overall": 65
+        "Overall": 65,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Fabianu Herrinov",
@@ -965,7 +1294,13 @@ nord_teams =
         "Defense": 77,
         "Speed": 60,
         "Chemistry": 78,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Maxima Rauschov",
@@ -982,7 +1317,13 @@ nord_teams =
         "Defense": 83,
         "Speed": 65,
         "Chemistry": 90,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Kristersi Gudlevskar",
@@ -999,7 +1340,13 @@ nord_teams =
         "Defense": 87,
         "Speed": 81,
         "Chemistry": 63,
-        "Overall": 83
+        "Overall": 83,
+        "Minutes": 424.6666666666667,
+        "GoalsAgainst": 17,
+        "ShotsAgainst": 216,
+        "Saves": 199,
+        "SavePct": 92.13,
+        "GAA": 2.4
       },
       {
         "Name": "Leona Hungereckdunov",
@@ -1016,7 +1363,13 @@ nord_teams =
         "Defense": 85,
         "Speed": 84,
         "Chemistry": 71,
-        "Overall": 83
+        "Overall": 83,
+        "Minutes": 542.1,
+        "GoalsAgainst": 29,
+        "ShotsAgainst": 254,
+        "Saves": 225,
+        "SavePct": 88.58,
+        "GAA": 3.21
       },
       {
         "Name": "Jule Hudacinov",
@@ -1033,7 +1386,13 @@ nord_teams =
         "Defense": 85,
         "Speed": 88,
         "Chemistry": 73,
-        "Overall": 86
+        "Overall": 86,
+        "Minutes": 627.8166666666667,
+        "GoalsAgainst": 39,
+        "ShotsAgainst": 337,
+        "Saves": 298,
+        "SavePct": 88.43,
+        "GAA": 3.73
       }
     ]
   },
@@ -1052,12 +1411,18 @@ nord_teams =
         "GamesPlayed": 16,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 75,
         "Defense": 86,
         "Speed": 81,
         "Chemistry": 88,
-        "Overall": 80
+        "Overall": 80,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Yushirohe Hiranik",
@@ -1069,12 +1434,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 74,
         "Defense": 83,
         "Speed": 79,
         "Chemistry": 84,
-        "Overall": 78
+        "Overall": 78,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Turo Lindenvik",
@@ -1086,12 +1457,18 @@ nord_teams =
         "GamesPlayed": 16,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 69,
         "Defense": 84,
         "Speed": 78,
         "Chemistry": 85,
-        "Overall": 75
+        "Overall": 75,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Maximiliana Fabar",
@@ -1103,12 +1480,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 57,
         "Defense": 70,
         "Speed": 74,
         "Chemistry": 78,
-        "Overall": 66
+        "Overall": 66,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Michaelo Clarkov",
@@ -1120,12 +1503,18 @@ nord_teams =
         "GamesPlayed": 16,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 50,
         "Defense": 80,
         "Speed": 70,
         "Chemistry": 83,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Kevine Orendorsen",
@@ -1137,12 +1526,18 @@ nord_teams =
         "GamesPlayed": 16,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 53,
         "Defense": 87,
         "Speed": 69,
         "Chemistry": 88,
-        "Overall": 67
+        "Overall": 67,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Lucase Lessiin",
@@ -1154,12 +1549,18 @@ nord_teams =
         "GamesPlayed": 13,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 54,
         "Defense": 69,
         "Speed": 65,
         "Chemistry": 72,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Leona Niederen",
@@ -1171,12 +1572,18 @@ nord_teams =
         "GamesPlayed": 10,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 53,
         "Defense": 83,
         "Speed": 64,
         "Chemistry": 77,
-        "Overall": 65
+        "Overall": 65,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Maxe Balinov",
@@ -1188,12 +1595,18 @@ nord_teams =
         "GamesPlayed": 12,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 53,
         "Defense": 88,
         "Speed": 65,
         "Chemistry": 84,
-        "Overall": 71
+        "Overall": 71,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Simona Thien",
@@ -1205,12 +1618,18 @@ nord_teams =
         "GamesPlayed": 16,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 49,
         "Defense": 85,
         "Speed": 67,
         "Chemistry": 86,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Kevine Magintli",
@@ -1222,12 +1641,18 @@ nord_teams =
         "GamesPlayed": 16,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 46,
         "Defense": 78,
         "Speed": 67,
         "Chemistry": 84,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Emilo Quaasov",
@@ -1239,12 +1664,18 @@ nord_teams =
         "GamesPlayed": 16,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 46,
         "Defense": 80,
         "Speed": 65,
         "Chemistry": 85,
-        "Overall": 65
+        "Overall": 65,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Lennya Boosin",
@@ -1256,12 +1687,18 @@ nord_teams =
         "GamesPlayed": 16,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 46,
         "Defense": 86,
         "Speed": 65,
         "Chemistry": 86,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Moritzi Kukukin",
@@ -1273,12 +1710,18 @@ nord_teams =
         "GamesPlayed": 16,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 43,
         "Defense": 84,
         "Speed": 64,
         "Chemistry": 86,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Kevine Norénnik",
@@ -1290,12 +1733,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 46,
         "Defense": 82,
         "Speed": 62,
         "Chemistry": 84,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Luce Tostar",
@@ -1307,12 +1756,18 @@ nord_teams =
         "GamesPlayed": 1,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 55,
         "Defense": 88,
         "Speed": 77,
         "Chemistry": 68,
-        "Overall": 70
+        "Overall": 70,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Eriki Browntto",
@@ -1324,12 +1779,18 @@ nord_teams =
         "GamesPlayed": 4,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 44,
         "Defense": 74,
         "Speed": 54,
         "Chemistry": 66,
-        "Overall": 56
+        "Overall": 56,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Nicolasa Geitnar",
@@ -1341,12 +1802,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 42,
         "Defense": 79,
         "Speed": 62,
         "Chemistry": 84,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Kristianu Blumenschro",
@@ -1358,12 +1825,18 @@ nord_teams =
         "GamesPlayed": 2,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 49,
         "Defense": 77,
         "Speed": 51,
         "Chemistry": 65,
-        "Overall": 62
+        "Overall": 62,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Kevine Niedenar",
@@ -1375,29 +1848,41 @@ nord_teams =
         "GamesPlayed": 2,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 43,
         "Chemistry": 67,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Sinani Akdaglek",
         "NameReal": "Sinan Akdag",
-        "Number": null,
+        "Number": None,
         "Nation": "nan",
         "PositionRaw": "DE",
         "PositionGroup": "D",
         "GamesPlayed": 3,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 73,
         "Speed": 44,
         "Chemistry": 64,
-        "Overall": 56
+        "Overall": 56,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Seano Kuklokro",
@@ -1409,12 +1894,18 @@ nord_teams =
         "GamesPlayed": 3,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 44,
         "Chemistry": 69,
-        "Overall": 55
+        "Overall": 55,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Leona Hümar",
@@ -1426,29 +1917,41 @@ nord_teams =
         "GamesPlayed": 5,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 47,
         "Chemistry": 71,
-        "Overall": 55
+        "Overall": 55,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Reede Starkar",
         "NameReal": "Reed Stark",
-        "Number": null,
+        "Number": None,
         "Nation": "nan",
         "PositionRaw": "FO",
         "PositionGroup": "F",
         "GamesPlayed": 5,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 47,
         "Chemistry": 71,
-        "Overall": 55
+        "Overall": 55,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Marca Münzenik",
@@ -1460,12 +1963,18 @@ nord_teams =
         "GamesPlayed": 7,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 82,
         "Speed": 49,
         "Chemistry": 72,
-        "Overall": 55
+        "Overall": 55,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ryani Bednarov",
@@ -1477,12 +1986,18 @@ nord_teams =
         "GamesPlayed": 9,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 84,
         "Speed": 52,
         "Chemistry": 76,
-        "Overall": 56
+        "Overall": 56,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Daniele Assavolyov",
@@ -1494,12 +2009,18 @@ nord_teams =
         "GamesPlayed": 11,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 85,
         "Speed": 54,
         "Chemistry": 78,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Nikla Lunear",
@@ -1511,12 +2032,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 60,
         "Chemistry": 84,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Joele Hofik",
@@ -1528,29 +2055,41 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 85,
         "Speed": 60,
         "Chemistry": 84,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ryani Olvik",
         "NameReal": "Ryan Olsen",
-        "Number": null,
+        "Number": None,
         "Nation": "nan",
         "PositionRaw": "FO",
         "PositionGroup": "F",
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Nikla Lunear",
@@ -1562,12 +2101,18 @@ nord_teams =
         "GamesPlayed": 9,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 75,
         "Defense": 86,
         "Speed": 84,
         "Chemistry": 69,
-        "Overall": 84
+        "Overall": 84,
+        "Minutes": 517.3,
+        "GoalsAgainst": 27,
+        "ShotsAgainst": 267,
+        "Saves": 240,
+        "SavePct": 89.89,
+        "GAA": 3.13
       },
       {
         "Name": "Ryani Bednarov",
@@ -1579,12 +2124,18 @@ nord_teams =
         "GamesPlayed": 7,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 69,
         "Defense": 86,
         "Speed": 82,
         "Chemistry": 65,
-        "Overall": 82
+        "Overall": 82,
+        "Minutes": 427.6666666666667,
+        "GoalsAgainst": 20,
+        "ShotsAgainst": 230,
+        "Saves": 210,
+        "SavePct": 91.3,
+        "GAA": 2.81
       },
       {
         "Name": "Leona Hümar",
@@ -1596,12 +2147,18 @@ nord_teams =
         "GamesPlayed": 1,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 43,
         "Defense": 81,
         "Speed": 68,
         "Chemistry": 42,
-        "Overall": 71
+        "Overall": 71,
+        "Minutes": 33.95,
+        "GoalsAgainst": 2,
+        "ShotsAgainst": 17,
+        "Saves": 15,
+        "SavePct": 88.24,
+        "GAA": 3.53
       },
       {
         "Name": "Seano Kuklokro",
@@ -1613,12 +2170,18 @@ nord_teams =
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "DEG",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 61,
         "Speed": 40,
         "Chemistry": 40,
-        "Overall": 51
+        "Overall": 51,
+        "Minutes": 0.0,
+        "GoalsAgainst": 0,
+        "ShotsAgainst": 0,
+        "Saves": 0,
+        "SavePct": 0.0,
+        "GAA": 0.0
       }
     ]
   },
@@ -1642,7 +2205,13 @@ nord_teams =
         "Defense": 76,
         "Speed": 76,
         "Chemistry": 82,
-        "Overall": 68
+        "Overall": 68,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Camerone Bracar",
@@ -1659,7 +2228,13 @@ nord_teams =
         "Defense": 81,
         "Speed": 75,
         "Chemistry": 86,
-        "Overall": 72
+        "Overall": 72,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Tyi Glovtto",
@@ -1676,7 +2251,13 @@ nord_teams =
         "Defense": 72,
         "Speed": 72,
         "Chemistry": 77,
-        "Overall": 65
+        "Overall": 65,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Mati Wedmanovik",
@@ -1693,7 +2274,13 @@ nord_teams =
         "Defense": 54,
         "Speed": 71,
         "Chemistry": 71,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Makso Matushkov",
@@ -1710,7 +2297,13 @@ nord_teams =
         "Defense": 61,
         "Speed": 67,
         "Chemistry": 68,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Michaelo Joyauxtto",
@@ -1727,7 +2320,13 @@ nord_teams =
         "Defense": 61,
         "Speed": 70,
         "Chemistry": 77,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Dennise Lobachro",
@@ -1744,7 +2343,13 @@ nord_teams =
         "Defense": 60,
         "Speed": 69,
         "Chemistry": 75,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Daniele Pfaffengen",
@@ -1761,7 +2366,13 @@ nord_teams =
         "Defense": 76,
         "Speed": 70,
         "Chemistry": 81,
-        "Overall": 62
+        "Overall": 62,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ryani McKierntto",
@@ -1778,7 +2389,13 @@ nord_teams =
         "Defense": 68,
         "Speed": 70,
         "Chemistry": 81,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Christophera Wilkiinov",
@@ -1795,7 +2412,13 @@ nord_teams =
         "Defense": 52,
         "Speed": 67,
         "Chemistry": 67,
-        "Overall": 55
+        "Overall": 55,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Time Kosvik",
@@ -1812,7 +2435,13 @@ nord_teams =
         "Defense": 76,
         "Speed": 64,
         "Chemistry": 80,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jakobu Liljlek",
@@ -1829,7 +2458,13 @@ nord_teams =
         "Defense": 83,
         "Speed": 57,
         "Chemistry": 72,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Nathi Burnsvik",
@@ -1846,7 +2481,13 @@ nord_teams =
         "Defense": 82,
         "Speed": 59,
         "Chemistry": 76,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Fabio Kosvik",
@@ -1863,7 +2504,13 @@ nord_teams =
         "Defense": 81,
         "Speed": 65,
         "Chemistry": 87,
-        "Overall": 65
+        "Overall": 65,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Tommye Pasanen",
@@ -1880,7 +2527,13 @@ nord_teams =
         "Defense": 72,
         "Speed": 65,
         "Chemistry": 82,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Markusu Schweigdunov",
@@ -1897,7 +2550,13 @@ nord_teams =
         "Defense": 75,
         "Speed": 66,
         "Chemistry": 80,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Cartere Proftin",
@@ -1914,7 +2573,13 @@ nord_teams =
         "Defense": 80,
         "Speed": 54,
         "Chemistry": 72,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Cartere Rowneyovik",
@@ -1931,7 +2596,13 @@ nord_teams =
         "Defense": 86,
         "Speed": 61,
         "Chemistry": 85,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Reida McNeilov",
@@ -1948,7 +2619,13 @@ nord_teams =
         "Defense": 60,
         "Speed": 64,
         "Chemistry": 74,
-        "Overall": 55
+        "Overall": 55,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Daniele Wirtvik",
@@ -1965,7 +2642,13 @@ nord_teams =
         "Defense": 73,
         "Speed": 54,
         "Chemistry": 72,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Kevine Bickar",
@@ -1982,7 +2665,13 @@ nord_teams =
         "Defense": 84,
         "Speed": 54,
         "Chemistry": 76,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Noahi Dunhamro",
@@ -1999,7 +2688,13 @@ nord_teams =
         "Defense": 77,
         "Speed": 65,
         "Chemistry": 82,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Sebu Cimmermven",
@@ -2016,7 +2711,13 @@ nord_teams =
         "Defense": 86,
         "Speed": 41,
         "Chemistry": 66,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Phe Bidoulov",
@@ -2033,7 +2734,13 @@ nord_teams =
         "Defense": 80,
         "Speed": 44,
         "Chemistry": 69,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Codye Brennov",
@@ -2050,7 +2757,13 @@ nord_teams =
         "Defense": 85,
         "Speed": 86,
         "Chemistry": 67,
-        "Overall": 84
+        "Overall": 84,
+        "Minutes": 489.8666666666667,
+        "GoalsAgainst": 29,
+        "ShotsAgainst": 284,
+        "Saves": 255,
+        "SavePct": 89.79,
+        "GAA": 3.55
       },
       {
         "Name": "Mirke Pantkowsov",
@@ -2067,7 +2780,13 @@ nord_teams =
         "Defense": 83,
         "Speed": 88,
         "Chemistry": 73,
-        "Overall": 84
+        "Overall": 84,
+        "Minutes": 586.6333333333333,
+        "GoalsAgainst": 41,
+        "ShotsAgainst": 323,
+        "Saves": 282,
+        "SavePct": 87.31,
+        "GAA": 4.19
       },
       {
         "Name": "Rodione Schumachdunov",
@@ -2084,7 +2803,13 @@ nord_teams =
         "Defense": 70,
         "Speed": 61,
         "Chemistry": 42,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": 12.583333333333334,
+        "GoalsAgainst": 1,
+        "ShotsAgainst": 3,
+        "Saves": 2,
+        "SavePct": 66.67,
+        "GAA": 4.77
       }
     ]
   },
@@ -2108,7 +2833,13 @@ nord_teams =
         "Defense": 82,
         "Speed": 82,
         "Chemistry": 87,
-        "Overall": 79
+        "Overall": 79,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Colino Ugbekilov",
@@ -2125,7 +2856,13 @@ nord_teams =
         "Defense": 80,
         "Speed": 79,
         "Chemistry": 88,
-        "Overall": 73
+        "Overall": 73,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ericu Cornvik",
@@ -2142,7 +2879,13 @@ nord_teams =
         "Defense": 85,
         "Speed": 77,
         "Chemistry": 88,
-        "Overall": 73
+        "Overall": 73,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Juliano Napravndunov",
@@ -2159,7 +2902,13 @@ nord_teams =
         "Defense": 77,
         "Speed": 75,
         "Chemistry": 82,
-        "Overall": 71
+        "Overall": 71,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Christiana Thomastto",
@@ -2176,7 +2925,13 @@ nord_teams =
         "Defense": 74,
         "Speed": 75,
         "Chemistry": 79,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Kyli Woodik",
@@ -2193,7 +2948,13 @@ nord_teams =
         "Defense": 78,
         "Speed": 68,
         "Chemistry": 83,
-        "Overall": 66
+        "Overall": 66,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Tylera Bolandlek",
@@ -2210,7 +2971,13 @@ nord_teams =
         "Defense": 79,
         "Speed": 70,
         "Chemistry": 84,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Henrike Törnqvven",
@@ -2227,7 +2994,13 @@ nord_teams =
         "Defense": 79,
         "Speed": 65,
         "Chemistry": 83,
-        "Overall": 62
+        "Overall": 62,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Taro Jentzscven",
@@ -2244,7 +3017,13 @@ nord_teams =
         "Defense": 86,
         "Speed": 59,
         "Chemistry": 80,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Eiriki Salsten",
@@ -2261,7 +3040,13 @@ nord_teams =
         "Defense": 72,
         "Speed": 67,
         "Chemistry": 78,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Matiasu Lasen",
@@ -2278,7 +3063,13 @@ nord_teams =
         "Defense": 73,
         "Speed": 61,
         "Chemistry": 78,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Coltona Jobksen",
@@ -2295,7 +3086,13 @@ nord_teams =
         "Defense": 78,
         "Speed": 58,
         "Chemistry": 78,
-        "Overall": 62
+        "Overall": 62,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Johe Husstli",
@@ -2312,7 +3109,13 @@ nord_teams =
         "Defense": 65,
         "Speed": 64,
         "Chemistry": 78,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Robino Norelltto",
@@ -2329,7 +3132,13 @@ nord_teams =
         "Defense": 60,
         "Speed": 66,
         "Chemistry": 76,
-        "Overall": 55
+        "Overall": 55,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Anthonyu Camarven",
@@ -2346,7 +3155,13 @@ nord_teams =
         "Defense": 86,
         "Speed": 59,
         "Chemistry": 66,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Macoyi Erkampin",
@@ -2363,7 +3178,13 @@ nord_teams =
         "Defense": 72,
         "Speed": 65,
         "Chemistry": 83,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Lenu Nielectli",
@@ -2380,7 +3201,13 @@ nord_teams =
         "Defense": 85,
         "Speed": 43,
         "Chemistry": 67,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Bencu Farkastto",
@@ -2397,7 +3224,13 @@ nord_teams =
         "Defense": 85,
         "Speed": 47,
         "Chemistry": 71,
-        "Overall": 55
+        "Overall": 55,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Goro Radionik",
@@ -2414,7 +3247,13 @@ nord_teams =
         "Defense": 78,
         "Speed": 47,
         "Chemistry": 70,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Nilso Eltenovik",
@@ -2431,7 +3270,13 @@ nord_teams =
         "Defense": 82,
         "Speed": 49,
         "Chemistry": 75,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Mano Alinov",
@@ -2448,7 +3293,13 @@ nord_teams =
         "Defense": 85,
         "Speed": 50,
         "Chemistry": 75,
-        "Overall": 56
+        "Overall": 56,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Noela Saffrro",
@@ -2465,7 +3316,13 @@ nord_teams =
         "Defense": 83,
         "Speed": 54,
         "Chemistry": 77,
-        "Overall": 56
+        "Overall": 56,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jakuba Borzeckro",
@@ -2482,7 +3339,13 @@ nord_teams =
         "Defense": 80,
         "Speed": 57,
         "Chemistry": 77,
-        "Overall": 56
+        "Overall": 56,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Lui Niehustto",
@@ -2499,7 +3362,13 @@ nord_teams =
         "Defense": 73,
         "Speed": 58,
         "Chemistry": 79,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Daniele Geigtto",
@@ -2516,7 +3385,13 @@ nord_teams =
         "Defense": 80,
         "Speed": 60,
         "Chemistry": 81,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Daniele Neuven",
@@ -2533,7 +3408,13 @@ nord_teams =
         "Defense": 78,
         "Speed": 64,
         "Chemistry": 82,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Hendrike Hantto",
@@ -2550,7 +3431,13 @@ nord_teams =
         "Defense": 87,
         "Speed": 81,
         "Chemistry": 59,
-        "Overall": 82
+        "Overall": 82,
+        "Minutes": 418.3,
+        "GoalsAgainst": 18,
+        "ShotsAgainst": 214,
+        "Saves": 196,
+        "SavePct": 91.59,
+        "GAA": 2.58
       },
       {
         "Name": "Andi Jenikdunov",
@@ -2567,7 +3454,13 @@ nord_teams =
         "Defense": 86,
         "Speed": 88,
         "Chemistry": 74,
-        "Overall": 86
+        "Overall": 86,
+        "Minutes": 669.3166666666667,
+        "GoalsAgainst": 36,
+        "ShotsAgainst": 328,
+        "Saves": 292,
+        "SavePct": 89.02,
+        "GAA": 3.23
       }
     ]
   },
@@ -2591,7 +3484,13 @@ nord_teams =
         "Defense": 94,
         "Speed": 88,
         "Chemistry": 94,
-        "Overall": 88
+        "Overall": 88,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Pata Russelnik",
@@ -2608,7 +3507,13 @@ nord_teams =
         "Defense": 90,
         "Speed": 86,
         "Chemistry": 93,
-        "Overall": 84
+        "Overall": 84,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Natu Schnarven",
@@ -2625,7 +3530,13 @@ nord_teams =
         "Defense": 73,
         "Speed": 80,
         "Chemistry": 79,
-        "Overall": 73
+        "Overall": 73,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Valttera Kemiläinlek",
@@ -2642,7 +3553,13 @@ nord_teams =
         "Defense": 84,
         "Speed": 77,
         "Chemistry": 90,
-        "Overall": 76
+        "Overall": 76,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "LouisMarca Aubryik",
@@ -2659,7 +3576,13 @@ nord_teams =
         "Defense": 79,
         "Speed": 75,
         "Chemistry": 83,
-        "Overall": 68
+        "Overall": 68,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Oliwo Kasktli",
@@ -2676,7 +3599,13 @@ nord_teams =
         "Defense": 73,
         "Speed": 74,
         "Chemistry": 84,
-        "Overall": 68
+        "Overall": 68,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Dominiki Bokksen",
@@ -2693,7 +3622,13 @@ nord_teams =
         "Defense": 82,
         "Speed": 74,
         "Chemistry": 86,
-        "Overall": 68
+        "Overall": 68,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Tanno Kerven",
@@ -2710,7 +3645,13 @@ nord_teams =
         "Defense": 81,
         "Speed": 70,
         "Chemistry": 82,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ryani MacInndunov",
@@ -2727,7 +3668,13 @@ nord_teams =
         "Defense": 80,
         "Speed": 70,
         "Chemistry": 85,
-        "Overall": 66
+        "Overall": 66,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "VeliMatta Vittasmäovik",
@@ -2744,7 +3691,13 @@ nord_teams =
         "Defense": 94,
         "Speed": 70,
         "Chemistry": 96,
-        "Overall": 74
+        "Overall": 74,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Maximiliana Kammerven",
@@ -2761,7 +3714,13 @@ nord_teams =
         "Defense": 85,
         "Speed": 70,
         "Chemistry": 88,
-        "Overall": 66
+        "Overall": 66,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Parkera Tuomiov",
@@ -2778,7 +3737,13 @@ nord_teams =
         "Defense": 81,
         "Speed": 64,
         "Chemistry": 75,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Juhanu Tyrväinsen",
@@ -2795,7 +3760,13 @@ nord_teams =
         "Defense": 78,
         "Speed": 69,
         "Chemistry": 85,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Bradya Austinov",
@@ -2812,7 +3783,13 @@ nord_teams =
         "Defense": 74,
         "Speed": 68,
         "Chemistry": 85,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Dominiki Uhen",
@@ -2829,7 +3806,13 @@ nord_teams =
         "Defense": 86,
         "Speed": 59,
         "Chemistry": 80,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Fri Storminov",
@@ -2846,7 +3829,13 @@ nord_teams =
         "Defense": 79,
         "Speed": 60,
         "Chemistry": 77,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Moritzi Müllar",
@@ -2863,7 +3852,13 @@ nord_teams =
         "Defense": 66,
         "Speed": 66,
         "Chemistry": 80,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Robino Calstar",
@@ -2880,7 +3875,13 @@ nord_teams =
         "Defense": 88,
         "Speed": 54,
         "Chemistry": 78,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Kevine Niedenar",
@@ -2897,7 +3898,13 @@ nord_teams =
         "Defense": 82,
         "Speed": 56,
         "Chemistry": 76,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Maximiliana Glötzlsen",
@@ -2914,7 +3921,13 @@ nord_teams =
         "Defense": 74,
         "Speed": 62,
         "Chemistry": 82,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Maxe Ziergiebar",
@@ -2931,7 +3944,13 @@ nord_teams =
         "Defense": 86,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Luce Münzenik",
@@ -2948,7 +3967,13 @@ nord_teams =
         "Defense": 80,
         "Speed": 44,
         "Chemistry": 69,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Marca Münzenik",
@@ -2965,7 +3990,13 @@ nord_teams =
         "Defense": 83,
         "Speed": 52,
         "Chemistry": 74,
-        "Overall": 56
+        "Overall": 56,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Steni Fischven",
@@ -2982,7 +4013,13 @@ nord_teams =
         "Defense": 77,
         "Speed": 56,
         "Chemistry": 78,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jannu Juvonven",
@@ -2999,7 +4036,13 @@ nord_teams =
         "Defense": 89,
         "Speed": 76,
         "Chemistry": 56,
-        "Overall": 80
+        "Overall": 80,
+        "Minutes": 237.88333333333333,
+        "GoalsAgainst": 6,
+        "ShotsAgainst": 112,
+        "Saves": 106,
+        "SavePct": 94.64,
+        "GAA": 1.51
       },
       {
         "Name": "Felixe Brücklek",
@@ -3016,7 +4059,13 @@ nord_teams =
         "Defense": 87,
         "Speed": 80,
         "Chemistry": 65,
-        "Overall": 82
+        "Overall": 82,
+        "Minutes": 402.6,
+        "GoalsAgainst": 14,
+        "ShotsAgainst": 167,
+        "Saves": 153,
+        "SavePct": 91.62,
+        "GAA": 2.09
       },
       {
         "Name": "Toba Ancickvik",
@@ -3033,7 +4082,13 @@ nord_teams =
         "Defense": 81,
         "Speed": 79,
         "Chemistry": 63,
-        "Overall": 78
+        "Overall": 78,
+        "Minutes": 395.68333333333334,
+        "GoalsAgainst": 27,
+        "ShotsAgainst": 183,
+        "Saves": 156,
+        "SavePct": 85.25,
+        "GAA": 4.09
       },
       {
         "Name": "Aaronu Kaisdunov",
@@ -3050,7 +4105,13 @@ nord_teams =
         "Defense": 65,
         "Speed": 64,
         "Chemistry": 42,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": 29.133333333333333,
+        "GoalsAgainst": 4,
+        "ShotsAgainst": 16,
+        "Saves": 12,
+        "SavePct": 75.0,
+        "GAA": 8.24
       }
     ]
   },
@@ -3069,12 +4130,18 @@ nord_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 69,
         "Defense": 89,
         "Speed": 80,
         "Chemistry": 88,
-        "Overall": 80
+        "Overall": 80,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jonathane Matsumik",
@@ -3086,12 +4153,18 @@ nord_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 64,
         "Defense": 89,
         "Speed": 80,
         "Chemistry": 88,
-        "Overall": 76
+        "Overall": 76,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Maxe Newtonik",
@@ -3103,12 +4176,18 @@ nord_teams =
         "GamesPlayed": 12,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 66,
         "Defense": 84,
         "Speed": 76,
         "Chemistry": 81,
-        "Overall": 74
+        "Overall": 74,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Marcu Müllar",
@@ -3120,12 +4199,18 @@ nord_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 63,
         "Defense": 79,
         "Speed": 76,
         "Chemistry": 80,
-        "Overall": 71
+        "Overall": 71,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Daniele Bruchtto",
@@ -3137,12 +4222,18 @@ nord_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 64,
         "Defense": 78,
         "Speed": 75,
         "Chemistry": 83,
-        "Overall": 71
+        "Overall": 71,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Mathe Santoslek",
@@ -3154,12 +4245,18 @@ nord_teams =
         "GamesPlayed": 11,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 68,
         "Defense": 61,
         "Speed": 72,
         "Chemistry": 71,
-        "Overall": 67
+        "Overall": 67,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Philu Gogullik",
@@ -3171,12 +4268,18 @@ nord_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 58,
         "Defense": 84,
         "Speed": 72,
         "Chemistry": 83,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Marki Zengerlov",
@@ -3188,12 +4291,18 @@ nord_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 56,
         "Defense": 87,
         "Speed": 72,
         "Chemistry": 85,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ale Weissin",
@@ -3205,12 +4314,18 @@ nord_teams =
         "GamesPlayed": 12,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 63,
         "Defense": 90,
         "Speed": 70,
         "Chemistry": 86,
-        "Overall": 73
+        "Overall": 73,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Adamo Payerlven",
@@ -3222,12 +4337,18 @@ nord_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 65,
         "Defense": 79,
         "Speed": 70,
         "Chemistry": 80,
-        "Overall": 70
+        "Overall": 70,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Zacka Dybowskovik",
@@ -3239,12 +4360,18 @@ nord_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 50,
         "Defense": 88,
         "Speed": 67,
         "Chemistry": 88,
-        "Overall": 71
+        "Overall": 71,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Tima Schützan",
@@ -3256,12 +4383,18 @@ nord_teams =
         "GamesPlayed": 12,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 50,
         "Defense": 83,
         "Speed": 63,
         "Chemistry": 80,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Stevene Raabik",
@@ -3273,12 +4406,18 @@ nord_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 46,
         "Defense": 85,
         "Speed": 65,
         "Chemistry": 86,
-        "Overall": 68
+        "Overall": 68,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Davida Cernyinov",
@@ -3290,12 +4429,18 @@ nord_teams =
         "GamesPlayed": 10,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 49,
         "Defense": 80,
         "Speed": 58,
         "Chemistry": 74,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Maximiliana Hopsen",
@@ -3307,12 +4452,18 @@ nord_teams =
         "GamesPlayed": 9,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 44,
         "Defense": 87,
         "Speed": 58,
         "Chemistry": 78,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Micka Köhltli",
@@ -3324,12 +4475,18 @@ nord_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 44,
         "Defense": 86,
         "Speed": 62,
         "Chemistry": 86,
-        "Overall": 67
+        "Overall": 67,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Roopu Mäkitalik",
@@ -3341,12 +4498,18 @@ nord_teams =
         "GamesPlayed": 7,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 43,
         "Defense": 82,
         "Speed": 54,
         "Chemistry": 71,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Carlo Konztli",
@@ -3358,12 +4521,18 @@ nord_teams =
         "GamesPlayed": 13,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 43,
         "Defense": 82,
         "Speed": 58,
         "Chemistry": 83,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Nicli Focksvik",
@@ -3375,12 +4544,18 @@ nord_teams =
         "GamesPlayed": 5,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 42,
         "Defense": 83,
         "Speed": 50,
         "Chemistry": 70,
-        "Overall": 56
+        "Overall": 56,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Felixe Bickar",
@@ -3392,12 +4567,18 @@ nord_teams =
         "GamesPlayed": 12,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 41,
         "Defense": 86,
         "Speed": 57,
         "Chemistry": 80,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Leonharda Koruslek",
@@ -3409,12 +4590,18 @@ nord_teams =
         "GamesPlayed": 4,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 74,
         "Speed": 45,
         "Chemistry": 66,
-        "Overall": 56
+        "Overall": 56,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Oliveri Mebusov",
@@ -3426,12 +4613,18 @@ nord_teams =
         "GamesPlayed": 6,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 77,
         "Speed": 48,
         "Chemistry": 70,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jule Schultov",
@@ -3443,12 +4636,18 @@ nord_teams =
         "GamesPlayed": 7,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 49,
         "Chemistry": 74,
-        "Overall": 56
+        "Overall": 56,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ola Blumenkan",
@@ -3460,12 +4659,18 @@ nord_teams =
         "GamesPlayed": 9,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 52,
         "Chemistry": 77,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Eriki Buschik",
@@ -3477,12 +4682,18 @@ nord_teams =
         "GamesPlayed": 10,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 83,
         "Speed": 53,
         "Chemistry": 80,
-        "Overall": 62
+        "Overall": 62,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jano Nijenhven",
@@ -3494,12 +4705,18 @@ nord_teams =
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Felixe Bickar",
@@ -3511,12 +4728,18 @@ nord_teams =
         "GamesPlayed": 11,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 81,
         "Defense": 86,
         "Speed": 85,
         "Chemistry": 77,
-        "Overall": 85
+        "Overall": 85,
+        "Minutes": 667.1,
+        "GoalsAgainst": 30,
+        "ShotsAgainst": 256,
+        "Saves": 226,
+        "SavePct": 88.28,
+        "GAA": 2.7
       },
       {
         "Name": "Jule Schultov",
@@ -3528,12 +4751,18 @@ nord_teams =
         "GamesPlayed": 3,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 49,
         "Defense": 88,
         "Speed": 72,
         "Chemistry": 49,
-        "Overall": 78
+        "Overall": 78,
+        "Minutes": 123.28333333333333,
+        "GoalsAgainst": 3,
+        "ShotsAgainst": 52,
+        "Saves": 49,
+        "SavePct": 94.23,
+        "GAA": 1.46
       },
       {
         "Name": "Ola Blumenkan",
@@ -3545,12 +4774,18 @@ nord_teams =
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "KEV",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 61,
         "Speed": 40,
         "Chemistry": 40,
-        "Overall": 51
+        "Overall": 51,
+        "Minutes": 0.0,
+        "GoalsAgainst": 0,
+        "ShotsAgainst": 0,
+        "Saves": 0,
+        "SavePct": 0.0,
+        "GAA": 0.0
       }
     ]
   },
@@ -3569,12 +4804,18 @@ nord_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 71,
         "Defense": 84,
         "Speed": 77,
         "Chemistry": 83,
-        "Overall": 77
+        "Overall": 77,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Hunti Garlenar",
@@ -3586,12 +4827,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 66,
         "Defense": 82,
         "Speed": 76,
         "Chemistry": 82,
-        "Overall": 73
+        "Overall": 73,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Tylera Benik",
@@ -3603,12 +4850,18 @@ nord_teams =
         "GamesPlayed": 13,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 65,
         "Defense": 86,
         "Speed": 76,
         "Chemistry": 83,
-        "Overall": 74
+        "Overall": 74,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Dominicu Turgetto",
@@ -3620,12 +4873,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 67,
         "Defense": 85,
         "Speed": 75,
         "Chemistry": 85,
-        "Overall": 74
+        "Overall": 74,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Boda Wildven",
@@ -3637,12 +4896,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 53,
         "Defense": 86,
         "Speed": 71,
         "Chemistry": 88,
-        "Overall": 72
+        "Overall": 72,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Yanno Valentin",
@@ -3654,12 +4919,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 57,
         "Defense": 82,
         "Speed": 70,
         "Chemistry": 83,
-        "Overall": 68
+        "Overall": 68,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Mita Hoelschinov",
@@ -3671,12 +4942,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 53,
         "Defense": 83,
         "Speed": 70,
         "Chemistry": 85,
-        "Overall": 66
+        "Overall": 66,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Darra Mieszkowsovik",
@@ -3688,12 +4965,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 52,
         "Defense": 91,
         "Speed": 69,
         "Chemistry": 89,
-        "Overall": 68
+        "Overall": 68,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jake Weidnar",
@@ -3705,12 +4988,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 53,
         "Defense": 89,
         "Speed": 68,
         "Chemistry": 88,
-        "Overall": 67
+        "Overall": 67,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Tima Bendar",
@@ -3722,12 +5011,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 48,
         "Defense": 80,
         "Speed": 68,
         "Chemistry": 84,
-        "Overall": 66
+        "Overall": 66,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Michaelo Bartulin",
@@ -3739,12 +5034,18 @@ nord_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 56,
         "Defense": 80,
         "Speed": 66,
         "Chemistry": 82,
-        "Overall": 66
+        "Overall": 66,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Laurine Braunovik",
@@ -3756,12 +5057,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 50,
         "Defense": 85,
         "Speed": 67,
         "Chemistry": 86,
-        "Overall": 65
+        "Overall": 65,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Andrewe Bodnarchro",
@@ -3773,29 +5080,41 @@ nord_teams =
         "GamesPlayed": 13,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 50,
         "Defense": 80,
         "Speed": 65,
         "Chemistry": 81,
-        "Overall": 66
+        "Overall": 66,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Colino Smithar",
         "NameReal": "Colin Smith",
-        "Number": null,
+        "Number": None,
         "Nation": "nan",
         "PositionRaw": "FO",
         "PositionGroup": "F",
         "GamesPlayed": 6,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 48,
         "Defense": 82,
         "Speed": 63,
         "Chemistry": 71,
-        "Overall": 62
+        "Overall": 62,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Simona Schützan",
@@ -3807,12 +5126,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 46,
         "Defense": 78,
         "Speed": 64,
         "Chemistry": 83,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Benu Stadldunov",
@@ -3824,12 +5149,18 @@ nord_teams =
         "GamesPlayed": 10,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 46,
         "Defense": 87,
         "Speed": 58,
         "Chemistry": 80,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Macieji Rutkowstli",
@@ -3841,12 +5172,18 @@ nord_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 45,
         "Defense": 86,
         "Speed": 63,
         "Chemistry": 85,
-        "Overall": 62
+        "Overall": 62,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Hanse Detschin",
@@ -3858,12 +5195,18 @@ nord_teams =
         "GamesPlayed": 11,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 42,
         "Defense": 86,
         "Speed": 58,
         "Chemistry": 80,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Clemenso Sagven",
@@ -3875,12 +5218,18 @@ nord_teams =
         "GamesPlayed": 12,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 42,
         "Defense": 84,
         "Speed": 59,
         "Chemistry": 80,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Markusu Freisro",
@@ -3892,12 +5241,18 @@ nord_teams =
         "GamesPlayed": 7,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 44,
         "Defense": 77,
         "Speed": 52,
         "Chemistry": 72,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Mano Schamsov",
@@ -3909,12 +5264,18 @@ nord_teams =
         "GamesPlayed": 7,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 42,
         "Defense": 85,
         "Speed": 52,
         "Chemistry": 75,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Bru Maxwelen",
@@ -3926,12 +5287,18 @@ nord_teams =
         "GamesPlayed": 1,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 41,
         "Chemistry": 66,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Luce Münzenik",
@@ -3943,12 +5310,18 @@ nord_teams =
         "GamesPlayed": 1,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 80,
         "Speed": 41,
         "Chemistry": 66,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Olego Shilinik",
@@ -3960,12 +5333,18 @@ nord_teams =
         "GamesPlayed": 5,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 47,
         "Chemistry": 71,
-        "Overall": 55
+        "Overall": 55,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Marca Müllar",
@@ -3977,12 +5356,18 @@ nord_teams =
         "GamesPlayed": 8,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 81,
         "Speed": 50,
         "Chemistry": 75,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Nicke Neufelov",
@@ -3994,12 +5379,18 @@ nord_teams =
         "GamesPlayed": 11,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 54,
         "Chemistry": 79,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Phe Maurar",
@@ -4011,29 +5402,41 @@ nord_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 85,
         "Speed": 58,
         "Chemistry": 83,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Christiana Schilinar",
         "NameReal": "Christian Schiling",
-        "Number": null,
+        "Number": None,
         "Nation": "nan",
         "PositionRaw": "FO (U21)",
         "PositionGroup": "F",
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Phe Maurar",
@@ -4045,12 +5448,18 @@ nord_teams =
         "GamesPlayed": 12,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 83,
         "Defense": 88,
         "Speed": 88,
         "Chemistry": 81,
-        "Overall": 87
+        "Overall": 87,
+        "Minutes": 661.4333333333333,
+        "GoalsAgainst": 25,
+        "ShotsAgainst": 282,
+        "Saves": 257,
+        "SavePct": 91.13,
+        "GAA": 2.27
       },
       {
         "Name": "Olego Shilinik",
@@ -4062,12 +5471,18 @@ nord_teams =
         "GamesPlayed": 4,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 52,
         "Defense": 84,
         "Speed": 72,
         "Chemistry": 54,
-        "Overall": 76
+        "Overall": 76,
+        "Minutes": 179.51666666666668,
+        "GoalsAgainst": 7,
+        "ShotsAgainst": 63,
+        "Saves": 56,
+        "SavePct": 88.89,
+        "GAA": 2.34
       },
       {
         "Name": "Bru Maxwelen",
@@ -4079,12 +5494,18 @@ nord_teams =
         "GamesPlayed": 1,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 44,
         "Defense": 79,
         "Speed": 67,
         "Chemistry": 44,
-        "Overall": 70
+        "Overall": 70,
+        "Minutes": 61.733333333333334,
+        "GoalsAgainst": 4,
+        "ShotsAgainst": 26,
+        "Saves": 22,
+        "SavePct": 84.62,
+        "GAA": 3.89
       },
       {
         "Name": "Nicke Neufelov",
@@ -4096,12 +5517,18 @@ nord_teams =
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "ECK",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 61,
         "Speed": 40,
         "Chemistry": 40,
-        "Overall": 51
+        "Overall": 51,
+        "Minutes": 0.0,
+        "GoalsAgainst": 0,
+        "ShotsAgainst": 0,
+        "Saves": 0,
+        "SavePct": 0.0,
+        "GAA": 0.0
       }
     ]
   },
@@ -4125,7 +5552,13 @@ nord_teams =
         "Defense": 77,
         "Speed": 80,
         "Chemistry": 82,
-        "Overall": 76
+        "Overall": 76,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ethano Prowovik",
@@ -4142,7 +5575,13 @@ nord_teams =
         "Defense": 79,
         "Speed": 80,
         "Chemistry": 86,
-        "Overall": 72
+        "Overall": 72,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jimmya Lambersen",
@@ -4159,7 +5598,13 @@ nord_teams =
         "Defense": 87,
         "Speed": 77,
         "Chemistry": 82,
-        "Overall": 78
+        "Overall": 78,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Spo Machacven",
@@ -4176,7 +5621,13 @@ nord_teams =
         "Defense": 82,
         "Speed": 77,
         "Chemistry": 87,
-        "Overall": 74
+        "Overall": 74,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Tylera Gaudetvik",
@@ -4193,7 +5644,13 @@ nord_teams =
         "Defense": 81,
         "Speed": 77,
         "Chemistry": 86,
-        "Overall": 72
+        "Overall": 72,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Fabio Pfohlro",
@@ -4210,7 +5667,13 @@ nord_teams =
         "Defense": 83,
         "Speed": 74,
         "Chemistry": 89,
-        "Overall": 71
+        "Overall": 71,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Matto Choupanin",
@@ -4227,7 +5690,13 @@ nord_teams =
         "Defense": 80,
         "Speed": 71,
         "Chemistry": 81,
-        "Overall": 70
+        "Overall": 70,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Juliano Melchiovik",
@@ -4244,7 +5713,13 @@ nord_teams =
         "Defense": 85,
         "Speed": 71,
         "Chemistry": 88,
-        "Overall": 71
+        "Overall": 71,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jacobe Hayhursan",
@@ -4261,7 +5736,13 @@ nord_teams =
         "Defense": 81,
         "Speed": 67,
         "Chemistry": 78,
-        "Overall": 67
+        "Overall": 67,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Juliano Chrobven",
@@ -4278,7 +5759,13 @@ nord_teams =
         "Defense": 85,
         "Speed": 71,
         "Chemistry": 90,
-        "Overall": 68
+        "Overall": 68,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Justinu Fesik",
@@ -4295,7 +5782,13 @@ nord_teams =
         "Defense": 87,
         "Speed": 69,
         "Chemistry": 86,
-        "Overall": 67
+        "Overall": 67,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Robu Lynchen",
@@ -4312,7 +5805,13 @@ nord_teams =
         "Defense": 74,
         "Speed": 69,
         "Chemistry": 78,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Luisa Schinktli",
@@ -4329,7 +5828,13 @@ nord_teams =
         "Defense": 79,
         "Speed": 67,
         "Chemistry": 78,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Keate Thompov",
@@ -4346,7 +5851,13 @@ nord_teams =
         "Defense": 81,
         "Speed": 70,
         "Chemistry": 89,
-        "Overall": 68
+        "Overall": 68,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jimmya Martinovlek",
@@ -4363,7 +5874,13 @@ nord_teams =
         "Defense": 78,
         "Speed": 66,
         "Chemistry": 85,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Time Ruckdäschlek",
@@ -4380,7 +5897,13 @@ nord_teams =
         "Defense": 83,
         "Speed": 66,
         "Chemistry": 88,
-        "Overall": 62
+        "Overall": 62,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Svenu Zieglven",
@@ -4397,7 +5920,13 @@ nord_teams =
         "Defense": 76,
         "Speed": 61,
         "Chemistry": 77,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Janika Mösvik",
@@ -4414,7 +5943,13 @@ nord_teams =
         "Defense": 79,
         "Speed": 61,
         "Chemistry": 84,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Björnu Kruppen",
@@ -4431,7 +5966,13 @@ nord_teams =
         "Defense": 79,
         "Speed": 55,
         "Chemistry": 77,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Robino Vebov",
@@ -4448,7 +5989,13 @@ nord_teams =
         "Defense": 86,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Tilu Raabov",
@@ -4465,7 +6012,13 @@ nord_teams =
         "Defense": 86,
         "Speed": 41,
         "Chemistry": 66,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jule Ramosinov",
@@ -4482,7 +6035,13 @@ nord_teams =
         "Defense": 82,
         "Speed": 58,
         "Chemistry": 81,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Lucase Dumontsen",
@@ -4499,7 +6058,13 @@ nord_teams =
         "Defense": 82,
         "Speed": 62,
         "Chemistry": 84,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Lea Hafenrichtik",
@@ -4516,7 +6081,13 @@ nord_teams =
         "Defense": 77,
         "Speed": 62,
         "Chemistry": 85,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Dustino Strahlmeiar",
@@ -4533,7 +6104,13 @@ nord_teams =
         "Defense": 87,
         "Speed": 86,
         "Chemistry": 74,
-        "Overall": 86
+        "Overall": 86,
+        "Minutes": 598.4,
+        "GoalsAgainst": 28,
+        "ShotsAgainst": 291,
+        "Saves": 263,
+        "SavePct": 90.38,
+        "GAA": 2.81
       },
       {
         "Name": "Hannibalu Weitzdunov",
@@ -4550,7 +6127,13 @@ nord_teams =
         "Defense": 85,
         "Speed": 81,
         "Chemistry": 65,
-        "Overall": 82
+        "Overall": 82,
+        "Minutes": 478.45,
+        "GoalsAgainst": 23,
+        "ShotsAgainst": 213,
+        "Saves": 190,
+        "SavePct": 89.2,
+        "GAA": 2.88
       }
     ]
   },
@@ -4574,7 +6157,13 @@ nord_teams =
         "Defense": 90,
         "Speed": 83,
         "Chemistry": 91,
-        "Overall": 84
+        "Overall": 84,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Fri Tiffelar",
@@ -4591,7 +6180,13 @@ nord_teams =
         "Defense": 86,
         "Speed": 83,
         "Chemistry": 90,
-        "Overall": 76
+        "Overall": 76,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Leonharda Pfödersen",
@@ -4608,7 +6203,13 @@ nord_teams =
         "Defense": 85,
         "Speed": 78,
         "Chemistry": 90,
-        "Overall": 74
+        "Overall": 74,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Andi Edtli",
@@ -4625,7 +6226,13 @@ nord_teams =
         "Defense": 85,
         "Speed": 76,
         "Chemistry": 89,
-        "Overall": 73
+        "Overall": 73,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Liamu Kirkven",
@@ -4642,7 +6249,13 @@ nord_teams =
         "Defense": 83,
         "Speed": 76,
         "Chemistry": 87,
-        "Overall": 71
+        "Overall": 71,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Markusu Vikingstovik",
@@ -4659,7 +6272,13 @@ nord_teams =
         "Defense": 92,
         "Speed": 75,
         "Chemistry": 94,
-        "Overall": 76
+        "Overall": 76,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ericu Mikik",
@@ -4676,7 +6295,13 @@ nord_teams =
         "Defense": 91,
         "Speed": 72,
         "Chemistry": 94,
-        "Overall": 74
+        "Overall": 74,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Leane Bergen",
@@ -4693,7 +6318,13 @@ nord_teams =
         "Defense": 79,
         "Speed": 72,
         "Chemistry": 84,
-        "Overall": 65
+        "Overall": 65,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jonasu Müllar",
@@ -4710,7 +6341,13 @@ nord_teams =
         "Defense": 74,
         "Speed": 71,
         "Chemistry": 84,
-        "Overall": 65
+        "Overall": 65,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Mita Reinknik",
@@ -4727,7 +6364,13 @@ nord_teams =
         "Defense": 81,
         "Speed": 68,
         "Chemistry": 86,
-        "Overall": 67
+        "Overall": 67,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Blainu Byronvik",
@@ -4744,7 +6387,13 @@ nord_teams =
         "Defense": 83,
         "Speed": 63,
         "Chemistry": 72,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Mano Wiederik",
@@ -4761,7 +6410,13 @@ nord_teams =
         "Defense": 82,
         "Speed": 69,
         "Chemistry": 86,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Yannicku Veillenik",
@@ -4778,7 +6433,13 @@ nord_teams =
         "Defense": 67,
         "Speed": 62,
         "Chemistry": 74,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Marcu Noebellek",
@@ -4795,7 +6456,13 @@ nord_teams =
         "Defense": 86,
         "Speed": 57,
         "Chemistry": 76,
-        "Overall": 62
+        "Overall": 62,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Korbiniani Geibov",
@@ -4812,7 +6479,13 @@ nord_teams =
         "Defense": 82,
         "Speed": 58,
         "Chemistry": 79,
-        "Overall": 66
+        "Overall": 66,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Pata Khodorenovik",
@@ -4829,7 +6502,13 @@ nord_teams =
         "Defense": 81,
         "Speed": 59,
         "Chemistry": 68,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Adamo Smithar",
@@ -4846,7 +6525,13 @@ nord_teams =
         "Defense": 77,
         "Speed": 66,
         "Chemistry": 86,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Lestera Lancastinov",
@@ -4863,7 +6548,13 @@ nord_teams =
         "Defense": 80,
         "Speed": 54,
         "Chemistry": 71,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Norwinu Panochdunov",
@@ -4880,7 +6571,13 @@ nord_teams =
         "Defense": 77,
         "Speed": 64,
         "Chemistry": 85,
-        "Overall": 62
+        "Overall": 62,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jeu Denik",
@@ -4897,7 +6594,13 @@ nord_teams =
         "Defense": 79,
         "Speed": 50,
         "Chemistry": 66,
-        "Overall": 56
+        "Overall": 56,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ericu Hördlinov",
@@ -4914,7 +6617,13 @@ nord_teams =
         "Defense": 82,
         "Speed": 65,
         "Chemistry": 87,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Markusu Niemeläinan",
@@ -4931,7 +6640,13 @@ nord_teams =
         "Defense": 79,
         "Speed": 43,
         "Chemistry": 67,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Moritzi Kretzschmnik",
@@ -4948,7 +6663,13 @@ nord_teams =
         "Defense": 79,
         "Speed": 48,
         "Chemistry": 72,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Mateju Ledenov",
@@ -4965,7 +6686,13 @@ nord_teams =
         "Defense": 79,
         "Speed": 62,
         "Chemistry": 86,
-        "Overall": 62
+        "Overall": 62,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jake Hildebrro",
@@ -4982,7 +6709,13 @@ nord_teams =
         "Defense": 88,
         "Speed": 94,
         "Chemistry": 91,
-        "Overall": 91
+        "Overall": 91,
+        "Minutes": 851.55,
+        "GoalsAgainst": 40,
+        "ShotsAgainst": 408,
+        "Saves": 368,
+        "SavePct": 90.2,
+        "GAA": 2.82
       },
       {
         "Name": "Jonasu Stettmov",
@@ -4999,14 +6732,19 @@ nord_teams =
         "Defense": 81,
         "Speed": 74,
         "Chemistry": 52,
-        "Overall": 75
+        "Overall": 75,
+        "Minutes": 245.43333333333334,
+        "GoalsAgainst": 15,
+        "ShotsAgainst": 116,
+        "Saves": 101,
+        "SavePct": 87.07,
+        "GAA": 3.67
       }
     ]
   }
 ]
 
-sued_teams = 
-[
+sued_teams = [
   {
     "Team": "Augsburg Ferox",
     "Code": "AFX",
@@ -5027,7 +6765,13 @@ sued_teams =
         "Defense": 87,
         "Speed": 84,
         "Chemistry": 90,
-        "Overall": 81
+        "Overall": 81,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ale Blankov",
@@ -5044,7 +6788,13 @@ sued_teams =
         "Defense": 91,
         "Speed": 82,
         "Chemistry": 94,
-        "Overall": 79
+        "Overall": 79,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Dono Busdekvik",
@@ -5061,7 +6811,13 @@ sued_teams =
         "Defense": 82,
         "Speed": 78,
         "Chemistry": 87,
-        "Overall": 77
+        "Overall": 77,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Rileyu Damiansen",
@@ -5078,7 +6834,13 @@ sued_teams =
         "Defense": 80,
         "Speed": 78,
         "Chemistry": 85,
-        "Overall": 76
+        "Overall": 76,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Codye Kunyken",
@@ -5095,7 +6857,13 @@ sued_teams =
         "Defense": 80,
         "Speed": 77,
         "Chemistry": 86,
-        "Overall": 71
+        "Overall": 71,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Tima Wohlgemtto",
@@ -5112,7 +6880,13 @@ sued_teams =
         "Defense": 87,
         "Speed": 76,
         "Chemistry": 90,
-        "Overall": 72
+        "Overall": 72,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Kyli Mayhewtli",
@@ -5129,7 +6903,13 @@ sued_teams =
         "Defense": 89,
         "Speed": 74,
         "Chemistry": 93,
-        "Overall": 75
+        "Overall": 75,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Madisoni Boweydunov",
@@ -5146,7 +6926,13 @@ sued_teams =
         "Defense": 91,
         "Speed": 74,
         "Chemistry": 94,
-        "Overall": 75
+        "Overall": 75,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Thoma Schemitsik",
@@ -5163,7 +6949,13 @@ sued_teams =
         "Defense": 71,
         "Speed": 73,
         "Chemistry": 83,
-        "Overall": 65
+        "Overall": 65,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Anthonyu Louisovik",
@@ -5180,7 +6972,13 @@ sued_teams =
         "Defense": 86,
         "Speed": 69,
         "Chemistry": 83,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Josephu Cramarosan",
@@ -5197,7 +6995,13 @@ sued_teams =
         "Defense": 80,
         "Speed": 65,
         "Chemistry": 78,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ryani Buttonan",
@@ -5214,7 +7018,13 @@ sued_teams =
         "Defense": 70,
         "Speed": 70,
         "Chemistry": 82,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Floriani Eliasov",
@@ -5231,7 +7041,13 @@ sued_teams =
         "Defense": 81,
         "Speed": 67,
         "Chemistry": 85,
-        "Overall": 62
+        "Overall": 62,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Enra Moralin",
@@ -5248,7 +7064,13 @@ sued_teams =
         "Defense": 82,
         "Speed": 65,
         "Chemistry": 84,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Christiana Hankov",
@@ -5265,7 +7087,13 @@ sued_teams =
         "Defense": 84,
         "Speed": 67,
         "Chemistry": 87,
-        "Overall": 62
+        "Overall": 62,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Leona Lindlek",
@@ -5282,7 +7110,13 @@ sued_teams =
         "Defense": 73,
         "Speed": 64,
         "Chemistry": 83,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Maximiliana Rennov",
@@ -5299,7 +7133,13 @@ sued_teams =
         "Defense": 72,
         "Speed": 66,
         "Chemistry": 84,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Moritzi Eliasov",
@@ -5316,7 +7156,13 @@ sued_teams =
         "Defense": 82,
         "Speed": 60,
         "Chemistry": 80,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Thoma Trevelyov",
@@ -5333,7 +7179,13 @@ sued_teams =
         "Defense": 84,
         "Speed": 52,
         "Chemistry": 72,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Lirono Pellizzvik",
@@ -5350,7 +7202,13 @@ sued_teams =
         "Defense": 80,
         "Speed": 43,
         "Chemistry": 67,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Moritzi Wirthnik",
@@ -5367,7 +7225,13 @@ sued_teams =
         "Defense": 78,
         "Speed": 45,
         "Chemistry": 69,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Luce Tostar",
@@ -5384,7 +7248,13 @@ sued_teams =
         "Defense": 85,
         "Speed": 45,
         "Chemistry": 69,
-        "Overall": 55
+        "Overall": 55,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Sebu Zwicklov",
@@ -5401,7 +7271,13 @@ sued_teams =
         "Defense": 86,
         "Speed": 47,
         "Chemistry": 71,
-        "Overall": 55
+        "Overall": 55,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Fabi Pilen",
@@ -5418,7 +7294,13 @@ sued_teams =
         "Defense": 80,
         "Speed": 56,
         "Chemistry": 80,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Michaelo Garteov",
@@ -5435,7 +7317,13 @@ sued_teams =
         "Defense": 88,
         "Speed": 87,
         "Chemistry": 70,
-        "Overall": 86
+        "Overall": 86,
+        "Minutes": 537.9666666666667,
+        "GoalsAgainst": 24,
+        "ShotsAgainst": 305,
+        "Saves": 281,
+        "SavePct": 92.13,
+        "GAA": 2.68
       },
       {
         "Name": "Peytone Jonessen",
@@ -5452,7 +7340,13 @@ sued_teams =
         "Defense": 84,
         "Speed": 86,
         "Chemistry": 70,
-        "Overall": 84
+        "Overall": 84,
+        "Minutes": 545.6166666666667,
+        "GoalsAgainst": 37,
+        "ShotsAgainst": 323,
+        "Saves": 286,
+        "SavePct": 88.54,
+        "GAA": 4.07
       }
     ]
   },
@@ -5471,12 +7365,18 @@ sued_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 80,
         "Defense": 78,
         "Speed": 86,
         "Chemistry": 81,
-        "Overall": 81
+        "Overall": 81,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Toba Lindvik",
@@ -5488,12 +7388,18 @@ sued_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 72,
         "Defense": 82,
         "Speed": 79,
         "Chemistry": 82,
-        "Overall": 77
+        "Overall": 77,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Trevu Goochan",
@@ -5505,12 +7411,18 @@ sued_teams =
         "GamesPlayed": 13,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 74,
         "Defense": 92,
         "Speed": 77,
         "Chemistry": 87,
-        "Overall": 80
+        "Overall": 80,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Davida Elsninov",
@@ -5522,12 +7434,18 @@ sued_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 62,
         "Defense": 86,
         "Speed": 76,
         "Chemistry": 86,
-        "Overall": 73
+        "Overall": 73,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Wadi Bergmtto",
@@ -5539,12 +7457,18 @@ sued_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 57,
         "Defense": 80,
         "Speed": 75,
         "Chemistry": 84,
-        "Overall": 71
+        "Overall": 71,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Davida Stiellek",
@@ -5556,12 +7480,18 @@ sued_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 61,
         "Defense": 80,
         "Speed": 73,
         "Chemistry": 81,
-        "Overall": 70
+        "Overall": 70,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Stanislave Dietzlek",
@@ -5573,12 +7503,18 @@ sued_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 54,
         "Defense": 81,
         "Speed": 70,
         "Chemistry": 85,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jesso Koskenkornik",
@@ -5590,12 +7526,18 @@ sued_teams =
         "GamesPlayed": 13,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 60,
         "Defense": 92,
         "Speed": 68,
         "Chemistry": 88,
-        "Overall": 72
+        "Overall": 72,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Yannicku Wenzsen",
@@ -5607,12 +7549,18 @@ sued_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 56,
         "Defense": 81,
         "Speed": 69,
         "Chemistry": 81,
-        "Overall": 67
+        "Overall": 67,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Toba Schwardunov",
@@ -5624,12 +7572,18 @@ sued_teams =
         "GamesPlayed": 12,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 51,
         "Defense": 78,
         "Speed": 65,
         "Chemistry": 78,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Martine Hasovik",
@@ -5641,12 +7595,18 @@ sued_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 47,
         "Defense": 77,
         "Speed": 67,
         "Chemistry": 82,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Simona Seidlar",
@@ -5658,12 +7618,18 @@ sued_teams =
         "GamesPlayed": 13,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 45,
         "Defense": 83,
         "Speed": 62,
         "Chemistry": 81,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Eliase Lindnov",
@@ -5675,12 +7641,18 @@ sued_teams =
         "GamesPlayed": 12,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 47,
         "Defense": 76,
         "Speed": 60,
         "Chemistry": 77,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Sei Parkdunov",
@@ -5692,12 +7664,18 @@ sued_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 47,
         "Defense": 80,
         "Speed": 63,
         "Chemistry": 83,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Andi Schwardunov",
@@ -5709,12 +7687,18 @@ sued_teams =
         "GamesPlayed": 9,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 46,
         "Defense": 84,
         "Speed": 58,
         "Chemistry": 79,
-        "Overall": 66
+        "Overall": 66,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Oliveri Stümpsen",
@@ -5726,12 +7710,18 @@ sued_teams =
         "GamesPlayed": 8,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 45,
         "Defense": 83,
         "Speed": 55,
         "Chemistry": 75,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Finni Seriktto",
@@ -5743,12 +7733,18 @@ sued_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 44,
         "Defense": 70,
         "Speed": 62,
         "Chemistry": 79,
-        "Overall": 56
+        "Overall": 56,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Linusa Brandlik",
@@ -5760,12 +7756,18 @@ sued_teams =
         "GamesPlayed": 3,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 45,
         "Defense": 88,
         "Speed": 56,
         "Chemistry": 70,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Juliano Kornelllek",
@@ -5777,12 +7779,18 @@ sued_teams =
         "GamesPlayed": 12,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 43,
         "Defense": 86,
         "Speed": 57,
         "Chemistry": 82,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jakobu Mayenschtto",
@@ -5794,12 +7802,18 @@ sued_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 43,
         "Defense": 77,
         "Speed": 61,
         "Chemistry": 80,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ale Derschven",
@@ -5811,12 +7825,18 @@ sued_teams =
         "GamesPlayed": 4,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 44,
         "Defense": 80,
         "Speed": 50,
         "Chemistry": 70,
-        "Overall": 62
+        "Overall": 62,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Pasco Stecknik",
@@ -5828,12 +7848,18 @@ sued_teams =
         "GamesPlayed": 5,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 42,
         "Defense": 86,
         "Speed": 50,
         "Chemistry": 71,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Luisa Scheibengrablek",
@@ -5845,12 +7871,18 @@ sued_teams =
         "GamesPlayed": 5,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 42,
         "Defense": 77,
         "Speed": 50,
         "Chemistry": 68,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Dominiki Grossnik",
@@ -5862,12 +7894,18 @@ sued_teams =
         "GamesPlayed": 10,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 41,
         "Defense": 86,
         "Speed": 55,
         "Chemistry": 79,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jonasu Langlek",
@@ -5879,12 +7917,18 @@ sued_teams =
         "GamesPlayed": 11,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 41,
         "Defense": 86,
         "Speed": 56,
         "Chemistry": 79,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Phe Dietldunov",
@@ -5896,12 +7940,18 @@ sued_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 41,
         "Defense": 86,
         "Speed": 61,
         "Chemistry": 84,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Lukasu Gaustto",
@@ -5913,12 +7963,18 @@ sued_teams =
         "GamesPlayed": 1,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 41,
         "Chemistry": 66,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Daniele Henten",
@@ -5930,12 +7986,18 @@ sued_teams =
         "GamesPlayed": 4,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 45,
         "Chemistry": 70,
-        "Overall": 55
+        "Overall": 55,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Johe Kurrdunov",
@@ -5947,12 +8009,18 @@ sued_teams =
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Marcu Taberten",
@@ -5964,12 +8032,18 @@ sued_teams =
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Maximiliana Oswalddunov",
@@ -5981,12 +8055,18 @@ sued_teams =
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Phe Dietldunov",
@@ -5998,12 +8078,18 @@ sued_teams =
         "GamesPlayed": 9,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 74,
         "Defense": 88,
         "Speed": 85,
         "Chemistry": 71,
-        "Overall": 85
+        "Overall": 85,
+        "Minutes": 488.3833333333333,
+        "GoalsAgainst": 21,
+        "ShotsAgainst": 261,
+        "Saves": 240,
+        "SavePct": 91.95,
+        "GAA": 2.58
       },
       {
         "Name": "Jonasu Langlek",
@@ -6015,12 +8101,18 @@ sued_teams =
         "GamesPlayed": 7,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 69,
         "Defense": 86,
         "Speed": 81,
         "Chemistry": 62,
-        "Overall": 82
+        "Overall": 82,
+        "Minutes": 430.65,
+        "GoalsAgainst": 20,
+        "ShotsAgainst": 223,
+        "Saves": 203,
+        "SavePct": 91.03,
+        "GAA": 2.79
       },
       {
         "Name": "Daniele Henten",
@@ -6032,12 +8124,18 @@ sued_teams =
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "EVL",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 61,
         "Speed": 40,
         "Chemistry": 40,
-        "Overall": 51
+        "Overall": 51,
+        "Minutes": 0.0,
+        "GoalsAgainst": 0,
+        "ShotsAgainst": 0,
+        "Saves": 0,
+        "SavePct": 0.0,
+        "GAA": 0.0
       }
     ]
   },
@@ -6061,7 +8159,13 @@ sued_teams =
         "Defense": 91,
         "Speed": 83,
         "Chemistry": 92,
-        "Overall": 80
+        "Overall": 80,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Adamo Brooksovik",
@@ -6078,7 +8182,13 @@ sued_teams =
         "Defense": 84,
         "Speed": 77,
         "Chemistry": 88,
-        "Overall": 73
+        "Overall": 73,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Christophera DeSousovik",
@@ -6095,7 +8205,13 @@ sued_teams =
         "Defense": 71,
         "Speed": 75,
         "Chemistry": 77,
-        "Overall": 70
+        "Overall": 70,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Toba Riedinov",
@@ -6112,7 +8228,13 @@ sued_teams =
         "Defense": 82,
         "Speed": 75,
         "Chemistry": 84,
-        "Overall": 73
+        "Overall": 73,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Yasino Ehlizov",
@@ -6129,7 +8251,13 @@ sued_teams =
         "Defense": 86,
         "Speed": 74,
         "Chemistry": 89,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Veita Oswalddunov",
@@ -6146,7 +8274,13 @@ sued_teams =
         "Defense": 83,
         "Speed": 72,
         "Chemistry": 88,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Bradya Ferguinov",
@@ -6163,7 +8297,13 @@ sued_teams =
         "Defense": 70,
         "Speed": 68,
         "Chemistry": 77,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Gabo Fontaintto",
@@ -6180,7 +8320,13 @@ sued_teams =
         "Defense": 78,
         "Speed": 70,
         "Chemistry": 80,
-        "Overall": 65
+        "Overall": 65,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Markusu Eisenschmlek",
@@ -6197,7 +8343,13 @@ sued_teams =
         "Defense": 84,
         "Speed": 70,
         "Chemistry": 86,
-        "Overall": 67
+        "Overall": 67,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Villa Pokkvik",
@@ -6214,7 +8366,13 @@ sued_teams =
         "Defense": 74,
         "Speed": 71,
         "Chemistry": 85,
-        "Overall": 65
+        "Overall": 65,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jeri McKennven",
@@ -6231,7 +8389,13 @@ sued_teams =
         "Defense": 81,
         "Speed": 69,
         "Chemistry": 85,
-        "Overall": 65
+        "Overall": 65,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Pata Hagik",
@@ -6248,7 +8412,13 @@ sued_teams =
         "Defense": 85,
         "Speed": 70,
         "Chemistry": 88,
-        "Overall": 66
+        "Overall": 66,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Dille Heatheringttto",
@@ -6265,7 +8435,13 @@ sued_teams =
         "Defense": 85,
         "Speed": 69,
         "Chemistry": 90,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ryani Murphyro",
@@ -6282,7 +8458,13 @@ sued_teams =
         "Defense": 78,
         "Speed": 65,
         "Chemistry": 80,
-        "Overall": 66
+        "Overall": 66,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Maximiliana Kastnlek",
@@ -6299,7 +8481,13 @@ sued_teams =
         "Defense": 67,
         "Speed": 68,
         "Chemistry": 78,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Fabio Wagnov",
@@ -6316,7 +8504,13 @@ sued_teams =
         "Defense": 78,
         "Speed": 67,
         "Chemistry": 87,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Phe Krenindunov",
@@ -6333,7 +8527,13 @@ sued_teams =
         "Defense": 84,
         "Speed": 63,
         "Chemistry": 85,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Konradu Abeltshausdunov",
@@ -6350,7 +8550,13 @@ sued_teams =
         "Defense": 80,
         "Speed": 64,
         "Chemistry": 87,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Maximiliana Daubndunov",
@@ -6367,7 +8573,13 @@ sued_teams =
         "Defense": 68,
         "Speed": 53,
         "Chemistry": 68,
-        "Overall": 56
+        "Overall": 56,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Phe Sinnov",
@@ -6384,7 +8596,13 @@ sued_teams =
         "Defense": 81,
         "Speed": 61,
         "Chemistry": 84,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Niki Heiglik",
@@ -6401,7 +8619,13 @@ sued_teams =
         "Defense": 83,
         "Speed": 48,
         "Chemistry": 72,
-        "Overall": 55
+        "Overall": 55,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ria Kaisdunov",
@@ -6418,7 +8642,13 @@ sued_teams =
         "Defense": 82,
         "Speed": 52,
         "Chemistry": 77,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Anto Bibeaovik",
@@ -6435,7 +8665,13 @@ sued_teams =
         "Defense": 85,
         "Speed": 71,
         "Chemistry": 46,
-        "Overall": 75
+        "Overall": 75,
+        "Minutes": 118.25,
+        "GoalsAgainst": 5,
+        "ShotsAgainst": 55,
+        "Saves": 50,
+        "SavePct": 90.91,
+        "GAA": 2.54
       },
       {
         "Name": "Mathiaso Niederen",
@@ -6452,7 +8688,13 @@ sued_teams =
         "Defense": 86,
         "Speed": 88,
         "Chemistry": 84,
-        "Overall": 86
+        "Overall": 86,
+        "Minutes": 716.1,
+        "GoalsAgainst": 34,
+        "ShotsAgainst": 294,
+        "Saves": 260,
+        "SavePct": 88.44,
+        "GAA": 2.85
       },
       {
         "Name": "Simona Wolfov",
@@ -6469,7 +8711,13 @@ sued_teams =
         "Defense": 81,
         "Speed": 72,
         "Chemistry": 52,
-        "Overall": 75
+        "Overall": 75,
+        "Minutes": 243.08333333333334,
+        "GoalsAgainst": 14,
+        "ShotsAgainst": 98,
+        "Saves": 84,
+        "SavePct": 85.71,
+        "GAA": 3.46
       }
     ]
   },
@@ -6493,7 +8741,13 @@ sued_teams =
         "Defense": 90,
         "Speed": 80,
         "Chemistry": 94,
-        "Overall": 81
+        "Overall": 81,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Marcu Michaelsen",
@@ -6510,7 +8764,13 @@ sued_teams =
         "Defense": 86,
         "Speed": 80,
         "Chemistry": 90,
-        "Overall": 73
+        "Overall": 73,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Anthonyu Grecan",
@@ -6527,7 +8787,13 @@ sued_teams =
         "Defense": 87,
         "Speed": 78,
         "Chemistry": 91,
-        "Overall": 75
+        "Overall": 75,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Matthiasu Plachtven",
@@ -6544,7 +8810,13 @@ sued_teams =
         "Defense": 85,
         "Speed": 77,
         "Chemistry": 89,
-        "Overall": 71
+        "Overall": 71,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Justinu Schützan",
@@ -6561,7 +8833,13 @@ sued_teams =
         "Defense": 85,
         "Speed": 76,
         "Chemistry": 88,
-        "Overall": 74
+        "Overall": 74,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Kristianu Reichlek",
@@ -6578,7 +8856,13 @@ sued_teams =
         "Defense": 89,
         "Speed": 74,
         "Chemistry": 90,
-        "Overall": 72
+        "Overall": 72,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Leona Gawankvik",
@@ -6595,7 +8879,13 @@ sued_teams =
         "Defense": 87,
         "Speed": 73,
         "Chemistry": 91,
-        "Overall": 73
+        "Overall": 73,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Zaco Solowlek",
@@ -6612,7 +8902,13 @@ sued_teams =
         "Defense": 86,
         "Speed": 72,
         "Chemistry": 90,
-        "Overall": 70
+        "Overall": 70,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Johne Gilmoik",
@@ -6629,7 +8925,13 @@ sued_teams =
         "Defense": 79,
         "Speed": 72,
         "Chemistry": 88,
-        "Overall": 68
+        "Overall": 68,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Krise Bennettto",
@@ -6646,7 +8948,13 @@ sued_teams =
         "Defense": 82,
         "Speed": 71,
         "Chemistry": 88,
-        "Overall": 68
+        "Overall": 68,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Maximiliana Heimov",
@@ -6663,7 +8971,13 @@ sued_teams =
         "Defense": 86,
         "Speed": 71,
         "Chemistry": 90,
-        "Overall": 70
+        "Overall": 70,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Lukasu Kälbldunov",
@@ -6680,7 +8994,13 @@ sued_teams =
         "Defense": 93,
         "Speed": 70,
         "Chemistry": 94,
-        "Overall": 74
+        "Overall": 74,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Tome Kühnhacan",
@@ -6697,7 +9017,13 @@ sued_teams =
         "Defense": 90,
         "Speed": 64,
         "Chemistry": 79,
-        "Overall": 66
+        "Overall": 66,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Luko Espositov",
@@ -6714,7 +9040,13 @@ sued_teams =
         "Defense": 81,
         "Speed": 61,
         "Chemistry": 77,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Yannicku Proskov",
@@ -6731,7 +9063,13 @@ sued_teams =
         "Defense": 90,
         "Speed": 67,
         "Chemistry": 93,
-        "Overall": 65
+        "Overall": 65,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ale Ehlven",
@@ -6748,7 +9086,13 @@ sued_teams =
         "Defense": 89,
         "Speed": 62,
         "Chemistry": 86,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Maxe Penkininov",
@@ -6765,7 +9109,13 @@ sued_teams =
         "Defense": 86,
         "Speed": 59,
         "Chemistry": 80,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ericu Ubtto",
@@ -6782,7 +9132,13 @@ sued_teams =
         "Defense": 79,
         "Speed": 59,
         "Chemistry": 77,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Dani Renoufin",
@@ -6799,7 +9155,13 @@ sued_teams =
         "Defense": 92,
         "Speed": 66,
         "Chemistry": 95,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Haydeno Shawin",
@@ -6816,7 +9178,13 @@ sued_teams =
         "Defense": 80,
         "Speed": 58,
         "Chemistry": 82,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Nicke Mählar",
@@ -6833,7 +9201,13 @@ sued_teams =
         "Defense": 80,
         "Speed": 43,
         "Chemistry": 67,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Colino Schlenkik",
@@ -6850,7 +9224,13 @@ sued_teams =
         "Defense": 78,
         "Speed": 44,
         "Chemistry": 67,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Toba Fohrlven",
@@ -6867,7 +9247,13 @@ sued_teams =
         "Defense": 74,
         "Speed": 62,
         "Chemistry": 83,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Johano Mattsik",
@@ -6884,7 +9270,13 @@ sued_teams =
         "Defense": 88,
         "Speed": 82,
         "Chemistry": 68,
-        "Overall": 83
+        "Overall": 83,
+        "Minutes": 443.1,
+        "GoalsAgainst": 16,
+        "ShotsAgainst": 207,
+        "Saves": 191,
+        "SavePct": 92.27,
+        "GAA": 2.17
       },
       {
         "Name": "Maximiliana Franzrnik",
@@ -6901,7 +9293,13 @@ sued_teams =
         "Defense": 89,
         "Speed": 87,
         "Chemistry": 78,
-        "Overall": 87
+        "Overall": 87,
+        "Minutes": 633.0166666666667,
+        "GoalsAgainst": 23,
+        "ShotsAgainst": 287,
+        "Saves": 264,
+        "SavePct": 91.99,
+        "GAA": 2.18
       }
     ]
   },
@@ -6925,7 +9323,13 @@ sued_teams =
         "Defense": 92,
         "Speed": 89,
         "Chemistry": 95,
-        "Overall": 93
+        "Overall": 93,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Mils Powlek",
@@ -6942,7 +9346,13 @@ sued_teams =
         "Defense": 88,
         "Speed": 86,
         "Chemistry": 93,
-        "Overall": 85
+        "Overall": 85,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Aleks Bretan",
@@ -6959,7 +9369,13 @@ sued_teams =
         "Defense": 97,
         "Speed": 84,
         "Chemistry": 97,
-        "Overall": 85
+        "Overall": 85,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ken Agostinov",
@@ -6976,7 +9392,13 @@ sued_teams =
         "Defense": 92,
         "Speed": 80,
         "Chemistry": 93,
-        "Overall": 79
+        "Overall": 79,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Dano Schmolik",
@@ -6993,7 +9415,13 @@ sued_teams =
         "Defense": 90,
         "Speed": 79,
         "Chemistry": 92,
-        "Overall": 77
+        "Overall": 77,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Rileyu Sheentli",
@@ -7010,7 +9438,13 @@ sued_teams =
         "Defense": 82,
         "Speed": 76,
         "Chemistry": 85,
-        "Overall": 70
+        "Overall": 70,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Abbo Girdunov",
@@ -7027,7 +9461,13 @@ sued_teams =
         "Defense": 90,
         "Speed": 74,
         "Chemistry": 90,
-        "Overall": 74
+        "Overall": 74,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Peteru Abbandoninov",
@@ -7044,7 +9484,13 @@ sued_teams =
         "Defense": 91,
         "Speed": 75,
         "Chemistry": 93,
-        "Overall": 73
+        "Overall": 73,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Morgon Elvik",
@@ -7061,7 +9507,13 @@ sued_teams =
         "Defense": 88,
         "Speed": 73,
         "Chemistry": 90,
-        "Overall": 74
+        "Overall": 74,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Leo Hütten",
@@ -7078,7 +9530,13 @@ sued_teams =
         "Defense": 92,
         "Speed": 74,
         "Chemistry": 95,
-        "Overall": 76
+        "Overall": 76,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Filip Krausen",
@@ -7095,7 +9553,13 @@ sued_teams =
         "Defense": 79,
         "Speed": 70,
         "Chemistry": 82,
-        "Overall": 67
+        "Overall": 67,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Dan Pietto",
@@ -7112,7 +9576,13 @@ sued_teams =
         "Defense": 90,
         "Speed": 71,
         "Chemistry": 92,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Aust Keaten",
@@ -7129,7 +9599,13 @@ sued_teams =
         "Defense": 89,
         "Speed": 70,
         "Chemistry": 92,
-        "Overall": 68
+        "Overall": 68,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Sam Ruvek",
@@ -7146,7 +9622,13 @@ sued_teams =
         "Defense": 87,
         "Speed": 69,
         "Chemistry": 89,
-        "Overall": 70
+        "Overall": 70,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Edwin Tropov",
@@ -7163,7 +9645,13 @@ sued_teams =
         "Defense": 78,
         "Speed": 68,
         "Chemistry": 87,
-        "Overall": 66
+        "Overall": 66,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Philu RosaPrtli",
@@ -7180,7 +9668,13 @@ sued_teams =
         "Defense": 86,
         "Speed": 62,
         "Chemistry": 83,
-        "Overall": 67
+        "Overall": 67,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Johan Krausen",
@@ -7197,7 +9691,13 @@ sued_teams =
         "Defense": 83,
         "Speed": 67,
         "Chemistry": 86,
-        "Overall": 62
+        "Overall": 62,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Kris Jandro",
@@ -7214,7 +9714,13 @@ sued_teams =
         "Defense": 65,
         "Speed": 59,
         "Chemistry": 70,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jakina Smallwnik",
@@ -7231,7 +9737,13 @@ sued_teams =
         "Defense": 78,
         "Speed": 54,
         "Chemistry": 71,
-        "Overall": 56
+        "Overall": 56,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Dominiki Zerhocin",
@@ -7248,7 +9760,13 @@ sued_teams =
         "Defense": 80,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Lukasu Jungovik1",
@@ -7265,7 +9783,13 @@ sued_teams =
         "Defense": 80,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Nicolasa Schindllek",
@@ -7282,7 +9806,13 @@ sued_teams =
         "Defense": 86,
         "Speed": 41,
         "Chemistry": 66,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Petr Spornik",
@@ -7299,7 +9829,13 @@ sued_teams =
         "Defense": 80,
         "Speed": 47,
         "Chemistry": 71,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Sam Kharbintli",
@@ -7316,7 +9852,13 @@ sued_teams =
         "Defense": 78,
         "Speed": 52,
         "Chemistry": 73,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Luka Hauven",
@@ -7333,7 +9875,13 @@ sued_teams =
         "Defense": 84,
         "Speed": 56,
         "Chemistry": 80,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Niko Pertanov",
@@ -7350,7 +9898,13 @@ sued_teams =
         "Defense": 93,
         "Speed": 71,
         "Chemistry": 43,
-        "Overall": 79
+        "Overall": 79,
+        "Minutes": 34.916666666666664,
+        "GoalsAgainst": 0,
+        "ShotsAgainst": 13,
+        "Saves": 13,
+        "SavePct": 100.0,
+        "GAA": 0.0
       },
       {
         "Name": "Devon Willark",
@@ -7367,7 +9921,13 @@ sued_teams =
         "Defense": 86,
         "Speed": 87,
         "Chemistry": 77,
-        "Overall": 86
+        "Overall": 86,
+        "Minutes": 657.3666666666667,
+        "GoalsAgainst": 33,
+        "ShotsAgainst": 295,
+        "Saves": 262,
+        "SavePct": 88.81,
+        "GAA": 3.01
       },
       {
         "Name": "Bret Brokan",
@@ -7384,7 +9944,13 @@ sued_teams =
         "Defense": 83,
         "Speed": 77,
         "Chemistry": 64,
-        "Overall": 79
+        "Overall": 79,
+        "Minutes": 385.0833333333333,
+        "GoalsAgainst": 19,
+        "ShotsAgainst": 147,
+        "Saves": 128,
+        "SavePct": 87.07,
+        "GAA": 2.96
       }
     ]
   },
@@ -7408,7 +9974,13 @@ sued_teams =
         "Defense": 83,
         "Speed": 85,
         "Chemistry": 89,
-        "Overall": 78
+        "Overall": 78,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Samueli DoveMcFalan",
@@ -7425,7 +9997,13 @@ sued_teams =
         "Defense": 87,
         "Speed": 78,
         "Chemistry": 91,
-        "Overall": 78
+        "Overall": 78,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Thoma Heiglik",
@@ -7442,7 +10020,13 @@ sued_teams =
         "Defense": 95,
         "Speed": 77,
         "Chemistry": 97,
-        "Overall": 78
+        "Overall": 78,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Colu Maiar",
@@ -7459,7 +10043,13 @@ sued_teams =
         "Defense": 88,
         "Speed": 75,
         "Chemistry": 84,
-        "Overall": 76
+        "Overall": 76,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Cha Gerardar",
@@ -7476,7 +10066,13 @@ sued_teams =
         "Defense": 77,
         "Speed": 75,
         "Chemistry": 84,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Tylera Spezitto",
@@ -7493,7 +10089,13 @@ sued_teams =
         "Defense": 81,
         "Speed": 74,
         "Chemistry": 86,
-        "Overall": 72
+        "Overall": 72,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Grege Meirelvik",
@@ -7510,7 +10112,13 @@ sued_teams =
         "Defense": 80,
         "Speed": 72,
         "Chemistry": 85,
-        "Overall": 65
+        "Overall": 65,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Bretta Murraytto",
@@ -7527,7 +10135,13 @@ sued_teams =
         "Defense": 88,
         "Speed": 68,
         "Chemistry": 77,
-        "Overall": 70
+        "Overall": 70,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Codye Haiskanov",
@@ -7544,7 +10158,13 @@ sued_teams =
         "Defense": 69,
         "Speed": 70,
         "Chemistry": 82,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Constantinu Braunovik",
@@ -7561,7 +10181,13 @@ sued_teams =
         "Defense": 83,
         "Speed": 69,
         "Chemistry": 87,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Owene Headricik",
@@ -7578,7 +10204,13 @@ sued_teams =
         "Defense": 76,
         "Speed": 70,
         "Chemistry": 84,
-        "Overall": 66
+        "Overall": 66,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jule Karrsen",
@@ -7595,7 +10227,13 @@ sued_teams =
         "Defense": 83,
         "Speed": 70,
         "Chemistry": 90,
-        "Overall": 68
+        "Overall": 68,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jakobu Webik",
@@ -7612,7 +10250,13 @@ sued_teams =
         "Defense": 90,
         "Speed": 70,
         "Chemistry": 94,
-        "Overall": 70
+        "Overall": 70,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Romane Kechtov",
@@ -7629,7 +10273,13 @@ sued_teams =
         "Defense": 79,
         "Speed": 67,
         "Chemistry": 83,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Marcuse Webik",
@@ -7646,7 +10296,13 @@ sued_teams =
         "Defense": 80,
         "Speed": 68,
         "Chemistry": 88,
-        "Overall": 66
+        "Overall": 66,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Justu Böttninov",
@@ -7663,7 +10319,13 @@ sued_teams =
         "Defense": 83,
         "Speed": 68,
         "Chemistry": 90,
-        "Overall": 67
+        "Overall": 67,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Williame Grabtto",
@@ -7680,7 +10342,13 @@ sued_teams =
         "Defense": 77,
         "Speed": 57,
         "Chemistry": 68,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Eugeni Alanovik",
@@ -7697,7 +10365,13 @@ sued_teams =
         "Defense": 82,
         "Speed": 56,
         "Chemistry": 74,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Josefa Ehamtli",
@@ -7714,7 +10388,13 @@ sued_teams =
         "Defense": 74,
         "Speed": 57,
         "Chemistry": 73,
-        "Overall": 55
+        "Overall": 55,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Luisa Üffingvik",
@@ -7731,7 +10411,13 @@ sued_teams =
         "Defense": 81,
         "Speed": 61,
         "Chemistry": 81,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Maximiliana Merklov",
@@ -7748,7 +10434,13 @@ sued_teams =
         "Defense": 80,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Time Bakosan",
@@ -7765,7 +10457,13 @@ sued_teams =
         "Defense": 86,
         "Speed": 43,
         "Chemistry": 67,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jakobu Ustorfin",
@@ -7782,7 +10480,13 @@ sued_teams =
         "Defense": 81,
         "Speed": 48,
         "Chemistry": 71,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Nikla Treutlven",
@@ -7799,7 +10503,13 @@ sued_teams =
         "Defense": 86,
         "Speed": 87,
         "Chemistry": 70,
-        "Overall": 85
+        "Overall": 85,
+        "Minutes": 552.4833333333333,
+        "GoalsAgainst": 29,
+        "ShotsAgainst": 306,
+        "Saves": 277,
+        "SavePct": 90.52,
+        "GAA": 3.15
       },
       {
         "Name": "Evane Fitzpatrin",
@@ -7816,7 +10526,13 @@ sued_teams =
         "Defense": 86,
         "Speed": 84,
         "Chemistry": 69,
-        "Overall": 83
+        "Overall": 83,
+        "Minutes": 528.3333333333334,
+        "GoalsAgainst": 26,
+        "ShotsAgainst": 248,
+        "Saves": 222,
+        "SavePct": 89.52,
+        "GAA": 2.95
       }
     ]
   },
@@ -7835,12 +10551,18 @@ sued_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 61,
         "Defense": 74,
         "Speed": 72,
         "Chemistry": 75,
-        "Overall": 68
+        "Overall": 68,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Pierri Pretvik",
@@ -7852,12 +10574,18 @@ sued_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 62,
         "Defense": 78,
         "Speed": 71,
         "Chemistry": 78,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Davida Morleylek",
@@ -7869,12 +10597,18 @@ sued_teams =
         "GamesPlayed": 10,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 60,
         "Defense": 85,
         "Speed": 71,
         "Chemistry": 78,
-        "Overall": 70
+        "Overall": 70,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Kevine Slezakdunov",
@@ -7886,12 +10620,18 @@ sued_teams =
         "GamesPlayed": 13,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 56,
         "Defense": 87,
         "Speed": 69,
         "Chemistry": 84,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Samueli Payeuren",
@@ -7903,12 +10643,18 @@ sued_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 55,
         "Defense": 83,
         "Speed": 70,
         "Chemistry": 84,
-        "Overall": 67
+        "Overall": 67,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Bryco Kindopro",
@@ -7920,12 +10666,18 @@ sued_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 56,
         "Defense": 86,
         "Speed": 68,
         "Chemistry": 83,
-        "Overall": 68
+        "Overall": 68,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Constantinu Ontlinov",
@@ -7937,12 +10689,18 @@ sued_teams =
         "GamesPlayed": 10,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 57,
         "Defense": 84,
         "Speed": 64,
         "Chemistry": 76,
-        "Overall": 67
+        "Overall": 67,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Niko Gajovsknik",
@@ -7954,12 +10712,18 @@ sued_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 51,
         "Defense": 75,
         "Speed": 66,
         "Chemistry": 80,
-        "Overall": 65
+        "Overall": 65,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Yumu Grimmov",
@@ -7971,12 +10735,18 @@ sued_teams =
         "GamesPlayed": 13,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 48,
         "Defense": 75,
         "Speed": 64,
         "Chemistry": 76,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jakobu Webik",
@@ -7988,12 +10758,18 @@ sued_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 48,
         "Defense": 84,
         "Speed": 65,
         "Chemistry": 85,
-        "Overall": 67
+        "Overall": 67,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Donáti Pétlek",
@@ -8005,12 +10781,18 @@ sued_teams =
         "GamesPlayed": 12,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 48,
         "Defense": 84,
         "Speed": 62,
         "Chemistry": 80,
-        "Overall": 62
+        "Overall": 62,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Alexe Berardinelik",
@@ -8022,12 +10804,18 @@ sued_teams =
         "GamesPlayed": 8,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 48,
         "Defense": 85,
         "Speed": 59,
         "Chemistry": 76,
-        "Overall": 62
+        "Overall": 62,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Pata Demetzar",
@@ -8039,12 +10827,18 @@ sued_teams =
         "GamesPlayed": 11,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 43,
         "Defense": 76,
         "Speed": 58,
         "Chemistry": 77,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Seano Gilestto",
@@ -8056,12 +10850,18 @@ sued_teams =
         "GamesPlayed": 12,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 43,
         "Defense": 80,
         "Speed": 59,
         "Chemistry": 80,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Guillauma Naudlek",
@@ -8073,12 +10873,18 @@ sued_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 43,
         "Defense": 75,
         "Speed": 61,
         "Chemistry": 79,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ale Angaran",
@@ -8090,12 +10896,18 @@ sued_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 42,
         "Defense": 81,
         "Speed": 61,
         "Chemistry": 81,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Mara Baudunov",
@@ -8107,12 +10919,18 @@ sued_teams =
         "GamesPlayed": 9,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 41,
         "Defense": 88,
         "Speed": 54,
         "Chemistry": 78,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Nicke Mählar",
@@ -8124,12 +10942,18 @@ sued_teams =
         "GamesPlayed": 12,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 41,
         "Defense": 80,
         "Speed": 57,
         "Chemistry": 78,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Maximiliana Merklov",
@@ -8141,12 +10965,18 @@ sued_teams =
         "GamesPlayed": 13,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 41,
         "Defense": 85,
         "Speed": 58,
         "Chemistry": 81,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Pasco Zerresvik",
@@ -8158,12 +10988,18 @@ sued_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 41,
         "Defense": 74,
         "Speed": 60,
         "Chemistry": 80,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Colu Danielsmeiov",
@@ -8175,12 +11011,18 @@ sued_teams =
         "GamesPlayed": 1,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 41,
         "Chemistry": 66,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Mateju Giesltto",
@@ -8192,12 +11034,18 @@ sued_teams =
         "GamesPlayed": 3,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 81,
         "Speed": 44,
         "Chemistry": 67,
-        "Overall": 53
+        "Overall": 53,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Marksi Jirgensdunov",
@@ -8209,12 +11057,18 @@ sued_teams =
         "GamesPlayed": 5,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 47,
         "Chemistry": 71,
-        "Overall": 55
+        "Overall": 55,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jonasu Neffindunov",
@@ -8226,12 +11080,18 @@ sued_teams =
         "GamesPlayed": 13,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 57,
         "Chemistry": 82,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Konradu Fiedlsen",
@@ -8243,12 +11103,18 @@ sued_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 58,
         "Chemistry": 83,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Lukasu Kriegsen",
@@ -8260,63 +11126,87 @@ sued_teams =
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Juliano Elssen",
         "NameReal": "Julian Elsberger",
-        "Number": null,
+        "Number": None,
         "Nation": "nan",
         "PositionRaw": "FO",
         "PositionGroup": "F",
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Viktore Buchnik",
         "NameReal": "Viktor Buchner",
-        "Number": null,
+        "Number": None,
         "Nation": "nan",
         "PositionRaw": "FO",
         "PositionGroup": "F",
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Pasco Aquinen",
         "NameReal": "Pascal Aquin",
-        "Number": null,
+        "Number": None,
         "Nation": "nan",
         "PositionRaw": "FO",
         "PositionGroup": "F",
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jonasu Neffindunov",
@@ -8328,12 +11218,18 @@ sued_teams =
         "GamesPlayed": 12,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 89,
         "Defense": 92,
         "Speed": 93,
         "Chemistry": 83,
-        "Overall": 92
+        "Overall": 92,
+        "Minutes": 712.1666666666666,
+        "GoalsAgainst": 21,
+        "ShotsAgainst": 388,
+        "Saves": 367,
+        "SavePct": 94.59,
+        "GAA": 1.77
       },
       {
         "Name": "Konradu Fiedlsen",
@@ -8345,12 +11241,18 @@ sued_teams =
         "GamesPlayed": 3,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 49,
         "Defense": 82,
         "Speed": 71,
         "Chemistry": 47,
-        "Overall": 74
+        "Overall": 74,
+        "Minutes": 127.66666666666667,
+        "GoalsAgainst": 7,
+        "ShotsAgainst": 62,
+        "Saves": 55,
+        "SavePct": 88.71,
+        "GAA": 3.29
       },
       {
         "Name": "Colu Danielsmeiov",
@@ -8362,12 +11264,18 @@ sued_teams =
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "EBR",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 61,
         "Speed": 40,
         "Chemistry": 40,
-        "Overall": 51
+        "Overall": 51,
+        "Minutes": 0.0,
+        "GoalsAgainst": 0,
+        "ShotsAgainst": 0,
+        "Saves": 0,
+        "SavePct": 0.0,
+        "GAA": 0.0
       }
     ]
   },
@@ -8386,12 +11294,18 @@ sued_teams =
         "GamesPlayed": 16,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 72,
         "Defense": 89,
         "Speed": 78,
         "Chemistry": 90,
-        "Overall": 79
+        "Overall": 79,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Robbii Czarnvik",
@@ -8403,12 +11317,18 @@ sued_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 67,
         "Defense": 73,
         "Speed": 77,
         "Chemistry": 80,
-        "Overall": 71
+        "Overall": 71,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Eriki Karlsdunov",
@@ -8420,12 +11340,18 @@ sued_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 65,
         "Defense": 83,
         "Speed": 76,
         "Chemistry": 83,
-        "Overall": 73
+        "Overall": 73,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ale Voyinov",
@@ -8437,12 +11363,18 @@ sued_teams =
         "GamesPlayed": 16,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 59,
         "Defense": 62,
         "Speed": 71,
         "Chemistry": 75,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Simona Sezemsktli",
@@ -8454,12 +11386,18 @@ sued_teams =
         "GamesPlayed": 16,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 53,
         "Defense": 90,
         "Speed": 70,
         "Chemistry": 91,
-        "Overall": 73
+        "Overall": 73,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Nicu Lattvik",
@@ -8471,12 +11409,18 @@ sued_teams =
         "GamesPlayed": 16,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 57,
         "Defense": 74,
         "Speed": 69,
         "Chemistry": 79,
-        "Overall": 65
+        "Overall": 65,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Marvino Schmidtto",
@@ -8488,12 +11432,18 @@ sued_teams =
         "GamesPlayed": 16,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 49,
         "Defense": 76,
         "Speed": 69,
         "Chemistry": 80,
-        "Overall": 62
+        "Overall": 62,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Thoma Reichlek",
@@ -8505,12 +11455,18 @@ sued_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 46,
         "Defense": 83,
         "Speed": 65,
         "Chemistry": 82,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Aleca Ahlrotvik",
@@ -8522,12 +11478,18 @@ sued_teams =
         "GamesPlayed": 12,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 48,
         "Defense": 77,
         "Speed": 62,
         "Chemistry": 76,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Louise Lattvik",
@@ -8539,12 +11501,18 @@ sued_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 46,
         "Defense": 76,
         "Speed": 64,
         "Chemistry": 78,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Luka Hauven",
@@ -8556,12 +11524,18 @@ sued_teams =
         "GamesPlayed": 6,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 49,
         "Defense": 85,
         "Speed": 57,
         "Chemistry": 73,
-        "Overall": 62
+        "Overall": 62,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Fabio Sartven",
@@ -8573,12 +11547,18 @@ sued_teams =
         "GamesPlayed": 15,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 47,
         "Defense": 80,
         "Speed": 63,
         "Chemistry": 82,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Denise Pfaffengen",
@@ -8590,12 +11570,18 @@ sued_teams =
         "GamesPlayed": 14,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 44,
         "Defense": 85,
         "Speed": 62,
         "Chemistry": 86,
-        "Overall": 66
+        "Overall": 66,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Juliano Eichinglek",
@@ -8607,12 +11593,18 @@ sued_teams =
         "GamesPlayed": 16,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 43,
         "Defense": 77,
         "Speed": 64,
         "Chemistry": 84,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Phe Massovik",
@@ -8624,12 +11616,18 @@ sued_teams =
         "GamesPlayed": 16,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 43,
         "Defense": 73,
         "Speed": 64,
         "Chemistry": 82,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Mateju Mrazekdunov",
@@ -8641,12 +11639,18 @@ sued_teams =
         "GamesPlayed": 7,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 43,
         "Defense": 84,
         "Speed": 54,
         "Chemistry": 73,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ryani Odudar",
@@ -8658,12 +11662,18 @@ sued_teams =
         "GamesPlayed": 16,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 42,
         "Defense": 78,
         "Speed": 63,
         "Chemistry": 81,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Niki Kesslinov",
@@ -8675,12 +11685,18 @@ sued_teams =
         "GamesPlayed": 12,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 43,
         "Defense": 63,
         "Speed": 57,
         "Chemistry": 70,
-        "Overall": 53
+        "Overall": 53,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Flora Ketteren",
@@ -8692,12 +11708,18 @@ sued_teams =
         "GamesPlayed": 7,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 43,
         "Defense": 78,
         "Speed": 52,
         "Chemistry": 72,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Lukasu Jungovik",
@@ -8709,12 +11731,18 @@ sued_teams =
         "GamesPlayed": 12,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 41,
         "Defense": 69,
         "Speed": 57,
         "Chemistry": 74,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ilye Sharipovik",
@@ -8726,12 +11754,18 @@ sued_teams =
         "GamesPlayed": 16,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 41,
         "Defense": 85,
         "Speed": 62,
         "Chemistry": 85,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Leona Sivicen",
@@ -8743,12 +11777,18 @@ sued_teams =
         "GamesPlayed": 1,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 41,
         "Chemistry": 66,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Raphaelo Roedinov",
@@ -8760,12 +11800,18 @@ sued_teams =
         "GamesPlayed": 1,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 41,
         "Chemistry": 66,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Nica Wiensdunov",
@@ -8777,12 +11823,18 @@ sued_teams =
         "GamesPlayed": 2,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 43,
         "Chemistry": 67,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Nicolasa Schindllek",
@@ -8794,12 +11846,18 @@ sued_teams =
         "GamesPlayed": 3,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 87,
         "Speed": 44,
         "Chemistry": 69,
-        "Overall": 55
+        "Overall": 55,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Philu Gründlar",
@@ -8811,12 +11869,18 @@ sued_teams =
         "GamesPlayed": 4,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 45,
         "Chemistry": 70,
-        "Overall": 55
+        "Overall": 55,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jano Wieszinslek",
@@ -8828,12 +11892,18 @@ sued_teams =
         "GamesPlayed": 4,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 76,
         "Speed": 45,
         "Chemistry": 67,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jonasu Müllar",
@@ -8845,12 +11915,18 @@ sued_teams =
         "GamesPlayed": 8,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 83,
         "Speed": 50,
         "Chemistry": 74,
-        "Overall": 55
+        "Overall": 55,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Niko Pertanov",
@@ -8862,12 +11938,18 @@ sued_teams =
         "GamesPlayed": 9,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 52,
         "Chemistry": 77,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Anso Gergik",
@@ -8879,12 +11961,18 @@ sued_teams =
         "GamesPlayed": 13,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 84,
         "Speed": 57,
         "Chemistry": 81,
-        "Overall": 57
+        "Overall": 57,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Matthiasu Nemecov",
@@ -8896,12 +11984,18 @@ sued_teams =
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Keani Salmikik",
@@ -8913,29 +12007,41 @@ sued_teams =
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 86,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Edwin Tropov",
         "NameReal": "Edwin Tropmann",
-        "Number": null,
+        "Number": None,
         "Nation": "nan",
         "PositionRaw": "DE",
         "PositionGroup": "D",
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 80,
         "Speed": 40,
         "Chemistry": 65,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ilye Sharipovik",
@@ -8947,12 +12053,18 @@ sued_teams =
         "GamesPlayed": 12,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 86,
         "Defense": 82,
         "Speed": 88,
         "Chemistry": 76,
-        "Overall": 85
+        "Overall": 85,
+        "Minutes": 713.2333333333333,
+        "GoalsAgainst": 49,
+        "ShotsAgainst": 328,
+        "Saves": 279,
+        "SavePct": 85.06,
+        "GAA": 4.12
       },
       {
         "Name": "Niko Pertanov",
@@ -8964,12 +12076,18 @@ sued_teams =
         "GamesPlayed": 4,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 55,
         "Defense": 83,
         "Speed": 73,
         "Chemistry": 54,
-        "Overall": 76
+        "Overall": 76,
+        "Minutes": 239.11666666666667,
+        "GoalsAgainst": 12,
+        "ShotsAgainst": 95,
+        "Saves": 83,
+        "SavePct": 87.37,
+        "GAA": 3.01
       },
       {
         "Name": "Philu Gründlar",
@@ -8981,12 +12099,18 @@ sued_teams =
         "GamesPlayed": 1,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 41,
         "Defense": 93,
         "Speed": 70,
         "Chemistry": 41,
-        "Overall": 78
+        "Overall": 78,
+        "Minutes": 5.266666666666667,
+        "GoalsAgainst": 0,
+        "ShotsAgainst": 2,
+        "Saves": 2,
+        "SavePct": 100.0,
+        "GAA": 0.0
       },
       {
         "Name": "Nica Wiensdunov",
@@ -8998,12 +12122,18 @@ sued_teams =
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 61,
         "Speed": 40,
         "Chemistry": 40,
-        "Overall": 51
+        "Overall": 51,
+        "Minutes": 0.0,
+        "GoalsAgainst": 0,
+        "ShotsAgainst": 0,
+        "Saves": 0,
+        "SavePct": 0.0,
+        "GAA": 0.0
       },
       {
         "Name": "Raphaelo Roedinov",
@@ -9015,12 +12145,18 @@ sued_teams =
         "GamesPlayed": 0,
         "League": "DEL2",
         "TeamCodeReal": "RVT",
-        "TeamNameRaw": null,
+        "TeamNameRaw": None,
         "Offense": 40,
         "Defense": 61,
         "Speed": 40,
         "Chemistry": 40,
-        "Overall": 51
+        "Overall": 51,
+        "Minutes": 0.0,
+        "GoalsAgainst": 0,
+        "ShotsAgainst": 0,
+        "Saves": 0,
+        "SavePct": 0.0,
+        "GAA": 0.0
       }
     ]
   },
@@ -9044,7 +12180,13 @@ sued_teams =
         "Defense": 96,
         "Speed": 86,
         "Chemistry": 97,
-        "Overall": 88
+        "Overall": 88,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Nicholasu Hallorar",
@@ -9061,7 +12203,13 @@ sued_teams =
         "Defense": 94,
         "Speed": 82,
         "Chemistry": 96,
-        "Overall": 84
+        "Overall": 84,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Elisu Hedov",
@@ -9078,7 +12226,13 @@ sued_teams =
         "Defense": 94,
         "Speed": 80,
         "Chemistry": 96,
-        "Overall": 82
+        "Overall": 82,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Stefane Loibldunov",
@@ -9095,7 +12249,13 @@ sued_teams =
         "Defense": 84,
         "Speed": 80,
         "Chemistry": 88,
-        "Overall": 74
+        "Overall": 74,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Justinu Scottro",
@@ -9112,7 +12272,13 @@ sued_teams =
         "Defense": 86,
         "Speed": 74,
         "Chemistry": 88,
-        "Overall": 73
+        "Overall": 73,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Danju Leonharik",
@@ -9129,7 +12295,13 @@ sued_teams =
         "Defense": 89,
         "Speed": 75,
         "Chemistry": 93,
-        "Overall": 71
+        "Overall": 71,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Wadi Alliven",
@@ -9146,7 +12318,13 @@ sued_teams =
         "Defense": 88,
         "Speed": 72,
         "Chemistry": 85,
-        "Overall": 72
+        "Overall": 72,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Alexe Greenar",
@@ -9163,7 +12341,13 @@ sued_teams =
         "Defense": 90,
         "Speed": 74,
         "Chemistry": 94,
-        "Overall": 75
+        "Overall": 75,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Tima Fleischtto",
@@ -9180,7 +12364,13 @@ sued_teams =
         "Defense": 88,
         "Speed": 74,
         "Chemistry": 92,
-        "Overall": 71
+        "Overall": 71,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Filipi Varejckov",
@@ -9197,7 +12387,13 @@ sued_teams =
         "Defense": 87,
         "Speed": 72,
         "Chemistry": 91,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Tylera Maddenro",
@@ -9214,7 +12410,13 @@ sued_teams =
         "Defense": 87,
         "Speed": 68,
         "Chemistry": 77,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Joshe Melnicov",
@@ -9231,7 +12433,13 @@ sued_teams =
         "Defense": 89,
         "Speed": 71,
         "Chemistry": 93,
-        "Overall": 68
+        "Overall": 68,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Zaco Leslinik",
@@ -9248,7 +12456,13 @@ sued_teams =
         "Defense": 85,
         "Speed": 68,
         "Chemistry": 84,
-        "Overall": 70
+        "Overall": 70,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Adriano Kleintli",
@@ -9265,7 +12479,13 @@ sued_teams =
         "Defense": 88,
         "Speed": 70,
         "Chemistry": 93,
-        "Overall": 72
+        "Overall": 72,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Nicolasa Beaudan",
@@ -9282,7 +12502,13 @@ sued_teams =
         "Defense": 86,
         "Speed": 70,
         "Chemistry": 90,
-        "Overall": 70
+        "Overall": 70,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Tima Brunnhubinov",
@@ -9299,7 +12525,13 @@ sued_teams =
         "Defense": 88,
         "Speed": 70,
         "Chemistry": 93,
-        "Overall": 67
+        "Overall": 67,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Skyle McKenzvik",
@@ -9316,7 +12548,13 @@ sued_teams =
         "Defense": 83,
         "Speed": 66,
         "Chemistry": 84,
-        "Overall": 65
+        "Overall": 65,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Marie Zimmerar",
@@ -9333,7 +12571,13 @@ sued_teams =
         "Defense": 82,
         "Speed": 65,
         "Chemistry": 84,
-        "Overall": 67
+        "Overall": 67,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Stephana Daschnov",
@@ -9350,7 +12594,13 @@ sued_teams =
         "Defense": 88,
         "Speed": 68,
         "Chemistry": 93,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Linusa Brandlik",
@@ -9367,7 +12617,13 @@ sued_teams =
         "Defense": 80,
         "Speed": 61,
         "Chemistry": 81,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Michaelo Connollnik",
@@ -9384,7 +12640,13 @@ sued_teams =
         "Defense": 84,
         "Speed": 54,
         "Chemistry": 72,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Toba Schwardunov",
@@ -9401,7 +12663,13 @@ sued_teams =
         "Defense": 87,
         "Speed": 41,
         "Chemistry": 67,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Simona Seidlar",
@@ -9418,7 +12686,13 @@ sued_teams =
         "Defense": 86,
         "Speed": 44,
         "Chemistry": 69,
-        "Overall": 55
+        "Overall": 55,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Henrike Haukelik",
@@ -9435,7 +12709,13 @@ sued_teams =
         "Defense": 89,
         "Speed": 92,
         "Chemistry": 99,
-        "Overall": 91
+        "Overall": 91,
+        "Minutes": 897.95,
+        "GoalsAgainst": 33,
+        "ShotsAgainst": 343,
+        "Saves": 310,
+        "SavePct": 90.38,
+        "GAA": 2.21
       },
       {
         "Name": "Floriani Buglov",
@@ -9452,7 +12732,13 @@ sued_teams =
         "Defense": 82,
         "Speed": 71,
         "Chemistry": 50,
-        "Overall": 74
+        "Overall": 74,
+        "Minutes": 183.2,
+        "GoalsAgainst": 10,
+        "ShotsAgainst": 75,
+        "Saves": 65,
+        "SavePct": 86.67,
+        "GAA": 3.28
       }
     ]
   },
@@ -9476,7 +12762,13 @@ sued_teams =
         "Defense": 72,
         "Speed": 75,
         "Chemistry": 83,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Tylora Spinkar",
@@ -9493,7 +12785,13 @@ sued_teams =
         "Defense": 85,
         "Speed": 75,
         "Chemistry": 90,
-        "Overall": 72
+        "Overall": 72,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Kyli Platzov",
@@ -9510,7 +12808,13 @@ sued_teams =
         "Defense": 75,
         "Speed": 74,
         "Chemistry": 81,
-        "Overall": 65
+        "Overall": 65,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Tysono Spinkar",
@@ -9527,7 +12831,13 @@ sued_teams =
         "Defense": 85,
         "Speed": 74,
         "Chemistry": 90,
-        "Overall": 73
+        "Overall": 73,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Zachi Senyshyro",
@@ -9544,7 +12854,13 @@ sued_teams =
         "Defense": 84,
         "Speed": 73,
         "Chemistry": 86,
-        "Overall": 72
+        "Overall": 72,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Jorde Szwarzar",
@@ -9561,7 +12877,13 @@ sued_teams =
         "Defense": 84,
         "Speed": 70,
         "Chemistry": 84,
-        "Overall": 68
+        "Overall": 68,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Philu Hungereckdunov",
@@ -9578,7 +12900,13 @@ sued_teams =
         "Defense": 88,
         "Speed": 71,
         "Chemistry": 88,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Ericu Martinstli",
@@ -9595,7 +12923,13 @@ sued_teams =
         "Defense": 81,
         "Speed": 72,
         "Chemistry": 89,
-        "Overall": 68
+        "Overall": 68,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Daniele OReganovik",
@@ -9612,7 +12946,13 @@ sued_teams =
         "Defense": 81,
         "Speed": 67,
         "Chemistry": 74,
-        "Overall": 69
+        "Overall": 69,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Alexe Trivellvik",
@@ -9629,7 +12969,13 @@ sued_teams =
         "Defense": 79,
         "Speed": 66,
         "Chemistry": 82,
-        "Overall": 66
+        "Overall": 66,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Mirke Höfflro",
@@ -9646,7 +12992,13 @@ sued_teams =
         "Defense": 79,
         "Speed": 69,
         "Chemistry": 83,
-        "Overall": 63
+        "Overall": 63,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Benu Marshaltto",
@@ -9663,7 +13015,13 @@ sued_teams =
         "Defense": 78,
         "Speed": 69,
         "Chemistry": 86,
-        "Overall": 65
+        "Overall": 65,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Thoma Larkinik",
@@ -9680,7 +13038,13 @@ sued_teams =
         "Defense": 75,
         "Speed": 69,
         "Chemistry": 85,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Sebu Uvirtli",
@@ -9697,7 +13061,13 @@ sued_teams =
         "Defense": 76,
         "Speed": 69,
         "Chemistry": 84,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Arko Dziambovik",
@@ -9714,7 +13084,13 @@ sued_teams =
         "Defense": 81,
         "Speed": 63,
         "Chemistry": 83,
-        "Overall": 67
+        "Overall": 67,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Håkone Häneltik",
@@ -9731,7 +13107,13 @@ sued_teams =
         "Defense": 80,
         "Speed": 64,
         "Chemistry": 80,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Boazo Basov",
@@ -9748,7 +13130,13 @@ sued_teams =
         "Defense": 77,
         "Speed": 67,
         "Chemistry": 84,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Philu Feistov",
@@ -9765,7 +13153,13 @@ sued_teams =
         "Defense": 82,
         "Speed": 54,
         "Chemistry": 71,
-        "Overall": 58
+        "Overall": 58,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Felixe Scheven",
@@ -9782,7 +13176,13 @@ sued_teams =
         "Defense": 85,
         "Speed": 56,
         "Chemistry": 77,
-        "Overall": 59
+        "Overall": 59,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Nikla Hübndunov",
@@ -9799,7 +13199,13 @@ sued_teams =
         "Defense": 82,
         "Speed": 60,
         "Chemistry": 83,
-        "Overall": 64
+        "Overall": 64,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Williame Webik",
@@ -9816,7 +13222,13 @@ sued_teams =
         "Defense": 74,
         "Speed": 62,
         "Chemistry": 81,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Dominiki Bittnlek",
@@ -9833,7 +13245,13 @@ sued_teams =
         "Defense": 77,
         "Speed": 61,
         "Chemistry": 82,
-        "Overall": 61
+        "Overall": 61,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Tima Gettingsen",
@@ -9850,7 +13268,13 @@ sued_teams =
         "Defense": 86,
         "Speed": 41,
         "Chemistry": 66,
-        "Overall": 54
+        "Overall": 54,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Nicli Hempinov",
@@ -9867,7 +13291,13 @@ sued_teams =
         "Defense": 80,
         "Speed": 48,
         "Chemistry": 73,
-        "Overall": 60
+        "Overall": 60,
+        "Minutes": None,
+        "GoalsAgainst": None,
+        "ShotsAgainst": None,
+        "Saves": None,
+        "SavePct": None,
+        "GAA": None
       },
       {
         "Name": "Joacimi Erikstli",
@@ -9884,7 +13314,13 @@ sued_teams =
         "Defense": 90,
         "Speed": 91,
         "Chemistry": 82,
-        "Overall": 90
+        "Overall": 90,
+        "Minutes": 692.5,
+        "GoalsAgainst": 25,
+        "ShotsAgainst": 343,
+        "Saves": 318,
+        "SavePct": 92.71,
+        "GAA": 2.17
       },
       {
         "Name": "Michaelo Bitzven",
@@ -9901,7 +13337,13 @@ sued_teams =
         "Defense": 85,
         "Speed": 80,
         "Chemistry": 62,
-        "Overall": 81
+        "Overall": 81,
+        "Minutes": 389.3833333333333,
+        "GoalsAgainst": 19,
+        "ShotsAgainst": 188,
+        "Saves": 169,
+        "SavePct": 89.89,
+        "GAA": 2.93
       }
     ]
   }

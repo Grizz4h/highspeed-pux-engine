@@ -18,7 +18,7 @@ PLAYOFF_DIR  = Path("playoffs")
 # ------------------------------------------------
 # 2  TEAMS LADEN
 # ------------------------------------------------
-from realeTeams import nord_teams, sued_teams  # deine Datei mit Teams/Spielern
+from realeTeams_live import nord_teams, sued_teams  # deine Datei mit Teams/Spielern
 
 # ------------------------------------------------
 # 3  SAVE/LOAD & INIT
@@ -133,22 +133,142 @@ def _print_tables(nord: pd.DataFrame, sued: pd.DataFrame, stats: pd.DataFrame) -
     print(top20.to_string(index=False))
 
 # ------------------------------------------------
-# 6  SIMULATIONSGRUNDSÄTZE
+# 6  SIMULATIONSGRUNDSÄTZE + LINEUPS
 # ------------------------------------------------
+
+def _weighted_pick_by_gp(players: List[Dict[str, Any]], count: int, jitter_factor: float = 0.3) -> List[Dict[str, Any]]:
+    """
+    Wählt 'count' Spieler aus:
+    - Basis = GamesPlayed
+    - plus etwas Randomness (±30%), damit nicht immer starr dieselben spielen.
+    """
+    if not players or count <= 0:
+        return []
+
+    scored: List[Tuple[float, Dict[str, Any]]] = []
+    for p in players:
+        gp_raw = p.get("GamesPlayed") or 0
+        try:
+            gp = int(gp_raw)
+        except (TypeError, ValueError):
+            gp = 0
+        noise = random.uniform(-jitter_factor * max(gp, 1), jitter_factor * max(gp, 1))
+        score = gp + noise
+        scored.append((score, p))
+
+    scored.sort(key=lambda x: x[0], reverse=True)
+    return [p for _, p in scored[:count]]
+
+
+def build_lineup(players: List[Dict[str, Any]],
+                 n_def: int = 8,
+                 n_fwd: int = 12,
+                 n_goalies: int = 1) -> List[Dict[str, Any]]:
+    """
+    Baut ein Lineup pro Spiel:
+      - 8 Defender
+      - 12 Forwards
+      - 1 Goalie
+    Wenn zu wenig Spieler einer Gruppe vorhanden sind, nehmen wir so viele wie möglich.
+    """
+    if not players:
+        return []
+
+    ds = [p for p in players if str(p.get("PositionGroup", "")).upper() == "D"]
+    fs = [p for p in players if str(p.get("PositionGroup", "")).upper() == "F"]
+    gs = [p for p in players if str(p.get("PositionGroup", "")).upper() == "G"]
+
+    lineup: List[Dict[str, Any]] = []
+    lineup.extend(_weighted_pick_by_gp(ds, min(n_def, len(ds))))
+    lineup.extend(_weighted_pick_by_gp(fs, min(n_fwd, len(fs))))
+
+    if gs:
+        lineup.extend(_weighted_pick_by_gp(gs, min(n_goalies, len(gs))))
+    else:
+        # Fallback, falls aus irgendeinem Grund kein Goalie markiert ist
+        print("[WARN] Team ohne Goalies im Roster – kein G im Lineup.")
+    
+    # Sicherheitsnetz: Keine Duplikate
+    seen_ids = set()
+    unique_lineup: List[Dict[str, Any]] = []
+    for p in lineup:
+        key = (p.get("NameReal"), p.get("Number"))
+        if key not in seen_ids:
+            seen_ids.add(key)
+            unique_lineup.append(p)
+
+    return unique_lineup
+
+
+def prepare_lineups_for_matches(df: pd.DataFrame, matches: List[Tuple[str, str]]) -> None:
+    """
+    Für alle Teams, die an diesem Spieltag in 'matches' beteiligt sind,
+    wird eine Lineup-Liste (8D/12F/1G) gebaut und in df["Lineup"] abgelegt.
+    """
+
+    # Falls Spalte noch nicht existiert, anlegen
+    if "Lineup" not in df.columns:
+        df["Lineup"] = None
+
+    # Alle Teams, die heute spielen
+    teams_today: set[str] = set()
+    for home, away in matches:
+        teams_today.add(home)
+        teams_today.add(away)
+
+    for team_name in teams_today:
+        mask = df["Team"] == team_name
+        if not mask.any():
+            print(f"[WARN] prepare_lineups_for_matches: Team '{team_name}' nicht in df gefunden")
+            continue
+
+        idx_list = df.index[mask].tolist()
+        if not idx_list:
+            print(f"[WARN] prepare_lineups_for_matches: Kein Index für Team '{team_name}' gefunden (Index-Problem)")
+            continue
+
+        idx = idx_list[0]
+        row = df.loc[idx]
+
+        players = row.get("Players")
+        if not isinstance(players, list) or not players:
+            print(f"[WARN] prepare_lineups_for_matches: Team '{team_name}' hat keinen gültigen Players-Roster")
+            continue
+
+        # HIER: Lineup wirklich bauen (8D / 12F / 1G, mit GP-Weight + Randomness)
+        lineup = build_lineup(players, n_def=8, n_fwd=12, n_goalies=1)
+
+        df.at[idx, "Lineup"] = lineup
+
+
+
+
+
+
 def calc_strength(row: pd.Series, home: bool = False) -> float:
-    players = row["Players"]
+    # WICHTIG: Wenn es ein Lineup gibt, benutzen wir das. Sonst das komplette Roster.
+    players = row.get("Lineup")
+    if not isinstance(players, list) or not players:
+        players = row["Players"]
+
     base = (
-        sum(p["Offense"] for p in players)*0.4 +
-        sum(p["Defense"] for p in players)*0.3 +
-        sum(p["Speed"]   for p in players)*0.2 +
-        sum(p["Chemistry"] for p in players)*0.1
+        sum(p["Offense"]   for p in players) * 0.4 +
+        sum(p["Defense"]   for p in players) * 0.3 +
+        sum(p["Speed"]     for p in players) * 0.2 +
+        sum(p["Chemistry"] for p in players) * 0.1
     ) / len(players)
+
     total = base
-    total *= 1 + random.uniform(-5,5)/100
-    total *= 1 + row.get("Momentum",0)/100
-    total *= 1 + (3 if home else 0)/100
-    total *= 1 + random.uniform(-1,2)/100
-    return round(total,2)
+    # Tagesform / Randomness
+    total *= 1 + random.uniform(-5, 5) / 100
+    # Momentum (falls du das später nutzt)
+    total *= 1 + row.get("Momentum", 0) / 100
+    # Heimvorteil
+    total *= 1 + (3 if home else 0) / 100
+    # kleine Zusatz-Streuung
+    total *= 1 + random.uniform(-1, 2) / 100
+    return round(total, 2)
+
 
 def create_schedule(teams: List[Dict[str,Any]]) -> List[Tuple[str,str]]:
     teams = teams.copy()
@@ -166,15 +286,29 @@ def create_schedule(teams: List[Dict[str,Any]]) -> List[Tuple[str,str]]:
     return sched
 
 def update_player_stats(team:str,goals:int,df:pd.DataFrame,stats:pd.DataFrame)->None:
-    roster=df.loc[df["Team"]==team,"Players"].iloc[0]
-    roster=random.sample(roster,18) if len(roster)>18 else roster
-    names=[p["Name"] for p in roster]
-    weights=[max(1,p["Offense"]//5) for p in roster]
+    # Roster aus Lineup, falls vorhanden – sonst Fallback auf komplettes Roster
+    mask = df["Team"] == team
+    if not mask.any():
+        return
+
+    use_column = "Players"
+    if "Lineup" in df.columns:
+        candidate = df.loc[mask, "Lineup"].iloc[0]
+        if isinstance(candidate, list) and candidate:
+            use_column = "Lineup"
+
+    roster = df.loc[mask, use_column].iloc[0]
+    # Für Stats ggf. auf 18 Spieler begrenzen
+    roster = random.sample(roster, 18) if len(roster) > 18 else roster
+
+    names   = [p["Name"] for p in roster]
+    weights = [max(1, p["Offense"] // 5) for p in roster]
+
     for _ in range(goals):
-        scorer=random.choices(names,weights)[0]
-        assister=random.choice([n for n in names if n!=scorer])
-        stats.loc[stats["Player"]==scorer,"Goals"]+=1
-        stats.loc[stats["Player"]==assister,"Assists"]+=1
+        scorer   = random.choices(names, weights)[0]
+        assister = random.choice([n for n in names if n != scorer])
+        stats.loc[stats["Player"]==scorer,"Goals"]  += 1
+        stats.loc[stats["Player"]==assister,"Assists"] += 1
 
 def simulate_match(df:pd.DataFrame,home:str,away:str,stats:pd.DataFrame,conf:str)->Tuple[str,Dict[str,Any]]:
     r_h=r_a=None
@@ -222,6 +356,11 @@ def simulate_playoff_match(a: str, b: str,
                            stats: pd.DataFrame) -> Tuple[str, str, Dict[str,int]]:
     dfA = nord if a in list(nord["Team"]) else sued
     dfB = nord if b in list(nord["Team"]) else sued
+
+    # Für jedes Playoff-Spiel eigenes Lineup bauen
+    prepare_lineups_for_matches(dfA, [(a, a)])  # Dummy-Paarung nur für Team a
+    prepare_lineups_for_matches(dfB, [(b, b)])  # Dummy-Paarung nur für Team b
+
     pA = calc_strength(dfA[dfA["Team"] == a].iloc[0])
     pB = calc_strength(dfB[dfB["Team"] == b].iloc[0])
     prob = pA / (pA + pB)
@@ -347,15 +486,23 @@ def step_regular_season_once() -> Dict[str, Any]:
     max_spieltage = (len(nord_teams)-1)*2
     if isinstance(spieltag, int) and spieltag > max_spieltage:
         return {"status": "season_over", "season": season, "spieltag": spieltag}
+
     results_json=[]
+
     print("\n— Nord —")
-    for m in nsched[:len(nord)//2]:
+    today_nord_matches = nsched[:len(nord)//2]
+    prepare_lineups_for_matches(nord, today_nord_matches)
+    for m in today_nord_matches:
         s,j=simulate_match(nord,*m,stats,"Nord"); print(s); results_json.append(j)
     nsched=nsched[len(nord)//2:]
+
     print("\n— Süd —")
-    for m in ssched[:len(sued)//2]:
+    today_sued_matches = ssched[:len(sued)//2]
+    prepare_lineups_for_matches(sued, today_sued_matches)
+    for m in today_sued_matches:
         s,j=simulate_match(sued,*m,stats,"Süd"); print(s); results_json.append(j)
     ssched=ssched[len(sued)//2:]
+
     _print_tables(nord,sued,stats)
     save_spieltag_json(season,spieltag,results_json,nord,sued,stats)
     spieltag+=1
@@ -454,13 +601,41 @@ def _self_tests()->None:
     assert 0<calc_strength(fake_row)<100, "Strength out of range"
     print("✅ Self-Tests bestanden")
 
-if __name__=="__main__":
+if __name__ == "__main__":
     _ensure_dirs()
     _self_tests()
-    print("\n⚡ Demo-Saison (interaktiv) startet —")
-    # Eine Saison interaktiv (Regular + Playoffs)
-    # Tipp: In der GUI nutzt du die Step-Buttons.
-    season = get_next_season_number()
-    base = _init_new_season_state(season)
-    save_state(base)
-    print("\n🎉 Fertig. JSONs sind in 'spieltage' und 'playoffs'.")
+
+    state = load_state()
+    if not state:
+        season = get_next_season_number()
+        state = _init_new_season_state(season)
+        save_state(state)
+        print(f"\n🎬 Neue Saison {season} gestartet.")
+    else:
+        print(f"\n🔄 Saison {state['season']} wird fortgesetzt (Spieltag {state['spieltag']}).")
+
+    print("\nBedienung:")
+    print("  [Enter]  → nächsten Spieltag simulieren")
+    print("  p       → komplette Playoffs simulieren und neue Saison starten")
+    print("  q       → beenden")
+
+    while True:
+        cmd = input("\nEingabe ([Enter]/p/q): ").strip().lower()
+
+        if cmd == "q":
+            print("👋 Ende.")
+            break
+
+        elif cmd == "p":
+            res = simulate_full_playoffs_and_advance()
+            print(f"⚙️  Playoffs-Run: {res}")
+            # danach ist automatisch neue Saison angelegt
+            state = load_state()
+            print(f"🔁 Neue Saison {state['season']} gestartet (Spieltag {state['spieltag']}).")
+
+        else:
+            res = step_regular_season_once()
+            print(f"▶️  Spieltag-Result: {res}")
+            if res.get("status") == "season_over":
+                print("🏁 Hauptrunde beendet. Mit 'p' kannst du die Playoffs simulieren.")
+

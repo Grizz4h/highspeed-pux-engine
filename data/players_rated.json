@@ -20631,7 +20631,8 @@
     "rating_defense": 91,
     "rating_speed": 96,
     "rating_chemistry": 89,
-    "rating_overall": 93
+    "rating_overall": 93,
+    "save_pct": 92.63
   },
   {
     "league": "DEL2",
@@ -20657,7 +20658,8 @@
     "rating_defense": 86,
     "rating_speed": 92,
     "rating_chemistry": 76,
-    "rating_overall": 88
+    "rating_overall": 88,
+    "save_pct": 89.31
   },
   {
     "league": "DEL2",
@@ -20683,7 +20685,8 @@
     "rating_defense": 89,
     "rating_speed": 94,
     "rating_chemistry": 79,
-    "rating_overall": 91
+    "rating_overall": 91,
+    "save_pct": 91.87
   },
   {
     "league": "DEL2",
@@ -20709,7 +20712,8 @@
     "rating_defense": 86,
     "rating_speed": 89,
     "rating_chemistry": 78,
-    "rating_overall": 87
+    "rating_overall": 87,
+    "save_pct": 88.2
   },
   {
     "league": "DEL2",
@@ -20735,7 +20739,8 @@
     "rating_defense": 90,
     "rating_speed": 90,
     "rating_chemistry": 83,
-    "rating_overall": 90
+    "rating_overall": 90,
+    "save_pct": 92.31
   },
   {
     "league": "DEL2",
@@ -20761,7 +20766,8 @@
     "rating_defense": 89,
     "rating_speed": 92,
     "rating_chemistry": 85,
-    "rating_overall": 90
+    "rating_overall": 90,
+    "save_pct": 92.06
   },
   {
     "league": "DEL2",
@@ -20787,7 +20793,8 @@
     "rating_defense": 82,
     "rating_speed": 88,
     "rating_chemistry": 76,
-    "rating_overall": 85
+    "rating_overall": 85,
+    "save_pct": 85.06
   },
   {
     "league": "DEL2",
@@ -20813,7 +20820,8 @@
     "rating_defense": 92,
     "rating_speed": 93,
     "rating_chemistry": 83,
-    "rating_overall": 92
+    "rating_overall": 92,
+    "save_pct": 94.59
   },
   {
     "league": "DEL2",
@@ -20839,7 +20847,8 @@
     "rating_defense": 86,
     "rating_speed": 85,
     "rating_chemistry": 77,
-    "rating_overall": 85
+    "rating_overall": 85,
+    "save_pct": 88.28
   },
   {
     "league": "DEL2",
@@ -20865,7 +20874,8 @@
     "rating_defense": 88,
     "rating_speed": 88,
     "rating_chemistry": 81,
-    "rating_overall": 87
+    "rating_overall": 87,
+    "save_pct": 91.13
   },
   {
     "league": "DEL2",
@@ -20891,7 +20901,8 @@
     "rating_defense": 86,
     "rating_speed": 88,
     "rating_chemistry": 75,
-    "rating_overall": 86
+    "rating_overall": 86,
+    "save_pct": 89.21
   },
   {
     "league": "DEL2",
@@ -20917,7 +20928,8 @@
     "rating_defense": 86,
     "rating_speed": 84,
     "rating_chemistry": 69,
-    "rating_overall": 84
+    "rating_overall": 84,
+    "save_pct": 89.89
   },
   {
     "league": "DEL2",
@@ -20943,7 +20955,8 @@
     "rating_defense": 88,
     "rating_speed": 85,
     "rating_chemistry": 71,
-    "rating_overall": 85
+    "rating_overall": 85,
+    "save_pct": 91.95
   },
   {
     "league": "DEL2",
@@ -20969,7 +20982,8 @@
     "rating_defense": 84,
     "rating_speed": 83,
     "rating_chemistry": 63,
-    "rating_overall": 82
+    "rating_overall": 82,
+    "save_pct": 88.98
   },
   {
     "league": "DEL2",
@@ -20995,7 +21009,8 @@
     "rating_defense": 84,
     "rating_speed": 82,
     "rating_chemistry": 65,
-    "rating_overall": 81
+    "rating_overall": 81,
+    "save_pct": 88.99
   },
   {
     "league": "DEL2",
@@ -21021,7 +21036,8 @@
     "rating_defense": 86,
     "rating_speed": 81,
     "rating_chemistry": 62,
-    "rating_overall": 82
+    "rating_overall": 82,
+    "save_pct": 91.03
   },
   {
     "league": "DEL2",
@@ -21047,7 +21063,8 @@
     "rating_defense": 86,
     "rating_speed": 82,
     "rating_chemistry": 65,
-    "rating_overall": 82
+    "rating_overall": 82,
+    "save_pct": 91.3
   },
   {
     "league": "DEL2",
@@ -21073,7 +21090,8 @@
     "rating_defense": 83,
     "rating_speed": 73,
     "rating_chemistry": 54,
-    "rating_overall": 76
+    "rating_overall": 76,
+    "save_pct": 87.37
   },
   {
     "league": "DEL2",
@@ -21099,7 +21117,8 @@
     "rating_defense": 82,
     "rating_speed": 73,
     "rating_chemistry": 52,
-    "rating_overall": 75
+    "rating_overall": 75,
+    "save_pct": 88.0
   },
   {
     "league": "DEL2",
@@ -21125,7 +21144,8 @@
     "rating_defense": 85,
     "rating_speed": 72,
     "rating_chemistry": 50,
-    "rating_overall": 76
+    "rating_overall": 76,
+    "save_pct": 90.0
   },
   {
     "league": "DEL2",
@@ -21151,7 +21171,8 @@
     "rating_defense": 74,
     "rating_speed": 70,
     "rating_chemistry": 48,
-    "rating_overall": 70
+    "rating_overall": 70,
+    "save_pct": 81.32
   },
   {
     "league": "DEL2",
@@ -21177,7 +21198,8 @@
     "rating_defense": 84,
     "rating_speed": 72,
     "rating_chemistry": 54,
-    "rating_overall": 76
+    "rating_overall": 76,
+    "save_pct": 88.89
   },
   {
     "league": "DEL2",
@@ -21203,7 +21225,8 @@
     "rating_defense": 77,
     "rating_speed": 69,
     "rating_chemistry": 48,
-    "rating_overall": 71
+    "rating_overall": 71,
+    "save_pct": 81.16
   },
   {
     "league": "DEL2",
@@ -21229,7 +21252,8 @@
     "rating_defense": 86,
     "rating_speed": 74,
     "rating_chemistry": 50,
-    "rating_overall": 77
+    "rating_overall": 77,
+    "save_pct": 92.86
   },
   {
     "league": "DEL2",
@@ -21255,7 +21279,8 @@
     "rating_defense": 82,
     "rating_speed": 71,
     "rating_chemistry": 47,
-    "rating_overall": 74
+    "rating_overall": 74,
+    "save_pct": 88.71
   },
   {
     "league": "DEL2",
@@ -21281,7 +21306,8 @@
     "rating_defense": 88,
     "rating_speed": 72,
     "rating_chemistry": 49,
-    "rating_overall": 78
+    "rating_overall": 78,
+    "save_pct": 94.23
   },
   {
     "league": "DEL2",
@@ -21307,7 +21333,8 @@
     "rating_defense": 90,
     "rating_speed": 73,
     "rating_chemistry": 46,
-    "rating_overall": 79
+    "rating_overall": 79,
+    "save_pct": 96.67
   },
   {
     "league": "DEL2",
@@ -21333,7 +21360,8 @@
     "rating_defense": 74,
     "rating_speed": 70,
     "rating_chemistry": 46,
-    "rating_overall": 69
+    "rating_overall": 69,
+    "save_pct": 84.21
   },
   {
     "league": "DEL2",
@@ -21359,7 +21387,8 @@
     "rating_defense": 79,
     "rating_speed": 67,
     "rating_chemistry": 44,
-    "rating_overall": 70
+    "rating_overall": 70,
+    "save_pct": 84.62
   },
   {
     "league": "DEL2",
@@ -21385,7 +21414,8 @@
     "rating_defense": 94,
     "rating_speed": 72,
     "rating_chemistry": 46,
-    "rating_overall": 80
+    "rating_overall": 80,
+    "save_pct": 100.0
   },
   {
     "league": "DEL2",
@@ -21411,7 +21441,8 @@
     "rating_defense": 71,
     "rating_speed": 66,
     "rating_chemistry": 43,
-    "rating_overall": 66
+    "rating_overall": 66,
+    "save_pct": 80.65
   },
   {
     "league": "DEL2",
@@ -21437,7 +21468,8 @@
     "rating_defense": 81,
     "rating_speed": 68,
     "rating_chemistry": 42,
-    "rating_overall": 71
+    "rating_overall": 71,
+    "save_pct": 88.24
   },
   {
     "league": "DEL2",
@@ -21463,7 +21495,8 @@
     "rating_defense": 93,
     "rating_speed": 70,
     "rating_chemistry": 41,
-    "rating_overall": 78
+    "rating_overall": 78,
+    "save_pct": 100.0
   },
   {
     "league": "DEL2",
@@ -21489,7 +21522,8 @@
     "rating_defense": 61,
     "rating_speed": 40,
     "rating_chemistry": 40,
-    "rating_overall": 51
+    "rating_overall": 51,
+    "save_pct": 0.0
   },
   {
     "league": "DEL2",
@@ -21515,7 +21549,8 @@
     "rating_defense": 61,
     "rating_speed": 40,
     "rating_chemistry": 40,
-    "rating_overall": 51
+    "rating_overall": 51,
+    "save_pct": 0.0
   },
   {
     "league": "DEL2",
@@ -21541,7 +21576,8 @@
     "rating_defense": 61,
     "rating_speed": 40,
     "rating_chemistry": 40,
-    "rating_overall": 51
+    "rating_overall": 51,
+    "save_pct": 0.0
   },
   {
     "league": "DEL2",
@@ -21567,7 +21603,8 @@
     "rating_defense": 61,
     "rating_speed": 40,
     "rating_chemistry": 40,
-    "rating_overall": 51
+    "rating_overall": 51,
+    "save_pct": 0.0
   },
   {
     "league": "DEL2",
@@ -21593,7 +21630,8 @@
     "rating_defense": 61,
     "rating_speed": 40,
     "rating_chemistry": 40,
-    "rating_overall": 51
+    "rating_overall": 51,
+    "save_pct": 0.0
   },
   {
     "league": "DEL2",
@@ -21619,7 +21657,8 @@
     "rating_defense": 61,
     "rating_speed": 40,
     "rating_chemistry": 40,
-    "rating_overall": 51
+    "rating_overall": 51,
+    "save_pct": 0.0
   },
   {
     "league": "DEL2",
@@ -21645,7 +21684,8 @@
     "rating_defense": 61,
     "rating_speed": 40,
     "rating_chemistry": 40,
-    "rating_overall": 51
+    "rating_overall": 51,
+    "save_pct": 0.0
   },
   {
     "league": "DEL2",
@@ -21671,7 +21711,8 @@
     "rating_defense": 61,
     "rating_speed": 40,
     "rating_chemistry": 40,
-    "rating_overall": 51
+    "rating_overall": 51,
+    "save_pct": 0.0
   },
   {
     "league": "DEL2",
@@ -21697,7 +21738,8 @@
     "rating_defense": 61,
     "rating_speed": 40,
     "rating_chemistry": 40,
-    "rating_overall": 51
+    "rating_overall": 51,
+    "save_pct": 0.0
   },
   {
     "league": "DEL2",
@@ -21723,7 +21765,8 @@
     "rating_defense": 61,
     "rating_speed": 40,
     "rating_chemistry": 40,
-    "rating_overall": 51
+    "rating_overall": 51,
+    "save_pct": 0.0
   },
   {
     "league": "DEL2",
@@ -21749,7 +21792,8 @@
     "rating_defense": 61,
     "rating_speed": 40,
     "rating_chemistry": 40,
-    "rating_overall": 51
+    "rating_overall": 51,
+    "save_pct": 0.0
   },
   {
     "league": "DEL2",
@@ -21775,7 +21819,8 @@
     "rating_defense": 61,
     "rating_speed": 40,
     "rating_chemistry": 40,
-    "rating_overall": 51
+    "rating_overall": 51,
+    "save_pct": 0.0
   },
   {
     "league": "DEL2",
@@ -21801,7 +21846,8 @@
     "rating_defense": 61,
     "rating_speed": 40,
     "rating_chemistry": 40,
-    "rating_overall": 51
+    "rating_overall": 51,
+    "save_pct": 0.0
   },
   {
     "league": "DEL2",
@@ -21827,7 +21873,8 @@
     "rating_defense": 61,
     "rating_speed": 40,
     "rating_chemistry": 40,
-    "rating_overall": 51
+    "rating_overall": 51,
+    "save_pct": 0.0
   },
   {
     "league": "DEL",
@@ -21853,7 +21900,8 @@
     "rating_defense": 93,
     "rating_speed": 71,
     "rating_chemistry": 43,
-    "rating_overall": 79
+    "rating_overall": 79,
+    "save_pct": 100.0
   },
   {
     "league": "DEL",
@@ -21879,7 +21927,8 @@
     "rating_defense": 89,
     "rating_speed": 76,
     "rating_chemistry": 56,
-    "rating_overall": 80
+    "rating_overall": 80,
+    "save_pct": 94.64
   },
   {
     "league": "DEL",
@@ -21905,7 +21954,8 @@
     "rating_defense": 90,
     "rating_speed": 91,
     "rating_chemistry": 82,
-    "rating_overall": 90
+    "rating_overall": 90,
+    "save_pct": 92.71
   },
   {
     "league": "DEL",
@@ -21931,7 +21981,8 @@
     "rating_defense": 88,
     "rating_speed": 82,
     "rating_chemistry": 68,
-    "rating_overall": 83
+    "rating_overall": 83,
+    "save_pct": 92.27
   },
   {
     "league": "DEL",
@@ -21957,7 +22008,8 @@
     "rating_defense": 88,
     "rating_speed": 87,
     "rating_chemistry": 70,
-    "rating_overall": 86
+    "rating_overall": 86,
+    "save_pct": 92.13
   },
   {
     "league": "DEL",
@@ -21983,7 +22035,8 @@
     "rating_defense": 87,
     "rating_speed": 81,
     "rating_chemistry": 63,
-    "rating_overall": 83
+    "rating_overall": 83,
+    "save_pct": 92.13
   },
   {
     "league": "DEL",
@@ -22009,7 +22062,8 @@
     "rating_defense": 89,
     "rating_speed": 87,
     "rating_chemistry": 78,
-    "rating_overall": 87
+    "rating_overall": 87,
+    "save_pct": 91.99
   },
   {
     "league": "DEL",
@@ -22035,7 +22089,8 @@
     "rating_defense": 87,
     "rating_speed": 80,
     "rating_chemistry": 65,
-    "rating_overall": 82
+    "rating_overall": 82,
+    "save_pct": 91.62
   },
   {
     "league": "DEL",
@@ -22061,7 +22116,8 @@
     "rating_defense": 87,
     "rating_speed": 81,
     "rating_chemistry": 59,
-    "rating_overall": 82
+    "rating_overall": 82,
+    "save_pct": 91.59
   },
   {
     "league": "DEL",
@@ -22087,7 +22143,8 @@
     "rating_defense": 85,
     "rating_speed": 71,
     "rating_chemistry": 46,
-    "rating_overall": 75
+    "rating_overall": 75,
+    "save_pct": 90.91
   },
   {
     "league": "DEL",
@@ -22113,7 +22170,8 @@
     "rating_defense": 86,
     "rating_speed": 87,
     "rating_chemistry": 70,
-    "rating_overall": 85
+    "rating_overall": 85,
+    "save_pct": 90.52
   },
   {
     "league": "DEL",
@@ -22139,7 +22197,8 @@
     "rating_defense": 89,
     "rating_speed": 92,
     "rating_chemistry": 99,
-    "rating_overall": 91
+    "rating_overall": 91,
+    "save_pct": 90.38
   },
   {
     "league": "DEL",
@@ -22165,7 +22224,8 @@
     "rating_defense": 87,
     "rating_speed": 86,
     "rating_chemistry": 74,
-    "rating_overall": 86
+    "rating_overall": 86,
+    "save_pct": 90.38
   },
   {
     "league": "DEL",
@@ -22191,7 +22251,8 @@
     "rating_defense": 88,
     "rating_speed": 94,
     "rating_chemistry": 91,
-    "rating_overall": 91
+    "rating_overall": 91,
+    "save_pct": 90.2
   },
   {
     "league": "DEL",
@@ -22217,7 +22278,8 @@
     "rating_defense": 85,
     "rating_speed": 80,
     "rating_chemistry": 62,
-    "rating_overall": 81
+    "rating_overall": 81,
+    "save_pct": 89.89
   },
   {
     "league": "DEL",
@@ -22243,7 +22305,8 @@
     "rating_defense": 85,
     "rating_speed": 86,
     "rating_chemistry": 67,
-    "rating_overall": 84
+    "rating_overall": 84,
+    "save_pct": 89.79
   },
   {
     "league": "DEL",
@@ -22269,7 +22332,8 @@
     "rating_defense": 86,
     "rating_speed": 84,
     "rating_chemistry": 69,
-    "rating_overall": 83
+    "rating_overall": 83,
+    "save_pct": 89.52
   },
   {
     "league": "DEL",
@@ -22295,7 +22359,8 @@
     "rating_defense": 85,
     "rating_speed": 81,
     "rating_chemistry": 65,
-    "rating_overall": 82
+    "rating_overall": 82,
+    "save_pct": 89.2
   },
   {
     "league": "DEL",
@@ -22321,7 +22386,8 @@
     "rating_defense": 86,
     "rating_speed": 88,
     "rating_chemistry": 74,
-    "rating_overall": 86
+    "rating_overall": 86,
+    "save_pct": 89.02
   },
   {
     "league": "DEL",
@@ -22347,7 +22413,8 @@
     "rating_defense": 86,
     "rating_speed": 87,
     "rating_chemistry": 77,
-    "rating_overall": 86
+    "rating_overall": 86,
+    "save_pct": 88.81
   },
   {
     "league": "DEL",
@@ -22373,7 +22440,8 @@
     "rating_defense": 85,
     "rating_speed": 84,
     "rating_chemistry": 71,
-    "rating_overall": 83
+    "rating_overall": 83,
+    "save_pct": 88.58
   },
   {
     "league": "DEL",
@@ -22399,7 +22467,8 @@
     "rating_defense": 84,
     "rating_speed": 86,
     "rating_chemistry": 70,
-    "rating_overall": 84
+    "rating_overall": 84,
+    "save_pct": 88.54
   },
   {
     "league": "DEL",
@@ -22425,7 +22494,8 @@
     "rating_defense": 86,
     "rating_speed": 88,
     "rating_chemistry": 84,
-    "rating_overall": 86
+    "rating_overall": 86,
+    "save_pct": 88.44
   },
   {
     "league": "DEL",
@@ -22451,7 +22521,8 @@
     "rating_defense": 85,
     "rating_speed": 88,
     "rating_chemistry": 73,
-    "rating_overall": 86
+    "rating_overall": 86,
+    "save_pct": 88.43
   },
   {
     "league": "DEL",
@@ -22477,7 +22548,8 @@
     "rating_defense": 82,
     "rating_speed": 78,
     "rating_chemistry": 57,
-    "rating_overall": 78
+    "rating_overall": 78,
+    "save_pct": 88.04
   },
   {
     "league": "DEL",
@@ -22503,7 +22575,8 @@
     "rating_defense": 82,
     "rating_speed": 75,
     "rating_chemistry": 52,
-    "rating_overall": 76
+    "rating_overall": 76,
+    "save_pct": 87.83
   },
   {
     "league": "DEL",
@@ -22529,7 +22602,8 @@
     "rating_defense": 83,
     "rating_speed": 88,
     "rating_chemistry": 73,
-    "rating_overall": 84
+    "rating_overall": 84,
+    "save_pct": 87.31
   },
   {
     "league": "DEL",
@@ -22555,7 +22629,8 @@
     "rating_defense": 83,
     "rating_speed": 77,
     "rating_chemistry": 64,
-    "rating_overall": 79
+    "rating_overall": 79,
+    "save_pct": 87.07
   },
   {
     "league": "DEL",
@@ -22581,7 +22656,8 @@
     "rating_defense": 81,
     "rating_speed": 74,
     "rating_chemistry": 52,
-    "rating_overall": 75
+    "rating_overall": 75,
+    "save_pct": 87.07
   },
   {
     "league": "DEL",
@@ -22607,7 +22683,8 @@
     "rating_defense": 82,
     "rating_speed": 71,
     "rating_chemistry": 50,
-    "rating_overall": 74
+    "rating_overall": 74,
+    "save_pct": 86.67
   },
   {
     "league": "DEL",
@@ -22633,7 +22710,8 @@
     "rating_defense": 81,
     "rating_speed": 72,
     "rating_chemistry": 52,
-    "rating_overall": 75
+    "rating_overall": 75,
+    "save_pct": 85.71
   },
   {
     "league": "DEL",
@@ -22659,7 +22737,8 @@
     "rating_defense": 81,
     "rating_speed": 79,
     "rating_chemistry": 63,
-    "rating_overall": 78
+    "rating_overall": 78,
+    "save_pct": 85.25
   },
   {
     "league": "DEL",
@@ -22685,7 +22764,8 @@
     "rating_defense": 65,
     "rating_speed": 64,
     "rating_chemistry": 42,
-    "rating_overall": 61
+    "rating_overall": 61,
+    "save_pct": 75.0
   },
   {
     "league": "DEL",
@@ -22711,7 +22791,8 @@
     "rating_defense": 70,
     "rating_speed": 61,
     "rating_chemistry": 42,
-    "rating_overall": 63
+    "rating_overall": 63,
+    "save_pct": 66.67
   },
   {
     "league": "DEL",
@@ -22737,6 +22818,7 @@
     "rating_defense": 61,
     "rating_speed": 40,
     "rating_chemistry": 40,
-    "rating_overall": 51
+    "rating_overall": 51,
+    "save_pct": 0.0
   }
 ]
