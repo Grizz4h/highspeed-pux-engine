@@ -236,15 +236,15 @@
     "nation": "USA",
     "position": "T",
     "games": 15,
-    "minutes": 871.55,
+    "minutes": 911.55,
     "wins": 11,
     "losses": 4,
     "shutouts": 1,
-    "goals_against": 40,
-    "gaa": 2.75,
-    "shots_against": 412,
-    "saves": 372,
-    "save_pct": 90.29
+    "goals_against": 42,
+    "gaa": 2.76,
+    "shots_against": 427,
+    "saves": 385,
+    "save_pct": 90.16
   },
   {
     "league": "DEL",
@@ -521,15 +521,15 @@
     "nation": "GER",
     "position": "T",
     "games": 12,
-    "minutes": 606.6333333333333,
+    "minutes": 644.7,
     "wins": 4,
     "losses": 7,
     "shutouts": 0,
-    "goals_against": 43,
-    "gaa": 4.25,
-    "shots_against": 336,
-    "saves": 293,
-    "save_pct": 87.2
+    "goals_against": 44,
+    "gaa": 4.09,
+    "shots_against": 357,
+    "saves": 313,
+    "save_pct": 87.68
   },
   {
     "league": "DEL",

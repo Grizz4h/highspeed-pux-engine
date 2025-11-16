@@ -95,27 +95,38 @@ def _to_float(val: Any) -> float:
 def _pos_group_from_raw(pos: Optional[str]) -> Optional[str]:
     """
     Mappt Roh-Positionsstrings wie
-      - "DE", "DE (U21)", "D"
-      - "FO", "FO (U21)", "C", "LW", "RW"
+      - "DE", "DE (U21)", "DE(U21)", "D", "V", "Def", "Verteidiger"
+      - "FO", "C", "LW", "RW", etc.
       - "GK", "G"
     sauber auf "D", "F", "G".
     """
     if not pos:
         return None
 
-    p = str(pos).strip().upper()     # z.B. "DE (U21)"
-    base = p.split()[0]              # -> "DE"
+    p = str(pos).strip().upper()   # z.B. "DE (U21)" oder "DE(U21)"
+    token = p.split()[0]           # erster Block vor Leerzeichen, z.B. "DE" oder "DE(U21)"
 
-    # Verteidiger
-    if base in ("D", "DE", "V", "DEF", "VERTEIDIGER"):
-        return "D"
-
-    # Goalies
-    if base in ("G", "GK", "T", "TORHÜTER", "TORWART"):
+    # ---------- Goalies ----------
+    # alles, was klar nach Goalie aussieht
+    if token in ("G", "GK", "T") or "GOAL" in p or "TORH" in p or "TORW" in p:
         return "G"
 
-    # alles andere = Stürmer
+    # ---------- Defender ----------
+    # typische Varianten:
+    # "D", "DE", "DE(U21)", "DE-IRGENDWAS", "DEF", "VERTEIDIGER", "V"
+    if (
+
+        token in ("D", "V") or
+        token.startswith("DE") or      # DE, DE(U21), DE-..., DE/
+        token.startswith("DEF") or
+        token.startswith("DE (U21)") or      # DEF, Defender
+        "VERTEIDIGER" in p
+    ):
+        return "D"
+
+    # ---------- Rest: Forwards ----------
     return "F"
+
 
 
 
@@ -220,7 +231,8 @@ def load_del_skaters() -> List[Dict[str, Any]]:
 
         pos_raw = rec.get("position")
         pos_group = _pos_group_from_raw(pos_raw)
-        if pos_group == "G":
+        if pos_group == "G" or pos_raw.upper().startswith("GK"):
+  
             # ein Goalie, der versehentlich in der Skaterliste wäre -> überspringen
             continue
 

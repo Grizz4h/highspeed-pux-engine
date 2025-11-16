@@ -280,15 +280,9 @@ def write_realeTeams_py(nord: List[Dict[str, Any]], sued: List[Dict[str, Any]]) 
     schreibt realeTeams_live.py mit nord_teams / sued_teams als Python-Listen.
     """
     content = [
-        "# Diese Datei wurde automatisch aus players_rated.json erzeugt.",
-        "# Enthält die aktuellen REALEN Kader als HIGHspeed-Teams (Nord/Süd).",
+        f"nord_teams = {json.dumps(nord, indent=2, ensure_ascii=False)}",
         "",
-        "nord_teams = ",
-        json.dumps(nord, indent=2, ensure_ascii=False),
-        "",
-        "sued_teams = ",
-        json.dumps(sued, indent=2, ensure_ascii=False),
-        "",
+        f"sued_teams = {json.dumps(sued, indent=2, ensure_ascii=False)}",
     ]
     OUTPUT_FILE.write_text("\n".join(content), encoding="utf-8")
     print(f"💾 Datei geschrieben: {OUTPUT_FILE}")

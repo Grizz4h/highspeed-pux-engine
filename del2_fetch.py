@@ -131,12 +131,21 @@ def normalize_skaters(df: pd.DataFrame) -> List[Dict[str, Any]]:
             except (TypeError, ValueError):
                 number = None
 
-        pos_raw = str(row.get("Pos", "")).strip().upper()  # FO / DE etc.
-        # Vereinheitlichte Position:
-        if pos_raw in ("DE", "D", "V"):
+        pos_raw = str(row.get("Pos", "")).strip().upper()  # FO / DE / GK etc.
+
+        # --- Goalies, die fälschlich in der Skaterliste stehen, direkt überspringen ---
+        # Alles was klar nach Goalie aussieht, ignorieren wir hier.
+        if pos_raw in ("G", "GK", "T", "TOR", "TORH", "TORHÜTER"):
+            # Dieser Spieler kommt sauber aus der DEL2_GOALIES_URL mit Stats,
+            # also hier nicht als Skater aufnehmen.
+            continue
+
+        # Vereinheitlichte Position für Skater:
+        if pos_raw in ("DE", "D", "V", "DE (U21)"):
             pos_group = "D"
         else:
             pos_group = "F"
+
 
         gp = _to_int(row.get("GP"))
         goals = _to_int(row.get("T"))

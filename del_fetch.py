@@ -274,7 +274,14 @@ def normalize_del_skaters(
 
         # Name "Nachname, Vorname" glätten
         name = re.sub(r"\s+", " ", name)
-
+        
+       # ---------- NEU: Position prüfen und Goalies in der Skaterliste ignorieren ----------
+        pos_raw = str(row.get("Pos", "")).strip().upper()
+        if pos_raw in ("G", "GK", "T", "TOR", "TORH", "TORHÜTER"):
+            # Dieser Spieler wird später sauber aus der Goalie-Tabelle geholt
+            # → hier NICHT als Skater aufnehmen
+            continue
+        # ------------------------------------------------------------------ #
         # Team über Logo-ID
         logo_id: Optional[int] = team_ids[idx] if idx < len(team_ids) else None
         team_code: Optional[str] = None
