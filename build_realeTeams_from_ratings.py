@@ -290,55 +290,58 @@ def write_realeTeams_py(nord: List[Dict[str, Any]], sued: List[Dict[str, Any]]) 
     print(f"💾 Datei geschrieben: {OUTPUT_FILE}")
 
 
-def main() -> None:
-    nord, sued = build_realeTeams_from_ratings()
-    write_realeTeams_py(nord, sued)
 def write_realeTeams_web_py(nord: List[Dict[str, Any]], sued: List[Dict[str, Any]]) -> None:
     """
-    schreibt realeTeams_web.py mit nord_teams / sued_teams im Web-Format:
-    - Team
-    - Players: Name, Offense, Defense, Speed, Chemistry
-    - Momentum: 0
+    schreibt realeTeams_web.py mit kompakten 1-Zeilen-Einträgen pro Spieler.
     """
 
-    def to_web_team(team: Dict[str, Any]) -> Dict[str, Any]:
-        return {
-            "Team": team.get("Team"),
-            "Momentum": 0,
-            "Players": [
-                {
-                    "Name": p.get("Name"),
-                    "Offense": p.get("Offense"),
-                    "Defense": p.get("Defense"),
-                    "Speed": p.get("Speed"),
-                    "Chemistry": p.get("Chemistry"),
-                }
-                for p in team.get("Players", [])
-            ],
-        }
+    def player_one_line(p: Dict[str, Any]) -> str:
+        return (
+            '{'
+            f'"Name":"{p.get("Name")}",'
+            f'"Number":{p.get("Number")},'
+            f'"Position":"{p.get("PositionGroup")}",'
+            f'"Offense":{p.get("Offense")},'
+            f'"Defense":{p.get("Defense")},'
+            f'"Speed":{p.get("Speed")},'
+            f'"Chemistry":{p.get("Chemistry")}'
+            '}'
+        )
 
-    nord_web = [to_web_team(t) for t in nord]
-    sued_web = [to_web_team(t) for t in sued]
+    def team_to_string(team: Dict[str, Any]) -> str:
+        players_raw = ",\n    ".join(player_one_line(p) for p in team.get("Players", []))
+        return (
+            "{\n"
+            f'  "Team": "{team.get("Team")}",\n'
+            f'  "Momentum": 0,\n'
+            f'  "Players": [\n'
+            f'    {players_raw}\n'
+            f'  ]\n'
+            "}"
+        )
 
-    nord_str = pprint.pformat(nord_web, width=120, sort_dicts=False)
-    sued_str = pprint.pformat(sued_web, width=120, sort_dicts=False)
+    nord_str = "[\n" + ",\n".join(team_to_string(t) for t in nord) + "\n]"
+    sued_str = "[\n" + ",\n".join(team_to_string(t) for t in sued) + "\n]"
 
     content = [
         "# Diese Datei wurde automatisch aus players_rated.json erzeugt.",
-        "# Web-Format: reduzierte Kader für die Webseite.",
+        "# Web-Format: kompakte 1-Zeilen-Spielereinträge.",
         "",
         f"nord_teams = {nord_str}",
         "",
         f"sued_teams = {sued_str}",
         "",
     ]
+
     WEB_OUTPUT_FILE.write_text("\n".join(content), encoding="utf-8")
     print(f"💾 Datei geschrieben: {WEB_OUTPUT_FILE}")
-    
+
+
 def main() -> None:
     nord, sued = build_realeTeams_from_ratings()
     write_realeTeams_py(nord, sued)        # vollständige Version
     write_realeTeams_web_py(nord, sued)    # abgespeckte Web-Version
+
 
 if __name__ == "__main__":
     main()
