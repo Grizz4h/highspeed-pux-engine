@@ -1,0 +1,341 @@
+{
+  "timestamp": "2025-11-17T18:05:58.145024",
+  "saison": 13,
+  "runde": 3,
+  "series": [
+    {
+      "a": "Mannheim Ventus",
+      "b": "Augsburg Ferox",
+      "games": [
+        {
+          "g": 1,
+          "home": "Mannheim Ventus",
+          "away": "Augsburg Ferox",
+          "g_home": 2,
+          "g_away": 1,
+          "winner": "Mannheim Ventus"
+        },
+        {
+          "g": 2,
+          "home": "Mannheim Ventus",
+          "away": "Augsburg Ferox",
+          "g_home": 3,
+          "g_away": 1,
+          "winner": "Mannheim Ventus"
+        },
+        {
+          "g": 3,
+          "home": "Mannheim Ventus",
+          "away": "Augsburg Ferox",
+          "g_home": 1,
+          "g_away": 1,
+          "winner": "Augsburg Ferox"
+        },
+        {
+          "g": 4,
+          "home": "Mannheim Ventus",
+          "away": "Augsburg Ferox",
+          "g_home": 3,
+          "g_away": 0,
+          "winner": "Mannheim Ventus"
+        },
+        {
+          "g": 5,
+          "home": "Mannheim Ventus",
+          "away": "Augsburg Ferox",
+          "g_home": 2,
+          "g_away": 1,
+          "winner": "Mannheim Ventus"
+        }
+      ],
+      "result": "4:1",
+      "winner": "Mannheim Ventus"
+    }
+  ],
+  "tabelle_nord": [
+    {
+      "Team": "Bad Nauheim Devils",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Bremerhaven Trident",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Düsseldorf Aurora",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Frankfurt Core",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Iserlohn Miners",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Köln Blitzhaie",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Krefeld Kernschlag",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Kassel Zenit",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Wolfsburg Voltsturm",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Whiteout Berlin",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    }
+  ],
+  "tabelle_sued": [
+    {
+      "Team": "Augsburg Ferox",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Landshut Lichtkern",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "München FluxBullen",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Mannheim Ventus",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Novadelta Panther",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Nürnberg Eistiger",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Regensburg Pulse",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Ravensburg Zenit Falken",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Straubing Forest Tigers",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Schwenningen Sturmflügel",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    }
+  ],
+  "top_scorer": [
+    {
+      "Player": "Leona Gawankvik",
+      "Team": "Mannheim Ventus",
+      "Goals": 5,
+      "Assists": 2,
+      "Points": 7
+    },
+    {
+      "Player": "Rileyu Damiansen",
+      "Team": "Augsburg Ferox",
+      "Goals": 3,
+      "Assists": 2,
+      "Points": 5
+    },
+    {
+      "Player": "Codye Kunyken",
+      "Team": "Augsburg Ferox",
+      "Goals": 2,
+      "Assists": 3,
+      "Points": 5
+    },
+    {
+      "Player": "Nicolasa Mattinlek",
+      "Team": "Mannheim Ventus",
+      "Goals": 2,
+      "Assists": 3,
+      "Points": 5
+    },
+    {
+      "Player": "Leona Lindlek",
+      "Team": "Augsburg Ferox",
+      "Goals": 2,
+      "Assists": 3,
+      "Points": 5
+    },
+    {
+      "Player": "Bennu Rossmyinov",
+      "Team": "Bremerhaven Trident",
+      "Goals": 4,
+      "Assists": 1,
+      "Points": 5
+    },
+    {
+      "Player": "Anthonyu Louisovik",
+      "Team": "Augsburg Ferox",
+      "Goals": 3,
+      "Assists": 2,
+      "Points": 5
+    },
+    {
+      "Player": "Ale Ehlven",
+      "Team": "Mannheim Ventus",
+      "Goals": 2,
+      "Assists": 3,
+      "Points": 5
+    },
+    {
+      "Player": "Krise Bennettto",
+      "Team": "Mannheim Ventus",
+      "Goals": 3,
+      "Assists": 2,
+      "Points": 5
+    },
+    {
+      "Player": "Marcu Michaelsen",
+      "Team": "Mannheim Ventus",
+      "Goals": 0,
+      "Assists": 4,
+      "Points": 4
+    },
+    {
+      "Player": "Matthiasu Plachtven",
+      "Team": "Mannheim Ventus",
+      "Goals": 3,
+      "Assists": 1,
+      "Points": 4
+    },
+    {
+      "Player": "Kristianu Reichlek",
+      "Team": "Mannheim Ventus",
+      "Goals": 3,
+      "Assists": 1,
+      "Points": 4
+    },
+    {
+      "Player": "Johne Gilmoik",
+      "Team": "Mannheim Ventus",
+      "Goals": 2,
+      "Assists": 2,
+      "Points": 4
+    },
+    {
+      "Player": "Yannicku Proskov",
+      "Team": "Mannheim Ventus",
+      "Goals": 1,
+      "Assists": 3,
+      "Points": 4
+    },
+    {
+      "Player": "Dani Renoufin",
+      "Team": "Mannheim Ventus",
+      "Goals": 2,
+      "Assists": 2,
+      "Points": 4
+    },
+    {
+      "Player": "Maxima Rauschov",
+      "Team": "Bremerhaven Trident",
+      "Goals": 0,
+      "Assists": 4,
+      "Points": 4
+    },
+    {
+      "Player": "Ale Greniov",
+      "Team": "Augsburg Ferox",
+      "Goals": 3,
+      "Assists": 1,
+      "Points": 4
+    },
+    {
+      "Player": "Ale Blankov",
+      "Team": "Augsburg Ferox",
+      "Goals": 2,
+      "Assists": 2,
+      "Points": 4
+    },
+    {
+      "Player": "Simona Seidlar",
+      "Team": "Straubing Forest Tigers",
+      "Goals": 2,
+      "Assists": 2,
+      "Points": 4
+    },
+    {
+      "Player": "Tima Wohlgemtto",
+      "Team": "Augsburg Ferox",
+      "Goals": 2,
+      "Assists": 2,
+      "Points": 4
+    }
+  ]
+}

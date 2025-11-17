@@ -1,0 +1,341 @@
+{
+  "timestamp": "2025-11-17T18:03:53.326470",
+  "saison": 6,
+  "runde": 3,
+  "series": [
+    {
+      "a": "München FluxBullen",
+      "b": "Landshut Lichtkern",
+      "games": [
+        {
+          "g": 1,
+          "home": "München FluxBullen",
+          "away": "Landshut Lichtkern",
+          "g_home": 2,
+          "g_away": 2,
+          "winner": "Landshut Lichtkern"
+        },
+        {
+          "g": 2,
+          "home": "München FluxBullen",
+          "away": "Landshut Lichtkern",
+          "g_home": 2,
+          "g_away": 3,
+          "winner": "Landshut Lichtkern"
+        },
+        {
+          "g": 3,
+          "home": "München FluxBullen",
+          "away": "Landshut Lichtkern",
+          "g_home": 0,
+          "g_away": 3,
+          "winner": "Landshut Lichtkern"
+        },
+        {
+          "g": 4,
+          "home": "München FluxBullen",
+          "away": "Landshut Lichtkern",
+          "g_home": 2,
+          "g_away": 1,
+          "winner": "München FluxBullen"
+        },
+        {
+          "g": 5,
+          "home": "München FluxBullen",
+          "away": "Landshut Lichtkern",
+          "g_home": 1,
+          "g_away": 1,
+          "winner": "Landshut Lichtkern"
+        }
+      ],
+      "result": "1:4",
+      "winner": "Landshut Lichtkern"
+    }
+  ],
+  "tabelle_nord": [
+    {
+      "Team": "Bad Nauheim Devils",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Bremerhaven Trident",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Düsseldorf Aurora",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Frankfurt Core",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Iserlohn Miners",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Köln Blitzhaie",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Krefeld Kernschlag",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Kassel Zenit",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Wolfsburg Voltsturm",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Whiteout Berlin",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    }
+  ],
+  "tabelle_sued": [
+    {
+      "Team": "Augsburg Ferox",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Landshut Lichtkern",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "München FluxBullen",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Mannheim Ventus",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Novadelta Panther",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Nürnberg Eistiger",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Regensburg Pulse",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Ravensburg Zenit Falken",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Straubing Forest Tigers",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Schwenningen Sturmflügel",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    }
+  ],
+  "top_scorer": [
+    {
+      "Player": "Fabio Wagnov",
+      "Team": "München FluxBullen",
+      "Goals": 3,
+      "Assists": 4,
+      "Points": 7
+    },
+    {
+      "Player": "Simona Seidlar",
+      "Team": "Straubing Forest Tigers",
+      "Goals": 7,
+      "Assists": 0,
+      "Points": 7
+    },
+    {
+      "Player": "Phe Sinnov",
+      "Team": "München FluxBullen",
+      "Goals": 3,
+      "Assists": 4,
+      "Points": 7
+    },
+    {
+      "Player": "Simona Seidlar",
+      "Team": "Landshut Lichtkern",
+      "Goals": 7,
+      "Assists": 0,
+      "Points": 7
+    },
+    {
+      "Player": "Justinu Volekinov",
+      "Team": "Bad Nauheim Devils",
+      "Goals": 4,
+      "Assists": 2,
+      "Points": 6
+    },
+    {
+      "Player": "Yannicku Wenzsen",
+      "Team": "Landshut Lichtkern",
+      "Goals": 2,
+      "Assists": 4,
+      "Points": 6
+    },
+    {
+      "Player": "Davisa Kochik",
+      "Team": "Bad Nauheim Devils",
+      "Goals": 4,
+      "Assists": 2,
+      "Points": 6
+    },
+    {
+      "Player": "Taro Hirosdunov",
+      "Team": "München FluxBullen",
+      "Goals": 5,
+      "Assists": 1,
+      "Points": 6
+    },
+    {
+      "Player": "Finni Seriktto",
+      "Team": "Landshut Lichtkern",
+      "Goals": 4,
+      "Assists": 2,
+      "Points": 6
+    },
+    {
+      "Player": "Dille Heatheringttto",
+      "Team": "München FluxBullen",
+      "Goals": 4,
+      "Assists": 1,
+      "Points": 5
+    },
+    {
+      "Player": "Phe Bidoulov",
+      "Team": "Frankfurt Core",
+      "Goals": 1,
+      "Assists": 4,
+      "Points": 5
+    },
+    {
+      "Player": "Toba Riedinov",
+      "Team": "München FluxBullen",
+      "Goals": 3,
+      "Assists": 2,
+      "Points": 5
+    },
+    {
+      "Player": "Phe Bidoulov",
+      "Team": "Bad Nauheim Devils",
+      "Goals": 1,
+      "Assists": 4,
+      "Points": 5
+    },
+    {
+      "Player": "Andi Schwardunov",
+      "Team": "Landshut Lichtkern",
+      "Goals": 1,
+      "Assists": 4,
+      "Points": 5
+    },
+    {
+      "Player": "Sei Parkdunov",
+      "Team": "Landshut Lichtkern",
+      "Goals": 2,
+      "Assists": 3,
+      "Points": 5
+    },
+    {
+      "Player": "Eliase Lindnov",
+      "Team": "Landshut Lichtkern",
+      "Goals": 1,
+      "Assists": 4,
+      "Points": 5
+    },
+    {
+      "Player": "Tore Immvik",
+      "Team": "Landshut Lichtkern",
+      "Goals": 2,
+      "Assists": 2,
+      "Points": 4
+    },
+    {
+      "Player": "Enra Moralin",
+      "Team": "Augsburg Ferox",
+      "Goals": 3,
+      "Assists": 1,
+      "Points": 4
+    },
+    {
+      "Player": "Villa Pokkvik",
+      "Team": "München FluxBullen",
+      "Goals": 2,
+      "Assists": 2,
+      "Points": 4
+    },
+    {
+      "Player": "Juliano Lautenschlagov",
+      "Team": "Bad Nauheim Devils",
+      "Goals": 3,
+      "Assists": 1,
+      "Points": 4
+    }
+  ]
+}

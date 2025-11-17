@@ -1,0 +1,357 @@
+{
+  "timestamp": "2025-11-17T18:06:12.474503",
+  "saison": 17,
+  "runde": 3,
+  "series": [
+    {
+      "a": "München FluxBullen",
+      "b": "Augsburg Ferox",
+      "games": [
+        {
+          "g": 1,
+          "home": "München FluxBullen",
+          "away": "Augsburg Ferox",
+          "g_home": 1,
+          "g_away": 3,
+          "winner": "Augsburg Ferox"
+        },
+        {
+          "g": 2,
+          "home": "München FluxBullen",
+          "away": "Augsburg Ferox",
+          "g_home": 2,
+          "g_away": 3,
+          "winner": "Augsburg Ferox"
+        },
+        {
+          "g": 3,
+          "home": "München FluxBullen",
+          "away": "Augsburg Ferox",
+          "g_home": 3,
+          "g_away": 2,
+          "winner": "München FluxBullen"
+        },
+        {
+          "g": 4,
+          "home": "München FluxBullen",
+          "away": "Augsburg Ferox",
+          "g_home": 4,
+          "g_away": 2,
+          "winner": "München FluxBullen"
+        },
+        {
+          "g": 5,
+          "home": "München FluxBullen",
+          "away": "Augsburg Ferox",
+          "g_home": 2,
+          "g_away": 2,
+          "winner": "Augsburg Ferox"
+        },
+        {
+          "g": 6,
+          "home": "München FluxBullen",
+          "away": "Augsburg Ferox",
+          "g_home": 3,
+          "g_away": 0,
+          "winner": "München FluxBullen"
+        },
+        {
+          "g": 7,
+          "home": "München FluxBullen",
+          "away": "Augsburg Ferox",
+          "g_home": 2,
+          "g_away": 2,
+          "winner": "Augsburg Ferox"
+        }
+      ],
+      "result": "3:4",
+      "winner": "Augsburg Ferox"
+    }
+  ],
+  "tabelle_nord": [
+    {
+      "Team": "Bad Nauheim Devils",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Bremerhaven Trident",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Düsseldorf Aurora",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Frankfurt Core",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Iserlohn Miners",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Köln Blitzhaie",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Krefeld Kernschlag",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Kassel Zenit",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Wolfsburg Voltsturm",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Whiteout Berlin",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    }
+  ],
+  "tabelle_sued": [
+    {
+      "Team": "Augsburg Ferox",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Landshut Lichtkern",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "München FluxBullen",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Mannheim Ventus",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Novadelta Panther",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Nürnberg Eistiger",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Regensburg Pulse",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Ravensburg Zenit Falken",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Straubing Forest Tigers",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Schwenningen Sturmflügel",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    }
+  ],
+  "top_scorer": [
+    {
+      "Player": "Tima Wohlgemtto",
+      "Team": "Augsburg Ferox",
+      "Goals": 4,
+      "Assists": 4,
+      "Points": 8
+    },
+    {
+      "Player": "Tore Immvik",
+      "Team": "Landshut Lichtkern",
+      "Goals": 2,
+      "Assists": 6,
+      "Points": 8
+    },
+    {
+      "Player": "Madisoni Boweydunov",
+      "Team": "Augsburg Ferox",
+      "Goals": 5,
+      "Assists": 2,
+      "Points": 7
+    },
+    {
+      "Player": "Fabio Wagnov",
+      "Team": "München FluxBullen",
+      "Goals": 2,
+      "Assists": 5,
+      "Points": 7
+    },
+    {
+      "Player": "Veita Oswalddunov",
+      "Team": "München FluxBullen",
+      "Goals": 5,
+      "Assists": 2,
+      "Points": 7
+    },
+    {
+      "Player": "Adamo Brooksovik",
+      "Team": "München FluxBullen",
+      "Goals": 4,
+      "Assists": 2,
+      "Points": 6
+    },
+    {
+      "Player": "Jeri McKennven",
+      "Team": "München FluxBullen",
+      "Goals": 3,
+      "Assists": 3,
+      "Points": 6
+    },
+    {
+      "Player": "Kyli Mayhewtli",
+      "Team": "Augsburg Ferox",
+      "Goals": 3,
+      "Assists": 3,
+      "Points": 6
+    },
+    {
+      "Player": "Codye Kunyken",
+      "Team": "Augsburg Ferox",
+      "Goals": 4,
+      "Assists": 2,
+      "Points": 6
+    },
+    {
+      "Player": "Ryani Murphyro",
+      "Team": "München FluxBullen",
+      "Goals": 1,
+      "Assists": 4,
+      "Points": 5
+    },
+    {
+      "Player": "Dono Busdekvik",
+      "Team": "Augsburg Ferox",
+      "Goals": 5,
+      "Assists": 0,
+      "Points": 5
+    },
+    {
+      "Player": "Zaco Solowlek",
+      "Team": "Mannheim Ventus",
+      "Goals": 3,
+      "Assists": 2,
+      "Points": 5
+    },
+    {
+      "Player": "Dille Heatheringttto",
+      "Team": "München FluxBullen",
+      "Goals": 4,
+      "Assists": 1,
+      "Points": 5
+    },
+    {
+      "Player": "Markusu Eisenschmlek",
+      "Team": "München FluxBullen",
+      "Goals": 2,
+      "Assists": 3,
+      "Points": 5
+    },
+    {
+      "Player": "Toba Riedinov",
+      "Team": "München FluxBullen",
+      "Goals": 3,
+      "Assists": 2,
+      "Points": 5
+    },
+    {
+      "Player": "Maximiliana Rennov",
+      "Team": "Augsburg Ferox",
+      "Goals": 1,
+      "Assists": 4,
+      "Points": 5
+    },
+    {
+      "Player": "Maxima Rauschov",
+      "Team": "Bremerhaven Trident",
+      "Goals": 2,
+      "Assists": 2,
+      "Points": 4
+    },
+    {
+      "Player": "Bradya Ferguinov",
+      "Team": "München FluxBullen",
+      "Goals": 1,
+      "Assists": 3,
+      "Points": 4
+    },
+    {
+      "Player": "Dominiki Grossnik",
+      "Team": "Landshut Lichtkern",
+      "Goals": 2,
+      "Assists": 2,
+      "Points": 4
+    },
+    {
+      "Player": "Eliase Lindnov",
+      "Team": "Landshut Lichtkern",
+      "Goals": 2,
+      "Assists": 2,
+      "Points": 4
+    }
+  ]
+}

@@ -1,0 +1,469 @@
+{
+  "timestamp": "2025-11-17T18:03:50.610894",
+  "saison": 5,
+  "runde": 1,
+  "series": [
+    {
+      "a": "Bad Nauheim Devils",
+      "b": "Mannheim Ventus",
+      "games": [
+        {
+          "g": 1,
+          "home": "Bad Nauheim Devils",
+          "away": "Mannheim Ventus",
+          "g_home": 3,
+          "g_away": 3,
+          "winner": "Mannheim Ventus"
+        },
+        {
+          "g": 2,
+          "home": "Bad Nauheim Devils",
+          "away": "Mannheim Ventus",
+          "g_home": 2,
+          "g_away": 1,
+          "winner": "Bad Nauheim Devils"
+        },
+        {
+          "g": 3,
+          "home": "Bad Nauheim Devils",
+          "away": "Mannheim Ventus",
+          "g_home": 1,
+          "g_away": 0,
+          "winner": "Bad Nauheim Devils"
+        },
+        {
+          "g": 4,
+          "home": "Bad Nauheim Devils",
+          "away": "Mannheim Ventus",
+          "g_home": 2,
+          "g_away": 2,
+          "winner": "Mannheim Ventus"
+        },
+        {
+          "g": 5,
+          "home": "Bad Nauheim Devils",
+          "away": "Mannheim Ventus",
+          "g_home": 2,
+          "g_away": 1,
+          "winner": "Bad Nauheim Devils"
+        },
+        {
+          "g": 6,
+          "home": "Bad Nauheim Devils",
+          "away": "Mannheim Ventus",
+          "g_home": 5,
+          "g_away": 3,
+          "winner": "Bad Nauheim Devils"
+        }
+      ],
+      "result": "4:2",
+      "winner": "Bad Nauheim Devils"
+    },
+    {
+      "a": "Bremerhaven Trident",
+      "b": "München FluxBullen",
+      "games": [
+        {
+          "g": 1,
+          "home": "Bremerhaven Trident",
+          "away": "München FluxBullen",
+          "g_home": 1,
+          "g_away": 2,
+          "winner": "München FluxBullen"
+        },
+        {
+          "g": 2,
+          "home": "Bremerhaven Trident",
+          "away": "München FluxBullen",
+          "g_home": 0,
+          "g_away": 3,
+          "winner": "München FluxBullen"
+        },
+        {
+          "g": 3,
+          "home": "Bremerhaven Trident",
+          "away": "München FluxBullen",
+          "g_home": 0,
+          "g_away": 2,
+          "winner": "München FluxBullen"
+        },
+        {
+          "g": 4,
+          "home": "Bremerhaven Trident",
+          "away": "München FluxBullen",
+          "g_home": 2,
+          "g_away": 2,
+          "winner": "München FluxBullen"
+        }
+      ],
+      "result": "0:4",
+      "winner": "München FluxBullen"
+    },
+    {
+      "a": "Düsseldorf Aurora",
+      "b": "Landshut Lichtkern",
+      "games": [
+        {
+          "g": 1,
+          "home": "Düsseldorf Aurora",
+          "away": "Landshut Lichtkern",
+          "g_home": 2,
+          "g_away": 3,
+          "winner": "Landshut Lichtkern"
+        },
+        {
+          "g": 2,
+          "home": "Düsseldorf Aurora",
+          "away": "Landshut Lichtkern",
+          "g_home": 2,
+          "g_away": 2,
+          "winner": "Landshut Lichtkern"
+        },
+        {
+          "g": 3,
+          "home": "Düsseldorf Aurora",
+          "away": "Landshut Lichtkern",
+          "g_home": 2,
+          "g_away": 2,
+          "winner": "Landshut Lichtkern"
+        },
+        {
+          "g": 4,
+          "home": "Düsseldorf Aurora",
+          "away": "Landshut Lichtkern",
+          "g_home": 2,
+          "g_away": 3,
+          "winner": "Landshut Lichtkern"
+        }
+      ],
+      "result": "0:4",
+      "winner": "Landshut Lichtkern"
+    },
+    {
+      "a": "Frankfurt Core",
+      "b": "Augsburg Ferox",
+      "games": [
+        {
+          "g": 1,
+          "home": "Frankfurt Core",
+          "away": "Augsburg Ferox",
+          "g_home": 3,
+          "g_away": 3,
+          "winner": "Augsburg Ferox"
+        },
+        {
+          "g": 2,
+          "home": "Frankfurt Core",
+          "away": "Augsburg Ferox",
+          "g_home": 2,
+          "g_away": 2,
+          "winner": "Augsburg Ferox"
+        },
+        {
+          "g": 3,
+          "home": "Frankfurt Core",
+          "away": "Augsburg Ferox",
+          "g_home": 2,
+          "g_away": 2,
+          "winner": "Augsburg Ferox"
+        },
+        {
+          "g": 4,
+          "home": "Frankfurt Core",
+          "away": "Augsburg Ferox",
+          "g_home": 3,
+          "g_away": 4,
+          "winner": "Augsburg Ferox"
+        }
+      ],
+      "result": "0:4",
+      "winner": "Augsburg Ferox"
+    }
+  ],
+  "tabelle_nord": [
+    {
+      "Team": "Bad Nauheim Devils",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Bremerhaven Trident",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Düsseldorf Aurora",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Frankfurt Core",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Iserlohn Miners",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Köln Blitzhaie",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Krefeld Kernschlag",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Kassel Zenit",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Wolfsburg Voltsturm",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Whiteout Berlin",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    }
+  ],
+  "tabelle_sued": [
+    {
+      "Team": "Augsburg Ferox",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Landshut Lichtkern",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "München FluxBullen",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Mannheim Ventus",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Novadelta Panther",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Nürnberg Eistiger",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Regensburg Pulse",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Ravensburg Zenit Falken",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Straubing Forest Tigers",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    },
+    {
+      "Team": "Schwenningen Sturmflügel",
+      "Points": 0,
+      "GF": 0,
+      "GA": 0,
+      "GD": 0
+    }
+  ],
+  "top_scorer": [
+    {
+      "Player": "Rileyu Damiansen",
+      "Team": "Augsburg Ferox",
+      "Goals": 1,
+      "Assists": 3,
+      "Points": 4
+    },
+    {
+      "Player": "Enra Moralin",
+      "Team": "Augsburg Ferox",
+      "Goals": 1,
+      "Assists": 2,
+      "Points": 3
+    },
+    {
+      "Player": "Dono Busdekvik",
+      "Team": "Augsburg Ferox",
+      "Goals": 2,
+      "Assists": 1,
+      "Points": 3
+    },
+    {
+      "Player": "Time Kosvik",
+      "Team": "Frankfurt Core",
+      "Goals": 1,
+      "Assists": 2,
+      "Points": 3
+    },
+    {
+      "Player": "Justinu MacPherar",
+      "Team": "Bad Nauheim Devils",
+      "Goals": 2,
+      "Assists": 1,
+      "Points": 3
+    },
+    {
+      "Player": "Linusa Frötli",
+      "Team": "Frankfurt Core",
+      "Goals": 1,
+      "Assists": 2,
+      "Points": 3
+    },
+    {
+      "Player": "Fabi Pilen",
+      "Team": "Augsburg Ferox",
+      "Goals": 1,
+      "Assists": 2,
+      "Points": 3
+    },
+    {
+      "Player": "Raphaelo Jakovlov",
+      "Team": "Bad Nauheim Devils",
+      "Goals": 1,
+      "Assists": 2,
+      "Points": 3
+    },
+    {
+      "Player": "Taylori Vausan",
+      "Team": "Bad Nauheim Devils",
+      "Goals": 2,
+      "Assists": 1,
+      "Points": 3
+    },
+    {
+      "Player": "Krise Bennettto",
+      "Team": "Mannheim Ventus",
+      "Goals": 1,
+      "Assists": 2,
+      "Points": 3
+    },
+    {
+      "Player": "Anthonyu Grecan",
+      "Team": "Mannheim Ventus",
+      "Goals": 1,
+      "Assists": 2,
+      "Points": 3
+    },
+    {
+      "Player": "Toba Schwardunov",
+      "Team": "Landshut Lichtkern",
+      "Goals": 1,
+      "Assists": 2,
+      "Points": 3
+    },
+    {
+      "Player": "Simona Seidlar",
+      "Team": "Landshut Lichtkern",
+      "Goals": 1,
+      "Assists": 2,
+      "Points": 3
+    },
+    {
+      "Player": "Time Kosvik",
+      "Team": "Bad Nauheim Devils",
+      "Goals": 1,
+      "Assists": 2,
+      "Points": 3
+    },
+    {
+      "Player": "Simona Seidlar",
+      "Team": "Straubing Forest Tigers",
+      "Goals": 1,
+      "Assists": 2,
+      "Points": 3
+    },
+    {
+      "Player": "Tommye Pasanen",
+      "Team": "Frankfurt Core",
+      "Goals": 3,
+      "Assists": 0,
+      "Points": 3
+    },
+    {
+      "Player": "Tore Immvik",
+      "Team": "Landshut Lichtkern",
+      "Goals": 3,
+      "Assists": 0,
+      "Points": 3
+    },
+    {
+      "Player": "Toba Schwardunov",
+      "Team": "Straubing Forest Tigers",
+      "Goals": 1,
+      "Assists": 2,
+      "Points": 3
+    },
+    {
+      "Player": "Juliano Lautenschlagov",
+      "Team": "Bad Nauheim Devils",
+      "Goals": 2,
+      "Assists": 0,
+      "Points": 2
+    },
+    {
+      "Player": "Moritzi Kukukin",
+      "Team": "Düsseldorf Aurora",
+      "Goals": 0,
+      "Assists": 2,
+      "Points": 2
+    }
+  ]
+}

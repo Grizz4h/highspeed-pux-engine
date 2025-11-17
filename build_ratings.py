@@ -61,6 +61,35 @@ def _scale_minmax(values: List[float]) -> Tuple[float, float]:
         # alles gleich → danach bekommt jeder 0.5
         return vmin, vmin + 1.0
     return vmin, vmax
+def _z_params(values: List[float]) -> Tuple[float, float]:
+    """
+    Liefert (Mittelwert, Standardabweichung) für eine Liste.
+    Falls leer oder konstant -> sigma = 1.0, damit nichts crasht.
+    """
+    vals = [v for v in values if not math.isnan(v)]
+    if not vals:
+        return 0.0, 1.0
+    mu = sum(vals) / len(vals)
+    var = sum((v - mu) ** 2 for v in vals) / len(vals)
+    sigma = math.sqrt(var)
+    if sigma <= 0:
+        sigma = 1.0
+    return mu, sigma
+
+
+def _norm_z(value: float, mu: float, sigma: float, clamp: float = 3.0) -> float:
+    """
+    Normiert einen Wert über Z-Score auf [0,1].
+    clamp=3.0 bedeutet: Z in [-3,3] -> [0,1].
+    """
+    if sigma <= 0:
+        return 0.5
+    z = (value - mu) / sigma
+    if clamp is not None:
+        z = max(-clamp, min(clamp, z))
+        return (z + clamp) / (2.0 * clamp)
+    # Fallback (sollte praktisch nie passieren)
+    return 0.5
 
 
 def _norm(value: float, vmin: float, vmax: float, invert: bool = False) -> float:
@@ -100,7 +129,7 @@ def build_skater_ratings(players: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     # Nur echte Skater (keine Goalies)
     skaters = [p for p in players if p.get("type") == "skater"]
 
-    # Relevante Rohwerte für Normalisierung sammeln
+    # Relevante Rohwerte für Normalisierung sammeln (Ligaweit)
     goals_list = []
     points_list = []
     ppg_list = []
@@ -114,13 +143,16 @@ def build_skater_ratings(players: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         goals = _to_int(p.get("goals"))
         points = _to_int(p.get("points"))
         ppg = _to_float(p.get("points_per_game"))
+
         plus_m = p.get("plus_minus")
         if plus_m is None:
             plus_m_val = 0
         else:
             plus_m_val = _to_int(plus_m)
+
         pim = _to_int(p.get("pim"))
         pimpg = pim / gp if gp > 0 else 0.0
+
         fo_pct = p.get("fo_pct")
         fo_pct_val = _to_float(fo_pct) if fo_pct is not None else 0.0
 
@@ -132,52 +164,58 @@ def build_skater_ratings(players: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         gp_list.append(float(gp))
         fopct_list.append(fo_pct_val)
 
-    # Min/Max bestimmen
-    g_min, g_max = _scale_minmax(goals_list)
-    p_min, p_max = _scale_minmax(points_list)
-    ppg_min, ppg_max = _scale_minmax(ppg_list)
-    pm_min, pm_max = _scale_minmax(plusminus_list)
-    pimpg_min, pimpg_max = _scale_minmax(pimpg_list)
-    gp_min, gp_max = _scale_minmax(gp_list)
-    fopct_min, fopct_max = _scale_minmax(fopct_list)
+    # Z-Score-Parameter (Ligaweit)
+    g_mu, g_sigma = _z_params(goals_list)
+    p_mu, p_sigma = _z_params(points_list)
+    ppg_mu, ppg_sigma = _z_params(ppg_list)
+    pm_mu, pm_sigma = _z_params(plusminus_list)
+    pimpg_mu, pimpg_sigma = _z_params(pimpg_list)
+    gp_mu, gp_sigma = _z_params(gp_list)
+    fo_mu, fo_sigma = _z_params(fopct_list)
 
     rated: List[Dict[str, Any]] = []
 
     for p in skaters:
-        base = dict(p)  # kopie
+        base = dict(p)  # Kopie
 
         gp = _to_int(p.get("gp"))
         goals = _to_int(p.get("goals"))
         points = _to_int(p.get("points"))
         ppg = _to_float(p.get("points_per_game"))
+
         plus_m = p.get("plus_minus")
         plus_m_val = _to_int(plus_m) if plus_m is not None else 0
+
         pim = _to_int(p.get("pim"))
         pimpg = pim / gp if gp > 0 else 0.0
+
         fo_pct = p.get("fo_pct")
         fo_pct_val = _to_float(fo_pct) if fo_pct is not None else 0.0
 
         pos_group = _pos_group(p) or "F"
 
-        # --------- Normierte Komponenten ---------
+        # --------- Normierte Komponenten (Z-Score → [0,1]) ---------
         # Offense: Tore, Punkte, Punkte/Spiel
-        g_norm = _norm(float(goals), g_min, g_max)
-        p_norm = _norm(float(points), p_min, p_max)
-        ppg_norm = _norm(ppg, ppg_min, ppg_max)
+        g_norm   = _norm_z(float(goals),  g_mu,   g_sigma)
+        p_norm   = _norm_z(float(points), p_mu,   p_sigma)
+        ppg_norm = _norm_z(ppg,           ppg_mu, ppg_sigma)
 
-        # Defense: plus/minus positiv, PIM klein
-        pm_norm = _norm(float(plus_m_val), pm_min, pm_max)
-        pimpg_norm = _norm(pimpg, pimpg_min, pimpg_max, invert=True)
+        # Defense: plus/minus positiv (hoch = gut), PIM klein (hoch = schlecht)
+        pm_norm     = _norm_z(float(plus_m_val), pm_mu, pm_sigma)
+        pimpg_raw   = _norm_z(pimpg, pimpg_mu, pimpg_sigma)   # hoch = viel Strafen
+        pimpg_norm  = 1.0 - pimpg_raw                        # invertieren: wenig Strafen = gut
 
-        # Speed: PPG + Nutzung (GP)
-        gp_norm = _norm(float(gp), gp_min, gp_max)
-        speed_component = 0.6 * ppg_norm + 0.4 * gp_norm
+        # Nutzung / Verlässlichkeit
+        gp_norm = _norm_z(float(gp), gp_mu, gp_sigma)
 
-        # Faceoff-Info nur wirklich bei klassischen Forwards mit vielen FO relevant
+        # "Speed": PPG + Nutzung (GP)
+        speed_score = 0.6 * ppg_norm + 0.4 * gp_norm
+
+        # Faceoff-Info nur wirklich bei FO-Werten sinnvoll
         if fo_pct is not None and fo_pct_val > 0:
-            fopct_norm = _norm(fo_pct_val, fopct_min, fopct_max)
+            fopct_norm = _norm_z(fo_pct_val, fo_mu, fo_sigma)
         else:
-            fopct_norm = 0.5  # neutral
+            fopct_norm = 0.5  # neutral – wird aktuell noch nicht stark gewichtet
 
         # --------- Gewichtung nach Position ---------
         if pos_group == "D":
@@ -193,24 +231,22 @@ def build_skater_ratings(players: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         # (Spieler, die viel spielen, wenig Strafen nehmen und ein gutes +/- haben)
         chem_score = 0.4 * gp_norm + 0.4 * pm_norm + 0.2 * pimpg_norm
 
-        # Speed separat schon berechnet
-        speed_score = speed_component
-
         # Gesamtwertung (Overall) – Forwards: Offense größer, D: Defense größer
         if pos_group == "D":
             overall = 0.35 * offense_score + 0.45 * defense_score + 0.20 * speed_score
         else:
             overall = 0.45 * offense_score + 0.30 * defense_score + 0.25 * speed_score
 
-        base["rating_offense"] = _rating(offense_score)
-        base["rating_defense"] = _rating(defense_score)
-        base["rating_speed"] = _rating(speed_score)
-        base["rating_chemistry"] = _rating(chem_score)
-        base["rating_overall"] = _rating(overall)
+        base["rating_offense"]    = _rating(offense_score)
+        base["rating_defense"]    = _rating(defense_score)
+        base["rating_speed"]      = _rating(speed_score)
+        base["rating_chemistry"]  = _rating(chem_score)
+        base["rating_overall"]    = _rating(overall)
 
         rated.append(base)
 
     return rated
+
 
 
 # ----------------- Rating für Goalies -----------------

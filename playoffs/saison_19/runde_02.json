@@ -1,0 +1,405 @@
+{
+  "timestamp": "2025-11-17T18:06:27.245702",
+  "saison": 19,
+  "runde": 2,
+  "series": [
+    {
+      "a": "Düsseldorf Aurora",
+      "b": "Nürnberg Eistiger",
+      "games": [
+        {
+          "g": 1,
+          "home": "Düsseldorf Aurora",
+          "away": "Nürnberg Eistiger",
+          "g_home": 0,
+          "g_away": 2,
+          "winner": "Nürnberg Eistiger"
+        },
+        {
+          "g": 2,
+          "home": "Düsseldorf Aurora",
+          "away": "Nürnberg Eistiger",
+          "g_home": 1,
+          "g_away": 3,
+          "winner": "Nürnberg Eistiger"
+        },
+        {
+          "g": 3,
+          "home": "Düsseldorf Aurora",
+          "away": "Nürnberg Eistiger",
+          "g_home": 2,
+          "g_away": 1,
+          "winner": "Düsseldorf Aurora"
+        },
+        {
+          "g": 4,
+          "home": "Düsseldorf Aurora",
+          "away": "Nürnberg Eistiger",
+          "g_home": 2,
+          "g_away": 1,
+          "winner": "Düsseldorf Aurora"
+        },
+        {
+          "g": 5,
+          "home": "Düsseldorf Aurora",
+          "away": "Nürnberg Eistiger",
+          "g_home": 2,
+          "g_away": 0,
+          "winner": "Düsseldorf Aurora"
+        },
+        {
+          "g": 6,
+          "home": "Düsseldorf Aurora",
+          "away": "Nürnberg Eistiger",
+          "g_home": 2,
+          "g_away": 2,
+          "winner": "Nürnberg Eistiger"
+        },
+        {
+          "g": 7,
+          "home": "Düsseldorf Aurora",
+          "away": "Nürnberg Eistiger",
+          "g_home": 1,
+          "g_away": 2,
+          "winner": "Nürnberg Eistiger"
+        }
+      ],
+      "result": "3:4",
+      "winner": "Nürnberg Eistiger"
+    },
+    {
+      "a": "Novadelta Panther",
+      "b": "Bremerhaven Trident",
+      "games": [
+        {
+          "g": 1,
+          "home": "Novadelta Panther",
+          "away": "Bremerhaven Trident",
+          "g_home": 3,
+          "g_away": 3,
+          "winner": "Bremerhaven Trident"
+        },
+        {
+          "g": 2,
+          "home": "Novadelta Panther",
+          "away": "Bremerhaven Trident",
+          "g_home": 2,
+          "g_away": 3,
+          "winner": "Bremerhaven Trident"
+        },
+        {
+          "g": 3,
+          "home": "Novadelta Panther",
+          "away": "Bremerhaven Trident",
+          "g_home": 1,
+          "g_away": 2,
+          "winner": "Bremerhaven Trident"
+        },
+        {
+          "g": 4,
+          "home": "Novadelta Panther",
+          "away": "Bremerhaven Trident",
+          "g_home": 2,
+          "g_away": 1,
+          "winner": "Novadelta Panther"
+        },
+        {
+          "g": 5,
+          "home": "Novadelta Panther",
+          "away": "Bremerhaven Trident",
+          "g_home": 2,
+          "g_away": 2,
+          "winner": "Bremerhaven Trident"
+        }
+      ],
+      "result": "1:4",
+      "winner": "Bremerhaven Trident"
+    }
+  ],
+  "tabelle_nord": [
+    {
+      "Team": "Düsseldorf Aurora",
+      "Points": 35,
+      "GF": 46,
+      "GA": 36,
+      "GD": 10
+    },
+    {
+      "Team": "Krefeld Kernschlag",
+      "Points": 35,
+      "GF": 39,
+      "GA": 29,
+      "GD": 10
+    },
+    {
+      "Team": "Köln Blitzhaie",
+      "Points": 34,
+      "GF": 36,
+      "GA": 31,
+      "GD": 5
+    },
+    {
+      "Team": "Bremerhaven Trident",
+      "Points": 30,
+      "GF": 42,
+      "GA": 40,
+      "GD": 2
+    },
+    {
+      "Team": "Bad Nauheim Devils",
+      "Points": 27,
+      "GF": 40,
+      "GA": 42,
+      "GD": -2
+    },
+    {
+      "Team": "Whiteout Berlin",
+      "Points": 24,
+      "GF": 37,
+      "GA": 37,
+      "GD": 0
+    },
+    {
+      "Team": "Kassel Zenit",
+      "Points": 21,
+      "GF": 30,
+      "GA": 34,
+      "GD": -4
+    },
+    {
+      "Team": "Wolfsburg Voltsturm",
+      "Points": 20,
+      "GF": 37,
+      "GA": 38,
+      "GD": -1
+    },
+    {
+      "Team": "Frankfurt Core",
+      "Points": 15,
+      "GF": 37,
+      "GA": 44,
+      "GD": -7
+    },
+    {
+      "Team": "Iserlohn Miners",
+      "Points": 12,
+      "GF": 29,
+      "GA": 42,
+      "GD": -13
+    }
+  ],
+  "tabelle_sued": [
+    {
+      "Team": "Mannheim Ventus",
+      "Points": 33,
+      "GF": 34,
+      "GA": 28,
+      "GD": 6
+    },
+    {
+      "Team": "Novadelta Panther",
+      "Points": 32,
+      "GF": 33,
+      "GA": 30,
+      "GD": 3
+    },
+    {
+      "Team": "Nürnberg Eistiger",
+      "Points": 28,
+      "GF": 41,
+      "GA": 36,
+      "GD": 5
+    },
+    {
+      "Team": "München FluxBullen",
+      "Points": 26,
+      "GF": 35,
+      "GA": 34,
+      "GD": 1
+    },
+    {
+      "Team": "Straubing Forest Tigers",
+      "Points": 25,
+      "GF": 39,
+      "GA": 36,
+      "GD": 3
+    },
+    {
+      "Team": "Schwenningen Sturmflügel",
+      "Points": 21,
+      "GF": 33,
+      "GA": 32,
+      "GD": 1
+    },
+    {
+      "Team": "Ravensburg Zenit Falken",
+      "Points": 21,
+      "GF": 31,
+      "GA": 33,
+      "GD": -2
+    },
+    {
+      "Team": "Augsburg Ferox",
+      "Points": 20,
+      "GF": 35,
+      "GA": 43,
+      "GD": -8
+    },
+    {
+      "Team": "Landshut Lichtkern",
+      "Points": 19,
+      "GF": 29,
+      "GA": 31,
+      "GD": -2
+    },
+    {
+      "Team": "Regensburg Pulse",
+      "Points": 18,
+      "GF": 33,
+      "GA": 40,
+      "GD": -7
+    }
+  ],
+  "top_scorer": [
+    {
+      "Player": "Ale Frieov",
+      "Team": "Bremerhaven Trident",
+      "Goals": 7,
+      "Assists": 7,
+      "Points": 14
+    },
+    {
+      "Player": "Phe Bruggissik",
+      "Team": "Bremerhaven Trident",
+      "Goals": 6,
+      "Assists": 6,
+      "Points": 12
+    },
+    {
+      "Player": "Yushirohe Hiranik",
+      "Team": "Düsseldorf Aurora",
+      "Goals": 8,
+      "Assists": 4,
+      "Points": 12
+    },
+    {
+      "Player": "Emilo Quaasov",
+      "Team": "Düsseldorf Aurora",
+      "Goals": 4,
+      "Assists": 8,
+      "Points": 12
+    },
+    {
+      "Player": "Ryani MacInndunov",
+      "Team": "Köln Blitzhaie",
+      "Goals": 6,
+      "Assists": 6,
+      "Points": 12
+    },
+    {
+      "Player": "Ludwu Byströov",
+      "Team": "Bremerhaven Trident",
+      "Goals": 5,
+      "Assists": 6,
+      "Points": 11
+    },
+    {
+      "Player": "Kevine Magintli",
+      "Team": "Düsseldorf Aurora",
+      "Goals": 5,
+      "Assists": 6,
+      "Points": 11
+    },
+    {
+      "Player": "Evane Barrattto",
+      "Team": "Nürnberg Eistiger",
+      "Goals": 7,
+      "Assists": 4,
+      "Points": 11
+    },
+    {
+      "Player": "Maxe Newtonik",
+      "Team": "Krefeld Kernschlag",
+      "Goals": 3,
+      "Assists": 8,
+      "Points": 11
+    },
+    {
+      "Player": "Rossa Mauerven",
+      "Team": "Bremerhaven Trident",
+      "Goals": 5,
+      "Assists": 6,
+      "Points": 11
+    },
+    {
+      "Player": "Kevine Norénnik",
+      "Team": "Düsseldorf Aurora",
+      "Goals": 4,
+      "Assists": 6,
+      "Points": 10
+    },
+    {
+      "Player": "Jakobu Webik",
+      "Team": "Regensburg Pulse",
+      "Goals": 4,
+      "Assists": 6,
+      "Points": 10
+    },
+    {
+      "Player": "Kris Jandro",
+      "Team": "Novadelta Panther",
+      "Goals": 7,
+      "Assists": 3,
+      "Points": 10
+    },
+    {
+      "Player": "Maximiliana Glötzlsen",
+      "Team": "Köln Blitzhaie",
+      "Goals": 5,
+      "Assists": 5,
+      "Points": 10
+    },
+    {
+      "Player": "Jakobu Webik",
+      "Team": "Nürnberg Eistiger",
+      "Goals": 4,
+      "Assists": 6,
+      "Points": 10
+    },
+    {
+      "Player": "Sinani Akdaglek",
+      "Team": "Düsseldorf Aurora",
+      "Goals": 8,
+      "Assists": 1,
+      "Points": 9
+    },
+    {
+      "Player": "Nicolasa Geitnar",
+      "Team": "Düsseldorf Aurora",
+      "Goals": 6,
+      "Assists": 3,
+      "Points": 9
+    },
+    {
+      "Player": "Samueli DoveMcFalan",
+      "Team": "Nürnberg Eistiger",
+      "Goals": 6,
+      "Assists": 3,
+      "Points": 9
+    },
+    {
+      "Player": "Colino Ugbekilov",
+      "Team": "Iserlohn Miners",
+      "Goals": 5,
+      "Assists": 4,
+      "Points": 9
+    },
+    {
+      "Player": "Leona Gawankvik",
+      "Team": "Mannheim Ventus",
+      "Goals": 5,
+      "Assists": 4,
+      "Points": 9
+    }
+  ]
+}

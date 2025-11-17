@@ -39,6 +39,7 @@ PIPELINE_STEPS = [
     ("Merge Baseline (DEL + DEL2)", "merge_players_baseline.py"),
     ("Namen normalisieren", "normalize_names.py"),
     ("Ratings berechnen", "build_ratings.py"),
+    ("Fake-Namen generieren", "generate_fake_names.py"),
     ("Reale Teams aus Ratings bauen", "build_realeTeams_from_ratings.py"),
 ]
 

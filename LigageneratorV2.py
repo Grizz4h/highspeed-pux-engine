@@ -417,7 +417,7 @@ def create_schedule(teams: List[Dict[str,Any]]) -> List[Tuple[str,str]]:
         teams.insert(1,teams.pop())
     return sched
 
-def update_player_stats(team:str,goals:int,df:pd.DataFrame,stats:pd.DataFrame)->None:
+def update_player_stats(team: str, goals: int, df: pd.DataFrame, stats: pd.DataFrame) -> None:
     # Roster aus Lineup, falls vorhanden – sonst Fallback auf komplettes Roster
     mask = df["Team"] == team
     if not mask.any():
@@ -433,14 +433,36 @@ def update_player_stats(team:str,goals:int,df:pd.DataFrame,stats:pd.DataFrame)->
     # Für Stats ggf. auf 18 Spieler begrenzen
     roster = random.sample(roster, 18) if len(roster) > 18 else roster
 
-    names   = [p["Name"] for p in roster]
-    weights = [max(1, p["Offense"] // 5) for p in roster]
+    # --- Skater-Pool: komplett ohne Goalies (für Tore UND Assists) ----------
+    skaters = [
+        p for p in roster
+        if str(p.get("PositionGroup", "")).upper() != "G"
+    ]
+
+    # Fallback: falls aus irgendeinem Grund keine Skater markiert sind,
+    # nimm das ganze Roster, damit die Simulation nicht crasht.
+    if not skaters:
+        skaters = roster
+    # ------------------------------------------------------------------------
+
+    scorer_names   = [p["Name"] for p in skaters]
+    scorer_weights = [max(1, p["Offense"] // 5) for p in skaters]
+
+    assister_names = scorer_names  # ebenfalls nur Skater
 
     for _ in range(goals):
-        scorer   = random.choices(names, weights)[0]
-        assister = random.choice([n for n in names if n != scorer])
-        stats.loc[stats["Player"]==scorer,"Goals"]  += 1
-        stats.loc[stats["Player"]==assister,"Assists"] += 1
+        # Torschütze: nur Skater
+        scorer = random.choices(scorer_names, scorer_weights)[0]
+
+        # Assistent: ebenfalls nur Skater, aber != Torschütze
+        assist_candidates = [n for n in assister_names if n != scorer]
+
+        if assist_candidates:
+            assister = random.choice(assist_candidates)
+            stats.loc[stats["Player"] == assister, "Assists"] += 1
+
+        stats.loc[stats["Player"] == scorer, "Goals"] += 1
+
 
 def simulate_match(df:pd.DataFrame,home:str,away:str,stats:pd.DataFrame,conf:str)->Tuple[str,Dict[str,Any]]:
     r_h=df[df["Team"]==home].iloc[0]
