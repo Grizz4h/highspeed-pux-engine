@@ -6,10 +6,12 @@ import re
 import hashlib
 import unicodedata
 import base64
+import subprocess
+import sys
+import os
 
 from pathlib import Path
 from typing import Optional, List, Dict, Any
-from typing import Optional
 
 import pandas as pd
 import streamlit as st
@@ -32,18 +34,21 @@ st.set_page_config(page_title="Liga-Simulator GUI", page_icon="🏒", layout="wi
 # ============================================================
 def _slugify(name: str) -> str:
     repl = (("ä","ae"),("ö","oe"),("ü","ue"),("Ä","Ae"),("Ö","Oe"),("Ü","Ue"),("ß","ss"))
-    for a,b in repl: name = name.replace(a,b)
+    for a,b in repl:
+        name = name.replace(a,b)
     name = unicodedata.normalize("NFKD", name)
     name = "".join(c for c in name if not unicodedata.combining(c))
     name = re.sub(r"[^a-zA-Z0-9]+","-", name).strip("-").lower()
     return name
 
 def _logo_file_for_team(team: str) -> Optional[Path]:
-    if not team: return None
+    if not team:
+        return None
     slug = _slugify(str(team))
     for ext in (".webp",".png",".jpg",".jpeg",".gif",".svg"):
         p = LOGO_DIR / f"{slug}{ext}"
-        if p.exists(): return p
+        if p.exists():
+            return p
     return None
 
 @st.cache_data(show_spinner=False)
@@ -82,7 +87,8 @@ def get_logo_thumb_path(team: str, size: int = 24, scale: int = 2) -> Optional[s
 
 def _safe_txt(v: Any) -> str:
     try:
-        if v is None or (isinstance(v, float) and pd.isna(v)): return ""
+        if v is None or (isinstance(v, float) and pd.isna(v)):
+            return ""
         return str(v)
     except Exception:
         return ""
@@ -104,8 +110,10 @@ def dir_signature(path: Path) -> str:
 
 def _guess_mime(path: Path) -> str:
     ext = path.suffix.lower()
-    if ext == ".webp": return "image/webp"
-    if ext == ".png":  return "image/png"
+    if ext == ".webp":
+        return "image/webp"
+    if ext == ".png":
+        return "image/png"
     return "image/jpeg"
 
 @st.cache_data(show_spinner=False)
@@ -152,47 +160,116 @@ with st.sidebar:
     st.title("🏒 Liga-Simulator")
     st.caption("HIGHspeed · NOVADELTA")
 
+    # --- Regular Season: ein Spieltag ---
     if st.button("▶️ Nächsten Spieltag simulieren", key="btn_spieltag", use_container_width=True):
-        res = sim.step_regular_season_once()
-        if res.get("status") == "ok":
-            st.toast(f"Spieltag {res['spieltag']-1} simuliert → Jetzt {res['spieltag']}", icon="✅")
-            st.cache_data.clear(); st.rerun()
-        elif res.get("status") == "season_over":
-            st.toast("Regular Season ist beendet. Starte die Playoffs 👇", icon="⚠️")
+        try:
+            res = sim.step_regular_season_once()
+        except Exception as e:
+            st.error(f"Fehler beim Simulieren des Spieltags: {e}")
         else:
-            st.toast("Konnte Spieltag nicht simulieren.", icon="❌")
+            status = res.get("status")
+            if status == "ok":
+                st.toast(f"Spieltag {res['spieltag']-1} simuliert → Jetzt {res['spieltag']}", icon="✅")
+                st.cache_data.clear()
+                st.rerun()
+            elif status == "season_over":
+                st.toast("Regular Season ist beendet. Starte die Playoffs 👇", icon="⚠️")
+            else:
+                st.toast(f"Konnte Spieltag nicht simulieren (Status: {status}).", icon="❌")
 
+    # --- Playoffs: eine Runde Bo7 ---
     if st.button("🏒 Nächste Playoff-Runde (Bo7) simulieren", key="btn_po_round", use_container_width=True):
-        res = sim.step_playoffs_round_once()
-        if res.get("status") == "ok":
-            st.toast(f"Playoff-Runde {res['round']} simuliert. Sieger: {', '.join(res['winners'])}", icon="✅")
-            st.cache_data.clear(); st.rerun()
-        elif res.get("status") == "champion":
-            st.toast(
-                f"🏆 Champion (Saison {sim.load_state()['season']-1}): {res['champion']} • Nächste Saison: {res['next_season']}",
-                icon="🏆",
-            )
-            st.cache_data.clear(); st.rerun()
-        elif res.get("status") == "regular_not_finished":
-            st.toast("Regular Season noch nicht fertig – simuliere erst Spieltage.", icon="⚠️")
+        try:
+            res = sim.step_playoffs_round_once()
+        except Exception as e:
+            st.error(f"Fehler beim Simulieren der Playoff-Runde: {e}")
         else:
-            st.toast(f"Playoff-Step nicht möglich: {res.get('status')}", icon="❌")
+            status = res.get("status")
+            if status == "ok":
+                st.toast(f"Playoff-Runde {res['round']} simuliert. Sieger: {', '.join(res['winners'])}", icon="✅")
+                st.cache_data.clear()
+                st.rerun()
+            elif status == "champion":
+                st.toast(
+                    f"🏆 Champion (Saison {sim.load_state()['season']-1}): {res['champion']} • Nächste Saison: {res['next_season']}",
+                    icon="🏆",
+                )
+                st.cache_data.clear()
+                st.rerun()
+            elif status == "regular_not_finished":
+                st.toast("Regular Season noch nicht fertig – simuliere erst Spieltage.", icon="⚠️")
+            else:
+                st.toast(f"Playoff-Step nicht möglich: {status}", icon="❌")
 
+    # --- Playoffs komplett + Saisonabschluss ---
     if st.button("🏆 Playoffs simulieren & Saison abschließen", key="btn_po_full", use_container_width=True):
-        res = sim.simulate_full_playoffs_and_advance()
-        if res.get("status") == "ok":
-            st.toast(f"Champion: {res['champion']} · Nächste Saison: {res['next_season']}", icon="🏆")
-            st.cache_data.clear(); st.rerun()
+        try:
+            res = sim.simulate_full_playoffs_and_advance()
+        except Exception as e:
+            st.error(f"Fehler beim Playoffs-Durchlauf: {e}")
         else:
-            st.toast("Playoffs nicht gestartet – fehlt State?", icon="❌")
+            if res.get("status") == "ok":
+                st.toast(f"Champion: {res['champion']} · Nächste Saison: {res['next_season']}", icon="🏆")
+                st.cache_data.clear()
+                st.rerun()
+            else:
+                st.toast("Playoffs nicht gestartet – fehlt State?", icon="❌")
 
+    # --- Komplette Saison in einem Rutsch ---
     if st.button("⏭️ Ganze Saison in einem Rutsch", key="btn_full_season", use_container_width=True):
-        sim.run_simulation(max_seasons=1, interactive=False)
-        st.toast("Komplette Saison (inkl. Playoffs) simuliert.", icon="⚡")
-        st.cache_data.clear(); st.rerun()
+        try:
+            sim.run_simulation(max_seasons=1, interactive=False)
+        except Exception as e:
+            st.error(f"Fehler beim Komplett-Simulationslauf: {e}")
+        else:
+            st.toast("Komplette Saison (inkl. Playoffs) simuliert.", icon="⚡")
+            st.cache_data.clear()
+            st.rerun()
 
+        # --- Pipeline aktualisieren (mit Emojis, UTF-8 sicher) ---
+    if st.button("🛠 Pipeline aktualisieren", key="btn_pipeline", use_container_width=True):
+        with st.spinner("Pipeline läuft..."):
+            try:
+                env = os.environ.copy()
+                # Subprozess-Output erzwingen auf UTF-8
+                env["PYTHONIOENCODING"] = "utf-8"
+
+                result = subprocess.run(
+                    [sys.executable, str(BASE_DIR / "run_pipeline.py")],
+                    cwd=str(BASE_DIR),
+                    capture_output=True,
+                    text=False,          # <-- WICHTIG: keine Auto-Dekodierung
+                    env=env,
+                )
+
+                # Manuell mit UTF-8 dekodieren (fehlerrobust)
+                stdout = (result.stdout or b"").decode("utf-8", errors="replace")
+                stderr = (result.stderr or b"").decode("utf-8", errors="replace")
+
+            except Exception as e:
+                st.toast("Pipeline konnte nicht gestartet werden.", icon="❌")
+                st.error(f"Fehler beim Starten von run_pipeline.py: {e}")
+            else:
+                if result.returncode == 0:
+                    st.toast("Pipeline erfolgreich durchgelaufen.", icon="✅")
+                    # optional: stdout anzeigen, wenn du willst
+                    # st.text(stdout)
+                    st.cache_data.clear()
+                    st.rerun()
+                else:
+                    st.toast(f"Pipeline fehlgeschlagen (Exit-Code {result.returncode}).", icon="❌")
+                    st.error(
+                        "STDOUT:\n"
+                        + stdout
+                        + "\n\nSTDERR:\n"
+                        + stderr
+                    )
+
+
+    # --- Cache neu laden ---
     if st.button("🔄 Daten neu laden (Cache leeren)", key="btn_reload", use_container_width=True):
-        st.cache_data.clear(); st.rerun()
+        st.cache_data.clear()
+        st.rerun()
 
 # ============================================================
 # Hauptansicht – Tabellen / Scorer
@@ -214,7 +291,8 @@ with col_l:
 
     st.dataframe(
         tn[["Logo","Team","P","GF","GA","GD"]],
-        use_container_width=True, hide_index=True,
+        width="stretch",
+        hide_index=True,
         column_config={
             "Logo": st.column_config.ImageColumn(" ", width="small"),
             "Team": st.column_config.TextColumn("Team"),
@@ -233,7 +311,8 @@ with col_l:
 
     st.dataframe(
         ts[["Logo","Team","P","GF","GA","GD"]],
-        use_container_width=True, hide_index=True,
+        width="stretch",
+        hide_index=True,
         column_config={
             "Logo": st.column_config.ImageColumn(" ", width="small"),
             "Team": st.column_config.TextColumn("Team"),
@@ -244,20 +323,37 @@ with col_l:
         }
     )
 
-
 with col_r:
-        # === Top-Scorer (mit Team-Logos) ===
+    # === Top-Scorer (mit Team-Logos, Nummer & Position) ===
     st.markdown("### ⭐ Top-Scorer (Top 20)")
     tops = pd.DataFrame(info["tables"]["top_scorer"]).copy().head(20)
+
+    # Logo-Spalte
     tops.insert(0, "Logo", tops["Team"].apply(lambda t: team_logo_dataurl(t, 22, 2)))
+    # Anzeigename
     tops["Spieler"] = tops["Player"] + " (" + tops["Team"] + ")"
 
+    # Nummer & Position aus dem Backend
+    # (Fallbacks, falls alte Datenstruktur ohne Spalten)
+    if "Number" not in tops.columns:
+        tops["Number"] = None
+    if "PositionGroup" not in tops.columns:
+        tops["PositionGroup"] = None
+
+    tops.rename(columns={
+        "Number": "#",
+        "PositionGroup": "Pos"
+    }, inplace=True)
+
     st.dataframe(
-        tops[["Logo","Spieler","Goals","Assists","Points"]],
-        use_container_width=True, hide_index=True,
+        tops[["Logo", "Spieler", "#", "Pos", "Goals", "Assists", "Points"]],
+        width="stretch",
+        hide_index=True,
         column_config={
             "Logo":    st.column_config.ImageColumn(" ", width="small"),
             "Spieler": st.column_config.TextColumn("Spieler"),
+            "#":       st.column_config.NumberColumn("#"),
+            "Pos":     st.column_config.TextColumn("Pos"),
             "Goals":   st.column_config.NumberColumn("G"),
             "Assists": st.column_config.NumberColumn("A"),
             "Points":  st.column_config.NumberColumn("P"),
@@ -277,18 +373,22 @@ SIG_PLAYOFFS  = dir_signature(PLAYOFF_DIR)
 # ============================================================
 @st.cache_data(show_spinner=False)
 def list_spieltage_seasons(_sig: str) -> List[int]:
-    if not SPIELTAG_DIR.exists(): return []
+    if not SPIELTAG_DIR.exists():
+        return []
     vals=[]
     for p in SPIELTAG_DIR.iterdir():
         if p.is_dir() and re.match(r"(?i)saison_\d+$", p.name):
-            try: vals.append(int(p.name.split("_")[1]))
-            except: pass
+            try:
+                vals.append(int(p.name.split("_")[1]))
+            except:
+                pass
     return sorted(vals)
 
 @st.cache_data(show_spinner=False)
 def list_gamedays(season: int, _sig_season: str) -> List[int]:
     folder = SPIELTAG_DIR / f"saison_{season}"
-    if not folder.exists(): return []
+    if not folder.exists():
+        return []
     vals=[]
     for f in folder.iterdir():
         m = re.match(r"(?i)spieltag_(\d+).*\.json$", f.name)
@@ -299,10 +399,14 @@ def list_gamedays(season: int, _sig_season: str) -> List[int]:
 @st.cache_data(show_spinner=False)
 def load_gameday_json(season: int, gameday: int, _sig_season: str) -> Optional[dict]:
     folder = SPIELTAG_DIR / f"saison_{season}"
-    if not folder.exists(): return None
-    candidates = [f for f in folder.iterdir()
-                  if f.is_file() and re.match(rf"(?i)spieltag_0*{gameday}\D*\.json$", f.name)]
-    if not candidates: return None
+    if not folder.exists():
+        return None
+    candidates = [
+        f for f in folder.iterdir()
+        if f.is_file() and re.match(rf"(?i)spieltag_0*{gameday}\D*\.json$", f.name)
+    ]
+    if not candidates:
+        return None
     f = sorted(candidates, key=lambda p: p.name.lower())[0]
     try:
         return json.loads(f.read_text(encoding="utf-8"))
@@ -315,7 +419,10 @@ st.markdown("### 🧾 Spieltag-Browser (History & Download)")
 if "sel_season" not in st.session_state:
     st.session_state.sel_season = max(list_spieltage_seasons(SIG_SPIELTAGE) or [info["season"]])
 if "sel_gameday" not in st.session_state:
-    gds0 = list_gamedays(st.session_state.sel_season, dir_signature(SPIELTAG_DIR / f"saison_{st.session_state.sel_season}"))
+    gds0 = list_gamedays(
+        st.session_state.sel_season,
+        dir_signature(SPIELTAG_DIR / f"saison_{st.session_state.sel_season}")
+    )
     st.session_state.sel_gameday = (gds0[-1] if gds0 else 1)
 
 cols = st.columns([1,2,1,1,1])
@@ -324,7 +431,11 @@ with cols[0]:
     st.session_state.sel_season = st.selectbox(
         "Saison",
         options=seasons_avail or [info["season"]],
-        index=(seasons_avail.index(st.session_state.sel_season) if seasons_avail and st.session_state.sel_season in seasons_avail else (len(seasons_avail)-1 if seasons_avail else 0)),
+        index=(
+            seasons_avail.index(st.session_state.sel_season)
+            if seasons_avail and st.session_state.sel_season in seasons_avail
+            else (len(seasons_avail)-1 if seasons_avail else 0)
+        ),
         format_func=lambda s: f"Saison {s}",
         key="dd_season_browser"
     )
@@ -341,7 +452,11 @@ with cols[1]:
         st.session_state.sel_gameday = st.selectbox(
             "Spieltag",
             options=gds or [1],
-            index=(gds.index(st.session_state.sel_gameday) if gds and st.session_state.sel_gameday in gds else (len(gds)-1 if gds else 0)),
+            index=(
+                gds.index(st.session_state.sel_gameday)
+                if gds and st.session_state.sel_gameday in gds
+                else (len(gds)-1 if gds else 0)
+            ),
             key="dd_gameday_browser"
         )
     with cnext:
@@ -350,7 +465,11 @@ with cols[1]:
             idx = gds.index(cur) if cur in gds else len(gds)-1
             st.session_state.sel_gameday = gds[min(len(gds)-1, idx+1)]
 
-gjson = load_gameday_json(st.session_state.sel_season, st.session_state.sel_gameday, dir_signature(SPIELTAG_DIR / f"saison_{st.session_state.sel_season}"))
+gjson = load_gameday_json(
+    st.session_state.sel_season,
+    st.session_state.sel_gameday,
+    dir_signature(SPIELTAG_DIR / f"saison_{st.session_state.sel_season}")
+)
 if not gjson:
     st.info("Für diese Auswahl existiert (noch) kein Spieltag.")
 else:
@@ -358,7 +477,8 @@ else:
     res_all = pd.DataFrame(gjson.get("results", []))
 
     def _prep(df: pd.DataFrame) -> pd.DataFrame:
-        if df.empty: return df
+        if df.empty:
+            return df
         df = df.copy()
         df["HomeLogo"] = df["home"].apply(lambda t: team_logo_dataurl(t, 22, 2))
         df["AwayLogo"] = df["away"].apply(lambda t: team_logo_dataurl(t, 22, 2))
@@ -366,9 +486,12 @@ else:
         # OT/SO Tag
         def _tag(r: pd.Series) -> str:
             t = str(r.get("type","")).upper()
-            if t in ("OT","SO"): return t
-            if r.get("ot"): return "OT"
-            if r.get("so"): return "SO"
+            if t in ("OT","SO"):
+                return t
+            if r.get("ot"):
+                return "OT"
+            if r.get("so"):
+                return "SO"
             return ""
         df["Tag"] = df.apply(_tag, axis=1)
         return df
@@ -381,7 +504,8 @@ else:
         st.markdown("#### Nord")
         st.dataframe(
             nord[["HomeLogo","home","AwayLogo","away","Score","Tag"]],
-            use_container_width=True, hide_index=True,
+            width="stretch",
+            hide_index=True,
             column_config={
                 "HomeLogo": st.column_config.ImageColumn(" ", width="small"),
                 "home":     st.column_config.TextColumn("Home"),
@@ -396,7 +520,8 @@ else:
         st.markdown("#### Süd")
         st.dataframe(
             sued[["HomeLogo","home","AwayLogo","away","Score","Tag"]],
-            use_container_width=True, hide_index=True,
+            width="stretch",
+            hide_index=True,
             column_config={
                 "HomeLogo": st.column_config.ImageColumn(" ", width="small"),
                 "home":     st.column_config.TextColumn("Home"),
@@ -407,20 +532,23 @@ else:
             }
         )
 
-
     # Downloads
     st.markdown("#### Download")
     st.download_button(
         "📦 JSON (Original)",
         data=json.dumps(gjson, ensure_ascii=False, indent=2),
         file_name=f"s{gjson['saison']:02}_spieltag_{gjson['spieltag']:02}.json",
-        mime="application/json", use_container_width=True, key="dl_json_gd"
+        mime="application/json",
+        width="stretch",
+        key="dl_json_gd"
     )
     st.download_button(
         "🧾 CSV (Ergebnisse)",
         data=res_all.to_csv(index=False).encode("utf-8-sig"),
         file_name=f"s{gjson['saison']:02}_spieltag_{gjson['spieltag']:02}.csv",
-        mime="text/csv", use_container_width=True, key="dl_csv_gd"
+        mime="text/csv",
+        width="stretch",
+        key="dl_csv_gd"
     )
 
 st.divider()
@@ -430,18 +558,22 @@ st.divider()
 # ============================================================
 @st.cache_data(show_spinner=False)
 def list_playoff_seasons(_sig: str) -> List[int]:
-    if not PLAYOFF_DIR.exists(): return []
+    if not PLAYOFF_DIR.exists():
+        return []
     vals=[]
     for p in PLAYOFF_DIR.iterdir():
         if p.is_dir() and re.match(r"(?i)saison_\d+$", p.name):
-            try: vals.append(int(p.name.split("_")[1]))
-            except: pass
+            try:
+                vals.append(int(p.name.split("_")[1]))
+            except:
+                pass
     return sorted(vals)
 
 @st.cache_data(show_spinner=False)
 def list_rounds(season: int, _sig_season: str) -> List[int]:
     folder = PLAYOFF_DIR / f"saison_{season}"
-    if not folder.exists(): return []
+    if not folder.exists():
+        return []
     vals=[]
     for f in folder.iterdir():
         m = re.match(r"(?i)runde_(\d+).*\.json$", f.name)
@@ -452,10 +584,14 @@ def list_rounds(season: int, _sig_season: str) -> List[int]:
 @st.cache_data(show_spinner=False)
 def load_round_json(season: int, rnd: int, _sig_season: str) -> Optional[dict]:
     folder = PLAYOFF_DIR / f"saison_{season}"
-    if not folder.exists(): return None
-    candidates = [f for f in folder.iterdir()
-                  if f.is_file() and re.match(rf"(?i)runde_0*{rnd}\D*\.json$", f.name)]
-    if not candidates: return None
+    if not folder.exists():
+        return None
+    candidates = [
+        f for f in folder.iterdir()
+        if f.is_file() and re.match(rf"(?i)runde_0*{rnd}\D*\.json$", f.name)
+    ]
+    if not candidates:
+        return None
     f = sorted(candidates, key=lambda p: p.name.lower())[0]
     try:
         return json.loads(f.read_text(encoding="utf-8"))
@@ -466,7 +602,10 @@ st.markdown("### 🏆 Playoff-Browser (History & Download)")
 if "po_season" not in st.session_state:
     st.session_state.po_season = max(list_playoff_seasons(SIG_PLAYOFFS) or [info["season"]])
 if "po_round" not in st.session_state:
-    rs0 = list_rounds(st.session_state.po_season, dir_signature(PLAYOFF_DIR / f"saison_{st.session_state.po_season}"))
+    rs0 = list_rounds(
+        st.session_state.po_season,
+        dir_signature(PLAYOFF_DIR / f"saison_{st.session_state.po_season}")
+    )
     st.session_state.po_round = (rs0[-1] if rs0 else 1)
 
 pc1, pc2, _ = st.columns([2,3,1])
@@ -474,7 +613,11 @@ with pc1:
     pos = list_playoff_seasons(SIG_PLAYOFFS)
     st.session_state.po_season = st.selectbox(
         "Saison", options=pos or [info["season"]],
-        index=(pos.index(st.session_state.po_season) if pos and st.session_state.po_season in pos else (len(pos)-1 if pos else 0)),
+        index=(
+            pos.index(st.session_state.po_season)
+            if pos and st.session_state.po_season in pos
+            else (len(pos)-1 if pos else 0)
+        ),
         format_func=lambda s: f"Saison {s}", key="po_season_sel"
     )
 with pc2:
@@ -489,7 +632,11 @@ with pc2:
     with rsel:
         st.session_state.po_round = st.selectbox(
             "Runde", options=rs or [1],
-            index=(rs.index(st.session_state.po_round) if rs and st.session_state.po_round in rs else (len(rs)-1 if rs else 0)),
+            index=(
+                rs.index(st.session_state.po_round)
+                if rs and st.session_state.po_round in rs
+                else (len(rs)-1 if rs else 0)
+            ),
             key="po_round_sel"
         )
     with rnext:
@@ -498,7 +645,11 @@ with pc2:
             idx = rs.index(cur) if cur in rs else len(rs)-1
             st.session_state.po_round = rs[min(len(rs)-1, idx+1)]
 
-po_json = load_round_json(st.session_state.po_season, st.session_state.po_round, dir_signature(PLAYOFF_DIR / f"saison_{st.session_state.po_season}")) if list_playoff_seasons(SIG_PLAYOFFS) else None
+po_json = load_round_json(
+    st.session_state.po_season,
+    st.session_state.po_round,
+    dir_signature(PLAYOFF_DIR / f"saison_{st.session_state.po_season}")
+) if list_playoff_seasons(SIG_PLAYOFFS) else None
 
 def _render_series_block(round_json: dict):
     st.markdown(f"#### Playoff-Runde {round_json.get('runde')} (Saison {round_json.get('saison')})")
@@ -537,7 +688,7 @@ def _render_series_block(round_json: dict):
                         st.markdown('</div>', unsafe_allow_html=True)
 
                 if not df.empty:
-                    st.dataframe(df, use_container_width=True, hide_index=True)
+                    st.dataframe(df, width="stretch", hide_index=True)
                 else:
                     st.write("Keine Einzelspiele gespeichert.")
         return
@@ -562,7 +713,8 @@ def _render_series_block(round_json: dict):
         df = pd.DataFrame(parsed)
         st.dataframe(
             df[["HomeLogo","Home","AwayLogo","Away","Score"]],
-            use_container_width=True, hide_index=True,
+            width="stretch",
+            hide_index=True,
             column_config={
                 "HomeLogo": st.column_config.ImageColumn(" ", width="small"),
                 "Home": st.column_config.TextColumn("Home"),
@@ -589,7 +741,8 @@ def _render_series_block(round_json: dict):
         df = pd.DataFrame(rows)
         st.dataframe(
             df[["HomeLogo","Home","AwayLogo","Away","Score"]],
-            use_container_width=True, hide_index=True,
+            width="stretch",
+            hide_index=True,
             column_config={
                 "HomeLogo": st.column_config.ImageColumn(" ", width="small"),
                 "Home": st.column_config.TextColumn("Home"),
@@ -609,7 +762,9 @@ if po_json:
         "📦 JSON (Playoff-Runde)",
         data=json.dumps(po_json, ensure_ascii=False, indent=2),
         file_name=f"s{po_json['saison']:02}_runde_{po_json['runde']:02}.json",
-        mime="application/json", use_container_width=True, key="dl_json_po"
+        mime="application/json",
+        width="stretch",
+        key="dl_json_po"
     )
     # Für Serienformat zusätzlich CSV der Einzelspiele
     rows=[]
@@ -629,7 +784,9 @@ if po_json:
             "🧾 CSV (Playoff-Runde, Spiele)",
             data=df_po.to_csv(index=False).encode("utf-8-sig"),
             file_name=f"s{po_json['saison']:02}_runde_{po_json['runde']:02}.csv",
-            mime="text/csv", use_container_width=True, key="dl_csv_po"
+            mime="text/csv",
+            width="stretch",
+            key="dl_csv_po"
         )
 else:
     st.info("Noch keine Playoff-Daten gefunden oder Auswahl leer.")
@@ -643,6 +800,6 @@ st.markdown("### 🗂️ Saison-History (Champions & Navigation)")
 hist = info.get("history", []) or []
 if hist:
     hdf = pd.DataFrame(hist).sort_values("season")
-    st.dataframe(hdf, use_container_width=True, hide_index=True)
+    st.dataframe(hdf, width="stretch", hide_index=True)
 else:
     st.info("Noch keine abgeschlossene Saison – simuliere bis zum Champion.")

@@ -1149,11 +1149,15 @@
   },
   {
     "real": "Lukas Jung",
-    "fake": "Lukasu Jungovik"
+    "fake": "Lukasu Jungovik1"
   },
   {
     "real": "Lukas Simon Jung",
-    "fake": "Lukasu Jungovik1"
+    "fake": "Lukasu Jungovik2"
+  },
+  {
+    "real": "'Lukas Simon Jung'] ['Lukas Jung'",
+    "fake": "Lukasu Jungovik"
   },
   {
     "real": "Janne Juvonen",
@@ -2041,7 +2045,7 @@
   },
   {
     "real": "Pierre Preto",
-    "fake": "Pierri Pretvik"
+    "fake": "Pierri Proti"
   },
   {
     "real": "Carter Proft",
@@ -2078,10 +2082,6 @@
   {
     "real": "Steven Raabe",
     "fake": "Stevene Raabik"
-  },
-  {
-    "real": "Christoph Rabhansl",
-    "fake": "Chri Rabhanssen"
   },
   {
     "real": "Marek Racuk",

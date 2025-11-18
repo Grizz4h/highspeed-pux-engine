@@ -79,19 +79,28 @@ def _export_tables(nord_df: pd.DataFrame, sued_df: pd.DataFrame, stats: pd.DataF
     stats = stats.copy()
     stats["Points"] = stats["Goals"] + stats["Assists"]
 
+    # Fallbacks für alte Savefiles: Spalten ggf. nachziehen
+    if "Number" not in stats.columns:
+        stats["Number"] = None
+    if "PositionGroup" not in stats.columns:
+        stats["PositionGroup"] = None
+
     def _prep(df: pd.DataFrame) -> List[Dict[str, Any]]:
         d = df.copy()
         d.rename(columns={"Goals For": "GF", "Goals Against": "GA"}, inplace=True)
         d["GD"] = d["GF"] - d["GA"]
         return d.sort_values(["Points", "GF"], ascending=False)[["Team", "Points", "GF", "GA", "GD"]].to_dict("records")
 
+    top = stats.sort_values("Points", ascending=False).head(20)[
+        ["Player", "Team", "Number", "PositionGroup", "Goals", "Assists", "Points"]
+    ]
+
     return {
         "tabelle_nord": _prep(nord_df),
         "tabelle_sued": _prep(sued_df),
-        "top_scorer": stats.sort_values("Points", ascending=False)
-            .head(20)[["Player", "Team", "Goals", "Assists", "Points"]]
-            .to_dict("records"),
+        "top_scorer": top.to_dict("records"),
     }
+
 
 def _save_json(folder: Path, name: str, payload: Dict[str, Any]) -> None:
     folder.mkdir(parents=True, exist_ok=True)
@@ -170,10 +179,13 @@ def _weighted_pick_by_gp(players: List[Dict[str, Any]], count: int, jitter_facto
     return [p for _, p in scored[:count]]
 
 
-def build_lineup(players: List[Dict[str, Any]],
-                 n_def: int = 7,
-                 n_fwd: int = 12,
-                 n_goalies: int = 1) -> List[Dict[str, Any]]:
+def build_lineup(
+    players: List[Dict[str, Any]],
+    team_name: str = "UNKNOWN",
+    n_def: int = 7,
+    n_fwd: int = 12,
+    n_goalies: int = 1,
+) -> List[Dict[str, Any]]:
     """
     Baut ein Lineup pro Spiel:
       - 7 Defender
@@ -206,17 +218,15 @@ def build_lineup(players: List[Dict[str, Any]],
         if key not in seen_ids:
             seen_ids.add(key)
             unique_lineup.append(p)
+
     # --- Debug-Check --------------------------------------
-    d_count = sum(1 for p in lineup if p["PositionGroup"] == "D")
-    f_count = sum(1 for p in lineup if p["PositionGroup"] == "F")
-    g_count = sum(1 for p in lineup if p["PositionGroup"] == "G")
+    d_count = sum(1 for p in unique_lineup if p.get("PositionGroup") == "D")
+    f_count = sum(1 for p in unique_lineup if p.get("PositionGroup") == "F")
+    g_count = sum(1 for p in unique_lineup if p.get("PositionGroup") == "G")
 
-    if (d_count != 7) or (f_count != 12) or (g_count != 1):
+    if (d_count != n_def) or (f_count != n_fwd) or (g_count != n_goalies):
         print(f"\n[DEBUG][Lineup Warnung] Team: {team_name}")
-        print(f"   → {d_count}D / {f_count}F / {g_count}G  (Soll: 7D / 12F / 1G)")
-
-
-        # BONUS: Zeige, welche Positionen fehlen
+        print(f"   → {d_count}D / {f_count}F / {g_count}G  (Soll: {n_def}D / {n_fwd}F / {n_goalies}G)")
         if d_count < n_def:
             print("   -> FEHLENDE Verteidiger:", n_def - d_count)
         if f_count < n_fwd:
@@ -247,7 +257,7 @@ def _get_lineup_for_team(df: pd.DataFrame, team_name: str) -> List[Dict[str, Any
 def prepare_lineups_for_matches(df: pd.DataFrame, matches: List[Tuple[str, str]]) -> None:
     """
     Für alle Teams, die an diesem Spieltag in 'matches' beteiligt sind,
-    wird eine Lineup-Liste (8D/12F/1G) gebaut und in df["Lineup"] abgelegt.
+    wird eine Lineup-Liste (7D/12F/1G) gebaut und in df["Lineup"] abgelegt.
     """
     teams_today = set()
     for home, away in matches:
@@ -271,17 +281,12 @@ def prepare_lineups_for_matches(df: pd.DataFrame, matches: List[Tuple[str, str]]
 
         idx = idx_list[0]  # genau eine Zeile pro Team
         players = df.at[idx, "Players"]
-        lineup = build_lineup(players)
+        lineup = build_lineup(players, team_name=team_name)
         df.at[idx, "Lineup"] = lineup
 
-
-
-       
 # -----------------------------------------------------
-
-
-
-### DEBUG-Helfer: Tabellenansicht & Stärkevergleich & JSON-Payload
+# DEBUG-Helfer: Tabellenansicht & Stärkevergleich & JSON-Payload
+# -----------------------------------------------------
 
 def _build_lineup_table(df: pd.DataFrame, matches: List[Tuple[str, str]]) -> pd.DataFrame:
     """
@@ -484,11 +489,21 @@ def simulate_match(df:pd.DataFrame,home:str,away:str,stats:pd.DataFrame,conf:str
     res_json={"home":home,"away":away,"g_home":g_home,"g_away":g_away,"conference":conf}
     return res_str,res_json
 
-def init_stats()->pd.DataFrame:
-    return pd.DataFrame([
-        {"Player":p["Name"],"Team":t["Team"],"Goals":0,"Assists":0}
-        for t in nord_teams+sued_teams for p in t["Players"]
-    ])
+def init_stats() -> pd.DataFrame:
+    rows = []
+    for t in nord_teams + sued_teams:
+        team_name = t["Team"]
+        for p in t["Players"]:
+            rows.append({
+                "Player": p["Name"],
+                "Team": team_name,
+                "Number": p.get("Number"),
+                "PositionGroup": p.get("PositionGroup"),
+                "Goals": 0,
+                "Assists": 0,
+            })
+    return pd.DataFrame(rows)
+
 
 # ------------------------------------------------
 # 7  PLAYOFFS – SERIEN (Bo7)
@@ -776,6 +791,7 @@ def step_playoffs_round_once() -> Dict[str, Any]:
         "spieltag": f"Playoff_Runde_{rnd}",
         "nord": nord.to_dict("records"), "sued": sued.to_dict("records"),
         "nsched": [], "ssched": [],
+
         "stats": stats.to_dict("records"),
         "history": history,
         "phase": "playoffs",
@@ -785,7 +801,36 @@ def step_playoffs_round_once() -> Dict[str, Any]:
     return {"status":"ok","round":rnd,"winners":winners}
 
 # ------------------------------------------------
-# 9  SELF-TEST & DEMO
+# 9  RUN-SIMULATION (für GUI-Button)
+# ------------------------------------------------
+def run_simulation(max_seasons: int = 1, interactive: bool = False) -> None:
+    """
+    Simuliert max_seasons Saisons komplett (Hauptrunde + Playoffs).
+    Wird von der Streamlit-GUI verwendet.
+    """
+    for _ in range(max_seasons):
+        # ensure State existiert
+        state = load_state()
+        if not state:
+            season = get_next_season_number()
+            state = _init_new_season_state(season)
+            save_state(state)
+
+        # Regular Season
+        while True:
+            res = step_regular_season_once()
+            if res.get("status") == "season_over":
+                break
+            if interactive:
+                print(f"Spieltag {res.get('spieltag')} simuliert")
+
+        # Playoffs komplett
+        po_res = simulate_full_playoffs_and_advance()
+        if interactive:
+            print(f"Saison abgeschlossen. Champion: {po_res.get('champion')}.")
+
+# ------------------------------------------------
+# 10  SELF-TEST & DEMO (CLI)
 # ------------------------------------------------
 def _self_tests()->None:
     dummy=[{"Team":str(i)} for i in range(6)]

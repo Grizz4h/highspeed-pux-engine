@@ -5416,7 +5416,7 @@
     "type": "skater",
     "team_code": "ECK",
     "name_real": "Markus Freis",
-    "number": 95,
+    "number": null,
     "nation": "nan",
     "position_raw": "DE",
     "position_group": "D",

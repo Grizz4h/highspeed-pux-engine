@@ -133,11 +133,11 @@
     "fo_won": 163,
     "fo_lost": 142,
     "fo_pct": 53.44,
-    "rating_offense": 93,
+    "rating_offense": 92,
     "rating_defense": 73,
     "rating_speed": 84,
     "rating_chemistry": 75,
-    "rating_overall": 85
+    "rating_overall": 84
   },
   {
     "league": "DEL2",
@@ -217,7 +217,7 @@
     "fo_won": 18,
     "fo_lost": 23,
     "fo_pct": 43.9,
-    "rating_offense": 92,
+    "rating_offense": 91,
     "rating_defense": 71,
     "rating_speed": 83,
     "rating_chemistry": 72,
@@ -304,7 +304,7 @@
     "rating_offense": 81,
     "rating_defense": 77,
     "rating_speed": 83,
-    "rating_chemistry": 77,
+    "rating_chemistry": 76,
     "rating_overall": 80
   },
   {
@@ -329,7 +329,7 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 93,
+    "rating_offense": 92,
     "rating_defense": 80,
     "rating_speed": 82,
     "rating_chemistry": 80,
@@ -357,10 +357,10 @@
     "fo_won": 3,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 92,
+    "rating_offense": 91,
     "rating_defense": 83,
     "rating_speed": 83,
-    "rating_chemistry": 80,
+    "rating_chemistry": 79,
     "rating_overall": 87
   },
   {
@@ -389,7 +389,7 @@
     "rating_defense": 70,
     "rating_speed": 82,
     "rating_chemistry": 72,
-    "rating_overall": 83
+    "rating_overall": 82
   },
   {
     "league": "DEL2",
@@ -417,7 +417,7 @@
     "rating_defense": 73,
     "rating_speed": 81,
     "rating_chemistry": 73,
-    "rating_overall": 83
+    "rating_overall": 82
   },
   {
     "league": "DEL2",
@@ -445,7 +445,7 @@
     "rating_defense": 76,
     "rating_speed": 81,
     "rating_chemistry": 77,
-    "rating_overall": 84
+    "rating_overall": 83
   },
   {
     "league": "DEL2",
@@ -469,11 +469,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 89,
-    "rating_defense": 71,
+    "rating_offense": 88,
+    "rating_defense": 72,
     "rating_speed": 81,
     "rating_chemistry": 72,
-    "rating_overall": 82
+    "rating_overall": 81
   },
   {
     "league": "DEL2",
@@ -499,8 +499,8 @@
     "fo_pct": 43.56,
     "rating_offense": 89,
     "rating_defense": 73,
-    "rating_speed": 84,
-    "rating_chemistry": 69,
+    "rating_speed": 83,
+    "rating_chemistry": 68,
     "rating_overall": 83
   },
   {
@@ -529,7 +529,7 @@
     "rating_defense": 72,
     "rating_speed": 81,
     "rating_chemistry": 72,
-    "rating_overall": 81
+    "rating_overall": 80
   },
   {
     "league": "DEL2",
@@ -555,7 +555,7 @@
     "fo_pct": 0.0,
     "rating_offense": 85,
     "rating_defense": 74,
-    "rating_speed": 82,
+    "rating_speed": 81,
     "rating_chemistry": 73,
     "rating_overall": 81
   },
@@ -581,11 +581,11 @@
     "fo_won": 106,
     "fo_lost": 90,
     "fo_pct": 54.08,
-    "rating_offense": 85,
+    "rating_offense": 84,
     "rating_defense": 58,
     "rating_speed": 81,
     "rating_chemistry": 67,
-    "rating_overall": 76
+    "rating_overall": 75
   },
   {
     "league": "DEL2",
@@ -641,7 +641,7 @@
     "rating_defense": 64,
     "rating_speed": 81,
     "rating_chemistry": 69,
-    "rating_overall": 78
+    "rating_overall": 77
   },
   {
     "league": "DEL2",
@@ -669,7 +669,7 @@
     "rating_defense": 66,
     "rating_speed": 81,
     "rating_chemistry": 70,
-    "rating_overall": 77
+    "rating_overall": 76
   },
   {
     "league": "DEL2",
@@ -693,11 +693,11 @@
     "fo_won": 144,
     "fo_lost": 71,
     "fo_pct": 66.98,
-    "rating_offense": 83,
+    "rating_offense": 82,
     "rating_defense": 70,
     "rating_speed": 81,
-    "rating_chemistry": 71,
-    "rating_overall": 79
+    "rating_chemistry": 70,
+    "rating_overall": 78
   },
   {
     "league": "DEL2",
@@ -724,7 +724,7 @@
     "rating_offense": 82,
     "rating_defense": 71,
     "rating_speed": 80,
-    "rating_chemistry": 72,
+    "rating_chemistry": 71,
     "rating_overall": 78
   },
   {
@@ -750,8 +750,8 @@
     "fo_lost": 0,
     "fo_pct": 0.0,
     "rating_offense": 82,
-    "rating_defense": 72,
-    "rating_speed": 80,
+    "rating_defense": 71,
+    "rating_speed": 79,
     "rating_chemistry": 72,
     "rating_overall": 77
   },
@@ -777,11 +777,11 @@
     "fo_won": 7,
     "fo_lost": 7,
     "fo_pct": 50.0,
-    "rating_offense": 80,
+    "rating_offense": 79,
     "rating_defense": 76,
-    "rating_speed": 80,
+    "rating_speed": 79,
     "rating_chemistry": 77,
-    "rating_overall": 79
+    "rating_overall": 78
   },
   {
     "league": "DEL2",
@@ -805,11 +805,11 @@
     "fo_won": 33,
     "fo_lost": 45,
     "fo_pct": 42.31,
-    "rating_offense": 80,
+    "rating_offense": 79,
     "rating_defense": 83,
-    "rating_speed": 80,
+    "rating_speed": 79,
     "rating_chemistry": 82,
-    "rating_overall": 81
+    "rating_overall": 80
   },
   {
     "league": "DEL2",
@@ -835,7 +835,7 @@
     "fo_pct": 0.0,
     "rating_offense": 80,
     "rating_defense": 70,
-    "rating_speed": 80,
+    "rating_speed": 79,
     "rating_chemistry": 72,
     "rating_overall": 76
   },
@@ -863,7 +863,7 @@
     "fo_pct": 0.0,
     "rating_offense": 76,
     "rating_defense": 70,
-    "rating_speed": 80,
+    "rating_speed": 79,
     "rating_chemistry": 72,
     "rating_overall": 74
   },
@@ -891,7 +891,7 @@
     "fo_pct": 0.0,
     "rating_offense": 74,
     "rating_defense": 75,
-    "rating_speed": 80,
+    "rating_speed": 79,
     "rating_chemistry": 74,
     "rating_overall": 76
   },
@@ -917,10 +917,10 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 88,
+    "rating_offense": 87,
     "rating_defense": 74,
     "rating_speed": 80,
-    "rating_chemistry": 71,
+    "rating_chemistry": 70,
     "rating_overall": 82
   },
   {
@@ -973,9 +973,9 @@
     "fo_won": 193,
     "fo_lost": 108,
     "fo_pct": 64.12,
-    "rating_offense": 85,
+    "rating_offense": 84,
     "rating_defense": 73,
-    "rating_speed": 79,
+    "rating_speed": 78,
     "rating_chemistry": 74,
     "rating_overall": 79
   },
@@ -1001,11 +1001,11 @@
     "fo_won": 141,
     "fo_lost": 130,
     "fo_pct": 52.03,
-    "rating_offense": 83,
+    "rating_offense": 82,
     "rating_defense": 69,
-    "rating_speed": 79,
+    "rating_speed": 78,
     "rating_chemistry": 70,
-    "rating_overall": 78
+    "rating_overall": 77
   },
   {
     "league": "DEL2",
@@ -1060,8 +1060,8 @@
     "rating_offense": 81,
     "rating_defense": 65,
     "rating_speed": 79,
-    "rating_chemistry": 72,
-    "rating_overall": 76
+    "rating_chemistry": 71,
+    "rating_overall": 75
   },
   {
     "league": "DEL2",
@@ -1087,8 +1087,8 @@
     "fo_pct": 0.0,
     "rating_offense": 79,
     "rating_defense": 57,
-    "rating_speed": 79,
-    "rating_chemistry": 61,
+    "rating_speed": 78,
+    "rating_chemistry": 60,
     "rating_overall": 72
   },
   {
@@ -1115,9 +1115,9 @@
     "fo_pct": 31.03,
     "rating_offense": 87,
     "rating_defense": 66,
-    "rating_speed": 78,
+    "rating_speed": 77,
     "rating_chemistry": 68,
-    "rating_overall": 79
+    "rating_overall": 78
   },
   {
     "league": "DEL2",
@@ -1143,7 +1143,7 @@
     "fo_pct": 100.0,
     "rating_offense": 85,
     "rating_defense": 81,
-    "rating_speed": 78,
+    "rating_speed": 77,
     "rating_chemistry": 80,
     "rating_overall": 82
   },
@@ -1169,10 +1169,10 @@
     "fo_won": 120,
     "fo_lost": 164,
     "fo_pct": 42.25,
-    "rating_offense": 82,
+    "rating_offense": 81,
     "rating_defense": 73,
-    "rating_speed": 78,
-    "rating_chemistry": 74,
+    "rating_speed": 77,
+    "rating_chemistry": 73,
     "rating_overall": 78
   },
   {
@@ -1197,7 +1197,7 @@
     "fo_won": 0,
     "fo_lost": 5,
     "fo_pct": 0.0,
-    "rating_offense": 81,
+    "rating_offense": 80,
     "rating_defense": 72,
     "rating_speed": 78,
     "rating_chemistry": 72,
@@ -1227,7 +1227,7 @@
     "fo_pct": 0.0,
     "rating_offense": 76,
     "rating_defense": 62,
-    "rating_speed": 78,
+    "rating_speed": 77,
     "rating_chemistry": 66,
     "rating_overall": 70
   },
@@ -1253,9 +1253,9 @@
     "fo_won": 45,
     "fo_lost": 37,
     "fo_pct": 54.88,
-    "rating_offense": 75,
+    "rating_offense": 74,
     "rating_defense": 76,
-    "rating_speed": 78,
+    "rating_speed": 77,
     "rating_chemistry": 75,
     "rating_overall": 76
   },
@@ -1282,9 +1282,9 @@
     "fo_lost": 0,
     "fo_pct": 0.0,
     "rating_offense": 86,
-    "rating_defense": 60,
+    "rating_defense": 59,
     "rating_speed": 78,
-    "rating_chemistry": 66,
+    "rating_chemistry": 65,
     "rating_overall": 76
   },
   {
@@ -1309,7 +1309,7 @@
     "fo_won": 126,
     "fo_lost": 94,
     "fo_pct": 57.27,
-    "rating_offense": 83,
+    "rating_offense": 82,
     "rating_defense": 63,
     "rating_speed": 76,
     "rating_chemistry": 66,
@@ -1339,7 +1339,7 @@
     "fo_pct": 0.0,
     "rating_offense": 81,
     "rating_defense": 65,
-    "rating_speed": 77,
+    "rating_speed": 76,
     "rating_chemistry": 67,
     "rating_overall": 75
   },
@@ -1365,10 +1365,10 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 81,
+    "rating_offense": 80,
     "rating_defense": 74,
     "rating_speed": 78,
-    "rating_chemistry": 71,
+    "rating_chemistry": 70,
     "rating_overall": 78
   },
   {
@@ -1423,7 +1423,7 @@
     "fo_pct": 48.74,
     "rating_offense": 78,
     "rating_defense": 73,
-    "rating_speed": 78,
+    "rating_speed": 77,
     "rating_chemistry": 71,
     "rating_overall": 76
   },
@@ -1449,9 +1449,9 @@
     "fo_won": 168,
     "fo_lost": 106,
     "fo_pct": 61.31,
-    "rating_offense": 78,
+    "rating_offense": 77,
     "rating_defense": 54,
-    "rating_speed": 77,
+    "rating_speed": 76,
     "rating_chemistry": 58,
     "rating_overall": 70
   },
@@ -1508,8 +1508,8 @@
     "rating_offense": 77,
     "rating_defense": 74,
     "rating_speed": 78,
-    "rating_chemistry": 71,
-    "rating_overall": 77
+    "rating_chemistry": 70,
+    "rating_overall": 76
   },
   {
     "league": "DEL2",
@@ -1533,10 +1533,10 @@
     "fo_won": 5,
     "fo_lost": 2,
     "fo_pct": 71.43,
-    "rating_offense": 76,
+    "rating_offense": 75,
     "rating_defense": 70,
-    "rating_speed": 77,
-    "rating_chemistry": 72,
+    "rating_speed": 76,
+    "rating_chemistry": 71,
     "rating_overall": 74
   },
   {
@@ -1561,7 +1561,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 76,
+    "rating_offense": 75,
     "rating_defense": 76,
     "rating_speed": 76,
     "rating_chemistry": 75,
@@ -1593,7 +1593,7 @@
     "rating_defense": 81,
     "rating_speed": 76,
     "rating_chemistry": 78,
-    "rating_overall": 78
+    "rating_overall": 77
   },
   {
     "league": "DEL2",
@@ -1617,7 +1617,7 @@
     "fo_won": 131,
     "fo_lost": 111,
     "fo_pct": 54.13,
-    "rating_offense": 86,
+    "rating_offense": 85,
     "rating_defense": 66,
     "rating_speed": 75,
     "rating_chemistry": 69,
@@ -1645,11 +1645,11 @@
     "fo_won": 1,
     "fo_lost": 3,
     "fo_pct": 25.0,
-    "rating_offense": 86,
+    "rating_offense": 85,
     "rating_defense": 74,
     "rating_speed": 75,
     "rating_chemistry": 73,
-    "rating_overall": 80
+    "rating_overall": 79
   },
   {
     "league": "DEL2",
@@ -1674,9 +1674,9 @@
     "fo_lost": 105,
     "fo_pct": 59.62,
     "rating_offense": 82,
-    "rating_defense": 82,
-    "rating_speed": 76,
-    "rating_chemistry": 80,
+    "rating_defense": 81,
+    "rating_speed": 75,
+    "rating_chemistry": 79,
     "rating_overall": 80
   },
   {
@@ -1701,11 +1701,11 @@
     "fo_won": 1,
     "fo_lost": 1,
     "fo_pct": 50.0,
-    "rating_offense": 81,
+    "rating_offense": 80,
     "rating_defense": 78,
-    "rating_speed": 76,
-    "rating_chemistry": 77,
-    "rating_overall": 79
+    "rating_speed": 75,
+    "rating_chemistry": 76,
+    "rating_overall": 78
   },
   {
     "league": "DEL2",
@@ -1729,9 +1729,9 @@
     "fo_won": 123,
     "fo_lost": 153,
     "fo_pct": 44.57,
-    "rating_offense": 81,
+    "rating_offense": 80,
     "rating_defense": 60,
-    "rating_speed": 76,
+    "rating_speed": 75,
     "rating_chemistry": 64,
     "rating_overall": 73
   },
@@ -1761,7 +1761,7 @@
     "rating_defense": 76,
     "rating_speed": 75,
     "rating_chemistry": 74,
-    "rating_overall": 78
+    "rating_overall": 77
   },
   {
     "league": "DEL2",
@@ -1816,8 +1816,8 @@
     "rating_offense": 79,
     "rating_defense": 66,
     "rating_speed": 76,
-    "rating_chemistry": 67,
-    "rating_overall": 75
+    "rating_chemistry": 66,
+    "rating_overall": 74
   },
   {
     "league": "DEL2",
@@ -1843,9 +1843,9 @@
     "fo_pct": 0.0,
     "rating_offense": 75,
     "rating_defense": 77,
-    "rating_speed": 76,
+    "rating_speed": 75,
     "rating_chemistry": 74,
-    "rating_overall": 76
+    "rating_overall": 75
   },
   {
     "league": "DEL2",
@@ -1871,8 +1871,8 @@
     "fo_pct": 0.0,
     "rating_offense": 76,
     "rating_defense": 74,
-    "rating_speed": 76,
-    "rating_chemistry": 73,
+    "rating_speed": 75,
+    "rating_chemistry": 72,
     "rating_overall": 75
   },
   {
@@ -1897,10 +1897,10 @@
     "fo_won": 89,
     "fo_lost": 110,
     "fo_pct": 44.72,
-    "rating_offense": 75,
-    "rating_defense": 70,
+    "rating_offense": 74,
+    "rating_defense": 69,
     "rating_speed": 75,
-    "rating_chemistry": 73,
+    "rating_chemistry": 72,
     "rating_overall": 73
   },
   {
@@ -1925,7 +1925,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 75,
+    "rating_offense": 74,
     "rating_defense": 85,
     "rating_speed": 75,
     "rating_chemistry": 80,
@@ -1953,10 +1953,10 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 72,
+    "rating_offense": 71,
     "rating_defense": 74,
     "rating_speed": 75,
-    "rating_chemistry": 74,
+    "rating_chemistry": 73,
     "rating_overall": 73
   },
   {
@@ -2013,7 +2013,7 @@
     "rating_defense": 72,
     "rating_speed": 74,
     "rating_chemistry": 72,
-    "rating_overall": 76
+    "rating_overall": 75
   },
   {
     "league": "DEL2",
@@ -2040,7 +2040,7 @@
     "rating_offense": 77,
     "rating_defense": 73,
     "rating_speed": 74,
-    "rating_chemistry": 74,
+    "rating_chemistry": 73,
     "rating_overall": 75
   },
   {
@@ -2124,7 +2124,7 @@
     "rating_offense": 75,
     "rating_defense": 70,
     "rating_speed": 74,
-    "rating_chemistry": 72,
+    "rating_chemistry": 71,
     "rating_overall": 73
   },
   {
@@ -2152,7 +2152,7 @@
     "rating_offense": 75,
     "rating_defense": 61,
     "rating_speed": 75,
-    "rating_chemistry": 63,
+    "rating_chemistry": 62,
     "rating_overall": 71
   },
   {
@@ -2177,7 +2177,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 74,
+    "rating_offense": 73,
     "rating_defense": 68,
     "rating_speed": 74,
     "rating_chemistry": 71,
@@ -2205,11 +2205,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 74,
+    "rating_offense": 73,
     "rating_defense": 80,
     "rating_speed": 74,
-    "rating_chemistry": 78,
-    "rating_overall": 77
+    "rating_chemistry": 77,
+    "rating_overall": 76
   },
   {
     "league": "DEL2",
@@ -2233,11 +2233,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 74,
+    "rating_offense": 73,
     "rating_defense": 70,
     "rating_speed": 74,
     "rating_chemistry": 72,
-    "rating_overall": 73
+    "rating_overall": 72
   },
   {
     "league": "DEL2",
@@ -2261,7 +2261,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 74,
+    "rating_offense": 73,
     "rating_defense": 57,
     "rating_speed": 74,
     "rating_chemistry": 64,
@@ -2289,11 +2289,11 @@
     "fo_won": 192,
     "fo_lost": 141,
     "fo_pct": 57.66,
-    "rating_offense": 72,
+    "rating_offense": 71,
     "rating_defense": 66,
     "rating_speed": 74,
     "rating_chemistry": 71,
-    "rating_overall": 71
+    "rating_overall": 70
   },
   {
     "league": "DEL2",
@@ -2317,11 +2317,11 @@
     "fo_won": 5,
     "fo_lost": 5,
     "fo_pct": 50.0,
-    "rating_offense": 72,
+    "rating_offense": 71,
     "rating_defense": 63,
     "rating_speed": 74,
     "rating_chemistry": 67,
-    "rating_overall": 70
+    "rating_overall": 69
   },
   {
     "league": "DEL2",
@@ -2345,10 +2345,10 @@
     "fo_won": 110,
     "fo_lost": 91,
     "fo_pct": 54.73,
-    "rating_offense": 72,
+    "rating_offense": 71,
     "rating_defense": 70,
     "rating_speed": 74,
-    "rating_chemistry": 74,
+    "rating_chemistry": 73,
     "rating_overall": 72
   },
   {
@@ -2376,7 +2376,7 @@
     "rating_offense": 78,
     "rating_defense": 69,
     "rating_speed": 73,
-    "rating_chemistry": 71,
+    "rating_chemistry": 70,
     "rating_overall": 74
   },
   {
@@ -2401,10 +2401,10 @@
     "fo_won": 10,
     "fo_lost": 13,
     "fo_pct": 43.48,
-    "rating_offense": 75,
+    "rating_offense": 74,
     "rating_defense": 74,
     "rating_speed": 73,
-    "rating_chemistry": 73,
+    "rating_chemistry": 72,
     "rating_overall": 74
   },
   {
@@ -2433,7 +2433,7 @@
     "rating_defense": 69,
     "rating_speed": 73,
     "rating_chemistry": 70,
-    "rating_overall": 73
+    "rating_overall": 72
   },
   {
     "league": "DEL2",
@@ -2458,7 +2458,7 @@
     "fo_lost": 0,
     "fo_pct": 0.0,
     "rating_offense": 74,
-    "rating_defense": 60,
+    "rating_defense": 61,
     "rating_speed": 73,
     "rating_chemistry": 66,
     "rating_overall": 68
@@ -2517,7 +2517,7 @@
     "rating_defense": 65,
     "rating_speed": 73,
     "rating_chemistry": 67,
-    "rating_overall": 71
+    "rating_overall": 70
   },
   {
     "league": "DEL2",
@@ -2541,8 +2541,8 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 73,
-    "rating_defense": 67,
+    "rating_offense": 72,
+    "rating_defense": 68,
     "rating_speed": 73,
     "rating_chemistry": 69,
     "rating_overall": 71
@@ -2572,7 +2572,7 @@
     "rating_offense": 72,
     "rating_defense": 81,
     "rating_speed": 73,
-    "rating_chemistry": 78,
+    "rating_chemistry": 77,
     "rating_overall": 76
   },
   {
@@ -2597,7 +2597,7 @@
     "fo_won": 126,
     "fo_lost": 130,
     "fo_pct": 49.22,
-    "rating_offense": 73,
+    "rating_offense": 72,
     "rating_defense": 63,
     "rating_speed": 73,
     "rating_chemistry": 68,
@@ -2627,8 +2627,8 @@
     "fo_pct": 39.39,
     "rating_offense": 72,
     "rating_defense": 65,
-    "rating_speed": 74,
-    "rating_chemistry": 66,
+    "rating_speed": 73,
+    "rating_chemistry": 65,
     "rating_overall": 70
   },
   {
@@ -2681,7 +2681,7 @@
     "fo_won": 3,
     "fo_lost": 2,
     "fo_pct": 60.0,
-    "rating_offense": 71,
+    "rating_offense": 70,
     "rating_defense": 77,
     "rating_speed": 73,
     "rating_chemistry": 76,
@@ -2709,7 +2709,7 @@
     "fo_won": 2,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 71,
+    "rating_offense": 70,
     "rating_defense": 80,
     "rating_speed": 73,
     "rating_chemistry": 79,
@@ -2741,7 +2741,7 @@
     "rating_defense": 68,
     "rating_speed": 73,
     "rating_chemistry": 70,
-    "rating_overall": 70
+    "rating_overall": 69
   },
   {
     "league": "DEL2",
@@ -2821,11 +2821,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 78,
+    "rating_offense": 77,
     "rating_defense": 70,
-    "rating_speed": 72,
+    "rating_speed": 71,
     "rating_chemistry": 72,
-    "rating_overall": 74
+    "rating_overall": 73
   },
   {
     "league": "DEL2",
@@ -2850,10 +2850,10 @@
     "fo_lost": 0,
     "fo_pct": 0.0,
     "rating_offense": 75,
-    "rating_defense": 65,
+    "rating_defense": 66,
     "rating_speed": 72,
     "rating_chemistry": 67,
-    "rating_overall": 72
+    "rating_overall": 71
   },
   {
     "league": "DEL2",
@@ -2905,11 +2905,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 72,
+    "rating_offense": 71,
     "rating_defense": 75,
     "rating_speed": 72,
     "rating_chemistry": 75,
-    "rating_overall": 73
+    "rating_overall": 72
   },
   {
     "league": "DEL2",
@@ -2933,11 +2933,11 @@
     "fo_won": 119,
     "fo_lost": 119,
     "fo_pct": 50.0,
-    "rating_offense": 72,
+    "rating_offense": 71,
     "rating_defense": 75,
     "rating_speed": 72,
     "rating_chemistry": 75,
-    "rating_overall": 73
+    "rating_overall": 72
   },
   {
     "league": "DEL2",
@@ -2961,10 +2961,10 @@
     "fo_won": 80,
     "fo_lost": 74,
     "fo_pct": 51.95,
-    "rating_offense": 71,
+    "rating_offense": 70,
     "rating_defense": 67,
-    "rating_speed": 72,
-    "rating_chemistry": 67,
+    "rating_speed": 71,
+    "rating_chemistry": 66,
     "rating_overall": 70
   },
   {
@@ -2991,8 +2991,8 @@
     "fo_pct": 42.34,
     "rating_offense": 70,
     "rating_defense": 51,
-    "rating_speed": 72,
-    "rating_chemistry": 61,
+    "rating_speed": 71,
+    "rating_chemistry": 60,
     "rating_overall": 65
   },
   {
@@ -3019,36 +3019,36 @@
     "fo_pct": 0.0,
     "rating_offense": 71,
     "rating_defense": 71,
-    "rating_speed": 72,
+    "rating_speed": 71,
     "rating_chemistry": 71,
     "rating_overall": 71
   },
   {
-    "league": "DEL2",
+    "league": "DEL",
     "type": "skater",
-    "team_code": "EBR",
-    "team_name": null,
+    "team_code": null,
+    "team_name": "NIT",
     "name_real": "Jakob Weber",
-    "number": 55,
-    "nation": "nan",
-    "position_raw": "DE",
+    "number": 41,
+    "nation": "GER",
+    "position_raw": "V",
     "position_group": "D",
-    "gp": 15,
-    "goals": 2,
-    "assists": 5,
-    "points": 7,
-    "points_per_game": 0.4666666666666667,
-    "plus_minus": 5,
-    "pp_goals": 1,
+    "gp": 19,
+    "goals": 0,
+    "assists": 6,
+    "points": 6,
+    "points_per_game": 0.3157894736842105,
+    "plus_minus": 8,
+    "pp_goals": 0,
     "sh_goals": 0,
-    "pim": 6,
+    "pim": 4,
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 70,
-    "rating_defense": 77,
+    "rating_offense": 64,
+    "rating_defense": 82,
     "rating_speed": 72,
-    "rating_chemistry": 75,
+    "rating_chemistry": 81,
     "rating_overall": 74
   },
   {
@@ -3077,7 +3077,7 @@
     "rating_defense": 48,
     "rating_speed": 72,
     "rating_chemistry": 59,
-    "rating_overall": 61
+    "rating_overall": 60
   },
   {
     "league": "DEL2",
@@ -3103,7 +3103,7 @@
     "fo_pct": 0.0,
     "rating_offense": 69,
     "rating_defense": 81,
-    "rating_speed": 72,
+    "rating_speed": 71,
     "rating_chemistry": 77,
     "rating_overall": 75
   },
@@ -3214,7 +3214,7 @@
     "fo_lost": 154,
     "fo_pct": 46.34,
     "rating_offense": 68,
-    "rating_defense": 56,
+    "rating_defense": 55,
     "rating_speed": 72,
     "rating_chemistry": 65,
     "rating_overall": 65
@@ -3245,7 +3245,7 @@
     "rating_defense": 70,
     "rating_speed": 72,
     "rating_chemistry": 73,
-    "rating_overall": 70
+    "rating_overall": 69
   },
   {
     "league": "DEL2",
@@ -3271,7 +3271,7 @@
     "fo_pct": 0.0,
     "rating_offense": 67,
     "rating_defense": 71,
-    "rating_speed": 72,
+    "rating_speed": 71,
     "rating_chemistry": 71,
     "rating_overall": 70
   },
@@ -3301,7 +3301,7 @@
     "rating_defense": 88,
     "rating_speed": 72,
     "rating_chemistry": 82,
-    "rating_overall": 78
+    "rating_overall": 77
   },
   {
     "league": "DEL2",
@@ -3353,10 +3353,10 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 76,
+    "rating_offense": 75,
     "rating_defense": 72,
-    "rating_speed": 71,
-    "rating_chemistry": 68,
+    "rating_speed": 70,
+    "rating_chemistry": 67,
     "rating_overall": 73
   },
   {
@@ -3411,8 +3411,8 @@
     "fo_pct": 0.0,
     "rating_offense": 72,
     "rating_defense": 71,
-    "rating_speed": 71,
-    "rating_chemistry": 68,
+    "rating_speed": 70,
+    "rating_chemistry": 67,
     "rating_overall": 71
   },
   {
@@ -3465,11 +3465,11 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 71,
+    "rating_offense": 70,
     "rating_defense": 74,
     "rating_speed": 71,
     "rating_chemistry": 74,
-    "rating_overall": 72
+    "rating_overall": 71
   },
   {
     "league": "DEL2",
@@ -3493,7 +3493,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 71,
+    "rating_offense": 70,
     "rating_defense": 69,
     "rating_speed": 71,
     "rating_chemistry": 70,
@@ -3525,7 +3525,7 @@
     "rating_defense": 66,
     "rating_speed": 70,
     "rating_chemistry": 68,
-    "rating_overall": 69
+    "rating_overall": 68
   },
   {
     "league": "DEL2",
@@ -3549,9 +3549,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 70,
+    "rating_offense": 69,
     "rating_defense": 66,
-    "rating_speed": 71,
+    "rating_speed": 70,
     "rating_chemistry": 68,
     "rating_overall": 68
   },
@@ -3579,7 +3579,7 @@
     "fo_pct": 36.54,
     "rating_offense": 69,
     "rating_defense": 74,
-    "rating_speed": 71,
+    "rating_speed": 70,
     "rating_chemistry": 73,
     "rating_overall": 71
   },
@@ -3607,8 +3607,8 @@
     "fo_pct": 100.0,
     "rating_offense": 69,
     "rating_defense": 64,
-    "rating_speed": 71,
-    "rating_chemistry": 68,
+    "rating_speed": 70,
+    "rating_chemistry": 67,
     "rating_overall": 68
   },
   {
@@ -3635,9 +3635,9 @@
     "fo_pct": 47.92,
     "rating_offense": 69,
     "rating_defense": 67,
-    "rating_speed": 71,
-    "rating_chemistry": 70,
-    "rating_overall": 69
+    "rating_speed": 70,
+    "rating_chemistry": 69,
+    "rating_overall": 68
   },
   {
     "league": "DEL2",
@@ -3664,7 +3664,7 @@
     "rating_offense": 69,
     "rating_defense": 70,
     "rating_speed": 71,
-    "rating_chemistry": 73,
+    "rating_chemistry": 72,
     "rating_overall": 70
   },
   {
@@ -3693,7 +3693,7 @@
     "rating_defense": 66,
     "rating_speed": 71,
     "rating_chemistry": 68,
-    "rating_overall": 69
+    "rating_overall": 68
   },
   {
     "league": "DEL2",
@@ -3717,7 +3717,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 69,
+    "rating_offense": 68,
     "rating_defense": 70,
     "rating_speed": 71,
     "rating_chemistry": 72,
@@ -3745,11 +3745,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 68,
+    "rating_offense": 67,
     "rating_defense": 71,
-    "rating_speed": 71,
+    "rating_speed": 70,
     "rating_chemistry": 71,
-    "rating_overall": 70
+    "rating_overall": 69
   },
   {
     "league": "DEL2",
@@ -3777,7 +3777,7 @@
     "rating_defense": 69,
     "rating_speed": 71,
     "rating_chemistry": 73,
-    "rating_overall": 69
+    "rating_overall": 68
   },
   {
     "league": "DEL2",
@@ -3887,37 +3887,37 @@
     "fo_pct": 57.46,
     "rating_offense": 65,
     "rating_defense": 73,
-    "rating_speed": 71,
+    "rating_speed": 70,
     "rating_chemistry": 72,
     "rating_overall": 69
   },
   {
-    "league": "DEL2",
+    "league": "DEL",
     "type": "skater",
-    "team_code": "ESV",
-    "team_name": null,
+    "team_code": null,
+    "team_name": "MUC",
     "name_real": "Philipp Krening",
     "number": 79,
-    "nation": "nan",
-    "position_raw": "FO",
+    "nation": "GER",
+    "position_raw": "S",
     "position_group": "F",
-    "gp": 4,
-    "goals": 3,
-    "assists": 2,
-    "points": 5,
-    "points_per_game": 1.25,
-    "plus_minus": 2,
-    "pp_goals": 1,
+    "gp": 17,
+    "goals": 1,
+    "assists": 1,
+    "points": 2,
+    "points_per_game": 0.11764705882352941,
+    "plus_minus": -2,
+    "pp_goals": 0,
     "sh_goals": 0,
     "pim": 2,
-    "fo_won": 13,
-    "fo_lost": 10,
-    "fo_pct": 56.52,
-    "rating_offense": 75,
-    "rating_defense": 72,
-    "rating_speed": 78,
-    "rating_chemistry": 65,
-    "rating_overall": 75
+    "fo_won": 0,
+    "fo_lost": 2,
+    "fo_pct": 0.0,
+    "rating_offense": 63,
+    "rating_defense": 71,
+    "rating_speed": 67,
+    "rating_chemistry": 72,
+    "rating_overall": 67
   },
   {
     "league": "DEL2",
@@ -3941,11 +3941,11 @@
     "fo_won": 14,
     "fo_lost": 8,
     "fo_pct": 63.64,
-    "rating_offense": 72,
+    "rating_offense": 71,
     "rating_defense": 70,
-    "rating_speed": 70,
-    "rating_chemistry": 66,
-    "rating_overall": 71
+    "rating_speed": 69,
+    "rating_chemistry": 65,
+    "rating_overall": 70
   },
   {
     "league": "DEL2",
@@ -3971,8 +3971,8 @@
     "fo_pct": 53.22,
     "rating_offense": 71,
     "rating_defense": 72,
-    "rating_speed": 69,
-    "rating_chemistry": 68,
+    "rating_speed": 68,
+    "rating_chemistry": 67,
     "rating_overall": 71
   },
   {
@@ -3997,9 +3997,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 70,
+    "rating_offense": 69,
     "rating_defense": 66,
-    "rating_speed": 70,
+    "rating_speed": 69,
     "rating_chemistry": 69,
     "rating_overall": 68
   },
@@ -4027,8 +4027,8 @@
     "fo_pct": 51.43,
     "rating_offense": 69,
     "rating_defense": 73,
-    "rating_speed": 69,
-    "rating_chemistry": 69,
+    "rating_speed": 68,
+    "rating_chemistry": 68,
     "rating_overall": 70
   },
   {
@@ -4053,11 +4053,11 @@
     "fo_won": 18,
     "fo_lost": 26,
     "fo_pct": 40.91,
-    "rating_offense": 69,
+    "rating_offense": 68,
     "rating_defense": 68,
     "rating_speed": 69,
     "rating_chemistry": 68,
-    "rating_overall": 69
+    "rating_overall": 68
   },
   {
     "league": "DEL2",
@@ -4081,11 +4081,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 69,
+    "rating_offense": 68,
     "rating_defense": 71,
     "rating_speed": 69,
     "rating_chemistry": 70,
-    "rating_overall": 70
+    "rating_overall": 69
   },
   {
     "league": "DEL2",
@@ -4111,8 +4111,8 @@
     "fo_pct": 46.09,
     "rating_offense": 68,
     "rating_defense": 70,
-    "rating_speed": 70,
-    "rating_chemistry": 72,
+    "rating_speed": 69,
+    "rating_chemistry": 71,
     "rating_overall": 69
   },
   {
@@ -4137,7 +4137,7 @@
     "fo_won": 134,
     "fo_lost": 116,
     "fo_pct": 53.6,
-    "rating_offense": 68,
+    "rating_offense": 67,
     "rating_defense": 66,
     "rating_speed": 70,
     "rating_chemistry": 69,
@@ -4221,7 +4221,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 68,
+    "rating_offense": 67,
     "rating_defense": 74,
     "rating_speed": 70,
     "rating_chemistry": 74,
@@ -4252,8 +4252,8 @@
     "rating_offense": 66,
     "rating_defense": 68,
     "rating_speed": 69,
-    "rating_chemistry": 68,
-    "rating_overall": 68
+    "rating_chemistry": 67,
+    "rating_overall": 67
   },
   {
     "league": "DEL2",
@@ -4335,7 +4335,7 @@
     "fo_pct": 60.0,
     "rating_offense": 67,
     "rating_defense": 70,
-    "rating_speed": 72,
+    "rating_speed": 71,
     "rating_chemistry": 64,
     "rating_overall": 69
   },
@@ -4361,10 +4361,10 @@
     "fo_won": 2,
     "fo_lost": 3,
     "fo_pct": 40.0,
-    "rating_offense": 65,
+    "rating_offense": 64,
     "rating_defense": 65,
     "rating_speed": 69,
-    "rating_chemistry": 67,
+    "rating_chemistry": 66,
     "rating_overall": 66
   },
   {
@@ -4389,11 +4389,11 @@
     "fo_won": 39,
     "fo_lost": 53,
     "fo_pct": 42.39,
-    "rating_offense": 65,
+    "rating_offense": 64,
     "rating_defense": 71,
     "rating_speed": 69,
     "rating_chemistry": 70,
-    "rating_overall": 68
+    "rating_overall": 67
   },
   {
     "league": "DEL2",
@@ -4419,8 +4419,8 @@
     "fo_pct": 0.0,
     "rating_offense": 65,
     "rating_defense": 77,
-    "rating_speed": 70,
-    "rating_chemistry": 75,
+    "rating_speed": 69,
+    "rating_chemistry": 74,
     "rating_overall": 71
   },
   {
@@ -4445,7 +4445,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 65,
+    "rating_offense": 64,
     "rating_defense": 69,
     "rating_speed": 70,
     "rating_chemistry": 71,
@@ -4473,10 +4473,10 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 70,
+    "rating_offense": 69,
     "rating_defense": 70,
     "rating_speed": 67,
-    "rating_chemistry": 69,
+    "rating_chemistry": 68,
     "rating_overall": 69
   },
   {
@@ -4501,11 +4501,11 @@
     "fo_won": 29,
     "fo_lost": 29,
     "fo_pct": 50.0,
-    "rating_offense": 72,
+    "rating_offense": 71,
     "rating_defense": 67,
-    "rating_speed": 73,
-    "rating_chemistry": 61,
-    "rating_overall": 71
+    "rating_speed": 72,
+    "rating_chemistry": 60,
+    "rating_overall": 70
   },
   {
     "league": "DEL2",
@@ -4529,11 +4529,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 69,
-    "rating_defense": 63,
-    "rating_speed": 68,
-    "rating_chemistry": 65,
-    "rating_overall": 67
+    "rating_offense": 68,
+    "rating_defense": 62,
+    "rating_speed": 67,
+    "rating_chemistry": 64,
+    "rating_overall": 66
   },
   {
     "league": "DEL2",
@@ -4557,10 +4557,10 @@
     "fo_won": 14,
     "fo_lost": 23,
     "fo_pct": 37.84,
-    "rating_offense": 68,
+    "rating_offense": 67,
     "rating_defense": 73,
     "rating_speed": 67,
-    "rating_chemistry": 72,
+    "rating_chemistry": 71,
     "rating_overall": 69
   },
   {
@@ -4585,11 +4585,11 @@
     "fo_won": 10,
     "fo_lost": 12,
     "fo_pct": 45.45,
-    "rating_offense": 68,
+    "rating_offense": 67,
     "rating_defense": 64,
-    "rating_speed": 68,
+    "rating_speed": 67,
     "rating_chemistry": 65,
-    "rating_overall": 67
+    "rating_overall": 66
   },
   {
     "league": "DEL2",
@@ -4613,9 +4613,9 @@
     "fo_won": 96,
     "fo_lost": 104,
     "fo_pct": 48.0,
-    "rating_offense": 68,
+    "rating_offense": 67,
     "rating_defense": 72,
-    "rating_speed": 68,
+    "rating_speed": 67,
     "rating_chemistry": 71,
     "rating_overall": 69
   },
@@ -4643,7 +4643,7 @@
     "fo_pct": 0.0,
     "rating_offense": 67,
     "rating_defense": 65,
-    "rating_speed": 69,
+    "rating_speed": 68,
     "rating_chemistry": 67,
     "rating_overall": 66
   },
@@ -4671,7 +4671,7 @@
     "fo_pct": 55.22,
     "rating_offense": 67,
     "rating_defense": 58,
-    "rating_speed": 69,
+    "rating_speed": 68,
     "rating_chemistry": 63,
     "rating_overall": 65
   },
@@ -4699,7 +4699,7 @@
     "fo_pct": 0.0,
     "rating_offense": 67,
     "rating_defense": 71,
-    "rating_speed": 69,
+    "rating_speed": 68,
     "rating_chemistry": 71,
     "rating_overall": 69
   },
@@ -4725,9 +4725,9 @@
     "fo_won": 0,
     "fo_lost": 3,
     "fo_pct": 0.0,
-    "rating_offense": 67,
+    "rating_offense": 66,
     "rating_defense": 72,
-    "rating_speed": 68,
+    "rating_speed": 67,
     "rating_chemistry": 67,
     "rating_overall": 68
   },
@@ -4753,10 +4753,10 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 66,
+    "rating_offense": 65,
     "rating_defense": 66,
-    "rating_speed": 68,
-    "rating_chemistry": 66,
+    "rating_speed": 67,
+    "rating_chemistry": 65,
     "rating_overall": 66
   },
   {
@@ -4783,9 +4783,9 @@
     "fo_pct": 0.0,
     "rating_offense": 65,
     "rating_defense": 64,
-    "rating_speed": 69,
+    "rating_speed": 68,
     "rating_chemistry": 66,
-    "rating_overall": 66
+    "rating_overall": 65
   },
   {
     "league": "DEL2",
@@ -4811,9 +4811,9 @@
     "fo_pct": 0.0,
     "rating_offense": 65,
     "rating_defense": 69,
-    "rating_speed": 69,
+    "rating_speed": 68,
     "rating_chemistry": 71,
-    "rating_overall": 68
+    "rating_overall": 67
   },
   {
     "league": "DEL2",
@@ -4839,8 +4839,8 @@
     "fo_pct": 0.0,
     "rating_offense": 65,
     "rating_defense": 72,
-    "rating_speed": 69,
-    "rating_chemistry": 73,
+    "rating_speed": 68,
+    "rating_chemistry": 72,
     "rating_overall": 69
   },
   {
@@ -4866,8 +4866,8 @@
     "fo_lost": 43,
     "fo_pct": 50.57,
     "rating_offense": 65,
-    "rating_defense": 64,
-    "rating_speed": 69,
+    "rating_defense": 65,
+    "rating_speed": 68,
     "rating_chemistry": 66,
     "rating_overall": 66
   },
@@ -4895,8 +4895,8 @@
     "fo_pct": 36.84,
     "rating_offense": 65,
     "rating_defense": 67,
-    "rating_speed": 69,
-    "rating_chemistry": 70,
+    "rating_speed": 68,
+    "rating_chemistry": 69,
     "rating_overall": 67
   },
   {
@@ -4923,7 +4923,7 @@
     "fo_pct": 46.15,
     "rating_offense": 65,
     "rating_defense": 74,
-    "rating_speed": 69,
+    "rating_speed": 68,
     "rating_chemistry": 73,
     "rating_overall": 69
   },
@@ -4949,7 +4949,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 65,
+    "rating_offense": 64,
     "rating_defense": 70,
     "rating_speed": 67,
     "rating_chemistry": 66,
@@ -4979,7 +4979,7 @@
     "fo_pct": 0.0,
     "rating_offense": 64,
     "rating_defense": 75,
-    "rating_speed": 68,
+    "rating_speed": 67,
     "rating_chemistry": 72,
     "rating_overall": 68
   },
@@ -5005,9 +5005,9 @@
     "fo_won": 59,
     "fo_lost": 55,
     "fo_pct": 51.75,
-    "rating_offense": 64,
+    "rating_offense": 63,
     "rating_defense": 78,
-    "rating_speed": 68,
+    "rating_speed": 67,
     "rating_chemistry": 74,
     "rating_overall": 69
   },
@@ -5033,11 +5033,11 @@
     "fo_won": 38,
     "fo_lost": 63,
     "fo_pct": 37.62,
-    "rating_offense": 64,
+    "rating_offense": 63,
     "rating_defense": 66,
     "rating_speed": 68,
-    "rating_chemistry": 68,
-    "rating_overall": 66
+    "rating_chemistry": 67,
+    "rating_overall": 65
   },
   {
     "league": "DEL2",
@@ -5065,7 +5065,7 @@
     "rating_defense": 77,
     "rating_speed": 68,
     "rating_chemistry": 74,
-    "rating_overall": 71
+    "rating_overall": 70
   },
   {
     "league": "DEL2",
@@ -5089,11 +5089,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 64,
+    "rating_offense": 63,
     "rating_defense": 72,
-    "rating_speed": 69,
+    "rating_speed": 68,
     "rating_chemistry": 73,
-    "rating_overall": 69
+    "rating_overall": 68
   },
   {
     "league": "DEL2",
@@ -5117,39 +5117,39 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 69,
+    "rating_offense": 68,
     "rating_defense": 68,
-    "rating_speed": 66,
+    "rating_speed": 65,
     "rating_chemistry": 65,
-    "rating_overall": 68
+    "rating_overall": 67
   },
   {
-    "league": "DEL2",
+    "league": "DEL",
     "type": "skater",
-    "team_code": "RVT",
-    "team_name": null,
+    "team_code": null,
+    "team_name": "ING",
     "name_real": "Luca Hauf",
     "number": 85,
-    "nation": "nan",
-    "position_raw": "FO",
+    "nation": "GER",
+    "position_raw": "S",
     "position_group": "F",
-    "gp": 6,
-    "goals": 2,
-    "assists": 1,
-    "points": 3,
-    "points_per_game": 0.5,
-    "plus_minus": 2,
+    "gp": 13,
+    "goals": 0,
+    "assists": 0,
+    "points": 0,
+    "points_per_game": 0.0,
+    "plus_minus": 0,
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 2,
-    "fo_won": 7,
-    "fo_lost": 6,
-    "fo_pct": 53.85,
-    "rating_offense": 68,
+    "fo_won": 0,
+    "fo_lost": 1,
+    "fo_pct": 0.0,
+    "rating_offense": 60,
     "rating_defense": 73,
-    "rating_speed": 66,
-    "rating_chemistry": 67,
-    "rating_overall": 69
+    "rating_speed": 62,
+    "rating_chemistry": 70,
+    "rating_overall": 64
   },
   {
     "league": "DEL2",
@@ -5173,9 +5173,9 @@
     "fo_won": 4,
     "fo_lost": 6,
     "fo_pct": 40.0,
-    "rating_offense": 67,
+    "rating_offense": 66,
     "rating_defense": 69,
-    "rating_speed": 66,
+    "rating_speed": 65,
     "rating_chemistry": 67,
     "rating_overall": 67
   },
@@ -5201,11 +5201,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 67,
-    "rating_defense": 67,
-    "rating_speed": 66,
+    "rating_offense": 66,
+    "rating_defense": 66,
+    "rating_speed": 65,
     "rating_chemistry": 66,
-    "rating_overall": 67
+    "rating_overall": 66
   },
   {
     "league": "DEL2",
@@ -5229,10 +5229,10 @@
     "fo_won": 24,
     "fo_lost": 36,
     "fo_pct": 40.0,
-    "rating_offense": 67,
+    "rating_offense": 66,
     "rating_defense": 66,
-    "rating_speed": 67,
-    "rating_chemistry": 67,
+    "rating_speed": 66,
+    "rating_chemistry": 66,
     "rating_overall": 66
   },
   {
@@ -5259,7 +5259,7 @@
     "fo_pct": 0.0,
     "rating_offense": 66,
     "rating_defense": 77,
-    "rating_speed": 67,
+    "rating_speed": 66,
     "rating_chemistry": 74,
     "rating_overall": 71
   },
@@ -5315,9 +5315,9 @@
     "fo_pct": 33.33,
     "rating_offense": 66,
     "rating_defense": 69,
-    "rating_speed": 68,
+    "rating_speed": 67,
     "rating_chemistry": 70,
-    "rating_overall": 68
+    "rating_overall": 67
   },
   {
     "league": "DEL2",
@@ -5343,7 +5343,7 @@
     "fo_pct": 39.31,
     "rating_offense": 66,
     "rating_defense": 67,
-    "rating_speed": 68,
+    "rating_speed": 67,
     "rating_chemistry": 71,
     "rating_overall": 67
   },
@@ -5369,11 +5369,11 @@
     "fo_won": 1,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 66,
-    "rating_defense": 68,
-    "rating_speed": 66,
+    "rating_offense": 65,
+    "rating_defense": 69,
+    "rating_speed": 65,
     "rating_chemistry": 62,
-    "rating_overall": 67
+    "rating_overall": 66
   },
   {
     "league": "DEL2",
@@ -5399,8 +5399,8 @@
     "fo_pct": 0.0,
     "rating_offense": 66,
     "rating_defense": 75,
-    "rating_speed": 66,
-    "rating_chemistry": 71,
+    "rating_speed": 65,
+    "rating_chemistry": 70,
     "rating_overall": 70
   },
   {
@@ -5427,7 +5427,7 @@
     "fo_pct": 34.78,
     "rating_offense": 65,
     "rating_defense": 66,
-    "rating_speed": 66,
+    "rating_speed": 65,
     "rating_chemistry": 67,
     "rating_overall": 65
   },
@@ -5455,7 +5455,7 @@
     "fo_pct": 34.29,
     "rating_offense": 64,
     "rating_defense": 73,
-    "rating_speed": 68,
+    "rating_speed": 67,
     "rating_chemistry": 73,
     "rating_overall": 68
   },
@@ -5483,7 +5483,7 @@
     "fo_pct": 0.0,
     "rating_offense": 64,
     "rating_defense": 53,
-    "rating_speed": 68,
+    "rating_speed": 67,
     "rating_chemistry": 62,
     "rating_overall": 60
   },
@@ -5511,8 +5511,8 @@
     "fo_pct": 100.0,
     "rating_offense": 64,
     "rating_defense": 76,
-    "rating_speed": 66,
-    "rating_chemistry": 68,
+    "rating_speed": 65,
+    "rating_chemistry": 67,
     "rating_overall": 68
   },
   {
@@ -5539,8 +5539,8 @@
     "fo_pct": 0.0,
     "rating_offense": 64,
     "rating_defense": 57,
-    "rating_speed": 66,
-    "rating_chemistry": 59,
+    "rating_speed": 65,
+    "rating_chemistry": 58,
     "rating_overall": 62
   },
   {
@@ -5568,7 +5568,7 @@
     "rating_offense": 65,
     "rating_defense": 76,
     "rating_speed": 65,
-    "rating_chemistry": 71,
+    "rating_chemistry": 70,
     "rating_overall": 70
   },
   {
@@ -5595,8 +5595,8 @@
     "fo_pct": 36.36,
     "rating_offense": 63,
     "rating_defense": 75,
-    "rating_speed": 66,
-    "rating_chemistry": 71,
+    "rating_speed": 65,
+    "rating_chemistry": 70,
     "rating_overall": 67
   },
   {
@@ -5623,9 +5623,9 @@
     "fo_pct": 0.0,
     "rating_offense": 63,
     "rating_defense": 78,
-    "rating_speed": 67,
+    "rating_speed": 66,
     "rating_chemistry": 74,
-    "rating_overall": 71
+    "rating_overall": 70
   },
   {
     "league": "DEL2",
@@ -5651,7 +5651,7 @@
     "fo_pct": 0.0,
     "rating_offense": 63,
     "rating_defense": 77,
-    "rating_speed": 67,
+    "rating_speed": 66,
     "rating_chemistry": 74,
     "rating_overall": 70
   },
@@ -5677,10 +5677,10 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 63,
+    "rating_offense": 62,
     "rating_defense": 79,
     "rating_speed": 67,
-    "rating_chemistry": 77,
+    "rating_chemistry": 76,
     "rating_overall": 71
   },
   {
@@ -5705,11 +5705,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 63,
+    "rating_offense": 62,
     "rating_defense": 69,
-    "rating_speed": 68,
+    "rating_speed": 67,
     "rating_chemistry": 71,
-    "rating_overall": 67
+    "rating_overall": 66
   },
   {
     "league": "DEL2",
@@ -5733,9 +5733,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 63,
+    "rating_offense": 62,
     "rating_defense": 76,
-    "rating_speed": 68,
+    "rating_speed": 67,
     "rating_chemistry": 75,
     "rating_overall": 70
   },
@@ -5761,9 +5761,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 63,
+    "rating_offense": 62,
     "rating_defense": 65,
-    "rating_speed": 68,
+    "rating_speed": 67,
     "rating_chemistry": 69,
     "rating_overall": 65
   },
@@ -5789,9 +5789,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 63,
+    "rating_offense": 62,
     "rating_defense": 68,
-    "rating_speed": 68,
+    "rating_speed": 67,
     "rating_chemistry": 71,
     "rating_overall": 66
   },
@@ -5817,9 +5817,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 63,
+    "rating_offense": 62,
     "rating_defense": 66,
-    "rating_speed": 68,
+    "rating_speed": 67,
     "rating_chemistry": 69,
     "rating_overall": 65
   },
@@ -5845,9 +5845,9 @@
     "fo_won": 1,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 63,
-    "rating_defense": 55,
-    "rating_speed": 68,
+    "rating_offense": 62,
+    "rating_defense": 56,
+    "rating_speed": 67,
     "rating_chemistry": 63,
     "rating_overall": 60
   },
@@ -5873,10 +5873,10 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 63,
+    "rating_offense": 62,
     "rating_defense": 73,
-    "rating_speed": 68,
-    "rating_chemistry": 74,
+    "rating_speed": 67,
+    "rating_chemistry": 73,
     "rating_overall": 68
   },
   {
@@ -5901,10 +5901,10 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 65,
-    "rating_defense": 60,
-    "rating_speed": 66,
-    "rating_chemistry": 65,
+    "rating_offense": 64,
+    "rating_defense": 61,
+    "rating_speed": 65,
+    "rating_chemistry": 64,
     "rating_overall": 63
   },
   {
@@ -5932,8 +5932,8 @@
     "rating_offense": 65,
     "rating_defense": 72,
     "rating_speed": 66,
-    "rating_chemistry": 72,
-    "rating_overall": 68
+    "rating_chemistry": 71,
+    "rating_overall": 67
   },
   {
     "league": "DEL2",
@@ -5961,35 +5961,35 @@
     "rating_defense": 69,
     "rating_speed": 66,
     "rating_chemistry": 71,
-    "rating_overall": 67
+    "rating_overall": 66
   },
   {
-    "league": "DEL2",
+    "league": "DEL",
     "type": "skater",
-    "team_code": "DEG",
-    "team_name": null,
+    "team_code": null,
+    "team_name": "AEV",
     "name_real": "Luca Tosto",
-    "number": 11,
-    "nation": "nan",
-    "position_raw": "FO",
+    "number": 77,
+    "nation": "GER",
+    "position_raw": "S",
     "position_group": "F",
-    "gp": 1,
-    "goals": 1,
-    "assists": 1,
-    "points": 2,
-    "points_per_game": 2.0,
-    "plus_minus": 2,
+    "gp": 4,
+    "goals": 0,
+    "assists": 0,
+    "points": 0,
+    "points_per_game": 0.0,
+    "plus_minus": -1,
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 0,
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 71,
-    "rating_defense": 76,
-    "rating_speed": 79,
-    "rating_chemistry": 64,
-    "rating_overall": 74
+    "rating_offense": 60,
+    "rating_defense": 73,
+    "rating_speed": 55,
+    "rating_chemistry": 63,
+    "rating_overall": 62
   },
   {
     "league": "DEL2",
@@ -6013,39 +6013,39 @@
     "fo_won": 1,
     "fo_lost": 2,
     "fo_pct": 33.33,
-    "rating_offense": 65,
+    "rating_offense": 64,
     "rating_defense": 72,
-    "rating_speed": 63,
-    "rating_chemistry": 66,
-    "rating_overall": 67
+    "rating_speed": 62,
+    "rating_chemistry": 65,
+    "rating_overall": 66
   },
   {
-    "league": "DEL2",
+    "league": "DEL",
     "type": "skater",
-    "team_code": "EPC",
-    "team_name": null,
+    "team_code": null,
+    "team_name": "BHV",
     "name_real": "Rayan Bettahar",
-    "number": 51,
-    "nation": "nan",
-    "position_raw": "DE",
+    "number": 15,
+    "nation": "GER",
+    "position_raw": "V",
     "position_group": "D",
-    "gp": 6,
+    "gp": 7,
     "goals": 1,
-    "assists": 1,
-    "points": 2,
-    "points_per_game": 0.3333333333333333,
-    "plus_minus": -2,
-    "pp_goals": 1,
+    "assists": 0,
+    "points": 1,
+    "points_per_game": 0.14285714285714285,
+    "plus_minus": 8,
+    "pp_goals": 0,
     "sh_goals": 0,
-    "pim": 0,
+    "pim": 4,
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 67,
-    "rating_defense": 70,
-    "rating_speed": 63,
-    "rating_chemistry": 65,
-    "rating_overall": 67
+    "rating_offense": 63,
+    "rating_defense": 80,
+    "rating_speed": 60,
+    "rating_chemistry": 70,
+    "rating_overall": 70
   },
   {
     "league": "DEL2",
@@ -6069,10 +6069,10 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 65,
+    "rating_offense": 64,
     "rating_defense": 65,
-    "rating_speed": 63,
-    "rating_chemistry": 62,
+    "rating_speed": 62,
+    "rating_chemistry": 61,
     "rating_overall": 64
   },
   {
@@ -6099,9 +6099,9 @@
     "fo_pct": 0.0,
     "rating_offense": 64,
     "rating_defense": 69,
-    "rating_speed": 64,
-    "rating_chemistry": 67,
-    "rating_overall": 66
+    "rating_speed": 63,
+    "rating_chemistry": 66,
+    "rating_overall": 65
   },
   {
     "league": "DEL2",
@@ -6127,9 +6127,9 @@
     "fo_pct": 30.77,
     "rating_offense": 64,
     "rating_defense": 63,
-    "rating_speed": 64,
-    "rating_chemistry": 61,
-    "rating_overall": 64
+    "rating_speed": 63,
+    "rating_chemistry": 60,
+    "rating_overall": 63
   },
   {
     "league": "DEL2",
@@ -6153,9 +6153,9 @@
     "fo_won": 87,
     "fo_lost": 80,
     "fo_pct": 52.1,
-    "rating_offense": 64,
+    "rating_offense": 63,
     "rating_defense": 75,
-    "rating_speed": 65,
+    "rating_speed": 64,
     "rating_chemistry": 72,
     "rating_overall": 67
   },
@@ -6181,11 +6181,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 64,
+    "rating_offense": 63,
     "rating_defense": 72,
-    "rating_speed": 65,
+    "rating_speed": 64,
     "rating_chemistry": 71,
-    "rating_overall": 68
+    "rating_overall": 67
   },
   {
     "league": "DEL2",
@@ -6237,7 +6237,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 64,
+    "rating_offense": 63,
     "rating_defense": 70,
     "rating_speed": 66,
     "rating_chemistry": 70,
@@ -6265,11 +6265,11 @@
     "fo_won": 8,
     "fo_lost": 4,
     "fo_pct": 66.67,
-    "rating_offense": 64,
+    "rating_offense": 63,
     "rating_defense": 65,
-    "rating_speed": 67,
+    "rating_speed": 66,
     "rating_chemistry": 69,
-    "rating_overall": 65
+    "rating_overall": 64
   },
   {
     "league": "DEL2",
@@ -6294,10 +6294,10 @@
     "fo_lost": 0,
     "fo_pct": 0.0,
     "rating_offense": 63,
-    "rating_defense": 63,
-    "rating_speed": 67,
-    "rating_chemistry": 67,
-    "rating_overall": 64
+    "rating_defense": 62,
+    "rating_speed": 66,
+    "rating_chemistry": 66,
+    "rating_overall": 63
   },
   {
     "league": "DEL2",
@@ -6321,39 +6321,39 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 64,
+    "rating_offense": 63,
     "rating_defense": 71,
-    "rating_speed": 67,
+    "rating_speed": 66,
     "rating_chemistry": 71,
-    "rating_overall": 67
+    "rating_overall": 66
   },
   {
-    "league": "DEL2",
+    "league": "DEL",
     "type": "skater",
-    "team_code": "EVL",
-    "team_name": null,
+    "team_code": null,
+    "team_name": "STR",
     "name_real": "Linus Brandl",
     "number": 73,
-    "nation": "nan",
-    "position_raw": "FO (U21)",
+    "nation": "GER",
+    "position_raw": "S",
     "position_group": "F",
-    "gp": 3,
-    "goals": 0,
-    "assists": 2,
+    "gp": 15,
+    "goals": 1,
+    "assists": 1,
     "points": 2,
-    "points_per_game": 0.6666666666666666,
-    "plus_minus": 2,
+    "points_per_game": 0.13333333333333333,
+    "plus_minus": 0,
     "pp_goals": 0,
     "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 8,
-    "fo_lost": 12,
-    "fo_pct": 40.0,
-    "rating_offense": 65,
-    "rating_defense": 76,
-    "rating_speed": 67,
-    "rating_chemistry": 66,
-    "rating_overall": 69
+    "pim": 11,
+    "fo_won": 1,
+    "fo_lost": 1,
+    "fo_pct": 50.0,
+    "rating_offense": 63,
+    "rating_defense": 68,
+    "rating_speed": 66,
+    "rating_chemistry": 70,
+    "rating_overall": 65
   },
   {
     "league": "DEL2",
@@ -6377,11 +6377,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 64,
+    "rating_offense": 63,
     "rating_defense": 60,
-    "rating_speed": 65,
-    "rating_chemistry": 60,
-    "rating_overall": 63
+    "rating_speed": 64,
+    "rating_chemistry": 59,
+    "rating_overall": 62
   },
   {
     "league": "DEL2",
@@ -6405,10 +6405,10 @@
     "fo_won": 2,
     "fo_lost": 3,
     "fo_pct": 40.0,
-    "rating_offense": 63,
+    "rating_offense": 62,
     "rating_defense": 72,
-    "rating_speed": 63,
-    "rating_chemistry": 66,
+    "rating_speed": 62,
+    "rating_chemistry": 65,
     "rating_overall": 65
   },
   {
@@ -6433,9 +6433,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 64,
+    "rating_offense": 63,
     "rating_defense": 67,
-    "rating_speed": 63,
+    "rating_speed": 62,
     "rating_chemistry": 64,
     "rating_overall": 65
   },
@@ -6462,9 +6462,9 @@
     "fo_lost": 38,
     "fo_pct": 51.28,
     "rating_offense": 62,
-    "rating_defense": 70,
-    "rating_speed": 63,
-    "rating_chemistry": 65,
+    "rating_defense": 71,
+    "rating_speed": 62,
+    "rating_chemistry": 64,
     "rating_overall": 65
   },
   {
@@ -6491,7 +6491,7 @@
     "fo_pct": 0.0,
     "rating_offense": 62,
     "rating_defense": 67,
-    "rating_speed": 65,
+    "rating_speed": 64,
     "rating_chemistry": 67,
     "rating_overall": 65
   },
@@ -6519,7 +6519,7 @@
     "fo_pct": 0.0,
     "rating_offense": 62,
     "rating_defense": 74,
-    "rating_speed": 65,
+    "rating_speed": 64,
     "rating_chemistry": 71,
     "rating_overall": 68
   },
@@ -6545,9 +6545,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 61,
     "rating_defense": 71,
-    "rating_speed": 65,
+    "rating_speed": 64,
     "rating_chemistry": 69,
     "rating_overall": 65
   },
@@ -6575,8 +6575,8 @@
     "fo_pct": 0.0,
     "rating_offense": 62,
     "rating_defense": 70,
-    "rating_speed": 65,
-    "rating_chemistry": 70,
+    "rating_speed": 64,
+    "rating_chemistry": 69,
     "rating_overall": 66
   },
   {
@@ -6601,8 +6601,8 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
-    "rating_defense": 64,
+    "rating_offense": 61,
+    "rating_defense": 65,
     "rating_speed": 66,
     "rating_chemistry": 68,
     "rating_overall": 64
@@ -6629,11 +6629,11 @@
     "fo_won": 98,
     "fo_lost": 65,
     "fo_pct": 60.12,
-    "rating_offense": 62,
-    "rating_defense": 61,
+    "rating_offense": 61,
+    "rating_defense": 62,
     "rating_speed": 66,
     "rating_chemistry": 65,
-    "rating_overall": 63
+    "rating_overall": 62
   },
   {
     "league": "DEL2",
@@ -6657,10 +6657,10 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 61,
     "rating_defense": 71,
     "rating_speed": 66,
-    "rating_chemistry": 72,
+    "rating_chemistry": 71,
     "rating_overall": 67
   },
   {
@@ -6685,11 +6685,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 61,
     "rating_defense": 73,
     "rating_speed": 66,
-    "rating_chemistry": 73,
-    "rating_overall": 68
+    "rating_chemistry": 72,
+    "rating_overall": 67
   },
   {
     "league": "DEL2",
@@ -6713,11 +6713,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 61,
     "rating_defense": 71,
     "rating_speed": 66,
-    "rating_chemistry": 71,
-    "rating_overall": 66
+    "rating_chemistry": 70,
+    "rating_overall": 65
   },
   {
     "league": "DEL2",
@@ -6741,11 +6741,11 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 61,
     "rating_defense": 66,
     "rating_speed": 66,
     "rating_chemistry": 68,
-    "rating_overall": 65
+    "rating_overall": 64
   },
   {
     "league": "DEL2",
@@ -6769,8 +6769,8 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
-    "rating_defense": 68,
+    "rating_offense": 61,
+    "rating_defense": 69,
     "rating_speed": 66,
     "rating_chemistry": 70,
     "rating_overall": 65
@@ -6797,11 +6797,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 61,
     "rating_defense": 64,
-    "rating_speed": 67,
+    "rating_speed": 66,
     "rating_chemistry": 68,
-    "rating_overall": 64
+    "rating_overall": 63
   },
   {
     "league": "DEL2",
@@ -6827,9 +6827,9 @@
     "fo_pct": 0.0,
     "rating_offense": 65,
     "rating_defense": 64,
-    "rating_speed": 63,
-    "rating_chemistry": 59,
-    "rating_overall": 65
+    "rating_speed": 62,
+    "rating_chemistry": 58,
+    "rating_overall": 64
   },
   {
     "league": "DEL2",
@@ -6855,37 +6855,37 @@
     "fo_pct": 0.0,
     "rating_offense": 65,
     "rating_defense": 75,
-    "rating_speed": 63,
-    "rating_chemistry": 64,
-    "rating_overall": 68
+    "rating_speed": 62,
+    "rating_chemistry": 63,
+    "rating_overall": 67
   },
   {
-    "league": "DEL2",
+    "league": "DEL",
     "type": "skater",
-    "team_code": "ECN",
-    "team_name": null,
+    "team_code": null,
+    "team_name": "IEC",
     "name_real": "Lua Niehus",
-    "number": null,
-    "nation": "nan",
-    "position_raw": "DE (U21)",
+    "number": 26,
+    "nation": "GER",
+    "position_raw": "V",
     "position_group": "D",
-    "gp": 3,
-    "goals": 1,
+    "gp": 15,
+    "goals": 0,
     "assists": 0,
-    "points": 1,
-    "points_per_game": 0.3333333333333333,
-    "plus_minus": 0,
+    "points": 0,
+    "points_per_game": 0.0,
+    "plus_minus": -5,
     "pp_goals": 0,
     "sh_goals": 0,
-    "pim": 8,
+    "pim": 4,
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 67,
-    "rating_defense": 61,
-    "rating_speed": 61,
-    "rating_chemistry": 57,
-    "rating_overall": 63
+    "rating_offense": 59,
+    "rating_defense": 65,
+    "rating_speed": 63,
+    "rating_chemistry": 68,
+    "rating_overall": 62
   },
   {
     "league": "DEL2",
@@ -6893,7 +6893,7 @@
     "team_code": "ECK",
     "team_name": null,
     "name_real": "Markus Freis",
-    "number": 95,
+    "number": null,
     "nation": "nan",
     "position_raw": "DE",
     "position_group": "D",
@@ -6911,8 +6911,8 @@
     "fo_pct": 0.0,
     "rating_offense": 63,
     "rating_defense": 68,
-    "rating_speed": 61,
-    "rating_chemistry": 64,
+    "rating_speed": 60,
+    "rating_chemistry": 63,
     "rating_overall": 65
   },
   {
@@ -6937,9 +6937,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 63,
+    "rating_offense": 62,
     "rating_defense": 50,
-    "rating_speed": 63,
+    "rating_speed": 62,
     "rating_chemistry": 59,
     "rating_overall": 59
   },
@@ -6965,11 +6965,11 @@
     "fo_won": 50,
     "fo_lost": 63,
     "fo_pct": 44.25,
-    "rating_offense": 63,
+    "rating_offense": 62,
     "rating_defense": 61,
-    "rating_speed": 64,
+    "rating_speed": 63,
     "rating_chemistry": 63,
-    "rating_overall": 63
+    "rating_overall": 62
   },
   {
     "league": "DEL2",
@@ -6995,9 +6995,9 @@
     "fo_pct": 0.0,
     "rating_offense": 62,
     "rating_defense": 74,
-    "rating_speed": 65,
-    "rating_chemistry": 73,
-    "rating_overall": 68
+    "rating_speed": 64,
+    "rating_chemistry": 72,
+    "rating_overall": 67
   },
   {
     "league": "DEL2",
@@ -7021,9 +7021,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 63,
+    "rating_offense": 62,
     "rating_defense": 73,
-    "rating_speed": 65,
+    "rating_speed": 64,
     "rating_chemistry": 72,
     "rating_overall": 66
   },
@@ -7049,11 +7049,11 @@
     "fo_won": 9,
     "fo_lost": 9,
     "fo_pct": 50.0,
-    "rating_offense": 63,
+    "rating_offense": 62,
     "rating_defense": 73,
-    "rating_speed": 66,
-    "rating_chemistry": 73,
-    "rating_overall": 67
+    "rating_speed": 65,
+    "rating_chemistry": 72,
+    "rating_overall": 66
   },
   {
     "league": "DEL2",
@@ -7079,37 +7079,37 @@
     "fo_pct": 0.0,
     "rating_offense": 68,
     "rating_defense": 68,
-    "rating_speed": 63,
-    "rating_chemistry": 61,
+    "rating_speed": 62,
+    "rating_chemistry": 60,
     "rating_overall": 67
   },
   {
-    "league": "DEL2",
+    "league": "DEL",
     "type": "skater",
-    "team_code": "ECN",
-    "team_name": null,
+    "team_code": null,
+    "team_name": "FRA",
     "name_real": "Sebastian Cimmerman",
-    "number": 62,
-    "nation": "nan",
-    "position_raw": "FO",
+    "number": 61,
+    "nation": "GER",
+    "position_raw": "S",
     "position_group": "F",
     "gp": 2,
     "goals": 0,
-    "assists": 1,
-    "points": 1,
-    "points_per_game": 0.5,
-    "plus_minus": 1,
+    "assists": 0,
+    "points": 0,
+    "points_per_game": 0.0,
+    "plus_minus": 0,
     "pp_goals": 0,
     "sh_goals": 0,
-    "pim": 2,
+    "pim": 0,
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 63,
-    "rating_defense": 66,
-    "rating_speed": 63,
-    "rating_chemistry": 61,
-    "rating_overall": 64
+    "rating_offense": 60,
+    "rating_defense": 74,
+    "rating_speed": 53,
+    "rating_chemistry": 62,
+    "rating_overall": 62
   },
   {
     "league": "DEL2",
@@ -7135,9 +7135,9 @@
     "fo_pct": 66.67,
     "rating_offense": 62,
     "rating_defense": 68,
-    "rating_speed": 61,
-    "rating_chemistry": 62,
-    "rating_overall": 64
+    "rating_speed": 60,
+    "rating_chemistry": 61,
+    "rating_overall": 63
   },
   {
     "league": "DEL2",
@@ -7163,9 +7163,9 @@
     "fo_pct": 0.0,
     "rating_offense": 62,
     "rating_defense": 67,
-    "rating_speed": 61,
-    "rating_chemistry": 61,
-    "rating_overall": 64
+    "rating_speed": 60,
+    "rating_chemistry": 60,
+    "rating_overall": 63
   },
   {
     "league": "DEL2",
@@ -7191,9 +7191,9 @@
     "fo_pct": 0.0,
     "rating_offense": 62,
     "rating_defense": 74,
-    "rating_speed": 61,
-    "rating_chemistry": 64,
-    "rating_overall": 66
+    "rating_speed": 60,
+    "rating_chemistry": 63,
+    "rating_overall": 65
   },
   {
     "league": "DEL2",
@@ -7217,9 +7217,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 63,
+    "rating_offense": 62,
     "rating_defense": 74,
-    "rating_speed": 60,
+    "rating_speed": 59,
     "rating_chemistry": 66,
     "rating_overall": 67
   },
@@ -7245,10 +7245,10 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 61,
     "rating_defense": 74,
-    "rating_speed": 60,
-    "rating_chemistry": 66,
+    "rating_speed": 59,
+    "rating_chemistry": 65,
     "rating_overall": 65
   },
   {
@@ -7273,10 +7273,10 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 61,
     "rating_defense": 71,
-    "rating_speed": 60,
-    "rating_chemistry": 64,
+    "rating_speed": 59,
+    "rating_chemistry": 63,
     "rating_overall": 64
   },
   {
@@ -7301,27 +7301,27 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 61,
     "rating_defense": 63,
-    "rating_speed": 60,
-    "rating_chemistry": 62,
-    "rating_overall": 62
+    "rating_speed": 59,
+    "rating_chemistry": 61,
+    "rating_overall": 61
   },
   {
-    "league": "DEL2",
+    "league": "DEL",
     "type": "skater",
-    "team_code": "BDW",
-    "team_name": null,
+    "team_code": null,
+    "team_name": "DRE",
     "name_real": "Felix Krüger",
     "number": 56,
-    "nation": "nan",
-    "position_raw": "DE",
+    "nation": "GER",
+    "position_raw": "V",
     "position_group": "D",
-    "gp": 5,
+    "gp": 6,
     "goals": 0,
-    "assists": 1,
-    "points": 1,
-    "points_per_game": 0.2,
+    "assists": 0,
+    "points": 0,
+    "points_per_game": 0.0,
     "plus_minus": -1,
     "pp_goals": 0,
     "sh_goals": 0,
@@ -7329,39 +7329,39 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 63,
+    "rating_offense": 59,
     "rating_defense": 71,
-    "rating_speed": 60,
+    "rating_speed": 56,
     "rating_chemistry": 65,
-    "rating_overall": 66
+    "rating_overall": 64
   },
   {
-    "league": "DEL2",
+    "league": "DEL",
     "type": "skater",
-    "team_code": "EPC",
-    "team_name": null,
+    "team_code": null,
+    "team_name": "BHV",
     "name_real": "Justin Büsing",
     "number": 76,
-    "nation": "nan",
-    "position_raw": "FO",
+    "nation": "GER",
+    "position_raw": "S",
     "position_group": "F",
-    "gp": 6,
-    "goals": 0,
-    "assists": 1,
-    "points": 1,
-    "points_per_game": 0.16666666666666666,
-    "plus_minus": 1,
+    "gp": 13,
+    "goals": 1,
+    "assists": 2,
+    "points": 3,
+    "points_per_game": 0.23076923076923078,
+    "plus_minus": -2,
     "pp_goals": 0,
     "sh_goals": 0,
-    "pim": 7,
-    "fo_won": 0,
+    "pim": 0,
+    "fo_won": 2,
     "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 61,
-    "rating_defense": 65,
-    "rating_speed": 60,
-    "rating_chemistry": 63,
-    "rating_overall": 62
+    "fo_pct": 100.0,
+    "rating_offense": 64,
+    "rating_defense": 72,
+    "rating_speed": 66,
+    "rating_chemistry": 69,
+    "rating_overall": 67
   },
   {
     "league": "DEL2",
@@ -7385,39 +7385,39 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 61,
     "rating_defense": 69,
-    "rating_speed": 61,
-    "rating_chemistry": 65,
+    "rating_speed": 60,
+    "rating_chemistry": 64,
     "rating_overall": 65
   },
   {
-    "league": "DEL2",
+    "league": "DEL",
     "type": "skater",
-    "team_code": "ESV",
-    "team_name": null,
+    "team_code": null,
+    "team_name": "MUC",
     "name_real": "Rio Kaiser",
     "number": 18,
-    "nation": "nan",
-    "position_raw": "DE",
+    "nation": "GER",
+    "position_raw": "V",
     "position_group": "D",
-    "gp": 8,
+    "gp": 9,
     "goals": 0,
-    "assists": 1,
-    "points": 1,
-    "points_per_game": 0.125,
+    "assists": 0,
+    "points": 0,
+    "points_per_game": 0.0,
     "plus_minus": 1,
     "pp_goals": 0,
     "sh_goals": 0,
-    "pim": 15,
+    "pim": 0,
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
-    "rating_defense": 64,
-    "rating_speed": 61,
-    "rating_chemistry": 62,
-    "rating_overall": 63
+    "rating_offense": 59,
+    "rating_defense": 74,
+    "rating_speed": 59,
+    "rating_chemistry": 69,
+    "rating_overall": 66
   },
   {
     "league": "DEL2",
@@ -7441,9 +7441,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 61,
     "rating_defense": 74,
-    "rating_speed": 61,
+    "rating_speed": 60,
     "rating_chemistry": 68,
     "rating_overall": 67
   },
@@ -7469,11 +7469,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 61,
     "rating_defense": 75,
-    "rating_speed": 61,
-    "rating_chemistry": 69,
-    "rating_overall": 68
+    "rating_speed": 60,
+    "rating_chemistry": 68,
+    "rating_overall": 67
   },
   {
     "league": "DEL2",
@@ -7499,8 +7499,8 @@
     "fo_pct": 0.0,
     "rating_offense": 61,
     "rating_defense": 74,
-    "rating_speed": 62,
-    "rating_chemistry": 70,
+    "rating_speed": 61,
+    "rating_chemistry": 69,
     "rating_overall": 67
   },
   {
@@ -7527,7 +7527,7 @@
     "fo_pct": 0.0,
     "rating_offense": 61,
     "rating_defense": 76,
-    "rating_speed": 62,
+    "rating_speed": 61,
     "rating_chemistry": 71,
     "rating_overall": 68
   },
@@ -7553,10 +7553,10 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 61,
+    "rating_offense": 60,
     "rating_defense": 69,
-    "rating_speed": 63,
-    "rating_chemistry": 68,
+    "rating_speed": 62,
+    "rating_chemistry": 67,
     "rating_overall": 65
   },
   {
@@ -7581,9 +7581,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 61,
-    "rating_defense": 60,
-    "rating_speed": 63,
+    "rating_offense": 60,
+    "rating_defense": 61,
+    "rating_speed": 62,
     "rating_chemistry": 63,
     "rating_overall": 61
   },
@@ -7609,9 +7609,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 61,
+    "rating_offense": 60,
     "rating_defense": 67,
-    "rating_speed": 63,
+    "rating_speed": 62,
     "rating_chemistry": 67,
     "rating_overall": 64
   },
@@ -7637,9 +7637,9 @@
     "fo_won": 16,
     "fo_lost": 22,
     "fo_pct": 42.11,
-    "rating_offense": 61,
+    "rating_offense": 60,
     "rating_defense": 69,
-    "rating_speed": 64,
+    "rating_speed": 63,
     "rating_chemistry": 68,
     "rating_overall": 64
   },
@@ -7665,11 +7665,11 @@
     "fo_won": 1,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 61,
-    "rating_defense": 67,
-    "rating_speed": 65,
-    "rating_chemistry": 67,
-    "rating_overall": 64
+    "rating_offense": 60,
+    "rating_defense": 68,
+    "rating_speed": 64,
+    "rating_chemistry": 66,
+    "rating_overall": 63
   },
   {
     "league": "DEL2",
@@ -7693,9 +7693,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 61,
+    "rating_offense": 60,
     "rating_defense": 72,
-    "rating_speed": 65,
+    "rating_speed": 64,
     "rating_chemistry": 71,
     "rating_overall": 66
   },
@@ -7721,9 +7721,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 61,
-    "rating_defense": 66,
-    "rating_speed": 65,
+    "rating_offense": 60,
+    "rating_defense": 67,
+    "rating_speed": 64,
     "rating_chemistry": 69,
     "rating_overall": 64
   },
@@ -7749,9 +7749,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 61,
+    "rating_offense": 60,
     "rating_defense": 49,
-    "rating_speed": 65,
+    "rating_speed": 64,
     "rating_chemistry": 59,
     "rating_overall": 56
   },
@@ -7779,7 +7779,7 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 68,
-    "rating_speed": 66,
+    "rating_speed": 65,
     "rating_chemistry": 71,
     "rating_overall": 65
   },
@@ -7807,7 +7807,7 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 66,
+    "rating_speed": 65,
     "rating_chemistry": 74,
     "rating_overall": 67
   },
@@ -7834,9 +7834,9 @@
     "fo_lost": 0,
     "fo_pct": 0.0,
     "rating_offense": 59,
-    "rating_defense": 59,
-    "rating_speed": 54,
-    "rating_chemistry": 54,
+    "rating_defense": 60,
+    "rating_speed": 53,
+    "rating_chemistry": 53,
     "rating_overall": 58
   },
   {
@@ -7863,9 +7863,9 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 54,
-    "rating_chemistry": 63,
-    "rating_overall": 63
+    "rating_speed": 53,
+    "rating_chemistry": 62,
+    "rating_overall": 62
   },
   {
     "league": "DEL2",
@@ -7891,37 +7891,37 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 72,
-    "rating_speed": 54,
-    "rating_chemistry": 63,
+    "rating_speed": 53,
+    "rating_chemistry": 62,
     "rating_overall": 64
   },
   {
-    "league": "DEL2",
+    "league": "DEL",
     "type": "skater",
-    "team_code": "LFX",
-    "team_name": null,
+    "team_code": null,
+    "team_name": "BER",
     "name_real": "Norwin Panocha",
-    "number": 21,
-    "nation": "nan",
-    "position_raw": "DE (U21)",
+    "number": 75,
+    "nation": "GER",
+    "position_raw": "V",
     "position_group": "D",
-    "gp": 1,
+    "gp": 18,
     "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": 0,
+    "assists": 2,
+    "points": 2,
+    "points_per_game": 0.1111111111111111,
+    "plus_minus": -1,
     "pp_goals": 0,
     "sh_goals": 0,
-    "pim": 4,
+    "pim": 8,
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 59,
-    "rating_defense": 61,
-    "rating_speed": 54,
-    "rating_chemistry": 55,
-    "rating_overall": 59
+    "rating_offense": 61,
+    "rating_defense": 69,
+    "rating_speed": 68,
+    "rating_chemistry": 72,
+    "rating_overall": 66
   },
   {
     "league": "DEL2",
@@ -7947,21 +7947,49 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 55,
-    "rating_chemistry": 63,
-    "rating_overall": 63
+    "rating_speed": 53,
+    "rating_chemistry": 62,
+    "rating_overall": 62
   },
   {
-    "league": "DEL2",
+    "league": "DEL",
     "type": "skater",
-    "team_code": "DEG",
-    "team_name": null,
+    "team_code": null,
+    "team_name": "KEC",
     "name_real": "Kevin Niedenz",
-    "number": 15,
-    "nation": "nan",
-    "position_raw": "FO",
+    "number": 46,
+    "nation": "GER",
+    "position_raw": "S",
     "position_group": "F",
-    "gp": 2,
+    "gp": 12,
+    "goals": 0,
+    "assists": 1,
+    "points": 1,
+    "points_per_game": 0.08333333333333333,
+    "plus_minus": -3,
+    "pp_goals": 0,
+    "sh_goals": 0,
+    "pim": 2,
+    "fo_won": 0,
+    "fo_lost": 0,
+    "fo_pct": 0.0,
+    "rating_offense": 61,
+    "rating_defense": 70,
+    "rating_speed": 62,
+    "rating_chemistry": 67,
+    "rating_overall": 64
+  },
+  {
+    "league": "DEL",
+    "type": "skater",
+    "team_code": null,
+    "team_name": "KEC",
+    "name_real": "Luca Münzenberger",
+    "number": 75,
+    "nation": "GER",
+    "position_raw": "V",
+    "position_group": "D",
+    "gp": 3,
     "goals": 0,
     "assists": 0,
     "points": 0,
@@ -7973,67 +8001,39 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 60,
-    "rating_defense": 74,
-    "rating_speed": 55,
-    "rating_chemistry": 63,
-    "rating_overall": 63
-  },
-  {
-    "league": "DEL2",
-    "type": "skater",
-    "team_code": "ECK",
-    "team_name": null,
-    "name_real": "Luca Münzenberger",
-    "number": 15,
-    "nation": "nan",
-    "position_raw": "DE",
-    "position_group": "D",
-    "gp": 2,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": -1,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
     "rating_offense": 59,
-    "rating_defense": 71,
-    "rating_speed": 55,
+    "rating_defense": 72,
+    "rating_speed": 54,
     "rating_chemistry": 63,
     "rating_overall": 64
   },
   {
-    "league": "DEL2",
+    "league": "DEL",
     "type": "skater",
-    "team_code": "ECN",
-    "team_name": null,
+    "team_code": null,
+    "team_name": "FRA",
     "name_real": "Kevin Bicker",
     "number": 83,
-    "nation": "nan",
-    "position_raw": "FO",
+    "nation": "GER",
+    "position_raw": "S",
     "position_group": "F",
-    "gp": 2,
+    "gp": 10,
     "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": -1,
+    "assists": 1,
+    "points": 1,
+    "points_per_game": 0.1,
+    "plus_minus": 0,
     "pp_goals": 0,
     "sh_goals": 0,
-    "pim": 0,
+    "pim": 2,
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 60,
-    "rating_defense": 73,
-    "rating_speed": 55,
-    "rating_chemistry": 63,
-    "rating_overall": 63
+    "rating_offense": 61,
+    "rating_defense": 72,
+    "rating_speed": 61,
+    "rating_chemistry": 68,
+    "rating_overall": 64
   },
   {
     "league": "DEL2",
@@ -8059,9 +8059,9 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 55,
-    "rating_chemistry": 63,
-    "rating_overall": 63
+    "rating_speed": 53,
+    "rating_chemistry": 62,
+    "rating_overall": 62
   },
   {
     "league": "DEL2",
@@ -8087,9 +8087,9 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 73,
-    "rating_speed": 55,
-    "rating_chemistry": 63,
-    "rating_overall": 63
+    "rating_speed": 53,
+    "rating_chemistry": 62,
+    "rating_overall": 62
   },
   {
     "league": "DEL2",
@@ -8115,9 +8115,9 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 64,
-    "rating_speed": 56,
-    "rating_chemistry": 59,
-    "rating_overall": 61
+    "rating_speed": 54,
+    "rating_chemistry": 58,
+    "rating_overall": 60
   },
   {
     "league": "DEL2",
@@ -8143,9 +8143,9 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 69,
-    "rating_speed": 56,
-    "rating_chemistry": 62,
-    "rating_overall": 63
+    "rating_speed": 54,
+    "rating_chemistry": 61,
+    "rating_overall": 62
   },
   {
     "league": "DEL2",
@@ -8171,8 +8171,8 @@
     "fo_pct": 30.43,
     "rating_offense": 60,
     "rating_defense": 75,
-    "rating_speed": 56,
-    "rating_chemistry": 65,
+    "rating_speed": 54,
+    "rating_chemistry": 64,
     "rating_overall": 63
   },
   {
@@ -8199,8 +8199,8 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 72,
-    "rating_speed": 56,
-    "rating_chemistry": 64,
+    "rating_speed": 54,
+    "rating_chemistry": 63,
     "rating_overall": 64
   },
   {
@@ -8227,8 +8227,8 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 68,
-    "rating_speed": 56,
-    "rating_chemistry": 62,
+    "rating_speed": 54,
+    "rating_chemistry": 61,
     "rating_overall": 61
   },
   {
@@ -8255,9 +8255,9 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 66,
-    "rating_speed": 56,
-    "rating_chemistry": 61,
-    "rating_overall": 62
+    "rating_speed": 55,
+    "rating_chemistry": 60,
+    "rating_overall": 61
   },
   {
     "league": "DEL2",
@@ -8283,8 +8283,8 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 74,
-    "rating_speed": 56,
-    "rating_chemistry": 66,
+    "rating_speed": 55,
+    "rating_chemistry": 65,
     "rating_overall": 65
   },
   {
@@ -8311,9 +8311,9 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 72,
-    "rating_speed": 56,
+    "rating_speed": 55,
     "rating_chemistry": 63,
-    "rating_overall": 63
+    "rating_overall": 62
   },
   {
     "league": "DEL2",
@@ -8339,8 +8339,8 @@
     "fo_pct": 25.0,
     "rating_offense": 60,
     "rating_defense": 68,
-    "rating_speed": 56,
-    "rating_chemistry": 62,
+    "rating_speed": 55,
+    "rating_chemistry": 61,
     "rating_overall": 61
   },
   {
@@ -8367,7 +8367,7 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 70,
-    "rating_speed": 56,
+    "rating_speed": 55,
     "rating_chemistry": 63,
     "rating_overall": 63
   },
@@ -8395,8 +8395,8 @@
     "fo_pct": 50.0,
     "rating_offense": 60,
     "rating_defense": 71,
-    "rating_speed": 56,
-    "rating_chemistry": 63,
+    "rating_speed": 55,
+    "rating_chemistry": 62,
     "rating_overall": 62
   },
   {
@@ -8423,8 +8423,8 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 67,
-    "rating_speed": 56,
-    "rating_chemistry": 62,
+    "rating_speed": 55,
+    "rating_chemistry": 61,
     "rating_overall": 62
   },
   {
@@ -8451,8 +8451,8 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 57,
-    "rating_chemistry": 66,
+    "rating_speed": 56,
+    "rating_chemistry": 65,
     "rating_overall": 63
   },
   {
@@ -8479,26 +8479,26 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 66,
-    "rating_speed": 58,
+    "rating_speed": 56,
     "rating_chemistry": 62,
     "rating_overall": 62
   },
   {
-    "league": "DEL2",
+    "league": "DEL",
     "type": "skater",
-    "team_code": "FRB",
-    "team_name": null,
+    "team_code": null,
+    "team_name": "SWW",
     "name_real": "Niclas Hempel",
     "number": 61,
-    "nation": "nan",
-    "position_raw": "DE",
+    "nation": "GER",
+    "position_raw": "V",
     "position_group": "D",
     "gp": 6,
     "goals": 0,
     "assists": 0,
     "points": 0,
     "points_per_game": 0.0,
-    "plus_minus": -3,
+    "plus_minus": 0,
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 0,
@@ -8506,10 +8506,10 @@
     "fo_lost": 0,
     "fo_pct": 0.0,
     "rating_offense": 59,
-    "rating_defense": 68,
-    "rating_speed": 58,
-    "rating_chemistry": 64,
-    "rating_overall": 63
+    "rating_defense": 72,
+    "rating_speed": 56,
+    "rating_chemistry": 66,
+    "rating_overall": 64
   },
   {
     "league": "DEL2",
@@ -8535,9 +8535,9 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 58,
+    "rating_speed": 56,
     "rating_chemistry": 66,
-    "rating_overall": 64
+    "rating_overall": 63
   },
   {
     "league": "DEL2",
@@ -8563,9 +8563,9 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 69,
-    "rating_speed": 58,
-    "rating_chemistry": 65,
-    "rating_overall": 64
+    "rating_speed": 57,
+    "rating_chemistry": 64,
+    "rating_overall": 63
   },
   {
     "league": "DEL2",
@@ -8591,9 +8591,9 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 69,
-    "rating_speed": 58,
-    "rating_chemistry": 65,
-    "rating_overall": 64
+    "rating_speed": 57,
+    "rating_chemistry": 64,
+    "rating_overall": 63
   },
   {
     "league": "DEL2",
@@ -8619,65 +8619,65 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 67,
-    "rating_speed": 58,
+    "rating_speed": 57,
     "rating_chemistry": 62,
-    "rating_overall": 62
+    "rating_overall": 61
   },
   {
-    "league": "DEL2",
+    "league": "DEL",
     "type": "skater",
-    "team_code": "DEG",
-    "team_name": null,
+    "team_code": null,
+    "team_name": "KEC",
     "name_real": "Marco Münzenberger",
     "number": 65,
-    "nation": "nan",
-    "position_raw": "FO (U21)",
+    "nation": "GER",
+    "position_raw": "S",
     "position_group": "F",
-    "gp": 7,
+    "gp": 9,
     "goals": 0,
     "assists": 0,
     "points": 0,
     "points_per_game": 0.0,
-    "plus_minus": 0,
+    "plus_minus": -3,
     "pp_goals": 0,
     "sh_goals": 0,
-    "pim": 4,
+    "pim": 0,
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
     "rating_offense": 60,
-    "rating_defense": 69,
-    "rating_speed": 58,
-    "rating_chemistry": 65,
-    "rating_overall": 62
-  },
-  {
-    "league": "DEL2",
-    "type": "skater",
-    "team_code": "RVT",
-    "team_name": null,
-    "name_real": "Jonas Müller",
-    "number": 64,
-    "nation": "nan",
-    "position_raw": "DE (U21)",
-    "position_group": "D",
-    "gp": 8,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": -1,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 2,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 59,
-    "rating_defense": 70,
+    "rating_defense": 71,
     "rating_speed": 59,
     "rating_chemistry": 66,
-    "rating_overall": 64
+    "rating_overall": 63
+  },
+  {
+    "league": "DEL",
+    "type": "skater",
+    "team_code": null,
+    "team_name": "BER",
+    "name_real": "Jonas Müller",
+    "number": 18,
+    "nation": "GER",
+    "position_raw": "V",
+    "position_group": "D",
+    "gp": 19,
+    "goals": 2,
+    "assists": 6,
+    "points": 8,
+    "points_per_game": 0.42105263157894735,
+    "plus_minus": 0,
+    "pp_goals": 0,
+    "sh_goals": 0,
+    "pim": 20,
+    "fo_won": 1,
+    "fo_lost": 2,
+    "fo_pct": 33.33,
+    "rating_offense": 69,
+    "rating_defense": 67,
+    "rating_speed": 74,
+    "rating_chemistry": 72,
+    "rating_overall": 69
   },
   {
     "league": "DEL2",
@@ -8703,9 +8703,9 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 71,
-    "rating_speed": 60,
-    "rating_chemistry": 68,
-    "rating_overall": 65
+    "rating_speed": 59,
+    "rating_chemistry": 67,
+    "rating_overall": 64
   },
   {
     "league": "DEL2",
@@ -8731,9 +8731,9 @@
     "fo_pct": 35.0,
     "rating_offense": 59,
     "rating_defense": 62,
-    "rating_speed": 60,
+    "rating_speed": 59,
     "rating_chemistry": 62,
-    "rating_overall": 61
+    "rating_overall": 60
   },
   {
     "league": "DEL2",
@@ -8759,9 +8759,9 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 69,
-    "rating_speed": 60,
-    "rating_chemistry": 67,
-    "rating_overall": 64
+    "rating_speed": 59,
+    "rating_chemistry": 66,
+    "rating_overall": 63
   },
   {
     "league": "DEL2",
@@ -8787,7 +8787,7 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 58,
-    "rating_speed": 60,
+    "rating_speed": 59,
     "rating_chemistry": 60,
     "rating_overall": 59
   },
@@ -8815,7 +8815,7 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 68,
-    "rating_speed": 60,
+    "rating_speed": 59,
     "rating_chemistry": 65,
     "rating_overall": 62
   },
@@ -8843,9 +8843,9 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 70,
-    "rating_speed": 61,
+    "rating_speed": 60,
     "rating_chemistry": 68,
-    "rating_overall": 65
+    "rating_overall": 64
   },
   {
     "league": "DEL2",
@@ -8871,7 +8871,7 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 75,
-    "rating_speed": 61,
+    "rating_speed": 60,
     "rating_chemistry": 71,
     "rating_overall": 67
   },
@@ -8899,7 +8899,7 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 76,
-    "rating_speed": 61,
+    "rating_speed": 60,
     "rating_chemistry": 72,
     "rating_overall": 67
   },
@@ -8926,8 +8926,8 @@
     "fo_lost": 5,
     "fo_pct": 37.5,
     "rating_offense": 60,
-    "rating_defense": 72,
-    "rating_speed": 61,
+    "rating_defense": 73,
+    "rating_speed": 60,
     "rating_chemistry": 69,
     "rating_overall": 64
   },
@@ -8955,7 +8955,7 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 73,
-    "rating_speed": 61,
+    "rating_speed": 60,
     "rating_chemistry": 69,
     "rating_overall": 64
   },
@@ -8983,7 +8983,7 @@
     "fo_pct": 40.0,
     "rating_offense": 60,
     "rating_defense": 72,
-    "rating_speed": 63,
+    "rating_speed": 62,
     "rating_chemistry": 70,
     "rating_overall": 64
   },
@@ -9012,8 +9012,8 @@
     "rating_offense": 60,
     "rating_defense": 66,
     "rating_speed": 63,
-    "rating_chemistry": 68,
-    "rating_overall": 63
+    "rating_chemistry": 67,
+    "rating_overall": 62
   },
   {
     "league": "DEL2",
@@ -9039,7 +9039,7 @@
     "fo_pct": 64.29,
     "rating_offense": 60,
     "rating_defense": 73,
-    "rating_speed": 64,
+    "rating_speed": 63,
     "rating_chemistry": 72,
     "rating_overall": 65
   },
@@ -9067,9 +9067,9 @@
     "fo_pct": 50.0,
     "rating_offense": 60,
     "rating_defense": 72,
-    "rating_speed": 64,
+    "rating_speed": 63,
     "rating_chemistry": 71,
-    "rating_overall": 65
+    "rating_overall": 64
   },
   {
     "league": "DEL2",
@@ -9095,7 +9095,7 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 50,
-    "rating_speed": 65,
+    "rating_speed": 64,
     "rating_chemistry": 60,
     "rating_overall": 56
   },
@@ -9123,7 +9123,7 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 65,
-    "rating_speed": 65,
+    "rating_speed": 64,
     "rating_chemistry": 69,
     "rating_overall": 63
   },
@@ -9151,7 +9151,7 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 70,
-    "rating_speed": 65,
+    "rating_speed": 64,
     "rating_chemistry": 71,
     "rating_overall": 64
   },
@@ -9179,9 +9179,9 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 63
+    "rating_speed": 52,
+    "rating_chemistry": 61,
+    "rating_overall": 62
   },
   {
     "league": "DEL2",
@@ -9207,65 +9207,65 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 63
+    "rating_speed": 52,
+    "rating_chemistry": 61,
+    "rating_overall": 62
   },
   {
-    "league": "DEL2",
+    "league": "DEL",
     "type": "skater",
-    "team_code": "ECN",
-    "team_name": null,
+    "team_code": null,
+    "team_name": "FRA",
     "name_real": "Fabio Kose",
-    "number": 27,
-    "nation": "nan",
-    "position_raw": "DE (U21)",
+    "number": 20,
+    "nation": "GER",
+    "position_raw": "V",
     "position_group": "D",
-    "gp": 0,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": 0,
+    "gp": 18,
+    "goals": 1,
+    "assists": 2,
+    "points": 3,
+    "points_per_game": 0.16666666666666666,
+    "plus_minus": 2,
     "pp_goals": 0,
     "sh_goals": 0,
-    "pim": 0,
+    "pim": 12,
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 59,
-    "rating_defense": 72,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 64
+    "rating_offense": 63,
+    "rating_defense": 71,
+    "rating_speed": 69,
+    "rating_chemistry": 74,
+    "rating_overall": 68
   },
   {
-    "league": "DEL2",
+    "league": "DEL",
     "type": "skater",
-    "team_code": "ECN",
-    "team_name": null,
+    "team_code": null,
+    "team_name": "FRA",
     "name_real": "Timo Kose",
-    "number": 81,
-    "nation": "nan",
-    "position_raw": "FO (U21)",
+    "number": 22,
+    "nation": "GER",
+    "position_raw": "S",
     "position_group": "F",
-    "gp": 0,
-    "goals": 0,
+    "gp": 16,
+    "goals": 3,
     "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": 0,
+    "points": 3,
+    "points_per_game": 0.1875,
+    "plus_minus": -6,
     "pp_goals": 0,
     "sh_goals": 0,
-    "pim": 0,
+    "pim": 8,
     "fo_won": 0,
-    "fo_lost": 0,
+    "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 60,
-    "rating_defense": 74,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 63
+    "rating_offense": 68,
+    "rating_defense": 64,
+    "rating_speed": 67,
+    "rating_chemistry": 67,
+    "rating_overall": 67
   },
   {
     "league": "DEL2",
@@ -9291,8 +9291,8 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 72,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
+    "rating_speed": 52,
+    "rating_chemistry": 61,
     "rating_overall": 64
   },
   {
@@ -9319,65 +9319,65 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 63
+    "rating_speed": 52,
+    "rating_chemistry": 61,
+    "rating_overall": 62
   },
   {
-    "league": "DEL2",
+    "league": "DEL",
     "type": "skater",
-    "team_code": "LFX",
-    "team_name": null,
+    "team_code": null,
+    "team_name": "BER",
     "name_real": "Matej Leden",
-    "number": 97,
-    "nation": "nan",
-    "position_raw": "FO",
-    "position_group": "F",
-    "gp": 0,
+    "number": 33,
+    "nation": "GER",
+    "position_raw": "V",
+    "position_group": "D",
+    "gp": 18,
     "goals": 0,
     "assists": 0,
     "points": 0,
     "points_per_game": 0.0,
-    "plus_minus": 0,
+    "plus_minus": -1,
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 0,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 60,
-    "rating_defense": 74,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 63
+    "fo_won": 17,
+    "fo_lost": 27,
+    "fo_pct": 38.64,
+    "rating_offense": 59,
+    "rating_defense": 71,
+    "rating_speed": 66,
+    "rating_chemistry": 74,
+    "rating_overall": 66
   },
   {
-    "league": "DEL2",
+    "league": "DEL",
     "type": "skater",
-    "team_code": "LFX",
-    "team_name": null,
+    "team_code": null,
+    "team_name": "BER",
     "name_real": "Eric Hördler",
     "number": 77,
-    "nation": "nan",
-    "position_raw": "FO",
+    "nation": "GER",
+    "position_raw": "S",
     "position_group": "F",
-    "gp": 0,
+    "gp": 19,
     "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": 0,
+    "assists": 1,
+    "points": 1,
+    "points_per_game": 0.05263157894736842,
+    "plus_minus": -2,
     "pp_goals": 0,
     "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
+    "pim": 6,
+    "fo_won": 1,
+    "fo_lost": 1,
+    "fo_pct": 50.0,
     "rating_offense": 60,
-    "rating_defense": 74,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 63
+    "rating_defense": 70,
+    "rating_speed": 67,
+    "rating_chemistry": 73,
+    "rating_overall": 65
   },
   {
     "league": "DEL2",
@@ -9403,9 +9403,9 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 63
+    "rating_speed": 52,
+    "rating_chemistry": 61,
+    "rating_overall": 62
   },
   {
     "league": "DEL2",
@@ -9431,9 +9431,9 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 63
+    "rating_speed": 52,
+    "rating_chemistry": 61,
+    "rating_overall": 62
   },
   {
     "league": "DEL2",
@@ -9459,37 +9459,37 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 63
+    "rating_speed": 52,
+    "rating_chemistry": 61,
+    "rating_overall": 62
   },
   {
-    "league": "DEL2",
+    "league": "DEL",
     "type": "skater",
-    "team_code": "ESV",
-    "team_name": null,
+    "team_code": null,
+    "team_name": "MUC",
     "name_real": "Phillip Sinn",
     "number": 43,
-    "nation": "nan",
-    "position_raw": "DE",
+    "nation": "GER",
+    "position_raw": "V",
     "position_group": "D",
-    "gp": 0,
+    "gp": 16,
     "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": 0,
+    "assists": 1,
+    "points": 1,
+    "points_per_game": 0.0625,
+    "plus_minus": 2,
     "pp_goals": 0,
     "sh_goals": 0,
-    "pim": 0,
+    "pim": 8,
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 59,
+    "rating_offense": 60,
     "rating_defense": 72,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 64
+    "rating_speed": 65,
+    "rating_chemistry": 73,
+    "rating_overall": 67
   },
   {
     "league": "DEL2",
@@ -9515,9 +9515,9 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 63
+    "rating_speed": 52,
+    "rating_chemistry": 61,
+    "rating_overall": 62
   },
   {
     "league": "DEL2",
@@ -9543,9 +9543,9 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 63
+    "rating_speed": 52,
+    "rating_chemistry": 61,
+    "rating_overall": 62
   },
   {
     "league": "DEL2",
@@ -9571,9 +9571,9 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 63
+    "rating_speed": 52,
+    "rating_chemistry": 61,
+    "rating_overall": 62
   },
   {
     "league": "DEL2",
@@ -9599,8 +9599,8 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 72,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
+    "rating_speed": 52,
+    "rating_chemistry": 61,
     "rating_overall": 64
   },
   {
@@ -9627,9 +9627,9 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 63
+    "rating_speed": 52,
+    "rating_chemistry": 61,
+    "rating_overall": 62
   },
   {
     "league": "DEL2",
@@ -9655,9 +9655,9 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 63
+    "rating_speed": 52,
+    "rating_chemistry": 61,
+    "rating_overall": 62
   },
   {
     "league": "DEL2",
@@ -9683,37 +9683,37 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 72,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
+    "rating_speed": 52,
+    "rating_chemistry": 61,
     "rating_overall": 64
   },
   {
-    "league": "DEL2",
+    "league": "DEL",
     "type": "skater",
-    "team_code": "RVT",
-    "team_name": null,
+    "team_code": null,
+    "team_name": "ING",
     "name_real": "Edwin Tropmann",
-    "number": null,
-    "nation": "nan",
-    "position_raw": "DE",
+    "number": 55,
+    "nation": "GER",
+    "position_raw": "V",
     "position_group": "D",
-    "gp": 0,
-    "goals": 0,
+    "gp": 19,
+    "goals": 4,
     "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": 0,
+    "points": 4,
+    "points_per_game": 0.21052631578947367,
+    "plus_minus": -2,
     "pp_goals": 0,
     "sh_goals": 0,
-    "pim": 0,
+    "pim": 4,
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 59,
-    "rating_defense": 72,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 64
+    "rating_offense": 68,
+    "rating_defense": 69,
+    "rating_speed": 70,
+    "rating_chemistry": 73,
+    "rating_overall": 69
   },
   {
     "league": "DEL2",
@@ -9739,9 +9739,9 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 63
+    "rating_speed": 52,
+    "rating_chemistry": 61,
+    "rating_overall": 62
   },
   {
     "league": "DEL2",
@@ -9767,9 +9767,9 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 63
+    "rating_speed": 52,
+    "rating_chemistry": 61,
+    "rating_overall": 62
   },
   {
     "league": "DEL2",
@@ -9795,9 +9795,9 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 63
+    "rating_speed": 52,
+    "rating_chemistry": 61,
+    "rating_overall": 62
   },
   {
     "league": "DEL",
@@ -9823,7 +9823,7 @@
     "fo_pct": 48.62,
     "rating_offense": 99,
     "rating_defense": 85,
-    "rating_speed": 91,
+    "rating_speed": 90,
     "rating_chemistry": 84,
     "rating_overall": 93
   },
@@ -9880,7 +9880,7 @@
     "rating_offense": 99,
     "rating_defense": 80,
     "rating_speed": 90,
-    "rating_chemistry": 83,
+    "rating_chemistry": 82,
     "rating_overall": 91
   },
   {
@@ -9906,7 +9906,7 @@
     "fo_lost": 0,
     "fo_pct": 100.0,
     "rating_offense": 95,
-    "rating_defense": 81,
+    "rating_defense": 80,
     "rating_speed": 88,
     "rating_chemistry": 79,
     "rating_overall": 87
@@ -9933,7 +9933,7 @@
     "fo_won": 179,
     "fo_lost": 172,
     "fo_pct": 51.0,
-    "rating_offense": 98,
+    "rating_offense": 97,
     "rating_defense": 75,
     "rating_speed": 88,
     "rating_chemistry": 79,
@@ -9962,10 +9962,10 @@
     "fo_lost": 100,
     "fo_pct": 45.36,
     "rating_offense": 86,
-    "rating_defense": 70,
+    "rating_defense": 69,
     "rating_speed": 88,
     "rating_chemistry": 75,
-    "rating_overall": 82
+    "rating_overall": 81
   },
   {
     "league": "DEL",
@@ -9989,7 +9989,7 @@
     "fo_won": 1,
     "fo_lost": 1,
     "fo_pct": 50.0,
-    "rating_offense": 84,
+    "rating_offense": 83,
     "rating_defense": 76,
     "rating_speed": 87,
     "rating_chemistry": 78,
@@ -10017,7 +10017,7 @@
     "fo_won": 1,
     "fo_lost": 2,
     "fo_pct": 33.33,
-    "rating_offense": 97,
+    "rating_offense": 96,
     "rating_defense": 78,
     "rating_speed": 86,
     "rating_chemistry": 79,
@@ -10049,7 +10049,7 @@
     "rating_defense": 72,
     "rating_speed": 86,
     "rating_chemistry": 76,
-    "rating_overall": 85
+    "rating_overall": 84
   },
   {
     "league": "DEL",
@@ -10104,8 +10104,8 @@
     "rating_offense": 87,
     "rating_defense": 80,
     "rating_speed": 86,
-    "rating_chemistry": 80,
-    "rating_overall": 85
+    "rating_chemistry": 79,
+    "rating_overall": 84
   },
   {
     "league": "DEL",
@@ -10185,7 +10185,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 87,
+    "rating_offense": 86,
     "rating_defense": 78,
     "rating_speed": 84,
     "rating_chemistry": 80,
@@ -10213,7 +10213,7 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 88,
+    "rating_offense": 87,
     "rating_defense": 82,
     "rating_speed": 83,
     "rating_chemistry": 81,
@@ -10241,7 +10241,7 @@
     "fo_won": 1,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 90,
+    "rating_offense": 89,
     "rating_defense": 80,
     "rating_speed": 83,
     "rating_chemistry": 80,
@@ -10269,7 +10269,7 @@
     "fo_won": 4,
     "fo_lost": 3,
     "fo_pct": 57.14,
-    "rating_offense": 88,
+    "rating_offense": 87,
     "rating_defense": 80,
     "rating_speed": 83,
     "rating_chemistry": 80,
@@ -10300,7 +10300,7 @@
     "rating_offense": 86,
     "rating_defense": 61,
     "rating_speed": 83,
-    "rating_chemistry": 66,
+    "rating_chemistry": 67,
     "rating_overall": 78
   },
   {
@@ -10353,11 +10353,11 @@
     "fo_won": 6,
     "fo_lost": 7,
     "fo_pct": 46.15,
-    "rating_offense": 93,
+    "rating_offense": 92,
     "rating_defense": 82,
     "rating_speed": 82,
-    "rating_chemistry": 83,
-    "rating_overall": 87
+    "rating_chemistry": 82,
+    "rating_overall": 86
   },
   {
     "league": "DEL",
@@ -10437,7 +10437,7 @@
     "fo_won": 136,
     "fo_lost": 108,
     "fo_pct": 55.74,
-    "rating_offense": 80,
+    "rating_offense": 79,
     "rating_defense": 71,
     "rating_speed": 82,
     "rating_chemistry": 74,
@@ -10497,7 +10497,7 @@
     "rating_defense": 75,
     "rating_speed": 81,
     "rating_chemistry": 78,
-    "rating_overall": 81
+    "rating_overall": 80
   },
   {
     "league": "DEL",
@@ -10550,10 +10550,10 @@
     "fo_lost": 16,
     "fo_pct": 36.0,
     "rating_offense": 91,
-    "rating_defense": 68,
+    "rating_defense": 69,
     "rating_speed": 80,
     "rating_chemistry": 73,
-    "rating_overall": 82
+    "rating_overall": 81
   },
   {
     "league": "DEL",
@@ -10606,7 +10606,7 @@
     "fo_lost": 119,
     "fo_pct": 47.11,
     "rating_offense": 89,
-    "rating_defense": 67,
+    "rating_defense": 68,
     "rating_speed": 80,
     "rating_chemistry": 71,
     "rating_overall": 80
@@ -10661,11 +10661,11 @@
     "fo_won": 36,
     "fo_lost": 41,
     "fo_pct": 46.75,
-    "rating_offense": 80,
+    "rating_offense": 79,
     "rating_defense": 72,
     "rating_speed": 80,
-    "rating_chemistry": 76,
-    "rating_overall": 78
+    "rating_chemistry": 75,
+    "rating_overall": 77
   },
   {
     "league": "DEL",
@@ -10689,9 +10689,9 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 89,
+    "rating_offense": 88,
     "rating_defense": 76,
-    "rating_speed": 82,
+    "rating_speed": 81,
     "rating_chemistry": 74,
     "rating_overall": 83
   },
@@ -10721,7 +10721,7 @@
     "rating_defense": 80,
     "rating_speed": 79,
     "rating_chemistry": 79,
-    "rating_overall": 81
+    "rating_overall": 80
   },
   {
     "league": "DEL",
@@ -10745,7 +10745,7 @@
     "fo_won": 1,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 85,
+    "rating_offense": 84,
     "rating_defense": 67,
     "rating_speed": 79,
     "rating_chemistry": 72,
@@ -10773,11 +10773,11 @@
     "fo_won": 3,
     "fo_lost": 5,
     "fo_pct": 37.5,
-    "rating_offense": 85,
-    "rating_defense": 83,
+    "rating_offense": 84,
+    "rating_defense": 82,
     "rating_speed": 79,
     "rating_chemistry": 83,
-    "rating_overall": 83
+    "rating_overall": 82
   },
   {
     "league": "DEL",
@@ -10805,7 +10805,7 @@
     "rating_defense": 71,
     "rating_speed": 79,
     "rating_chemistry": 75,
-    "rating_overall": 78
+    "rating_overall": 77
   },
   {
     "league": "DEL",
@@ -10829,11 +10829,11 @@
     "fo_won": 237,
     "fo_lost": 176,
     "fo_pct": 57.38,
-    "rating_offense": 81,
+    "rating_offense": 80,
     "rating_defense": 71,
     "rating_speed": 79,
     "rating_chemistry": 74,
-    "rating_overall": 78
+    "rating_overall": 77
   },
   {
     "league": "DEL",
@@ -10857,7 +10857,7 @@
     "fo_won": 271,
     "fo_lost": 188,
     "fo_pct": 59.04,
-    "rating_offense": 81,
+    "rating_offense": 80,
     "rating_defense": 66,
     "rating_speed": 79,
     "rating_chemistry": 70,
@@ -10885,7 +10885,7 @@
     "fo_won": 98,
     "fo_lost": 162,
     "fo_pct": 37.69,
-    "rating_offense": 81,
+    "rating_offense": 80,
     "rating_defense": 76,
     "rating_speed": 79,
     "rating_chemistry": 78,
@@ -11001,7 +11001,7 @@
     "rating_defense": 73,
     "rating_speed": 79,
     "rating_chemistry": 76,
-    "rating_overall": 76
+    "rating_overall": 75
   },
   {
     "league": "DEL",
@@ -11025,9 +11025,9 @@
     "fo_won": 170,
     "fo_lost": 151,
     "fo_pct": 52.96,
-    "rating_offense": 86,
+    "rating_offense": 85,
     "rating_defense": 81,
-    "rating_speed": 79,
+    "rating_speed": 78,
     "rating_chemistry": 82,
     "rating_overall": 82
   },
@@ -11053,9 +11053,9 @@
     "fo_won": 1,
     "fo_lost": 1,
     "fo_pct": 50.0,
-    "rating_offense": 86,
+    "rating_offense": 85,
     "rating_defense": 74,
-    "rating_speed": 79,
+    "rating_speed": 78,
     "rating_chemistry": 78,
     "rating_overall": 80
   },
@@ -11109,11 +11109,11 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 84,
+    "rating_offense": 83,
     "rating_defense": 68,
-    "rating_speed": 79,
+    "rating_speed": 78,
     "rating_chemistry": 72,
-    "rating_overall": 78
+    "rating_overall": 77
   },
   {
     "league": "DEL",
@@ -11137,10 +11137,10 @@
     "fo_won": 116,
     "fo_lost": 83,
     "fo_pct": 58.29,
-    "rating_offense": 84,
+    "rating_offense": 83,
     "rating_defense": 58,
-    "rating_speed": 80,
-    "rating_chemistry": 66,
+    "rating_speed": 79,
+    "rating_chemistry": 65,
     "rating_overall": 75
   },
   {
@@ -11167,9 +11167,9 @@
     "fo_pct": 0.0,
     "rating_offense": 82,
     "rating_defense": 73,
-    "rating_speed": 79,
+    "rating_speed": 78,
     "rating_chemistry": 75,
-    "rating_overall": 79
+    "rating_overall": 78
   },
   {
     "league": "DEL",
@@ -11193,10 +11193,10 @@
     "fo_won": 1,
     "fo_lost": 1,
     "fo_pct": 50.0,
-    "rating_offense": 79,
+    "rating_offense": 78,
     "rating_defense": 82,
-    "rating_speed": 79,
-    "rating_chemistry": 81,
+    "rating_speed": 78,
+    "rating_chemistry": 80,
     "rating_overall": 80
   },
   {
@@ -11223,7 +11223,7 @@
     "fo_pct": 60.67,
     "rating_offense": 80,
     "rating_defense": 76,
-    "rating_speed": 79,
+    "rating_speed": 78,
     "rating_chemistry": 78,
     "rating_overall": 78
   },
@@ -11251,9 +11251,9 @@
     "fo_pct": 57.0,
     "rating_offense": 80,
     "rating_defense": 73,
-    "rating_speed": 79,
+    "rating_speed": 78,
     "rating_chemistry": 76,
-    "rating_overall": 78
+    "rating_overall": 77
   },
   {
     "league": "DEL",
@@ -11279,7 +11279,7 @@
     "fo_pct": 46.47,
     "rating_offense": 80,
     "rating_defense": 74,
-    "rating_speed": 79,
+    "rating_speed": 78,
     "rating_chemistry": 78,
     "rating_overall": 78
   },
@@ -11306,7 +11306,7 @@
     "fo_lost": 89,
     "fo_pct": 53.4,
     "rating_offense": 78,
-    "rating_defense": 65,
+    "rating_defense": 64,
     "rating_speed": 78,
     "rating_chemistry": 74,
     "rating_overall": 74
@@ -11335,7 +11335,7 @@
     "fo_pct": 50.0,
     "rating_offense": 78,
     "rating_defense": 74,
-    "rating_speed": 79,
+    "rating_speed": 78,
     "rating_chemistry": 76,
     "rating_overall": 77
   },
@@ -11363,7 +11363,7 @@
     "fo_pct": 62.58,
     "rating_offense": 78,
     "rating_defense": 70,
-    "rating_speed": 79,
+    "rating_speed": 78,
     "rating_chemistry": 74,
     "rating_overall": 76
   },
@@ -11389,9 +11389,9 @@
     "fo_won": 3,
     "fo_lost": 13,
     "fo_pct": 18.75,
-    "rating_offense": 85,
-    "rating_defense": 56,
-    "rating_speed": 78,
+    "rating_offense": 84,
+    "rating_defense": 57,
+    "rating_speed": 77,
     "rating_chemistry": 62,
     "rating_overall": 74
   },
@@ -11418,7 +11418,7 @@
     "fo_lost": 1,
     "fo_pct": 66.67,
     "rating_offense": 83,
-    "rating_defense": 70,
+    "rating_defense": 71,
     "rating_speed": 77,
     "rating_chemistry": 71,
     "rating_overall": 78
@@ -11447,7 +11447,7 @@
     "fo_pct": 62.2,
     "rating_offense": 83,
     "rating_defense": 55,
-    "rating_speed": 78,
+    "rating_speed": 77,
     "rating_chemistry": 66,
     "rating_overall": 73
   },
@@ -11473,10 +11473,10 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 83,
+    "rating_offense": 82,
     "rating_defense": 66,
-    "rating_speed": 78,
-    "rating_chemistry": 69,
+    "rating_speed": 77,
+    "rating_chemistry": 70,
     "rating_overall": 76
   },
   {
@@ -11501,11 +11501,11 @@
     "fo_won": 54,
     "fo_lost": 62,
     "fo_pct": 46.55,
-    "rating_offense": 82,
+    "rating_offense": 81,
     "rating_defense": 72,
     "rating_speed": 77,
-    "rating_chemistry": 76,
-    "rating_overall": 78
+    "rating_chemistry": 75,
+    "rating_overall": 77
   },
   {
     "league": "DEL",
@@ -11531,7 +11531,7 @@
     "fo_pct": 0.0,
     "rating_offense": 81,
     "rating_defense": 58,
-    "rating_speed": 78,
+    "rating_speed": 77,
     "rating_chemistry": 68,
     "rating_overall": 73
   },
@@ -11559,7 +11559,7 @@
     "fo_pct": 59.87,
     "rating_offense": 81,
     "rating_defense": 77,
-    "rating_speed": 78,
+    "rating_speed": 77,
     "rating_chemistry": 78,
     "rating_overall": 79
   },
@@ -11587,7 +11587,7 @@
     "fo_pct": 72.73,
     "rating_offense": 81,
     "rating_defense": 61,
-    "rating_speed": 78,
+    "rating_speed": 77,
     "rating_chemistry": 66,
     "rating_overall": 74
   },
@@ -11614,8 +11614,8 @@
     "fo_lost": 10,
     "fo_pct": 47.37,
     "rating_offense": 81,
-    "rating_defense": 54,
-    "rating_speed": 78,
+    "rating_defense": 55,
+    "rating_speed": 77,
     "rating_chemistry": 63,
     "rating_overall": 72
   },
@@ -11641,11 +11641,11 @@
     "fo_won": 10,
     "fo_lost": 10,
     "fo_pct": 50.0,
-    "rating_offense": 80,
+    "rating_offense": 79,
     "rating_defense": 78,
     "rating_speed": 77,
     "rating_chemistry": 77,
-    "rating_overall": 79
+    "rating_overall": 78
   },
   {
     "league": "DEL",
@@ -11669,9 +11669,9 @@
     "fo_won": 157,
     "fo_lost": 183,
     "fo_pct": 46.18,
-    "rating_offense": 78,
+    "rating_offense": 77,
     "rating_defense": 79,
-    "rating_speed": 78,
+    "rating_speed": 77,
     "rating_chemistry": 79,
     "rating_overall": 78
   },
@@ -11699,7 +11699,7 @@
     "fo_pct": 0.0,
     "rating_offense": 77,
     "rating_defense": 62,
-    "rating_speed": 78,
+    "rating_speed": 77,
     "rating_chemistry": 69,
     "rating_overall": 73
   },
@@ -11727,9 +11727,9 @@
     "fo_pct": 50.68,
     "rating_offense": 77,
     "rating_defense": 75,
-    "rating_speed": 78,
+    "rating_speed": 77,
     "rating_chemistry": 78,
-    "rating_overall": 77
+    "rating_overall": 76
   },
   {
     "league": "DEL",
@@ -11753,9 +11753,9 @@
     "fo_won": 135,
     "fo_lost": 104,
     "fo_pct": 56.49,
-    "rating_offense": 76,
+    "rating_offense": 75,
     "rating_defense": 66,
-    "rating_speed": 78,
+    "rating_speed": 77,
     "rating_chemistry": 71,
     "rating_overall": 73
   },
@@ -11781,9 +11781,9 @@
     "fo_won": 1,
     "fo_lost": 2,
     "fo_pct": 33.33,
-    "rating_offense": 75,
-    "rating_defense": 85,
-    "rating_speed": 78,
+    "rating_offense": 74,
+    "rating_defense": 84,
+    "rating_speed": 77,
     "rating_chemistry": 82,
     "rating_overall": 80
   },
@@ -11811,9 +11811,9 @@
     "fo_pct": 0.0,
     "rating_offense": 73,
     "rating_defense": 74,
-    "rating_speed": 78,
+    "rating_speed": 77,
     "rating_chemistry": 76,
-    "rating_overall": 75
+    "rating_overall": 74
   },
   {
     "league": "DEL",
@@ -11837,11 +11837,11 @@
     "fo_won": 130,
     "fo_lost": 96,
     "fo_pct": 57.52,
-    "rating_offense": 74,
+    "rating_offense": 73,
     "rating_defense": 77,
-    "rating_speed": 78,
+    "rating_speed": 77,
     "rating_chemistry": 80,
-    "rating_overall": 76
+    "rating_overall": 75
   },
   {
     "league": "DEL",
@@ -11867,9 +11867,9 @@
     "fo_pct": 54.38,
     "rating_offense": 72,
     "rating_defense": 62,
-    "rating_speed": 78,
-    "rating_chemistry": 70,
-    "rating_overall": 71
+    "rating_speed": 77,
+    "rating_chemistry": 69,
+    "rating_overall": 70
   },
   {
     "league": "DEL",
@@ -11895,7 +11895,7 @@
     "fo_pct": 0.0,
     "rating_offense": 84,
     "rating_defense": 73,
-    "rating_speed": 77,
+    "rating_speed": 76,
     "rating_chemistry": 74,
     "rating_overall": 79
   },
@@ -11949,10 +11949,10 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 80,
+    "rating_offense": 79,
     "rating_defense": 76,
-    "rating_speed": 77,
-    "rating_chemistry": 75,
+    "rating_speed": 76,
+    "rating_chemistry": 74,
     "rating_overall": 78
   },
   {
@@ -11980,7 +11980,7 @@
     "rating_offense": 78,
     "rating_defense": 76,
     "rating_speed": 77,
-    "rating_chemistry": 79,
+    "rating_chemistry": 78,
     "rating_overall": 77
   },
   {
@@ -12061,7 +12061,7 @@
     "fo_won": 142,
     "fo_lost": 104,
     "fo_pct": 57.72,
-    "rating_offense": 77,
+    "rating_offense": 76,
     "rating_defense": 72,
     "rating_speed": 77,
     "rating_chemistry": 75,
@@ -12089,8 +12089,8 @@
     "fo_won": 3,
     "fo_lost": 8,
     "fo_pct": 27.27,
-    "rating_offense": 77,
-    "rating_defense": 83,
+    "rating_offense": 76,
+    "rating_defense": 82,
     "rating_speed": 77,
     "rating_chemistry": 83,
     "rating_overall": 78
@@ -12121,7 +12121,7 @@
     "rating_defense": 80,
     "rating_speed": 76,
     "rating_chemistry": 78,
-    "rating_overall": 78
+    "rating_overall": 77
   },
   {
     "league": "DEL",
@@ -12147,7 +12147,7 @@
     "fo_pct": 0.0,
     "rating_offense": 75,
     "rating_defense": 70,
-    "rating_speed": 77,
+    "rating_speed": 76,
     "rating_chemistry": 71,
     "rating_overall": 73
   },
@@ -12174,9 +12174,9 @@
     "fo_lost": 0,
     "fo_pct": 0.0,
     "rating_offense": 72,
-    "rating_defense": 79,
+    "rating_defense": 78,
     "rating_speed": 77,
-    "rating_chemistry": 79,
+    "rating_chemistry": 78,
     "rating_overall": 76
   },
   {
@@ -12201,7 +12201,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 73,
+    "rating_offense": 72,
     "rating_defense": 70,
     "rating_speed": 77,
     "rating_chemistry": 73,
@@ -12229,7 +12229,7 @@
     "fo_won": 8,
     "fo_lost": 9,
     "fo_pct": 47.06,
-    "rating_offense": 70,
+    "rating_offense": 69,
     "rating_defense": 72,
     "rating_speed": 76,
     "rating_chemistry": 73,
@@ -12258,7 +12258,7 @@
     "fo_lost": 111,
     "fo_pct": 36.93,
     "rating_offense": 80,
-    "rating_defense": 67,
+    "rating_defense": 68,
     "rating_speed": 75,
     "rating_chemistry": 69,
     "rating_overall": 75
@@ -12287,9 +12287,9 @@
     "fo_pct": 0.0,
     "rating_offense": 79,
     "rating_defense": 74,
-    "rating_speed": 76,
+    "rating_speed": 75,
     "rating_chemistry": 71,
-    "rating_overall": 77
+    "rating_overall": 76
   },
   {
     "league": "DEL",
@@ -12313,7 +12313,7 @@
     "fo_won": 102,
     "fo_lost": 102,
     "fo_pct": 50.0,
-    "rating_offense": 78,
+    "rating_offense": 77,
     "rating_defense": 51,
     "rating_speed": 75,
     "rating_chemistry": 62,
@@ -12341,7 +12341,7 @@
     "fo_won": 115,
     "fo_lost": 124,
     "fo_pct": 48.12,
-    "rating_offense": 78,
+    "rating_offense": 77,
     "rating_defense": 75,
     "rating_speed": 76,
     "rating_chemistry": 77,
@@ -12369,11 +12369,11 @@
     "fo_won": 2,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 78,
+    "rating_offense": 77,
     "rating_defense": 72,
     "rating_speed": 76,
-    "rating_chemistry": 76,
-    "rating_overall": 76
+    "rating_chemistry": 75,
+    "rating_overall": 75
   },
   {
     "league": "DEL",
@@ -12399,8 +12399,8 @@
     "fo_pct": 40.79,
     "rating_offense": 78,
     "rating_defense": 76,
-    "rating_speed": 78,
-    "rating_chemistry": 71,
+    "rating_speed": 77,
+    "rating_chemistry": 70,
     "rating_overall": 77
   },
   {
@@ -12453,7 +12453,7 @@
     "fo_won": 54,
     "fo_lost": 34,
     "fo_pct": 61.36,
-    "rating_offense": 76,
+    "rating_offense": 75,
     "rating_defense": 78,
     "rating_speed": 76,
     "rating_chemistry": 80,
@@ -12482,9 +12482,9 @@
     "fo_lost": 0,
     "fo_pct": 0.0,
     "rating_offense": 78,
-    "rating_defense": 53,
+    "rating_defense": 54,
     "rating_speed": 76,
-    "rating_chemistry": 60,
+    "rating_chemistry": 59,
     "rating_overall": 67
   },
   {
@@ -12512,7 +12512,7 @@
     "rating_offense": 74,
     "rating_defense": 79,
     "rating_speed": 75,
-    "rating_chemistry": 78,
+    "rating_chemistry": 77,
     "rating_overall": 76
   },
   {
@@ -12566,7 +12566,7 @@
     "fo_lost": 0,
     "fo_pct": 0.0,
     "rating_offense": 70,
-    "rating_defense": 63,
+    "rating_defense": 64,
     "rating_speed": 76,
     "rating_chemistry": 70,
     "rating_overall": 68
@@ -12625,7 +12625,7 @@
     "rating_defense": 71,
     "rating_speed": 76,
     "rating_chemistry": 74,
-    "rating_overall": 72
+    "rating_overall": 71
   },
   {
     "league": "DEL",
@@ -12649,11 +12649,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 76,
-    "rating_defense": 73,
+    "rating_offense": 75,
+    "rating_defense": 74,
     "rating_speed": 74,
     "rating_chemistry": 72,
-    "rating_overall": 75
+    "rating_overall": 74
   },
   {
     "league": "DEL",
@@ -12709,7 +12709,7 @@
     "rating_defense": 74,
     "rating_speed": 74,
     "rating_chemistry": 75,
-    "rating_overall": 75
+    "rating_overall": 74
   },
   {
     "league": "DEL",
@@ -12733,7 +12733,7 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 75,
+    "rating_offense": 74,
     "rating_defense": 73,
     "rating_speed": 75,
     "rating_chemistry": 77,
@@ -12761,7 +12761,7 @@
     "fo_won": 132,
     "fo_lost": 136,
     "fo_pct": 49.25,
-    "rating_offense": 74,
+    "rating_offense": 73,
     "rating_defense": 76,
     "rating_speed": 74,
     "rating_chemistry": 75,
@@ -12789,7 +12789,7 @@
     "fo_won": 84,
     "fo_lost": 70,
     "fo_pct": 54.55,
-    "rating_offense": 74,
+    "rating_offense": 73,
     "rating_defense": 72,
     "rating_speed": 74,
     "rating_chemistry": 72,
@@ -12818,7 +12818,7 @@
     "fo_lost": 119,
     "fo_pct": 50.62,
     "rating_offense": 73,
-    "rating_defense": 67,
+    "rating_defense": 68,
     "rating_speed": 74,
     "rating_chemistry": 69,
     "rating_overall": 72
@@ -12849,7 +12849,7 @@
     "rating_defense": 77,
     "rating_speed": 74,
     "rating_chemistry": 77,
-    "rating_overall": 75
+    "rating_overall": 74
   },
   {
     "league": "DEL",
@@ -12874,7 +12874,7 @@
     "fo_lost": 0,
     "fo_pct": 0.0,
     "rating_offense": 72,
-    "rating_defense": 84,
+    "rating_defense": 83,
     "rating_speed": 75,
     "rating_chemistry": 82,
     "rating_overall": 78
@@ -12902,7 +12902,7 @@
     "fo_lost": 0,
     "fo_pct": 0.0,
     "rating_offense": 72,
-    "rating_defense": 87,
+    "rating_defense": 86,
     "rating_speed": 75,
     "rating_chemistry": 83,
     "rating_overall": 79
@@ -12988,8 +12988,8 @@
     "rating_offense": 71,
     "rating_defense": 75,
     "rating_speed": 74,
-    "rating_chemistry": 76,
-    "rating_overall": 74
+    "rating_chemistry": 75,
+    "rating_overall": 73
   },
   {
     "league": "DEL",
@@ -13045,7 +13045,7 @@
     "rating_defense": 80,
     "rating_speed": 75,
     "rating_chemistry": 81,
-    "rating_overall": 75
+    "rating_overall": 74
   },
   {
     "league": "DEL",
@@ -13071,8 +13071,8 @@
     "fo_pct": 0.0,
     "rating_offense": 69,
     "rating_defense": 68,
-    "rating_speed": 75,
-    "rating_chemistry": 73,
+    "rating_speed": 74,
+    "rating_chemistry": 72,
     "rating_overall": 70
   },
   {
@@ -13098,7 +13098,7 @@
     "fo_lost": 142,
     "fo_pct": 50.0,
     "rating_offense": 69,
-    "rating_defense": 67,
+    "rating_defense": 68,
     "rating_speed": 75,
     "rating_chemistry": 71,
     "rating_overall": 70
@@ -13125,9 +13125,9 @@
     "fo_won": 56,
     "fo_lost": 54,
     "fo_pct": 50.91,
-    "rating_offense": 80,
-    "rating_defense": 69,
-    "rating_speed": 74,
+    "rating_offense": 79,
+    "rating_defense": 70,
+    "rating_speed": 73,
     "rating_chemistry": 66,
     "rating_overall": 75
   },
@@ -13155,9 +13155,9 @@
     "fo_pct": 66.67,
     "rating_offense": 76,
     "rating_defense": 70,
-    "rating_speed": 74,
+    "rating_speed": 73,
     "rating_chemistry": 76,
-    "rating_overall": 74
+    "rating_overall": 73
   },
   {
     "league": "DEL",
@@ -13181,7 +13181,7 @@
     "fo_won": 3,
     "fo_lost": 11,
     "fo_pct": 21.43,
-    "rating_offense": 76,
+    "rating_offense": 75,
     "rating_defense": 74,
     "rating_speed": 74,
     "rating_chemistry": 77,
@@ -13209,11 +13209,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 77,
+    "rating_offense": 76,
     "rating_defense": 75,
-    "rating_speed": 75,
+    "rating_speed": 74,
     "rating_chemistry": 69,
-    "rating_overall": 76
+    "rating_overall": 75
   },
   {
     "league": "DEL",
@@ -13241,7 +13241,7 @@
     "rating_defense": 68,
     "rating_speed": 73,
     "rating_chemistry": 69,
-    "rating_overall": 73
+    "rating_overall": 72
   },
   {
     "league": "DEL",
@@ -13265,7 +13265,7 @@
     "fo_won": 97,
     "fo_lost": 103,
     "fo_pct": 48.5,
-    "rating_offense": 75,
+    "rating_offense": 74,
     "rating_defense": 57,
     "rating_speed": 73,
     "rating_chemistry": 66,
@@ -13322,10 +13322,10 @@
     "fo_lost": 24,
     "fo_pct": 47.83,
     "rating_offense": 74,
-    "rating_defense": 69,
+    "rating_defense": 70,
     "rating_speed": 74,
     "rating_chemistry": 73,
-    "rating_overall": 73
+    "rating_overall": 72
   },
   {
     "league": "DEL",
@@ -13351,7 +13351,7 @@
     "fo_pct": 100.0,
     "rating_offense": 71,
     "rating_defense": 65,
-    "rating_speed": 74,
+    "rating_speed": 73,
     "rating_chemistry": 70,
     "rating_overall": 69
   },
@@ -13382,34 +13382,6 @@
     "rating_speed": 74,
     "rating_chemistry": 58,
     "rating_overall": 64
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "BER",
-    "name_real": "Jonas Müller",
-    "number": 18,
-    "nation": "GER",
-    "position_raw": "V",
-    "position_group": "D",
-    "gp": 19,
-    "goals": 2,
-    "assists": 6,
-    "points": 8,
-    "points_per_game": 0.42105263157894735,
-    "plus_minus": 0,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 20,
-    "fo_won": 1,
-    "fo_lost": 2,
-    "fo_pct": 33.33,
-    "rating_offense": 70,
-    "rating_defense": 67,
-    "rating_speed": 74,
-    "rating_chemistry": 72,
-    "rating_overall": 69
   },
   {
     "league": "DEL",
@@ -13490,7 +13462,7 @@
     "fo_lost": 0,
     "fo_pct": 0.0,
     "rating_offense": 71,
-    "rating_defense": 77,
+    "rating_defense": 76,
     "rating_speed": 73,
     "rating_chemistry": 73,
     "rating_overall": 74
@@ -13545,11 +13517,11 @@
     "fo_won": 116,
     "fo_lost": 122,
     "fo_pct": 48.74,
-    "rating_offense": 67,
-    "rating_defense": 57,
-    "rating_speed": 74,
+    "rating_offense": 66,
+    "rating_defense": 58,
+    "rating_speed": 73,
     "rating_chemistry": 64,
-    "rating_overall": 66
+    "rating_overall": 65
   },
   {
     "league": "DEL",
@@ -13574,9 +13546,9 @@
     "fo_lost": 0,
     "fo_pct": 0.0,
     "rating_offense": 75,
-    "rating_defense": 70,
+    "rating_defense": 69,
     "rating_speed": 73,
-    "rating_chemistry": 76,
+    "rating_chemistry": 75,
     "rating_overall": 73
   },
   {
@@ -13601,8 +13573,8 @@
     "fo_won": 60,
     "fo_lost": 135,
     "fo_pct": 30.77,
-    "rating_offense": 72,
-    "rating_defense": 62,
+    "rating_offense": 71,
+    "rating_defense": 63,
     "rating_speed": 72,
     "rating_chemistry": 66,
     "rating_overall": 69
@@ -13629,7 +13601,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 72,
+    "rating_offense": 71,
     "rating_defense": 69,
     "rating_speed": 72,
     "rating_chemistry": 73,
@@ -13714,10 +13686,10 @@
     "fo_lost": 0,
     "fo_pct": 0.0,
     "rating_offense": 70,
-    "rating_defense": 79,
+    "rating_defense": 78,
     "rating_speed": 73,
     "rating_chemistry": 79,
-    "rating_overall": 75
+    "rating_overall": 74
   },
   {
     "league": "DEL",
@@ -13745,7 +13717,7 @@
     "rating_defense": 74,
     "rating_speed": 73,
     "rating_chemistry": 76,
-    "rating_overall": 73
+    "rating_overall": 72
   },
   {
     "league": "DEL",
@@ -13771,7 +13743,7 @@
     "fo_pct": 0.0,
     "rating_offense": 71,
     "rating_defense": 70,
-    "rating_speed": 72,
+    "rating_speed": 71,
     "rating_chemistry": 70,
     "rating_overall": 71
   },
@@ -13799,8 +13771,8 @@
     "fo_pct": 30.0,
     "rating_offense": 70,
     "rating_defense": 63,
-    "rating_speed": 72,
-    "rating_chemistry": 66,
+    "rating_speed": 71,
+    "rating_chemistry": 65,
     "rating_overall": 68
   },
   {
@@ -13829,7 +13801,7 @@
     "rating_defense": 75,
     "rating_speed": 72,
     "rating_chemistry": 75,
-    "rating_overall": 73
+    "rating_overall": 72
   },
   {
     "league": "DEL",
@@ -13882,8 +13854,8 @@
     "fo_lost": 1,
     "fo_pct": 0.0,
     "rating_offense": 69,
-    "rating_defense": 86,
-    "rating_speed": 73,
+    "rating_defense": 85,
+    "rating_speed": 72,
     "rating_chemistry": 82,
     "rating_overall": 77
   },
@@ -13911,8 +13883,8 @@
     "fo_pct": 0.0,
     "rating_offense": 69,
     "rating_defense": 79,
-    "rating_speed": 73,
-    "rating_chemistry": 79,
+    "rating_speed": 72,
+    "rating_chemistry": 78,
     "rating_overall": 74
   },
   {
@@ -13937,7 +13909,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 69,
+    "rating_offense": 68,
     "rating_defense": 70,
     "rating_speed": 73,
     "rating_chemistry": 74,
@@ -13995,8 +13967,8 @@
     "fo_pct": 25.0,
     "rating_offense": 70,
     "rating_defense": 78,
-    "rating_speed": 73,
-    "rating_chemistry": 72,
+    "rating_speed": 72,
+    "rating_chemistry": 71,
     "rating_overall": 73
   },
   {
@@ -14050,7 +14022,7 @@
     "fo_lost": 0,
     "fo_pct": 100.0,
     "rating_offense": 67,
-    "rating_defense": 54,
+    "rating_defense": 55,
     "rating_speed": 73,
     "rating_chemistry": 65,
     "rating_overall": 63
@@ -14078,10 +14050,10 @@
     "fo_lost": 1,
     "fo_pct": 66.67,
     "rating_offense": 67,
-    "rating_defense": 75,
+    "rating_defense": 74,
     "rating_speed": 73,
     "rating_chemistry": 76,
-    "rating_overall": 72
+    "rating_overall": 71
   },
   {
     "league": "DEL",
@@ -14108,7 +14080,7 @@
     "rating_offense": 67,
     "rating_defense": 73,
     "rating_speed": 73,
-    "rating_chemistry": 76,
+    "rating_chemistry": 75,
     "rating_overall": 71
   },
   {
@@ -14136,7 +14108,7 @@
     "rating_offense": 66,
     "rating_defense": 66,
     "rating_speed": 72,
-    "rating_chemistry": 70,
+    "rating_chemistry": 69,
     "rating_overall": 67
   },
   {
@@ -14163,7 +14135,7 @@
     "fo_pct": 0.0,
     "rating_offense": 74,
     "rating_defense": 49,
-    "rating_speed": 72,
+    "rating_speed": 71,
     "rating_chemistry": 63,
     "rating_overall": 66
   },
@@ -14191,9 +14163,9 @@
     "fo_pct": 0.0,
     "rating_offense": 72,
     "rating_defense": 69,
-    "rating_speed": 71,
+    "rating_speed": 70,
     "rating_chemistry": 66,
-    "rating_overall": 71
+    "rating_overall": 70
   },
   {
     "league": "DEL",
@@ -14219,7 +14191,7 @@
     "fo_pct": 100.0,
     "rating_offense": 71,
     "rating_defense": 71,
-    "rating_speed": 71,
+    "rating_speed": 70,
     "rating_chemistry": 73,
     "rating_overall": 71
   },
@@ -14245,7 +14217,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 71,
+    "rating_offense": 70,
     "rating_defense": 41,
     "rating_speed": 71,
     "rating_chemistry": 55,
@@ -14273,10 +14245,10 @@
     "fo_won": 125,
     "fo_lost": 130,
     "fo_pct": 49.02,
-    "rating_offense": 71,
+    "rating_offense": 70,
     "rating_defense": 66,
     "rating_speed": 72,
-    "rating_chemistry": 69,
+    "rating_chemistry": 70,
     "rating_overall": 69
   },
   {
@@ -14301,7 +14273,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 70,
+    "rating_offense": 69,
     "rating_defense": 68,
     "rating_speed": 70,
     "rating_chemistry": 67,
@@ -14332,7 +14304,7 @@
     "rating_offense": 68,
     "rating_defense": 74,
     "rating_speed": 71,
-    "rating_chemistry": 75,
+    "rating_chemistry": 74,
     "rating_overall": 71
   },
   {
@@ -14359,7 +14331,7 @@
     "fo_pct": 0.0,
     "rating_offense": 68,
     "rating_defense": 78,
-    "rating_speed": 72,
+    "rating_speed": 71,
     "rating_chemistry": 78,
     "rating_overall": 73
   },
@@ -14385,7 +14357,7 @@
     "fo_won": 117,
     "fo_lost": 159,
     "fo_pct": 42.39,
-    "rating_offense": 69,
+    "rating_offense": 68,
     "rating_defense": 61,
     "rating_speed": 72,
     "rating_chemistry": 66,
@@ -14413,7 +14385,7 @@
     "fo_won": 25,
     "fo_lost": 25,
     "fo_pct": 50.0,
-    "rating_offense": 69,
+    "rating_offense": 68,
     "rating_defense": 70,
     "rating_speed": 72,
     "rating_chemistry": 74,
@@ -14442,10 +14414,10 @@
     "fo_lost": 0,
     "fo_pct": 0.0,
     "rating_offense": 70,
-    "rating_defense": 73,
-    "rating_speed": 73,
-    "rating_chemistry": 68,
-    "rating_overall": 72
+    "rating_defense": 74,
+    "rating_speed": 72,
+    "rating_chemistry": 67,
+    "rating_overall": 71
   },
   {
     "league": "DEL",
@@ -14471,9 +14443,9 @@
     "fo_pct": 0.0,
     "rating_offense": 71,
     "rating_defense": 61,
-    "rating_speed": 71,
+    "rating_speed": 70,
     "rating_chemistry": 62,
-    "rating_overall": 67
+    "rating_overall": 66
   },
   {
     "league": "DEL",
@@ -14497,9 +14469,9 @@
     "fo_won": 1,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 68,
+    "rating_offense": 67,
     "rating_defense": 70,
-    "rating_speed": 71,
+    "rating_speed": 70,
     "rating_chemistry": 71,
     "rating_overall": 69
   },
@@ -14525,9 +14497,9 @@
     "fo_won": 36,
     "fo_lost": 69,
     "fo_pct": 34.29,
-    "rating_offense": 67,
+    "rating_offense": 66,
     "rating_defense": 67,
-    "rating_speed": 72,
+    "rating_speed": 71,
     "rating_chemistry": 71,
     "rating_overall": 68
   },
@@ -14554,7 +14526,7 @@
     "fo_lost": 0,
     "fo_pct": 0.0,
     "rating_offense": 66,
-    "rating_defense": 55,
+    "rating_defense": 56,
     "rating_speed": 72,
     "rating_chemistry": 65,
     "rating_overall": 63
@@ -14583,7 +14555,7 @@
     "fo_pct": 0.0,
     "rating_offense": 65,
     "rating_defense": 70,
-    "rating_speed": 72,
+    "rating_speed": 71,
     "rating_chemistry": 73,
     "rating_overall": 68
   },
@@ -14609,39 +14581,11 @@
     "fo_won": 1,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 65,
+    "rating_offense": 64,
     "rating_defense": 62,
     "rating_speed": 72,
     "rating_chemistry": 69,
     "rating_overall": 65
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "NIT",
-    "name_real": "Jakob Weber",
-    "number": 41,
-    "nation": "GER",
-    "position_raw": "V",
-    "position_group": "D",
-    "gp": 19,
-    "goals": 0,
-    "assists": 6,
-    "points": 6,
-    "points_per_game": 0.3157894736842105,
-    "plus_minus": 8,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 4,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 65,
-    "rating_defense": 82,
-    "rating_speed": 72,
-    "rating_chemistry": 81,
-    "rating_overall": 74
   },
   {
     "league": "DEL",
@@ -14668,7 +14612,7 @@
     "rating_offense": 69,
     "rating_defense": 74,
     "rating_speed": 70,
-    "rating_chemistry": 74,
+    "rating_chemistry": 73,
     "rating_overall": 71
   },
   {
@@ -14693,8 +14637,8 @@
     "fo_won": 3,
     "fo_lost": 6,
     "fo_pct": 33.33,
-    "rating_offense": 70,
-    "rating_defense": 43,
+    "rating_offense": 69,
+    "rating_defense": 44,
     "rating_speed": 70,
     "rating_chemistry": 57,
     "rating_overall": 62
@@ -14721,7 +14665,7 @@
     "fo_won": 158,
     "fo_lost": 142,
     "fo_pct": 52.67,
-    "rating_offense": 70,
+    "rating_offense": 69,
     "rating_defense": 66,
     "rating_speed": 71,
     "rating_chemistry": 71,
@@ -14751,9 +14695,9 @@
     "fo_pct": 48.75,
     "rating_offense": 70,
     "rating_defense": 72,
-    "rating_speed": 71,
-    "rating_chemistry": 68,
-    "rating_overall": 71
+    "rating_speed": 70,
+    "rating_chemistry": 67,
+    "rating_overall": 70
   },
   {
     "league": "DEL",
@@ -14777,7 +14721,7 @@
     "fo_won": 34,
     "fo_lost": 26,
     "fo_pct": 56.67,
-    "rating_offense": 69,
+    "rating_offense": 68,
     "rating_defense": 56,
     "rating_speed": 69,
     "rating_chemistry": 64,
@@ -14806,7 +14750,7 @@
     "fo_lost": 10,
     "fo_pct": 56.52,
     "rating_offense": 68,
-    "rating_defense": 54,
+    "rating_defense": 55,
     "rating_speed": 70,
     "rating_chemistry": 61,
     "rating_overall": 64
@@ -14861,7 +14805,7 @@
     "fo_won": 6,
     "fo_lost": 9,
     "fo_pct": 40.0,
-    "rating_offense": 68,
+    "rating_offense": 67,
     "rating_defense": 56,
     "rating_speed": 71,
     "rating_chemistry": 65,
@@ -14889,9 +14833,9 @@
     "fo_won": 71,
     "fo_lost": 91,
     "fo_pct": 43.83,
-    "rating_offense": 67,
+    "rating_offense": 66,
     "rating_defense": 68,
-    "rating_speed": 69,
+    "rating_speed": 68,
     "rating_chemistry": 67,
     "rating_overall": 68
   },
@@ -14917,11 +14861,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 67,
+    "rating_offense": 66,
     "rating_defense": 74,
-    "rating_speed": 70,
-    "rating_chemistry": 74,
-    "rating_overall": 71
+    "rating_speed": 69,
+    "rating_chemistry": 73,
+    "rating_overall": 70
   },
   {
     "league": "DEL",
@@ -14977,35 +14921,7 @@
     "rating_defense": 64,
     "rating_speed": 71,
     "rating_chemistry": 72,
-    "rating_overall": 67
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "ING",
-    "name_real": "Edwin Tropmann",
-    "number": 55,
-    "nation": "GER",
-    "position_raw": "V",
-    "position_group": "D",
-    "gp": 19,
-    "goals": 4,
-    "assists": 0,
-    "points": 4,
-    "points_per_game": 0.21052631578947367,
-    "plus_minus": -2,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 4,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 69,
-    "rating_defense": 69,
-    "rating_speed": 70,
-    "rating_chemistry": 73,
-    "rating_overall": 69
+    "rating_overall": 66
   },
   {
     "league": "DEL",
@@ -15031,7 +14947,7 @@
     "fo_pct": 54.55,
     "rating_offense": 69,
     "rating_defense": 64,
-    "rating_speed": 69,
+    "rating_speed": 68,
     "rating_chemistry": 64,
     "rating_overall": 67
   },
@@ -15059,8 +14975,8 @@
     "fo_pct": 0.0,
     "rating_offense": 68,
     "rating_defense": 73,
-    "rating_speed": 69,
-    "rating_chemistry": 73,
+    "rating_speed": 68,
+    "rating_chemistry": 72,
     "rating_overall": 70
   },
   {
@@ -15087,9 +15003,9 @@
     "fo_pct": 57.14,
     "rating_offense": 67,
     "rating_defense": 78,
-    "rating_speed": 69,
+    "rating_speed": 68,
     "rating_chemistry": 76,
-    "rating_overall": 71
+    "rating_overall": 70
   },
   {
     "league": "DEL",
@@ -15169,10 +15085,10 @@
     "fo_won": 121,
     "fo_lost": 70,
     "fo_pct": 63.35,
-    "rating_offense": 66,
+    "rating_offense": 65,
     "rating_defense": 69,
-    "rating_speed": 68,
-    "rating_chemistry": 69,
+    "rating_speed": 67,
+    "rating_chemistry": 68,
     "rating_overall": 67
   },
   {
@@ -15201,7 +15117,7 @@
     "rating_defense": 72,
     "rating_speed": 70,
     "rating_chemistry": 74,
-    "rating_overall": 69
+    "rating_overall": 68
   },
   {
     "league": "DEL",
@@ -15229,7 +15145,7 @@
     "rating_defense": 73,
     "rating_speed": 70,
     "rating_chemistry": 76,
-    "rating_overall": 70
+    "rating_overall": 69
   },
   {
     "league": "DEL",
@@ -15255,7 +15171,7 @@
     "fo_pct": 0.0,
     "rating_offense": 65,
     "rating_defense": 77,
-    "rating_speed": 68,
+    "rating_speed": 67,
     "rating_chemistry": 73,
     "rating_overall": 71
   },
@@ -15282,8 +15198,8 @@
     "fo_lost": 0,
     "fo_pct": 0.0,
     "rating_offense": 63,
-    "rating_defense": 68,
-    "rating_speed": 69,
+    "rating_defense": 69,
+    "rating_speed": 68,
     "rating_chemistry": 69,
     "rating_overall": 66
   },
@@ -15311,7 +15227,7 @@
     "fo_pct": 0.0,
     "rating_offense": 63,
     "rating_defense": 69,
-    "rating_speed": 70,
+    "rating_speed": 69,
     "rating_chemistry": 73,
     "rating_overall": 67
   },
@@ -15396,36 +15312,8 @@
     "rating_offense": 69,
     "rating_defense": 75,
     "rating_speed": 65,
-    "rating_chemistry": 70,
+    "rating_chemistry": 69,
     "rating_overall": 70
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "FRA",
-    "name_real": "Timo Kose",
-    "number": 22,
-    "nation": "GER",
-    "position_raw": "S",
-    "position_group": "F",
-    "gp": 16,
-    "goals": 3,
-    "assists": 0,
-    "points": 3,
-    "points_per_game": 0.1875,
-    "plus_minus": -6,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 8,
-    "fo_won": 0,
-    "fo_lost": 1,
-    "fo_pct": 0.0,
-    "rating_offense": 68,
-    "rating_defense": 64,
-    "rating_speed": 68,
-    "rating_chemistry": 67,
-    "rating_overall": 67
   },
   {
     "league": "DEL",
@@ -15450,7 +15338,7 @@
     "fo_lost": 33,
     "fo_pct": 42.11,
     "rating_offense": 68,
-    "rating_defense": 66,
+    "rating_defense": 67,
     "rating_speed": 69,
     "rating_chemistry": 70,
     "rating_overall": 68
@@ -15479,9 +15367,9 @@
     "fo_pct": 0.0,
     "rating_offense": 68,
     "rating_defense": 79,
-    "rating_speed": 70,
+    "rating_speed": 69,
     "rating_chemistry": 80,
-    "rating_overall": 72
+    "rating_overall": 71
   },
   {
     "league": "DEL",
@@ -15505,11 +15393,11 @@
     "fo_won": 35,
     "fo_lost": 41,
     "fo_pct": 46.05,
-    "rating_offense": 69,
+    "rating_offense": 68,
     "rating_defense": 64,
-    "rating_speed": 67,
+    "rating_speed": 66,
     "rating_chemistry": 61,
-    "rating_overall": 67
+    "rating_overall": 66
   },
   {
     "league": "DEL",
@@ -15533,11 +15421,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 68,
+    "rating_offense": 67,
     "rating_defense": 73,
-    "rating_speed": 66,
+    "rating_speed": 65,
     "rating_chemistry": 69,
-    "rating_overall": 70
+    "rating_overall": 69
   },
   {
     "league": "DEL",
@@ -15563,8 +15451,8 @@
     "fo_pct": 0.0,
     "rating_offense": 66,
     "rating_defense": 68,
-    "rating_speed": 67,
-    "rating_chemistry": 68,
+    "rating_speed": 66,
+    "rating_chemistry": 67,
     "rating_overall": 67
   },
   {
@@ -15591,7 +15479,7 @@
     "fo_pct": 43.91,
     "rating_offense": 66,
     "rating_defense": 64,
-    "rating_speed": 70,
+    "rating_speed": 69,
     "rating_chemistry": 71,
     "rating_overall": 66
   },
@@ -15618,8 +15506,8 @@
     "fo_lost": 11,
     "fo_pct": 35.29,
     "rating_offense": 66,
-    "rating_defense": 69,
-    "rating_speed": 70,
+    "rating_defense": 70,
+    "rating_speed": 69,
     "rating_chemistry": 72,
     "rating_overall": 68
   },
@@ -15645,9 +15533,9 @@
     "fo_won": 23,
     "fo_lost": 30,
     "fo_pct": 43.4,
-    "rating_offense": 68,
+    "rating_offense": 67,
     "rating_defense": 69,
-    "rating_speed": 69,
+    "rating_speed": 68,
     "rating_chemistry": 62,
     "rating_overall": 68
   },
@@ -15673,9 +15561,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 66,
+    "rating_offense": 65,
     "rating_defense": 71,
-    "rating_speed": 66,
+    "rating_speed": 65,
     "rating_chemistry": 65,
     "rating_overall": 67
   },
@@ -15703,9 +15591,9 @@
     "fo_pct": 48.96,
     "rating_offense": 65,
     "rating_defense": 70,
-    "rating_speed": 66,
-    "rating_chemistry": 67,
-    "rating_overall": 67
+    "rating_speed": 65,
+    "rating_chemistry": 66,
+    "rating_overall": 66
   },
   {
     "league": "DEL",
@@ -15729,67 +15617,11 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 65,
+    "rating_offense": 64,
     "rating_defense": 73,
-    "rating_speed": 66,
-    "rating_chemistry": 71,
-    "rating_overall": 68
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "BHV",
-    "name_real": "Justin Büsing",
-    "number": 76,
-    "nation": "GER",
-    "position_raw": "S",
-    "position_group": "F",
-    "gp": 13,
-    "goals": 1,
-    "assists": 2,
-    "points": 3,
-    "points_per_game": 0.23076923076923078,
-    "plus_minus": -2,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 2,
-    "fo_lost": 0,
-    "fo_pct": 100.0,
-    "rating_offense": 65,
-    "rating_defense": 72,
-    "rating_speed": 67,
+    "rating_speed": 65,
     "rating_chemistry": 70,
     "rating_overall": 67
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "FRA",
-    "name_real": "Fabio Kose",
-    "number": 20,
-    "nation": "GER",
-    "position_raw": "V",
-    "position_group": "D",
-    "gp": 18,
-    "goals": 1,
-    "assists": 2,
-    "points": 3,
-    "points_per_game": 0.16666666666666666,
-    "plus_minus": 2,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 12,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 64,
-    "rating_defense": 71,
-    "rating_speed": 69,
-    "rating_chemistry": 74,
-    "rating_overall": 68
   },
   {
     "league": "DEL",
@@ -15814,7 +15646,7 @@
     "fo_lost": 84,
     "fo_pct": 43.62,
     "rating_offense": 64,
-    "rating_defense": 69,
+    "rating_defense": 70,
     "rating_speed": 69,
     "rating_chemistry": 71,
     "rating_overall": 67
@@ -15841,9 +15673,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 64,
-    "rating_defense": 60,
-    "rating_speed": 70,
+    "rating_offense": 63,
+    "rating_defense": 61,
+    "rating_speed": 69,
     "rating_chemistry": 68,
     "rating_overall": 63
   },
@@ -15869,9 +15701,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 64,
+    "rating_offense": 63,
     "rating_defense": 71,
-    "rating_speed": 70,
+    "rating_speed": 69,
     "rating_chemistry": 74,
     "rating_overall": 68
   },
@@ -15899,7 +15731,7 @@
     "fo_pct": 41.1,
     "rating_offense": 64,
     "rating_defense": 60,
-    "rating_speed": 70,
+    "rating_speed": 69,
     "rating_chemistry": 65,
     "rating_overall": 64
   },
@@ -15927,9 +15759,9 @@
     "fo_pct": 0.0,
     "rating_offense": 64,
     "rating_defense": 71,
-    "rating_speed": 70,
+    "rating_speed": 69,
     "rating_chemistry": 74,
-    "rating_overall": 68
+    "rating_overall": 67
   },
   {
     "league": "DEL",
@@ -15955,9 +15787,9 @@
     "fo_pct": 0.0,
     "rating_offense": 64,
     "rating_defense": 71,
-    "rating_speed": 70,
+    "rating_speed": 69,
     "rating_chemistry": 74,
-    "rating_overall": 68
+    "rating_overall": 67
   },
   {
     "league": "DEL",
@@ -15981,11 +15813,11 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 64,
+    "rating_offense": 63,
     "rating_defense": 56,
-    "rating_speed": 66,
-    "rating_chemistry": 61,
-    "rating_overall": 61
+    "rating_speed": 65,
+    "rating_chemistry": 60,
+    "rating_overall": 60
   },
   {
     "league": "DEL",
@@ -16011,7 +15843,7 @@
     "fo_pct": 0.0,
     "rating_offense": 63,
     "rating_defense": 65,
-    "rating_speed": 67,
+    "rating_speed": 66,
     "rating_chemistry": 67,
     "rating_overall": 65
   },
@@ -16066,7 +15898,7 @@
     "fo_lost": 3,
     "fo_pct": 0.0,
     "rating_offense": 62,
-    "rating_defense": 53,
+    "rating_defense": 54,
     "rating_speed": 69,
     "rating_chemistry": 64,
     "rating_overall": 60
@@ -16093,9 +15925,9 @@
     "fo_won": 8,
     "fo_lost": 11,
     "fo_pct": 42.11,
-    "rating_offense": 66,
+    "rating_offense": 65,
     "rating_defense": 74,
-    "rating_speed": 65,
+    "rating_speed": 64,
     "rating_chemistry": 71,
     "rating_overall": 68
   },
@@ -16123,9 +15955,9 @@
     "fo_pct": 0.0,
     "rating_offense": 65,
     "rating_defense": 70,
-    "rating_speed": 69,
+    "rating_speed": 68,
     "rating_chemistry": 74,
-    "rating_overall": 68
+    "rating_overall": 67
   },
   {
     "league": "DEL",
@@ -16149,9 +15981,9 @@
     "fo_won": 1,
     "fo_lost": 2,
     "fo_pct": 33.33,
-    "rating_offense": 65,
+    "rating_offense": 64,
     "rating_defense": 70,
-    "rating_speed": 63,
+    "rating_speed": 62,
     "rating_chemistry": 64,
     "rating_overall": 66
   },
@@ -16179,9 +16011,9 @@
     "fo_pct": 0.0,
     "rating_offense": 64,
     "rating_defense": 73,
-    "rating_speed": 64,
+    "rating_speed": 63,
     "rating_chemistry": 69,
-    "rating_overall": 67
+    "rating_overall": 66
   },
   {
     "league": "DEL",
@@ -16205,9 +16037,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 64,
+    "rating_offense": 63,
     "rating_defense": 75,
-    "rating_speed": 65,
+    "rating_speed": 64,
     "rating_chemistry": 72,
     "rating_overall": 67
   },
@@ -16233,10 +16065,10 @@
     "fo_won": 24,
     "fo_lost": 33,
     "fo_pct": 42.11,
-    "rating_offense": 64,
+    "rating_offense": 63,
     "rating_defense": 66,
-    "rating_speed": 65,
-    "rating_chemistry": 68,
+    "rating_speed": 64,
+    "rating_chemistry": 67,
     "rating_overall": 65
   },
   {
@@ -16261,39 +16093,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 64,
+    "rating_offense": 63,
     "rating_defense": 64,
-    "rating_speed": 66,
-    "rating_chemistry": 66,
+    "rating_speed": 65,
+    "rating_chemistry": 65,
     "rating_overall": 64
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "STR",
-    "name_real": "Linus Brandl",
-    "number": 73,
-    "nation": "GER",
-    "position_raw": "S",
-    "position_group": "F",
-    "gp": 15,
-    "goals": 1,
-    "assists": 1,
-    "points": 2,
-    "points_per_game": 0.13333333333333333,
-    "plus_minus": 0,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 11,
-    "fo_won": 1,
-    "fo_lost": 1,
-    "fo_pct": 50.0,
-    "rating_offense": 64,
-    "rating_defense": 68,
-    "rating_speed": 66,
-    "rating_chemistry": 70,
-    "rating_overall": 65
   },
   {
     "league": "DEL",
@@ -16317,39 +16121,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 64,
+    "rating_offense": 63,
     "rating_defense": 71,
     "rating_speed": 66,
-    "rating_chemistry": 71,
+    "rating_chemistry": 70,
     "rating_overall": 66
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "MUC",
-    "name_real": "Philipp Krening",
-    "number": 79,
-    "nation": "GER",
-    "position_raw": "S",
-    "position_group": "F",
-    "gp": 17,
-    "goals": 1,
-    "assists": 1,
-    "points": 2,
-    "points_per_game": 0.11764705882352941,
-    "plus_minus": -2,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 2,
-    "fo_won": 0,
-    "fo_lost": 2,
-    "fo_pct": 0.0,
-    "rating_offense": 64,
-    "rating_defense": 71,
-    "rating_speed": 67,
-    "rating_chemistry": 72,
-    "rating_overall": 67
   },
   {
     "league": "DEL",
@@ -16373,7 +16149,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 63,
+    "rating_offense": 62,
     "rating_defense": 64,
     "rating_speed": 68,
     "rating_chemistry": 70,
@@ -16401,9 +16177,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 63,
+    "rating_offense": 62,
     "rating_defense": 69,
-    "rating_speed": 69,
+    "rating_speed": 68,
     "rating_chemistry": 73,
     "rating_overall": 67
   },
@@ -16431,8 +16207,8 @@
     "fo_pct": 50.0,
     "rating_offense": 63,
     "rating_defense": 63,
-    "rating_speed": 69,
-    "rating_chemistry": 66,
+    "rating_speed": 68,
+    "rating_chemistry": 67,
     "rating_overall": 64
   },
   {
@@ -16459,7 +16235,7 @@
     "fo_pct": 34.48,
     "rating_offense": 63,
     "rating_defense": 65,
-    "rating_speed": 69,
+    "rating_speed": 68,
     "rating_chemistry": 69,
     "rating_overall": 65
   },
@@ -16487,9 +16263,9 @@
     "fo_pct": 0.0,
     "rating_offense": 65,
     "rating_defense": 74,
-    "rating_speed": 63,
-    "rating_chemistry": 67,
-    "rating_overall": 69
+    "rating_speed": 62,
+    "rating_chemistry": 66,
+    "rating_overall": 68
   },
   {
     "league": "DEL",
@@ -16515,9 +16291,9 @@
     "fo_pct": 40.0,
     "rating_offense": 63,
     "rating_defense": 72,
-    "rating_speed": 63,
-    "rating_chemistry": 66,
-    "rating_overall": 66
+    "rating_speed": 62,
+    "rating_chemistry": 65,
+    "rating_overall": 65
   },
   {
     "league": "DEL",
@@ -16541,10 +16317,10 @@
     "fo_won": 10,
     "fo_lost": 19,
     "fo_pct": 34.48,
-    "rating_offense": 63,
-    "rating_defense": 68,
-    "rating_speed": 63,
-    "rating_chemistry": 65,
+    "rating_offense": 62,
+    "rating_defense": 67,
+    "rating_speed": 62,
+    "rating_chemistry": 64,
     "rating_overall": 64
   },
   {
@@ -16571,7 +16347,7 @@
     "fo_pct": 100.0,
     "rating_offense": 62,
     "rating_defense": 70,
-    "rating_speed": 64,
+    "rating_speed": 63,
     "rating_chemistry": 66,
     "rating_overall": 65
   },
@@ -16599,7 +16375,7 @@
     "fo_pct": 0.0,
     "rating_offense": 62,
     "rating_defense": 70,
-    "rating_speed": 64,
+    "rating_speed": 63,
     "rating_chemistry": 68,
     "rating_overall": 66
   },
@@ -16625,9 +16401,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 61,
     "rating_defense": 74,
-    "rating_speed": 66,
+    "rating_speed": 65,
     "rating_chemistry": 73,
     "rating_overall": 68
   },
@@ -16653,7 +16429,7 @@
     "fo_won": 30,
     "fo_lost": 30,
     "fo_pct": 50.0,
-    "rating_offense": 62,
+    "rating_offense": 61,
     "rating_defense": 74,
     "rating_speed": 66,
     "rating_chemistry": 73,
@@ -16738,36 +16514,8 @@
     "fo_lost": 0,
     "fo_pct": 0.0,
     "rating_offense": 61,
-    "rating_defense": 68,
-    "rating_speed": 67,
-    "rating_chemistry": 72,
-    "rating_overall": 66
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "BER",
-    "name_real": "Norwin Panocha",
-    "number": 75,
-    "nation": "GER",
-    "position_raw": "V",
-    "position_group": "D",
-    "gp": 18,
-    "goals": 0,
-    "assists": 2,
-    "points": 2,
-    "points_per_game": 0.1111111111111111,
-    "plus_minus": -1,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 8,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 61,
     "rating_defense": 69,
-    "rating_speed": 68,
+    "rating_speed": 67,
     "rating_chemistry": 72,
     "rating_overall": 66
   },
@@ -16823,7 +16571,7 @@
     "fo_pct": 0.0,
     "rating_offense": 61,
     "rating_defense": 49,
-    "rating_speed": 69,
+    "rating_speed": 68,
     "rating_chemistry": 62,
     "rating_overall": 57
   },
@@ -16851,9 +16599,9 @@
     "fo_pct": 0.0,
     "rating_offense": 61,
     "rating_defense": 81,
-    "rating_speed": 69,
+    "rating_speed": 68,
     "rating_chemistry": 80,
-    "rating_overall": 72
+    "rating_overall": 71
   },
   {
     "league": "DEL",
@@ -16879,7 +16627,7 @@
     "fo_pct": 0.0,
     "rating_offense": 61,
     "rating_defense": 64,
-    "rating_speed": 69,
+    "rating_speed": 68,
     "rating_chemistry": 71,
     "rating_overall": 64
   },
@@ -16905,39 +16653,11 @@
     "fo_won": 17,
     "fo_lost": 26,
     "fo_pct": 39.53,
-    "rating_offense": 64,
-    "rating_defense": 67,
-    "rating_speed": 60,
-    "rating_chemistry": 61,
-    "rating_overall": 64
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "BHV",
-    "name_real": "Rayan Bettahar",
-    "number": 15,
-    "nation": "GER",
-    "position_raw": "V",
-    "position_group": "D",
-    "gp": 7,
-    "goals": 1,
-    "assists": 0,
-    "points": 1,
-    "points_per_game": 0.14285714285714285,
-    "plus_minus": 8,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 4,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
     "rating_offense": 63,
-    "rating_defense": 80,
-    "rating_speed": 61,
-    "rating_chemistry": 71,
-    "rating_overall": 70
+    "rating_defense": 67,
+    "rating_speed": 59,
+    "rating_chemistry": 60,
+    "rating_overall": 63
   },
   {
     "league": "DEL",
@@ -16961,10 +16681,10 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 63,
+    "rating_offense": 62,
     "rating_defense": 64,
-    "rating_speed": 62,
-    "rating_chemistry": 64,
+    "rating_speed": 61,
+    "rating_chemistry": 63,
     "rating_overall": 63
   },
   {
@@ -16989,11 +16709,11 @@
     "fo_won": 15,
     "fo_lost": 16,
     "fo_pct": 48.39,
-    "rating_offense": 63,
+    "rating_offense": 62,
     "rating_defense": 66,
-    "rating_speed": 62,
-    "rating_chemistry": 64,
-    "rating_overall": 64
+    "rating_speed": 61,
+    "rating_chemistry": 63,
+    "rating_overall": 63
   },
   {
     "league": "DEL",
@@ -17019,9 +16739,9 @@
     "fo_pct": 0.0,
     "rating_offense": 62,
     "rating_defense": 73,
-    "rating_speed": 65,
+    "rating_speed": 64,
     "rating_chemistry": 72,
-    "rating_overall": 68
+    "rating_overall": 67
   },
   {
     "league": "DEL",
@@ -17047,9 +16767,9 @@
     "fo_pct": 0.0,
     "rating_offense": 62,
     "rating_defense": 71,
-    "rating_speed": 65,
+    "rating_speed": 64,
     "rating_chemistry": 72,
-    "rating_overall": 67
+    "rating_overall": 66
   },
   {
     "league": "DEL",
@@ -17073,9 +16793,9 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 63,
+    "rating_offense": 62,
     "rating_defense": 65,
-    "rating_speed": 65,
+    "rating_speed": 64,
     "rating_chemistry": 67,
     "rating_overall": 64
   },
@@ -17101,11 +16821,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 61,
     "rating_defense": 64,
     "rating_speed": 66,
-    "rating_chemistry": 69,
-    "rating_overall": 64
+    "rating_chemistry": 68,
+    "rating_overall": 63
   },
   {
     "league": "DEL",
@@ -17129,8 +16849,8 @@
     "fo_won": 1,
     "fo_lost": 1,
     "fo_pct": 50.0,
-    "rating_offense": 63,
-    "rating_defense": 66,
+    "rating_offense": 62,
+    "rating_defense": 67,
     "rating_speed": 67,
     "rating_chemistry": 69,
     "rating_overall": 65
@@ -17159,8 +16879,8 @@
     "fo_pct": 0.0,
     "rating_offense": 63,
     "rating_defense": 72,
-    "rating_speed": 63,
-    "rating_chemistry": 62,
+    "rating_speed": 62,
+    "rating_chemistry": 61,
     "rating_overall": 66
   },
   {
@@ -17187,8 +16907,8 @@
     "fo_pct": 100.0,
     "rating_offense": 61,
     "rating_defense": 69,
-    "rating_speed": 61,
-    "rating_chemistry": 65,
+    "rating_speed": 60,
+    "rating_chemistry": 64,
     "rating_overall": 63
   },
   {
@@ -17215,7 +16935,7 @@
     "fo_pct": 0.0,
     "rating_offense": 61,
     "rating_defense": 72,
-    "rating_speed": 61,
+    "rating_speed": 60,
     "rating_chemistry": 65,
     "rating_overall": 64
   },
@@ -17243,8 +16963,8 @@
     "fo_pct": 0.0,
     "rating_offense": 61,
     "rating_defense": 67,
-    "rating_speed": 61,
-    "rating_chemistry": 63,
+    "rating_speed": 60,
+    "rating_chemistry": 62,
     "rating_overall": 63
   },
   {
@@ -17271,37 +16991,9 @@
     "fo_pct": 66.67,
     "rating_offense": 61,
     "rating_defense": 60,
-    "rating_speed": 62,
-    "rating_chemistry": 61,
-    "rating_overall": 61
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "FRA",
-    "name_real": "Kevin Bicker",
-    "number": 83,
-    "nation": "GER",
-    "position_raw": "S",
-    "position_group": "F",
-    "gp": 10,
-    "goals": 0,
-    "assists": 1,
-    "points": 1,
-    "points_per_game": 0.1,
-    "plus_minus": 0,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 2,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 61,
-    "rating_defense": 72,
-    "rating_speed": 62,
-    "rating_chemistry": 68,
-    "rating_overall": 65
+    "rating_speed": 61,
+    "rating_chemistry": 60,
+    "rating_overall": 60
   },
   {
     "league": "DEL",
@@ -17327,8 +17019,8 @@
     "fo_pct": 0.0,
     "rating_offense": 61,
     "rating_defense": 62,
-    "rating_speed": 62,
-    "rating_chemistry": 63,
+    "rating_speed": 61,
+    "rating_chemistry": 62,
     "rating_overall": 61
   },
   {
@@ -17355,9 +17047,9 @@
     "fo_pct": 25.0,
     "rating_offense": 61,
     "rating_defense": 76,
-    "rating_speed": 62,
-    "rating_chemistry": 71,
-    "rating_overall": 66
+    "rating_speed": 61,
+    "rating_chemistry": 70,
+    "rating_overall": 65
   },
   {
     "league": "DEL",
@@ -17381,39 +17073,11 @@
     "fo_won": 1,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 61,
-    "rating_defense": 69,
-    "rating_speed": 63,
-    "rating_chemistry": 68,
-    "rating_overall": 65
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "KEC",
-    "name_real": "Kevin Niedenz",
-    "number": 46,
-    "nation": "GER",
-    "position_raw": "S",
-    "position_group": "F",
-    "gp": 12,
-    "goals": 0,
-    "assists": 1,
-    "points": 1,
-    "points_per_game": 0.08333333333333333,
-    "plus_minus": -3,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 2,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 61,
+    "rating_offense": 60,
     "rating_defense": 70,
-    "rating_speed": 63,
-    "rating_chemistry": 68,
-    "rating_overall": 64
+    "rating_speed": 62,
+    "rating_chemistry": 67,
+    "rating_overall": 65
   },
   {
     "league": "DEL",
@@ -17437,11 +17101,11 @@
     "fo_won": 22,
     "fo_lost": 29,
     "fo_pct": 43.14,
-    "rating_offense": 61,
+    "rating_offense": 60,
     "rating_defense": 61,
-    "rating_speed": 64,
+    "rating_speed": 63,
     "rating_chemistry": 63,
-    "rating_overall": 62
+    "rating_overall": 61
   },
   {
     "league": "DEL",
@@ -17465,10 +17129,10 @@
     "fo_won": 26,
     "fo_lost": 47,
     "fo_pct": 35.62,
-    "rating_offense": 61,
+    "rating_offense": 60,
     "rating_defense": 62,
-    "rating_speed": 64,
-    "rating_chemistry": 63,
+    "rating_speed": 63,
+    "rating_chemistry": 62,
     "rating_overall": 62
   },
   {
@@ -17493,9 +17157,9 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 61,
+    "rating_offense": 60,
     "rating_defense": 68,
-    "rating_speed": 65,
+    "rating_speed": 64,
     "rating_chemistry": 70,
     "rating_overall": 65
   },
@@ -17521,39 +17185,11 @@
     "fo_won": 0,
     "fo_lost": 3,
     "fo_pct": 0.0,
-    "rating_offense": 61,
+    "rating_offense": 60,
     "rating_defense": 69,
-    "rating_speed": 65,
+    "rating_speed": 64,
     "rating_chemistry": 69,
     "rating_overall": 64
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "MUC",
-    "name_real": "Phillip Sinn",
-    "number": 43,
-    "nation": "GER",
-    "position_raw": "V",
-    "position_group": "D",
-    "gp": 16,
-    "goals": 0,
-    "assists": 1,
-    "points": 1,
-    "points_per_game": 0.0625,
-    "plus_minus": 2,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 8,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 60,
-    "rating_defense": 72,
-    "rating_speed": 66,
-    "rating_chemistry": 73,
-    "rating_overall": 67
   },
   {
     "league": "DEL",
@@ -17578,8 +17214,8 @@
     "fo_lost": 1,
     "fo_pct": 0.0,
     "rating_offense": 60,
-    "rating_defense": 58,
-    "rating_speed": 68,
+    "rating_defense": 59,
+    "rating_speed": 67,
     "rating_chemistry": 67,
     "rating_overall": 61
   },
@@ -17607,7 +17243,7 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 68,
+    "rating_speed": 67,
     "rating_chemistry": 77,
     "rating_overall": 68
   },
@@ -17634,38 +17270,10 @@
     "fo_lost": 1,
     "fo_pct": 0.0,
     "rating_offense": 60,
-    "rating_defense": 63,
-    "rating_speed": 68,
+    "rating_defense": 64,
+    "rating_speed": 67,
     "rating_chemistry": 70,
     "rating_overall": 63
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "BER",
-    "name_real": "Eric Hördler",
-    "number": 77,
-    "nation": "GER",
-    "position_raw": "S",
-    "position_group": "F",
-    "gp": 19,
-    "goals": 0,
-    "assists": 1,
-    "points": 1,
-    "points_per_game": 0.05263157894736842,
-    "plus_minus": -2,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 6,
-    "fo_won": 1,
-    "fo_lost": 1,
-    "fo_pct": 50.0,
-    "rating_offense": 61,
-    "rating_defense": 69,
-    "rating_speed": 68,
-    "rating_chemistry": 73,
-    "rating_overall": 65
   },
   {
     "league": "DEL",
@@ -17689,39 +17297,11 @@
     "fo_won": 0,
     "fo_lost": 2,
     "fo_pct": 0.0,
-    "rating_offense": 61,
+    "rating_offense": 60,
     "rating_defense": 57,
-    "rating_speed": 68,
+    "rating_speed": 67,
     "rating_chemistry": 65,
     "rating_overall": 61
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "NIT",
-    "name_real": "Maximilian Merkl",
-    "number": 18,
-    "nation": "GER",
-    "position_raw": "V",
-    "position_group": "D",
-    "gp": 0,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": 0,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 59,
-    "rating_defense": 72,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 64
   },
   {
     "league": "DEL",
@@ -17747,8 +17327,8 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 72,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
+    "rating_speed": 52,
+    "rating_chemistry": 61,
     "rating_overall": 64
   },
   {
@@ -17775,9 +17355,9 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 63
+    "rating_speed": 52,
+    "rating_chemistry": 61,
+    "rating_overall": 62
   },
   {
     "league": "DEL",
@@ -17803,65 +17383,9 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 72,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
+    "rating_speed": 52,
+    "rating_chemistry": 61,
     "rating_overall": 64
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "WOB",
-    "name_real": "Robin Veber",
-    "number": 22,
-    "nation": "GER",
-    "position_raw": "S",
-    "position_group": "F",
-    "gp": 0,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": 0,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 60,
-    "rating_defense": 74,
-    "rating_speed": 53,
-    "rating_chemistry": 62,
-    "rating_overall": 63
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "STR",
-    "name_real": "Tobias Schwarz",
-    "number": 25,
-    "nation": "GER",
-    "position_raw": "S",
-    "position_group": "F",
-    "gp": 1,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": 1,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 60,
-    "rating_defense": 75,
-    "rating_speed": 54,
-    "rating_chemistry": 63,
-    "rating_overall": 63
   },
   {
     "league": "DEL",
@@ -17887,9 +17411,9 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 54,
-    "rating_chemistry": 63,
-    "rating_overall": 63
+    "rating_speed": 53,
+    "rating_chemistry": 62,
+    "rating_overall": 62
   },
   {
     "league": "DEL",
@@ -17915,37 +17439,9 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 54,
-    "rating_chemistry": 63,
-    "rating_overall": 63
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "ING",
-    "name_real": "Nicolas Schindler",
-    "number": 44,
-    "nation": "GER",
-    "position_raw": "S",
-    "position_group": "F",
-    "gp": 1,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": 0,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 60,
-    "rating_defense": 74,
-    "rating_speed": 54,
-    "rating_chemistry": 63,
-    "rating_overall": 63
+    "rating_speed": 53,
+    "rating_chemistry": 62,
+    "rating_overall": 62
   },
   {
     "league": "DEL",
@@ -17971,8 +17467,8 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 72,
-    "rating_speed": 55,
-    "rating_chemistry": 63,
+    "rating_speed": 53,
+    "rating_chemistry": 62,
     "rating_overall": 64
   },
   {
@@ -17998,10 +17494,10 @@
     "fo_lost": 19,
     "fo_pct": 52.5,
     "rating_offense": 60,
-    "rating_defense": 70,
-    "rating_speed": 55,
+    "rating_defense": 71,
+    "rating_speed": 53,
     "rating_chemistry": 60,
-    "rating_overall": 62
+    "rating_overall": 61
   },
   {
     "league": "DEL",
@@ -18027,9 +17523,9 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 71,
-    "rating_speed": 55,
-    "rating_chemistry": 63,
-    "rating_overall": 64
+    "rating_speed": 53,
+    "rating_chemistry": 62,
+    "rating_overall": 63
   },
   {
     "league": "DEL",
@@ -18055,8 +17551,8 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 70,
-    "rating_speed": 55,
-    "rating_chemistry": 62,
+    "rating_speed": 53,
+    "rating_chemistry": 61,
     "rating_overall": 63
   },
   {
@@ -18083,233 +17579,9 @@
     "fo_pct": 64.71,
     "rating_offense": 60,
     "rating_defense": 74,
-    "rating_speed": 55,
-    "rating_chemistry": 63,
-    "rating_overall": 63
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "IEC",
-    "name_real": "Lennard Nieleck",
-    "number": 24,
-    "nation": "GER",
-    "position_raw": "S",
-    "position_group": "F",
-    "gp": 2,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": -1,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 5,
-    "fo_lost": 1,
-    "fo_pct": 83.33,
-    "rating_offense": 60,
-    "rating_defense": 73,
-    "rating_speed": 55,
-    "rating_chemistry": 63,
-    "rating_overall": 63
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "FRA",
-    "name_real": "Sebastian Cimmerman",
-    "number": 61,
-    "nation": "GER",
-    "position_raw": "S",
-    "position_group": "F",
-    "gp": 2,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": 0,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 60,
-    "rating_defense": 74,
-    "rating_speed": 55,
-    "rating_chemistry": 63,
-    "rating_overall": 63
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "STR",
-    "name_real": "Simon Seidl",
-    "number": 39,
-    "nation": "GER",
-    "position_raw": "S",
-    "position_group": "F",
-    "gp": 3,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": 0,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 60,
-    "rating_defense": 74,
-    "rating_speed": 56,
-    "rating_chemistry": 64,
-    "rating_overall": 63
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "MAN",
-    "name_real": "Colin Schlenker",
-    "number": 8,
-    "nation": "GER",
-    "position_raw": "V",
-    "position_group": "D",
-    "gp": 3,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": -2,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 59,
-    "rating_defense": 70,
-    "rating_speed": 56,
-    "rating_chemistry": 63,
-    "rating_overall": 63
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "MAN",
-    "name_real": "Nick Mähler",
-    "number": 66,
-    "nation": "GER",
-    "position_raw": "V",
-    "position_group": "D",
-    "gp": 3,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": 1,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 59,
-    "rating_defense": 74,
-    "rating_speed": 56,
-    "rating_chemistry": 65,
-    "rating_overall": 65
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "KEC",
-    "name_real": "Luca Münzenberger",
-    "number": 75,
-    "nation": "GER",
-    "position_raw": "V",
-    "position_group": "D",
-    "gp": 3,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": 0,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 59,
-    "rating_defense": 72,
-    "rating_speed": 56,
-    "rating_chemistry": 64,
-    "rating_overall": 64
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "FRA",
-    "name_real": "Philipp Bidoul",
-    "number": 24,
-    "nation": "GER",
-    "position_raw": "V",
-    "position_group": "D",
-    "gp": 4,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": 0,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 59,
-    "rating_defense": 72,
-    "rating_speed": 56,
-    "rating_chemistry": 65,
-    "rating_overall": 65
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "AEV",
-    "name_real": "Luca Tosto",
-    "number": 77,
-    "nation": "GER",
-    "position_raw": "S",
-    "position_group": "F",
-    "gp": 4,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": -1,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 60,
-    "rating_defense": 73,
-    "rating_speed": 56,
-    "rating_chemistry": 64,
-    "rating_overall": 63
+    "rating_speed": 53,
+    "rating_chemistry": 62,
+    "rating_overall": 62
   },
   {
     "league": "DEL",
@@ -18335,8 +17607,8 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 73,
-    "rating_speed": 57,
-    "rating_chemistry": 65,
+    "rating_speed": 56,
+    "rating_chemistry": 64,
     "rating_overall": 63
   },
   {
@@ -18363,37 +17635,9 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 70,
-    "rating_speed": 57,
-    "rating_chemistry": 64,
-    "rating_overall": 64
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "BER",
-    "name_real": "Moritz Kretzschmar",
-    "number": 83,
-    "nation": "GER",
-    "position_raw": "V",
-    "position_group": "D",
-    "gp": 6,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": -1,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 59,
-    "rating_defense": 71,
-    "rating_speed": 58,
-    "rating_chemistry": 66,
-    "rating_overall": 64
+    "rating_speed": 56,
+    "rating_chemistry": 63,
+    "rating_overall": 63
   },
   {
     "league": "DEL",
@@ -18419,93 +17663,9 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 70,
-    "rating_speed": 58,
-    "rating_chemistry": 65,
-    "rating_overall": 64
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "DRE",
-    "name_real": "Felix Krüger",
-    "number": 56,
-    "nation": "GER",
-    "position_raw": "V",
-    "position_group": "D",
-    "gp": 6,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": -1,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 59,
-    "rating_defense": 71,
-    "rating_speed": 58,
-    "rating_chemistry": 66,
-    "rating_overall": 64
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "SWW",
-    "name_real": "Niclas Hempel",
-    "number": 61,
-    "nation": "GER",
-    "position_raw": "V",
-    "position_group": "D",
-    "gp": 6,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": 0,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 59,
-    "rating_defense": 72,
-    "rating_speed": 58,
-    "rating_chemistry": 66,
-    "rating_overall": 65
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "AEV",
-    "name_real": "Sebastian Zwickl",
-    "number": 83,
-    "nation": "GER",
-    "position_raw": "S",
-    "position_group": "F",
-    "gp": 6,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": 0,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 60,
-    "rating_defense": 74,
-    "rating_speed": 58,
-    "rating_chemistry": 66,
-    "rating_overall": 64
+    "rating_speed": 56,
+    "rating_chemistry": 64,
+    "rating_overall": 63
   },
   {
     "league": "DEL",
@@ -18531,9 +17691,9 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 70,
-    "rating_speed": 58,
-    "rating_chemistry": 65,
-    "rating_overall": 64
+    "rating_speed": 56,
+    "rating_chemistry": 64,
+    "rating_overall": 63
   },
   {
     "league": "DEL",
@@ -18558,38 +17718,10 @@
     "fo_lost": 0,
     "fo_pct": 0.0,
     "rating_offense": 59,
-    "rating_defense": 58,
-    "rating_speed": 58,
+    "rating_defense": 59,
+    "rating_speed": 57,
     "rating_chemistry": 58,
-    "rating_overall": 59
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "MUC",
-    "name_real": "Nikolaus Heigl",
-    "number": 15,
-    "nation": "GER",
-    "position_raw": "S",
-    "position_group": "F",
-    "gp": 7,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": 1,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 2,
-    "fo_won": 7,
-    "fo_lost": 1,
-    "fo_pct": 87.5,
-    "rating_offense": 60,
-    "rating_defense": 72,
-    "rating_speed": 58,
-    "rating_chemistry": 67,
-    "rating_overall": 63
+    "rating_overall": 58
   },
   {
     "league": "DEL",
@@ -18615,65 +17747,9 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 72,
-    "rating_speed": 59,
-    "rating_chemistry": 68,
+    "rating_speed": 58,
+    "rating_chemistry": 67,
     "rating_overall": 65
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "MUC",
-    "name_real": "Rio Kaiser",
-    "number": 18,
-    "nation": "GER",
-    "position_raw": "V",
-    "position_group": "D",
-    "gp": 9,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": 1,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 59,
-    "rating_defense": 74,
-    "rating_speed": 60,
-    "rating_chemistry": 69,
-    "rating_overall": 66
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "KEC",
-    "name_real": "Marco Münzenberger",
-    "number": 65,
-    "nation": "GER",
-    "position_raw": "S",
-    "position_group": "F",
-    "gp": 9,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": -3,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 60,
-    "rating_defense": 71,
-    "rating_speed": 60,
-    "rating_chemistry": 66,
-    "rating_overall": 63
   },
   {
     "league": "DEL",
@@ -18699,8 +17775,8 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 64,
-    "rating_speed": 60,
-    "rating_chemistry": 65,
+    "rating_speed": 59,
+    "rating_chemistry": 64,
     "rating_overall": 61
   },
   {
@@ -18727,8 +17803,8 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 71,
-    "rating_speed": 60,
-    "rating_chemistry": 68,
+    "rating_speed": 59,
+    "rating_chemistry": 67,
     "rating_overall": 63
   },
   {
@@ -18755,7 +17831,7 @@
     "fo_pct": 43.75,
     "rating_offense": 60,
     "rating_defense": 71,
-    "rating_speed": 60,
+    "rating_speed": 59,
     "rating_chemistry": 66,
     "rating_overall": 63
   },
@@ -18783,9 +17859,9 @@
     "fo_pct": 0.0,
     "rating_offense": 60,
     "rating_defense": 71,
-    "rating_speed": 61,
-    "rating_chemistry": 68,
-    "rating_overall": 64
+    "rating_speed": 60,
+    "rating_chemistry": 67,
+    "rating_overall": 63
   },
   {
     "league": "DEL",
@@ -18811,7 +17887,7 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 72,
-    "rating_speed": 62,
+    "rating_speed": 61,
     "rating_chemistry": 70,
     "rating_overall": 65
   },
@@ -18839,37 +17915,9 @@
     "fo_pct": 0.0,
     "rating_offense": 59,
     "rating_defense": 70,
-    "rating_speed": 63,
+    "rating_speed": 62,
     "rating_chemistry": 70,
     "rating_overall": 65
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "ING",
-    "name_real": "Luca Hauf",
-    "number": 85,
-    "nation": "GER",
-    "position_raw": "S",
-    "position_group": "F",
-    "gp": 13,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": 0,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 2,
-    "fo_won": 0,
-    "fo_lost": 1,
-    "fo_pct": 0.0,
-    "rating_offense": 60,
-    "rating_defense": 73,
-    "rating_speed": 63,
-    "rating_chemistry": 71,
-    "rating_overall": 64
   },
   {
     "league": "DEL",
@@ -18894,38 +17942,10 @@
     "fo_lost": 4,
     "fo_pct": 42.86,
     "rating_offense": 60,
-    "rating_defense": 68,
+    "rating_defense": 69,
     "rating_speed": 63,
     "rating_chemistry": 67,
     "rating_overall": 63
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "IEC",
-    "name_real": "Lua Niehus",
-    "number": 26,
-    "nation": "GER",
-    "position_raw": "V",
-    "position_group": "D",
-    "gp": 15,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": -5,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 4,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0,
-    "rating_offense": 59,
-    "rating_defense": 64,
-    "rating_speed": 64,
-    "rating_chemistry": 68,
-    "rating_overall": 62
   },
   {
     "league": "DEL",
@@ -18951,7 +17971,7 @@
     "fo_pct": 50.0,
     "rating_offense": 60,
     "rating_defense": 68,
-    "rating_speed": 64,
+    "rating_speed": 63,
     "rating_chemistry": 69,
     "rating_overall": 63
   },
@@ -18979,7 +17999,7 @@
     "fo_pct": 38.6,
     "rating_offense": 60,
     "rating_defense": 70,
-    "rating_speed": 64,
+    "rating_speed": 63,
     "rating_chemistry": 70,
     "rating_overall": 64
   },
@@ -19037,35 +18057,7 @@
     "rating_defense": 70,
     "rating_speed": 66,
     "rating_chemistry": 72,
-    "rating_overall": 65
-  },
-  {
-    "league": "DEL",
-    "type": "skater",
-    "team_code": null,
-    "team_name": "BER",
-    "name_real": "Matej Leden",
-    "number": 33,
-    "nation": "GER",
-    "position_raw": "V",
-    "position_group": "D",
-    "gp": 18,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "points_per_game": 0.0,
-    "plus_minus": -1,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 0,
-    "fo_won": 17,
-    "fo_lost": 27,
-    "fo_pct": 38.64,
-    "rating_offense": 59,
-    "rating_defense": 71,
-    "rating_speed": 66,
-    "rating_chemistry": 74,
-    "rating_overall": 66
+    "rating_overall": 64
   },
   {
     "league": "DEL",
@@ -19118,10 +18110,10 @@
     "fo_lost": 82,
     "fo_pct": 44.59,
     "rating_offense": 60,
-    "rating_defense": 66,
-    "rating_speed": 67,
-    "rating_chemistry": 69,
-    "rating_overall": 64
+    "rating_defense": 67,
+    "rating_speed": 66,
+    "rating_chemistry": 70,
+    "rating_overall": 63
   },
   {
     "league": "DEL2",
@@ -20396,33 +19388,6 @@
     "league": "DEL",
     "type": "goalie",
     "team_code": null,
-    "team_name": "ING",
-    "name_real": "Nico Pertuch",
-    "number": 1,
-    "nation": "GER",
-    "position_raw": "T",
-    "position_group": "G",
-    "gp": 1,
-    "minutes": 34.916666666666664,
-    "wins": 1,
-    "losses": 0,
-    "shutouts": 0,
-    "goals_against": 0,
-    "gaa": 0.0,
-    "shots_against": 13,
-    "saves": 13,
-    "sv_pct": 100.0,
-    "rating_offense": 42,
-    "rating_defense": 93,
-    "rating_speed": 71,
-    "rating_chemistry": 43,
-    "rating_overall": 79,
-    "save_pct": 100.0
-  },
-  {
-    "league": "DEL",
-    "type": "goalie",
-    "team_code": null,
     "team_name": "KEC",
     "name_real": "Janne Juvonen",
     "number": 30,
@@ -21206,33 +20171,6 @@
     "league": "DEL",
     "type": "goalie",
     "team_code": null,
-    "team_name": "MUC",
-    "name_real": "Simon Wolf",
-    "number": 25,
-    "nation": "GER",
-    "position_raw": "T",
-    "position_group": "G",
-    "gp": 4,
-    "minutes": 243.08333333333334,
-    "wins": 1,
-    "losses": 3,
-    "shutouts": 0,
-    "goals_against": 14,
-    "gaa": 3.46,
-    "shots_against": 98,
-    "saves": 84,
-    "sv_pct": 85.71,
-    "rating_offense": 54,
-    "rating_defense": 81,
-    "rating_speed": 72,
-    "rating_chemistry": 51,
-    "rating_overall": 74,
-    "save_pct": 85.71
-  },
-  {
-    "league": "DEL",
-    "type": "goalie",
-    "team_code": null,
     "team_name": "KEC",
     "name_real": "Tobias Ancicka",
     "number": 45,
@@ -21309,32 +20247,5 @@
     "rating_chemistry": 42,
     "rating_overall": 63,
     "save_pct": 66.67
-  },
-  {
-    "league": "DEL",
-    "type": "goalie",
-    "team_code": null,
-    "team_name": "DRE",
-    "name_real": "Julius Hudacek",
-    "number": 35,
-    "nation": "SVK",
-    "position_raw": "T",
-    "position_group": "G",
-    "gp": 0,
-    "minutes": 0.0,
-    "wins": 0,
-    "losses": 0,
-    "shutouts": 0,
-    "goals_against": 0,
-    "gaa": 0.0,
-    "shots_against": 0,
-    "saves": 0,
-    "sv_pct": 0.0,
-    "rating_offense": 40,
-    "rating_defense": 61,
-    "rating_speed": 40,
-    "rating_chemistry": 40,
-    "rating_overall": 51,
-    "save_pct": 0.0
   }
 ]
