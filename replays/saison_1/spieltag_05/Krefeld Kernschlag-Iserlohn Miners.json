@@ -1,0 +1,178 @@
+{
+  "season": 1,
+  "matchday": 5,
+  "game_id": "Krefeld Kernschlag-Iserlohn Miners",
+  "conference": "Nord",
+  "home": {
+    "id": "Krefeld Kernschlag",
+    "name": "Krefeld Kernschlag",
+    "score": 2
+  },
+  "away": {
+    "id": "Iserlohn Miners",
+    "name": "Iserlohn Miners",
+    "score": 3
+  },
+  "events": [
+    {
+      "i": 0,
+      "t": 0,
+      "type": "build_up",
+      "team": "home",
+      "zone": "defensive",
+      "details": {}
+    },
+    {
+      "i": 1,
+      "t": 1,
+      "type": "attack",
+      "team": "home",
+      "zone": "neutral",
+      "details": {}
+    },
+    {
+      "i": 2,
+      "t": 2,
+      "type": "attack",
+      "team": "home",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 3,
+      "t": 3,
+      "type": "goal",
+      "team": "home",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 4,
+      "t": 4,
+      "type": "build_up",
+      "team": "away",
+      "zone": "defensive",
+      "details": {}
+    },
+    {
+      "i": 5,
+      "t": 5,
+      "type": "attack",
+      "team": "away",
+      "zone": "neutral",
+      "details": {}
+    },
+    {
+      "i": 6,
+      "t": 6,
+      "type": "attack",
+      "team": "away",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 7,
+      "t": 7,
+      "type": "goal",
+      "team": "away",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 8,
+      "t": 8,
+      "type": "build_up",
+      "team": "away",
+      "zone": "defensive",
+      "details": {}
+    },
+    {
+      "i": 9,
+      "t": 9,
+      "type": "attack",
+      "team": "away",
+      "zone": "neutral",
+      "details": {}
+    },
+    {
+      "i": 10,
+      "t": 10,
+      "type": "attack",
+      "team": "away",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 11,
+      "t": 11,
+      "type": "goal",
+      "team": "away",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 12,
+      "t": 12,
+      "type": "build_up",
+      "team": "away",
+      "zone": "defensive",
+      "details": {}
+    },
+    {
+      "i": 13,
+      "t": 13,
+      "type": "attack",
+      "team": "away",
+      "zone": "neutral",
+      "details": {}
+    },
+    {
+      "i": 14,
+      "t": 14,
+      "type": "attack",
+      "team": "away",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 15,
+      "t": 15,
+      "type": "goal",
+      "team": "away",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 16,
+      "t": 16,
+      "type": "build_up",
+      "team": "home",
+      "zone": "defensive",
+      "details": {}
+    },
+    {
+      "i": 17,
+      "t": 17,
+      "type": "attack",
+      "team": "home",
+      "zone": "neutral",
+      "details": {}
+    },
+    {
+      "i": 18,
+      "t": 18,
+      "type": "attack",
+      "team": "home",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 19,
+      "t": 19,
+      "type": "goal",
+      "team": "home",
+      "zone": "offensive",
+      "details": {}
+    }
+  ]
+}
