@@ -1,0 +1,34 @@
+{
+  "season": 1,
+  "matchday": 3,
+  "game_id": "München FluxBullen-Mannheim Ventus",
+  "conference": "Süd",
+  "home": {
+    "id": "München FluxBullen",
+    "name": "München FluxBullen",
+    "score": 1
+  },
+  "away": {
+    "id": "Mannheim Ventus",
+    "name": "Mannheim Ventus",
+    "score": 1
+  },
+  "events": [
+    {
+      "i": 0,
+      "t": 36,
+      "type": "goal",
+      "team": "home",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 1,
+      "t": 48,
+      "type": "goal",
+      "team": "away",
+      "zone": "offensive",
+      "details": {}
+    }
+  ]
+}

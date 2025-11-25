@@ -14,6 +14,7 @@ import pandas as pd
 SAVEFILE     = Path("saves/savegame.json")
 SPIELTAG_DIR = Path("spieltage")
 PLAYOFF_DIR  = Path("playoffs")
+REPLAY_DIR   = Path("replays")  # <<< NEU: Ordner für Replay-JSONs
 
 # ------------------------------------------------
 # 2  TEAMS LADEN
@@ -24,7 +25,7 @@ from realeTeams_live import nord_teams, sued_teams  # deine Datei mit Teams/Spie
 # 3  SAVE/LOAD & INIT
 # ------------------------------------------------
 def _ensure_dirs() -> None:
-    for p in (SAVEFILE.parent, SPIELTAG_DIR, PLAYOFF_DIR):
+    for p in (SAVEFILE.parent, SPIELTAG_DIR, PLAYOFF_DIR, REPLAY_DIR):
         p.mkdir(parents=True, exist_ok=True)
 
 def get_next_season_number() -> int:
@@ -128,6 +129,71 @@ def save_spieltag_json(
     if debug is not None:
         payload["debug"] = debug  # komplette Debug-Struktur pro Spieltag
     _save_json(SPIELTAG_DIR / f"saison_{season}", f"spieltag_{gameday:02}.json", payload)
+
+# ------------------------------------------------
+# 4b REPLAY-EXPORT (NEU)
+# ------------------------------------------------
+def save_replay_json(
+    season: int,
+    gameday: int,
+    replay_matches: List[Dict[str, Any]],
+) -> None:
+    """
+    Speichert:
+      - pro Match eine Replay-Datei mit Events
+      - ein replay_matchday.json mit Übersicht
+    """
+    base_folder = REPLAY_DIR / f"saison_{season}" / f"spieltag_{gameday:02}"
+    base_folder.mkdir(parents=True, exist_ok=True)
+
+    matchday_payload: Dict[str, Any] = {
+        "timestamp": datetime.now().isoformat(),
+        "season": season,
+        "matchday": gameday,
+        "games": [],
+    }
+
+    for idx, m in enumerate(replay_matches):
+        home = m["home"]
+        away = m["away"]
+        g_home = m["g_home"]
+        g_away = m["g_away"]
+        conference = m.get("conference")
+
+        # Einfacher Game-ID-Generator für jetzt:
+        game_id = m.get("game_id") or f"{home}-{away}"
+
+        game_payload = {
+            "season": season,
+            "matchday": gameday,
+            "game_id": game_id,
+            "conference": conference,
+            "home": {
+                "id": home,
+                "name": home,
+                "score": g_home,
+            },
+            "away": {
+                "id": away,
+                "name": away,
+                "score": g_away,
+            },
+            "events": m.get("events", []),
+        }
+
+        _save_json(base_folder, f"{game_id}.json", game_payload)
+
+        matchday_payload["games"].append({
+            "game_id": game_id,
+            "featured": False,  # später können wir Topspiele markieren
+            "conference": conference,
+            "home": home,
+            "away": away,
+            "g_home": g_home,
+            "g_away": g_away,
+        })
+
+    _save_json(base_folder, "replay_matchday.json", matchday_payload)
 
 # ------------------------------------------------
 # 5  TERMINAL-AUSGABEN
@@ -469,7 +535,12 @@ def update_player_stats(team: str, goals: int, df: pd.DataFrame, stats: pd.DataF
         stats.loc[stats["Player"] == scorer, "Goals"] += 1
 
 
-def simulate_match(df:pd.DataFrame,home:str,away:str,stats:pd.DataFrame,conf:str)->Tuple[str,Dict[str,Any]]:
+def simulate_match(df:pd.DataFrame,home:str,away:str,stats:pd.DataFrame,conf:str)->Tuple[str,Dict[str,Any],Dict[str,Any]]:
+    """
+    Simuliert EIN Spiel:
+      - gibt Terminal-String + Ergebnis-JSON + Replay-Struct zurück.
+    Replay-Struct enthält Events (aktuell: einfache Goal-Events).
+    """
     r_h=df[df["Team"]==home].iloc[0]
     r_a=df[df["Team"]==away].iloc[0]
     p_home=calc_strength(r_h,True)/(calc_strength(r_h,True)+calc_strength(r_a))
@@ -487,7 +558,54 @@ def simulate_match(df:pd.DataFrame,home:str,away:str,stats:pd.DataFrame,conf:str
     update_player_stats(away,g_away,df,stats)
     res_str=f"{home} {g_home}:{g_away} {away}"
     res_json={"home":home,"away":away,"g_home":g_home,"g_away":g_away,"conference":conf}
-    return res_str,res_json
+
+    # --- NEU: Replay-Events als kleine Angriffs-Timelines -------------------
+    events: List[Dict[str, Any]] = []
+    total_goals = g_home + g_away
+
+    def add_seq(team_key: str, is_goal: bool) -> None:
+        # einfache Sequenz: Aufbau → Angriff → (optional) Tor
+        seq: List[Tuple[str, str]] = [
+            ("build_up", "defensive"),
+            ("attack", "neutral"),
+            ("attack", "offensive"),
+        ]
+        if is_goal:
+            seq.append(("goal", "offensive"))
+        for ev_type, zone in seq:
+            i = len(events)
+            events.append({
+                "i": i,
+                "t": i,  # monotone "Zeitachse"
+                "type": ev_type,      # "build_up" | "attack" | "goal"
+                "team": team_key,     # "home" oder "away"
+                "zone": zone,         # "defensive" | "neutral" | "offensive"
+                "details": {},
+            })
+
+    # erst alle Tor-Sequenzen
+    goal_teams: List[str] = ["home"] * g_home + ["away"] * g_away
+    random.shuffle(goal_teams)
+    for team_key in goal_teams:
+        add_seq(team_key, is_goal=True)
+
+    # falls keine Tore gefallen sind: trotzdem 2–4 Angriffe ohne Tor
+    if total_goals == 0:
+        for _ in range(random.randint(2, 4)):
+            add_seq(random.choice(["home", "away"]), is_goal=False)
+
+    replay_struct: Dict[str, Any] = {
+        "home": home,
+        "away": away,
+        "g_home": g_home,
+        "g_away": g_away,
+        "conference": conf,
+        "events": events,
+    }
+
+    # ------------------------------------------------------------------------
+
+    return res_str,res_json,replay_struct
 
 def init_stats() -> pd.DataFrame:
     rows = []
@@ -573,6 +691,7 @@ def run_playoffs(season: int,
                  sued: pd.DataFrame,
                  stats: pd.DataFrame,
                  *,
+
                  interactive: bool = True) -> str:
     """Simuliert komplette Playoffs in Runden, speichert runde_XX.json, gibt Champion zurück."""
     rnd = 1
@@ -635,6 +754,7 @@ def read_tables_for_ui() -> Dict[str, Any]:
         "season": state["season"],
         "spieltag": state["spieltag"],
         "nsched_len": len(state["nsched"]),
+
         "ssched_len": len(state["ssched"]),
         "tables": tables,
         "history": state.get("history", []),
@@ -657,7 +777,8 @@ def step_regular_season_once() -> Dict[str, Any]:
     if isinstance(spieltag, int) and spieltag > max_spieltage:
         return {"status": "season_over", "season": season, "spieltag": spieltag}
 
-    results_json=[]
+    results_json: List[Dict[str, Any]] = []
+    replay_matches: List[Dict[str, Any]] = []  # NEU: Replay-Infos sammeln
 
     # --- NORD ---
     print("\n— Nord —")
@@ -675,7 +796,10 @@ def step_regular_season_once() -> Dict[str, Any]:
         print(strength_nord.to_string(index=False))
 
     for m in today_nord_matches:
-        s,j=simulate_match(nord,*m,stats,"Nord"); print(s); results_json.append(j)
+        s,j,replay = simulate_match(nord,*m,stats,"Nord")
+        print(s)
+        results_json.append(j)
+        replay_matches.append(replay)
     nsched=nsched[len(nord)//2:]
 
     # --- SÜD ---
@@ -693,7 +817,10 @@ def step_regular_season_once() -> Dict[str, Any]:
         print(strength_sued.to_string(index=False))
 
     for m in today_sued_matches:
-        s,j=simulate_match(sued,*m,stats,"Süd"); print(s); results_json.append(j)
+        s,j,replay = simulate_match(sued,*m,stats,"Süd")
+        print(s)
+        results_json.append(j)
+        replay_matches.append(replay)
     ssched=ssched[len(sued)//2:]
 
     _print_tables(nord,sued,stats)
@@ -713,6 +840,14 @@ def step_regular_season_once() -> Dict[str, Any]:
         stats,
         debug=debug_payload,
     )
+
+    # NEU: Replay-JSON für den Spieltag sichern
+    save_replay_json(
+        season,
+        spieltag,
+        replay_matches,
+    )
+
     spieltag+=1
     save_state({
         "season": season, "spieltag": spieltag,

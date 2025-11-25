@@ -1,0 +1,58 @@
+{
+  "season": 1,
+  "matchday": 2,
+  "game_id": "Ravensburg Zenit Falken-Schwenningen Sturmflügel",
+  "conference": "Süd",
+  "home": {
+    "id": "Ravensburg Zenit Falken",
+    "name": "Ravensburg Zenit Falken",
+    "score": 3
+  },
+  "away": {
+    "id": "Schwenningen Sturmflügel",
+    "name": "Schwenningen Sturmflügel",
+    "score": 2
+  },
+  "events": [
+    {
+      "i": 0,
+      "t": 1,
+      "type": "goal",
+      "team": "home",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 1,
+      "t": 18,
+      "type": "goal",
+      "team": "away",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 2,
+      "t": 27,
+      "type": "goal",
+      "team": "away",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 3,
+      "t": 43,
+      "type": "goal",
+      "team": "home",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 4,
+      "t": 51,
+      "type": "goal",
+      "team": "home",
+      "zone": "offensive",
+      "details": {}
+    }
+  ]
+}

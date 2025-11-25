@@ -1,0 +1,34 @@
+{
+  "season": 1,
+  "matchday": 4,
+  "game_id": "Iserlohn Miners-Wolfsburg Voltsturm",
+  "conference": "Nord",
+  "home": {
+    "id": "Iserlohn Miners",
+    "name": "Iserlohn Miners",
+    "score": 2
+  },
+  "away": {
+    "id": "Wolfsburg Voltsturm",
+    "name": "Wolfsburg Voltsturm",
+    "score": 0
+  },
+  "events": [
+    {
+      "i": 0,
+      "t": 27,
+      "type": "goal",
+      "team": "home",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 1,
+      "t": 41,
+      "type": "goal",
+      "team": "home",
+      "zone": "offensive",
+      "details": {}
+    }
+  ]
+}

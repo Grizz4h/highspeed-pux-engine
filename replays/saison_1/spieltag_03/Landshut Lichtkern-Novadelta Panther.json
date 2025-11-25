@@ -1,0 +1,66 @@
+{
+  "season": 1,
+  "matchday": 3,
+  "game_id": "Landshut Lichtkern-Novadelta Panther",
+  "conference": "Süd",
+  "home": {
+    "id": "Landshut Lichtkern",
+    "name": "Landshut Lichtkern",
+    "score": 3
+  },
+  "away": {
+    "id": "Novadelta Panther",
+    "name": "Novadelta Panther",
+    "score": 3
+  },
+  "events": [
+    {
+      "i": 0,
+      "t": 19,
+      "type": "goal",
+      "team": "away",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 1,
+      "t": 22,
+      "type": "goal",
+      "team": "away",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 2,
+      "t": 42,
+      "type": "goal",
+      "team": "away",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 3,
+      "t": 56,
+      "type": "goal",
+      "team": "home",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 4,
+      "t": 56,
+      "type": "goal",
+      "team": "home",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 5,
+      "t": 60,
+      "type": "goal",
+      "team": "home",
+      "zone": "offensive",
+      "details": {}
+    }
+  ]
+}

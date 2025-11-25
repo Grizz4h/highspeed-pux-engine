@@ -1,0 +1,42 @@
+{
+  "season": 1,
+  "matchday": 2,
+  "game_id": "Köln Blitzhaie-Düsseldorf Aurora",
+  "conference": "Nord",
+  "home": {
+    "id": "Köln Blitzhaie",
+    "name": "Köln Blitzhaie",
+    "score": 2
+  },
+  "away": {
+    "id": "Düsseldorf Aurora",
+    "name": "Düsseldorf Aurora",
+    "score": 1
+  },
+  "events": [
+    {
+      "i": 0,
+      "t": 6,
+      "type": "goal",
+      "team": "home",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 1,
+      "t": 15,
+      "type": "goal",
+      "team": "home",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 2,
+      "t": 36,
+      "type": "goal",
+      "team": "away",
+      "zone": "offensive",
+      "details": {}
+    }
+  ]
+}

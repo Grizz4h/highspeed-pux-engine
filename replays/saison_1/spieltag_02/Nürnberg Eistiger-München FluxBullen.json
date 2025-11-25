@@ -1,0 +1,58 @@
+{
+  "season": 1,
+  "matchday": 2,
+  "game_id": "Nürnberg Eistiger-München FluxBullen",
+  "conference": "Süd",
+  "home": {
+    "id": "Nürnberg Eistiger",
+    "name": "Nürnberg Eistiger",
+    "score": 3
+  },
+  "away": {
+    "id": "München FluxBullen",
+    "name": "München FluxBullen",
+    "score": 2
+  },
+  "events": [
+    {
+      "i": 0,
+      "t": 19,
+      "type": "goal",
+      "team": "home",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 1,
+      "t": 27,
+      "type": "goal",
+      "team": "home",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 2,
+      "t": 31,
+      "type": "goal",
+      "team": "away",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 3,
+      "t": 40,
+      "type": "goal",
+      "team": "home",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 4,
+      "t": 58,
+      "type": "goal",
+      "team": "away",
+      "zone": "offensive",
+      "details": {}
+    }
+  ]
+}

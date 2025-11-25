@@ -1,0 +1,50 @@
+{
+  "season": 1,
+  "matchday": 3,
+  "game_id": "Wolfsburg Voltsturm-Krefeld Kernschlag",
+  "conference": "Nord",
+  "home": {
+    "id": "Wolfsburg Voltsturm",
+    "name": "Wolfsburg Voltsturm",
+    "score": 2
+  },
+  "away": {
+    "id": "Krefeld Kernschlag",
+    "name": "Krefeld Kernschlag",
+    "score": 2
+  },
+  "events": [
+    {
+      "i": 0,
+      "t": 8,
+      "type": "goal",
+      "team": "away",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 1,
+      "t": 40,
+      "type": "goal",
+      "team": "home",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 2,
+      "t": 46,
+      "type": "goal",
+      "team": "home",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 3,
+      "t": 52,
+      "type": "goal",
+      "team": "away",
+      "zone": "offensive",
+      "details": {}
+    }
+  ]
+}

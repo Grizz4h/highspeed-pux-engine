@@ -1,0 +1,34 @@
+{
+  "season": 1,
+  "matchday": 4,
+  "game_id": "Nürnberg Eistiger-Ravensburg Zenit Falken",
+  "conference": "Süd",
+  "home": {
+    "id": "Nürnberg Eistiger",
+    "name": "Nürnberg Eistiger",
+    "score": 0
+  },
+  "away": {
+    "id": "Ravensburg Zenit Falken",
+    "name": "Ravensburg Zenit Falken",
+    "score": 2
+  },
+  "events": [
+    {
+      "i": 0,
+      "t": 4,
+      "type": "goal",
+      "team": "away",
+      "zone": "offensive",
+      "details": {}
+    },
+    {
+      "i": 1,
+      "t": 11,
+      "type": "goal",
+      "team": "away",
+      "zone": "offensive",
+      "details": {}
+    }
+  ]
+}
