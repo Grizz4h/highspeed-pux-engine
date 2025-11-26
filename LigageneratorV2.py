@@ -488,11 +488,23 @@ def create_schedule(teams: List[Dict[str,Any]]) -> List[Tuple[str,str]]:
         teams.insert(1,teams.pop())
     return sched
 
-def update_player_stats(team: str, goals: int, df: pd.DataFrame, stats: pd.DataFrame) -> None:
+def update_player_stats(team: str, goals: int, df: pd.DataFrame, stats: pd.DataFrame) -> List[Dict[str, Any]]:
+    """
+    Aktualisiert Stats für 'goals' Tore eines Teams und liefert pro Tor:
+      {
+        "scorer": <Fake-Name>,
+        "scorer_number": <Rückennummer oder None>,
+        "assist": <Fake-Name oder None>,
+        "assist_number": <Rückennummer oder None>
+      }
+    zurück.
+
+    WICHTIG: Wir nutzen "Name" als ID für Stats + Replay.
+    """
     # Roster aus Lineup, falls vorhanden – sonst Fallback auf komplettes Roster
     mask = df["Team"] == team
-    if not mask.any():
-        return
+    if not mask.any() or goals <= 0:
+        return []
 
     use_column = "Players"
     if "Lineup" in df.columns:
@@ -514,85 +526,185 @@ def update_player_stats(team: str, goals: int, df: pd.DataFrame, stats: pd.DataF
     # nimm das ganze Roster, damit die Simulation nicht crasht.
     if not skaters:
         skaters = roster
-    # ------------------------------------------------------------------------
 
-    scorer_names   = [p["Name"] for p in skaters]
-    scorer_weights = [max(1, p["Offense"] // 5) for p in skaters]
+    # Pool + Gewichte
+    scorer_pool = skaters
+    scorer_names = [p["Name"] for p in scorer_pool]
+    scorer_weights = [max(1, int(p.get("Offense", 50)) // 5) for p in scorer_pool]
 
-    assister_names = scorer_names  # ebenfalls nur Skater
+    goal_events: List[Dict[str, Any]] = []
 
     for _ in range(goals):
-        # Torschütze: nur Skater
-        scorer = random.choices(scorer_names, scorer_weights)[0]
+        # --- Torschütze (nur Skater) ----------------------------------------
+        scorer_player = random.choices(scorer_pool, weights=scorer_weights)[0]
+        scorer_name = scorer_player["Name"]
+        scorer_number = scorer_player.get("Number")
 
-        # Assistent: ebenfalls nur Skater, aber != Torschütze
-        assist_candidates = [n for n in assister_names if n != scorer]
+        # Stats-Update für den Torschützen
+        stats.loc[stats["Player"] == scorer_name, "Goals"] += 1
 
+        # --- Assistent (optional, auch nur Skater, != Torschütze) -----------
+        assist_name = None
+        assist_number = None
+
+        assist_candidates = [p for p in skaters if p.get("Name") != scorer_name]
         if assist_candidates:
-            assister = random.choice(assist_candidates)
-            stats.loc[stats["Player"] == assister, "Assists"] += 1
+            assist_player = random.choice(assist_candidates)
+            assist_name = assist_player["Name"]
+            assist_number = assist_player.get("Number")
+            stats.loc[stats["Player"] == assist_name, "Assists"] += 1
 
-        stats.loc[stats["Player"] == scorer, "Goals"] += 1
+        goal_events.append(
+            {
+                "scorer": scorer_name,
+                "scorer_number": scorer_number,
+                "assist": assist_name,
+                "assist_number": assist_number,
+            }
+        )
+
+    return goal_events
 
 
-def simulate_match(df:pd.DataFrame,home:str,away:str,stats:pd.DataFrame,conf:str)->Tuple[str,Dict[str,Any],Dict[str,Any]]:
+
+def simulate_match(df: pd.DataFrame,
+                   home: str,
+                   away: str,
+                   stats: pd.DataFrame,
+                   conf: str) -> Tuple[str, Dict[str, Any], Dict[str, Any]]:
     """
     Simuliert EIN Spiel:
-      - gibt Terminal-String + Ergebnis-JSON + Replay-Struct zurück.
-    Replay-Struct enthält Events (aktuell: einfache Goal-Events).
+      - Ergebnis + Tabellenupdate + Spielerstats
+      - Replay-Struct mit Aktionen:
+        * action_id: int
+        * step_in_action: 0..3
+        * Zonenfolge: defensiv -> neutral -> offensiv -> offensiv (Abschluss)
+        * result: "goal" oder "none"
+        * player_main / player_secondary (Fake-Namen aus 'Name')
     """
-    r_h=df[df["Team"]==home].iloc[0]
-    r_a=df[df["Team"]==away].iloc[0]
-    p_home=calc_strength(r_h,True)/(calc_strength(r_h,True)+calc_strength(r_a))
-    g_home=max(0,int(random.gauss(p_home*5,1)))
-    g_away=max(0,int(random.gauss((1-p_home)*5,1)))
-    df.loc[df["Team"]==home,["Goals For","Goals Against"]]+= [g_home,g_away]
-    df.loc[df["Team"]==away,["Goals For","Goals Against"]]+= [g_away,g_home]
-    if g_home>g_away:
-        df.loc[df["Team"]==home,"Points"]+=3
-    elif g_away>g_home:
-        df.loc[df["Team"]==away,"Points"]+=3
+
+    # --- Ergebnis & Tabellen wie bisher ------------------------------------
+    r_h = df[df["Team"] == home].iloc[0]
+    r_a = df[df["Team"] == away].iloc[0]
+
+    strength_home = calc_strength(r_h, True)
+    strength_away = calc_strength(r_a, False)
+    p_home = strength_home / (strength_home + strength_away)
+
+    g_home = max(0, int(random.gauss(p_home * 5, 1)))
+    g_away = max(0, int(random.gauss((1 - p_home) * 5, 1)))
+
+    # Tabelle updaten
+    df.loc[df["Team"] == home, ["Goals For", "Goals Against"]] += [g_home, g_away]
+    df.loc[df["Team"] == away, ["Goals For", "Goals Against"]] += [g_away, g_home]
+
+    if g_home > g_away:
+        df.loc[df["Team"] == home, "Points"] += 3
+    elif g_away > g_home:
+        df.loc[df["Team"] == away, "Points"] += 3
     else:
-        df.loc[df["Team"].isin([home,away]),"Points"]+=1
-    update_player_stats(home,g_home,df,stats)
-    update_player_stats(away,g_away,df,stats)
-    res_str=f"{home} {g_home}:{g_away} {away}"
-    res_json={"home":home,"away":away,"g_home":g_home,"g_away":g_away,"conference":conf}
+        df.loc[df["Team"].isin([home, away]), "Points"] += 1
 
-    # --- NEU: Replay-Events als kleine Angriffs-Timelines -------------------
+    # Spielerstats (unabhängig von Replay)
+    update_player_stats(home, g_home, df, stats)
+    update_player_stats(away, g_away, df, stats)
+
+    res_str = f"{home} {g_home}:{g_away} {away}"
+    res_json = {
+        "home": home,
+        "away": away,
+        "g_home": g_home,
+        "g_away": g_away,
+        "conference": conf,
+    }
+
+    # --- Hilfsfunktionen für Replay-Events ---------------------------------
+    def _get_skaters(team_name: str) -> List[Dict[str, Any]]:
+        mask = df["Team"] == team_name
+        if not mask.any():
+            return []
+
+        row = df[mask].iloc[0]
+        players = row.get("Lineup") or row["Players"]
+        skaters = [p for p in players
+                   if str(p.get("PositionGroup", "")).upper() != "G"]
+        return skaters or players
+
+    sk_home = _get_skaters(home)
+    sk_away = _get_skaters(away)
+
+    def _pick_pair(team_key: str) -> Tuple[Optional[str], Optional[int], Optional[str], Optional[int]]:
+        sk = sk_home if team_key == "home" else sk_away
+        if not sk:
+            return None, None, None, None
+        shooter = random.choice(sk)
+        others = [p for p in sk if p is not shooter]
+        assister = random.choice(others) if others else None
+        return (
+            shooter.get("Name"),
+            shooter.get("Number"),
+            assister.get("Name") if assister else None,
+            assister.get("Number") if assister else None,
+        )
+
+    # --- Aktionenliste bauen -----------------------------------------------
     events: List[Dict[str, Any]] = []
-    total_goals = g_home + g_away
+    current_index = 0
+    action_id = 0
 
-    def add_seq(team_key: str, is_goal: bool) -> None:
-        # einfache Sequenz: Aufbau → Angriff → (optional) Tor
-        seq: List[Tuple[str, str]] = [
-            ("build_up", "defensive"),
-            ("attack", "neutral"),
-            ("attack", "offensive"),
+    total_goals = g_home + g_away
+    goal_actions: List[Optional[str]] = ["home"] * g_home + ["away"] * g_away
+
+    # Extra-Aktionen ohne Tor für schönere Zwischenphasen
+    extra_no_goal = max(2, len(goal_actions))  # mindestens so viele No-Goal-Actions wie Toraktionen
+    goal_actions += [None] * extra_no_goal
+
+    random.shuffle(goal_actions)
+
+    for team_key_raw in goal_actions:
+        if team_key_raw is None:
+            team_key = random.choice(["home", "away"])
+            is_goal = False
+        else:
+            team_key = team_key_raw
+            is_goal = True
+
+        player_main, player_main_number, player_secondary, player_secondary_number = _pick_pair(team_key)
+
+        # 4-Schritte-Aktion:
+        # 0: Aufbau hinten
+        # 1: Durch neutrale Zone
+        # 2: Druck in offensiver Zone
+        # 3: Abschluss (mit/ohne Tor)
+        seq: List[Tuple[str, str, str]] = [
+            ("build_up", "defensive", "none"),
+            ("attack", "neutral", "none"),
+            ("attack", "offensive", "none"),
         ]
         if is_goal:
-            seq.append(("goal", "offensive"))
-        for ev_type, zone in seq:
-            i = len(events)
+            seq.append(("goal", "offensive", "goal"))
+        else:
+            seq.append(("attack", "offensive", "none"))
+
+        for step, (ev_type, zone, result) in enumerate(seq):
             events.append({
-                "i": i,
-                "t": i,  # monotone "Zeitachse"
-                "type": ev_type,      # "build_up" | "attack" | "goal"
-                "team": team_key,     # "home" oder "away"
-                "zone": zone,         # "defensive" | "neutral" | "offensive"
+                "i": current_index,
+                "t": current_index,           # einfache Timeline
+                "action_id": action_id,
+                "step_in_action": step,
+                "team": team_key,             # "home" / "away"
+                "zone": zone,                 # "defensive" / "neutral" / "offensive"
+                "type": ev_type,              # "build_up" / "attack" / "goal"
+                "result": result,             # "goal" / "none"
+                "player_main": player_main,
+                "player_main_number": player_main_number,
+                "player_secondary": player_secondary,
+                "player_secondary_number": player_secondary_number,
                 "details": {},
             })
+            current_index += 1
 
-    # erst alle Tor-Sequenzen
-    goal_teams: List[str] = ["home"] * g_home + ["away"] * g_away
-    random.shuffle(goal_teams)
-    for team_key in goal_teams:
-        add_seq(team_key, is_goal=True)
-
-    # falls keine Tore gefallen sind: trotzdem 2–4 Angriffe ohne Tor
-    if total_goals == 0:
-        for _ in range(random.randint(2, 4)):
-            add_seq(random.choice(["home", "away"]), is_goal=False)
+        action_id += 1
 
     replay_struct: Dict[str, Any] = {
         "home": home,
@@ -603,9 +715,10 @@ def simulate_match(df:pd.DataFrame,home:str,away:str,stats:pd.DataFrame,conf:str
         "events": events,
     }
 
-    # ------------------------------------------------------------------------
+    return res_str, res_json, replay_struct
 
-    return res_str,res_json,replay_struct
+
+
 
 def init_stats() -> pd.DataFrame:
     rows = []
