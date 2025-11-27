@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-26T22:40:58.122105",
+  "timestamp": "2025-11-27T18:21:43.328378",
   "season": 1,
   "matchday": 1,
   "games": [
@@ -9,8 +9,8 @@
       "conference": "Nord",
       "home": "Bad Nauheim Devils",
       "away": "Whiteout Berlin",
-      "g_home": 3,
-      "g_away": 1
+      "g_home": 0,
+      "g_away": 2
     },
     {
       "game_id": "Bremerhaven Trident-Wolfsburg Voltsturm",
@@ -18,8 +18,8 @@
       "conference": "Nord",
       "home": "Bremerhaven Trident",
       "away": "Wolfsburg Voltsturm",
-      "g_home": 3,
-      "g_away": 2
+      "g_home": 2,
+      "g_away": 1
     },
     {
       "game_id": "Düsseldorf Aurora-Kassel Zenit",
@@ -28,7 +28,7 @@
       "home": "Düsseldorf Aurora",
       "away": "Kassel Zenit",
       "g_home": 1,
-      "g_away": 1
+      "g_away": 3
     },
     {
       "game_id": "Frankfurt Core-Krefeld Kernschlag",
@@ -36,8 +36,8 @@
       "conference": "Nord",
       "home": "Frankfurt Core",
       "away": "Krefeld Kernschlag",
-      "g_home": 2,
-      "g_away": 1
+      "g_home": 1,
+      "g_away": 2
     },
     {
       "game_id": "Iserlohn Miners-Köln Blitzhaie",
@@ -45,7 +45,7 @@
       "conference": "Nord",
       "home": "Iserlohn Miners",
       "away": "Köln Blitzhaie",
-      "g_home": 2,
+      "g_home": 1,
       "g_away": 2
     },
     {
@@ -54,8 +54,8 @@
       "conference": "Süd",
       "home": "Augsburg Ferox",
       "away": "Schwenningen Sturmflügel",
-      "g_home": 1,
-      "g_away": 4
+      "g_home": 2,
+      "g_away": 2
     },
     {
       "game_id": "Landshut Lichtkern-Straubing Forest Tigers",
@@ -81,8 +81,8 @@
       "conference": "Süd",
       "home": "Mannheim Ventus",
       "away": "Regensburg Pulse",
-      "g_home": 3,
-      "g_away": 2
+      "g_home": 1,
+      "g_away": 4
     },
     {
       "game_id": "Novadelta Panther-Nürnberg Eistiger",
@@ -90,8 +90,8 @@
       "conference": "Süd",
       "home": "Novadelta Panther",
       "away": "Nürnberg Eistiger",
-      "g_home": 1,
-      "g_away": 2
+      "g_home": 3,
+      "g_away": 3
     }
   ]
 }
