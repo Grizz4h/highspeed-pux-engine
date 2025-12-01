@@ -9,6 +9,18 @@ from typing import Any, Dict, List, Tuple, Optional
 import pandas as pd
 
 # ------------------------------------------------
+# Helper: DataFrame -> records ohne NaN
+# ------------------------------------------------
+def _df_to_records_clean(df: pd.DataFrame) -> List[Dict[str, Any]]:
+    """
+    Wandelt ein DataFrame in eine List[Dict] um und ersetzt dabei alle NaN/NA durch None,
+    damit json.dump gültiges JSON (null) statt NaN schreibt.
+    """
+    clean = df.where(pd.notna(df), None)
+    return clean.to_dict("records")
+
+
+# ------------------------------------------------
 # 1  PFADE
 # ------------------------------------------------
 SAVEFILE     = Path("saves/savegame.json")
@@ -64,11 +76,11 @@ def _init_new_season_state(season: int) -> Dict[str, Any]:
     return {
         "season": season,
         "spieltag": 1,
-        "nord": nord.to_dict("records"),
-        "sued": sued.to_dict("records"),
+        "nord": _df_to_records_clean(nord),
+        "sued": _df_to_records_clean(sued),
         "nsched": nsched,
         "ssched": ssched,
-        "stats": stats.to_dict("records"),
+        "stats": _df_to_records_clean(stats),
         "history": [],
         "phase": "regular",
     }
@@ -90,8 +102,11 @@ def _export_tables(nord_df: pd.DataFrame, sued_df: pd.DataFrame, stats: pd.DataF
         d = df.copy()
         d.rename(columns={"Goals For": "GF", "Goals Against": "GA"}, inplace=True)
         d["GD"] = d["GF"] - d["GA"]
-        return d.sort_values(["Points", "GF"], ascending=False)[["Team", "Points", "GF", "GA", "GD"]].to_dict("records")
+        return d.sort_values(["Points", "GF"], ascending=False)[
+            ["Team", "Points", "GF", "GA", "GD"]
+        ].to_dict("records")
 
+    # Top-Scorer-Liste bauen und NaN -> None cleanen
     top = stats.sort_values("Points", ascending=False).head(20)[
         ["Player", "Team", "Number", "PositionGroup", "Goals", "Assists", "Points"]
     ]
@@ -99,7 +114,7 @@ def _export_tables(nord_df: pd.DataFrame, sued_df: pd.DataFrame, stats: pd.DataF
     return {
         "tabelle_nord": _prep(nord_df),
         "tabelle_sued": _prep(sued_df),
-        "top_scorer": top.to_dict("records"),
+        "top_scorer": _df_to_records_clean(top),
     }
 
 
@@ -804,7 +819,6 @@ def run_playoffs(season: int,
                  sued: pd.DataFrame,
                  stats: pd.DataFrame,
                  *,
-
                  interactive: bool = True) -> str:
     """Simuliert komplette Playoffs in Runden, speichert runde_XX.json, gibt Champion zurück."""
     rnd = 1
@@ -834,10 +848,10 @@ def run_playoffs(season: int,
         save_state({  # Fortschritt (Info)
             "season": season,
             "spieltag": f"Playoff_Runde_{rnd}",
-            "nord": nord.to_dict("records"),
-            "sued": sued.to_dict("records"),
+            "nord": _df_to_records_clean(nord),
+            "sued": _df_to_records_clean(sued),
             "nsched": [], "ssched": [],
-            "stats": stats.to_dict("records"),
+            "stats": _df_to_records_clean(stats),
             "phase": "playoffs",
             "playoff_round": rnd + 1,
             "playoff_alive": winners
@@ -964,9 +978,10 @@ def step_regular_season_once() -> Dict[str, Any]:
     spieltag+=1
     save_state({
         "season": season, "spieltag": spieltag,
-        "nord": nord.to_dict("records"), "sued": sued.to_dict("records"),
+        "nord": _df_to_records_clean(nord),
+        "sued": _df_to_records_clean(sued),
         "nsched": nsched, "ssched": ssched,
-        "stats": stats.to_dict("records"),
+        "stats": _df_to_records_clean(stats),
         "history": state.get("history", []),
         "phase": "regular",
     })
@@ -1037,10 +1052,11 @@ def step_playoffs_round_once() -> Dict[str, Any]:
     save_state({
         "season": state["season"],
         "spieltag": f"Playoff_Runde_{rnd}",
-        "nord": nord.to_dict("records"), "sued": sued.to_dict("records"),
+        "nord": _df_to_records_clean(nord),
+        "sued": _df_to_records_clean(sued),
         "nsched": [], "ssched": [],
 
-        "stats": stats.to_dict("records"),
+        "stats": _df_to_records_clean(stats),
         "history": history,
         "phase": "playoffs",
         "playoff_round": rnd+1,
