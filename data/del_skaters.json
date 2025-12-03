@@ -13,9 +13,9 @@
     "points": 35,
     "plus_minus": 11,
     "pim": 8,
-    "faceoff_won": 125,
-    "faceoff_total": 258,
-    "faceoff_pct": 48.45
+    "faceoff_won": 126,
+    "faceoff_total": 271,
+    "faceoff_pct": 46.49
   },
   {
     "league": "DEL",
@@ -49,9 +49,9 @@
     "points": 33,
     "plus_minus": 13,
     "pim": 11,
-    "faceoff_won": 41,
-    "faceoff_total": 85,
-    "faceoff_pct": 48.24
+    "faceoff_won": 44,
+    "faceoff_total": 92,
+    "faceoff_pct": 47.83
   },
   {
     "league": "DEL",
@@ -67,9 +67,9 @@
     "points": 32,
     "plus_minus": 1,
     "pim": 18,
-    "faceoff_won": 106,
-    "faceoff_total": 241,
-    "faceoff_pct": 43.98
+    "faceoff_won": 112,
+    "faceoff_total": 255,
+    "faceoff_pct": 43.92
   },
   {
     "league": "DEL",
@@ -85,9 +85,9 @@
     "points": 31,
     "plus_minus": 14,
     "pim": 18,
-    "faceoff_won": 217,
-    "faceoff_total": 423,
-    "faceoff_pct": 51.3
+    "faceoff_won": 226,
+    "faceoff_total": 445,
+    "faceoff_pct": 50.79
   },
   {
     "league": "DEL",
@@ -211,9 +211,9 @@
     "points": 23,
     "plus_minus": 4,
     "pim": 10,
-    "faceoff_won": 191,
-    "faceoff_total": 375,
-    "faceoff_pct": 50.93
+    "faceoff_won": 204,
+    "faceoff_total": 400,
+    "faceoff_pct": 51.0
   },
   {
     "league": "DEL",
@@ -247,9 +247,9 @@
     "points": 22,
     "plus_minus": -9,
     "pim": 10,
-    "faceoff_won": 169,
-    "faceoff_total": 274,
-    "faceoff_pct": 61.68
+    "faceoff_won": 179,
+    "faceoff_total": 297,
+    "faceoff_pct": 60.27
   },
   {
     "league": "DEL",
@@ -409,9 +409,9 @@
     "points": 20,
     "plus_minus": 5,
     "pim": 12,
-    "faceoff_won": 70,
-    "faceoff_total": 156,
-    "faceoff_pct": 44.87
+    "faceoff_won": 75,
+    "faceoff_total": 166,
+    "faceoff_pct": 45.18
   },
   {
     "league": "DEL",
@@ -445,9 +445,9 @@
     "points": 20,
     "plus_minus": 4,
     "pim": 8,
-    "faceoff_won": 163,
-    "faceoff_total": 329,
-    "faceoff_pct": 49.54
+    "faceoff_won": 168,
+    "faceoff_total": 337,
+    "faceoff_pct": 49.85
   },
   {
     "league": "DEL",
@@ -517,9 +517,9 @@
     "points": 19,
     "plus_minus": -6,
     "pim": 10,
-    "faceoff_won": 329,
-    "faceoff_total": 551,
-    "faceoff_pct": 59.71
+    "faceoff_won": 341,
+    "faceoff_total": 571,
+    "faceoff_pct": 59.72
   },
   {
     "league": "DEL",
@@ -535,9 +535,9 @@
     "points": 18,
     "plus_minus": -8,
     "pim": 6,
-    "faceoff_won": 136,
-    "faceoff_total": 281,
-    "faceoff_pct": 48.4
+    "faceoff_won": 141,
+    "faceoff_total": 293,
+    "faceoff_pct": 48.12
   },
   {
     "league": "DEL",
@@ -571,9 +571,9 @@
     "points": 18,
     "plus_minus": 5,
     "pim": 6,
-    "faceoff_won": 151,
-    "faceoff_total": 272,
-    "faceoff_pct": 55.51
+    "faceoff_won": 167,
+    "faceoff_total": 295,
+    "faceoff_pct": 56.61
   },
   {
     "league": "DEL",
@@ -589,9 +589,9 @@
     "points": 18,
     "plus_minus": -1,
     "pim": 8,
-    "faceoff_won": 176,
-    "faceoff_total": 316,
-    "faceoff_pct": 55.7
+    "faceoff_won": 183,
+    "faceoff_total": 326,
+    "faceoff_pct": 56.13
   },
   {
     "league": "DEL",
@@ -607,9 +607,9 @@
     "points": 18,
     "plus_minus": -2,
     "pim": 6,
-    "faceoff_won": 189,
-    "faceoff_total": 370,
-    "faceoff_pct": 51.08
+    "faceoff_won": 199,
+    "faceoff_total": 390,
+    "faceoff_pct": 51.03
   },
   {
     "league": "DEL",
@@ -661,9 +661,9 @@
     "points": 17,
     "plus_minus": 7,
     "pim": 37,
-    "faceoff_won": 196,
-    "faceoff_total": 394,
-    "faceoff_pct": 49.75
+    "faceoff_won": 214,
+    "faceoff_total": 418,
+    "faceoff_pct": 51.2
   },
   {
     "league": "DEL",
@@ -697,9 +697,9 @@
     "points": 17,
     "plus_minus": 11,
     "pim": 6,
-    "faceoff_won": 205,
-    "faceoff_total": 382,
-    "faceoff_pct": 53.66
+    "faceoff_won": 221,
+    "faceoff_total": 403,
+    "faceoff_pct": 54.84
   },
   {
     "league": "DEL",
@@ -769,9 +769,9 @@
     "points": 17,
     "plus_minus": -7,
     "pim": 4,
-    "faceoff_won": 281,
-    "faceoff_total": 503,
-    "faceoff_pct": 55.86
+    "faceoff_won": 292,
+    "faceoff_total": 524,
+    "faceoff_pct": 55.73
   },
   {
     "league": "DEL",
@@ -805,9 +805,27 @@
     "points": 17,
     "plus_minus": -9,
     "pim": 12,
-    "faceoff_won": 139,
-    "faceoff_total": 339,
-    "faceoff_pct": 41.0
+    "faceoff_won": 146,
+    "faceoff_total": 353,
+    "faceoff_pct": 41.36
+  },
+  {
+    "league": "DEL",
+    "team": "DRE",
+    "team_logo_id": 62,
+    "number": 8,
+    "name_raw": "Ortega, Austin",
+    "nation": "USA",
+    "position": "S",
+    "games": 25,
+    "goals": 11,
+    "assists": 5,
+    "points": 16,
+    "plus_minus": -26,
+    "pim": 10,
+    "faceoff_won": 3,
+    "faceoff_total": 16,
+    "faceoff_pct": 18.75
   },
   {
     "league": "DEL",
@@ -823,9 +841,9 @@
     "points": 16,
     "plus_minus": -6,
     "pim": 35,
-    "faceoff_won": 131,
-    "faceoff_total": 212,
-    "faceoff_pct": 61.79
+    "faceoff_won": 135,
+    "faceoff_total": 219,
+    "faceoff_pct": 61.64
   },
   {
     "league": "DEL",
@@ -913,27 +931,9 @@
     "points": 16,
     "plus_minus": 10,
     "pim": 35,
-    "faceoff_won": 143,
-    "faceoff_total": 257,
-    "faceoff_pct": 55.64
-  },
-  {
-    "league": "DEL",
-    "team": "DRE",
-    "team_logo_id": 62,
-    "number": 8,
-    "name_raw": "Ortega, Austin",
-    "nation": "USA",
-    "position": "S",
-    "games": 25,
-    "goals": 11,
-    "assists": 4,
-    "points": 15,
-    "plus_minus": -26,
-    "pim": 10,
-    "faceoff_won": 3,
-    "faceoff_total": 16,
-    "faceoff_pct": 18.75
+    "faceoff_won": 145,
+    "faceoff_total": 262,
+    "faceoff_pct": 55.34
   },
   {
     "league": "DEL",
@@ -1003,9 +1003,9 @@
     "points": 15,
     "plus_minus": 11,
     "pim": 16,
-    "faceoff_won": 231,
-    "faceoff_total": 386,
-    "faceoff_pct": 59.84
+    "faceoff_won": 239,
+    "faceoff_total": 399,
+    "faceoff_pct": 59.9
   },
   {
     "league": "DEL",
@@ -1039,9 +1039,9 @@
     "points": 15,
     "plus_minus": -13,
     "pim": 6,
-    "faceoff_won": 17,
-    "faceoff_total": 24,
-    "faceoff_pct": 70.83
+    "faceoff_won": 18,
+    "faceoff_total": 26,
+    "faceoff_pct": 69.23
   },
   {
     "league": "DEL",
@@ -1093,9 +1093,9 @@
     "points": 15,
     "plus_minus": 4,
     "pim": 6,
-    "faceoff_won": 113,
-    "faceoff_total": 302,
-    "faceoff_pct": 37.42
+    "faceoff_won": 114,
+    "faceoff_total": 305,
+    "faceoff_pct": 37.38
   },
   {
     "league": "DEL",
@@ -1111,9 +1111,9 @@
     "points": 15,
     "plus_minus": 5,
     "pim": 21,
-    "faceoff_won": 179,
-    "faceoff_total": 388,
-    "faceoff_pct": 46.13
+    "faceoff_won": 187,
+    "faceoff_total": 402,
+    "faceoff_pct": 46.52
   },
   {
     "league": "DEL",
@@ -1183,9 +1183,9 @@
     "points": 15,
     "plus_minus": 5,
     "pim": 29,
-    "faceoff_won": 186,
-    "faceoff_total": 347,
-    "faceoff_pct": 53.6
+    "faceoff_won": 193,
+    "faceoff_total": 361,
+    "faceoff_pct": 53.46
   },
   {
     "league": "DEL",
@@ -1201,9 +1201,9 @@
     "points": 15,
     "plus_minus": -2,
     "pim": 22,
-    "faceoff_won": 154,
-    "faceoff_total": 283,
-    "faceoff_pct": 54.42
+    "faceoff_won": 161,
+    "faceoff_total": 301,
+    "faceoff_pct": 53.49
   },
   {
     "league": "DEL",
@@ -1219,9 +1219,9 @@
     "points": 14,
     "plus_minus": 8,
     "pim": 17,
-    "faceoff_won": 73,
-    "faceoff_total": 153,
-    "faceoff_pct": 47.71
+    "faceoff_won": 81,
+    "faceoff_total": 166,
+    "faceoff_pct": 48.8
   },
   {
     "league": "DEL",
@@ -1291,9 +1291,9 @@
     "points": 14,
     "plus_minus": 7,
     "pim": 2,
-    "faceoff_won": 196,
-    "faceoff_total": 406,
-    "faceoff_pct": 48.28
+    "faceoff_won": 202,
+    "faceoff_total": 419,
+    "faceoff_pct": 48.21
   },
   {
     "league": "DEL",
@@ -1309,9 +1309,9 @@
     "points": 14,
     "plus_minus": 3,
     "pim": 6,
-    "faceoff_won": 172,
-    "faceoff_total": 290,
-    "faceoff_pct": 59.31
+    "faceoff_won": 173,
+    "faceoff_total": 297,
+    "faceoff_pct": 58.25
   },
   {
     "league": "DEL",
@@ -1345,9 +1345,9 @@
     "points": 14,
     "plus_minus": 1,
     "pim": 12,
-    "faceoff_won": 120,
-    "faceoff_total": 194,
-    "faceoff_pct": 61.86
+    "faceoff_won": 124,
+    "faceoff_total": 204,
+    "faceoff_pct": 60.78
   },
   {
     "league": "DEL",
@@ -1381,9 +1381,9 @@
     "points": 14,
     "plus_minus": -6,
     "pim": 6,
-    "faceoff_won": null,
-    "faceoff_total": null,
-    "faceoff_pct": null
+    "faceoff_won": 1,
+    "faceoff_total": 1,
+    "faceoff_pct": 100.0
   },
   {
     "league": "DEL",
@@ -1399,9 +1399,9 @@
     "points": 14,
     "plus_minus": 7,
     "pim": 16,
-    "faceoff_won": 152,
-    "faceoff_total": 262,
-    "faceoff_pct": 58.02
+    "faceoff_won": 156,
+    "faceoff_total": 272,
+    "faceoff_pct": 57.35
   },
   {
     "league": "DEL",
@@ -1471,9 +1471,27 @@
     "points": 13,
     "plus_minus": 6,
     "pim": 4,
-    "faceoff_won": 160,
-    "faceoff_total": 348,
-    "faceoff_pct": 45.98
+    "faceoff_won": 167,
+    "faceoff_total": 363,
+    "faceoff_pct": 46.01
+  },
+  {
+    "league": "DEL",
+    "team": "DRE",
+    "team_logo_id": 62,
+    "number": 27,
+    "name_raw": "Fox, Dane",
+    "nation": "CAN",
+    "position": "S",
+    "games": 23,
+    "goals": 7,
+    "assists": 6,
+    "points": 13,
+    "plus_minus": -13,
+    "pim": 34,
+    "faceoff_won": 105,
+    "faceoff_total": 220,
+    "faceoff_pct": 47.73
   },
   {
     "league": "DEL",
@@ -1489,9 +1507,9 @@
     "points": 13,
     "plus_minus": 6,
     "pim": 10,
-    "faceoff_won": 198,
-    "faceoff_total": 386,
-    "faceoff_pct": 51.3
+    "faceoff_won": 206,
+    "faceoff_total": 399,
+    "faceoff_pct": 51.63
   },
   {
     "league": "DEL",
@@ -1510,24 +1528,6 @@
     "faceoff_won": 116,
     "faceoff_total": 199,
     "faceoff_pct": 58.29
-  },
-  {
-    "league": "DEL",
-    "team": "MUC",
-    "team_logo_id": 12,
-    "number": 97,
-    "name_raw": "Fontaine, Gabriel",
-    "nation": "CAN",
-    "position": "S",
-    "games": 22,
-    "goals": 6,
-    "assists": 7,
-    "points": 13,
-    "plus_minus": -4,
-    "pim": 2,
-    "faceoff_won": 148,
-    "faceoff_total": 290,
-    "faceoff_pct": 51.03
   },
   {
     "league": "DEL",
@@ -1561,9 +1561,9 @@
     "points": 13,
     "plus_minus": 10,
     "pim": 6,
-    "faceoff_won": 64,
-    "faceoff_total": 119,
-    "faceoff_pct": 53.78
+    "faceoff_won": 70,
+    "faceoff_total": 129,
+    "faceoff_pct": 54.26
   },
   {
     "league": "DEL",
@@ -1615,9 +1615,9 @@
     "points": 13,
     "plus_minus": -1,
     "pim": 7,
-    "faceoff_won": 210,
-    "faceoff_total": 349,
-    "faceoff_pct": 60.17
+    "faceoff_won": 212,
+    "faceoff_total": 361,
+    "faceoff_pct": 58.73
   },
   {
     "league": "DEL",
@@ -1795,9 +1795,9 @@
     "points": 12,
     "plus_minus": -3,
     "pim": 0,
-    "faceoff_won": 87,
-    "faceoff_total": 185,
-    "faceoff_pct": 47.03
+    "faceoff_won": 92,
+    "faceoff_total": 196,
+    "faceoff_pct": 46.94
   },
   {
     "league": "DEL",
@@ -1831,27 +1831,27 @@
     "points": 12,
     "plus_minus": -12,
     "pim": 6,
-    "faceoff_won": 89,
-    "faceoff_total": 257,
-    "faceoff_pct": 34.63
+    "faceoff_won": 92,
+    "faceoff_total": 269,
+    "faceoff_pct": 34.2
   },
   {
     "league": "DEL",
-    "team": "DRE",
-    "team_logo_id": 62,
-    "number": 27,
-    "name_raw": "Fox, Dane",
+    "team": "MUC",
+    "team_logo_id": 12,
+    "number": 91,
+    "name_raw": "McKenna, Jeremy",
     "nation": "CAN",
     "position": "S",
-    "games": 23,
+    "games": 22,
     "goals": 6,
     "assists": 6,
     "points": 12,
-    "plus_minus": -13,
-    "pim": 34,
-    "faceoff_won": 105,
-    "faceoff_total": 217,
-    "faceoff_pct": 48.39
+    "plus_minus": 4,
+    "pim": 16,
+    "faceoff_won": 2,
+    "faceoff_total": 2,
+    "faceoff_pct": 100.0
   },
   {
     "league": "DEL",
@@ -1885,9 +1885,9 @@
     "points": 12,
     "plus_minus": 4,
     "pim": 10,
-    "faceoff_won": 133,
-    "faceoff_total": 275,
-    "faceoff_pct": 48.36
+    "faceoff_won": 139,
+    "faceoff_total": 283,
+    "faceoff_pct": 49.12
   },
   {
     "league": "DEL",
@@ -1909,6 +1909,24 @@
   },
   {
     "league": "DEL",
+    "team": "MUC",
+    "team_logo_id": 12,
+    "number": 97,
+    "name_raw": "Fontaine, Gabriel",
+    "nation": "CAN",
+    "position": "S",
+    "games": 22,
+    "goals": 5,
+    "assists": 7,
+    "points": 12,
+    "plus_minus": -4,
+    "pim": 2,
+    "faceoff_won": 152,
+    "faceoff_total": 302,
+    "faceoff_pct": 50.33
+  },
+  {
+    "league": "DEL",
     "team": "STR",
     "team_logo_id": 6,
     "number": 91,
@@ -1922,8 +1940,8 @@
     "plus_minus": 2,
     "pim": 10,
     "faceoff_won": 38,
-    "faceoff_total": 74,
-    "faceoff_pct": 51.35
+    "faceoff_total": 75,
+    "faceoff_pct": 50.67
   },
   {
     "league": "DEL",
@@ -1957,9 +1975,9 @@
     "points": 12,
     "plus_minus": 11,
     "pim": 6,
-    "faceoff_won": 220,
-    "faceoff_total": 421,
-    "faceoff_pct": 52.26
+    "faceoff_won": 224,
+    "faceoff_total": 436,
+    "faceoff_pct": 51.38
   },
   {
     "league": "DEL",
@@ -2053,21 +2071,21 @@
   },
   {
     "league": "DEL",
-    "team": "MUC",
-    "team_logo_id": 12,
-    "number": 91,
-    "name_raw": "McKenna, Jeremy",
+    "team": "DRE",
+    "team_logo_id": 62,
+    "number": 17,
+    "name_raw": "Bouma, Lance",
     "nation": "CAN",
     "position": "S",
-    "games": 22,
+    "games": 23,
     "goals": 5,
     "assists": 6,
     "points": 11,
-    "plus_minus": 4,
-    "pim": 16,
-    "faceoff_won": 2,
-    "faceoff_total": 2,
-    "faceoff_pct": 100.0
+    "plus_minus": -16,
+    "pim": 18,
+    "faceoff_won": 4,
+    "faceoff_total": 11,
+    "faceoff_pct": 36.36
   },
   {
     "league": "DEL",
@@ -2083,8 +2101,8 @@
     "points": 11,
     "plus_minus": 0,
     "pim": 14,
-    "faceoff_won": 1,
-    "faceoff_total": 2,
+    "faceoff_won": 2,
+    "faceoff_total": 4,
     "faceoff_pct": 50.0
   },
   {
@@ -2174,8 +2192,8 @@
     "plus_minus": 8,
     "pim": 22,
     "faceoff_won": 2,
-    "faceoff_total": 3,
-    "faceoff_pct": 66.67
+    "faceoff_total": 4,
+    "faceoff_pct": 50.0
   },
   {
     "league": "DEL",
@@ -2209,9 +2227,9 @@
     "points": 10,
     "plus_minus": 2,
     "pim": 31,
-    "faceoff_won": 113,
-    "faceoff_total": 247,
-    "faceoff_pct": 45.75
+    "faceoff_won": 123,
+    "faceoff_total": 262,
+    "faceoff_pct": 46.95
   },
   {
     "league": "DEL",
@@ -2299,9 +2317,9 @@
     "points": 10,
     "plus_minus": 9,
     "pim": 14,
-    "faceoff_won": 87,
-    "faceoff_total": 205,
-    "faceoff_pct": 42.44
+    "faceoff_won": 92,
+    "faceoff_total": 213,
+    "faceoff_pct": 43.19
   },
   {
     "league": "DEL",
@@ -2467,24 +2485,6 @@
   },
   {
     "league": "DEL",
-    "team": "DRE",
-    "team_logo_id": 62,
-    "number": 17,
-    "name_raw": "Bouma, Lance",
-    "nation": "CAN",
-    "position": "S",
-    "games": 23,
-    "goals": 4,
-    "assists": 5,
-    "points": 9,
-    "plus_minus": -16,
-    "pim": 14,
-    "faceoff_won": 4,
-    "faceoff_total": 11,
-    "faceoff_pct": 36.36
-  },
-  {
-    "league": "DEL",
     "team": "AEV",
     "team_logo_id": 13,
     "number": 92,
@@ -2515,9 +2515,9 @@
     "points": 9,
     "plus_minus": 5,
     "pim": 11,
-    "faceoff_won": 168,
-    "faceoff_total": 264,
-    "faceoff_pct": 63.64
+    "faceoff_won": 177,
+    "faceoff_total": 278,
+    "faceoff_pct": 63.67
   },
   {
     "league": "DEL",
@@ -2534,8 +2534,8 @@
     "plus_minus": 1,
     "pim": 36,
     "faceoff_won": 46,
-    "faceoff_total": 76,
-    "faceoff_pct": 60.53
+    "faceoff_total": 77,
+    "faceoff_pct": 59.74
   },
   {
     "league": "DEL",
@@ -2569,9 +2569,9 @@
     "points": 9,
     "plus_minus": -12,
     "pim": 6,
-    "faceoff_won": 145,
-    "faceoff_total": 344,
-    "faceoff_pct": 42.15
+    "faceoff_won": 150,
+    "faceoff_total": 358,
+    "faceoff_pct": 41.9
   },
   {
     "league": "DEL",
@@ -2588,8 +2588,8 @@
     "plus_minus": -1,
     "pim": 4,
     "faceoff_won": 1,
-    "faceoff_total": 8,
-    "faceoff_pct": 12.5
+    "faceoff_total": 10,
+    "faceoff_pct": 10.0
   },
   {
     "league": "DEL",
@@ -2623,9 +2623,9 @@
     "points": 9,
     "plus_minus": -4,
     "pim": 8,
-    "faceoff_won": 43,
-    "faceoff_total": 118,
-    "faceoff_pct": 36.44
+    "faceoff_won": 49,
+    "faceoff_total": 130,
+    "faceoff_pct": 37.69
   },
   {
     "league": "DEL",
@@ -2659,9 +2659,9 @@
     "points": 9,
     "plus_minus": 2,
     "pim": 6,
-    "faceoff_won": 29,
-    "faceoff_total": 55,
-    "faceoff_pct": 52.73
+    "faceoff_won": 30,
+    "faceoff_total": 56,
+    "faceoff_pct": 53.57
   },
   {
     "league": "DEL",
@@ -2730,10 +2730,10 @@
     "assists": 9,
     "points": 9,
     "plus_minus": -16,
-    "pim": 15,
-    "faceoff_won": 141,
-    "faceoff_total": 296,
-    "faceoff_pct": 47.64
+    "pim": 19,
+    "faceoff_won": 148,
+    "faceoff_total": 309,
+    "faceoff_pct": 47.9
   },
   {
     "league": "DEL",
@@ -2749,9 +2749,9 @@
     "points": 8,
     "plus_minus": -11,
     "pim": 0,
-    "faceoff_won": 33,
-    "faceoff_total": 69,
-    "faceoff_pct": 47.83
+    "faceoff_won": 38,
+    "faceoff_total": 78,
+    "faceoff_pct": 48.72
   },
   {
     "league": "DEL",
@@ -2767,9 +2767,9 @@
     "points": 8,
     "plus_minus": -1,
     "pim": 6,
-    "faceoff_won": 28,
-    "faceoff_total": 58,
-    "faceoff_pct": 48.28
+    "faceoff_won": 29,
+    "faceoff_total": 62,
+    "faceoff_pct": 46.77
   },
   {
     "league": "DEL",
@@ -2803,9 +2803,9 @@
     "points": 8,
     "plus_minus": -14,
     "pim": 58,
-    "faceoff_won": 177,
-    "faceoff_total": 364,
-    "faceoff_pct": 48.63
+    "faceoff_won": 184,
+    "faceoff_total": 380,
+    "faceoff_pct": 48.42
   },
   {
     "league": "DEL",
@@ -2839,9 +2839,9 @@
     "points": 8,
     "plus_minus": 5,
     "pim": 14,
-    "faceoff_won": 131,
-    "faceoff_total": 243,
-    "faceoff_pct": 53.91
+    "faceoff_won": 141,
+    "faceoff_total": 261,
+    "faceoff_pct": 54.02
   },
   {
     "league": "DEL",
@@ -2965,9 +2965,9 @@
     "points": 7,
     "plus_minus": -4,
     "pim": 6,
-    "faceoff_won": 151,
-    "faceoff_total": 295,
-    "faceoff_pct": 51.19
+    "faceoff_won": 164,
+    "faceoff_total": 313,
+    "faceoff_pct": 52.4
   },
   {
     "league": "DEL",
@@ -2983,9 +2983,9 @@
     "points": 7,
     "plus_minus": 3,
     "pim": 5,
-    "faceoff_won": 69,
-    "faceoff_total": 139,
-    "faceoff_pct": 49.64
+    "faceoff_won": 75,
+    "faceoff_total": 153,
+    "faceoff_pct": 49.02
   },
   {
     "league": "DEL",
@@ -3018,10 +3018,10 @@
     "assists": 4,
     "points": 7,
     "plus_minus": -17,
-    "pim": 17,
+    "pim": 19,
     "faceoff_won": 14,
-    "faceoff_total": 26,
-    "faceoff_pct": 53.85
+    "faceoff_total": 27,
+    "faceoff_pct": 51.85
   },
   {
     "league": "DEL",
@@ -3055,9 +3055,9 @@
     "points": 7,
     "plus_minus": -12,
     "pim": 4,
-    "faceoff_won": 90,
-    "faceoff_total": 206,
-    "faceoff_pct": 43.69
+    "faceoff_won": 91,
+    "faceoff_total": 211,
+    "faceoff_pct": 43.13
   },
   {
     "league": "DEL",
@@ -3144,7 +3144,7 @@
     "assists": 5,
     "points": 7,
     "plus_minus": 9,
-    "pim": 12,
+    "pim": 16,
     "faceoff_won": null,
     "faceoff_total": null,
     "faceoff_pct": null
@@ -3181,9 +3181,9 @@
     "points": 7,
     "plus_minus": 4,
     "pim": 12,
-    "faceoff_won": 34,
-    "faceoff_total": 67,
-    "faceoff_pct": 50.75
+    "faceoff_won": 38,
+    "faceoff_total": 72,
+    "faceoff_pct": 52.78
   },
   {
     "league": "DEL",
@@ -3380,8 +3380,8 @@
     "plus_minus": -3,
     "pim": 4,
     "faceoff_won": 82,
-    "faceoff_total": 190,
-    "faceoff_pct": 43.16
+    "faceoff_total": 191,
+    "faceoff_pct": 42.93
   },
   {
     "league": "DEL",
@@ -3397,9 +3397,9 @@
     "points": 6,
     "plus_minus": 1,
     "pim": 4,
-    "faceoff_won": 56,
-    "faceoff_total": 109,
-    "faceoff_pct": 51.38
+    "faceoff_won": 63,
+    "faceoff_total": 125,
+    "faceoff_pct": 50.4
   },
   {
     "league": "DEL",
@@ -3558,7 +3558,7 @@
     "assists": 3,
     "points": 5,
     "plus_minus": -6,
-    "pim": 24,
+    "pim": 28,
     "faceoff_won": 8,
     "faceoff_total": 17,
     "faceoff_pct": 47.06
@@ -3631,9 +3631,9 @@
     "points": 5,
     "plus_minus": -4,
     "pim": 2,
-    "faceoff_won": 86,
-    "faceoff_total": 190,
-    "faceoff_pct": 45.26
+    "faceoff_won": 92,
+    "faceoff_total": 203,
+    "faceoff_pct": 45.32
   },
   {
     "league": "DEL",
@@ -3685,9 +3685,9 @@
     "points": 4,
     "plus_minus": -2,
     "pim": 6,
-    "faceoff_won": 27,
-    "faceoff_total": 66,
-    "faceoff_pct": 40.91
+    "faceoff_won": 28,
+    "faceoff_total": 69,
+    "faceoff_pct": 40.58
   },
   {
     "league": "DEL",
@@ -3811,9 +3811,9 @@
     "points": 4,
     "plus_minus": -5,
     "pim": 4,
-    "faceoff_won": 8,
-    "faceoff_total": 22,
-    "faceoff_pct": 36.36
+    "faceoff_won": 10,
+    "faceoff_total": 24,
+    "faceoff_pct": 41.67
   },
   {
     "league": "DEL",
@@ -4153,9 +4153,9 @@
     "points": 3,
     "plus_minus": -6,
     "pim": 4,
-    "faceoff_won": null,
-    "faceoff_total": null,
-    "faceoff_pct": null
+    "faceoff_won": 1,
+    "faceoff_total": 1,
+    "faceoff_pct": 100.0
   },
   {
     "league": "DEL",
@@ -4369,9 +4369,9 @@
     "points": 2,
     "plus_minus": 0,
     "pim": 0,
-    "faceoff_won": 14,
-    "faceoff_total": 25,
-    "faceoff_pct": 56.0
+    "faceoff_won": 15,
+    "faceoff_total": 27,
+    "faceoff_pct": 55.56
   },
   {
     "league": "DEL",
@@ -4665,6 +4665,24 @@
     "league": "DEL",
     "team": "DRE",
     "team_logo_id": 62,
+    "number": 14,
+    "name_raw": "Chartier, Rourke",
+    "nation": "CAN",
+    "position": "S",
+    "games": 8,
+    "goals": 0,
+    "assists": 2,
+    "points": 2,
+    "plus_minus": -11,
+    "pim": 2,
+    "faceoff_won": 76,
+    "faceoff_total": 145,
+    "faceoff_pct": 52.41
+  },
+  {
+    "league": "DEL",
+    "team": "DRE",
+    "team_logo_id": 62,
     "number": 75,
     "name_raw": "Riedl, Bruno",
     "nation": "GER",
@@ -4951,24 +4969,6 @@
   },
   {
     "league": "DEL",
-    "team": "DRE",
-    "team_logo_id": 62,
-    "number": 14,
-    "name_raw": "Chartier, Rourke",
-    "nation": "CAN",
-    "position": "S",
-    "games": 8,
-    "goals": 0,
-    "assists": 1,
-    "points": 1,
-    "plus_minus": -11,
-    "pim": 2,
-    "faceoff_won": 65,
-    "faceoff_total": 127,
-    "faceoff_pct": 51.18
-  },
-  {
-    "league": "DEL",
     "team": "AEV",
     "team_logo_id": 13,
     "number": 24,
@@ -5052,7 +5052,7 @@
     "assists": 1,
     "points": 1,
     "plus_minus": 1,
-    "pim": 0,
+    "pim": 2,
     "faceoff_won": null,
     "faceoff_total": null,
     "faceoff_pct": null
@@ -5197,9 +5197,9 @@
     "points": 1,
     "plus_minus": -4,
     "pim": 6,
-    "faceoff_won": 1,
-    "faceoff_total": 2,
-    "faceoff_pct": 50.0
+    "faceoff_won": 2,
+    "faceoff_total": 3,
+    "faceoff_pct": 66.67
   },
   {
     "league": "DEL",
@@ -5232,7 +5232,7 @@
     "assists": 1,
     "points": 1,
     "plus_minus": -9,
-    "pim": 16,
+    "pim": 20,
     "faceoff_won": 0,
     "faceoff_total": 1,
     "faceoff_pct": 0.0
@@ -5653,24 +5653,6 @@
   },
   {
     "league": "DEL",
-    "team": "ING",
-    "team_logo_id": 1,
-    "number": 83,
-    "name_raw": "Kharboutli, Samir",
-    "nation": "GER",
-    "position": "S",
-    "games": 9,
-    "goals": 0,
-    "assists": 0,
-    "points": 0,
-    "plus_minus": 0,
-    "pim": 10,
-    "faceoff_won": null,
-    "faceoff_total": null,
-    "faceoff_pct": null
-  },
-  {
-    "league": "DEL",
     "team": "FRA",
     "team_logo_id": 44,
     "number": 24,
@@ -5683,6 +5665,24 @@
     "points": 0,
     "plus_minus": -3,
     "pim": 2,
+    "faceoff_won": null,
+    "faceoff_total": null,
+    "faceoff_pct": null
+  },
+  {
+    "league": "DEL",
+    "team": "ING",
+    "team_logo_id": 1,
+    "number": 83,
+    "name_raw": "Kharboutli, Samir",
+    "nation": "GER",
+    "position": "S",
+    "games": 9,
+    "goals": 0,
+    "assists": 0,
+    "points": 0,
+    "plus_minus": 0,
+    "pim": 10,
     "faceoff_won": null,
     "faceoff_total": null,
     "faceoff_pct": null
@@ -5882,8 +5882,8 @@
     "plus_minus": -6,
     "pim": 0,
     "faceoff_won": 23,
-    "faceoff_total": 48,
-    "faceoff_pct": 47.92
+    "faceoff_total": 53,
+    "faceoff_pct": 43.4
   },
   {
     "league": "DEL",
@@ -5936,8 +5936,8 @@
     "plus_minus": -6,
     "pim": 0,
     "faceoff_won": 4,
-    "faceoff_total": 8,
-    "faceoff_pct": 50.0
+    "faceoff_total": 9,
+    "faceoff_pct": 44.44
   },
   {
     "league": "DEL",
@@ -5953,9 +5953,9 @@
     "points": 0,
     "plus_minus": -3,
     "pim": 4,
-    "faceoff_won": 25,
-    "faceoff_total": 69,
-    "faceoff_pct": 36.23
+    "faceoff_won": 27,
+    "faceoff_total": 71,
+    "faceoff_pct": 38.03
   },
   {
     "league": "DEL",
@@ -6025,8 +6025,8 @@
     "points": 0,
     "plus_minus": -8,
     "pim": 0,
-    "faceoff_won": 72,
-    "faceoff_total": 164,
-    "faceoff_pct": 43.9
+    "faceoff_won": 73,
+    "faceoff_total": 167,
+    "faceoff_pct": 43.71
   }
 ]

@@ -6,12 +6,12 @@
   "home": {
     "id": "Frankfurt Core",
     "name": "Frankfurt Core",
-    "score": 1
+    "score": 2
   },
   "away": {
     "id": "Krefeld Kernschlag",
     "name": "Krefeld Kernschlag",
-    "score": 2
+    "score": 1
   },
   "events": [
     {
@@ -23,10 +23,10 @@
       "zone": "defensive",
       "type": "build_up",
       "result": "none",
-      "player_main": "Christophera Wilkiinov",
-      "player_main_number": 84,
-      "player_secondary": "Noahi Dunhamro",
-      "player_secondary_number": 12,
+      "player_main": "Tommye Pasanen",
+      "player_main_number": 16,
+      "player_secondary": "Makso Matushkov",
+      "player_secondary_number": 52,
       "details": {}
     },
     {
@@ -38,10 +38,10 @@
       "zone": "neutral",
       "type": "attack",
       "result": "none",
-      "player_main": "Christophera Wilkiinov",
-      "player_main_number": 84,
-      "player_secondary": "Noahi Dunhamro",
-      "player_secondary_number": 12,
+      "player_main": "Tommye Pasanen",
+      "player_main_number": 16,
+      "player_secondary": "Makso Matushkov",
+      "player_secondary_number": 52,
       "details": {}
     },
     {
@@ -53,10 +53,10 @@
       "zone": "offensive",
       "type": "attack",
       "result": "none",
-      "player_main": "Christophera Wilkiinov",
-      "player_main_number": 84,
-      "player_secondary": "Noahi Dunhamro",
-      "player_secondary_number": 12,
+      "player_main": "Tommye Pasanen",
+      "player_main_number": 16,
+      "player_secondary": "Makso Matushkov",
+      "player_secondary_number": 52,
       "details": {}
     },
     {
@@ -66,12 +66,12 @@
       "step_in_action": 3,
       "team": "home",
       "zone": "offensive",
-      "type": "goal",
-      "result": "goal",
-      "player_main": "Christophera Wilkiinov",
-      "player_main_number": 84,
-      "player_secondary": "Noahi Dunhamro",
-      "player_secondary_number": 12,
+      "type": "attack",
+      "result": "none",
+      "player_main": "Tommye Pasanen",
+      "player_main_number": 16,
+      "player_secondary": "Makso Matushkov",
+      "player_secondary_number": 52,
       "details": {}
     },
     {
@@ -83,10 +83,10 @@
       "zone": "defensive",
       "type": "build_up",
       "result": "none",
-      "player_main": "Davida Cernyinov",
-      "player_main_number": 29,
-      "player_secondary": "Maximiliana Hopsen",
-      "player_secondary_number": 67,
+      "player_main": "Mathe Santoslek",
+      "player_main_number": 95,
+      "player_secondary": "Daniele Bruchtto",
+      "player_secondary_number": 26,
       "details": {}
     },
     {
@@ -98,10 +98,10 @@
       "zone": "neutral",
       "type": "attack",
       "result": "none",
-      "player_main": "Davida Cernyinov",
-      "player_main_number": 29,
-      "player_secondary": "Maximiliana Hopsen",
-      "player_secondary_number": 67,
+      "player_main": "Mathe Santoslek",
+      "player_main_number": 95,
+      "player_secondary": "Daniele Bruchtto",
+      "player_secondary_number": 26,
       "details": {}
     },
     {
@@ -113,10 +113,10 @@
       "zone": "offensive",
       "type": "attack",
       "result": "none",
-      "player_main": "Davida Cernyinov",
-      "player_main_number": 29,
-      "player_secondary": "Maximiliana Hopsen",
-      "player_secondary_number": 67,
+      "player_main": "Mathe Santoslek",
+      "player_main_number": 95,
+      "player_secondary": "Daniele Bruchtto",
+      "player_secondary_number": 26,
       "details": {}
     },
     {
@@ -128,10 +128,10 @@
       "zone": "offensive",
       "type": "goal",
       "result": "goal",
-      "player_main": "Davida Cernyinov",
-      "player_main_number": 29,
-      "player_secondary": "Maximiliana Hopsen",
-      "player_secondary_number": 67,
+      "player_main": "Mathe Santoslek",
+      "player_main_number": 95,
+      "player_secondary": "Daniele Bruchtto",
+      "player_secondary_number": 26,
       "details": {}
     },
     {
@@ -143,10 +143,10 @@
       "zone": "defensive",
       "type": "build_up",
       "result": "none",
-      "player_main": "Camerone Bracar",
-      "player_main_number": 86,
-      "player_secondary": "Noahi Dunhamro",
-      "player_secondary_number": 12,
+      "player_main": "Daniele Wirtvik",
+      "player_main_number": 76,
+      "player_secondary": "Christophera Wilkiinov",
+      "player_secondary_number": 84,
       "details": {}
     },
     {
@@ -158,10 +158,10 @@
       "zone": "neutral",
       "type": "attack",
       "result": "none",
-      "player_main": "Camerone Bracar",
-      "player_main_number": 86,
-      "player_secondary": "Noahi Dunhamro",
-      "player_secondary_number": 12,
+      "player_main": "Daniele Wirtvik",
+      "player_main_number": 76,
+      "player_secondary": "Christophera Wilkiinov",
+      "player_secondary_number": 84,
       "details": {}
     },
     {
@@ -173,10 +173,10 @@
       "zone": "offensive",
       "type": "attack",
       "result": "none",
-      "player_main": "Camerone Bracar",
-      "player_main_number": 86,
-      "player_secondary": "Noahi Dunhamro",
-      "player_secondary_number": 12,
+      "player_main": "Daniele Wirtvik",
+      "player_main_number": 76,
+      "player_secondary": "Christophera Wilkiinov",
+      "player_secondary_number": 84,
       "details": {}
     },
     {
@@ -186,12 +186,12 @@
       "step_in_action": 3,
       "team": "home",
       "zone": "offensive",
-      "type": "attack",
-      "result": "none",
-      "player_main": "Camerone Bracar",
-      "player_main_number": 86,
-      "player_secondary": "Noahi Dunhamro",
-      "player_secondary_number": 12,
+      "type": "goal",
+      "result": "goal",
+      "player_main": "Daniele Wirtvik",
+      "player_main_number": 76,
+      "player_secondary": "Christophera Wilkiinov",
+      "player_secondary_number": 84,
       "details": {}
     },
     {
@@ -199,14 +199,14 @@
       "t": 12,
       "action_id": 3,
       "step_in_action": 0,
-      "team": "away",
+      "team": "home",
       "zone": "defensive",
       "type": "build_up",
       "result": "none",
-      "player_main": "Oliveri Mebusov",
-      "player_main_number": 22,
-      "player_secondary": "Marki Zengerlov",
-      "player_secondary_number": 89,
+      "player_main": "Tommye Pasanen",
+      "player_main_number": 16,
+      "player_secondary": "Mati Wedmanovik",
+      "player_secondary_number": 67,
       "details": {}
     },
     {
@@ -214,14 +214,14 @@
       "t": 13,
       "action_id": 3,
       "step_in_action": 1,
-      "team": "away",
+      "team": "home",
       "zone": "neutral",
       "type": "attack",
       "result": "none",
-      "player_main": "Oliveri Mebusov",
-      "player_main_number": 22,
-      "player_secondary": "Marki Zengerlov",
-      "player_secondary_number": 89,
+      "player_main": "Tommye Pasanen",
+      "player_main_number": 16,
+      "player_secondary": "Mati Wedmanovik",
+      "player_secondary_number": 67,
       "details": {}
     },
     {
@@ -229,14 +229,14 @@
       "t": 14,
       "action_id": 3,
       "step_in_action": 2,
-      "team": "away",
+      "team": "home",
       "zone": "offensive",
       "type": "attack",
       "result": "none",
-      "player_main": "Oliveri Mebusov",
-      "player_main_number": 22,
-      "player_secondary": "Marki Zengerlov",
-      "player_secondary_number": 89,
+      "player_main": "Tommye Pasanen",
+      "player_main_number": 16,
+      "player_secondary": "Mati Wedmanovik",
+      "player_secondary_number": 67,
       "details": {}
     },
     {
@@ -244,14 +244,14 @@
       "t": 15,
       "action_id": 3,
       "step_in_action": 3,
-      "team": "away",
+      "team": "home",
       "zone": "offensive",
-      "type": "goal",
-      "result": "goal",
-      "player_main": "Oliveri Mebusov",
-      "player_main_number": 22,
-      "player_secondary": "Marki Zengerlov",
-      "player_secondary_number": 89,
+      "type": "attack",
+      "result": "none",
+      "player_main": "Tommye Pasanen",
+      "player_main_number": 16,
+      "player_secondary": "Mati Wedmanovik",
+      "player_secondary_number": 67,
       "details": {}
     },
     {
@@ -263,10 +263,10 @@
       "zone": "defensive",
       "type": "build_up",
       "result": "none",
-      "player_main": "Dennise Lobachro",
-      "player_main_number": 26,
-      "player_secondary": "Daniele Wirtvik",
-      "player_secondary_number": 76,
+      "player_main": "Cartere Rowneyovik",
+      "player_main_number": 17,
+      "player_secondary": "Daniele Pfaffengen",
+      "player_secondary_number": 77,
       "details": {}
     },
     {
@@ -278,10 +278,10 @@
       "zone": "neutral",
       "type": "attack",
       "result": "none",
-      "player_main": "Dennise Lobachro",
-      "player_main_number": 26,
-      "player_secondary": "Daniele Wirtvik",
-      "player_secondary_number": 76,
+      "player_main": "Cartere Rowneyovik",
+      "player_main_number": 17,
+      "player_secondary": "Daniele Pfaffengen",
+      "player_secondary_number": 77,
       "details": {}
     },
     {
@@ -293,10 +293,10 @@
       "zone": "offensive",
       "type": "attack",
       "result": "none",
-      "player_main": "Dennise Lobachro",
-      "player_main_number": 26,
-      "player_secondary": "Daniele Wirtvik",
-      "player_secondary_number": 76,
+      "player_main": "Cartere Rowneyovik",
+      "player_main_number": 17,
+      "player_secondary": "Daniele Pfaffengen",
+      "player_secondary_number": 77,
       "details": {}
     },
     {
@@ -308,10 +308,10 @@
       "zone": "offensive",
       "type": "attack",
       "result": "none",
-      "player_main": "Dennise Lobachro",
-      "player_main_number": 26,
-      "player_secondary": "Daniele Wirtvik",
-      "player_secondary_number": 76,
+      "player_main": "Cartere Rowneyovik",
+      "player_main_number": 17,
+      "player_secondary": "Daniele Pfaffengen",
+      "player_secondary_number": 77,
       "details": {}
     },
     {
@@ -323,10 +323,10 @@
       "zone": "defensive",
       "type": "build_up",
       "result": "none",
-      "player_main": "Reida McNeilov",
-      "player_main_number": 4,
-      "player_secondary": "Linusa Frötli",
-      "player_secondary_number": 71,
+      "player_main": "Noahi Dunhamro",
+      "player_main_number": 12,
+      "player_secondary": "Daniele Wirtvik",
+      "player_secondary_number": 76,
       "details": {}
     },
     {
@@ -338,10 +338,10 @@
       "zone": "neutral",
       "type": "attack",
       "result": "none",
-      "player_main": "Reida McNeilov",
-      "player_main_number": 4,
-      "player_secondary": "Linusa Frötli",
-      "player_secondary_number": 71,
+      "player_main": "Noahi Dunhamro",
+      "player_main_number": 12,
+      "player_secondary": "Daniele Wirtvik",
+      "player_secondary_number": 76,
       "details": {}
     },
     {
@@ -353,10 +353,10 @@
       "zone": "offensive",
       "type": "attack",
       "result": "none",
-      "player_main": "Reida McNeilov",
-      "player_main_number": 4,
-      "player_secondary": "Linusa Frötli",
-      "player_secondary_number": 71,
+      "player_main": "Noahi Dunhamro",
+      "player_main_number": 12,
+      "player_secondary": "Daniele Wirtvik",
+      "player_secondary_number": 76,
       "details": {}
     },
     {
@@ -366,12 +366,12 @@
       "step_in_action": 3,
       "team": "home",
       "zone": "offensive",
-      "type": "attack",
-      "result": "none",
-      "player_main": "Reida McNeilov",
-      "player_main_number": 4,
-      "player_secondary": "Linusa Frötli",
-      "player_secondary_number": 71,
+      "type": "goal",
+      "result": "goal",
+      "player_main": "Noahi Dunhamro",
+      "player_main_number": 12,
+      "player_secondary": "Daniele Wirtvik",
+      "player_secondary_number": 76,
       "details": {}
     }
   ]

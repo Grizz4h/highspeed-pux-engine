@@ -445,7 +445,7 @@ def _build_debug_matches_payload(df: pd.DataFrame, matches: List[Tuple[str, str]
             vals = [p.get("Overall") for p in lineup if isinstance(p.get("Overall"), (int, float))]
             if not vals:
                 return 0.0
-            return round(sum(vals) / len(vals), 1)
+            return round(sum(vals) / len(vals) / 1.0, 1)
 
         debug_matches.append({
             "home": {
@@ -488,12 +488,99 @@ def calc_strength(row: pd.Series, home: bool = False) -> float:
     return round(total, 2)
 
 
+# ------------------------------------------------
+# 6b  STORY-CONSTRAINT-HELPER für Spielplan
+# ------------------------------------------------
+
+def _find_team_name_by_keywords(teams: List[Dict[str, Any]], keywords: List[str]) -> Optional[str]:
+    """
+    Sucht in der Teamliste nach einem Teamnamen, der alle Keywords (case-insensitive)
+    im String enthält. Damit sind wir robuster gegen Schreibweisen wie
+    'NOVADELTA Panther', 'Nova-Delta-Panther', 'Augsburg Ferox', etc.
+    """
+    kws = [k.lower() for k in keywords]
+    for t in teams:
+        name = str(t.get("Team", ""))
+        low = name.lower()
+        if all(k in low for k in kws):
+            return name
+    return None
+
+
+def _apply_story_constraints_to_schedule(
+    sched: List[Tuple[str, str]],
+    teams: List[Dict[str, Any]],
+) -> List[Tuple[str, str]]:
+    """
+    Erzwingt für NOVADELTA Panther:
+      - erstes Saisonspiel = Heimspiel
+      - drittes Saisonspiel (2. Heimspiel) = Heimspiel gegen Augsburg Ferox
+
+    Falls die Teams nicht gefunden werden, bleibt der Spielplan unverändert.
+    """
+    nova = _find_team_name_by_keywords(teams, ["nova", "panther"])
+    augs = _find_team_name_by_keywords(teams, ["augs", "ferox"])
+
+    if not nova:
+        return sched  # Team nicht in dieser Conference → nichts erzwingen
+    # Augsburg darf theoretisch in der anderen Conference liegen; dann können wir nur
+    # "erstes Spiel Heim" garantieren, aber nicht den Gegner.
+    # Deshalb kein harter Abort, wenn augs == None.
+
+    # 1) Erstes Spiel der Nova-Delta-Panther = Heimspiel
+    indices = [i for i, (h, a) in enumerate(sched) if h == nova or a == nova]
+    if not indices:
+        return sched  # irgendwas stimmt fundamental nicht
+
+    first_idx = indices[0]
+    if sched[first_idx][0] != nova:
+        # wir suchen das erste Spiel, in dem NOVADELTA bereits Heimteam ist
+        home_indices = [i for i in indices if sched[i][0] == nova]
+        if home_indices:
+            swap_idx = home_indices[0]
+            sched[first_idx], sched[swap_idx] = sched[swap_idx], sched[first_idx]
+
+    # 2) Drittes Spiel der Nova-Delta-Panther = Heim vs Augsburg-Ferox
+    #    (nur, wenn Augsburg auch in dieser Teams-Liste existiert)
+    if not augs:
+        return sched
+
+    # Indizes nach möglicher Verschiebung neu berechnen
+    indices = [i for i, (h, a) in enumerate(sched) if h == nova or a == nova]
+    if len(indices) < 3:
+        # Zu wenig Spiele in diesem Block, um ein "3. Spiel" zu erzwingen
+        return sched
+
+    third_idx = indices[2]
+
+    # Index des Spiels NOVADELTA (Home) vs Augsburg
+    target_idx: Optional[int] = None
+    for i, (h, a) in enumerate(sched):
+        if h == nova and a == augs:
+            target_idx = i
+            break
+
+    if target_idx is None:
+        # es gibt kein Heimspiel NOVADELTA vs Augsburg in diesem Schedule-Array
+        # (z. B. weil Conference anders getrennt ist)
+        return sched
+
+    # Wir wollen, dass genau an Position 'third_idx' das Spiel (nova, augs) liegt
+    if target_idx != third_idx:
+        sched[target_idx], sched[third_idx] = sched[third_idx], sched[target_idx]
+
+    return sched
+
+
 def create_schedule(teams: List[Dict[str,Any]]) -> List[Tuple[str,str]]:
+    # Original-Teams sichern, bevor wir BYE etc. reinmurksen
+    original_teams = teams.copy()
+
     teams = teams.copy()
     if len(teams)%2:
         teams.append({"Team":"BYE"})
     days, half = len(teams)-1, len(teams)//2
-    sched=[]
+    sched: List[Tuple[str, str]] = []
     for d in range(days*2):
         day=[]
         for i in range(half):
@@ -501,7 +588,11 @@ def create_schedule(teams: List[Dict[str,Any]]) -> List[Tuple[str,str]]:
             day.append((a,b) if d%2==0 else (b,a))
         sched.extend(day)
         teams.insert(1,teams.pop())
+
+    # STORY-CONSTRAINTS anwenden (Nova-Delta-Panther, Augsburg-Ferox)
+    sched = _apply_story_constraints_to_schedule(sched, original_teams)
     return sched
+
 
 def update_player_stats(team: str, goals: int, df: pd.DataFrame, stats: pd.DataFrame) -> List[Dict[str, Any]]:
     """

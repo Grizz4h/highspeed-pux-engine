@@ -236,15 +236,15 @@
     "nation": "CAN",
     "position": "T",
     "games": 7,
-    "minutes": 337.8833333333333,
+    "minutes": 377.8833333333333,
     "wins": 4,
     "losses": 2,
     "shutouts": 0,
-    "goals_against": 14,
-    "gaa": 2.49,
-    "shots_against": 148,
-    "saves": 134,
-    "save_pct": 90.54
+    "goals_against": 16,
+    "gaa": 2.54,
+    "shots_against": 171,
+    "saves": 155,
+    "save_pct": 90.64
   },
   {
     "league": "DEL",
@@ -540,15 +540,15 @@
     "nation": "FIN",
     "position": "T",
     "games": 11,
-    "minutes": 604.85,
+    "minutes": 644.85,
     "wins": 2,
     "losses": 9,
     "shutouts": 0,
-    "goals_against": 43,
-    "gaa": 4.27,
-    "shots_against": 325,
-    "saves": 282,
-    "save_pct": 86.77
+    "goals_against": 44,
+    "gaa": 4.09,
+    "shots_against": 346,
+    "saves": 302,
+    "save_pct": 87.28
   },
   {
     "league": "DEL",
