@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-05T00:13:15.476266",
+  "timestamp": "2025-12-05T00:41:57.076778",
   "season": 1,
   "matchday": 2,
   "games": [
@@ -9,8 +9,8 @@
       "conference": "Nord",
       "home": "Wolfsburg Voltsturm",
       "away": "Bad Nauheim Devils",
-      "g_home": 5,
-      "g_away": 2
+      "g_home": 2,
+      "g_away": 4
     },
     {
       "game_id": "Kassel Zenit-Whiteout Berlin",
@@ -18,7 +18,7 @@
       "conference": "Nord",
       "home": "Kassel Zenit",
       "away": "Whiteout Berlin",
-      "g_home": 1,
+      "g_home": 2,
       "g_away": 4
     },
     {
@@ -27,8 +27,8 @@
       "conference": "Nord",
       "home": "Krefeld Kernschlag",
       "away": "Bremerhaven Trident",
-      "g_home": 2,
-      "g_away": 2
+      "g_home": 3,
+      "g_away": 3
     },
     {
       "game_id": "Köln Blitzhaie-Düsseldorf Aurora",
@@ -36,7 +36,7 @@
       "conference": "Nord",
       "home": "Köln Blitzhaie",
       "away": "Düsseldorf Aurora",
-      "g_home": 1,
+      "g_home": 3,
       "g_away": 3
     },
     {
@@ -54,7 +54,7 @@
       "conference": "Süd",
       "home": "Straubing Forest Tigers",
       "away": "Augsburg Ferox",
-      "g_home": 3,
+      "g_home": 1,
       "g_away": 1
     },
     {
@@ -63,8 +63,8 @@
       "conference": "Süd",
       "home": "Ravensburg Zenit Falken",
       "away": "Schwenningen Sturmflügel",
-      "g_home": 4,
-      "g_away": 1
+      "g_home": 2,
+      "g_away": 3
     },
     {
       "game_id": "Regensburg Pulse-Landshut Lichtkern",
@@ -73,7 +73,7 @@
       "home": "Regensburg Pulse",
       "away": "Landshut Lichtkern",
       "g_home": 2,
-      "g_away": 2
+      "g_away": 3
     },
     {
       "game_id": "Nürnberg Eistiger-München FluxBullen",
