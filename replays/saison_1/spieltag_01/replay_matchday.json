@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-03T18:18:13.950506",
+  "timestamp": "2025-12-05T00:10:50.342599",
   "season": 1,
   "matchday": 1,
   "games": [
@@ -9,8 +9,8 @@
       "conference": "Nord",
       "home": "Bad Nauheim Devils",
       "away": "Whiteout Berlin",
-      "g_home": 2,
-      "g_away": 3
+      "g_home": 1,
+      "g_away": 1
     },
     {
       "game_id": "Bremerhaven Trident-Wolfsburg Voltsturm",
@@ -18,8 +18,8 @@
       "conference": "Nord",
       "home": "Bremerhaven Trident",
       "away": "Wolfsburg Voltsturm",
-      "g_home": 3,
-      "g_away": 4
+      "g_home": 2,
+      "g_away": 1
     },
     {
       "game_id": "Düsseldorf Aurora-Kassel Zenit",
@@ -27,8 +27,8 @@
       "conference": "Nord",
       "home": "Düsseldorf Aurora",
       "away": "Kassel Zenit",
-      "g_home": 0,
-      "g_away": 0
+      "g_home": 1,
+      "g_away": 3
     },
     {
       "game_id": "Frankfurt Core-Krefeld Kernschlag",
@@ -36,8 +36,8 @@
       "conference": "Nord",
       "home": "Frankfurt Core",
       "away": "Krefeld Kernschlag",
-      "g_home": 2,
-      "g_away": 1
+      "g_home": 5,
+      "g_away": 2
     },
     {
       "game_id": "Iserlohn Miners-Köln Blitzhaie",
@@ -46,7 +46,7 @@
       "home": "Iserlohn Miners",
       "away": "Köln Blitzhaie",
       "g_home": 2,
-      "g_away": 2
+      "g_away": 3
     },
     {
       "game_id": "Augsburg Ferox-Schwenningen Sturmflügel",
@@ -54,8 +54,8 @@
       "conference": "Süd",
       "home": "Augsburg Ferox",
       "away": "Schwenningen Sturmflügel",
-      "g_home": 3,
-      "g_away": 3
+      "g_home": 1,
+      "g_away": 1
     },
     {
       "game_id": "Landshut Lichtkern-Straubing Forest Tigers",
@@ -63,8 +63,8 @@
       "conference": "Süd",
       "home": "Landshut Lichtkern",
       "away": "Straubing Forest Tigers",
-      "g_home": 1,
-      "g_away": 5
+      "g_home": 3,
+      "g_away": 2
     },
     {
       "game_id": "München FluxBullen-Ravensburg Zenit Falken",
@@ -72,8 +72,8 @@
       "conference": "Süd",
       "home": "München FluxBullen",
       "away": "Ravensburg Zenit Falken",
-      "g_home": 1,
-      "g_away": 1
+      "g_home": 2,
+      "g_away": 3
     },
     {
       "game_id": "Mannheim Ventus-Regensburg Pulse",
@@ -90,7 +90,7 @@
       "conference": "Süd",
       "home": "Novadelta Panther",
       "away": "Nürnberg Eistiger",
-      "g_home": 3,
+      "g_home": 2,
       "g_away": 1
     }
   ]

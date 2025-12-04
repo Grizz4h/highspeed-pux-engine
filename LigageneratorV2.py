@@ -70,9 +70,19 @@ def _init_frames() -> Tuple[pd.DataFrame, pd.DataFrame]:
 
 def _init_new_season_state(season: int) -> Dict[str, Any]:
     nord, sued = _init_frames()
-    nsched     = create_schedule(nord_teams)
-    ssched     = create_schedule(sued_teams)
-    stats      = init_stats()
+
+    # Standard-Schedule
+    nsched = create_schedule(nord_teams)
+    ssched = create_schedule(sued_teams)
+
+    # Story-Constraints anwenden:
+    # - Wir rufen es für beide Conferences auf.
+    # - In der Conference, in der die Nova-Delta Panther + Augsburg Ferox NICHT existieren,
+    #   passiert einfach nichts.
+    nsched = _apply_story_constraints_to_schedule(nsched, nord_teams)
+    ssched = _apply_story_constraints_to_schedule(ssched, sued_teams)
+
+    stats = init_stats()
     return {
         "season": season,
         "spieltag": 1,
@@ -570,6 +580,137 @@ def _apply_story_constraints_to_schedule(
         sched[target_idx], sched[third_idx] = sched[third_idx], sched[target_idx]
 
     return sched
+
+def _find_team_name_by_keywords(teams: List[Dict[str, Any]], keywords: List[str]) -> Optional[str]:
+    """
+    Sucht in der Teamliste nach einem Teamnamen, in dem ALLE Keywords (case-insensitive) vorkommen.
+    Beispiel: keywords=["nova","panther"] matcht "Nova-Delta Panther".
+    """
+    kws = [k.lower() for k in keywords]
+    for t in teams:
+        name = str(t.get("Team", ""))
+        low = name.lower()
+        if all(k in low for k in kws):
+            return name
+    return None
+
+
+def _apply_story_constraints_to_schedule(
+    sched: List[Tuple[str, str]],
+    teams: List[Dict[str, Any]],
+) -> List[Tuple[str, str]]:
+    """
+    Erzwingt für EINEN Conference-Spielplan (Nord ODER Süd) die Story-Regeln für die Nova-Delta Panther:
+
+      1. 1. Spiel der Nova-Delta Panther = Heimspiel.
+      2. 2. Spiel der Nova-Delta Panther = Auswärtsspiel (wenn sinnvoll machbar).
+      3. 3. Spiel der Nova-Delta Panther = Heimspiel GEGEN Augsburg Ferox (wenn beide im selben Conference-Teams-Array sind).
+
+    WICHTIG:
+      - Wir permutieren nur EXISTIERENDE Spiele (Swap von ganzen Paarungen).
+      - Round-Robin-Struktur bleibt intakt.
+      - Wenn Nova/Augsburg in dieser Conference nicht existieren, macht die Funktion nichts.
+    """
+    # Teamnamen anhand Keywords suchen
+    nova = _find_team_name_by_keywords(teams, ["nova", "panther"])
+    augs = _find_team_name_by_keywords(teams, ["augs", "ferox"])
+
+    # Wenn Nova-Delta in dieser Conference gar nicht existiert: nichts tun
+    if not nova:
+        return sched
+
+    # "half" = Anzahl Spiele pro Spieltag in dieser Conference
+    if len(teams) % 2 == 0:
+        half = len(teams) // 2
+    else:
+        # Falls BYE verwendet wird, wäre hier theoretisch +1, aber da Nova nie BYE spielt,
+        # reicht die einfache Berechnung.
+        half = (len(teams) + 1) // 2
+
+    def recompute_nd_games() -> List[Dict[str, Any]]:
+        nd_games: List[Dict[str, Any]] = []
+        for idx, (h, a) in enumerate(sched):
+            if h == nova or a == nova:
+                day = idx // half  # 0-basierter Spieltag
+                nd_games.append({
+                    "idx": idx,
+                    "day": day,
+                    "home": (h == nova),
+                    "opp": a if h == nova else h,
+                })
+        nd_games.sort(key=lambda x: x["day"])
+        return nd_games
+
+    nd_games = recompute_nd_games()
+    if len(nd_games) == 0:
+        return sched
+
+    # --------------------------------------------------------
+    # Schritt 1: 3. Spiel = Heim vs Augsburg (falls möglich)
+    # --------------------------------------------------------
+    if len(nd_games) >= 3 and augs:
+        nd_games = recompute_nd_games()
+
+        # Finde ein Spiel Nova HEIM gegen Augsburg
+        aug_home_game = None
+        for g in nd_games:
+            if g["home"] and g["opp"] == augs:
+                aug_home_game = g
+                break
+
+        if aug_home_game is not None:
+            # 3. Spiel (chronologisch nach Spieltag)
+            third = nd_games[2]  # index 2 = 3. Spiel
+            if third["idx"] != aug_home_game["idx"]:
+                i1 = third["idx"]
+                i2 = aug_home_game["idx"]
+                sched[i1], sched[i2] = sched[i2], sched[i1]
+                nd_games = recompute_nd_games()
+
+    # --------------------------------------------------------
+    # Schritt 2: 1. Spiel = Heimspiel
+    # --------------------------------------------------------
+    nd_games = recompute_nd_games()
+    first = nd_games[0]
+    if not first["home"]:
+        # Wir wollen ein anderes Nova-Heimspiel an diese Stelle ziehen,
+        # aber nicht das festgelegte 3. Spiel kaputtmachen.
+        avoid_idx = nd_games[2]["idx"] if len(nd_games) >= 3 else None
+        swap_candidate = None
+        for g in nd_games[1:]:
+            if g["home"] and g["idx"] != avoid_idx:
+                swap_candidate = g
+                break
+
+        if swap_candidate is not None:
+            i1 = first["idx"]
+            i2 = swap_candidate["idx"]
+            sched[i1], sched[i2] = sched[i2], sched[i1]
+            nd_games = recompute_nd_games()
+
+    # --------------------------------------------------------
+    # Schritt 3: 2. Spiel = Auswärtsspiel (wenn möglich)
+    # --------------------------------------------------------
+    nd_games = recompute_nd_games()
+    if len(nd_games) >= 2:
+        second = nd_games[1]
+        if second["home"]:
+            # Suche ein späteres Auswärtsspiel, das NICHT das 3. Spiel ist
+            avoid_idx = nd_games[2]["idx"] if len(nd_games) >= 3 else None
+            swap_candidate = None
+            for g in nd_games[2:]:
+                if (not g["home"]) and g["idx"] != avoid_idx:
+                    swap_candidate = g
+                    break
+
+            if swap_candidate is not None:
+                i1 = second["idx"]
+                i2 = swap_candidate["idx"]
+                sched[i1], sched[i2] = sched[i2], sched[i1]
+                nd_games = recompute_nd_games()
+
+    return sched
+
 
 
 def create_schedule(teams: List[Dict[str,Any]]) -> List[Tuple[str,str]]:
