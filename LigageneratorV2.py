@@ -7,6 +7,8 @@ from pathlib import Path
 from typing import Any, Dict, List, Tuple, Optional
 
 import pandas as pd
+import math
+
 
 # ------------------------------------------------
 # Helper: DataFrame -> records ohne NaN
@@ -20,25 +22,53 @@ def _df_to_records_clean(df: pd.DataFrame) -> List[Dict[str, Any]]:
     return clean.to_dict("records")
 
 
+def _clean_for_json(obj: Any) -> Any:
+    """
+    Läuft rekursiv durch Dicts/Listen und ersetzt alle NaN durch None,
+    damit json.dump gültiges JSON schreibt.
+    """
+    # Floats: NaN → None
+    if isinstance(obj, float) and math.isnan(obj):
+        return None
+
+    # Dict: rekursiv durch Werte
+    if isinstance(obj, dict):
+        return {k: _clean_for_json(v) for k, v in obj.items()}
+
+    # Liste/Tuple: rekursiv durch Elemente
+    if isinstance(obj, list):
+        return [_clean_for_json(v) for v in obj]
+
+    if isinstance(obj, tuple):
+        return tuple(_clean_for_json(v) for v in obj)
+
+    # Rest unverändert lassen
+    return obj
+
+
 # ------------------------------------------------
 # 1  PFADE
 # ------------------------------------------------
 SAVEFILE     = Path("saves/savegame.json")
 SPIELTAG_DIR = Path("spieltage")
 PLAYOFF_DIR  = Path("playoffs")
-REPLAY_DIR   = Path("replays")  # <<< NEU: Ordner für Replay-JSONs
+REPLAY_DIR   = Path("replays")    # Ordner für Replay-JSONs
+SCHEDULE_DIR = Path("schedules")  # kompletter Saison-Spielplan
+
 
 # ------------------------------------------------
 # 2  TEAMS LADEN
 # ------------------------------------------------
 from realeTeams_live import nord_teams, sued_teams  # deine Datei mit Teams/Spielern
 
+
 # ------------------------------------------------
 # 3  SAVE/LOAD & INIT
 # ------------------------------------------------
 def _ensure_dirs() -> None:
-    for p in (SAVEFILE.parent, SPIELTAG_DIR, PLAYOFF_DIR, REPLAY_DIR):
+    for p in (SAVEFILE.parent, SPIELTAG_DIR, PLAYOFF_DIR, REPLAY_DIR, SCHEDULE_DIR):
         p.mkdir(parents=True, exist_ok=True)
+
 
 def get_next_season_number() -> int:
     if not SPIELTAG_DIR.exists():
@@ -50,10 +80,13 @@ def get_next_season_number() -> int:
     ]
     return max(nums, default=0) + 1
 
+
 def save_state(state: Dict[str, Any]) -> None:
     SAVEFILE.parent.mkdir(parents=True, exist_ok=True)
+    cleaned = _clean_for_json(state)
     with SAVEFILE.open("w", encoding="utf-8") as f:
-        json.dump(state, f, indent=2, ensure_ascii=False)
+        json.dump(cleaned, f, indent=2, ensure_ascii=False)
+
 
 def load_state() -> Optional[Dict[str, Any]]:
     if SAVEFILE.exists() and SAVEFILE.stat().st_size > 0:
@@ -61,26 +94,276 @@ def load_state() -> Optional[Dict[str, Any]]:
             return json.load(f)
     return None
 
+
 def _init_frames() -> Tuple[pd.DataFrame, pd.DataFrame]:
     n = pd.DataFrame(nord_teams)
     s = pd.DataFrame(sued_teams)
     for d in (n, s):
-        d[["Points","Goals For","Goals Against"]] = 0
+        d[["Points", "Goals For", "Goals Against"]] = 0
     return n, s
+
+
+# ------------------------------------------------
+# 3a SPIELPLAN-GENERATOR (REINES ROUND-ROBIN)
+# ------------------------------------------------
+def create_schedule(teams: List[Dict[str, Any]]) -> List[Tuple[str, str]]:
+    """
+    Standard Round-Robin mit Hin- und Rückrunde.
+    KEINE Story-Constraints, KEINE Swaps.
+    Ergebnis: Liste von (home, away)-Tuples der Länge N*(N-1).
+    """
+    teams = teams.copy()
+    # Falls ungerade Anzahl → BYE-Team rein
+    if len(teams) % 2:
+        teams.append({"Team": "BYE"})
+
+    days = len(teams) - 1
+    half = len(teams) // 2
+
+    sched: List[Tuple[str, str]] = []
+    for d in range(days * 2):
+        day_matches: List[Tuple[str, str]] = []
+        for i in range(half):
+            a, b = teams[i]["Team"], teams[-i - 1]["Team"]
+            if d % 2 == 0:
+                day_matches.append((a, b))
+            else:
+                day_matches.append((b, a))
+        sched.extend(day_matches)
+        # Round-Robin-Rotation
+        teams.insert(1, teams.pop())
+
+    # BYE-Spiele filtern (falls es jemals eins gäbe – sollten aber normal nicht in deiner Liga sein)
+    sched = [(h, a) for (h, a) in sched if "BYE" not in (h, a)]
+    return sched
+
+
+def _find_team_name_by_keywords(teams: List[Dict[str, Any]], keywords: List[str]) -> Optional[str]:
+    """
+    Sucht in der Teamliste nach einem Teamnamen, in dem ALLE Keywords (case-insensitive) vorkommen.
+    Beispiel: keywords=["nova","panther"] matcht "Nova-Delta Panther".
+    """
+    kws = [k.lower() for k in keywords]
+    for t in teams:
+        name = str(t.get("Team", ""))
+        low = name.lower()
+        if all(k in low for k in kws):
+            return name
+    return None
+
+
+def _enforce_novadelta_augsburg_third_match(
+    sched: List[Tuple[str, str]],
+    teams: List[Dict[str, Any]],
+) -> List[Tuple[str, str]]:
+    """
+    Story-Logik:
+
+    1. Wenn Nova-Delta in dieser Conference existiert:
+       → Nova-Delta bekommt strikt:
+          - 1. Spiel = HEIM
+          - dann H/A-Wechsel: H, A, H, A, ...
+       (wird durch Swap von Heim/Auswärts innerhalb derselben Paarung erreicht)
+
+    2. Wenn zusätzlich Augsburg Ferox in dieser Conference existiert:
+       → 3. Nova-Delta-Spiel (chronologisch) wird Heimspiel GEGEN Augsburg Ferox,
+         indem wir den kompletten Spieltag des Nova-Heimspiels vs Augsburg
+         mit dem Spieltag des 3. Nova-Spiels tauschen.
+
+    WICHTIG:
+      - Wir arbeiten auf einem normalen Round-Robin-Schedule.
+      - Wir setzen voraus, dass die Conference eine GERADE Anzahl Teams hat.
+      - Es werden nur zwei komplette Spieltage getauscht → keine Doppel-Spiele
+        pro Spieltag für irgendein Team.
+    """
+    nova = _find_team_name_by_keywords(teams, ["nova", "panther"])
+    if not nova:
+        # NovaDelta ist in dieser Conference gar nicht drin → nichts tun
+        return sched
+
+    team_count = len(teams)
+    if team_count % 2 != 0:
+        # Für ungerade Teamanzahl lassen wir die Story-Constraints lieber weg,
+        # damit wir uns nicht mit BYE-Matching zerlegen.
+        print("[INFO] Story-Constraint deaktiviert (ungerade Teamanzahl in Conference).")
+        return sched
+
+    half = team_count // 2
+    if len(sched) % half != 0:
+        print("[WARN] _enforce_novadelta_augsburg_third_match: sched-Länge passt nicht zu 'half'")
+        return sched
+
+    days_count = len(sched) // half
+
+    # ------------------------------------------------
+    # Schritt A: NovaDelta bekommt H/A-Muster: Heim, Auswärts, Heim, Auswärts, ...
+    # ------------------------------------------------
+    # Alle Nova-Spiele einsammeln (chronologisch)
+    nd_indices: List[Tuple[int, int]] = []  # (day, idx)
+    for idx, (h, a) in enumerate(sched):
+        if h == nova or a == nova:
+            day = idx // half
+            nd_indices.append((day, idx))
+
+    if not nd_indices:
+        return sched
+
+    nd_indices.sort(key=lambda x: x[0])  # nach Spieltag sortieren
+
+    # Für das k-te Nova-Spiel: k=0 → Heim, k=1 → Auswärts, k=2 → Heim, ...
+    for k, (day, idx) in enumerate(nd_indices):
+        desired_home = (k % 2 == 0)  # 0,2,4,... = True
+        h, a = sched[idx]
+        is_home_now = (h == nova)
+        if is_home_now != desired_home:
+            # Heim/Auswärts-Seiten genau dieses Spiels tauschen
+            sched[idx] = (a, h)
+
+    # ------------------------------------------------
+    # Schritt B: 3. Nova-Spiel = Heim vs Augsburg (falls möglich)
+    # ------------------------------------------------
+    augs = _find_team_name_by_keywords(teams, ["augs", "ferox"])
+    if not augs:
+        # Augsburg nicht in dieser Conference → nur H/A-Muster bleibt
+        return sched
+
+    # Nova-Spiele nach dem H/A-Fix nochmal einsammeln, inkl. Gegner
+    nd_games: List[Dict[str, Any]] = []
+    for idx, (h, a) in enumerate(sched):
+        if h == nova or a == nova:
+            day = idx // half
+            home = (h == nova)
+            opp = a if home else h
+            nd_games.append({
+                "day": day,
+                "idx": idx,
+                "home": home,
+                "opp": opp,
+            })
+
+    nd_games.sort(key=lambda g: g["day"])
+
+    # Wir brauchen mind. 3 Nova-Spiele
+    if len(nd_games) < 3:
+        return sched
+
+    third_game = nd_games[2]  # 3. Spiel (0-basiert)
+    third_day = third_game["day"]
+
+    # Safety: nach unserem Muster sollte das 3. Spiel Heim sein
+    if not third_game["home"]:
+        print("[WARN] 3. Nova-Spiel ist nach H/A-Logik doch nicht Heim – Story-Constraint wird nicht erzwungen.")
+        return sched
+
+    # Find Nova-Heimspiel vs Augsburg
+    target_game: Optional[Dict[str, Any]] = None
+    for g in nd_games:
+        if g["home"] and g["opp"] == augs:
+            target_game = g
+            break
+
+    if not target_game:
+        # Es gibt kein Nova-Heimspiel vs Augsburg in dieser Conference → Ende
+        return sched
+
+    target_day = target_game["day"]
+
+    # Wenn das Heimspiel vs Augsburg bereits am 3. Nova-Spieltag ist, sind wir fertig
+    if target_day == third_day:
+        return sched
+
+    # Ganze Spieltage tauschen: drittens Nova-Spieltag <-> Tag mit Nova-Heimspiel vs Augsburg
+    d1, d2 = third_day, target_day
+    for k in range(half):
+        i1 = d1 * half + k
+        i2 = d2 * half + k
+        sched[i1], sched[i2] = sched[i2], sched[i1]
+
+    return sched
+
+
+# ------------------------------------------------
+# 3b SAISON-INITIALISIERUNG + SPIELPLAN-PREVIEW
+# ------------------------------------------------
+def _build_schedule_matchdays(
+    sched: List[Tuple[str, str]],
+    team_count: int,
+) -> List[Dict[str, Any]]:
+    """
+    Bricht einen flachen Schedule (List[Tuple[home,away]]) in Spieltage runter.
+    """
+    if team_count % 2 == 0:
+        half = team_count // 2
+    else:
+        half = (team_count + 1) // 2
+
+    days = (team_count - 1) * 2  # Hin- und Rückrunde
+
+    matchdays: List[Dict[str, Any]] = []
+    for day in range(days):
+        start = day * half
+        end = start + half
+        day_matches = sched[start:end]
+        matchdays.append({
+            "matchday": day + 1,
+            "matches": [
+                {"home": h, "away": a}
+                for (h, a) in day_matches
+            ],
+        })
+    return matchdays
+
+
+def _save_full_schedule_preview(
+    season: int,
+    nsched: List[Tuple[str, str]],
+    ssched: List[Tuple[str, str]],
+) -> None:
+    """
+    Speichert einen kompletten Saison-Spielplan in:
+      schedules/saison_<season>/spielplan.json
+
+    Inhalt:
+      - Nord/Süd Teams
+      - Matchdays mit Paarungen (ohne Ergebnisse)
+    """
+    north_team_names = [t["Team"] for t in nord_teams]
+    south_team_names = [t["Team"] for t in sued_teams]
+
+    nord_matchdays = _build_schedule_matchdays(nsched, len(north_team_names))
+    sued_matchdays = _build_schedule_matchdays(ssched, len(south_team_names))
+
+    payload: Dict[str, Any] = {
+        "season": season,
+        "created_at": datetime.now().isoformat(),
+        "nord": {
+            "teams": north_team_names,
+            "matchdays": nord_matchdays,
+        },
+        "sued": {
+            "teams": south_team_names,
+            "matchdays": sued_matchdays,
+        },
+    }
+
+    target_folder = SCHEDULE_DIR / f"saison_{season}"
+    _save_json(target_folder, "spielplan.json", payload)
+    print("📃 Saison-Spielplan gespeichert →", target_folder / "spielplan.json")
+
 
 def _init_new_season_state(season: int) -> Dict[str, Any]:
     nord, sued = _init_frames()
 
-    # Standard-Schedule
+    # Reine Round-Robin-Schedules (Nord/Süd)
     nsched = create_schedule(nord_teams)
     ssched = create_schedule(sued_teams)
 
-    # Story-Constraints anwenden:
-    # - Wir rufen es für beide Conferences auf.
-    # - In der Conference, in der die Nova-Delta Panther + Augsburg Ferox NICHT existieren,
-    #   passiert einfach nichts.
-    nsched = _apply_story_constraints_to_schedule(nsched, nord_teams)
-    ssched = _apply_story_constraints_to_schedule(ssched, sued_teams)
+    # Story-Constraints für NovaDelta/Augsburg
+    nsched = _enforce_novadelta_augsburg_third_match(nsched, nord_teams)
+    ssched = _enforce_novadelta_augsburg_third_match(ssched, sued_teams)
+
+    # kompletten Spielplan als JSON für Story/Preview sichern
+    _save_full_schedule_preview(season, nsched, ssched)
 
     stats = init_stats()
     return {
@@ -94,6 +377,7 @@ def _init_new_season_state(season: int) -> Dict[str, Any]:
         "history": [],
         "phase": "regular",
     }
+
 
 # ------------------------------------------------
 # 4  EXPORT-HILFEN
@@ -130,9 +414,11 @@ def _export_tables(nord_df: pd.DataFrame, sued_df: pd.DataFrame, stats: pd.DataF
 
 def _save_json(folder: Path, name: str, payload: Dict[str, Any]) -> None:
     folder.mkdir(parents=True, exist_ok=True)
+    cleaned = _clean_for_json(payload)
     with (folder / name).open("w", encoding="utf-8") as f:
-        json.dump(payload, f, indent=2, ensure_ascii=False)
+        json.dump(cleaned, f, indent=2, ensure_ascii=False)
     print("📦 JSON gespeichert →", folder / name)
+
 
 def save_spieltag_json(
     season: int,
@@ -142,7 +428,7 @@ def save_spieltag_json(
     sued: pd.DataFrame,
     stats: pd.DataFrame,
     *,
-    debug: Optional[Dict[str, Any]] = None,  # <<< DEBUG-Hook
+    debug: Optional[Dict[str, Any]] = None,  # DEBUG-Hook
 ) -> None:
     payload: Dict[str, Any] = {
         "timestamp": datetime.now().isoformat(),
@@ -152,11 +438,12 @@ def save_spieltag_json(
         **_export_tables(nord, sued, stats),
     }
     if debug is not None:
-        payload["debug"] = debug  # komplette Debug-Struktur pro Spieltag
+        payload["debug"] = debug
     _save_json(SPIELTAG_DIR / f"saison_{season}", f"spieltag_{gameday:02}.json", payload)
 
+
 # ------------------------------------------------
-# 4b REPLAY-EXPORT (NEU)
+# 4b REPLAY-EXPORT
 # ------------------------------------------------
 def save_replay_json(
     season: int,
@@ -178,14 +465,13 @@ def save_replay_json(
         "games": [],
     }
 
-    for idx, m in enumerate(replay_matches):
+    for m in replay_matches:
         home = m["home"]
         away = m["away"]
         g_home = m["g_home"]
         g_away = m["g_away"]
         conference = m.get("conference")
 
-        # Einfacher Game-ID-Generator für jetzt:
         game_id = m.get("game_id") or f"{home}-{away}"
 
         game_payload = {
@@ -210,7 +496,7 @@ def save_replay_json(
 
         matchday_payload["games"].append({
             "game_id": game_id,
-            "featured": False,  # später können wir Topspiele markieren
+            "featured": False,
             "conference": conference,
             "home": home,
             "away": away,
@@ -219,6 +505,7 @@ def save_replay_json(
         })
 
     _save_json(base_folder, "replay_matchday.json", matchday_payload)
+
 
 # ------------------------------------------------
 # 5  TERMINAL-AUSGABEN
@@ -242,10 +529,10 @@ def _print_tables(nord: pd.DataFrame, sued: pd.DataFrame, stats: pd.DataFrame) -
     print("\n⭐ Top-20 Scorer")
     print(top20.to_string(index=False))
 
+
 # ------------------------------------------------
 # 6  SIMULATIONSGRUNDSÄTZE + LINEUPS
 # ------------------------------------------------
-
 def _weighted_pick_by_gp(players: List[Dict[str, Any]], count: int, jitter_factor: float = 0.3) -> List[Dict[str, Any]]:
     """
     Wählt 'count' Spieler aus:
@@ -298,9 +585,8 @@ def build_lineup(
     if gs:
         lineup.extend(_weighted_pick_by_gp(gs, min(n_goalies, len(gs))))
     else:
-        # Fallback, falls aus irgendeinem Grund kein Goalie markiert ist
         print("[WARN] Team ohne Goalies im Roster – kein G im Lineup.")
-    
+
     # Sicherheitsnetz: Keine Duplikate
     seen_ids = set()
     unique_lineup: List[Dict[str, Any]] = []
@@ -310,7 +596,6 @@ def build_lineup(
             seen_ids.add(key)
             unique_lineup.append(p)
 
-    # --- Debug-Check --------------------------------------
     d_count = sum(1 for p in unique_lineup if p.get("PositionGroup") == "D")
     f_count = sum(1 for p in unique_lineup if p.get("PositionGroup") == "F")
     g_count = sum(1 for p in unique_lineup if p.get("PositionGroup") == "G")
@@ -325,9 +610,8 @@ def build_lineup(
         if g_count < n_goalies:
             print("   -> KEIN GOALIE verfügbar!")
 
-    # -------------------------------------------------------
-
     return unique_lineup
+
 
 def _get_lineup_for_team(df: pd.DataFrame, team_name: str) -> List[Dict[str, Any]]:
     """
@@ -345,6 +629,7 @@ def _get_lineup_for_team(df: pd.DataFrame, team_name: str) -> List[Dict[str, Any
         return row["Lineup"]
     return row["Players"]
 
+
 def prepare_lineups_for_matches(df: pd.DataFrame, matches: List[Tuple[str, str]]) -> None:
     """
     Für alle Teams, die an diesem Spieltag in 'matches' beteiligt sind,
@@ -355,7 +640,6 @@ def prepare_lineups_for_matches(df: pd.DataFrame, matches: List[Tuple[str, str]]
         teams_today.add(home)
         teams_today.add(away)
 
-    # sicherstellen, dass es die Spalte "Lineup" gibt
     if "Lineup" not in df.columns:
         df["Lineup"] = None
 
@@ -370,15 +654,15 @@ def prepare_lineups_for_matches(df: pd.DataFrame, matches: List[Tuple[str, str]]
             print(f"[WARN] prepare_lineups_for_matches: Kein Index für Team '{team_name}' gefunden")
             continue
 
-        idx = idx_list[0]  # genau eine Zeile pro Team
+        idx = idx_list[0]
         players = df.at[idx, "Players"]
         lineup = build_lineup(players, team_name=team_name)
         df.at[idx, "Lineup"] = lineup
 
+
 # -----------------------------------------------------
 # DEBUG-Helfer: Tabellenansicht & Stärkevergleich & JSON-Payload
 # -----------------------------------------------------
-
 def _build_lineup_table(df: pd.DataFrame, matches: List[Tuple[str, str]]) -> pd.DataFrame:
     """
     Erzeugt eine flache Tabelle:
@@ -402,9 +686,9 @@ def _build_lineup_table(df: pd.DataFrame, matches: List[Tuple[str, str]]) -> pd.
     if not rows:
         return pd.DataFrame(columns=["Team", "Rolle", "Gegner", "Name", "Pos", "GP", "OVR"])
     df_out = pd.DataFrame(rows)
-    # Sortierung: nach Team, Rolle, OVR runter
     df_out = df_out.sort_values(["Team", "Rolle", "OVR"], ascending=[True, True, False])
     return df_out
+
 
 def _build_strength_panel(df: pd.DataFrame, matches: List[Tuple[str, str]]) -> pd.DataFrame:
     """
@@ -437,6 +721,7 @@ def _build_strength_panel(df: pd.DataFrame, matches: List[Tuple[str, str]]) -> p
     if not rows:
         return pd.DataFrame(columns=["Home", "Away", "Home_OVR", "Away_OVR", "Diff"])
     return pd.DataFrame(rows)
+
 
 def _build_debug_matches_payload(df: pd.DataFrame, matches: List[Tuple[str, str]]) -> List[Dict[str, Any]]:
     """
@@ -487,254 +772,16 @@ def calc_strength(row: pd.Series, home: bool = False) -> float:
     ) / len(players)
 
     total = base
-    # Tagesform / Randomness
     total *= 1 + random.uniform(-5, 5) / 100
-    # Momentum (falls du das später nutzt)
     total *= 1 + row.get("Momentum", 0) / 100
-    # Heimvorteil
     total *= 1 + (3 if home else 0) / 100
-    # kleine Zusatz-Streuung
     total *= 1 + random.uniform(-1, 2) / 100
     return round(total, 2)
 
 
 # ------------------------------------------------
-# 6b  STORY-CONSTRAINT-HELPER für Spielplan
+# 6c  STATS-UPDATES
 # ------------------------------------------------
-
-def _find_team_name_by_keywords(teams: List[Dict[str, Any]], keywords: List[str]) -> Optional[str]:
-    """
-    Sucht in der Teamliste nach einem Teamnamen, der alle Keywords (case-insensitive)
-    im String enthält. Damit sind wir robuster gegen Schreibweisen wie
-    'NOVADELTA Panther', 'Nova-Delta-Panther', 'Augsburg Ferox', etc.
-    """
-    kws = [k.lower() for k in keywords]
-    for t in teams:
-        name = str(t.get("Team", ""))
-        low = name.lower()
-        if all(k in low for k in kws):
-            return name
-    return None
-
-
-def _apply_story_constraints_to_schedule(
-    sched: List[Tuple[str, str]],
-    teams: List[Dict[str, Any]],
-) -> List[Tuple[str, str]]:
-    """
-    Erzwingt für NOVADELTA Panther:
-      - erstes Saisonspiel = Heimspiel
-      - drittes Saisonspiel (2. Heimspiel) = Heimspiel gegen Augsburg Ferox
-
-    Falls die Teams nicht gefunden werden, bleibt der Spielplan unverändert.
-    """
-    nova = _find_team_name_by_keywords(teams, ["nova", "panther"])
-    augs = _find_team_name_by_keywords(teams, ["augs", "ferox"])
-
-    if not nova:
-        return sched  # Team nicht in dieser Conference → nichts erzwingen
-    # Augsburg darf theoretisch in der anderen Conference liegen; dann können wir nur
-    # "erstes Spiel Heim" garantieren, aber nicht den Gegner.
-    # Deshalb kein harter Abort, wenn augs == None.
-
-    # 1) Erstes Spiel der Nova-Delta-Panther = Heimspiel
-    indices = [i for i, (h, a) in enumerate(sched) if h == nova or a == nova]
-    if not indices:
-        return sched  # irgendwas stimmt fundamental nicht
-
-    first_idx = indices[0]
-    if sched[first_idx][0] != nova:
-        # wir suchen das erste Spiel, in dem NOVADELTA bereits Heimteam ist
-        home_indices = [i for i in indices if sched[i][0] == nova]
-        if home_indices:
-            swap_idx = home_indices[0]
-            sched[first_idx], sched[swap_idx] = sched[swap_idx], sched[first_idx]
-
-    # 2) Drittes Spiel der Nova-Delta-Panther = Heim vs Augsburg-Ferox
-    #    (nur, wenn Augsburg auch in dieser Teams-Liste existiert)
-    if not augs:
-        return sched
-
-    # Indizes nach möglicher Verschiebung neu berechnen
-    indices = [i for i, (h, a) in enumerate(sched) if h == nova or a == nova]
-    if len(indices) < 3:
-        # Zu wenig Spiele in diesem Block, um ein "3. Spiel" zu erzwingen
-        return sched
-
-    third_idx = indices[2]
-
-    # Index des Spiels NOVADELTA (Home) vs Augsburg
-    target_idx: Optional[int] = None
-    for i, (h, a) in enumerate(sched):
-        if h == nova and a == augs:
-            target_idx = i
-            break
-
-    if target_idx is None:
-        # es gibt kein Heimspiel NOVADELTA vs Augsburg in diesem Schedule-Array
-        # (z. B. weil Conference anders getrennt ist)
-        return sched
-
-    # Wir wollen, dass genau an Position 'third_idx' das Spiel (nova, augs) liegt
-    if target_idx != third_idx:
-        sched[target_idx], sched[third_idx] = sched[third_idx], sched[target_idx]
-
-    return sched
-
-def _find_team_name_by_keywords(teams: List[Dict[str, Any]], keywords: List[str]) -> Optional[str]:
-    """
-    Sucht in der Teamliste nach einem Teamnamen, in dem ALLE Keywords (case-insensitive) vorkommen.
-    Beispiel: keywords=["nova","panther"] matcht "Nova-Delta Panther".
-    """
-    kws = [k.lower() for k in keywords]
-    for t in teams:
-        name = str(t.get("Team", ""))
-        low = name.lower()
-        if all(k in low for k in kws):
-            return name
-    return None
-
-
-def _apply_story_constraints_to_schedule(
-    sched: List[Tuple[str, str]],
-    teams: List[Dict[str, Any]],
-) -> List[Tuple[str, str]]:
-    """
-    Erzwingt für EINEN Conference-Spielplan (Nord ODER Süd) die Story-Regeln für die Nova-Delta Panther:
-
-      1. 1. Spiel der Nova-Delta Panther = Heimspiel.
-      2. 2. Spiel der Nova-Delta Panther = Auswärtsspiel (wenn sinnvoll machbar).
-      3. 3. Spiel der Nova-Delta Panther = Heimspiel GEGEN Augsburg Ferox (wenn beide im selben Conference-Teams-Array sind).
-
-    WICHTIG:
-      - Wir permutieren nur EXISTIERENDE Spiele (Swap von ganzen Paarungen).
-      - Round-Robin-Struktur bleibt intakt.
-      - Wenn Nova/Augsburg in dieser Conference nicht existieren, macht die Funktion nichts.
-    """
-    # Teamnamen anhand Keywords suchen
-    nova = _find_team_name_by_keywords(teams, ["nova", "panther"])
-    augs = _find_team_name_by_keywords(teams, ["augs", "ferox"])
-
-    # Wenn Nova-Delta in dieser Conference gar nicht existiert: nichts tun
-    if not nova:
-        return sched
-
-    # "half" = Anzahl Spiele pro Spieltag in dieser Conference
-    if len(teams) % 2 == 0:
-        half = len(teams) // 2
-    else:
-        # Falls BYE verwendet wird, wäre hier theoretisch +1, aber da Nova nie BYE spielt,
-        # reicht die einfache Berechnung.
-        half = (len(teams) + 1) // 2
-
-    def recompute_nd_games() -> List[Dict[str, Any]]:
-        nd_games: List[Dict[str, Any]] = []
-        for idx, (h, a) in enumerate(sched):
-            if h == nova or a == nova:
-                day = idx // half  # 0-basierter Spieltag
-                nd_games.append({
-                    "idx": idx,
-                    "day": day,
-                    "home": (h == nova),
-                    "opp": a if h == nova else h,
-                })
-        nd_games.sort(key=lambda x: x["day"])
-        return nd_games
-
-    nd_games = recompute_nd_games()
-    if len(nd_games) == 0:
-        return sched
-
-    # --------------------------------------------------------
-    # Schritt 1: 3. Spiel = Heim vs Augsburg (falls möglich)
-    # --------------------------------------------------------
-    if len(nd_games) >= 3 and augs:
-        nd_games = recompute_nd_games()
-
-        # Finde ein Spiel Nova HEIM gegen Augsburg
-        aug_home_game = None
-        for g in nd_games:
-            if g["home"] and g["opp"] == augs:
-                aug_home_game = g
-                break
-
-        if aug_home_game is not None:
-            # 3. Spiel (chronologisch nach Spieltag)
-            third = nd_games[2]  # index 2 = 3. Spiel
-            if third["idx"] != aug_home_game["idx"]:
-                i1 = third["idx"]
-                i2 = aug_home_game["idx"]
-                sched[i1], sched[i2] = sched[i2], sched[i1]
-                nd_games = recompute_nd_games()
-
-    # --------------------------------------------------------
-    # Schritt 2: 1. Spiel = Heimspiel
-    # --------------------------------------------------------
-    nd_games = recompute_nd_games()
-    first = nd_games[0]
-    if not first["home"]:
-        # Wir wollen ein anderes Nova-Heimspiel an diese Stelle ziehen,
-        # aber nicht das festgelegte 3. Spiel kaputtmachen.
-        avoid_idx = nd_games[2]["idx"] if len(nd_games) >= 3 else None
-        swap_candidate = None
-        for g in nd_games[1:]:
-            if g["home"] and g["idx"] != avoid_idx:
-                swap_candidate = g
-                break
-
-        if swap_candidate is not None:
-            i1 = first["idx"]
-            i2 = swap_candidate["idx"]
-            sched[i1], sched[i2] = sched[i2], sched[i1]
-            nd_games = recompute_nd_games()
-
-    # --------------------------------------------------------
-    # Schritt 3: 2. Spiel = Auswärtsspiel (wenn möglich)
-    # --------------------------------------------------------
-    nd_games = recompute_nd_games()
-    if len(nd_games) >= 2:
-        second = nd_games[1]
-        if second["home"]:
-            # Suche ein späteres Auswärtsspiel, das NICHT das 3. Spiel ist
-            avoid_idx = nd_games[2]["idx"] if len(nd_games) >= 3 else None
-            swap_candidate = None
-            for g in nd_games[2:]:
-                if (not g["home"]) and g["idx"] != avoid_idx:
-                    swap_candidate = g
-                    break
-
-            if swap_candidate is not None:
-                i1 = second["idx"]
-                i2 = swap_candidate["idx"]
-                sched[i1], sched[i2] = sched[i2], sched[i1]
-                nd_games = recompute_nd_games()
-
-    return sched
-
-
-
-def create_schedule(teams: List[Dict[str,Any]]) -> List[Tuple[str,str]]:
-    # Original-Teams sichern, bevor wir BYE etc. reinmurksen
-    original_teams = teams.copy()
-
-    teams = teams.copy()
-    if len(teams)%2:
-        teams.append({"Team":"BYE"})
-    days, half = len(teams)-1, len(teams)//2
-    sched: List[Tuple[str, str]] = []
-    for d in range(days*2):
-        day=[]
-        for i in range(half):
-            a,b = teams[i]["Team"],teams[-i-1]["Team"]
-            day.append((a,b) if d%2==0 else (b,a))
-        sched.extend(day)
-        teams.insert(1,teams.pop())
-
-    # STORY-CONSTRAINTS anwenden (Nova-Delta-Panther, Augsburg-Ferox)
-    sched = _apply_story_constraints_to_schedule(sched, original_teams)
-    return sched
-
-
 def update_player_stats(team: str, goals: int, df: pd.DataFrame, stats: pd.DataFrame) -> List[Dict[str, Any]]:
     """
     Aktualisiert Stats für 'goals' Tore eines Teams und liefert pro Tor:
@@ -745,10 +792,7 @@ def update_player_stats(team: str, goals: int, df: pd.DataFrame, stats: pd.DataF
         "assist_number": <Rückennummer oder None>
       }
     zurück.
-
-    WICHTIG: Wir nutzen "Name" als ID für Stats + Replay.
     """
-    # Roster aus Lineup, falls vorhanden – sonst Fallback auf komplettes Roster
     mask = df["Team"] == team
     if not mask.any() or goals <= 0:
         return []
@@ -760,37 +804,26 @@ def update_player_stats(team: str, goals: int, df: pd.DataFrame, stats: pd.DataF
             use_column = "Lineup"
 
     roster = df.loc[mask, use_column].iloc[0]
-    # Für Stats ggf. auf 18 Spieler begrenzen
     roster = random.sample(roster, 18) if len(roster) > 18 else roster
 
-    # --- Skater-Pool: komplett ohne Goalies (für Tore UND Assists) ----------
     skaters = [
         p for p in roster
         if str(p.get("PositionGroup", "")).upper() != "G"
     ]
-
-    # Fallback: falls aus irgendeinem Grund keine Skater markiert sind,
-    # nimm das ganze Roster, damit die Simulation nicht crasht.
     if not skaters:
         skaters = roster
 
-    # Pool + Gewichte
     scorer_pool = skaters
-    scorer_names = [p["Name"] for p in scorer_pool]
     scorer_weights = [max(1, int(p.get("Offense", 50)) // 5) for p in scorer_pool]
 
     goal_events: List[Dict[str, Any]] = []
 
     for _ in range(goals):
-        # --- Torschütze (nur Skater) ----------------------------------------
         scorer_player = random.choices(scorer_pool, weights=scorer_weights)[0]
         scorer_name = scorer_player["Name"]
         scorer_number = scorer_player.get("Number")
-
-        # Stats-Update für den Torschützen
         stats.loc[stats["Player"] == scorer_name, "Goals"] += 1
 
-        # --- Assistent (optional, auch nur Skater, != Torschütze) -----------
         assist_name = None
         assist_number = None
 
@@ -813,24 +846,15 @@ def update_player_stats(team: str, goals: int, df: pd.DataFrame, stats: pd.DataF
     return goal_events
 
 
-
 def simulate_match(df: pd.DataFrame,
                    home: str,
                    away: str,
                    stats: pd.DataFrame,
                    conf: str) -> Tuple[str, Dict[str, Any], Dict[str, Any]]:
     """
-    Simuliert EIN Spiel:
-      - Ergebnis + Tabellenupdate + Spielerstats
-      - Replay-Struct mit Aktionen:
-        * action_id: int
-        * step_in_action: 0..3
-        * Zonenfolge: defensiv -> neutral -> offensiv -> offensiv (Abschluss)
-        * result: "goal" oder "none"
-        * player_main / player_secondary (Fake-Namen aus 'Name')
+    Simuliert EIN Spiel inkl. Replay-Struktur.
     """
 
-    # --- Ergebnis & Tabellen wie bisher ------------------------------------
     r_h = df[df["Team"] == home].iloc[0]
     r_a = df[df["Team"] == away].iloc[0]
 
@@ -841,7 +865,6 @@ def simulate_match(df: pd.DataFrame,
     g_home = max(0, int(random.gauss(p_home * 5, 1)))
     g_away = max(0, int(random.gauss((1 - p_home) * 5, 1)))
 
-    # Tabelle updaten
     df.loc[df["Team"] == home, ["Goals For", "Goals Against"]] += [g_home, g_away]
     df.loc[df["Team"] == away, ["Goals For", "Goals Against"]] += [g_away, g_home]
 
@@ -852,7 +875,6 @@ def simulate_match(df: pd.DataFrame,
     else:
         df.loc[df["Team"].isin([home, away]), "Points"] += 1
 
-    # Spielerstats (unabhängig von Replay)
     update_player_stats(home, g_home, df, stats)
     update_player_stats(away, g_away, df, stats)
 
@@ -865,12 +887,10 @@ def simulate_match(df: pd.DataFrame,
         "conference": conf,
     }
 
-    # --- Hilfsfunktionen für Replay-Events ---------------------------------
     def _get_skaters(team_name: str) -> List[Dict[str, Any]]:
         mask = df["Team"] == team_name
         if not mask.any():
             return []
-
         row = df[mask].iloc[0]
         players = row.get("Lineup") or row["Players"]
         skaters = [p for p in players
@@ -894,23 +914,19 @@ def simulate_match(df: pd.DataFrame,
             assister.get("Number") if assister else None,
         )
 
-    # --- Aktionenliste bauen -----------------------------------------------
     events: List[Dict[str, Any]] = []
     current_index = 0
     action_id = 0
 
     total_goals = g_home + g_away
     goal_actions: List[Optional[str]] = ["home"] * g_home + ["away"] * g_away
-
-    # Extra-Aktionen ohne Tor für schönere Zwischenphasen
-    extra_no_goal = max(2, len(goal_actions))  # mindestens so viele No-Goal-Actions wie Toraktionen
+    extra_no_goal = max(2, len(goal_actions))
     goal_actions += [None] * extra_no_goal
-
     random.shuffle(goal_actions)
 
     for team_key_raw in goal_actions:
         if team_key_raw is None:
-            team_key = random.choice(["home", "away"])
+            team_key = "home" if random.random() < 0.5 else "away"
             is_goal = False
         else:
             team_key = team_key_raw
@@ -918,11 +934,6 @@ def simulate_match(df: pd.DataFrame,
 
         player_main, player_main_number, player_secondary, player_secondary_number = _pick_pair(team_key)
 
-        # 4-Schritte-Aktion:
-        # 0: Aufbau hinten
-        # 1: Durch neutrale Zone
-        # 2: Druck in offensiver Zone
-        # 3: Abschluss (mit/ohne Tor)
         seq: List[Tuple[str, str, str]] = [
             ("build_up", "defensive", "none"),
             ("attack", "neutral", "none"),
@@ -936,13 +947,13 @@ def simulate_match(df: pd.DataFrame,
         for step, (ev_type, zone, result) in enumerate(seq):
             events.append({
                 "i": current_index,
-                "t": current_index,           # einfache Timeline
+                "t": current_index,
                 "action_id": action_id,
                 "step_in_action": step,
-                "team": team_key,             # "home" / "away"
-                "zone": zone,                 # "defensive" / "neutral" / "offensive"
-                "type": ev_type,              # "build_up" / "attack" / "goal"
-                "result": result,             # "goal" / "none"
+                "team": team_key,
+                "zone": zone,
+                "type": ev_type,
+                "result": result,
                 "player_main": player_main,
                 "player_main_number": player_main_number,
                 "player_secondary": player_secondary,
@@ -963,8 +974,6 @@ def simulate_match(df: pd.DataFrame,
     }
 
     return res_str, res_json, replay_struct
-
-
 
 
 def init_stats() -> pd.DataFrame:
@@ -996,16 +1005,16 @@ def _initial_playoff_pairings(nord: pd.DataFrame, sued: pd.DataFrame) -> List[Tu
         (nord4.iloc[3]["Team"], sued4.iloc[0]["Team"]),
     ]
 
+
 def simulate_playoff_match(a: str, b: str,
                            nord: pd.DataFrame,
                            sued: pd.DataFrame,
-                           stats: pd.DataFrame) -> Tuple[str, str, Dict[str,int]]:
+                           stats: pd.DataFrame) -> Tuple[str, str, Dict[str, int]]:
     dfA = nord if a in list(nord["Team"]) else sued
     dfB = nord if b in list(nord["Team"]) else sued
 
-    # Für jedes Playoff-Spiel eigenes Lineup bauen
-    prepare_lineups_for_matches(dfA, [(a, a)])  # Dummy-Paarung nur für Team a
-    prepare_lineups_for_matches(dfB, [(b, b)])  # Dummy-Paarung nur für Team b
+    prepare_lineups_for_matches(dfA, [(a, a)])
+    prepare_lineups_for_matches(dfB, [(b, b)])
 
     rA = dfA[dfA["Team"] == a].iloc[0]
     rB = dfB[dfB["Team"] == b].iloc[0]
@@ -1017,6 +1026,7 @@ def simulate_playoff_match(a: str, b: str,
     update_player_stats(a, gA, dfA, stats)
     update_player_stats(b, gB, dfB, stats)
     return f"{a} {gA}:{gB} {b}", (a if gA > gB else b), {"g_home": gA, "g_away": gB}
+
 
 def simulate_series_best_of(a: str, b: str,
                             nord: pd.DataFrame,
@@ -1046,13 +1056,13 @@ def simulate_series_best_of(a: str, b: str,
         "winner": a if winsA > winsB else b
     }
 
+
 def run_playoffs(season: int,
                  nord: pd.DataFrame,
                  sued: pd.DataFrame,
                  stats: pd.DataFrame,
                  *,
                  interactive: bool = True) -> str:
-    """Simuliert komplette Playoffs in Runden, speichert runde_XX.json, gibt Champion zurück."""
     rnd = 1
     pairings = _initial_playoff_pairings(nord, sued)
     while True:
@@ -1077,7 +1087,7 @@ def run_playoffs(season: int,
                 **_export_tables(nord, sued, stats),
             },
         )
-        save_state({  # Fortschritt (Info)
+        save_state({
             "season": season,
             "spieltag": f"Playoff_Runde_{rnd}",
             "nord": _df_to_records_clean(nord),
@@ -1094,6 +1104,7 @@ def run_playoffs(season: int,
             return champion
         pairings = [(winners[i], winners[i+1]) for i in range(0, len(winners), 2)]
         rnd += 1
+
 
 # ------------------------------------------------
 # 8  STEP-APIS FÜR GUI
@@ -1113,11 +1124,11 @@ def read_tables_for_ui() -> Dict[str, Any]:
         "season": state["season"],
         "spieltag": state["spieltag"],
         "nsched_len": len(state["nsched"]),
-
         "ssched_len": len(state["ssched"]),
         "tables": tables,
         "history": state.get("history", []),
     }
+
 
 def step_regular_season_once() -> Dict[str, Any]:
     state = load_state()
@@ -1132,19 +1143,19 @@ def step_regular_season_once() -> Dict[str, Any]:
     nsched   = state["nsched"]
     ssched   = state["ssched"]
     stats    = pd.DataFrame(state["stats"])
-    max_spieltage = (len(nord_teams)-1)*2
+
+    max_spieltage = (len(nord_teams) - 1) * 2
     if isinstance(spieltag, int) and spieltag > max_spieltage:
         return {"status": "season_over", "season": season, "spieltag": spieltag}
 
     results_json: List[Dict[str, Any]] = []
-    replay_matches: List[Dict[str, Any]] = []  # NEU: Replay-Infos sammeln
+    replay_matches: List[Dict[str, Any]] = []
 
     # --- NORD ---
     print("\n— Nord —")
-    today_nord_matches = nsched[:len(nord)//2]
+    today_nord_matches = nsched[:len(nord) // 2]
     prepare_lineups_for_matches(nord, today_nord_matches)
 
-    # DEBUG: Lineup-Tabelle + Stärkevergleich
     lineup_table_nord = _build_lineup_table(nord, today_nord_matches)
     if not lineup_table_nord.empty:
         print("\n📋 Lineups Nord (heute):")
@@ -1155,15 +1166,15 @@ def step_regular_season_once() -> Dict[str, Any]:
         print(strength_nord.to_string(index=False))
 
     for m in today_nord_matches:
-        s,j,replay = simulate_match(nord,*m,stats,"Nord")
+        s, j, replay = simulate_match(nord, *m, stats, "Nord")
         print(s)
         results_json.append(j)
         replay_matches.append(replay)
-    nsched=nsched[len(nord)//2:]
+    nsched = nsched[len(nord) // 2:]
 
     # --- SÜD ---
     print("\n— Süd —")
-    today_sued_matches = ssched[:len(sued)//2]
+    today_sued_matches = ssched[:len(sued) // 2]
     prepare_lineups_for_matches(sued, today_sued_matches)
 
     lineup_table_sued = _build_lineup_table(sued, today_sued_matches)
@@ -1176,15 +1187,14 @@ def step_regular_season_once() -> Dict[str, Any]:
         print(strength_sued.to_string(index=False))
 
     for m in today_sued_matches:
-        s,j,replay = simulate_match(sued,*m,stats,"Süd")
+        s, j, replay = simulate_match(sued, *m, stats, "Süd")
         print(s)
         results_json.append(j)
         replay_matches.append(replay)
-    ssched=ssched[len(sued)//2:]
+    ssched = ssched[len(sued) // 2:]
 
-    _print_tables(nord,sued,stats)
+    _print_tables(nord, sued, stats)
 
-    # JSON-Debug-Payload pro Spieltag
     debug_payload = {
         "nord_matches": _build_debug_matches_payload(nord, today_nord_matches),
         "sued_matches": _build_debug_matches_payload(sued, today_sued_matches),
@@ -1200,14 +1210,13 @@ def step_regular_season_once() -> Dict[str, Any]:
         debug=debug_payload,
     )
 
-    # NEU: Replay-JSON für den Spieltag sichern
     save_replay_json(
         season,
         spieltag,
         replay_matches,
     )
 
-    spieltag+=1
+    spieltag += 1
     save_state({
         "season": season, "spieltag": spieltag,
         "nord": _df_to_records_clean(nord),
@@ -1217,7 +1226,8 @@ def step_regular_season_once() -> Dict[str, Any]:
         "history": state.get("history", []),
         "phase": "regular",
     })
-    return {"status":"ok","season":season,"spieltag":spieltag}
+    return {"status": "ok", "season": season, "spieltag": spieltag}
+
 
 def simulate_full_playoffs_and_advance() -> Dict[str, Any]:
     state = load_state()
@@ -1236,26 +1246,23 @@ def simulate_full_playoffs_and_advance() -> Dict[str, Any]:
     save_state(next_state)
     return {"status": "ok", "champion": champion, "next_season": next_season_num}
 
+
 def step_playoffs_round_once() -> Dict[str, Any]:
-    """
-    Simuliert GENAU EINE Playoff-Runde (Bo7-Serien).
-    Speichert runde_XX.json; bei Champion: History + Saison+1.
-    """
     state = load_state()
     if not state:
         return {"status": "no_state"}
     nord = pd.DataFrame(state["nord"]); sued = pd.DataFrame(state["sued"])
     stats = pd.DataFrame(state["stats"]); history = state.get("history", [])
-    max_spieltage = (len(nord_teams)-1)*2
+    max_spieltage = (len(nord_teams) - 1) * 2
     if isinstance(state.get("spieltag"), int) and state["spieltag"] <= max_spieltage:
-        return {"status":"regular_not_finished"}
+        return {"status": "regular_not_finished"}
     rnd = int(state.get("playoff_round", 1))
     alive = state.get("playoff_alive", [])
     if rnd == 1 and not alive:
         pairings = _initial_playoff_pairings(nord, sued)
     else:
         if not alive or len(alive) < 2:
-            return {"status":"invalid_playoff_state"}
+            return {"status": "invalid_playoff_state"}
         pairings = [(alive[i], alive[i+1]) for i in range(0, len(alive), 2)]
     round_series=[]; winners=[]
     for a,b in pairings:
@@ -1287,7 +1294,6 @@ def step_playoffs_round_once() -> Dict[str, Any]:
         "nord": _df_to_records_clean(nord),
         "sued": _df_to_records_clean(sued),
         "nsched": [], "ssched": [],
-
         "stats": _df_to_records_clean(stats),
         "history": history,
         "phase": "playoffs",
@@ -1296,23 +1302,18 @@ def step_playoffs_round_once() -> Dict[str, Any]:
     })
     return {"status":"ok","round":rnd,"winners":winners}
 
+
 # ------------------------------------------------
-# 9  RUN-SIMULATION (für GUI-Button)
+# 9  RUN-SIMULATION (für CLI)
 # ------------------------------------------------
 def run_simulation(max_seasons: int = 1, interactive: bool = False) -> None:
-    """
-    Simuliert max_seasons Saisons komplett (Hauptrunde + Playoffs).
-    Wird von der Streamlit-GUI verwendet.
-    """
     for _ in range(max_seasons):
-        # ensure State existiert
         state = load_state()
         if not state:
             season = get_next_season_number()
             state = _init_new_season_state(season)
             save_state(state)
 
-        # Regular Season
         while True:
             res = step_regular_season_once()
             if res.get("status") == "season_over":
@@ -1320,20 +1321,21 @@ def run_simulation(max_seasons: int = 1, interactive: bool = False) -> None:
             if interactive:
                 print(f"Spieltag {res.get('spieltag')} simuliert")
 
-        # Playoffs komplett
         po_res = simulate_full_playoffs_and_advance()
         if interactive:
             print(f"Saison abgeschlossen. Champion: {po_res.get('champion')}.")
 
+
 # ------------------------------------------------
 # 10  SELF-TEST & DEMO (CLI)
 # ------------------------------------------------
-def _self_tests()->None:
-    dummy=[{"Team":str(i)} for i in range(6)]
-    assert len(create_schedule(dummy))==6*5, "Schedule wrong"
-    fake_row=pd.Series({"Players":[{"Offense":60,"Defense":60,"Speed":60,"Chemistry":60} for _ in range(5)]})
-    assert 0<calc_strength(fake_row)<100, "Strength out of range"
+def _self_tests() -> None:
+    dummy = [{"Team": str(i)} for i in range(6)]
+    assert len(create_schedule(dummy)) == 6 * 5, "Schedule wrong"
+    fake_row = pd.Series({"Players": [{"Offense": 60, "Defense": 60, "Speed": 60, "Chemistry": 60} for _ in range(5)]})
+    assert 0 < calc_strength(fake_row) < 100, "Strength out of range"
     print("✅ Self-Tests bestanden")
+
 
 if __name__ == "__main__":
     _ensure_dirs()
