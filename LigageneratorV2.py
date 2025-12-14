@@ -27,22 +27,18 @@ def _clean_for_json(obj: Any) -> Any:
     Läuft rekursiv durch Dicts/Listen und ersetzt alle NaN durch None,
     damit json.dump gültiges JSON schreibt.
     """
-    # Floats: NaN → None
     if isinstance(obj, float) and math.isnan(obj):
         return None
 
-    # Dict: rekursiv durch Werte
     if isinstance(obj, dict):
         return {k: _clean_for_json(v) for k, v in obj.items()}
 
-    # Liste/Tuple: rekursiv durch Elemente
     if isinstance(obj, list):
         return [_clean_for_json(v) for v in obj]
 
     if isinstance(obj, tuple):
         return tuple(_clean_for_json(v) for v in obj)
 
-    # Rest unverändert lassen
     return obj
 
 
@@ -54,6 +50,8 @@ SPIELTAG_DIR = Path("spieltage")
 PLAYOFF_DIR  = Path("playoffs")
 REPLAY_DIR   = Path("replays")    # Ordner für Replay-JSONs
 SCHEDULE_DIR = Path("schedules")  # kompletter Saison-Spielplan
+LINEUP_DIR = Path("lineups")
+STATS_DIR    = Path("stats")      # Ordner für ligaweite Statistik-Snapshots
 
 
 # ------------------------------------------------
@@ -66,7 +64,7 @@ from realeTeams_live import nord_teams, sued_teams  # deine Datei mit Teams/Spie
 # 3  SAVE/LOAD & INIT
 # ------------------------------------------------
 def _ensure_dirs() -> None:
-    for p in (SAVEFILE.parent, SPIELTAG_DIR, PLAYOFF_DIR, REPLAY_DIR, SCHEDULE_DIR):
+    for p in (SAVEFILE.parent, SPIELTAG_DIR, PLAYOFF_DIR, REPLAY_DIR, SCHEDULE_DIR, LINEUP_DIR, STATS_DIR):
         p.mkdir(parents=True, exist_ok=True)
 
 
@@ -113,7 +111,6 @@ def create_schedule(teams: List[Dict[str, Any]]) -> List[Tuple[str, str]]:
     Ergebnis: Liste von (home, away)-Tuples der Länge N*(N-1).
     """
     teams = teams.copy()
-    # Falls ungerade Anzahl → BYE-Team rein
     if len(teams) % 2:
         teams.append({"Team": "BYE"})
 
@@ -130,19 +127,13 @@ def create_schedule(teams: List[Dict[str, Any]]) -> List[Tuple[str, str]]:
             else:
                 day_matches.append((b, a))
         sched.extend(day_matches)
-        # Round-Robin-Rotation
         teams.insert(1, teams.pop())
 
-    # BYE-Spiele filtern (falls es jemals eins gäbe – sollten aber normal nicht in deiner Liga sein)
     sched = [(h, a) for (h, a) in sched if "BYE" not in (h, a)]
     return sched
 
 
 def _find_team_name_by_keywords(teams: List[Dict[str, Any]], keywords: List[str]) -> Optional[str]:
-    """
-    Sucht in der Teamliste nach einem Teamnamen, in dem ALLE Keywords (case-insensitive) vorkommen.
-    Beispiel: keywords=["nova","panther"] matcht "Nova-Delta Panther".
-    """
     kws = [k.lower() for k in keywords]
     for t in teams:
         name = str(t.get("Team", ""))
@@ -158,33 +149,15 @@ def _enforce_novadelta_augsburg_third_match(
 ) -> List[Tuple[str, str]]:
     """
     Story-Logik:
-
-    1. Wenn Nova-Delta in dieser Conference existiert:
-       → Nova-Delta bekommt strikt:
-          - 1. Spiel = HEIM
-          - dann H/A-Wechsel: H, A, H, A, ...
-       (wird durch Swap von Heim/Auswärts innerhalb derselben Paarung erreicht)
-
-    2. Wenn zusätzlich Augsburg Ferox in dieser Conference existiert:
-       → 3. Nova-Delta-Spiel (chronologisch) wird Heimspiel GEGEN Augsburg Ferox,
-         indem wir den kompletten Spieltag des Nova-Heimspiels vs Augsburg
-         mit dem Spieltag des 3. Nova-Spiels tauschen.
-
-    WICHTIG:
-      - Wir arbeiten auf einem normalen Round-Robin-Schedule.
-      - Wir setzen voraus, dass die Conference eine GERADE Anzahl Teams hat.
-      - Es werden nur zwei komplette Spieltage getauscht → keine Doppel-Spiele
-        pro Spieltag für irgendein Team.
+    - Nova: H/A/H/A/... (1. Spiel Heim)
+    - 3. Nova-Spiel: Heim vs Augsburg, durch Swap ganzer Spieltage
     """
     nova = _find_team_name_by_keywords(teams, ["nova", "panther"])
     if not nova:
-        # NovaDelta ist in dieser Conference gar nicht drin → nichts tun
         return sched
 
     team_count = len(teams)
     if team_count % 2 != 0:
-        # Für ungerade Teamanzahl lassen wir die Story-Constraints lieber weg,
-        # damit wir uns nicht mit BYE-Matching zerlegen.
         print("[INFO] Story-Constraint deaktiviert (ungerade Teamanzahl in Conference).")
         return sched
 
@@ -193,13 +166,8 @@ def _enforce_novadelta_augsburg_third_match(
         print("[WARN] _enforce_novadelta_augsburg_third_match: sched-Länge passt nicht zu 'half'")
         return sched
 
-    days_count = len(sched) // half
-
-    # ------------------------------------------------
-    # Schritt A: NovaDelta bekommt H/A-Muster: Heim, Auswärts, Heim, Auswärts, ...
-    # ------------------------------------------------
-    # Alle Nova-Spiele einsammeln (chronologisch)
-    nd_indices: List[Tuple[int, int]] = []  # (day, idx)
+    # Schritt A: H/A-Muster für Nova
+    nd_indices: List[Tuple[int, int]] = []
     for idx, (h, a) in enumerate(sched):
         if h == nova or a == nova:
             day = idx // half
@@ -208,54 +176,39 @@ def _enforce_novadelta_augsburg_third_match(
     if not nd_indices:
         return sched
 
-    nd_indices.sort(key=lambda x: x[0])  # nach Spieltag sortieren
+    nd_indices.sort(key=lambda x: x[0])
 
-    # Für das k-te Nova-Spiel: k=0 → Heim, k=1 → Auswärts, k=2 → Heim, ...
     for k, (day, idx) in enumerate(nd_indices):
-        desired_home = (k % 2 == 0)  # 0,2,4,... = True
+        desired_home = (k % 2 == 0)
         h, a = sched[idx]
         is_home_now = (h == nova)
         if is_home_now != desired_home:
-            # Heim/Auswärts-Seiten genau dieses Spiels tauschen
             sched[idx] = (a, h)
 
-    # ------------------------------------------------
-    # Schritt B: 3. Nova-Spiel = Heim vs Augsburg (falls möglich)
-    # ------------------------------------------------
+    # Schritt B: 3. Nova-Spiel Heim vs Augsburg
     augs = _find_team_name_by_keywords(teams, ["augs", "ferox"])
     if not augs:
-        # Augsburg nicht in dieser Conference → nur H/A-Muster bleibt
         return sched
 
-    # Nova-Spiele nach dem H/A-Fix nochmal einsammeln, inkl. Gegner
     nd_games: List[Dict[str, Any]] = []
     for idx, (h, a) in enumerate(sched):
         if h == nova or a == nova:
             day = idx // half
             home = (h == nova)
             opp = a if home else h
-            nd_games.append({
-                "day": day,
-                "idx": idx,
-                "home": home,
-                "opp": opp,
-            })
+            nd_games.append({"day": day, "idx": idx, "home": home, "opp": opp})
 
     nd_games.sort(key=lambda g: g["day"])
-
-    # Wir brauchen mind. 3 Nova-Spiele
     if len(nd_games) < 3:
         return sched
 
-    third_game = nd_games[2]  # 3. Spiel (0-basiert)
+    third_game = nd_games[2]
     third_day = third_game["day"]
 
-    # Safety: nach unserem Muster sollte das 3. Spiel Heim sein
     if not third_game["home"]:
         print("[WARN] 3. Nova-Spiel ist nach H/A-Logik doch nicht Heim – Story-Constraint wird nicht erzwungen.")
         return sched
 
-    # Find Nova-Heimspiel vs Augsburg
     target_game: Optional[Dict[str, Any]] = None
     for g in nd_games:
         if g["home"] and g["opp"] == augs:
@@ -263,16 +216,12 @@ def _enforce_novadelta_augsburg_third_match(
             break
 
     if not target_game:
-        # Es gibt kein Nova-Heimspiel vs Augsburg in dieser Conference → Ende
         return sched
 
     target_day = target_game["day"]
-
-    # Wenn das Heimspiel vs Augsburg bereits am 3. Nova-Spieltag ist, sind wir fertig
     if target_day == third_day:
         return sched
 
-    # Ganze Spieltage tauschen: drittens Nova-Spieltag <-> Tag mit Nova-Heimspiel vs Augsburg
     d1, d2 = third_day, target_day
     for k in range(half):
         i1 = d1 * half + k
@@ -289,15 +238,12 @@ def _build_schedule_matchdays(
     sched: List[Tuple[str, str]],
     team_count: int,
 ) -> List[Dict[str, Any]]:
-    """
-    Bricht einen flachen Schedule (List[Tuple[home,away]]) in Spieltage runter.
-    """
     if team_count % 2 == 0:
         half = team_count // 2
     else:
         half = (team_count + 1) // 2
 
-    days = (team_count - 1) * 2  # Hin- und Rückrunde
+    days = (team_count - 1) * 2
 
     matchdays: List[Dict[str, Any]] = []
     for day in range(days):
@@ -306,10 +252,7 @@ def _build_schedule_matchdays(
         day_matches = sched[start:end]
         matchdays.append({
             "matchday": day + 1,
-            "matches": [
-                {"home": h, "away": a}
-                for (h, a) in day_matches
-            ],
+            "matches": [{"home": h, "away": a} for (h, a) in day_matches],
         })
     return matchdays
 
@@ -319,14 +262,6 @@ def _save_full_schedule_preview(
     nsched: List[Tuple[str, str]],
     ssched: List[Tuple[str, str]],
 ) -> None:
-    """
-    Speichert einen kompletten Saison-Spielplan in:
-      schedules/saison_<season>/spielplan.json
-
-    Inhalt:
-      - Nord/Süd Teams
-      - Matchdays mit Paarungen (ohne Ergebnisse)
-    """
     north_team_names = [t["Team"] for t in nord_teams]
     south_team_names = [t["Team"] for t in sued_teams]
 
@@ -336,14 +271,8 @@ def _save_full_schedule_preview(
     payload: Dict[str, Any] = {
         "season": season,
         "created_at": datetime.now().isoformat(),
-        "nord": {
-            "teams": north_team_names,
-            "matchdays": nord_matchdays,
-        },
-        "sued": {
-            "teams": south_team_names,
-            "matchdays": sued_matchdays,
-        },
+        "nord": {"teams": north_team_names, "matchdays": nord_matchdays},
+        "sued": {"teams": south_team_names, "matchdays": sued_matchdays},
     }
 
     target_folder = SCHEDULE_DIR / f"saison_{season}"
@@ -354,15 +283,12 @@ def _save_full_schedule_preview(
 def _init_new_season_state(season: int) -> Dict[str, Any]:
     nord, sued = _init_frames()
 
-    # Reine Round-Robin-Schedules (Nord/Süd)
     nsched = create_schedule(nord_teams)
     ssched = create_schedule(sued_teams)
 
-    # Story-Constraints für NovaDelta/Augsburg
     nsched = _enforce_novadelta_augsburg_third_match(nsched, nord_teams)
     ssched = _enforce_novadelta_augsburg_third_match(ssched, sued_teams)
 
-    # kompletten Spielplan als JSON für Story/Preview sichern
     _save_full_schedule_preview(season, nsched, ssched)
 
     stats = init_stats()
@@ -386,7 +312,6 @@ def _export_tables(nord_df: pd.DataFrame, sued_df: pd.DataFrame, stats: pd.DataF
     stats = stats.copy()
     stats["Points"] = stats["Goals"] + stats["Assists"]
 
-    # Fallbacks für alte Savefiles: Spalten ggf. nachziehen
     if "Number" not in stats.columns:
         stats["Number"] = None
     if "PositionGroup" not in stats.columns:
@@ -400,7 +325,6 @@ def _export_tables(nord_df: pd.DataFrame, sued_df: pd.DataFrame, stats: pd.DataF
             ["Team", "Points", "GF", "GA", "GD"]
         ].to_dict("records")
 
-    # Top-Scorer-Liste bauen und NaN -> None cleanen
     top = stats.sort_values("Points", ascending=False).head(20)[
         ["Player", "Team", "Number", "PositionGroup", "Goals", "Assists", "Points"]
     ]
@@ -428,7 +352,8 @@ def save_spieltag_json(
     sued: pd.DataFrame,
     stats: pd.DataFrame,
     *,
-    debug: Optional[Dict[str, Any]] = None,  # DEBUG-Hook
+    debug: Optional[Dict[str, Any]] = None,
+    lineups: Optional[Dict[str, Any]] = None,  # <<< NEU: Lines/Lineups pro Team
 ) -> None:
     payload: Dict[str, Any] = {
         "timestamp": datetime.now().isoformat(),
@@ -439,8 +364,28 @@ def save_spieltag_json(
     }
     if debug is not None:
         payload["debug"] = debug
+    if lineups is not None:
+        payload["lineups"] = lineups  # <<< NEU
     _save_json(SPIELTAG_DIR / f"saison_{season}", f"spieltag_{gameday:02}.json", payload)
 
+def save_lineup_overview(
+    season: int,
+    gameday: int,
+    lineups: Dict[str, Any],
+) -> None:
+    """
+    Speichert eine kompakte, menschlich lesbare Lineup-Übersicht
+    für schnellen Überblick / Story-Planung.
+    """
+    payload = {
+        "season": season,
+        "spieltag": gameday,
+        "generated_at": datetime.now().isoformat(),
+        "teams": lineups,
+    }
+
+    target = LINEUP_DIR / f"saison_{season}"
+    _save_json(target, f"spieltag_{gameday:02}_lineups.json", payload)
 
 # ------------------------------------------------
 # 4b REPLAY-EXPORT
@@ -450,11 +395,6 @@ def save_replay_json(
     gameday: int,
     replay_matches: List[Dict[str, Any]],
 ) -> None:
-    """
-    Speichert:
-      - pro Match eine Replay-Datei mit Events
-      - ein replay_matchday.json mit Übersicht
-    """
     base_folder = REPLAY_DIR / f"saison_{season}" / f"spieltag_{gameday:02}"
     base_folder.mkdir(parents=True, exist_ok=True)
 
@@ -479,16 +419,8 @@ def save_replay_json(
             "matchday": gameday,
             "game_id": game_id,
             "conference": conference,
-            "home": {
-                "id": home,
-                "name": home,
-                "score": g_home,
-            },
-            "away": {
-                "id": away,
-                "name": away,
-                "score": g_away,
-            },
+            "home": {"id": home, "name": home, "score": g_home},
+            "away": {"id": away, "name": away, "score": g_away},
             "events": m.get("events", []),
         }
 
@@ -506,6 +438,215 @@ def save_replay_json(
 
     _save_json(base_folder, "replay_matchday.json", matchday_payload)
 
+# ------------------------------------------------
+# 4c STATS-SAMMLER (NEU) – ligaweit aus gespeicherten Spieltag-JSONs
+# ------------------------------------------------
+def _list_spieltag_files(season: int) -> List[Path]:
+    folder = SPIELTAG_DIR / f"saison_{season}"
+    if not folder.exists():
+        return []
+    return sorted(folder.glob("spieltag_*.json"))
+
+
+def _load_json(path: Path) -> Dict[str, Any]:
+    with path.open("r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def _calc_streak(results: List[str]) -> str:
+    if not results:
+        return ""
+    last = results[-1]
+    if last not in ("W", "L", "T"):
+        return ""
+    n = 0
+    for r in reversed(results):
+        if r == last:
+            n += 1
+        else:
+            break
+    return f"{last}{n}"
+
+
+def _team_points_from_results(results: List[str]) -> int:
+    pts = 0
+    for r in results:
+        if r == "W":
+            pts += 3
+        elif r == "T":
+            pts += 1
+    return pts
+
+
+def _safe_mean(vals: List[Any]) -> Optional[float]:
+    xs = [v for v in vals if isinstance(v, (int, float))]
+    if not xs:
+        return None
+    return round(sum(xs) / len(xs), 2)
+
+
+def _build_game_logs_from_spieltage(season: int) -> Dict[str, List[Dict[str, Any]]]:
+    """
+    Baut pro Team ein Game-Log aus den gespeicherten spieltag_XX.json.
+    Nutzt optional debug.*.avg_overall falls vorhanden.
+    """
+    logs: Dict[str, List[Dict[str, Any]]] = {}
+
+    for fp in _list_spieltag_files(season):
+        payload = _load_json(fp)
+        md = int(payload.get("spieltag", 0))
+        results = payload.get("results", [])
+
+        # debug-map: (matchday, team) -> avg_overall
+        debug = payload.get("debug") or {}
+        debug_map: Dict[Tuple[int, str], float] = {}
+
+        def _ingest_side(side: str, m: Dict[str, Any]) -> None:
+            block = m.get(side) or {}
+            t = block.get("team")
+            a = block.get("avg_overall")
+            if isinstance(t, str) and isinstance(a, (int, float)):
+                debug_map[(md, t)] = float(a)
+
+        for key in ("nord_matches", "sued_matches"):
+            for m in (debug.get(key) or []):
+                if isinstance(m, dict):
+                    _ingest_side("home", m)
+                    _ingest_side("away", m)
+
+        for r in results:
+            home = r["home"]
+            away = r["away"]
+            gh = int(r["g_home"])
+            ga = int(r["g_away"])
+            conf = r.get("conference")
+
+            if gh > ga:
+                home_res, away_res = "W", "L"
+            elif gh < ga:
+                home_res, away_res = "L", "W"
+            else:
+                home_res, away_res = "T", "T"
+
+            for team, opp, gf, gax, is_home, res in [
+                (home, away, gh, ga, True, home_res),
+                (away, home, ga, gh, False, away_res),
+            ]:
+                logs.setdefault(team, []).append({
+                    "matchday": md,
+                    "conference": conf,
+                    "home": bool(is_home),
+                    "opponent": opp,
+                    "gf": int(gf),
+                    "ga": int(gax),
+                    "result": res,
+                    "avg_overall": debug_map.get((md, team)),
+                })
+
+    for team in logs:
+        logs[team] = sorted(logs[team], key=lambda x: x["matchday"])
+    return logs
+
+
+def save_league_stats_snapshot(
+    season: int,
+    upto_matchday: int,
+    nord_df: pd.DataFrame,
+    sued_df: pd.DataFrame,
+    player_stats: pd.DataFrame,
+) -> None:
+    """
+    Schreibt:
+      stats/saison_<season>/league/latest.json
+      stats/saison_<season>/league/after_spieltag_XX.json
+    """
+    logs = _build_game_logs_from_spieltage(season)
+
+    teams_all: List[Dict[str, Any]] = []
+    for conf_name, df in [("Nord", nord_df), ("Sued", sued_df)]:
+        for _, row in df.iterrows():
+            team = str(row["Team"])
+            gl = logs.get(team, [])
+            results = [g["result"] for g in gl]
+            last5 = results[-5:]
+            streak = _calc_streak(results)
+
+            aovr_season = _safe_mean([g.get("avg_overall") for g in gl])
+            aovr_last5 = _safe_mean([g.get("avg_overall") for g in gl[-5:]])
+
+            gp = len(results)
+
+            teams_all.append({
+                "team": team,
+                "conference": conf_name,
+                "gp": gp,
+                "w": results.count("W"),
+                "l": results.count("L"),
+                "t": results.count("T"),
+                "points_table": int(row.get("Points", 0)),
+                "points_from_logs": _team_points_from_results(results),
+                "gf_table": int(row.get("Goals For", 0)),
+                "ga_table": int(row.get("Goals Against", 0)),
+                "gd_table": int(row.get("Goals For", 0)) - int(row.get("Goals Against", 0)),
+                "ppg_table": round(float(row.get("Points", 0)) / max(1, gp), 2),
+                "last5": last5,
+                "streak": streak,
+                "avg_overall_season": aovr_season,
+                "avg_overall_last5": aovr_last5,
+            })
+
+    ps = player_stats.copy()
+    ps["Points"] = ps["Goals"] + ps["Assists"]
+
+    leaders = {
+        "points": _df_to_records_clean(ps.sort_values("Points", ascending=False).head(20)[["Player","Team","Number","PositionGroup","Goals","Assists","Points"]]),
+        "goals": _df_to_records_clean(ps.sort_values("Goals", ascending=False).head(20)[["Player","Team","Number","PositionGroup","Goals","Assists","Points"]]),
+        "assists": _df_to_records_clean(ps.sort_values("Assists", ascending=False).head(20)[["Player","Team","Number","PositionGroup","Goals","Assists","Points"]]),
+    }
+
+    # Extremwerte (nur über "home" Einträge zählen, damit jedes Spiel 1x vorkommt)
+    all_games: List[Dict[str, Any]] = []
+    for team, gl in logs.items():
+        for g in gl:
+            if g.get("home") is True:
+                all_games.append({
+                    "matchday": g["matchday"],
+                    "home": team,
+                    "away": g["opponent"],
+                    "g_home": g["gf"],
+                    "g_away": g["ga"],
+                    "conference": g.get("conference"),
+                    "total_goals": g["gf"] + g["ga"],
+                    "goal_diff": abs(g["gf"] - g["ga"]),
+                })
+
+    highest_scoring = max(all_games, key=lambda x: x["total_goals"], default=None)
+    biggest_blowout = max(all_games, key=lambda x: x["goal_diff"], default=None)
+
+    power_teams = [t for t in teams_all if isinstance(t.get("avg_overall_season"), (int, float))]
+    power_rank = sorted(power_teams, key=lambda x: x["avg_overall_season"], reverse=True)
+
+    payload = {
+        "season": season,
+        "upto_matchday": upto_matchday,
+        "generated_at": datetime.now().isoformat(),
+        "teams": teams_all,
+        "leaderboards": leaders,
+        "extremes": {
+            "highest_scoring_game": highest_scoring,
+            "biggest_blowout": biggest_blowout,
+        },
+        "power_ranking_by_avg_overall": [
+            {"rank": i+1, "team": t["team"], "conference": t["conference"], "avg_overall_season": t["avg_overall_season"], "avg_overall_last5": t["avg_overall_last5"]}
+            for i, t in enumerate(power_rank)
+        ],
+    }
+
+    league_folder = STATS_DIR / f"saison_{season}" / "league"
+    league_folder.mkdir(parents=True, exist_ok=True)
+
+    _save_json(league_folder, f"after_spieltag_{upto_matchday:02}.json", payload)
+    _save_json(league_folder, "latest.json", payload)
 
 # ------------------------------------------------
 # 5  TERMINAL-AUSGABEN
@@ -531,14 +672,9 @@ def _print_tables(nord: pd.DataFrame, sued: pd.DataFrame, stats: pd.DataFrame) -
 
 
 # ------------------------------------------------
-# 6  SIMULATIONSGRUNDSÄTZE + LINEUPS
+# 6  SIMULATIONSGRUNDSÄTZE + LINEUPS + LINES (NEU)
 # ------------------------------------------------
 def _weighted_pick_by_gp(players: List[Dict[str, Any]], count: int, jitter_factor: float = 0.3) -> List[Dict[str, Any]]:
-    """
-    Wählt 'count' Spieler aus:
-    - Basis = GamesPlayed
-    - plus etwas Randomness (±30%), damit nicht immer starr dieselben spielen.
-    """
     if not players or count <= 0:
         return []
 
@@ -557,6 +693,127 @@ def _weighted_pick_by_gp(players: List[Dict[str, Any]], count: int, jitter_facto
     return [p for _, p in scored[:count]]
 
 
+def _score_fwd_scoring(p: Dict[str, Any]) -> float:
+    return (
+        float(p.get("Offense", 50))   * 0.50 +
+        float(p.get("Speed", 50))     * 0.20 +
+        float(p.get("Chemistry", 50)) * 0.20 +
+        float(p.get("Defense", 50))   * 0.10
+    )
+
+
+def _score_fwd_checking(p: Dict[str, Any]) -> float:
+    return (
+        float(p.get("Defense", 50))   * 0.60 +
+        float(p.get("Chemistry", 50)) * 0.20 +
+        float(p.get("Speed", 50))     * 0.10 +
+        float(p.get("Offense", 50))   * 0.10
+    )
+
+
+def _score_def_pair(p: Dict[str, Any]) -> float:
+    return (
+        float(p.get("Defense", 50))   * 0.60 +
+        float(p.get("Speed", 50))     * 0.20 +
+        float(p.get("Chemistry", 50)) * 0.20
+    )
+
+
+def _brief_player(p: Dict[str, Any]) -> Dict[str, Any]:
+    # fürs JSON: klein + stabil
+    return {
+        "name": p.get("NameReal") or p.get("Name"),
+        "id": p.get("Name"),
+        "number": p.get("Number"),
+        "pos": p.get("PositionGroup") or p.get("PositionRaw"),
+        "overall": p.get("Overall"),
+        "line": p.get("Line"),
+        "pair": p.get("Pair"),
+        "rotation": p.get("Rotation", False),
+    }
+
+
+def build_line_snapshot(lineup: List[Dict[str, Any]]) -> Dict[str, Any]:
+    fwds = [p for p in lineup if str(p.get("PositionGroup", "")).upper() == "F"]
+    defs = [p for p in lineup if str(p.get("PositionGroup", "")).upper() == "D"]
+    gols = [p for p in lineup if str(p.get("PositionGroup", "")).upper() == "G"]
+
+    def _by_line(n: int) -> List[Dict[str, Any]]:
+        return [_brief_player(p) for p in fwds if p.get("Line") == n]
+
+    def _by_pair(n: int) -> List[Dict[str, Any]]:
+        return [_brief_player(p) for p in defs if p.get("Pair") == n]
+
+    rotation = [_brief_player(p) for p in defs if p.get("Rotation")]
+
+    goalie = _brief_player(gols[0]) if gols else None
+
+    return {
+        "forwards": {
+            "line1": _by_line(1),
+            "line2": _by_line(2),
+            "line3": _by_line(3),
+            "line4": _by_line(4),
+        },
+        "defense": {
+            "pair1": _by_pair(1),
+            "pair2": _by_pair(2),
+            "pair3": _by_pair(3),
+            "rotation": rotation,
+        },
+        "goalie": goalie,
+    }
+
+
+def _assign_lines_and_pairs(unique_lineup: List[Dict[str, Any]]) -> None:
+    """
+    Mutiert NUR das unique_lineup (Kopien), nicht das Roster im Save.
+    - Forwards: Line 1-4
+    - Defense: Pair 1-3 + Rotation
+    """
+    fwds = [p for p in unique_lineup if str(p.get("PositionGroup", "")).upper() == "F"]
+    defs = [p for p in unique_lineup if str(p.get("PositionGroup", "")).upper() == "D"]
+
+    # --- Forwards -> Lines
+    fwds_sorted_scoring = sorted(fwds, key=_score_fwd_scoring, reverse=True)
+
+    line1 = fwds_sorted_scoring[:3]
+    line2 = fwds_sorted_scoring[3:6]
+    remaining = fwds_sorted_scoring[6:]
+
+    remaining_sorted_checking = sorted(remaining, key=_score_fwd_checking, reverse=True)
+    line3 = remaining_sorted_checking[:3]
+    line4 = remaining_sorted_checking[3:]  # Rest
+
+    for p in line1:
+        p["Line"] = 1
+    for p in line2:
+        p["Line"] = 2
+    for p in line3:
+        p["Line"] = 3
+    for p in line4:
+        p["Line"] = 4
+
+    # Falls weniger Forwards als erwartet (Roster komisch): alles was noch ohne Line ist -> 4
+    for p in fwds:
+        if "Line" not in p:
+            p["Line"] = 4
+
+    # --- Defense -> Pairs
+    defs_sorted = sorted(defs, key=_score_def_pair, reverse=True)
+    pairs = [defs_sorted[0:2], defs_sorted[2:4], defs_sorted[4:6]]
+    rotation = defs_sorted[6:]
+
+    for i, pair in enumerate(pairs, start=1):
+        for p in pair:
+            p["Pair"] = i
+            p["Rotation"] = False
+
+    for p in rotation:
+        p["Pair"] = None
+        p["Rotation"] = True
+
+
 def build_lineup(
     players: List[Dict[str, Any]],
     team_name: str = "UNKNOWN",
@@ -569,7 +826,9 @@ def build_lineup(
       - 7 Defender
       - 12 Forwards
       - 1 Goalie
-    Wenn zu wenig Spieler einer Gruppe vorhanden sind, nehmen wir so viele wie möglich.
+    NEU:
+      - Forwards bekommen Line 1-4
+      - Defender bekommen Pair 1-3 + Rotation
     """
     if not players:
         return []
@@ -578,27 +837,31 @@ def build_lineup(
     fs = [p for p in players if str(p.get("PositionGroup", "")).upper() == "F"]
     gs = [p for p in players if str(p.get("PositionGroup", "")).upper() == "G"]
 
-    lineup: List[Dict[str, Any]] = []
-    lineup.extend(_weighted_pick_by_gp(ds, min(n_def, len(ds))))
-    lineup.extend(_weighted_pick_by_gp(fs, min(n_fwd, len(fs))))
+    # WICHTIG: Kopien erzeugen, damit wir das Save-Roster nicht mutieren
+    picked: List[Dict[str, Any]] = []
+    picked.extend([dict(p) for p in _weighted_pick_by_gp(ds, min(n_def, len(ds)))])
+    picked.extend([dict(p) for p in _weighted_pick_by_gp(fs, min(n_fwd, len(fs)))])
 
     if gs:
-        lineup.extend(_weighted_pick_by_gp(gs, min(n_goalies, len(gs))))
+        picked.extend([dict(p) for p in _weighted_pick_by_gp(gs, min(n_goalies, len(gs)))])
     else:
         print("[WARN] Team ohne Goalies im Roster – kein G im Lineup.")
 
     # Sicherheitsnetz: Keine Duplikate
     seen_ids = set()
     unique_lineup: List[Dict[str, Any]] = []
-    for p in lineup:
+    for p in picked:
         key = (p.get("NameReal"), p.get("Number"))
         if key not in seen_ids:
             seen_ids.add(key)
             unique_lineup.append(p)
 
-    d_count = sum(1 for p in unique_lineup if p.get("PositionGroup") == "D")
-    f_count = sum(1 for p in unique_lineup if p.get("PositionGroup") == "F")
-    g_count = sum(1 for p in unique_lineup if p.get("PositionGroup") == "G")
+    # Lines/Pairs zuweisen (nur auf den Kopien)
+    _assign_lines_and_pairs(unique_lineup)
+
+    d_count = sum(1 for p in unique_lineup if str(p.get("PositionGroup", "")).upper() == "D")
+    f_count = sum(1 for p in unique_lineup if str(p.get("PositionGroup", "")).upper() == "F")
+    g_count = sum(1 for p in unique_lineup if str(p.get("PositionGroup", "")).upper() == "G")
 
     if (d_count != n_def) or (f_count != n_fwd) or (g_count != n_goalies):
         print(f"\n[DEBUG][Lineup Warnung] Team: {team_name}")
@@ -614,11 +877,6 @@ def build_lineup(
 
 
 def _get_lineup_for_team(df: pd.DataFrame, team_name: str) -> List[Dict[str, Any]]:
-    """
-    Holt das Lineup eines Teams:
-      - wenn df["Lineup"] existiert und Liste → das
-      - sonst df["Players"]
-    """
     mask = df["Team"] == team_name
     if not mask.any():
         print(f"[WARN] _get_lineup_for_team: Team '{team_name}' nicht in df gefunden")
@@ -632,8 +890,10 @@ def _get_lineup_for_team(df: pd.DataFrame, team_name: str) -> List[Dict[str, Any
 
 def prepare_lineups_for_matches(df: pd.DataFrame, matches: List[Tuple[str, str]]) -> None:
     """
-    Für alle Teams, die an diesem Spieltag in 'matches' beteiligt sind,
-    wird eine Lineup-Liste (7D/12F/1G) gebaut und in df["Lineup"] abgelegt.
+    Baut pro Team heute:
+      - df["Lineup"] (Liste Spieler)
+      - df["LineSnapshot"] (Chasen-Struktur)
+    Backwards compatible: Spalten werden bei Bedarf erstellt.
     """
     teams_today = set()
     for home, away in matches:
@@ -642,6 +902,8 @@ def prepare_lineups_for_matches(df: pd.DataFrame, matches: List[Tuple[str, str]]
 
     if "Lineup" not in df.columns:
         df["Lineup"] = None
+    if "LineSnapshot" not in df.columns:
+        df["LineSnapshot"] = None
 
     for team_name in teams_today:
         mask = df["Team"] == team_name
@@ -649,26 +911,52 @@ def prepare_lineups_for_matches(df: pd.DataFrame, matches: List[Tuple[str, str]]
             print(f"[WARN] prepare_lineups_for_matches: Team '{team_name}' nicht in df gefunden")
             continue
 
-        idx_list = df.index[mask].tolist()
-        if not idx_list:
-            print(f"[WARN] prepare_lineups_for_matches: Kein Index für Team '{team_name}' gefunden")
-            continue
-
-        idx = idx_list[0]
+        idx = df.index[mask].tolist()[0]
         players = df.at[idx, "Players"]
+
         lineup = build_lineup(players, team_name=team_name)
         df.at[idx, "Lineup"] = lineup
+        df.at[idx, "LineSnapshot"] = build_line_snapshot(lineup)
+
+
+def _collect_lineups_payload(df: pd.DataFrame, matches: List[Tuple[str, str]]) -> Dict[str, Any]:
+    """
+    Baut pro Team ein Snapshot-Payload fürs Spieltag-JSON.
+    Wenn LineSnapshot fehlt, wird aus Lineup best-effort gebaut.
+    """
+    teams_today = set()
+    for h, a in matches:
+        teams_today.add(h)
+        teams_today.add(a)
+
+    out: Dict[str, Any] = {}
+    for team in teams_today:
+        mask = df["Team"] == team
+        if not mask.any():
+            continue
+        row = df.loc[mask].iloc[0]
+
+        snap = None
+        if "LineSnapshot" in df.columns:
+            candidate = row.get("LineSnapshot")
+            if isinstance(candidate, dict) and candidate:
+                snap = candidate
+
+        if snap is None:
+            lineup = row.get("Lineup")
+            if isinstance(lineup, list) and lineup:
+                snap = build_line_snapshot(lineup)
+
+        if snap is not None:
+            out[team] = snap
+
+    return out
 
 
 # -----------------------------------------------------
 # DEBUG-Helfer: Tabellenansicht & Stärkevergleich & JSON-Payload
 # -----------------------------------------------------
 def _build_lineup_table(df: pd.DataFrame, matches: List[Tuple[str, str]]) -> pd.DataFrame:
-    """
-    Erzeugt eine flache Tabelle:
-      Team | Rolle (Home/Away) | Gegner | Name | Pos | GP | OVR
-    für alle Lineups eines Spieltags.
-    """
     rows: List[Dict[str, Any]] = []
     for home, away in matches:
         for team_name, role, opponent in [(home, "Home", away), (away, "Away", home)]:
@@ -680,22 +968,20 @@ def _build_lineup_table(df: pd.DataFrame, matches: List[Tuple[str, str]]) -> pd.
                     "Gegner": opponent,
                     "Name": p.get("NameReal") or p.get("Name"),
                     "Pos": p.get("PositionGroup") or p.get("PositionRaw"),
+                    "Line": p.get("Line"),
+                    "Pair": p.get("Pair"),
+                    "Rot": p.get("Rotation", False),
                     "GP": p.get("GamesPlayed"),
                     "OVR": p.get("Overall"),
                 })
     if not rows:
-        return pd.DataFrame(columns=["Team", "Rolle", "Gegner", "Name", "Pos", "GP", "OVR"])
+        return pd.DataFrame(columns=["Team", "Rolle", "Gegner", "Name", "Pos", "Line", "Pair", "Rot", "GP", "OVR"])
     df_out = pd.DataFrame(rows)
     df_out = df_out.sort_values(["Team", "Rolle", "OVR"], ascending=[True, True, False])
     return df_out
 
 
 def _build_strength_panel(df: pd.DataFrame, matches: List[Tuple[str, str]]) -> pd.DataFrame:
-    """
-    Stärkevergleich-Panel:
-      Home | Away | Home_OVR | Away_OVR | Diff
-    basiert auf Durchschnitt der Overall-Ratings im Lineup.
-    """
     rows: List[Dict[str, Any]] = []
     for home, away in matches:
         lu_home = _get_lineup_for_team(df, home)
@@ -724,12 +1010,6 @@ def _build_strength_panel(df: pd.DataFrame, matches: List[Tuple[str, str]]) -> p
 
 
 def _build_debug_matches_payload(df: pd.DataFrame, matches: List[Tuple[str, str]]) -> List[Dict[str, Any]]:
-    """
-    JSON-Debug-Struktur pro Match:
-      - Home/Away
-      - Lineups (komplett)
-      - Durchschnitts-OVR
-    """
     debug_matches: List[Dict[str, Any]] = []
 
     for home, away in matches:
@@ -759,7 +1039,6 @@ def _build_debug_matches_payload(df: pd.DataFrame, matches: List[Tuple[str, str]
 
 
 def calc_strength(row: pd.Series, home: bool = False) -> float:
-    # WICHTIG: Wenn es ein Lineup gibt, benutzen wir das. Sonst das komplette Roster.
     players = row.get("Lineup")
     if not isinstance(players, list) or not players:
         players = row["Players"]
@@ -783,16 +1062,6 @@ def calc_strength(row: pd.Series, home: bool = False) -> float:
 # 6c  STATS-UPDATES
 # ------------------------------------------------
 def update_player_stats(team: str, goals: int, df: pd.DataFrame, stats: pd.DataFrame) -> List[Dict[str, Any]]:
-    """
-    Aktualisiert Stats für 'goals' Tore eines Teams und liefert pro Tor:
-      {
-        "scorer": <Fake-Name>,
-        "scorer_number": <Rückennummer oder None>,
-        "assist": <Fake-Name oder None>,
-        "assist_number": <Rückennummer oder None>
-      }
-    zurück.
-    """
     mask = df["Team"] == team
     if not mask.any() or goals <= 0:
         return []
@@ -806,10 +1075,7 @@ def update_player_stats(team: str, goals: int, df: pd.DataFrame, stats: pd.DataF
     roster = df.loc[mask, use_column].iloc[0]
     roster = random.sample(roster, 18) if len(roster) > 18 else roster
 
-    skaters = [
-        p for p in roster
-        if str(p.get("PositionGroup", "")).upper() != "G"
-    ]
+    skaters = [p for p in roster if str(p.get("PositionGroup", "")).upper() != "G"]
     if not skaters:
         skaters = roster
 
@@ -834,14 +1100,12 @@ def update_player_stats(team: str, goals: int, df: pd.DataFrame, stats: pd.DataF
             assist_number = assist_player.get("Number")
             stats.loc[stats["Player"] == assist_name, "Assists"] += 1
 
-        goal_events.append(
-            {
-                "scorer": scorer_name,
-                "scorer_number": scorer_number,
-                "assist": assist_name,
-                "assist_number": assist_number,
-            }
-        )
+        goal_events.append({
+            "scorer": scorer_name,
+            "scorer_number": scorer_number,
+            "assist": assist_name,
+            "assist_number": assist_number,
+        })
 
     return goal_events
 
@@ -851,10 +1115,6 @@ def simulate_match(df: pd.DataFrame,
                    away: str,
                    stats: pd.DataFrame,
                    conf: str) -> Tuple[str, Dict[str, Any], Dict[str, Any]]:
-    """
-    Simuliert EIN Spiel inkl. Replay-Struktur.
-    """
-
     r_h = df[df["Team"] == home].iloc[0]
     r_a = df[df["Team"] == away].iloc[0]
 
@@ -893,8 +1153,7 @@ def simulate_match(df: pd.DataFrame,
             return []
         row = df[mask].iloc[0]
         players = row.get("Lineup") or row["Players"]
-        skaters = [p for p in players
-                   if str(p.get("PositionGroup", "")).upper() != "G"]
+        skaters = [p for p in players if str(p.get("PositionGroup", "")).upper() != "G"]
         return skaters or players
 
     sk_home = _get_skaters(home)
@@ -918,7 +1177,6 @@ def simulate_match(df: pd.DataFrame,
     current_index = 0
     action_id = 0
 
-    total_goals = g_home + g_away
     goal_actions: List[Optional[str]] = ["home"] * g_home + ["away"] * g_away
     extra_no_goal = max(2, len(goal_actions))
     goal_actions += [None] * extra_no_goal
@@ -1136,6 +1394,7 @@ def step_regular_season_once() -> Dict[str, Any]:
         season = get_next_season_number()
         state = _init_new_season_state(season)
         save_state(state)
+
     season   = state["season"]
     spieltag = state["spieltag"]
     nord     = pd.DataFrame(state["nord"])
@@ -1200,6 +1459,22 @@ def step_regular_season_once() -> Dict[str, Any]:
         "sued_matches": _build_debug_matches_payload(sued, today_sued_matches),
     }
 
+    # NEU: Lineups payload (Nord+Süd zusammenführen)
+    lineups_payload: Dict[str, Any] = {}
+    lineups_payload.update(_collect_lineups_payload(nord, today_nord_matches))
+    lineups_payload.update(_collect_lineups_payload(sued, today_sued_matches))
+
+    lineups_payload: Dict[str, Any] = {}
+    lineups_payload.update(_collect_lineups_payload(nord, today_nord_matches))
+    lineups_payload.update(_collect_lineups_payload(sued, today_sued_matches))
+
+    # EXTRA: menschlich lesbare Lineup-Übersicht speichern
+    save_lineup_overview(
+        season,
+        spieltag,
+        lineups_payload,
+)
+
     save_spieltag_json(
         season,
         spieltag,
@@ -1208,6 +1483,7 @@ def step_regular_season_once() -> Dict[str, Any]:
         sued,
         stats,
         debug=debug_payload,
+        lineups=lineups_payload,  # <<< NEU
     )
 
     save_replay_json(
@@ -1215,6 +1491,14 @@ def step_regular_season_once() -> Dict[str, Any]:
         spieltag,
         replay_matches,
     )
+    save_league_stats_snapshot(
+    season=season,
+    upto_matchday=spieltag,
+    nord_df=nord,
+    sued_df=sued,
+    player_stats=stats,
+)
+
 
     spieltag += 1
     save_state({
