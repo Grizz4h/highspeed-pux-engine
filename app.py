@@ -153,6 +153,11 @@ def team_logo_dataurl(team: str, size: int = 24, scale: int = 2) -> Optional[str
 # - load_state()
 import LigageneratorV2 as sim
 
+if "pipeline_status" not in st.session_state:
+    st.session_state.pipeline_status = None  # "ok" | "error"
+    st.session_state.pipeline_stdout = ""
+    st.session_state.pipeline_stderr = ""
+
 # ============================================================
 # Sidebar – Steuerung
 # ============================================================
@@ -231,45 +236,51 @@ with st.sidebar:
         with st.spinner("Pipeline läuft..."):
             try:
                 env = os.environ.copy()
-                # Subprozess-Output erzwingen auf UTF-8
                 env["PYTHONIOENCODING"] = "utf-8"
 
                 result = subprocess.run(
                     [sys.executable, str(BASE_DIR / "run_pipeline.py")],
                     cwd=str(BASE_DIR),
                     capture_output=True,
-                    text=False,          # <-- WICHTIG: keine Auto-Dekodierung
+                    text=False,
                     env=env,
                 )
 
-                # Manuell mit UTF-8 dekodieren (fehlerrobust)
                 stdout = (result.stdout or b"").decode("utf-8", errors="replace")
                 stderr = (result.stderr or b"").decode("utf-8", errors="replace")
 
-            except Exception as e:
-                st.toast("Pipeline konnte nicht gestartet werden.", icon="❌")
-                st.error(f"Fehler beim Starten von run_pipeline.py: {e}")
-            else:
+                st.session_state.pipeline_stdout = stdout
+                st.session_state.pipeline_stderr = stderr
+
                 if result.returncode == 0:
-                    st.toast("Pipeline erfolgreich durchgelaufen.", icon="✅")
-                    # optional: stdout anzeigen, wenn du willst
-                    # st.text(stdout)
+                    st.session_state.pipeline_status = "ok"
                     st.cache_data.clear()
-                    st.rerun()
                 else:
-                    st.toast(f"Pipeline fehlgeschlagen (Exit-Code {result.returncode}).", icon="❌")
-                    st.error(
-                        "STDOUT:\n"
-                        + stdout
-                        + "\n\nSTDERR:\n"
-                        + stderr
-                    )
+                    st.session_state.pipeline_status = "error"
+
+            except Exception as e:
+                st.session_state.pipeline_status = "error"
+                st.session_state.pipeline_stderr = str(e)
 
 
     # --- Cache neu laden ---
     if st.button("🔄 Daten neu laden (Cache leeren)", key="btn_reload", use_container_width=True):
         st.cache_data.clear()
         st.rerun()
+
+    if st.session_state.pipeline_status == "ok":
+        st.success("✅ Pipeline erfolgreich durchgelaufen.")
+
+    elif st.session_state.pipeline_status == "error":
+        st.error("❌ Pipeline fehlgeschlagen.")
+
+        with st.expander("🔍 Details anzeigen"):
+            if st.session_state.pipeline_stdout:
+                st.markdown("**STDOUT**")
+                st.code(st.session_state.pipeline_stdout)
+            if st.session_state.pipeline_stderr:
+                st.markdown("**STDERR**")
+                st.code(st.session_state.pipeline_stderr)
 
 # ============================================================
 # Hauptansicht – Tabellen / Scorer
