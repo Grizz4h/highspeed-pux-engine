@@ -27,7 +27,7 @@ LOGO_DIR      = BASE_DIR / "assets" / "logos" / "teams"
 THUMB_DIR     = BASE_DIR / ".cache_thumbs"
 THUMB_DIR.mkdir(exist_ok=True)
 
-st.set_page_config(page_title="Liga-Simulator GUI", page_icon="🏒", layout="wide")
+st.set_page_config(page_title="PUX! Engine GUI", page_icon="🏒", layout="wide")
 
 # ============================================================
 # Utils
@@ -162,7 +162,7 @@ if "pipeline_status" not in st.session_state:
 # Sidebar – Steuerung
 # ============================================================
 with st.sidebar:
-    st.title("🏒 Liga-Simulator")
+    st.title("🏒 PUX! Engine")
     st.caption("HIGHspeed · NOVADELTA")
 
     # --- Regular Season: ein Spieltag ---
@@ -285,7 +285,7 @@ with st.sidebar:
 # ============================================================
 # Hauptansicht – Tabellen / Scorer
 # ============================================================
-st.title("Liga-Simulator – GUI")
+st.title("PUX! Engine – GUI")
 info = sim.read_tables_for_ui()
 
 col_l, col_r = st.columns([2, 1], gap="large")
