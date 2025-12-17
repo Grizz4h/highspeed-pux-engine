@@ -17,6 +17,7 @@ import pandas as pd
 import streamlit as st
 from PIL import Image
 
+
 # ============================================================
 # Pfade & Basiskonfig
 # ============================================================
@@ -159,6 +160,11 @@ def load_spielplan(path: Path) -> Optional[dict]:
 # ============================================================
 import LigageneratorV2 as sim
 
+if "pipeline_status" not in st.session_state:
+    st.session_state.pipeline_status = None  # "ok" | "error"
+    st.session_state.pipeline_stdout = ""
+    st.session_state.pipeline_stderr = ""
+
 # ============================================================
 # Sidebar – Steuerung
 # ============================================================
@@ -250,22 +256,38 @@ with st.sidebar:
                 stdout = (result.stdout or b"").decode("utf-8", errors="replace")
                 stderr = (result.stderr or b"").decode("utf-8", errors="replace")
 
-            except Exception as e:
-                st.toast("Pipeline konnte nicht gestartet werden.", icon="❌")
-                st.error(f"Fehler beim Starten von run_pipeline.py: {e}")
-            else:
+                st.session_state.pipeline_stdout = stdout
+                st.session_state.pipeline_stderr = stderr
+
                 if result.returncode == 0:
-                    st.toast("Pipeline erfolgreich durchgelaufen.", icon="✅")
+                    st.session_state.pipeline_status = "ok"
                     st.cache_data.clear()
-                    st.rerun()
                 else:
-                    st.toast(f"Pipeline fehlgeschlagen (Exit-Code {result.returncode}).", icon="❌")
-                    st.error("STDOUT:\n" + stdout + "\n\nSTDERR:\n" + stderr)
+                    st.session_state.pipeline_status = "error"
+
+            except Exception as e:
+                st.session_state.pipeline_status = "error"
+                st.session_state.pipeline_stderr = str(e)
+
 
     # --- Cache neu laden ---
     if st.button("🔄 Daten neu laden (Cache leeren)", key="btn_reload", use_container_width=True):
         st.cache_data.clear()
         st.rerun()
+        
+if st.session_state.pipeline_status == "ok":
+    st.success("✅ Pipeline erfolgreich durchgelaufen.")
+
+elif st.session_state.pipeline_status == "error":
+    st.error("❌ Pipeline fehlgeschlagen.")
+
+    with st.expander("🔍 Details anzeigen"):
+        if st.session_state.pipeline_stdout:
+            st.markdown("**STDOUT**")
+            st.code(st.session_state.pipeline_stdout)
+        if st.session_state.pipeline_stderr:
+            st.markdown("**STDERR**")
+            st.code(st.session_state.pipeline_stderr)
 
 # ============================================================
 # Hauptansicht – Tabs
