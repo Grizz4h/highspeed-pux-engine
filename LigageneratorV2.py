@@ -8,6 +8,8 @@ from typing import Any, Dict, List, Tuple, Optional
 
 import pandas as pd
 import math
+import os
+
 
 
 # ------------------------------------------------
@@ -42,16 +44,32 @@ def _clean_for_json(obj: Any) -> Any:
     return obj
 
 
+# ----------------------------
+# Data Root (Single Source of Truth)
+# ----------------------------
+# Wenn gesetzt, zeigen alle Pfade auf dein Data-Repo (z.B. C:\Webseite\highspeed-pux-data).
+# Wenn nicht gesetzt, bleibt es wie bisher (relative Pfade im Engine-Repo).
+DATA_ROOT = Path(os.environ.get("HIGHSPEED_DATA_ROOT", ".")).resolve()
+
+# Zentrale State/Output-Pfade (Ordnerstruktur bleibt exakt wie bisher)
+SAVEFILE     = DATA_ROOT / "saves" / "savegame.json"
+SPIELTAG_DIR = DATA_ROOT / "spieltage"
+PLAYOFF_DIR  = DATA_ROOT / "playoffs"
+REPLAY_DIR   = DATA_ROOT / "replays"    # Replay-JSONs
+SCHEDULE_DIR = DATA_ROOT / "schedules"  # kompletter Saison-Spielplan
+LINEUP_DIR   = DATA_ROOT / "lineups"
+STATS_DIR    = DATA_ROOT / "stats"      # Ligaweite Statistik-Snapshots
+
+
 # ------------------------------------------------
-# 1  PFADE
+# 3  SAVE/LOAD & INIT
 # ------------------------------------------------
-SAVEFILE     = Path("saves/savegame.json")
-SPIELTAG_DIR = Path("spieltage")
-PLAYOFF_DIR  = Path("playoffs")
-REPLAY_DIR   = Path("replays")    # Ordner für Replay-JSONs
-SCHEDULE_DIR = Path("schedules")  # kompletter Saison-Spielplan
-LINEUP_DIR = Path("lineups")
-STATS_DIR    = Path("stats")      # Ordner für ligaweite Statistik-Snapshots
+def _ensure_dirs() -> None:
+    for p in (SAVEFILE.parent, SPIELTAG_DIR, PLAYOFF_DIR, REPLAY_DIR, SCHEDULE_DIR, LINEUP_DIR, STATS_DIR):
+        p.mkdir(parents=True, exist_ok=True)
+
+
+_ensure_dirs()
 
 
 # ------------------------------------------------
@@ -1464,32 +1482,30 @@ def step_regular_season_once() -> Dict[str, Any]:
     lineups_payload.update(_collect_lineups_payload(nord, today_nord_matches))
     lineups_payload.update(_collect_lineups_payload(sued, today_sued_matches))
 
-    lineups_payload: Dict[str, Any] = {}
-    lineups_payload.update(_collect_lineups_payload(nord, today_nord_matches))
-    lineups_payload.update(_collect_lineups_payload(sued, today_sued_matches))
+
 
     # EXTRA: menschlich lesbare Lineup-Übersicht speichern
     save_lineup_overview(
-        season,
-        spieltag,
-        lineups_payload,
+    season,
+    spieltag,
+    lineups_payload,
 )
 
     save_spieltag_json(
-        season,
-        spieltag,
-        results_json,
-        nord,
-        sued,
-        stats,
-        debug=debug_payload,
-        lineups=lineups_payload,  # <<< NEU
+    season,
+    spieltag,
+    results_json,
+    nord,
+    sued,
+    stats,
+    debug=debug_payload,
+    lineups=lineups_payload,  # <<< NEU
     )
 
     save_replay_json(
-        season,
-        spieltag,
-        replay_matches,
+    season,
+    spieltag,
+    replay_matches,
     )
     save_league_stats_snapshot(
     season=season,
