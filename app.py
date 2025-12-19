@@ -44,6 +44,10 @@ SAVEGAME_PATH = DATA_DIR / "saves" / "savegame.json"
 # ============================================================
 # Utils
 # ============================================================
+def season_folder(season: int) -> str:
+    return f"saison_{int(season):02d}"
+
+
 def spieltag_index(value) -> int:
     """
     Extrahiert eine Zahl aus Spieltag-IDs wie:
@@ -58,7 +62,8 @@ def spieltag_index(value) -> int:
 
 def spielplan_path(season: int) -> Path:
     # Spielplan liegt bei den dynamischen Daten (Data-Repo)
-    return DATA_DIR / "schedules" / f"saison_{season}" / "spielplan.json"
+    return DATA_DIR / "schedules" / season_folder(season) / "spielplan.json"
+
 
 def _slugify(name: str) -> str:
     repl = (("ä","ae"),("ö","oe"),("ü","ue"),("Ä","Ae"),("Ö","Oe"),("Ü","Ue"),("ß","ss"))
@@ -655,7 +660,8 @@ with tab_gamedays:
 
     @st.cache_data(show_spinner=False)
     def list_gamedays(season: int, _sig_season: str) -> List[int]:
-        folder = SPIELTAG_DIR / f"saison_{season}"
+        folder = SPIELTAG_DIR / season_folder(season)
+
         if not folder.exists():
             return []
         vals=[]
@@ -666,28 +672,32 @@ with tab_gamedays:
         return sorted(set(vals))
 
     @st.cache_data(show_spinner=False)
+    
+    @st.cache_data(show_spinner=False)
     def load_gameday_json(season: int, gameday: int, _sig_season: str) -> Optional[dict]:
-        folder = SPIELTAG_DIR / f"saison_{season}"
+        folder = SPIELTAG_DIR / season_folder(season)
         if not folder.exists():
             return None
-        candidates = [
-            f for f in folder.iterdir()
-            if f.is_file() and re.match(rf"(?i)spieltag_0*{gameday}\D*\.json$", f.name)
-        ]
-        if not candidates:
+
+        # exakt auf Dateinamen gehen (robust, kein Regex-Gefrickel)
+        f = folder / f"spieltag_{int(gameday):02d}.json"
+        if not f.exists():
             return None
-        f = sorted(candidates, key=lambda p: p.name.lower())[0]
+
         try:
             return json.loads(f.read_text(encoding="utf-8"))
         except Exception:
             return None
+
+
 
     st.markdown("### 🧾 Spieltag-Browser (History & Download)")
 
     # Default: Browser-Saison nehmen
     seasons_avail = list_spieltage_seasons(SIG_SPIELTAGE)
     sel_season = int(st.session_state.browser_season or (seasons_avail[-1] if seasons_avail else info["season"]))
-    sig_season = dir_signature(SPIELTAG_DIR / f"saison_{sel_season}")
+    sig_season = dir_signature(SPIELTAG_DIR / season_folder(sel_season))
+
     gds = list_gamedays(sel_season, sig_season)
 
     if "sel_gameday" not in st.session_state:
@@ -720,7 +730,12 @@ with tab_gamedays:
                 idx = gds.index(cur) if cur in gds else len(gds)-1
                 st.session_state.sel_gameday = gds[min(len(gds)-1, idx+1)]
 
-    gjson = load_gameday_json(sel_season, st.session_state.sel_gameday, sig_season)
+    gjson = load_gameday_json(sel_season, st.session_state.sel_gameday, sig_season )
+
+    st.write("DEBUG sel_season =", sel_season)
+    st.write("DEBUG sel_gameday =", st.session_state.sel_gameday)
+    st.write("DEBUG SPIELTAG_DIR =", str(SPIELTAG_DIR))
+
 
     if not gjson:
         st.info("Für diese Auswahl existiert (noch) kein Spieltag.")
@@ -821,7 +836,8 @@ with tab_playoffs:
 
     @st.cache_data(show_spinner=False)
     def list_rounds(season: int, _sig_season: str) -> List[int]:
-        folder = PLAYOFF_DIR / f"saison_{season}"
+        folder = PLAYOFF_DIR / season_folder(season)
+
         if not folder.exists():
             return []
         vals=[]
@@ -833,7 +849,7 @@ with tab_playoffs:
 
     @st.cache_data(show_spinner=False)
     def load_round_json(season: int, rnd: int, _sig_season: str) -> Optional[dict]:
-        folder = PLAYOFF_DIR / f"saison_{season}"
+        folder = PLAYOFF_DIR / season_folder(season)
         if not folder.exists():
             return None
         candidates = [
@@ -852,7 +868,8 @@ with tab_playoffs:
 
     seasons_po = list_playoff_seasons(SIG_PLAYOFFS)
     sel_po_season = int(st.session_state.browser_season or (seasons_po[-1] if seasons_po else info["season"]))
-    sig_po_season = dir_signature(PLAYOFF_DIR / f"saison_{sel_po_season}")
+    sig_po_season = dir_signature(PLAYOFF_DIR / season_folder(sel_po_season))
+
     rounds = list_rounds(sel_po_season, sig_po_season)
 
     if "po_round" not in st.session_state:
