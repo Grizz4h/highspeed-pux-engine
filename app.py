@@ -381,10 +381,7 @@ elif st.session_state.pipeline_status == "error":
 st.sidebar.markdown("## Data Repo")
 st.sidebar.write(f"Data dir: `{DATA_DIR}`")
 
-if LOCK_FILE.exists():
-    st.sidebar.error("LOCK aktiv: Simulation/Push läuft")
-else:
-    st.sidebar.success("LOCK frei")
+
 
 if st.sidebar.button("PULL · LATEST", use_container_width=True):
     code, out = _run(["/opt/highspeed/publisher/data_pull.sh"])
