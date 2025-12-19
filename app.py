@@ -44,6 +44,17 @@ SAVEGAME_PATH = DATA_DIR / "saves" / "savegame.json"
 # ============================================================
 # Utils
 # ============================================================
+def spieltag_index(value) -> int:
+    """
+    Extrahiert eine Zahl aus Spieltag-IDs wie:
+    - 12
+    - "12"
+    - "Playoff_Runde_1"
+    - "Spieltag_03"
+    Fallback: 0
+    """
+    m = re.search(r"(\d+)", str(value))
+    return int(m.group(1)) if m else 0
 
 def spielplan_path(season: int) -> Path:
     # Spielplan liegt bei den dynamischen Daten (Data-Repo)
@@ -67,6 +78,7 @@ def _logo_file_for_team(team: str) -> Optional[Path]:
         if p.exists():
             return p
     return None
+
 
 @st.cache_data(show_spinner=False)
 def get_logo_thumb_path(team: str, size: int = 24, scale: int = 2) -> Optional[str]:
@@ -486,7 +498,8 @@ with tab_calendar:
         team_filter = st.selectbox("Team-Filter (optional)", options=["(alle)"] + teams, index=0)
 
         # Aktueller Spieltag nur als Orientierung (Engine-State)
-        cur_md = int(info.get("spieltag", 1) or 1)
+        cur_md = spieltag_index(info.get("spieltag", 1)) or 1
+
 
         md_nums = [m.get("matchday") for m in matchdays if isinstance(m.get("matchday"), int)]
         md_nums = [m for m in md_nums if m is not None]

@@ -43,6 +43,18 @@ def _clean_for_json(obj: Any) -> Any:
         return [_clean_for_json(v) for v in obj]
 
     return obj
+import re
+
+def to_index(value: str) -> int:
+    """
+    Macht aus '12', 'Spieltag_12', 'Playoff_Runde_3' -> 12 bzw. 3
+    Knallt bewusst, wenn keine Zahl drin ist.
+    """
+    s = str(value)
+    m = re.search(r"(\d+)", s)
+    if not m:
+        raise ValueError(f"Keine Zahl gefunden in: {s!r}")
+    return int(m.group(1))
 
 
 # ----------------------------
