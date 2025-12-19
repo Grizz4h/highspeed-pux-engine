@@ -39,7 +39,8 @@ THUMB_DIR = APP_DIR / ".cache_thumbs"
 THUMB_DIR.mkdir(exist_ok=True)
 
 SAVEGAME_PATH = DATA_DIR / "saves" / "savegame.json"
-
+DATA_DIR = Path(os.environ.get("HIGHSPEED_DATA_ROOT", "/opt/highspeed/data"))
+LOCK_FILE = DATA_DIR / ".lock_simulation"
 
 # ============================================================
 # Utils
@@ -204,7 +205,10 @@ if "pipeline_status" not in st.session_state:
 if "browser_season" not in st.session_state:
     st.session_state.browser_season = None
 
-
+def _run(cmd: list[str]) -> tuple[int, str]:
+    p = subprocess.run(cmd, capture_output=True, text=True)
+    out = (p.stdout or "") + (p.stderr or "")
+    return p.returncode, out.strip()
 # ============================================================
 # Sidebar – Steuerung
 # ============================================================
@@ -375,7 +379,37 @@ elif st.session_state.pipeline_status == "error":
             st.markdown("**STDERR**")
             st.code(st.session_state.pipeline_stderr)
 
+st.sidebar.markdown("## Data Repo")
+st.sidebar.write(f"Data dir: `{DATA_DIR}`")
 
+if LOCK_FILE.exists():
+    st.sidebar.error("LOCK aktiv: Simulation/Push läuft")
+else:
+    st.sidebar.success("LOCK frei")
+
+if st.sidebar.button("PULL · LATEST", use_container_width=True):
+    code, out = _run(["/opt/highspeed/publisher/data_pull.sh"])
+    if code == 0:
+        st.sidebar.success("Pull OK")
+    else:
+        st.sidebar.error("Pull FAIL")
+    if out:
+        st.sidebar.code(out)
+
+msg = st.sidebar.text_input("Commit-Message (optional)", value="")
+if st.sidebar.button("COMMIT · PUSH", use_container_width=True):
+    cmd = ["/opt/highspeed/publisher/data_push.sh"]
+    if msg.strip():
+        cmd.append(msg.strip())
+    code, out = _run(cmd)
+    if code == 0:
+        st.sidebar.success("Push OK")
+    elif code == 2:
+        st.sidebar.error("Konflikt beim Rebase – manuell lösen")
+    else:
+        st.sidebar.error("Push FAIL")
+    if out:
+        st.sidebar.code(out)
 # ============================================================
 # Hauptansicht – Tabs
 # ============================================================
