@@ -39,8 +39,7 @@ THUMB_DIR = APP_DIR / ".cache_thumbs"
 THUMB_DIR.mkdir(exist_ok=True)
 
 SAVEGAME_PATH = DATA_DIR / "saves" / "savegame.json"
-DATA_DIR = Path(os.environ.get("HIGHSPEED_DATA_ROOT", "/opt/highspeed/data"))
-LOCK_FILE = DATA_DIR / ".lock_simulation"
+
 
 # ============================================================
 # Utils
