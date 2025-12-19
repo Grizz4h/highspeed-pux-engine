@@ -78,6 +78,9 @@ STATS_DIR    = DATA_ROOT / "stats"
 print("✅ HIGHSPEED_DATA_ROOT =", DATA_ROOT)
 print("✅ SAVEFILE =", SAVEFILE)
 
+def season_folder(season: int) -> str:
+    return f"saison_{int(season):02d}"
+
 # ------------------------------------------------
 # 2  TEAMS LADEN
 # ------------------------------------------------
@@ -149,7 +152,8 @@ def savefile_for_season(season: int) -> Path:
     Saison-spezifischer Savefile-Pfad (optional/nützlich).
     Aktuell nutzt der Engine-State SAVEFILE als "latest", aber das hier bleibt drin.
     """
-    return DATA_ROOT / "saves" / f"saison_{season}" / "savegame.json"
+    return DATA_ROOT / "saves" / season_folder(season) / "savegame.json"
+
 
 
 # ------------------------------------------------
@@ -334,9 +338,11 @@ def _save_full_schedule_preview(
         "sued": {"teams": south_team_names, "matchdays": sued_matchdays},
     }
 
-    target_folder = SCHEDULE_DIR / f"saison_{season}"
+    target_folder = SCHEDULE_DIR / season_folder(season)
     _save_json(target_folder, "spielplan.json", payload)
+
     print("📃 Saison-Spielplan gespeichert →", target_folder / "spielplan.json")
+
 
 
 def init_stats() -> pd.DataFrame:
@@ -433,7 +439,8 @@ def save_spieltag_json(
         payload["debug"] = debug
     if lineups is not None:
         payload["lineups"] = lineups  # <<< NEU
-    _save_json(SPIELTAG_DIR / f"saison_{season}", f"spieltag_{gameday:02}.json", payload)
+    _save_json(SPIELTAG_DIR / season_folder(season), f"spieltag_{gameday:02}.json", payload)
+
 
 
 def save_lineup_overview(
@@ -452,7 +459,8 @@ def save_lineup_overview(
         "teams": lineups,
     }
 
-    target = LINEUP_DIR / f"saison_{season}"
+    target = LINEUP_DIR / season_folder(season)
+
     _save_json(target, f"spieltag_{gameday:02}_lineups.json", payload)
 
 
@@ -464,7 +472,8 @@ def save_replay_json(
     gameday: int,
     replay_matches: List[Dict[str, Any]],
 ) -> None:
-    base_folder = REPLAY_DIR / f"saison_{season}" / f"spieltag_{gameday:02}"
+    base_folder = REPLAY_DIR / season_folder(season) / f"spieltag_{gameday:02}"
+
     base_folder.mkdir(parents=True, exist_ok=True)
 
     matchday_payload: Dict[str, Any] = {
@@ -512,7 +521,8 @@ def save_replay_json(
 # 4c STATS-SAMMLER (NEU) – ligaweit aus gespeicherten Spieltag-JSONs
 # ------------------------------------------------
 def _list_spieltag_files(season: int) -> List[Path]:
-    folder = SPIELTAG_DIR / f"saison_{season}"
+    folder = SPIELTAG_DIR / season_folder(season)
+
     if not folder.exists():
         return []
     return sorted(folder.glob("spieltag_*.json"))
@@ -712,7 +722,8 @@ def save_league_stats_snapshot(
         ],
     }
 
-    league_folder = STATS_DIR / f"saison_{season}" / "league"
+    league_folder = STATS_DIR / season_folder(season) / "league"
+
     league_folder.mkdir(parents=True, exist_ok=True)
 
     _save_json(league_folder, f"after_spieltag_{upto_matchday:02}.json", payload)
@@ -1400,7 +1411,7 @@ def run_playoffs(
             winners.append(series["winner"])
             print(f"• Serie: {a} vs {b} → {series['result']}  Sieger: {series['winner']}")
         _save_json(
-            PLAYOFF_DIR / f"saison_{season}",
+            PLAYOFF_DIR / season_folder(season),
             f"runde_{rnd:02}.json",
             {
                 "timestamp": datetime.now().isoformat(),
@@ -1617,7 +1628,7 @@ def step_playoffs_round_once() -> Dict[str, Any]:
         print(f"• Serie: {a} vs {b} → {series['result']}  Sieger: {series['winner']}")
 
     _save_json(
-        PLAYOFF_DIR / f"saison_{state['season']}",
+        PLAYOFF_DIR / season_folder(state["season"]),
         f"runde_{rnd:02}.json",
         {
             "timestamp": datetime.now().isoformat(),
