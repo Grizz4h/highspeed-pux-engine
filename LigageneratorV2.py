@@ -9,7 +9,7 @@ from typing import Any, Dict, List, Tuple, Optional
 import pandas as pd
 import math
 import os
-
+import re
 
 
 # ------------------------------------------------
@@ -38,39 +38,33 @@ def _clean_for_json(obj: Any) -> Any:
     if isinstance(obj, list):
         return [_clean_for_json(v) for v in obj]
 
+    # JSON kann keine tuples -> Listen
     if isinstance(obj, tuple):
-        return tuple(_clean_for_json(v) for v in obj)
+        return [_clean_for_json(v) for v in obj]
 
     return obj
 
 
 # ----------------------------
-# Data Root (Single Source of Truth)
+# Data Root (Single Source of Truth) - HARD FAIL wenn nicht gesetzt
 # ----------------------------
-# Wenn gesetzt, zeigen alle Pfade auf dein Data-Repo (z.B. C:\Webseite\highspeed-pux-data).
-# Wenn nicht gesetzt, bleibt es wie bisher (relative Pfade im Engine-Repo).
-DATA_ROOT = Path(os.environ.get("HIGHSPEED_DATA_ROOT", ".")).resolve()
+env_root = os.environ.get("HIGHSPEED_DATA_ROOT")
+if not env_root:
+    raise RuntimeError(
+        "HIGHSPEED_DATA_ROOT ist nicht gesetzt – sonst wird ins Engine-Repo geschrieben."
+    )
+DATA_ROOT = Path(env_root).resolve()
 
-# Zentrale State/Output-Pfade (Ordnerstruktur bleibt exakt wie bisher)
 SAVEFILE     = DATA_ROOT / "saves" / "savegame.json"
 SPIELTAG_DIR = DATA_ROOT / "spieltage"
 PLAYOFF_DIR  = DATA_ROOT / "playoffs"
-REPLAY_DIR   = DATA_ROOT / "replays"    # Replay-JSONs
-SCHEDULE_DIR = DATA_ROOT / "schedules"  # kompletter Saison-Spielplan
+REPLAY_DIR   = DATA_ROOT / "replays"
+SCHEDULE_DIR = DATA_ROOT / "schedules"
 LINEUP_DIR   = DATA_ROOT / "lineups"
-STATS_DIR    = DATA_ROOT / "stats"      # Ligaweite Statistik-Snapshots
+STATS_DIR    = DATA_ROOT / "stats"
 
-
-# ------------------------------------------------
-# 3  SAVE/LOAD & INIT
-# ------------------------------------------------
-def _ensure_dirs() -> None:
-    for p in (SAVEFILE.parent, SPIELTAG_DIR, PLAYOFF_DIR, REPLAY_DIR, SCHEDULE_DIR, LINEUP_DIR, STATS_DIR):
-        p.mkdir(parents=True, exist_ok=True)
-
-
-_ensure_dirs()
-
+print("✅ HIGHSPEED_DATA_ROOT =", DATA_ROOT)
+print("✅ SAVEFILE =", SAVEFILE)
 
 # ------------------------------------------------
 # 2  TEAMS LADEN
@@ -86,6 +80,35 @@ def _ensure_dirs() -> None:
         p.mkdir(parents=True, exist_ok=True)
 
 
+_ensure_dirs()
+
+
+def load_state() -> Optional[Dict[str, Any]]:
+    """
+    Lädt den aktuellen State aus SAVEFILE.
+    Gibt None zurück, wenn kein Save existiert.
+    """
+    if not SAVEFILE.exists():
+        return None
+    try:
+        with SAVEFILE.open("r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"[ERROR] load_state failed: {e}")
+        return None
+
+
+def save_state(state: Dict[str, Any]) -> None:
+    """
+    Speichert den aktuellen State nach SAVEFILE.
+    """
+    _ensure_dirs()
+    cleaned = _clean_for_json(state)
+    with SAVEFILE.open("w", encoding="utf-8") as f:
+        json.dump(cleaned, f, indent=2, ensure_ascii=False)
+    # bewusst kein print-spam hier, dein Script printet eh genug
+
+
 def get_next_season_number() -> int:
     if not SPIELTAG_DIR.exists():
         return 1
@@ -97,26 +120,24 @@ def get_next_season_number() -> int:
     return max(nums, default=0) + 1
 
 
-def save_state(state: Dict[str, Any]) -> None:
-    SAVEFILE.parent.mkdir(parents=True, exist_ok=True)
-    cleaned = _clean_for_json(state)
-    with SAVEFILE.open("w", encoding="utf-8") as f:
-        json.dump(cleaned, f, indent=2, ensure_ascii=False)
-
-
-def load_state() -> Optional[Dict[str, Any]]:
-    if SAVEFILE.exists() and SAVEFILE.stat().st_size > 0:
-        with SAVEFILE.open("r", encoding="utf-8") as f:
-            return json.load(f)
-    return None
-
-
 def _init_frames() -> Tuple[pd.DataFrame, pd.DataFrame]:
     n = pd.DataFrame(nord_teams)
     s = pd.DataFrame(sued_teams)
     for d in (n, s):
+        # robust: falls Spalten fehlen, anlegen
+        for col in ("Points", "Goals For", "Goals Against"):
+            if col not in d.columns:
+                d[col] = 0
         d[["Points", "Goals For", "Goals Against"]] = 0
     return n, s
+
+
+def savefile_for_season(season: int) -> Path:
+    """
+    Saison-spezifischer Savefile-Pfad (optional/nützlich).
+    Aktuell nutzt der Engine-State SAVEFILE als "latest", aber das hier bleibt drin.
+    """
+    return DATA_ROOT / "saves" / f"saison_{season}" / "savegame.json"
 
 
 # ------------------------------------------------
@@ -275,6 +296,14 @@ def _build_schedule_matchdays(
     return matchdays
 
 
+def _save_json(folder: Path, name: str, payload: Dict[str, Any]) -> None:
+    folder.mkdir(parents=True, exist_ok=True)
+    cleaned = _clean_for_json(payload)
+    with (folder / name).open("w", encoding="utf-8") as f:
+        json.dump(cleaned, f, indent=2, ensure_ascii=False)
+    print("📦 JSON gespeichert →", folder / name)
+
+
 def _save_full_schedule_preview(
     season: int,
     nsched: List[Tuple[str, str]],
@@ -296,6 +325,22 @@ def _save_full_schedule_preview(
     target_folder = SCHEDULE_DIR / f"saison_{season}"
     _save_json(target_folder, "spielplan.json", payload)
     print("📃 Saison-Spielplan gespeichert →", target_folder / "spielplan.json")
+
+
+def init_stats() -> pd.DataFrame:
+    rows = []
+    for t in nord_teams + sued_teams:
+        team_name = t["Team"]
+        for p in t["Players"]:
+            rows.append({
+                "Player": p["Name"],
+                "Team": team_name,
+                "Number": p.get("Number"),
+                "PositionGroup": p.get("PositionGroup"),
+                "Goals": 0,
+                "Assists": 0,
+            })
+    return pd.DataFrame(rows)
 
 
 def _init_new_season_state(season: int) -> Dict[str, Any]:
@@ -354,14 +399,6 @@ def _export_tables(nord_df: pd.DataFrame, sued_df: pd.DataFrame, stats: pd.DataF
     }
 
 
-def _save_json(folder: Path, name: str, payload: Dict[str, Any]) -> None:
-    folder.mkdir(parents=True, exist_ok=True)
-    cleaned = _clean_for_json(payload)
-    with (folder / name).open("w", encoding="utf-8") as f:
-        json.dump(cleaned, f, indent=2, ensure_ascii=False)
-    print("📦 JSON gespeichert →", folder / name)
-
-
 def save_spieltag_json(
     season: int,
     gameday: int,
@@ -386,6 +423,7 @@ def save_spieltag_json(
         payload["lineups"] = lineups  # <<< NEU
     _save_json(SPIELTAG_DIR / f"saison_{season}", f"spieltag_{gameday:02}.json", payload)
 
+
 def save_lineup_overview(
     season: int,
     gameday: int,
@@ -404,6 +442,7 @@ def save_lineup_overview(
 
     target = LINEUP_DIR / f"saison_{season}"
     _save_json(target, f"spieltag_{gameday:02}_lineups.json", payload)
+
 
 # ------------------------------------------------
 # 4b REPLAY-EXPORT
@@ -455,6 +494,7 @@ def save_replay_json(
         })
 
     _save_json(base_folder, "replay_matchday.json", matchday_payload)
+
 
 # ------------------------------------------------
 # 4c STATS-SAMMLER (NEU) – ligaweit aus gespeicherten Spieltag-JSONs
@@ -665,6 +705,7 @@ def save_league_stats_snapshot(
 
     _save_json(league_folder, f"after_spieltag_{upto_matchday:02}.json", payload)
     _save_json(league_folder, "latest.json", payload)
+
 
 # ------------------------------------------------
 # 5  TERMINAL-AUSGABEN
@@ -887,7 +928,7 @@ def build_lineup(
         if d_count < n_def:
             print("   -> FEHLENDE Verteidiger:", n_def - d_count)
         if f_count < n_fwd:
-            print("   -> FEHLENDE Stürmer:", n_fwd - f_count)
+            print("   -> FEHLENDE Stürmer:", n_def - d_count)
         if g_count < n_goalies:
             print("   -> KEIN GOALIE verfügbar!")
 
@@ -1128,11 +1169,13 @@ def update_player_stats(team: str, goals: int, df: pd.DataFrame, stats: pd.DataF
     return goal_events
 
 
-def simulate_match(df: pd.DataFrame,
-                   home: str,
-                   away: str,
-                   stats: pd.DataFrame,
-                   conf: str) -> Tuple[str, Dict[str, Any], Dict[str, Any]]:
+def simulate_match(
+    df: pd.DataFrame,
+    home: str,
+    away: str,
+    stats: pd.DataFrame,
+    conf: str
+) -> Tuple[str, Dict[str, Any], Dict[str, Any]]:
     r_h = df[df["Team"] == home].iloc[0]
     r_a = df[df["Team"] == away].iloc[0]
 
@@ -1252,22 +1295,6 @@ def simulate_match(df: pd.DataFrame,
     return res_str, res_json, replay_struct
 
 
-def init_stats() -> pd.DataFrame:
-    rows = []
-    for t in nord_teams + sued_teams:
-        team_name = t["Team"]
-        for p in t["Players"]:
-            rows.append({
-                "Player": p["Name"],
-                "Team": team_name,
-                "Number": p.get("Number"),
-                "PositionGroup": p.get("PositionGroup"),
-                "Goals": 0,
-                "Assists": 0,
-            })
-    return pd.DataFrame(rows)
-
-
 # ------------------------------------------------
 # 7  PLAYOFFS – SERIEN (Bo7)
 # ------------------------------------------------
@@ -1282,10 +1309,13 @@ def _initial_playoff_pairings(nord: pd.DataFrame, sued: pd.DataFrame) -> List[Tu
     ]
 
 
-def simulate_playoff_match(a: str, b: str,
-                           nord: pd.DataFrame,
-                           sued: pd.DataFrame,
-                           stats: pd.DataFrame) -> Tuple[str, str, Dict[str, int]]:
+def simulate_playoff_match(
+    a: str,
+    b: str,
+    nord: pd.DataFrame,
+    sued: pd.DataFrame,
+    stats: pd.DataFrame
+) -> Tuple[str, str, Dict[str, int]]:
     dfA = nord if a in list(nord["Team"]) else sued
     dfB = nord if b in list(nord["Team"]) else sued
 
@@ -1304,11 +1334,14 @@ def simulate_playoff_match(a: str, b: str,
     return f"{a} {gA}:{gB} {b}", (a if gA > gB else b), {"g_home": gA, "g_away": gB}
 
 
-def simulate_series_best_of(a: str, b: str,
-                            nord: pd.DataFrame,
-                            sued: pd.DataFrame,
-                            stats: pd.DataFrame,
-                            wins_needed: int = 4) -> Dict[str, Any]:
+def simulate_series_best_of(
+    a: str,
+    b: str,
+    nord: pd.DataFrame,
+    sued: pd.DataFrame,
+    stats: pd.DataFrame,
+    wins_needed: int = 4
+) -> Dict[str, Any]:
     winsA = winsB = 0
     games = []
     gnum = 1
@@ -1333,12 +1366,14 @@ def simulate_series_best_of(a: str, b: str,
     }
 
 
-def run_playoffs(season: int,
-                 nord: pd.DataFrame,
-                 sued: pd.DataFrame,
-                 stats: pd.DataFrame,
-                 *,
-                 interactive: bool = True) -> str:
+def run_playoffs(
+    season: int,
+    nord: pd.DataFrame,
+    sued: pd.DataFrame,
+    stats: pd.DataFrame,
+    *,
+    interactive: bool = True
+) -> str:
     rnd = 1
     pairings = _initial_playoff_pairings(nord, sued)
     while True:
@@ -1482,46 +1517,38 @@ def step_regular_season_once() -> Dict[str, Any]:
     lineups_payload.update(_collect_lineups_payload(nord, today_nord_matches))
     lineups_payload.update(_collect_lineups_payload(sued, today_sued_matches))
 
-
-
     # EXTRA: menschlich lesbare Lineup-Übersicht speichern
-    save_lineup_overview(
-    season,
-    spieltag,
-    lineups_payload,
-)
+    save_lineup_overview(season, spieltag, lineups_payload)
 
     save_spieltag_json(
-    season,
-    spieltag,
-    results_json,
-    nord,
-    sued,
-    stats,
-    debug=debug_payload,
-    lineups=lineups_payload,  # <<< NEU
+        season,
+        spieltag,
+        results_json,
+        nord,
+        sued,
+        stats,
+        debug=debug_payload,
+        lineups=lineups_payload,
     )
 
-    save_replay_json(
-    season,
-    spieltag,
-    replay_matches,
-    )
+    save_replay_json(season, spieltag, replay_matches)
+
     save_league_stats_snapshot(
-    season=season,
-    upto_matchday=spieltag,
-    nord_df=nord,
-    sued_df=sued,
-    player_stats=stats,
-)
-
+        season=season,
+        upto_matchday=spieltag,
+        nord_df=nord,
+        sued_df=sued,
+        player_stats=stats,
+    )
 
     spieltag += 1
     save_state({
-        "season": season, "spieltag": spieltag,
+        "season": season,
+        "spieltag": spieltag,
         "nord": _df_to_records_clean(nord),
         "sued": _df_to_records_clean(sued),
-        "nsched": nsched, "ssched": ssched,
+        "nsched": nsched,
+        "ssched": ssched,
         "stats": _df_to_records_clean(stats),
         "history": state.get("history", []),
         "phase": "regular",
@@ -1551,11 +1578,15 @@ def step_playoffs_round_once() -> Dict[str, Any]:
     state = load_state()
     if not state:
         return {"status": "no_state"}
-    nord = pd.DataFrame(state["nord"]); sued = pd.DataFrame(state["sued"])
-    stats = pd.DataFrame(state["stats"]); history = state.get("history", [])
+    nord = pd.DataFrame(state["nord"])
+    sued = pd.DataFrame(state["sued"])
+    stats = pd.DataFrame(state["stats"])
+    history = state.get("history", [])
+
     max_spieltage = (len(nord_teams) - 1) * 2
     if isinstance(state.get("spieltag"), int) and state["spieltag"] <= max_spieltage:
         return {"status": "regular_not_finished"}
+
     rnd = int(state.get("playoff_round", 1))
     alive = state.get("playoff_alive", [])
     if rnd == 1 and not alive:
@@ -1564,11 +1595,15 @@ def step_playoffs_round_once() -> Dict[str, Any]:
         if not alive or len(alive) < 2:
             return {"status": "invalid_playoff_state"}
         pairings = [(alive[i], alive[i+1]) for i in range(0, len(alive), 2)]
-    round_series=[]; winners=[]
-    for a,b in pairings:
-        series = simulate_series_best_of(a,b,nord,sued,stats)
-        round_series.append(series); winners.append(series["winner"])
+
+    round_series = []
+    winners = []
+    for a, b in pairings:
+        series = simulate_series_best_of(a, b, nord, sued, stats)
+        round_series.append(series)
+        winners.append(series["winner"])
         print(f"• Serie: {a} vs {b} → {series['result']}  Sieger: {series['winner']}")
+
     _save_json(
         PLAYOFF_DIR / f"saison_{state['season']}",
         f"runde_{rnd:02}.json",
@@ -1580,14 +1615,16 @@ def step_playoffs_round_once() -> Dict[str, Any]:
             **_export_tables(nord, sued, stats),
         },
     )
-    if len(winners)==1:
-        champion=winners[0]
+
+    if len(winners) == 1:
+        champion = winners[0]
         history.append({"season": state["season"], "champion": champion, "finished_at": datetime.now().isoformat()})
-        next_season_num = state["season"]+1
-        next_state=_init_new_season_state(next_season_num)
-        next_state["history"]=history
+        next_season_num = state["season"] + 1
+        next_state = _init_new_season_state(next_season_num)
+        next_state["history"] = history
         save_state(next_state)
-        return {"status":"champion","round":rnd,"champion":champion,"next_season":next_season_num}
+        return {"status": "champion", "round": rnd, "champion": champion, "next_season": next_season_num}
+
     save_state({
         "season": state["season"],
         "spieltag": f"Playoff_Runde_{rnd}",
@@ -1597,10 +1634,10 @@ def step_playoffs_round_once() -> Dict[str, Any]:
         "stats": _df_to_records_clean(stats),
         "history": history,
         "phase": "playoffs",
-        "playoff_round": rnd+1,
+        "playoff_round": rnd + 1,
         "playoff_alive": winners,
     })
-    return {"status":"ok","round":rnd,"winners":winners}
+    return {"status": "ok", "round": rnd, "winners": winners}
 
 
 # ------------------------------------------------

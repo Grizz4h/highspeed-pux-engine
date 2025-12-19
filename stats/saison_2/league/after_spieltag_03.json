@@ -1,0 +1,1159 @@
+{
+  "season": 2,
+  "upto_matchday": 3,
+  "generated_at": "2025-12-19T15:05:44.626545",
+  "teams": [
+    {
+      "team": "Bad Nauheim Devils",
+      "conference": "Nord",
+      "gp": 3,
+      "w": 0,
+      "l": 3,
+      "t": 0,
+      "points_table": 0,
+      "points_from_logs": 0,
+      "gf_table": 3,
+      "ga_table": 10,
+      "gd_table": -7,
+      "ppg_table": 0.0,
+      "last5": [
+        "L",
+        "L",
+        "L"
+      ],
+      "streak": "L3",
+      "avg_overall_season": 70.5,
+      "avg_overall_last5": 70.5
+    },
+    {
+      "team": "Bremerhaven Trident",
+      "conference": "Nord",
+      "gp": 3,
+      "w": 2,
+      "l": 1,
+      "t": 0,
+      "points_table": 6,
+      "points_from_logs": 6,
+      "gf_table": 9,
+      "ga_table": 6,
+      "gd_table": 3,
+      "ppg_table": 2.0,
+      "last5": [
+        "W",
+        "L",
+        "W"
+      ],
+      "streak": "W1",
+      "avg_overall_season": 72.97,
+      "avg_overall_last5": 72.97
+    },
+    {
+      "team": "Düsseldorf Aurora",
+      "conference": "Nord",
+      "gp": 3,
+      "w": 0,
+      "l": 1,
+      "t": 2,
+      "points_table": 2,
+      "points_from_logs": 2,
+      "gf_table": 6,
+      "ga_table": 7,
+      "gd_table": -1,
+      "ppg_table": 0.67,
+      "last5": [
+        "T",
+        "T",
+        "L"
+      ],
+      "streak": "L1",
+      "avg_overall_season": 69.9,
+      "avg_overall_last5": 69.9
+    },
+    {
+      "team": "Frankfurt Core",
+      "conference": "Nord",
+      "gp": 3,
+      "w": 2,
+      "l": 0,
+      "t": 1,
+      "points_table": 7,
+      "points_from_logs": 7,
+      "gf_table": 8,
+      "ga_table": 6,
+      "gd_table": 2,
+      "ppg_table": 2.33,
+      "last5": [
+        "W",
+        "T",
+        "W"
+      ],
+      "streak": "W1",
+      "avg_overall_season": 66.5,
+      "avg_overall_last5": 66.5
+    },
+    {
+      "team": "Iserlohn Miners",
+      "conference": "Nord",
+      "gp": 3,
+      "w": 0,
+      "l": 1,
+      "t": 2,
+      "points_table": 2,
+      "points_from_logs": 2,
+      "gf_table": 5,
+      "ga_table": 9,
+      "gd_table": -4,
+      "ppg_table": 0.67,
+      "last5": [
+        "T",
+        "T",
+        "L"
+      ],
+      "streak": "L1",
+      "avg_overall_season": 69.17,
+      "avg_overall_last5": 69.17
+    },
+    {
+      "team": "Köln Blitzhaie",
+      "conference": "Nord",
+      "gp": 3,
+      "w": 0,
+      "l": 0,
+      "t": 3,
+      "points_table": 3,
+      "points_from_logs": 3,
+      "gf_table": 6,
+      "ga_table": 6,
+      "gd_table": 0,
+      "ppg_table": 1.0,
+      "last5": [
+        "T",
+        "T",
+        "T"
+      ],
+      "streak": "T3",
+      "avg_overall_season": 74.43,
+      "avg_overall_last5": 74.43
+    },
+    {
+      "team": "Krefeld Kernschlag",
+      "conference": "Nord",
+      "gp": 3,
+      "w": 1,
+      "l": 2,
+      "t": 0,
+      "points_table": 3,
+      "points_from_logs": 3,
+      "gf_table": 8,
+      "ga_table": 8,
+      "gd_table": 0,
+      "ppg_table": 1.0,
+      "last5": [
+        "L",
+        "W",
+        "L"
+      ],
+      "streak": "L1",
+      "avg_overall_season": 74.7,
+      "avg_overall_last5": 74.7
+    },
+    {
+      "team": "Kassel Zenit",
+      "conference": "Nord",
+      "gp": 3,
+      "w": 1,
+      "l": 1,
+      "t": 1,
+      "points_table": 4,
+      "points_from_logs": 4,
+      "gf_table": 5,
+      "ga_table": 4,
+      "gd_table": 1,
+      "ppg_table": 1.33,
+      "last5": [
+        "T",
+        "L",
+        "W"
+      ],
+      "streak": "W1",
+      "avg_overall_season": 72.07,
+      "avg_overall_last5": 72.07
+    },
+    {
+      "team": "Wolfsburg Voltsturm",
+      "conference": "Nord",
+      "gp": 3,
+      "w": 2,
+      "l": 1,
+      "t": 0,
+      "points_table": 6,
+      "points_from_logs": 6,
+      "gf_table": 9,
+      "ga_table": 6,
+      "gd_table": 3,
+      "ppg_table": 2.0,
+      "last5": [
+        "L",
+        "W",
+        "W"
+      ],
+      "streak": "W2",
+      "avg_overall_season": 72.5,
+      "avg_overall_last5": 72.5
+    },
+    {
+      "team": "Whiteout Berlin",
+      "conference": "Nord",
+      "gp": 3,
+      "w": 2,
+      "l": 0,
+      "t": 1,
+      "points_table": 7,
+      "points_from_logs": 7,
+      "gf_table": 7,
+      "ga_table": 4,
+      "gd_table": 3,
+      "ppg_table": 2.33,
+      "last5": [
+        "W",
+        "W",
+        "T"
+      ],
+      "streak": "T1",
+      "avg_overall_season": 75.0,
+      "avg_overall_last5": 75.0
+    },
+    {
+      "team": "Augsburg Ferox",
+      "conference": "Sued",
+      "gp": 3,
+      "w": 1,
+      "l": 2,
+      "t": 0,
+      "points_table": 3,
+      "points_from_logs": 3,
+      "gf_table": 4,
+      "ga_table": 8,
+      "gd_table": -4,
+      "ppg_table": 1.0,
+      "last5": [
+        "L",
+        "W",
+        "L"
+      ],
+      "streak": "L1",
+      "avg_overall_season": 71.13,
+      "avg_overall_last5": 71.13
+    },
+    {
+      "team": "Landshut Lichtkern",
+      "conference": "Sued",
+      "gp": 3,
+      "w": 2,
+      "l": 1,
+      "t": 0,
+      "points_table": 6,
+      "points_from_logs": 6,
+      "gf_table": 9,
+      "ga_table": 7,
+      "gd_table": 2,
+      "ppg_table": 2.0,
+      "last5": [
+        "W",
+        "W",
+        "L"
+      ],
+      "streak": "L1",
+      "avg_overall_season": 73.07,
+      "avg_overall_last5": 73.07
+    },
+    {
+      "team": "München FluxBullen",
+      "conference": "Sued",
+      "gp": 3,
+      "w": 1,
+      "l": 2,
+      "t": 0,
+      "points_table": 3,
+      "points_from_logs": 3,
+      "gf_table": 8,
+      "ga_table": 8,
+      "gd_table": 0,
+      "ppg_table": 1.0,
+      "last5": [
+        "L",
+        "L",
+        "W"
+      ],
+      "streak": "W1",
+      "avg_overall_season": 74.33,
+      "avg_overall_last5": 74.33
+    },
+    {
+      "team": "Mannheim Ventus",
+      "conference": "Sued",
+      "gp": 3,
+      "w": 0,
+      "l": 2,
+      "t": 1,
+      "points_table": 1,
+      "points_from_logs": 1,
+      "gf_table": 5,
+      "ga_table": 9,
+      "gd_table": -4,
+      "ppg_table": 0.33,
+      "last5": [
+        "L",
+        "L",
+        "T"
+      ],
+      "streak": "T1",
+      "avg_overall_season": 76.4,
+      "avg_overall_last5": 76.4
+    },
+    {
+      "team": "Novadelta Panther",
+      "conference": "Sued",
+      "gp": 3,
+      "w": 2,
+      "l": 1,
+      "t": 0,
+      "points_table": 6,
+      "points_from_logs": 6,
+      "gf_table": 9,
+      "ga_table": 3,
+      "gd_table": 6,
+      "ppg_table": 2.0,
+      "last5": [
+        "L",
+        "W",
+        "W"
+      ],
+      "streak": "W2",
+      "avg_overall_season": 78.07,
+      "avg_overall_last5": 78.07
+    },
+    {
+      "team": "Nürnberg Eistiger",
+      "conference": "Sued",
+      "gp": 3,
+      "w": 2,
+      "l": 0,
+      "t": 1,
+      "points_table": 7,
+      "points_from_logs": 7,
+      "gf_table": 7,
+      "ga_table": 5,
+      "gd_table": 2,
+      "ppg_table": 2.33,
+      "last5": [
+        "W",
+        "W",
+        "T"
+      ],
+      "streak": "T1",
+      "avg_overall_season": 73.5,
+      "avg_overall_last5": 73.5
+    },
+    {
+      "team": "Regensburg Pulse",
+      "conference": "Sued",
+      "gp": 3,
+      "w": 1,
+      "l": 2,
+      "t": 0,
+      "points_table": 3,
+      "points_from_logs": 3,
+      "gf_table": 7,
+      "ga_table": 10,
+      "gd_table": -3,
+      "ppg_table": 1.0,
+      "last5": [
+        "W",
+        "L",
+        "L"
+      ],
+      "streak": "L2",
+      "avg_overall_season": 70.8,
+      "avg_overall_last5": 70.8
+    },
+    {
+      "team": "Ravensburg Zenit Falken",
+      "conference": "Sued",
+      "gp": 3,
+      "w": 3,
+      "l": 0,
+      "t": 0,
+      "points_table": 9,
+      "points_from_logs": 9,
+      "gf_table": 10,
+      "ga_table": 7,
+      "gd_table": 3,
+      "ppg_table": 3.0,
+      "last5": [
+        "W",
+        "W",
+        "W"
+      ],
+      "streak": "W3",
+      "avg_overall_season": 70.23,
+      "avg_overall_last5": 70.23
+    },
+    {
+      "team": "Straubing Forest Tigers",
+      "conference": "Sued",
+      "gp": 3,
+      "w": 0,
+      "l": 3,
+      "t": 0,
+      "points_table": 0,
+      "points_from_logs": 0,
+      "gf_table": 5,
+      "ga_table": 9,
+      "gd_table": -4,
+      "ppg_table": 0.0,
+      "last5": [
+        "L",
+        "L",
+        "L"
+      ],
+      "streak": "L3",
+      "avg_overall_season": 75.03,
+      "avg_overall_last5": 75.03
+    },
+    {
+      "team": "Schwenningen Sturmflügel",
+      "conference": "Sued",
+      "gp": 3,
+      "w": 2,
+      "l": 1,
+      "t": 0,
+      "points_table": 6,
+      "points_from_logs": 6,
+      "gf_table": 8,
+      "ga_table": 6,
+      "gd_table": 2,
+      "ppg_table": 2.0,
+      "last5": [
+        "W",
+        "L",
+        "W"
+      ],
+      "streak": "W1",
+      "avg_overall_season": 70.9,
+      "avg_overall_last5": 70.9
+    }
+  ],
+  "leaderboards": {
+    "points": [
+      {
+        "Player": "Phe Massovik",
+        "Team": "Ravensburg Zenit Falken",
+        "Number": 25.0,
+        "PositionGroup": "D",
+        "Goals": 3,
+        "Assists": 1,
+        "Points": 4
+      },
+      {
+        "Player": "Sebu Uvirtli",
+        "Team": "Schwenningen Sturmflügel",
+        "Number": 93.0,
+        "PositionGroup": "F",
+        "Goals": 2,
+        "Assists": 1,
+        "Points": 3
+      },
+      {
+        "Player": "Linusa Brandlik",
+        "Team": "Straubing Forest Tigers",
+        "Number": 73.0,
+        "PositionGroup": "F",
+        "Goals": 1,
+        "Assists": 2,
+        "Points": 3
+      },
+      {
+        "Player": "Rayanu Bettahsen",
+        "Team": "Bremerhaven Trident",
+        "Number": 15.0,
+        "PositionGroup": "D",
+        "Goals": 0,
+        "Assists": 3,
+        "Points": 3
+      },
+      {
+        "Player": "Toba Riedinov",
+        "Team": "München FluxBullen",
+        "Number": 8.0,
+        "PositionGroup": "F",
+        "Goals": 3,
+        "Assists": 0,
+        "Points": 3
+      },
+      {
+        "Player": "Finni Seriktto",
+        "Team": "Landshut Lichtkern",
+        "Number": 8.0,
+        "PositionGroup": "D",
+        "Goals": 2,
+        "Assists": 1,
+        "Points": 3
+      },
+      {
+        "Player": "Mils Powlek",
+        "Team": "Novadelta Panther",
+        "Number": 9.0,
+        "PositionGroup": "F",
+        "Goals": 1,
+        "Assists": 2,
+        "Points": 3
+      },
+      {
+        "Player": "Luka Hauven",
+        "Team": "Novadelta Panther",
+        "Number": 85.0,
+        "PositionGroup": "F",
+        "Goals": 0,
+        "Assists": 3,
+        "Points": 3
+      },
+      {
+        "Player": "Parkera Bowlestto",
+        "Team": "Bad Nauheim Devils",
+        "Number": 90.0,
+        "PositionGroup": "F",
+        "Goals": 0,
+        "Assists": 3,
+        "Points": 3
+      },
+      {
+        "Player": "Jimmya Lambersen",
+        "Team": "Wolfsburg Voltsturm",
+        "Number": 7.0,
+        "PositionGroup": "F",
+        "Goals": 2,
+        "Assists": 1,
+        "Points": 3
+      },
+      {
+        "Player": "Owene Headricik",
+        "Team": "Nürnberg Eistiger",
+        "Number": 47.0,
+        "PositionGroup": "D",
+        "Goals": 1,
+        "Assists": 1,
+        "Points": 2
+      },
+      {
+        "Player": "Justu Böttninov",
+        "Team": "Nürnberg Eistiger",
+        "Number": 9.0,
+        "PositionGroup": "D",
+        "Goals": 2,
+        "Assists": 0,
+        "Points": 2
+      },
+      {
+        "Player": "Marki Rasselnik",
+        "Team": "Ravensburg Zenit Falken",
+        "Number": 92.0,
+        "PositionGroup": "F",
+        "Goals": 0,
+        "Assists": 2,
+        "Points": 2
+      },
+      {
+        "Player": "Denise Pfaffengen",
+        "Team": "Ravensburg Zenit Falken",
+        "Number": 76.0,
+        "PositionGroup": "D",
+        "Goals": 0,
+        "Assists": 2,
+        "Points": 2
+      },
+      {
+        "Player": "Vlo Emingik",
+        "Team": "Bremerhaven Trident",
+        "Number": 22.0,
+        "PositionGroup": "D",
+        "Goals": 1,
+        "Assists": 1,
+        "Points": 2
+      },
+      {
+        "Player": "Nicolasa Krämmov",
+        "Team": "Bremerhaven Trident",
+        "Number": 21.0,
+        "PositionGroup": "F",
+        "Goals": 2,
+        "Assists": 0,
+        "Points": 2
+      },
+      {
+        "Player": "Louise Lattvik",
+        "Team": "Ravensburg Zenit Falken",
+        "Number": 74.0,
+        "PositionGroup": "F",
+        "Goals": 1,
+        "Assists": 1,
+        "Points": 2
+      },
+      {
+        "Player": "Fabio Sartven",
+        "Team": "Ravensburg Zenit Falken",
+        "Number": 9.0,
+        "PositionGroup": "F",
+        "Goals": 1,
+        "Assists": 1,
+        "Points": 2
+      },
+      {
+        "Player": "Marcuse Webik",
+        "Team": "Nürnberg Eistiger",
+        "Number": 24.0,
+        "PositionGroup": "D",
+        "Goals": 1,
+        "Assists": 1,
+        "Points": 2
+      },
+      {
+        "Player": "Zigi Jeglicen",
+        "Team": "Bremerhaven Trident",
+        "Number": 13.0,
+        "PositionGroup": "F",
+        "Goals": 2,
+        "Assists": 0,
+        "Points": 2
+      }
+    ],
+    "goals": [
+      {
+        "Player": "Toba Riedinov",
+        "Team": "München FluxBullen",
+        "Number": 8.0,
+        "PositionGroup": "F",
+        "Goals": 3,
+        "Assists": 0,
+        "Points": 3
+      },
+      {
+        "Player": "Phe Massovik",
+        "Team": "Ravensburg Zenit Falken",
+        "Number": 25.0,
+        "PositionGroup": "D",
+        "Goals": 3,
+        "Assists": 1,
+        "Points": 4
+      },
+      {
+        "Player": "Dominicu Turgetto",
+        "Team": "Kassel Zenit",
+        "Number": 91.0,
+        "PositionGroup": "F",
+        "Goals": 2,
+        "Assists": 0,
+        "Points": 2
+      },
+      {
+        "Player": "Tyi Ronninsen",
+        "Team": "Whiteout Berlin",
+        "Number": 9.0,
+        "PositionGroup": "F",
+        "Goals": 2,
+        "Assists": 0,
+        "Points": 2
+      },
+      {
+        "Player": "Nicolasa Krämmov",
+        "Team": "Bremerhaven Trident",
+        "Number": 21.0,
+        "PositionGroup": "F",
+        "Goals": 2,
+        "Assists": 0,
+        "Points": 2
+      },
+      {
+        "Player": "Cartere Rowneyovik",
+        "Team": "Frankfurt Core",
+        "Number": 17.0,
+        "PositionGroup": "F",
+        "Goals": 2,
+        "Assists": 0,
+        "Points": 2
+      },
+      {
+        "Player": "Jimmya Lambersen",
+        "Team": "Wolfsburg Voltsturm",
+        "Number": 7.0,
+        "PositionGroup": "F",
+        "Goals": 2,
+        "Assists": 1,
+        "Points": 3
+      },
+      {
+        "Player": "Zigi Jeglicen",
+        "Team": "Bremerhaven Trident",
+        "Number": 13.0,
+        "PositionGroup": "F",
+        "Goals": 2,
+        "Assists": 0,
+        "Points": 2
+      },
+      {
+        "Player": "Micka Köhltli",
+        "Team": "Krefeld Kernschlag",
+        "Number": 77.0,
+        "PositionGroup": "D",
+        "Goals": 2,
+        "Assists": 0,
+        "Points": 2
+      },
+      {
+        "Player": "Codye Kunyken",
+        "Team": "Augsburg Ferox",
+        "Number": 20.0,
+        "PositionGroup": "F",
+        "Goals": 2,
+        "Assists": 0,
+        "Points": 2
+      },
+      {
+        "Player": "Jesso Koskenkornik",
+        "Team": "Landshut Lichtkern",
+        "Number": 51.0,
+        "PositionGroup": "F",
+        "Goals": 2,
+        "Assists": 0,
+        "Points": 2
+      },
+      {
+        "Player": "Finni Seriktto",
+        "Team": "Landshut Lichtkern",
+        "Number": 8.0,
+        "PositionGroup": "D",
+        "Goals": 2,
+        "Assists": 1,
+        "Points": 3
+      },
+      {
+        "Player": "Justu Böttninov",
+        "Team": "Nürnberg Eistiger",
+        "Number": 9.0,
+        "PositionGroup": "D",
+        "Goals": 2,
+        "Assists": 0,
+        "Points": 2
+      },
+      {
+        "Player": "Nicke Mählar",
+        "Team": "Regensburg Pulse",
+        "Number": 29.0,
+        "PositionGroup": "D",
+        "Goals": 2,
+        "Assists": 0,
+        "Points": 2
+      },
+      {
+        "Player": "Sebu Uvirtli",
+        "Team": "Schwenningen Sturmflügel",
+        "Number": 93.0,
+        "PositionGroup": "F",
+        "Goals": 2,
+        "Assists": 1,
+        "Points": 3
+      },
+      {
+        "Player": "Håkone Häneltik",
+        "Team": "Schwenningen Sturmflügel",
+        "Number": 19.0,
+        "PositionGroup": "F",
+        "Goals": 2,
+        "Assists": 0,
+        "Points": 2
+      },
+      {
+        "Player": "Kevine Norénnik",
+        "Team": "Düsseldorf Aurora",
+        "Number": 14.0,
+        "PositionGroup": "F",
+        "Goals": 1,
+        "Assists": 1,
+        "Points": 2
+      },
+      {
+        "Player": "Christiana Thomastto",
+        "Team": "Iserlohn Miners",
+        "Number": 27.0,
+        "PositionGroup": "F",
+        "Goals": 1,
+        "Assists": 0,
+        "Points": 1
+      },
+      {
+        "Player": "Moritzi Kukukin",
+        "Team": "Düsseldorf Aurora",
+        "Number": 26.0,
+        "PositionGroup": "D",
+        "Goals": 1,
+        "Assists": 0,
+        "Points": 1
+      },
+      {
+        "Player": "Nicolasa Geitnar",
+        "Team": "Düsseldorf Aurora",
+        "Number": 5.0,
+        "PositionGroup": "D",
+        "Goals": 1,
+        "Assists": 0,
+        "Points": 1
+      }
+    ],
+    "assists": [
+      {
+        "Player": "Rayanu Bettahsen",
+        "Team": "Bremerhaven Trident",
+        "Number": 15.0,
+        "PositionGroup": "D",
+        "Goals": 0,
+        "Assists": 3,
+        "Points": 3
+      },
+      {
+        "Player": "Luka Hauven",
+        "Team": "Novadelta Panther",
+        "Number": 85.0,
+        "PositionGroup": "F",
+        "Goals": 0,
+        "Assists": 3,
+        "Points": 3
+      },
+      {
+        "Player": "Parkera Bowlestto",
+        "Team": "Bad Nauheim Devils",
+        "Number": 90.0,
+        "PositionGroup": "F",
+        "Goals": 0,
+        "Assists": 3,
+        "Points": 3
+      },
+      {
+        "Player": "Marki Rasselnik",
+        "Team": "Ravensburg Zenit Falken",
+        "Number": 92.0,
+        "PositionGroup": "F",
+        "Goals": 0,
+        "Assists": 2,
+        "Points": 2
+      },
+      {
+        "Player": "Denise Pfaffengen",
+        "Team": "Ravensburg Zenit Falken",
+        "Number": 76.0,
+        "PositionGroup": "D",
+        "Goals": 0,
+        "Assists": 2,
+        "Points": 2
+      },
+      {
+        "Player": "Mils Powlek",
+        "Team": "Novadelta Panther",
+        "Number": 9.0,
+        "PositionGroup": "F",
+        "Goals": 1,
+        "Assists": 2,
+        "Points": 3
+      },
+      {
+        "Player": "Filip Krausen",
+        "Team": "Novadelta Panther",
+        "Number": 8.0,
+        "PositionGroup": "F",
+        "Goals": 0,
+        "Assists": 2,
+        "Points": 2
+      },
+      {
+        "Player": "Ale Frieov",
+        "Team": "Bremerhaven Trident",
+        "Number": 57.0,
+        "PositionGroup": "F",
+        "Goals": 0,
+        "Assists": 2,
+        "Points": 2
+      },
+      {
+        "Player": "Mirke Höfflro",
+        "Team": "Schwenningen Sturmflügel",
+        "Number": 10.0,
+        "PositionGroup": "F",
+        "Goals": 0,
+        "Assists": 2,
+        "Points": 2
+      },
+      {
+        "Player": "Mita Reinknik",
+        "Team": "Whiteout Berlin",
+        "Number": 5.0,
+        "PositionGroup": "D",
+        "Goals": 0,
+        "Assists": 2,
+        "Points": 2
+      },
+      {
+        "Player": "Martine Hasovik",
+        "Team": "Landshut Lichtkern",
+        "Number": 77.0,
+        "PositionGroup": "D",
+        "Goals": 0,
+        "Assists": 2,
+        "Points": 2
+      },
+      {
+        "Player": "Linusa Frötli",
+        "Team": "Frankfurt Core",
+        "Number": 71.0,
+        "PositionGroup": "F",
+        "Goals": 0,
+        "Assists": 2,
+        "Points": 2
+      },
+      {
+        "Player": "Fabio Kosvik",
+        "Team": "Frankfurt Core",
+        "Number": 20.0,
+        "PositionGroup": "D",
+        "Goals": 0,
+        "Assists": 2,
+        "Points": 2
+      },
+      {
+        "Player": "Jonasu Müllar",
+        "Team": "Whiteout Berlin",
+        "Number": 18.0,
+        "PositionGroup": "D",
+        "Goals": 0,
+        "Assists": 2,
+        "Points": 2
+      },
+      {
+        "Player": "Blainu Byronvik",
+        "Team": "Whiteout Berlin",
+        "Number": 23.0,
+        "PositionGroup": "F",
+        "Goals": 0,
+        "Assists": 2,
+        "Points": 2
+      },
+      {
+        "Player": "Tima Wohlgemtto",
+        "Team": "Augsburg Ferox",
+        "Number": 33.0,
+        "PositionGroup": "F",
+        "Goals": 0,
+        "Assists": 2,
+        "Points": 2
+      },
+      {
+        "Player": "Linusa Brandlik",
+        "Team": "Straubing Forest Tigers",
+        "Number": 73.0,
+        "PositionGroup": "F",
+        "Goals": 1,
+        "Assists": 2,
+        "Points": 3
+      },
+      {
+        "Player": "Henrike Törnqvven",
+        "Team": "Iserlohn Miners",
+        "Number": 11.0,
+        "PositionGroup": "F",
+        "Goals": 0,
+        "Assists": 2,
+        "Points": 2
+      },
+      {
+        "Player": "Laurine Braunovik",
+        "Team": "Kassel Zenit",
+        "Number": 18.0,
+        "PositionGroup": "F",
+        "Goals": 0,
+        "Assists": 2,
+        "Points": 2
+      },
+      {
+        "Player": "Maximiliana Hopsen",
+        "Team": "Krefeld Kernschlag",
+        "Number": 67.0,
+        "PositionGroup": "F",
+        "Goals": 0,
+        "Assists": 2,
+        "Points": 2
+      }
+    ]
+  },
+  "extremes": {
+    "highest_scoring_game": {
+      "matchday": 2,
+      "home": "Regensburg Pulse",
+      "away": "Landshut Lichtkern",
+      "g_home": 3,
+      "g_away": 5,
+      "conference": "Süd",
+      "total_goals": 8,
+      "goal_diff": 2
+    },
+    "biggest_blowout": {
+      "matchday": 3,
+      "home": "Bremerhaven Trident",
+      "away": "Iserlohn Miners",
+      "g_home": 5,
+      "g_away": 1,
+      "conference": "Nord",
+      "total_goals": 6,
+      "goal_diff": 4
+    }
+  },
+  "power_ranking_by_avg_overall": [
+    {
+      "rank": 1,
+      "team": "Novadelta Panther",
+      "conference": "Sued",
+      "avg_overall_season": 78.07,
+      "avg_overall_last5": 78.07
+    },
+    {
+      "rank": 2,
+      "team": "Mannheim Ventus",
+      "conference": "Sued",
+      "avg_overall_season": 76.4,
+      "avg_overall_last5": 76.4
+    },
+    {
+      "rank": 3,
+      "team": "Straubing Forest Tigers",
+      "conference": "Sued",
+      "avg_overall_season": 75.03,
+      "avg_overall_last5": 75.03
+    },
+    {
+      "rank": 4,
+      "team": "Whiteout Berlin",
+      "conference": "Nord",
+      "avg_overall_season": 75.0,
+      "avg_overall_last5": 75.0
+    },
+    {
+      "rank": 5,
+      "team": "Krefeld Kernschlag",
+      "conference": "Nord",
+      "avg_overall_season": 74.7,
+      "avg_overall_last5": 74.7
+    },
+    {
+      "rank": 6,
+      "team": "Köln Blitzhaie",
+      "conference": "Nord",
+      "avg_overall_season": 74.43,
+      "avg_overall_last5": 74.43
+    },
+    {
+      "rank": 7,
+      "team": "München FluxBullen",
+      "conference": "Sued",
+      "avg_overall_season": 74.33,
+      "avg_overall_last5": 74.33
+    },
+    {
+      "rank": 8,
+      "team": "Nürnberg Eistiger",
+      "conference": "Sued",
+      "avg_overall_season": 73.5,
+      "avg_overall_last5": 73.5
+    },
+    {
+      "rank": 9,
+      "team": "Landshut Lichtkern",
+      "conference": "Sued",
+      "avg_overall_season": 73.07,
+      "avg_overall_last5": 73.07
+    },
+    {
+      "rank": 10,
+      "team": "Bremerhaven Trident",
+      "conference": "Nord",
+      "avg_overall_season": 72.97,
+      "avg_overall_last5": 72.97
+    },
+    {
+      "rank": 11,
+      "team": "Wolfsburg Voltsturm",
+      "conference": "Nord",
+      "avg_overall_season": 72.5,
+      "avg_overall_last5": 72.5
+    },
+    {
+      "rank": 12,
+      "team": "Kassel Zenit",
+      "conference": "Nord",
+      "avg_overall_season": 72.07,
+      "avg_overall_last5": 72.07
+    },
+    {
+      "rank": 13,
+      "team": "Augsburg Ferox",
+      "conference": "Sued",
+      "avg_overall_season": 71.13,
+      "avg_overall_last5": 71.13
+    },
+    {
+      "rank": 14,
+      "team": "Schwenningen Sturmflügel",
+      "conference": "Sued",
+      "avg_overall_season": 70.9,
+      "avg_overall_last5": 70.9
+    },
+    {
+      "rank": 15,
+      "team": "Regensburg Pulse",
+      "conference": "Sued",
+      "avg_overall_season": 70.8,
+      "avg_overall_last5": 70.8
+    },
+    {
+      "rank": 16,
+      "team": "Bad Nauheim Devils",
+      "conference": "Nord",
+      "avg_overall_season": 70.5,
+      "avg_overall_last5": 70.5
+    },
+    {
+      "rank": 17,
+      "team": "Ravensburg Zenit Falken",
+      "conference": "Sued",
+      "avg_overall_season": 70.23,
+      "avg_overall_last5": 70.23
+    },
+    {
+      "rank": 18,
+      "team": "Düsseldorf Aurora",
+      "conference": "Nord",
+      "avg_overall_season": 69.9,
+      "avg_overall_last5": 69.9
+    },
+    {
+      "rank": 19,
+      "team": "Iserlohn Miners",
+      "conference": "Nord",
+      "avg_overall_season": 69.17,
+      "avg_overall_last5": 69.17
+    },
+    {
+      "rank": 20,
+      "team": "Frankfurt Core",
+      "conference": "Nord",
+      "avg_overall_season": 66.5,
+      "avg_overall_last5": 66.5
+    }
+  ]
+}
