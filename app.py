@@ -411,6 +411,71 @@ if st.sidebar.button("COMMIT · PUSH", use_container_width=True):
         st.sidebar.error("Push FAIL")
     if out:
         st.sidebar.code(out)
+
+
+# ============================================================
+# Deploy Controls (Web + Toolbox)
+# ============================================================
+def sudo_systemctl(args: list[str]) -> tuple[int, str]:
+    # -n = non-interactive: failt sauber, wenn sudoers nicht passt
+    return _run(["sudo", "-n", "/bin/systemctl", *args])
+
+def sudo_journal(service: str) -> tuple[int, str]:
+    return _run(["sudo", "-n", "/usr/bin/journalctl", "-u", service, "-n", "120", "--no-pager"])
+
+st.sidebar.markdown("## 🚀 Deploy (Web + Toolbox)")
+
+c1, c2 = st.sidebar.columns(2)
+with c1:
+    if st.button("DEPLOY · Web jetzt", use_container_width=True):
+        code, out = sudo_systemctl(["start", "highspeed-web-deploy.service"])
+        st.sidebar.success("OK" if code == 0 else "FAIL")
+        if out:
+            st.sidebar.code(out)
+
+with c2:
+    if st.button("DEPLOY · Toolbox jetzt", use_container_width=True):
+        code, out = sudo_systemctl(["start", "highspeed-toolbox-deploy.service"])
+        st.sidebar.success("OK" if code == 0 else "FAIL")
+        if out:
+            st.sidebar.code(out)
+
+st.sidebar.markdown("## ⏱ Auto-Deploy (Timer)")
+
+t1, t2 = st.sidebar.columns(2)
+with t1:
+    if st.button("Auto AN", use_container_width=True):
+        a1 = sudo_systemctl(["enable", "highspeed-web-deploy.timer"])
+        a2 = sudo_systemctl(["start", "highspeed-web-deploy.timer"])
+        b1 = sudo_systemctl(["enable", "highspeed-toolbox-deploy.timer"])
+        b2 = sudo_systemctl(["start", "highspeed-toolbox-deploy.timer"])
+        ok = (a1[0]==0 and a2[0]==0 and b1[0]==0 and b2[0]==0)
+        st.sidebar.success("OK" if ok else "FAIL")
+
+with t2:
+    if st.button("Auto AUS", use_container_width=True):
+        a1 = sudo_systemctl(["stop", "highspeed-web-deploy.timer"])
+        a2 = sudo_systemctl(["disable", "highspeed-web-deploy.timer"])
+        b1 = sudo_systemctl(["stop", "highspeed-toolbox-deploy.timer"])
+        b2 = sudo_systemctl(["disable", "highspeed-toolbox-deploy.timer"])
+        ok = (a1[0]==0 and a2[0]==0 and b1[0]==0 and b2[0]==0)
+        st.sidebar.success("OK" if ok else "FAIL")
+
+st.sidebar.markdown("## 🧾 Deploy-Logs")
+
+service = st.sidebar.selectbox(
+    "Service",
+    ["highspeed-web-deploy.service", "highspeed-toolbox-deploy.service"],
+)
+if st.sidebar.button("Logs anzeigen", use_container_width=True):
+    code, out = sudo_journal(service)
+    if code == 0:
+        st.sidebar.code(out or "(leer)")
+    else:
+        st.sidebar.error("FAIL (keine sudo-Rechte?)")
+        if out:
+            st.sidebar.code(out)
+
 # ============================================================
 # Hauptansicht – Tabs
 # ============================================================
