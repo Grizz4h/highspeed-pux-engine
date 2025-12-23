@@ -17,6 +17,19 @@ import pandas as pd
 import streamlit as st
 from PIL import Image
 
+DATA_REPO_PATH = Path("/opt/highspeed/data")
+PUBLISHER_DIR  = Path("/opt/highspeed/publisher")
+SCRIPT_PULL    = PUBLISHER_DIR / "data_pull.sh"
+SCRIPT_PUSH    = PUBLISHER_DIR / "data_push.sh"
+SCRIPT_PUBLISH = PUBLISHER_DIR / "publish_live.sh"  # optional, falls vorhanden
+
+SERVER_MODE = (
+    os.name != "nt"
+    and Path("/opt/highspeed").exists()
+    and PUBLISHER_DIR.exists()
+)
+
+
 
 # ============================================================
 # Pfade & Basiskonfig
@@ -40,6 +53,8 @@ THUMB_DIR.mkdir(exist_ok=True)
 
 SAVEGAME_PATH = DATA_DIR / "saves" / "savegame.json"
 
+if "sim_intent" not in st.session_state:
+    st.session_state.sim_intent = None
 
 # ============================================================
 # Utils
@@ -191,6 +206,24 @@ def list_seasons_from_data_root(_sig_a: str, _sig_b: str) -> List[int]:
 
     return sorted(seasons)
 
+def ui_current_matchday(raw_spieltag: int | str | None) -> int:
+    """
+    Engine liefert oft den 'next pointer' (0-basiert / next matchday).
+    UI soll den zuletzt simulierten Spieltag anzeigen.
+
+    Regel: UI = max(0, raw - 1)
+    Beispiele:
+      raw=0 -> UI=0 (noch nichts simuliert)
+      raw=1 -> UI=0
+      raw=4 -> UI=3 (du hast den 3. simuliert)
+      raw=5 -> UI=4 (du hast den 4. simuliert)
+    """
+    try:
+        n = int(raw_spieltag) if raw_spieltag is not None else 0
+    except Exception:
+        n = 0
+    return max(0, n - 1)
+
 
 # ============================================================
 # Simulator-Backend
@@ -229,21 +262,97 @@ with st.sidebar:
     # --- SIM BUTTONS (arbeiten immer gegen den aktuellen Save-State) ---
     st.markdown("### Simulation (aktive Saison)")
 
-    if st.button("▶️ Nächsten Spieltag simulieren", key="btn_spieltag", use_container_width=True):
+    st.markdown("### Simulation Intent (Pflichtauswahl)")
+
+    test_checked = st.checkbox(
+        "🧪 Test / Vorlauf (DEV)",
+        value=(st.session_state.sim_intent == "test"),
+        key="intent_test",
+    )
+
+    live_checked = st.checkbox(
+        "🚀 Live-relevant vorbereiten",
+        value=(st.session_state.sim_intent == "live"),
+        key="intent_live",
+    )
+
+    # Mutual exclusion + state
+    if test_checked and not live_checked:
+        st.session_state.sim_intent = "test"
+    elif live_checked and not test_checked:
+        st.session_state.sim_intent = "live"
+    else:
+        st.session_state.sim_intent = None
+
+    if st.session_state.sim_intent is None:
+        st.warning("Bitte wähle **Test** oder **Live-relevant**, bevor du simulierst.")
+
+
+
+
+    simulate_disabled = (st.session_state.sim_intent is None)
+
+    if st.button(
+        "▶️ Nächsten Spieltag simulieren",
+        key="btn_spieltag",
+        use_container_width=True,
+        disabled=simulate_disabled
+    ):
         try:
             res = sim.step_regular_season_once()
         except Exception as e:
             st.error(f"Fehler beim Simulieren des Spieltags: {e}")
         else:
             status = res.get("status")
+
+            # "letzter simulierter" Spieltag für UI / Commit
+            try:
+                raw_md = int(sim.load_state().get("spieltag", 0) or 0)  # next pointer
+            except Exception:
+                raw_md = 0
+            last_simulated = max(1, raw_md - 1)  # MD01.., nie 0 in commits
+
             if status == "ok":
-                st.toast(f"Spieltag {res['spieltag']-1} simuliert → Jetzt {res['spieltag']}", icon="✅")
+                # Intent-Aktion
+                if st.session_state.sim_intent == "test":
+                    st.toast(f"🧪 Test: MD{last_simulated:02d} simuliert (kein Push)", icon="✅")
+
+                elif st.session_state.sim_intent == "live":
+                    msg = f"MD{last_simulated:02d} simulated"
+                    if os.name != "nt" and SCRIPT_PUSH.exists():
+                        code, out = _run([str(SCRIPT_PUSH), "dev", msg])
+                        if code == 0:
+                            st.toast(f"🚀 Live-prep: {msg} → DEV gepusht", icon="✅")
+                        else:
+                            st.error("Auto-Push nach DEV fehlgeschlagen")
+                        if out:
+                            st.code(out)
+                    else:
+                        st.warning("data_push.sh fehlt oder lokaler Run → kein Auto-Push möglich.", icon="⚠️")
+
+
                 st.cache_data.clear()
+
+                # FAILSAFE: Intent zurücksetzen (one-shot)
+                st.session_state.sim_intent = None
+                st.session_state.pop("intent_test", None)
+                st.session_state.pop("intent_live", None)
                 st.rerun()
+                st.rerun()
+
             elif status == "season_over":
                 st.toast("Regular Season ist beendet. Starte die Playoffs 👇", icon="⚠️")
+
+                # Intent auch hier zurücksetzen (sonst bleibt's hängen)
+                st.session_state.sim_intent = None
+  
+
             else:
                 st.toast(f"Konnte Spieltag nicht simulieren (Status: {status}).", icon="❌")
+
+                st.session_state.sim_intent = None
+ 
+
 
     if st.button("🏒 Nächste Playoff-Runde (Bo7) simulieren", key="btn_po_round", use_container_width=True):
         try:
@@ -383,34 +492,274 @@ elif st.session_state.pipeline_status == "error":
             st.markdown("**STDERR**")
             st.code(st.session_state.pipeline_stderr)
 
-st.sidebar.markdown("## Data Repo")
-st.sidebar.write(f"Data dir: `{DATA_DIR}`")
+# ============================================================
+# Data Repo Controls (SSOT) — safe, explicit, self-explaining
+# ============================================================
 
+def _run_in(cmd: list[str], cwd: Path) -> tuple[int, str]:
+    p = subprocess.run(cmd, cwd=str(cwd), capture_output=True, text=True)
+    out = (p.stdout or "") + (p.stderr or "")
+    return p.returncode, out.strip()
 
+def data_git(*args: str) -> tuple[int, str]:
+    return _run_in(["git", *args], DATA_REPO_PATH)
 
-if st.sidebar.button("PULL · LATEST", use_container_width=True):
-    code, out = _run(["/opt/highspeed/publisher/data_pull.sh"])
-    if code == 0:
-        st.sidebar.success("Pull OK")
+def reset_dev_to_main() -> tuple[int, str]:
+    """
+    Setzt Data-Repo DEV exakt auf origin/main.
+    Achtung: überschreibt DEV-History (force-with-lease).
+    """
+    steps = [
+        (["git", "fetch", "origin"], "fetch origin"),
+        (["git", "checkout", "dev"], "checkout dev"),
+        (["git", "reset", "--hard", "origin/main"], "reset dev -> origin/main"),
+        (["git", "clean", "-fd"], "clean"),
+        (["git", "push", "origin", "dev", "--force-with-lease"], "push dev (force-with-lease)"),
+    ]
+
+    out_all = []
+    for cmd, label in steps:
+        code, out = _run_in(cmd, DATA_REPO_PATH)
+        out_all.append(f"$ {' '.join(cmd)}\n{out}".strip())
+        if code != 0:
+            return code, "\n\n".join(out_all) + f"\n\n[FAIL] step: {label}"
+    return 0, "\n\n".join(out_all) + "\n\n[OK] DEV == MAIN"
+
+    
+
+def get_repo_status(branch: str) -> dict:
+    if not DATA_REPO_PATH.exists():
+        return {"ok": False, "err": "Data repo path not found."}
+    data_git("fetch", "origin")
+    code_b, b = data_git("rev-parse", "--abbrev-ref", "HEAD")
+    code_h, h = data_git("rev-parse", "--short", "HEAD")
+    code_m, msg = data_git("log", "-1", "--pretty=%s")
+    # remote head of branch
+    code_r, rh = data_git("rev-parse", "--short", f"origin/{branch}")
+    return {
+        "ok": True,
+        "branch": b if code_b == 0 else "?",
+        "head": h if code_h == 0 else "?",
+        "last_msg": msg if code_m == 0 else "",
+        "remote_head": rh if code_r == 0 else "?",
+    }
+
+@st.cache_data(show_spinner=False)
+def list_dev_md_commits(limit: int = 50) -> list[dict]:
+    """
+    Liefert DEV Commits mit 'MDxx' im Commit-Subject, neueste zuerst.
+    """
+    if not DATA_REPO_PATH.exists():
+        return []
+    data_git("fetch", "origin")
+    # Nur subjects + hash, dann filtern
+    code, out = _run_in(
+        ["git", "log", "origin/dev", f"-n{limit}", "--pretty=%H|%s"],
+        DATA_REPO_PATH
+    )
+    if code != 0 or not out:
+        return []
+    rows = []
+    for line in out.splitlines():
+        try:
+            full, subj = line.split("|", 1)
+        except ValueError:
+            continue
+        m = re.search(r"\b(MD\d{2})\b", subj)
+        if not m:
+            continue
+        rows.append({"md": m.group(1), "hash": full[:10], "subject": subj})
+    # dedupe per md: keep newest occurrence
+    seen = set()
+    uniq = []
+    for r in rows:
+        if r["md"] in seen:
+            continue
+        seen.add(r["md"])
+        uniq.append(r)
+    return uniq
+
+with st.sidebar:
+    st.markdown("## 📦 SSOT Data Repo")
+    st.caption("Wichtig: Diese Buttons arbeiten am **Data-Repo**. Nicht an der Engine.")
+
+    st.write(f"Data dir: `{DATA_DIR}`")
+    if not os.environ.get("HIGHSPEED_DATA_ROOT"):
+        st.warning("HIGHSPEED_DATA_ROOT ist NICHT gesetzt → Engine könnte ins Repo schreiben. Fix das zuerst.", icon="⚠️")
+
+    if not SERVER_MODE:
+        st.info("Lokaler Streamlit-Run erkannt → Deploy/Push ist disabled (Sicherheits-Guard).", icon="🧷")
+
+    # Statusbox
+    s_dev  = get_repo_status("dev")  if SERVER_MODE else {"ok": False}
+    s_main = get_repo_status("main") if SERVER_MODE else {"ok": False}
+
+    with st.expander("🔎 Status (Data Repo)", expanded=True):
+        if SERVER_MODE and s_dev.get("ok"):
+            st.markdown(
+                f"**Repo-Branch (lokal):** `{s_dev['branch']}`  \n"
+                f"**HEAD:** `{s_dev['head']}`  \n"
+                f"**Letzter Commit:** {s_dev['last_msg']}"
+            )
+            st.markdown(
+                f"**origin/dev:** `{s_dev['remote_head']}`  \n"
+                f"**origin/main:** `{s_main['remote_head']}`"
+            )
+        else:
+            st.write("Status nicht verfügbar (nicht auf dem Raspberry oder Repo fehlt).")
+
+    st.divider()
+    st.markdown("### 🔧 Data Repo Admin")
+
+    if not SERVER_MODE:
+        st.info("DEV=MAIN Reset ist nur auf dem Raspberry verfügbar.")
     else:
-        st.sidebar.error("Pull FAIL")
-    if out:
-        st.sidebar.code(out)
+        # Status anzeigen (kurz, hilfreich)
+        try:
+            data_git("fetch", "origin")
+            _, main_h = data_git("rev-parse", "--short", "origin/main")
+            _, dev_h  = data_git("rev-parse", "--short", "origin/dev")
+            st.caption(f"origin/main: `{main_h}`  ·  origin/dev: `{dev_h}`")
+        except Exception:
+            pass
 
-msg = st.sidebar.text_input("Commit-Message (optional)", value="")
-if st.sidebar.button("COMMIT · PUSH", use_container_width=True):
-    cmd = ["/opt/highspeed/publisher/data_push.sh"]
-    if msg.strip():
-        cmd.append(msg.strip())
-    code, out = _run(cmd)
-    if code == 0:
-        st.sidebar.success("Push OK")
-    elif code == 2:
-        st.sidebar.error("Konflikt beim Rebase – manuell lösen")
-    else:
-        st.sidebar.error("Push FAIL")
-    if out:
-        st.sidebar.code(out)
+        confirm_reset = st.checkbox(
+            "Ja, ich will DEV auf MAIN zurücksetzen (überschreibt DEV).",
+            value=False,
+            key="confirm_reset_dev_main"
+        )
+
+        if st.button(
+            "🔁 Reset DEV = MAIN (Data Repo)",
+            use_container_width=True,
+            disabled=not confirm_reset
+        ):
+            code, out = reset_dev_to_main()
+            if code == 0:
+                st.success("DEV wurde exakt auf MAIN gesetzt.")
+                st.cache_data.clear()
+
+                # Checkbox wieder “one-shot” zurücksetzen, ohne Widget-State direkt zu setzen:
+                st.session_state.pop("confirm_reset_dev_main", None)
+                st.rerun()
+            else:
+                st.error("Reset fehlgeschlagen.")
+            if out:
+                st.code(out)
+
+
+    # Tabs: Sync / Commit / Publish Live
+    tab_sync, tab_commit, tab_live = st.tabs(["🔄 Sync", "✅ Commit & Push", "🚀 Publish Live"])
+
+    # -------------------------
+    # Sync Tab
+    # -------------------------
+    with tab_sync:
+        st.markdown("### Sync (holen)")
+        st.caption("Pull macht einen harten Reset auf den gewählten Branch (SSOT-Repo).")
+
+        pull_branch = st.radio(
+            "Branch",
+            options=["dev", "main"],
+            horizontal=True,
+            index=0
+        )
+
+        if st.button(f"⬇️ Pull Data ({pull_branch})", use_container_width=True, disabled=not SERVER_MODE):
+            cmd = [str(SCRIPT_PULL), pull_branch] if SCRIPT_PULL.exists() else []
+            if not cmd:
+                st.error("data_pull.sh nicht gefunden.")
+            else:
+                code, out = _run(cmd)
+                if code == 0:
+                    st.success("Pull OK")
+                    st.cache_data.clear()
+                else:
+                    st.error("Pull FAIL")
+                if out:
+                    st.code(out)
+
+    # -------------------------
+    # Commit Tab (DEV only)
+    # -------------------------
+    with tab_commit:
+        st.markdown("### Commit & Push (DEV)")
+        st.caption("Nur DEV. Commit-Message muss **MDxx** enthalten (Guard im Script).")
+
+        # Default: MDxx based on current engine state (info ist weiter unten, aber wir haben sim_state)
+        try:
+            cur_state = sim.load_state()
+            raw_md = int(cur_state.get("spieltag", 0) or 0)   # next pointer
+        except Exception:
+            raw_md = 0
+
+        last_simulated = max(0, raw_md - 1)
+
+        if last_simulated <= 0:
+            default_msg = "MD01 simulated"
+        else:
+            default_msg = f"MD{last_simulated:02d} simulated"
+
+
+        msg = st.text_input("Commit-Message", value=default_msg, help="Beispiel: MD04 simulated")
+
+        if st.button("⬆️ Commit & Push DEV", use_container_width=True, disabled=not SERVER_MODE):
+            cmd = [str(SCRIPT_PUSH), "dev", msg.strip()] if SCRIPT_PUSH.exists() else []
+            if not cmd:
+                st.error("data_push.sh nicht gefunden.")
+            else:
+                code, out = _run(cmd)
+                if code == 0:
+                    st.success("Push OK (dev)")
+                    st.cache_data.clear()
+                else:
+                    st.error("Push FAIL (dev)")
+                if out:
+                    st.code(out)
+
+    # -------------------------
+    # Publish Live (promote dev commit -> main)
+    # -------------------------
+    with tab_live:
+        st.markdown("### Publish Live (DEV → MAIN)")
+        st.caption("Du wählst einen DEV-Commit (MDxx) und setzt MAIN exakt auf diesen Stand (Release-Pointer).")
+
+        md_rows = list_dev_md_commits(limit=80) if SERVER_MODE else []
+        if not md_rows:
+            st.warning("Keine DEV-Commits mit MDxx gefunden (oder nicht auf Raspberry).", icon="⚠️")
+        else:
+            options = [f"{r['md']} · {r['hash']} · {r['subject']}" for r in md_rows]
+            sel = st.selectbox("Release auswählen", options=options, index=0)
+            chosen = md_rows[options.index(sel)]
+
+            st.markdown(f"**Auswahl:** `{chosen['md']}` → `{chosen['hash']}`")
+
+            confirm = st.checkbox("Ja, ich will MAIN genau auf diesen Stand setzen.", value=False)
+
+            if st.button("🚀 Publish Live (setzt Data main)", use_container_width=True, disabled=(not SERVER_MODE or not confirm)):
+                # Prefer script if exists, else inline git commands
+                if SCRIPT_PUBLISH.exists():
+                    code, out = _run([str(SCRIPT_PUBLISH), chosen["hash"]])
+                else:
+                    # Inline: checkout main, hard reset to chosen commit (from dev history), push
+                    code, out = _run_in(["git", "fetch", "origin"], DATA_REPO_PATH)
+                    if code == 0:
+                        code, out2 = _run_in(["git", "checkout", "main"], DATA_REPO_PATH)
+                        out = (out + "\n" + out2).strip()
+                    if code == 0:
+                        code, out2 = _run_in(["git", "reset", "--hard", chosen["hash"]], DATA_REPO_PATH)
+                        out = (out + "\n" + out2).strip()
+                    if code == 0:
+                        code, out2 = _run_in(["git", "push", "origin", "main", "--force-with-lease"], DATA_REPO_PATH)
+                        out = (out + "\n" + out2).strip()
+
+                if code == 0:
+                    st.success(f"Live publish OK → main = {chosen['hash']}")
+                    st.cache_data.clear()
+                else:
+                    st.error("Live publish FAIL")
+                if out:
+                    st.code(out)
 
 
 # ============================================================
@@ -481,6 +830,10 @@ if st.sidebar.button("Logs anzeigen", use_container_width=True):
 # ============================================================
 st.title("PUX! Engine – GUI")
 info = sim.read_tables_for_ui()
+# --- UI-normalized matchday (current / last simulated) ---
+raw_md = info.get("spieltag", 0)
+info["ui_spieltag"] = ui_current_matchday(raw_md)
+
 
 tab_tables, tab_calendar, tab_gamedays, tab_playoffs, tab_history = st.tabs([
     "📊 Tabellen & Scorer",
@@ -498,7 +851,7 @@ with tab_tables:
     col_l, col_r = st.columns([2, 1], gap="large")
 
     with col_l:
-        st.subheader(f"📅 Saison {info['season']} · Spieltag {info['spieltag']}")
+        st.subheader(f"📅 Saison {info['season']} · Spieltag {info["ui_spieltag"]}")
         st.caption(f"Rest-Schedule: Nord {info['nsched_len']} · Süd {info['ssched_len']} Paarungen offen")
 
         st.markdown("### 📊 Tabelle Nord")
