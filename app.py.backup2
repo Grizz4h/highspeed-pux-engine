@@ -9,6 +9,7 @@ import base64
 import subprocess
 import sys
 import os
+import urllib.request
 
 from pathlib import Path
 from typing import Optional, List, Dict, Any
@@ -318,7 +319,7 @@ with st.sidebar:
                     st.toast(f"🧪 Test: MD{last_simulated:02d} simuliert (kein Push)", icon="✅")
 
                 elif st.session_state.sim_intent == "live":
-                    msg = f"[publish main] MD{last_simulated:02d} simulated"
+                    msg = f"MD{last_simulated:02d} simulated"
                     if os.name != "nt" and SCRIPT_PUSH.exists():
                         code, out = _run([str(SCRIPT_PUSH), "dev", msg])
                         if code == 0:
@@ -554,29 +555,21 @@ def list_dev_md_commits(limit: int = 50) -> list[dict]:
     data_git("fetch", "origin")
     # Nur subjects + hash, dann filtern
     code, out = _run_in(
-        ["git", "log", "origin/dev", f"-n{limit}", "--pretty=%H|%B%n---COMMIT_END---"],
+        ["git", "log", "origin/dev", f"-n{limit}", "--pretty=%H|%s"],
         DATA_REPO_PATH
     )
     if code != 0 or not out:
         return []
     rows = []
-    commits = out.split("---COMMIT_END---")
-    for commit in commits:
-        commit = commit.strip()
-        if not commit or "|" not in commit:
-            continue
+    for line in out.splitlines():
         try:
-            full_hash, full_msg = commit.split("|", 1)
-            full_hash = full_hash.strip()
-            full_msg = full_msg.strip()
+            full, subj = line.split("|", 1)
         except ValueError:
             continue
-        # Extract subject (first line) for MD detection
-        subj = full_msg.split("\n")[0] if full_msg else ""
         m = re.search(r"\b(MD\d{2})\b", subj)
         if not m:
             continue
-        rows.append({"md": m.group(1), "hash": full_hash[:10], "subject": subj, "full_message": full_msg})
+        rows.append({"md": m.group(1), "hash": full[:10], "subject": subj})
     # dedupe per md: keep newest occurrence
     seen = set()
     uniq = []
@@ -709,7 +702,7 @@ with st.sidebar:
             default_msg = f"MD{last_simulated:02d} simulated"
 
 
-        msg = st.text_input("Commit-Message", value=default_msg, help="Beispiel: MD04 simulated\n\nOptional: [publish main], [publish dev], [publish both] für Deployment-Ziel")
+        msg = st.text_input("Commit-Message", value=default_msg, help="Beispiel: MD04 simulated")
 
         if st.button("⬆️ Commit & Push DEV", use_container_width=True, disabled=not SERVER_MODE):
             cmd = [str(SCRIPT_PUSH), "dev", msg.strip()] if SCRIPT_PUSH.exists() else []
@@ -741,10 +734,6 @@ with st.sidebar:
             chosen = md_rows[options.index(sel)]
 
             st.markdown(f"**Auswahl:** `{chosen['md']}` → `{chosen['hash']}`")
-            
-            # Show the commit message that will be used (as-is from dev commit)
-            full_msg = chosen.get('full_message', chosen['subject'])
-            st.text_area("Commit-Message (1:1 vom dev commit)", value=full_msg, height=100, disabled=True, key="publish_live_msg")
 
             confirm = st.checkbox("Ja, ich will MAIN genau auf diesen Stand setzen.", value=False)
 
@@ -760,26 +749,10 @@ with st.sidebar:
                         out = (out + "\n" + out2).strip()
                     if code == 0:
                         code, out2 = _run_in(["git", "reset", "--hard", chosen["hash"]], DATA_REPO_PATH)
-                        out = (out + "\n" + out2).strip()
-                    # Get original commit message from chosen hash
-                    original_message = chosen.get('full_message', '')
-                    if not original_message and code == 0:
-                        code_msg, out_msg = _run_in(["git", "log", "-1", "--format=%B", chosen["hash"]], DATA_REPO_PATH)
-                        if code_msg == 0:
-                            original_message = out_msg.strip()
-                    # Create/update .live_pointer file to force trigger (instead of empty commit)
                     if code == 0:
-                        timestamp = subprocess.run(["date", "+%Y-%m-%d %H:%M:%S"], capture_output=True, text=True).stdout.strip()
-                        pointer_content = f"{chosen['hash']} {timestamp} - Set live pointer to {chosen['hash'][:7]}"
-                        code, out2 = _run_in(["sh", "-c", f"echo '{pointer_content}' > .live_pointer"], DATA_REPO_PATH)
+                        # Always create empty commit to force trigger
+                        code, out2 = _run_in(["git", "commit", "--allow-empty", "-m", f"Set live pointer to {chosen['hash'][:7]}"], DATA_REPO_PATH)
                         out = (out + "\n" + out2).strip()
-                    if code == 0:
-                        code, out2 = _run_in(["git", "add", ".live_pointer"], DATA_REPO_PATH)
-                        out = (out + "\n" + out2).strip()
-                    if code == 0:
-                        # Use original message 1:1 (user sets [publish main] in dev commit message)
-                        commit_msg = original_message if original_message else f"Set live pointer to {chosen['hash'][:7]}"
-                        code, out2 = _run_in(["git", "commit", "-m", commit_msg], DATA_REPO_PATH)
                         out = (out + "\n" + out2).strip()
                     if code == 0:
                         code, out2 = _run_in(["git", "push", "origin", "main", "--force-with-lease"], DATA_REPO_PATH)
@@ -788,6 +761,24 @@ with st.sidebar:
                 if code == 0:
                     st.success(f"Live publish OK → main = {chosen['hash']}")
                     st.cache_data.clear()
+                    # Optional: Trigger web repo dispatch for auto-deploy
+                    try:
+                        req = urllib.request.Request(
+                            "https://api.github.com/repos/Grizz4h/highspeed-web/dispatches",
+                            data=json.dumps({"event_type": "push-web-file"}).encode('utf-8'),
+                            headers={
+                                "Authorization": f"Bearer {os.environ.get('WEB_REPO_TOKEN', '')}",
+                                "Accept": "application/vnd.github.v3+json"
+                            },
+                            method="POST"
+                        )
+                        with urllib.request.urlopen(req) as response:
+                            if response.status == 204:
+                                st.info("Web repo dispatch sent successfully.")
+                            else:
+                                st.warning(f"Dispatch response: {response.status}")
+                    except Exception as e:
+                        st.warning(f"Failed to send dispatch: {e}")
                 else:
                     st.error("Live publish FAIL")
                 if out:
