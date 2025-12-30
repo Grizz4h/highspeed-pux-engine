@@ -1285,8 +1285,8 @@ def simulate_match(
     
     p_home = strength_home / (strength_home + strength_away)
 
-    g_home = max(0, int(random.gauss(p_home * 5, 1)))
-    g_away = max(0, int(random.gauss((1 - p_home) * 5, 1)))
+    g_home = max(0, int(random.gauss(p_home * 6, 1)))
+    g_away = max(0, int(random.gauss((1 - p_home) * 6, 1)))
     logging.info(f"Reguläre Tore: {home} {g_home}:{g_away} {away}")
 
     is_overtime = False
@@ -1569,8 +1569,8 @@ def simulate_playoff_match(
     pA = calc_strength(rA, True)
     pB = calc_strength(rB, False)
     prob = pA / (pA + pB)
-    gA = max(0, int(random.gauss(prob * 5, 1)))
-    gB = max(0, int(random.gauss((1 - prob) * 5, 1)))
+    gA = max(0, int(random.gauss(prob * 6, 1)))
+    gB = max(0, int(random.gauss((1 - prob) * 6, 1)))
     logging.info(f"Reguläre Tore: {a} {gA}:{gB} {b}")
 
     if gA == gB:

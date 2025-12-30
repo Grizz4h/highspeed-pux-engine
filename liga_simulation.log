@@ -1558,3 +1558,7 @@
 2025-12-30 16:39:22 - INFO - Saving to stats: L1
 2025-12-30 16:39:25 - INFO - Exported table with last5: {'Team': 'Wolfsburg Voltsturm', 'Points': 16, 'GF': 0, 'GA': 0, 'GD': 0}
 2025-12-30 16:39:25 - INFO - Exported table with last5: {'Team': 'Straubing Forest Tigers', 'Points': 15, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:45:32 - INFO - Exported table with last5: {'Team': 'Wolfsburg Voltsturm', 'Points': 16, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:45:32 - INFO - Exported table with last5: {'Team': 'Straubing Forest Tigers', 'Points': 15, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:45:37 - INFO - Exported table with last5: {'Team': 'Wolfsburg Voltsturm', 'Points': 16, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:45:37 - INFO - Exported table with last5: {'Team': 'Straubing Forest Tigers', 'Points': 15, 'GF': 0, 'GA': 0, 'GD': 0}
