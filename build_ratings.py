@@ -31,7 +31,7 @@ OUT_FILE = DATA_DIR / "players_rated.json"
 
 # Logging setup
 logging.basicConfig(
-    filename='rating_calculation.log',
+    filename='logs/rating_calculation.log',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'

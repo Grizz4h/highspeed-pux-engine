@@ -48,7 +48,7 @@ import re
 
 # Logging setup
 logging.basicConfig(
-    filename='liga_simulation.log',
+    filename='logs/liga_simulation.log',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'
