@@ -23,6 +23,9 @@ SCRIPT_PULL    = PUBLISHER_DIR / "data_pull.sh"
 SCRIPT_PUSH    = PUBLISHER_DIR / "data_push.sh"
 SCRIPT_PUBLISH = PUBLISHER_DIR / "publish_live.sh"  # optional, falls vorhanden
 
+# Neues Pointer-Repo für saubere Trennung
+POINTERS_REPO_PATH = Path("/opt/highspeed/data_pointers")
+
 SERVER_MODE = (
     os.name != "nt"
     and Path("/opt/highspeed").exists()
@@ -52,9 +55,6 @@ THUMB_DIR = APP_DIR / ".cache_thumbs"
 THUMB_DIR.mkdir(exist_ok=True)
 
 SAVEGAME_PATH = DATA_DIR / "saves" / "savegame.json"
-
-if "sim_intent" not in st.session_state:
-    st.session_state.sim_intent = None
 
 # ============================================================
 # Utils
@@ -262,41 +262,10 @@ with st.sidebar:
     # --- SIM BUTTONS (arbeiten immer gegen den aktuellen Save-State) ---
     st.markdown("### Simulation (aktive Saison)")
 
-    st.markdown("### Simulation Intent (Pflichtauswahl)")
-
-    test_checked = st.checkbox(
-        "🧪 Test / Vorlauf (DEV)",
-        value=(st.session_state.sim_intent == "test"),
-        key="intent_test",
-    )
-
-    live_checked = st.checkbox(
-        "🚀 Live-relevant vorbereiten",
-        value=(st.session_state.sim_intent == "live"),
-        key="intent_live",
-    )
-
-    # Mutual exclusion + state
-    if test_checked and not live_checked:
-        st.session_state.sim_intent = "test"
-    elif live_checked and not test_checked:
-        st.session_state.sim_intent = "live"
-    else:
-        st.session_state.sim_intent = None
-
-    if st.session_state.sim_intent is None:
-        st.warning("Bitte wähle **Test** oder **Live-relevant**, bevor du simulierst.")
-
-
-
-
-    simulate_disabled = (st.session_state.sim_intent is None)
-
     if st.button(
         "▶️ Nächsten Spieltag simulieren",
         key="btn_spieltag",
-        use_container_width=True,
-        disabled=simulate_disabled
+        use_container_width=True
     ):
         try:
             res = sim.step_regular_season_once()
@@ -313,44 +282,27 @@ with st.sidebar:
             last_simulated = max(1, raw_md - 1)  # MD01.., nie 0 in commits
 
             if status == "ok":
-                # Intent-Aktion
-                if st.session_state.sim_intent == "test":
-                    st.toast(f"🧪 Test: MD{last_simulated:02d} simuliert (kein Push)", icon="✅")
-
-                elif st.session_state.sim_intent == "live":
-                    msg = f"[publish main] MD{last_simulated:02d} simulated"
-                    if os.name != "nt" and SCRIPT_PUSH.exists():
-                        code, out = _run([str(SCRIPT_PUSH), "dev", msg])
-                        if code == 0:
-                            st.toast(f"🚀 Live-prep: {msg} → DEV gepusht", icon="✅")
-                        else:
-                            st.error("Auto-Push nach DEV fehlgeschlagen")
-                        if out:
-                            st.code(out)
+                # Immer nach dev pushen
+                msg = f"MD{last_simulated:02d} simulated"
+                if os.name != "nt" and SCRIPT_PUSH.exists():
+                    code, out = _run([str(SCRIPT_PUSH), "dev", msg])
+                    if code == 0:
+                        st.toast(f"🚀 {msg} → DEV gepusht", icon="✅")
                     else:
-                        st.warning("data_push.sh fehlt oder lokaler Run → kein Auto-Push möglich.", icon="⚠️")
-
+                        st.error("Auto-Push nach DEV fehlgeschlagen")
+                    if out:
+                        st.code(out)
+                else:
+                    st.warning("data_push.sh fehlt oder lokaler Run → kein Auto-Push möglich.", icon="⚠️")
 
                 st.cache_data.clear()
-
-                # FAILSAFE: Intent zurücksetzen (one-shot)
-                st.session_state.sim_intent = None
-                st.session_state.pop("intent_test", None)
-                st.session_state.pop("intent_live", None)
-                st.rerun()
                 st.rerun()
 
             elif status == "season_over":
                 st.toast("Regular Season ist beendet. Starte die Playoffs 👇", icon="⚠️")
 
-                # Intent auch hier zurücksetzen (sonst bleibt's hängen)
-                st.session_state.sim_intent = None
-  
-
             else:
                 st.toast(f"Konnte Spieltag nicht simulieren (Status: {status}).", icon="❌")
-
-                st.session_state.sim_intent = None
  
 
 
@@ -504,26 +456,48 @@ def _run_in(cmd: list[str], cwd: Path) -> tuple[int, str]:
 def data_git(*args: str) -> tuple[int, str]:
     return _run_in(["git", *args], DATA_REPO_PATH)
 
-def reset_dev_to_main() -> tuple[int, str]:
+def pointers_git(*args: str) -> tuple[int, str]:
+    return _run_in(["git", *args], POINTERS_REPO_PATH)
+
+def set_pointer(which: str, source_branch: str, full_sha: str) -> tuple[int, str]:
     """
-    Setzt Data-Repo DEV exakt auf origin/main.
-    Achtung: überschreibt DEV-History (force-with-lease).
+    Setzt Pointer in pointers/dev.json oder pointers/prod.json auf den gegebenen commit.
+    Arbeitet nur im Pointers-Repo, ohne Engine-Repo zu berühren.
     """
+    if DATA_REPO_PATH.resolve() == POINTERS_REPO_PATH.resolve():
+        return 1, "ERROR: Pointer repo darf nicht data repo sein. Konfiguration prüfen!"
+    
+    if which not in ("dev", "prod"):
+        return 1, f"Invalid which: {which}"
+    if len(full_sha) != 40 or not all(c in "0123456789abcdef" for c in full_sha):
+        return 1, f"Invalid full SHA: {full_sha}"
+
+    import datetime
+    timestamp = datetime.datetime.now(datetime.timezone.utc).isoformat()
+
+    pointer_data = {
+        "source_branch": source_branch,
+        "source_commit": full_sha,
+        "updated_at": timestamp
+    }
+
     steps = [
         (["git", "fetch", "origin"], "fetch origin"),
-        (["git", "checkout", "dev"], "checkout dev"),
-        (["git", "reset", "--hard", "origin/main"], "reset dev -> origin/main"),
-        (["git", "clean", "-fd"], "clean"),
-        (["git", "push", "origin", "dev", "--force-with-lease"], "push dev (force-with-lease)"),
+        (["git", "checkout", "pointers"], "checkout pointers"),
+        (["git", "reset", "--hard", "origin/pointers"], "reset pointers -> origin/pointers"),
+        (["sh", "-c", f"mkdir -p pointers && echo '{json.dumps(pointer_data, indent=2)}' > pointers/{which}.json"], f"write pointers/{which}.json"),
+        (["git", "add", f"pointers/{which}.json"], f"add pointers/{which}.json"),
+        (["git", "commit", "-m", f"chore(pointer): set {which} -> {full_sha[:10]} ({source_branch})"], f"commit pointer {which}"),
+        (["git", "push", "origin", "pointers"], f"push pointers"),
     ]
 
     out_all = []
     for cmd, label in steps:
-        code, out = _run_in(cmd, DATA_REPO_PATH)
+        code, out = _run_in(cmd, POINTERS_REPO_PATH)
         out_all.append(f"$ {' '.join(cmd)}\n{out}".strip())
         if code != 0:
             return code, "\n\n".join(out_all) + f"\n\n[FAIL] step: {label}"
-    return 0, "\n\n".join(out_all) + "\n\n[OK] DEV == MAIN"
+    return 0, "\n\n".join(out_all) + f"\n\n[OK] {which.upper()} pointer set to {full_sha[:10]}"
 
     
 
@@ -576,7 +550,14 @@ def list_dev_md_commits(limit: int = 50) -> list[dict]:
         m = re.search(r"\b(MD\d{2})\b", subj)
         if not m:
             continue
-        rows.append({"md": m.group(1), "hash": full_hash[:10], "subject": subj, "full_message": full_msg})
+        rows.append({
+            "md": m.group(1),
+            "hash_short": full_hash[:10],
+            "hash_full": full_hash,
+            "subject": subj,
+            "full_message": full_msg
+        })
+
     # dedupe per md: keep newest occurrence
     seen = set()
     uniq = []
@@ -617,47 +598,10 @@ with st.sidebar:
             st.write("Status nicht verfügbar (nicht auf dem Raspberry oder Repo fehlt).")
 
     st.divider()
-    st.markdown("### 🔧 Data Repo Admin")
-
-    if not SERVER_MODE:
-        st.info("DEV=MAIN Reset ist nur auf dem Raspberry verfügbar.")
-    else:
-        # Status anzeigen (kurz, hilfreich)
-        try:
-            data_git("fetch", "origin")
-            _, main_h = data_git("rev-parse", "--short", "origin/main")
-            _, dev_h  = data_git("rev-parse", "--short", "origin/dev")
-            st.caption(f"origin/main: `{main_h}`  ·  origin/dev: `{dev_h}`")
-        except Exception:
-            pass
-
-        confirm_reset = st.checkbox(
-            "Ja, ich will DEV auf MAIN zurücksetzen (überschreibt DEV).",
-            value=False,
-            key="confirm_reset_dev_main"
-        )
-
-        if st.button(
-            "🔁 Reset DEV = MAIN (Data Repo)",
-            use_container_width=True,
-            disabled=not confirm_reset
-        ):
-            code, out = reset_dev_to_main()
-            if code == 0:
-                st.success("DEV wurde exakt auf MAIN gesetzt.")
-                st.cache_data.clear()
-
-                # Checkbox wieder “one-shot” zurücksetzen, ohne Widget-State direkt zu setzen:
-                st.session_state.pop("confirm_reset_dev_main", None)
-                st.rerun()
-            else:
-                st.error("Reset fehlgeschlagen.")
-            if out:
-                st.code(out)
 
 
-    # Tabs: Sync / Commit / Publish Live
-    tab_sync, tab_commit, tab_live = st.tabs(["🔄 Sync", "✅ Commit & Push", "🚀 Publish Live"])
+    # Tabs: Sync / Commit / Pointer Deploy
+    tab_sync, tab_commit, tab_live = st.tabs(["🔄 Sync", "✅ Commit & Push", "🔗 Pointer Deploy"])
 
     # -------------------------
     # Sync Tab
@@ -709,7 +653,7 @@ with st.sidebar:
             default_msg = f"MD{last_simulated:02d} simulated"
 
 
-        msg = st.text_input("Commit-Message", value=default_msg, help="Beispiel: MD04 simulated\n\nOptional: [publish main], [publish dev], [publish both] für Deployment-Ziel")
+        msg = st.text_input("Commit-Message", value=default_msg, help="Beispiel: MD04 simulated")
 
         if st.button("⬆️ Commit & Push DEV", use_container_width=True, disabled=not SERVER_MODE):
             cmd = [str(SCRIPT_PUSH), "dev", msg.strip()] if SCRIPT_PUSH.exists() else []
@@ -726,70 +670,46 @@ with st.sidebar:
                     st.code(out)
 
     # -------------------------
-    # Publish Live (promote dev commit -> main)
+    # Pointer Deploy (setzt Pointers für Deploy)
     # -------------------------
     with tab_live:
-        st.markdown("### Publish Live (DEV → MAIN)")
-        st.caption("Du wählst einen DEV-Commit (MDxx) und setzt MAIN exakt auf diesen Stand (Release-Pointer).")
+        st.markdown("### Pointer Deploy (setzt DEV/LIVE Pointer)")
+        st.caption("Du wählst einen DEV-Commit (MDxx) und setzt den Pointer für DEV oder LIVE Deploy.")
 
         md_rows = list_dev_md_commits(limit=80) if SERVER_MODE else []
         if not md_rows:
             st.warning("Keine DEV-Commits mit MDxx gefunden (oder nicht auf Raspberry).", icon="⚠️")
         else:
-            options = [f"{r['md']} · {r['hash']} · {r['subject']}" for r in md_rows]
-            sel = st.selectbox("Release auswählen", options=options, index=0)
+            options = [f"{r['md']} · {r['hash_short']} · {r['subject']}" for r in md_rows]
+            sel = st.selectbox("Commit auswählen", options=options, index=0)
             chosen = md_rows[options.index(sel)]
 
-            st.markdown(f"**Auswahl:** `{chosen['md']}` → `{chosen['hash']}`")
-            
-            # Show the commit message that will be used (as-is from dev commit)
-            full_msg = chosen.get('full_message', chosen['subject'])
-            st.text_area("Commit-Message (1:1 vom dev commit)", value=full_msg, height=100, disabled=True, key="publish_live_msg")
+            st.markdown(f"**Auswahl:** `{chosen['md']}` → `{chosen['hash_short']}`")
 
-            confirm = st.checkbox("Ja, ich will MAIN genau auf diesen Stand setzen.", value=False)
-
-            if st.button("🚀 Publish Live (setzt Data main)", use_container_width=True, disabled=(not SERVER_MODE or not confirm)):
-                # Prefer script if exists, else inline git commands
-                if SCRIPT_PUBLISH.exists():
-                    code, out = _run([str(SCRIPT_PUBLISH), chosen["hash"]])
-                else:
-                    # Inline: checkout main, hard reset to chosen commit (from dev history), push
-                    code, out = _run_in(["git", "fetch", "origin"], DATA_REPO_PATH)
-                    if code == 0:
-                        code, out2 = _run_in(["git", "checkout", "main"], DATA_REPO_PATH)
-                        out = (out + "\n" + out2).strip()
-                    if code == 0:
-                        code, out2 = _run_in(["git", "reset", "--hard", chosen["hash"]], DATA_REPO_PATH)
-                        out = (out + "\n" + out2).strip()
-                    # Get original commit message from chosen hash
-                    original_message = chosen.get('full_message', '')
-                    if not original_message and code == 0:
-                        code_msg, out_msg = _run_in(["git", "log", "-1", "--format=%B", chosen["hash"]], DATA_REPO_PATH)
-                        if code_msg == 0:
-                            original_message = out_msg.strip()
-                    # Create/update .live_pointer file to force trigger (instead of empty commit)
-                    if code == 0:
-                        timestamp = subprocess.run(["date", "+%Y-%m-%d %H:%M:%S"], capture_output=True, text=True).stdout.strip()
-                        pointer_content = f"{chosen['hash']} {timestamp} - Set live pointer to {chosen['hash'][:7]}"
-                        code, out2 = _run_in(["sh", "-c", f"echo '{pointer_content}' > .live_pointer"], DATA_REPO_PATH)
-                        out = (out + "\n" + out2).strip()
-                    if code == 0:
-                        code, out2 = _run_in(["git", "add", ".live_pointer"], DATA_REPO_PATH)
-                        out = (out + "\n" + out2).strip()
-                    if code == 0:
-                        # Use original message 1:1 (user sets [publish main] in dev commit message)
-                        commit_msg = original_message if original_message else f"Set live pointer to {chosen['hash'][:7]}"
-                        code, out2 = _run_in(["git", "commit", "-m", commit_msg], DATA_REPO_PATH)
-                        out = (out + "\n" + out2).strip()
-                    if code == 0:
-                        code, out2 = _run_in(["git", "push", "origin", "main", "--force-with-lease"], DATA_REPO_PATH)
-                        out = (out + "\n" + out2).strip()
-
+            # Zwei Buttons mit Confirm
+            confirm_dev = st.checkbox("Ja, ich will DEV Pointer setzen.", value=False, key="confirm_dev")
+            if st.button("🟦 Set DEV Pointer", use_container_width=True, disabled=(not SERVER_MODE or not confirm_dev)):
+                code, out = set_pointer("dev", "dev", chosen["hash_full"])
                 if code == 0:
-                    st.success(f"Live publish OK → main = {chosen['hash']}")
+                    st.success(f"DEV Pointer gesetzt → {chosen['hash_short']}")
                     st.cache_data.clear()
+                    st.session_state.pop("confirm_dev", None)
+                    st.rerun()
                 else:
-                    st.error("Live publish FAIL")
+                    st.error("DEV Pointer setzen fehlgeschlagen")
+                if out:
+                    st.code(out)
+
+            confirm_live = st.checkbox("Ja, ich will LIVE Pointer setzen.", value=False, key="confirm_live")
+            if st.button("🟪 Set LIVE Pointer", use_container_width=True, disabled=(not SERVER_MODE or not confirm_live)):
+                code, out = set_pointer("prod", "dev", chosen["hash_full"])
+                if code == 0:
+                    st.success(f"LIVE Pointer gesetzt → {chosen['hash_short']}")
+                    st.cache_data.clear()
+                    st.session_state.pop("confirm_live", None)
+                    st.rerun()
+                else:
+                    st.error("LIVE Pointer setzen fehlgeschlagen")
                 if out:
                     st.code(out)
 
