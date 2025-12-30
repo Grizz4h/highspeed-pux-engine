@@ -32,6 +32,33 @@ SERVER_MODE = (
     and PUBLISHER_DIR.exists()
 )
 
+# ---- Mode / Guards ----
+HIGHSPEED_MODE = (os.environ.get("HIGHSPEED_MODE") or "").strip().lower()
+DATA_ROOT_ENV = os.environ.get("HIGHSPEED_DATA_ROOT")
+
+def is_sandbox_mode() -> bool:
+    return HIGHSPEED_MODE == "sandbox"
+
+def is_ssot_root() -> bool:
+    # Wenn du auf dem Pi bist, ist das die "echte" SSOT
+    # (resolve, um Symlinks/relative Pfade zu normalisieren)
+    try:
+        return Path(DATA_ROOT_ENV or "").resolve() == Path("/opt/highspeed/data").resolve()
+    except Exception:
+        return False
+
+def mode_badge() -> str:
+    if is_sandbox_mode():
+        return "🧪 SANDBOX"
+    if is_ssot_root():
+        return "🚀 LIVE/SSOT"
+    return "⚙️ CUSTOM"
+
+# Fatal Guard: Sandbox darf nicht auf SSOT zeigen
+if is_sandbox_mode() and is_ssot_root():
+    st.error("FATAL: SANDBOX mode but DATA_ROOT points to SSOT. Fix systemd env.", icon="🛑")
+    st.stop()
+
 
 
 # ============================================================
@@ -252,6 +279,22 @@ def _run(cmd: list[str]) -> tuple[int, str]:
 with st.sidebar:
     st.title("🏒 HIGHspeeΔ PUX! Engine")
     st.caption("HIGHspeed · NOVADELTA")
+
+    badge = mode_badge()
+    st.caption(f"Mode: **{badge}**")
+
+    if is_sandbox_mode():
+        st.warning(
+            "SANDBOX-Modus aktiv: Git/Publish/Pointer sind **deaktiviert**.\n"
+            "Du kannst hier sicher simulieren, ohne SSOT zu berühren.",
+            icon="🧪",
+        )
+    elif is_ssot_root():
+        st.info(
+            "LIVE/SSOT aktiv: Änderungen wirken auf echte Daten.\n"
+            "Publish/Reset nur mit Bestätigung.",
+            icon="🚀",
+        )
 
     with st.expander("📌 Pfade (Debug)", expanded=False):
         st.code(f"APP_DIR  = {APP_DIR}\nDATA_DIR = {DATA_DIR}\nSAVE    = {SAVEGAME_PATH}")
@@ -568,6 +611,8 @@ def list_dev_md_commits(limit: int = 50) -> list[dict]:
         uniq.append(r)
     return uniq
 
+GIT_CONTROLS_ENABLED = SERVER_MODE and (not is_sandbox_mode())
+
 with st.sidebar:
     st.markdown("## 📦 SSOT Data Repo")
     st.caption("Wichtig: Diese Buttons arbeiten am **Data-Repo**. Nicht an der Engine.")
@@ -599,119 +644,131 @@ with st.sidebar:
 
     st.divider()
 
+    if is_sandbox_mode():
+        st.info("Git/Publish/Pointer sind in SANDBOX deaktiviert.", icon="🧷")
+    else:
+        # Tabs: Sync / Commit / Pointer Deploy
+        tab_sync, tab_commit, tab_live = st.tabs(["🔄 Sync", "✅ Commit & Push", "🔗 Pointer Deploy"])
 
-    # Tabs: Sync / Commit / Pointer Deploy
-    tab_sync, tab_commit, tab_live = st.tabs(["🔄 Sync", "✅ Commit & Push", "🔗 Pointer Deploy"])
+        # -------------------------
+        # Sync Tab
+        # -------------------------
+        with tab_sync:
+            st.markdown("### Sync (holen)")
+            st.caption("Pull macht einen harten Reset auf den gewählten Branch (SSOT-Repo).")
 
-    # -------------------------
-    # Sync Tab
-    # -------------------------
-    with tab_sync:
-        st.markdown("### Sync (holen)")
-        st.caption("Pull macht einen harten Reset auf den gewählten Branch (SSOT-Repo).")
+            pull_branch = st.radio(
+                "Branch",
+                options=["dev", "main"],
+                horizontal=True,
+                index=0
+            )
 
-        pull_branch = st.radio(
-            "Branch",
-            options=["dev", "main"],
-            horizontal=True,
-            index=0
-        )
+            if st.button(f"⬇️ Pull Data ({pull_branch})", use_container_width=True, disabled=not GIT_CONTROLS_ENABLED):
+                cmd = [str(SCRIPT_PULL), pull_branch] if SCRIPT_PULL.exists() else []
+                if not cmd:
+                    st.error("data_pull.sh nicht gefunden.")
+                else:
+                    code, out = _run(cmd)
+                    if code == 0:
+                        st.success("Pull OK")
+                        st.cache_data.clear()
+                    else:
+                        st.error("Pull FAIL")
+                    if out:
+                        st.code(out)
 
-        if st.button(f"⬇️ Pull Data ({pull_branch})", use_container_width=True, disabled=not SERVER_MODE):
-            cmd = [str(SCRIPT_PULL), pull_branch] if SCRIPT_PULL.exists() else []
-            if not cmd:
-                st.error("data_pull.sh nicht gefunden.")
+        # -------------------------
+        # Commit Tab (DEV only)
+        # -------------------------
+        with tab_commit:
+            st.markdown("### Commit & Push (DEV)")
+            st.caption("Nur DEV. Commit-Message muss **MDxx** enthalten (Guard im Script).")
+
+            # Default: MDxx based on current engine state (info ist weiter unten, aber wir haben sim_state)
+            try:
+                cur_state = sim.load_state()
+                raw_md = int(cur_state.get("spieltag", 0) or 0)   # next pointer
+            except Exception:
+                raw_md = 0
+
+            last_simulated = max(0, raw_md - 1)
+
+            if last_simulated <= 0:
+                default_msg = "MD01 simulated"
             else:
-                code, out = _run(cmd)
-                if code == 0:
-                    st.success("Pull OK")
-                    st.cache_data.clear()
+                default_msg = f"MD{last_simulated:02d} simulated"
+
+
+            msg = st.text_input("Commit-Message", value=default_msg, help="Beispiel: MD04 simulated")
+
+            if st.button("⬆️ Commit & Push DEV", use_container_width=True, disabled=not GIT_CONTROLS_ENABLED):
+                cmd = [str(SCRIPT_PUSH), "dev", msg.strip()] if SCRIPT_PUSH.exists() else []
+                if not cmd:
+                    st.error("data_push.sh nicht gefunden.")
                 else:
-                    st.error("Pull FAIL")
-                if out:
-                    st.code(out)
+                    code, out = _run(cmd)
+                    if code == 0:
+                        st.success("Push OK (dev)")
+                        st.cache_data.clear()
+                    else:
+                        st.error("Push FAIL (dev)")
+                    if out:
+                        st.code(out)
 
-    # -------------------------
-    # Commit Tab (DEV only)
-    # -------------------------
-    with tab_commit:
-        st.markdown("### Commit & Push (DEV)")
-        st.caption("Nur DEV. Commit-Message muss **MDxx** enthalten (Guard im Script).")
+        # -------------------------
+        # Pointer Deploy (setzt Pointers für Deploy)
+        # -------------------------
+        with tab_live:
+            st.markdown("### Pointer Deploy (setzt DEV/LIVE Pointer)")
+            st.caption("Du wählst einen DEV-Commit (MDxx) und setzt den Pointer für DEV oder LIVE Deploy.")
 
-        # Default: MDxx based on current engine state (info ist weiter unten, aber wir haben sim_state)
-        try:
-            cur_state = sim.load_state()
-            raw_md = int(cur_state.get("spieltag", 0) or 0)   # next pointer
-        except Exception:
-            raw_md = 0
-
-        last_simulated = max(0, raw_md - 1)
-
-        if last_simulated <= 0:
-            default_msg = "MD01 simulated"
-        else:
-            default_msg = f"MD{last_simulated:02d} simulated"
-
-
-        msg = st.text_input("Commit-Message", value=default_msg, help="Beispiel: MD04 simulated")
-
-        if st.button("⬆️ Commit & Push DEV", use_container_width=True, disabled=not SERVER_MODE):
-            cmd = [str(SCRIPT_PUSH), "dev", msg.strip()] if SCRIPT_PUSH.exists() else []
-            if not cmd:
-                st.error("data_push.sh nicht gefunden.")
+            md_rows = list_dev_md_commits(limit=80) if SERVER_MODE else []
+            if not md_rows:
+                st.warning("Keine DEV-Commits mit MDxx gefunden (oder nicht auf Raspberry).", icon="⚠️")
             else:
-                code, out = _run(cmd)
-                if code == 0:
-                    st.success("Push OK (dev)")
-                    st.cache_data.clear()
-                else:
-                    st.error("Push FAIL (dev)")
-                if out:
-                    st.code(out)
+                options = [f"{r['md']} · {r['hash_short']} · {r['subject']}" for r in md_rows]
+                sel = st.selectbox("Commit auswählen", options=options, index=0)
+                chosen = md_rows[options.index(sel)]
 
-    # -------------------------
-    # Pointer Deploy (setzt Pointers für Deploy)
-    # -------------------------
-    with tab_live:
-        st.markdown("### Pointer Deploy (setzt DEV/LIVE Pointer)")
-        st.caption("Du wählst einen DEV-Commit (MDxx) und setzt den Pointer für DEV oder LIVE Deploy.")
+                st.markdown(f"**Auswahl:** `{chosen['md']}` → `{chosen['hash_short']}`")
 
-        md_rows = list_dev_md_commits(limit=80) if SERVER_MODE else []
-        if not md_rows:
-            st.warning("Keine DEV-Commits mit MDxx gefunden (oder nicht auf Raspberry).", icon="⚠️")
-        else:
-            options = [f"{r['md']} · {r['hash_short']} · {r['subject']}" for r in md_rows]
-            sel = st.selectbox("Commit auswählen", options=options, index=0)
-            chosen = md_rows[options.index(sel)]
+                # Zwei Buttons mit Confirm
+                confirm_dev = st.checkbox("Ja, ich will DEV Pointer setzen.", value=False, key="confirm_dev")
+                extra_confirm_dev = st.checkbox(
+                    "Ich weiß was ich tue: Das wirkt auf LIVE/SSOT.",
+                    value=False,
+                    key="confirm_live_danger_dev"
+                ) if is_ssot_root() else True
+                if st.button("🟦 Set DEV Pointer", use_container_width=True, disabled=(not GIT_CONTROLS_ENABLED or not confirm_dev or not extra_confirm_dev)):
+                    code, out = set_pointer("dev", "dev", chosen["hash_full"])
+                    if code == 0:
+                        st.success(f"DEV Pointer gesetzt → {chosen['hash_short']}")
+                        st.cache_data.clear()
+                        st.session_state.pop("confirm_dev", None)
+                        st.rerun()
+                    else:
+                        st.error("DEV Pointer setzen fehlgeschlagen")
+                    if out:
+                        st.code(out)
 
-            st.markdown(f"**Auswahl:** `{chosen['md']}` → `{chosen['hash_short']}`")
-
-            # Zwei Buttons mit Confirm
-            confirm_dev = st.checkbox("Ja, ich will DEV Pointer setzen.", value=False, key="confirm_dev")
-            if st.button("🟦 Set DEV Pointer", use_container_width=True, disabled=(not SERVER_MODE or not confirm_dev)):
-                code, out = set_pointer("dev", "dev", chosen["hash_full"])
-                if code == 0:
-                    st.success(f"DEV Pointer gesetzt → {chosen['hash_short']}")
-                    st.cache_data.clear()
-                    st.session_state.pop("confirm_dev", None)
-                    st.rerun()
-                else:
-                    st.error("DEV Pointer setzen fehlgeschlagen")
-                if out:
-                    st.code(out)
-
-            confirm_live = st.checkbox("Ja, ich will LIVE Pointer setzen.", value=False, key="confirm_live")
-            if st.button("🟪 Set LIVE Pointer", use_container_width=True, disabled=(not SERVER_MODE or not confirm_live)):
-                code, out = set_pointer("prod", "dev", chosen["hash_full"])
-                if code == 0:
-                    st.success(f"LIVE Pointer gesetzt → {chosen['hash_short']}")
-                    st.cache_data.clear()
-                    st.session_state.pop("confirm_live", None)
-                    st.rerun()
-                else:
-                    st.error("LIVE Pointer setzen fehlgeschlagen")
-                if out:
-                    st.code(out)
+                confirm_live = st.checkbox("Ja, ich will LIVE Pointer setzen.", value=False, key="confirm_live")
+                extra_confirm_live = st.checkbox(
+                    "Ich weiß was ich tue: Das wirkt auf LIVE/SSOT.",
+                    value=False,
+                    key="confirm_live_danger_live"
+                ) if is_ssot_root() else True
+                if st.button("🟪 Set LIVE Pointer", use_container_width=True, disabled=(not GIT_CONTROLS_ENABLED or not confirm_live or not extra_confirm_live)):
+                    code, out = set_pointer("prod", "dev", chosen["hash_full"])
+                    if code == 0:
+                        st.success(f"LIVE Pointer gesetzt → {chosen['hash_short']}")
+                        st.cache_data.clear()
+                        st.session_state.pop("confirm_live", None)
+                        st.rerun()
+                    else:
+                        st.error("LIVE Pointer setzen fehlgeschlagen")
+                    if out:
+                        st.code(out)
 
 
 # ============================================================
