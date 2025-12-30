@@ -18,9 +18,9 @@
     "pp_goals": 5,
     "sh_goals": 0,
     "pim": 30,
-    "fo_won": 345,
-    "fo_lost": 170,
-    "fo_pct": 66.99
+    "fo_won": 354,
+    "fo_lost": 178,
+    "fo_pct": 66.54
   },
   {
     "league": "DEL2",
@@ -64,9 +64,9 @@
     "pp_goals": 6,
     "sh_goals": 0,
     "pim": 61,
-    "fo_won": 79,
-    "fo_lost": 85,
-    "fo_pct": 48.17
+    "fo_won": 83,
+    "fo_lost": 87,
+    "fo_pct": 48.82
   },
   {
     "league": "DEL2",
@@ -87,9 +87,9 @@
     "pp_goals": 4,
     "sh_goals": 1,
     "pim": 6,
-    "fo_won": 286,
-    "fo_lost": 343,
-    "fo_pct": 45.47
+    "fo_won": 298,
+    "fo_lost": 349,
+    "fo_pct": 46.06
   },
   {
     "league": "DEL2",
@@ -142,6 +142,29 @@
     "type": "skater",
     "team_code": "RVT",
     "team_name": null,
+    "name_real": "Mark Rassell",
+    "number": 92,
+    "nation": "nan",
+    "position_raw": "FO",
+    "position_group": "F",
+    "gp": 29,
+    "goals": 21,
+    "assists": 11,
+    "points": 32,
+    "points_per_game": 1.103448275862069,
+    "plus_minus": 23,
+    "pp_goals": 0,
+    "sh_goals": 0,
+    "pim": 16,
+    "fo_won": 0,
+    "fo_lost": 0,
+    "fo_pct": 0.0
+  },
+  {
+    "league": "DEL2",
+    "type": "skater",
+    "team_code": "RVT",
+    "team_name": null,
     "name_real": "Robbie Czarnik",
     "number": 77,
     "nation": "nan",
@@ -156,31 +179,31 @@
     "pp_goals": 4,
     "sh_goals": 1,
     "pim": 43,
-    "fo_won": 224,
-    "fo_lost": 174,
-    "fo_pct": 56.28
+    "fo_won": 227,
+    "fo_lost": 181,
+    "fo_pct": 55.64
   },
   {
     "league": "DEL2",
     "type": "skater",
-    "team_code": "RVT",
+    "team_code": "EPC",
     "team_name": null,
-    "name_real": "Mark Rassell",
-    "number": 92,
+    "name_real": "Dominic Walsh",
+    "number": 8,
     "nation": "nan",
     "position_raw": "FO",
     "position_group": "F",
-    "gp": 29,
-    "goals": 20,
-    "assists": 11,
-    "points": 31,
-    "points_per_game": 1.0689655172413792,
-    "plus_minus": 23,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 16,
+    "gp": 30,
+    "goals": 16,
+    "assists": 16,
+    "points": 32,
+    "points_per_game": 1.0666666666666667,
+    "plus_minus": 1,
+    "pp_goals": 3,
+    "sh_goals": 1,
+    "pim": 18,
     "fo_won": 0,
-    "fo_lost": 0,
+    "fo_lost": 1,
     "fo_pct": 0.0
   },
   {
@@ -225,55 +248,9 @@
     "pp_goals": 3,
     "sh_goals": 0,
     "pim": 12,
-    "fo_won": 15,
-    "fo_lost": 20,
-    "fo_pct": 42.86
-  },
-  {
-    "league": "DEL2",
-    "type": "skater",
-    "team_code": "EPC",
-    "team_name": null,
-    "name_real": "Dominic Walsh",
-    "number": 8,
-    "nation": "nan",
-    "position_raw": "FO",
-    "position_group": "F",
-    "gp": 30,
-    "goals": 16,
-    "assists": 14,
-    "points": 30,
-    "points_per_game": 1.0,
-    "plus_minus": 1,
-    "pp_goals": 3,
-    "sh_goals": 1,
-    "pim": 18,
-    "fo_won": 0,
-    "fo_lost": 1,
-    "fo_pct": 0.0
-  },
-  {
-    "league": "DEL2",
-    "type": "skater",
-    "team_code": "EVL",
-    "team_name": null,
-    "name_real": "Trevor Gooch",
-    "number": 72,
-    "nation": "nan",
-    "position_raw": "FO",
-    "position_group": "F",
-    "gp": 27,
-    "goals": 11,
-    "assists": 19,
-    "points": 30,
-    "points_per_game": 1.1111111111111112,
-    "plus_minus": 16,
-    "pp_goals": 1,
-    "sh_goals": 0,
-    "pim": 16,
-    "fo_won": 13,
-    "fo_lost": 8,
-    "fo_pct": 61.9
+    "fo_won": 25,
+    "fo_lost": 31,
+    "fo_pct": 44.64
   },
   {
     "league": "DEL2",
@@ -294,9 +271,9 @@
     "pp_goals": 3,
     "sh_goals": 0,
     "pim": 24,
-    "fo_won": 185,
-    "fo_lost": 199,
-    "fo_pct": 48.18
+    "fo_won": 192,
+    "fo_lost": 201,
+    "fo_pct": 48.85
   },
   {
     "league": "DEL2",
@@ -347,6 +324,29 @@
   {
     "league": "DEL2",
     "type": "skater",
+    "team_code": "EVL",
+    "team_name": null,
+    "name_real": "Trevor Gooch",
+    "number": 72,
+    "nation": "nan",
+    "position_raw": "FO",
+    "position_group": "F",
+    "gp": 27,
+    "goals": 11,
+    "assists": 18,
+    "points": 29,
+    "points_per_game": 1.0740740740740742,
+    "plus_minus": 16,
+    "pp_goals": 1,
+    "sh_goals": 0,
+    "pim": 16,
+    "fo_won": 13,
+    "fo_lost": 8,
+    "fo_pct": 61.9
+  },
+  {
+    "league": "DEL2",
+    "type": "skater",
     "team_code": "SCB",
     "team_name": null,
     "name_real": "Marek Racuk",
@@ -363,32 +363,9 @@
     "pp_goals": 3,
     "sh_goals": 1,
     "pim": 26,
-    "fo_won": 136,
-    "fo_lost": 117,
-    "fo_pct": 53.75
-  },
-  {
-    "league": "DEL2",
-    "type": "skater",
-    "team_code": "ECK",
-    "team_name": null,
-    "name_real": "Tyler Benson",
-    "number": 17,
-    "nation": "nan",
-    "position_raw": "FO",
-    "position_group": "F",
-    "gp": 26,
-    "goals": 8,
-    "assists": 21,
-    "points": 29,
-    "points_per_game": 1.1153846153846154,
-    "plus_minus": 3,
-    "pp_goals": 4,
-    "sh_goals": 0,
-    "pim": 10,
-    "fo_won": 0,
-    "fo_lost": 1,
-    "fo_pct": 0.0
+    "fo_won": 144,
+    "fo_lost": 121,
+    "fo_pct": 54.34
   },
   {
     "league": "DEL2",
@@ -409,9 +386,55 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 41,
-    "fo_won": 261,
-    "fo_lost": 208,
-    "fo_pct": 55.65
+    "fo_won": 268,
+    "fo_lost": 210,
+    "fo_pct": 56.07
+  },
+  {
+    "league": "DEL2",
+    "type": "skater",
+    "team_code": "SBR",
+    "team_name": null,
+    "name_real": "Scott Feser",
+    "number": 71,
+    "nation": "nan",
+    "position_raw": "FO",
+    "position_group": "F",
+    "gp": 29,
+    "goals": 10,
+    "assists": 18,
+    "points": 28,
+    "points_per_game": 0.9655172413793104,
+    "plus_minus": 17,
+    "pp_goals": 4,
+    "sh_goals": 0,
+    "pim": 17,
+    "fo_won": 43,
+    "fo_lost": 63,
+    "fo_pct": 40.57
+  },
+  {
+    "league": "DEL2",
+    "type": "skater",
+    "team_code": "ECK",
+    "team_name": null,
+    "name_real": "Tyler Benson",
+    "number": 17,
+    "nation": "nan",
+    "position_raw": "FO",
+    "position_group": "F",
+    "gp": 26,
+    "goals": 8,
+    "assists": 20,
+    "points": 28,
+    "points_per_game": 1.0769230769230769,
+    "plus_minus": 3,
+    "pp_goals": 4,
+    "sh_goals": 0,
+    "pim": 10,
+    "fo_won": 0,
+    "fo_lost": 1,
+    "fo_pct": 0.0
   },
   {
     "league": "DEL2",
@@ -432,9 +455,9 @@
     "pp_goals": 5,
     "sh_goals": 2,
     "pim": 2,
-    "fo_won": 286,
-    "fo_lost": 230,
-    "fo_pct": 55.43
+    "fo_won": 293,
+    "fo_lost": 232,
+    "fo_pct": 55.81
   },
   {
     "league": "DEL2",
@@ -462,29 +485,6 @@
   {
     "league": "DEL2",
     "type": "skater",
-    "team_code": "SBR",
-    "team_name": null,
-    "name_real": "Scott Feser",
-    "number": 71,
-    "nation": "nan",
-    "position_raw": "FO",
-    "position_group": "F",
-    "gp": 29,
-    "goals": 10,
-    "assists": 17,
-    "points": 27,
-    "points_per_game": 0.9310344827586207,
-    "plus_minus": 17,
-    "pp_goals": 4,
-    "sh_goals": 0,
-    "pim": 17,
-    "fo_won": 42,
-    "fo_lost": 61,
-    "fo_pct": 40.78
-  },
-  {
-    "league": "DEL2",
-    "type": "skater",
     "team_code": "SCB",
     "team_name": null,
     "name_real": "Cole Fonstad",
@@ -501,9 +501,9 @@
     "pp_goals": 6,
     "sh_goals": 0,
     "pim": 10,
-    "fo_won": 98,
-    "fo_lost": 111,
-    "fo_pct": 46.89
+    "fo_won": 102,
+    "fo_lost": 116,
+    "fo_pct": 46.79
   },
   {
     "league": "DEL2",
@@ -547,32 +547,9 @@
     "pp_goals": 2,
     "sh_goals": 0,
     "pim": 6,
-    "fo_won": 138,
-    "fo_lost": 78,
-    "fo_pct": 63.89
-  },
-  {
-    "league": "DEL2",
-    "type": "skater",
-    "team_code": "SBR",
-    "team_name": null,
-    "name_real": "Shane Hanna",
-    "number": 60,
-    "nation": "nan",
-    "position_raw": "DE",
-    "position_group": "D",
-    "gp": 29,
-    "goals": 9,
-    "assists": 17,
-    "points": 26,
-    "points_per_game": 0.896551724137931,
-    "plus_minus": 16,
-    "pp_goals": 2,
-    "sh_goals": 1,
-    "pim": 14,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0
+    "fo_won": 146,
+    "fo_lost": 90,
+    "fo_pct": 61.86
   },
   {
     "league": "DEL2",
@@ -593,9 +570,9 @@
     "pp_goals": 1,
     "sh_goals": 0,
     "pim": 14,
-    "fo_won": 91,
-    "fo_lost": 127,
-    "fo_pct": 41.74
+    "fo_won": 100,
+    "fo_lost": 133,
+    "fo_pct": 42.92
   },
   {
     "league": "DEL2",
@@ -623,29 +600,6 @@
   {
     "league": "DEL2",
     "type": "skater",
-    "team_code": "LFX",
-    "team_name": null,
-    "name_real": "Lane Scheidl",
-    "number": 23,
-    "nation": "nan",
-    "position_raw": "FO",
-    "position_group": "F",
-    "gp": 25,
-    "goals": 9,
-    "assists": 16,
-    "points": 25,
-    "points_per_game": 1.0,
-    "plus_minus": 7,
-    "pp_goals": 2,
-    "sh_goals": 0,
-    "pim": 16,
-    "fo_won": 19,
-    "fo_lost": 49,
-    "fo_pct": 27.94
-  },
-  {
-    "league": "DEL2",
-    "type": "skater",
     "team_code": "EBR",
     "team_name": null,
     "name_real": "Corey Trivino",
@@ -662,9 +616,32 @@
     "pp_goals": 1,
     "sh_goals": 0,
     "pim": 12,
-    "fo_won": 347,
-    "fo_lost": 300,
-    "fo_pct": 53.63
+    "fo_won": 362,
+    "fo_lost": 306,
+    "fo_pct": 54.19
+  },
+  {
+    "league": "DEL2",
+    "type": "skater",
+    "team_code": "SBR",
+    "team_name": null,
+    "name_real": "Shane Hanna",
+    "number": 60,
+    "nation": "nan",
+    "position_raw": "DE",
+    "position_group": "D",
+    "gp": 29,
+    "goals": 9,
+    "assists": 16,
+    "points": 25,
+    "points_per_game": 0.8620689655172413,
+    "plus_minus": 16,
+    "pp_goals": 2,
+    "sh_goals": 1,
+    "pim": 14,
+    "fo_won": 0,
+    "fo_lost": 0,
+    "fo_pct": 0.0
   },
   {
     "league": "DEL2",
@@ -708,9 +685,32 @@
     "pp_goals": 5,
     "sh_goals": 1,
     "pim": 14,
-    "fo_won": 228,
-    "fo_lost": 249,
-    "fo_pct": 47.8
+    "fo_won": 240,
+    "fo_lost": 262,
+    "fo_pct": 47.81
+  },
+  {
+    "league": "DEL2",
+    "type": "skater",
+    "team_code": "LFX",
+    "team_name": null,
+    "name_real": "Lane Scheidl",
+    "number": 23,
+    "nation": "nan",
+    "position_raw": "FO",
+    "position_group": "F",
+    "gp": 25,
+    "goals": 9,
+    "assists": 15,
+    "points": 24,
+    "points_per_game": 0.96,
+    "plus_minus": 7,
+    "pp_goals": 2,
+    "sh_goals": 0,
+    "pim": 16,
+    "fo_won": 19,
+    "fo_lost": 50,
+    "fo_pct": 27.54
   },
   {
     "league": "DEL2",
@@ -750,7 +750,7 @@
     "assists": 17,
     "points": 24,
     "points_per_game": 0.8571428571428571,
-    "plus_minus": 10,
+    "plus_minus": 9,
     "pp_goals": 6,
     "sh_goals": 0,
     "pim": 12,
@@ -803,6 +803,29 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0
+  },
+  {
+    "league": "DEL2",
+    "type": "skater",
+    "team_code": "LFX",
+    "team_name": null,
+    "name_real": "Lennard Nieleck",
+    "number": 25,
+    "nation": "nan",
+    "position_raw": "FO",
+    "position_group": "F",
+    "gp": 25,
+    "goals": 8,
+    "assists": 14,
+    "points": 22,
+    "points_per_game": 0.88,
+    "plus_minus": 9,
+    "pp_goals": 2,
+    "sh_goals": 0,
+    "pim": 14,
+    "fo_won": 211,
+    "fo_lost": 212,
+    "fo_pct": 49.88
   },
   {
     "league": "DEL2",
@@ -876,29 +899,6 @@
   {
     "league": "DEL2",
     "type": "skater",
-    "team_code": "LFX",
-    "team_name": null,
-    "name_real": "Lennard Nieleck",
-    "number": 25,
-    "nation": "nan",
-    "position_raw": "FO",
-    "position_group": "F",
-    "gp": 25,
-    "goals": 8,
-    "assists": 13,
-    "points": 21,
-    "points_per_game": 0.84,
-    "plus_minus": 9,
-    "pp_goals": 2,
-    "sh_goals": 0,
-    "pim": 14,
-    "fo_won": 201,
-    "fo_lost": 205,
-    "fo_pct": 49.51
-  },
-  {
-    "league": "DEL2",
-    "type": "skater",
     "team_code": "SCB",
     "team_name": null,
     "name_real": "Mike Fischer",
@@ -938,9 +938,9 @@
     "pp_goals": 4,
     "sh_goals": 0,
     "pim": 8,
-    "fo_won": 208,
-    "fo_lost": 261,
-    "fo_pct": 44.35
+    "fo_won": 211,
+    "fo_lost": 270,
+    "fo_pct": 43.87
   },
   {
     "league": "DEL2",
@@ -1037,6 +1037,29 @@
   {
     "league": "DEL2",
     "type": "skater",
+    "team_code": "SBR",
+    "team_name": null,
+    "name_real": "Lewis Zerter-Gossage",
+    "number": 37,
+    "nation": "nan",
+    "position_raw": "FO",
+    "position_group": "F",
+    "gp": 27,
+    "goals": 9,
+    "assists": 11,
+    "points": 20,
+    "points_per_game": 0.7407407407407407,
+    "plus_minus": 10,
+    "pp_goals": 3,
+    "sh_goals": 0,
+    "pim": 8,
+    "fo_won": 172,
+    "fo_lost": 157,
+    "fo_pct": 52.28
+  },
+  {
+    "league": "DEL2",
+    "type": "skater",
     "team_code": "EVL",
     "team_name": null,
     "name_real": "David Stieler",
@@ -1053,9 +1076,9 @@
     "pp_goals": 5,
     "sh_goals": 0,
     "pim": 4,
-    "fo_won": 254,
-    "fo_lost": 224,
-    "fo_pct": 53.14
+    "fo_won": 258,
+    "fo_lost": 234,
+    "fo_pct": 52.44
   },
   {
     "league": "DEL2",
@@ -1099,32 +1122,9 @@
     "pp_goals": 1,
     "sh_goals": 1,
     "pim": 4,
-    "fo_won": 9,
+    "fo_won": 10,
     "fo_lost": 20,
-    "fo_pct": 31.03
-  },
-  {
-    "league": "DEL2",
-    "type": "skater",
-    "team_code": "SBR",
-    "team_name": null,
-    "name_real": "Lewis Zerter-Gossage",
-    "number": 37,
-    "nation": "nan",
-    "position_raw": "FO",
-    "position_group": "F",
-    "gp": 27,
-    "goals": 9,
-    "assists": 10,
-    "points": 19,
-    "points_per_game": 0.7037037037037037,
-    "plus_minus": 10,
-    "pp_goals": 3,
-    "sh_goals": 0,
-    "pim": 8,
-    "fo_won": 163,
-    "fo_lost": 147,
-    "fo_pct": 52.58
+    "fo_pct": 33.33
   },
   {
     "league": "DEL2",
@@ -1145,9 +1145,9 @@
     "pp_goals": 1,
     "sh_goals": 0,
     "pim": 40,
-    "fo_won": 324,
-    "fo_lost": 252,
-    "fo_pct": 56.25
+    "fo_won": 339,
+    "fo_lost": 263,
+    "fo_pct": 56.31
   },
   {
     "league": "DEL2",
@@ -1214,9 +1214,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 16,
-    "fo_won": 187,
-    "fo_lost": 154,
-    "fo_pct": 54.84
+    "fo_won": 196,
+    "fo_lost": 159,
+    "fo_pct": 55.21
   },
   {
     "league": "DEL2",
@@ -1260,9 +1260,9 @@
     "pp_goals": 1,
     "sh_goals": 1,
     "pim": 12,
-    "fo_won": 285,
-    "fo_lost": 186,
-    "fo_pct": 60.51
+    "fo_won": 286,
+    "fo_lost": 185,
+    "fo_pct": 60.72
   },
   {
     "league": "DEL2",
@@ -1375,9 +1375,9 @@
     "pp_goals": 1,
     "sh_goals": 0,
     "pim": 31,
-    "fo_won": 210,
-    "fo_lost": 237,
-    "fo_pct": 46.98
+    "fo_won": 221,
+    "fo_lost": 247,
+    "fo_pct": 47.22
   },
   {
     "league": "DEL2",
@@ -1401,6 +1401,52 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0
+  },
+  {
+    "league": "DEL2",
+    "type": "skater",
+    "team_code": "EVL",
+    "team_name": null,
+    "name_real": "Jesse Koskenkorva",
+    "number": 51,
+    "nation": "nan",
+    "position_raw": "FO",
+    "position_group": "F",
+    "gp": 27,
+    "goals": 9,
+    "assists": 7,
+    "points": 16,
+    "points_per_game": 0.5925925925925926,
+    "plus_minus": 17,
+    "pp_goals": 2,
+    "sh_goals": 0,
+    "pim": 12,
+    "fo_won": 269,
+    "fo_lost": 231,
+    "fo_pct": 53.8
+  },
+  {
+    "league": "DEL2",
+    "type": "skater",
+    "team_code": "SCB",
+    "team_name": null,
+    "name_real": "Tyler McNeely",
+    "number": 94,
+    "nation": "nan",
+    "position_raw": "FO",
+    "position_group": "F",
+    "gp": 26,
+    "goals": 8,
+    "assists": 8,
+    "points": 16,
+    "points_per_game": 0.6153846153846154,
+    "plus_minus": -5,
+    "pp_goals": 3,
+    "sh_goals": 1,
+    "pim": 23,
+    "fo_won": 209,
+    "fo_lost": 269,
+    "fo_pct": 43.72
   },
   {
     "league": "DEL2",
@@ -1467,9 +1513,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 26,
-    "fo_won": 163,
-    "fo_lost": 244,
-    "fo_pct": 40.05
+    "fo_won": 173,
+    "fo_lost": 255,
+    "fo_pct": 40.42
   },
   {
     "league": "DEL2",
@@ -1486,7 +1532,7 @@
     "assists": 11,
     "points": 16,
     "points_per_game": 1.2307692307692308,
-    "plus_minus": 3,
+    "plus_minus": 2,
     "pp_goals": 2,
     "sh_goals": 0,
     "pim": 14,
@@ -1536,9 +1582,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 10,
-    "fo_won": 99,
-    "fo_lost": 82,
-    "fo_pct": 54.7
+    "fo_won": 105,
+    "fo_lost": 91,
+    "fo_pct": 53.57
   },
   {
     "league": "DEL2",
@@ -1566,29 +1612,6 @@
   {
     "league": "DEL2",
     "type": "skater",
-    "team_code": "EVL",
-    "team_name": null,
-    "name_real": "Jesse Koskenkorva",
-    "number": 51,
-    "nation": "nan",
-    "position_raw": "FO",
-    "position_group": "F",
-    "gp": 27,
-    "goals": 9,
-    "assists": 6,
-    "points": 15,
-    "points_per_game": 0.5555555555555556,
-    "plus_minus": 16,
-    "pp_goals": 2,
-    "sh_goals": 0,
-    "pim": 12,
-    "fo_won": 260,
-    "fo_lost": 224,
-    "fo_pct": 53.72
-  },
-  {
-    "league": "DEL2",
-    "type": "skater",
     "team_code": "SBR",
     "team_name": null,
     "name_real": "Jordan Taupert",
@@ -1601,36 +1624,13 @@
     "assists": 6,
     "points": 15,
     "points_per_game": 0.5172413793103449,
-    "plus_minus": 9,
+    "plus_minus": 10,
     "pp_goals": 2,
     "sh_goals": 2,
     "pim": 6,
     "fo_won": 3,
     "fo_lost": 0,
     "fo_pct": 100.0
-  },
-  {
-    "league": "DEL2",
-    "type": "skater",
-    "team_code": "SCB",
-    "team_name": null,
-    "name_real": "Tyler McNeely",
-    "number": 94,
-    "nation": "nan",
-    "position_raw": "FO",
-    "position_group": "F",
-    "gp": 26,
-    "goals": 8,
-    "assists": 7,
-    "points": 15,
-    "points_per_game": 0.5769230769230769,
-    "plus_minus": -5,
-    "pp_goals": 3,
-    "sh_goals": 1,
-    "pim": 23,
-    "fo_won": 201,
-    "fo_lost": 257,
-    "fo_pct": 43.89
   },
   {
     "league": "DEL2",
@@ -1651,9 +1651,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 4,
-    "fo_won": 262,
-    "fo_lost": 243,
-    "fo_pct": 51.88
+    "fo_won": 272,
+    "fo_lost": 255,
+    "fo_pct": 51.61
   },
   {
     "league": "DEL2",
@@ -1675,7 +1675,7 @@
     "sh_goals": 1,
     "pim": 33,
     "fo_won": 0,
-    "fo_lost": 1,
+    "fo_lost": 2,
     "fo_pct": 0.0
   },
   {
@@ -1727,29 +1727,6 @@
   {
     "league": "DEL2",
     "type": "skater",
-    "team_code": "FRB",
-    "team_name": null,
-    "name_real": "Sameli Ventelä",
-    "number": 7,
-    "nation": "nan",
-    "position_raw": "DE",
-    "position_group": "D",
-    "gp": 26,
-    "goals": 0,
-    "assists": 15,
-    "points": 15,
-    "points_per_game": 0.5769230769230769,
-    "plus_minus": 1,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 10,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0
-  },
-  {
-    "league": "DEL2",
-    "type": "skater",
     "team_code": "RVT",
     "team_name": null,
     "name_real": "Nickolas Latta",
@@ -1766,9 +1743,9 @@
     "pp_goals": 2,
     "sh_goals": 0,
     "pim": 26,
-    "fo_won": 175,
+    "fo_won": 176,
     "fo_lost": 150,
-    "fo_pct": 53.85
+    "fo_pct": 53.99
   },
   {
     "league": "DEL2",
@@ -1789,9 +1766,9 @@
     "pp_goals": 4,
     "sh_goals": 0,
     "pim": 12,
-    "fo_won": 239,
-    "fo_lost": 203,
-    "fo_pct": 54.07
+    "fo_won": 250,
+    "fo_lost": 206,
+    "fo_pct": 54.82
   },
   {
     "league": "DEL2",
@@ -1836,8 +1813,8 @@
     "sh_goals": 0,
     "pim": 61,
     "fo_won": 22,
-    "fo_lost": 26,
-    "fo_pct": 45.83
+    "fo_lost": 27,
+    "fo_pct": 44.9
   },
   {
     "league": "DEL2",
@@ -1854,7 +1831,7 @@
     "assists": 8,
     "points": 14,
     "points_per_game": 1.0,
-    "plus_minus": 4,
+    "plus_minus": 3,
     "pp_goals": 1,
     "sh_goals": 0,
     "pim": 0,
@@ -1881,9 +1858,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 32,
-    "fo_won": 154,
-    "fo_lost": 200,
-    "fo_pct": 43.5
+    "fo_won": 156,
+    "fo_lost": 209,
+    "fo_pct": 42.74
   },
   {
     "league": "DEL2",
@@ -1900,7 +1877,7 @@
     "assists": 9,
     "points": 14,
     "points_per_game": 0.7,
-    "plus_minus": -23,
+    "plus_minus": -24,
     "pp_goals": 2,
     "sh_goals": 0,
     "pim": 8,
@@ -1927,9 +1904,9 @@
     "pp_goals": 0,
     "sh_goals": 1,
     "pim": 24,
-    "fo_won": 177,
-    "fo_lost": 174,
-    "fo_pct": 50.43
+    "fo_won": 185,
+    "fo_lost": 179,
+    "fo_pct": 50.82
   },
   {
     "league": "DEL2",
@@ -1996,9 +1973,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 23,
-    "fo_won": 173,
-    "fo_lost": 200,
-    "fo_pct": 46.38
+    "fo_won": 184,
+    "fo_lost": 211,
+    "fo_pct": 46.58
   },
   {
     "league": "DEL2",
@@ -2019,9 +1996,32 @@
     "pp_goals": 1,
     "sh_goals": 0,
     "pim": 20,
-    "fo_won": 140,
-    "fo_lost": 117,
-    "fo_pct": 54.47
+    "fo_won": 148,
+    "fo_lost": 126,
+    "fo_pct": 54.01
+  },
+  {
+    "league": "DEL2",
+    "type": "skater",
+    "team_code": "FRB",
+    "team_name": null,
+    "name_real": "Sameli Ventelä",
+    "number": 7,
+    "nation": "nan",
+    "position_raw": "DE",
+    "position_group": "D",
+    "gp": 26,
+    "goals": 0,
+    "assists": 14,
+    "points": 14,
+    "points_per_game": 0.5384615384615384,
+    "plus_minus": 1,
+    "pp_goals": 0,
+    "sh_goals": 0,
+    "pim": 10,
+    "fo_won": 0,
+    "fo_lost": 0,
+    "fo_pct": 0.0
   },
   {
     "league": "DEL2",
@@ -2134,9 +2134,9 @@
     "pp_goals": 1,
     "sh_goals": 0,
     "pim": 12,
-    "fo_won": 88,
-    "fo_lost": 97,
-    "fo_pct": 47.57
+    "fo_won": 98,
+    "fo_lost": 110,
+    "fo_pct": 47.12
   },
   {
     "league": "DEL2",
@@ -2180,9 +2180,9 @@
     "pp_goals": 0,
     "sh_goals": 1,
     "pim": 24,
-    "fo_won": 2,
+    "fo_won": 3,
     "fo_lost": 1,
-    "fo_pct": 66.67
+    "fo_pct": 75.0
   },
   {
     "league": "DEL2",
@@ -2249,9 +2249,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 12,
-    "fo_won": 15,
-    "fo_lost": 28,
-    "fo_pct": 34.88
+    "fo_won": 16,
+    "fo_lost": 29,
+    "fo_pct": 35.56
   },
   {
     "league": "DEL2",
@@ -2318,9 +2318,9 @@
     "pp_goals": 3,
     "sh_goals": 0,
     "pim": 9,
-    "fo_won": 33,
-    "fo_lost": 24,
-    "fo_pct": 57.89
+    "fo_won": 34,
+    "fo_lost": 25,
+    "fo_pct": 57.63
   },
   {
     "league": "DEL2",
@@ -2364,9 +2364,9 @@
     "pp_goals": 2,
     "sh_goals": 0,
     "pim": 10,
-    "fo_won": 134,
-    "fo_lost": 149,
-    "fo_pct": 47.35
+    "fo_won": 135,
+    "fo_lost": 155,
+    "fo_pct": 46.55
   },
   {
     "league": "DEL2",
@@ -2410,9 +2410,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 6,
-    "fo_won": 2,
-    "fo_lost": 4,
-    "fo_pct": 33.33
+    "fo_won": 8,
+    "fo_lost": 6,
+    "fo_pct": 57.14
   },
   {
     "league": "DEL2",
@@ -2456,9 +2456,9 @@
     "pp_goals": 1,
     "sh_goals": 0,
     "pim": 12,
-    "fo_won": 60,
-    "fo_lost": 95,
-    "fo_pct": 38.71
+    "fo_won": 67,
+    "fo_lost": 100,
+    "fo_pct": 40.12
   },
   {
     "league": "DEL2",
@@ -2502,6 +2502,29 @@
     "pp_goals": 1,
     "sh_goals": 0,
     "pim": 16,
+    "fo_won": 0,
+    "fo_lost": 0,
+    "fo_pct": 0.0
+  },
+  {
+    "league": "DEL2",
+    "type": "skater",
+    "team_code": "EPC",
+    "team_name": null,
+    "name_real": "Mirko Sacher",
+    "number": 21,
+    "nation": "nan",
+    "position_raw": "DE",
+    "position_group": "D",
+    "gp": 30,
+    "goals": 2,
+    "assists": 10,
+    "points": 12,
+    "points_per_game": 0.4,
+    "plus_minus": 21,
+    "pp_goals": 0,
+    "sh_goals": 0,
+    "pim": 12,
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0
@@ -2663,9 +2686,9 @@
     "pp_goals": 1,
     "sh_goals": 0,
     "pim": 12,
-    "fo_won": 227,
-    "fo_lost": 221,
-    "fo_pct": 50.67
+    "fo_won": 239,
+    "fo_lost": 231,
+    "fo_pct": 50.85
   },
   {
     "league": "DEL",
@@ -2686,9 +2709,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 8,
-    "fo_won": 7,
-    "fo_lost": 3,
-    "fo_pct": 70.0
+    "fo_won": 9,
+    "fo_lost": 5,
+    "fo_pct": 64.29
   },
   {
     "league": "DEL2",
@@ -2709,9 +2732,9 @@
     "pp_goals": 0,
     "sh_goals": 1,
     "pim": 21,
-    "fo_won": 208,
-    "fo_lost": 208,
-    "fo_pct": 50.0
+    "fo_won": 217,
+    "fo_lost": 221,
+    "fo_pct": 49.54
   },
   {
     "league": "DEL2",
@@ -2732,32 +2755,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 39,
-    "fo_won": 49,
-    "fo_lost": 88,
-    "fo_pct": 35.77
-  },
-  {
-    "league": "DEL2",
-    "type": "skater",
-    "team_code": "RVT",
-    "team_name": null,
-    "name_real": "Julian Eichinger",
-    "number": 91,
-    "nation": "nan",
-    "position_raw": "DE",
-    "position_group": "D",
-    "gp": 29,
-    "goals": 2,
-    "assists": 9,
-    "points": 11,
-    "points_per_game": 0.3793103448275862,
-    "plus_minus": 6,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 12,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0
+    "fo_won": 59,
+    "fo_lost": 99,
+    "fo_pct": 37.34
   },
   {
     "league": "DEL2",
@@ -2778,29 +2778,6 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 8,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0
-  },
-  {
-    "league": "DEL2",
-    "type": "skater",
-    "team_code": "EPC",
-    "team_name": null,
-    "name_real": "Mirko Sacher",
-    "number": 21,
-    "nation": "nan",
-    "position_raw": "DE",
-    "position_group": "D",
-    "gp": 30,
-    "goals": 2,
-    "assists": 9,
-    "points": 11,
-    "points_per_game": 0.36666666666666664,
-    "plus_minus": 21,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 12,
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0
@@ -2916,9 +2893,9 @@
     "pp_goals": 1,
     "sh_goals": 0,
     "pim": 16,
-    "fo_won": 182,
-    "fo_lost": 208,
-    "fo_pct": 46.67
+    "fo_won": 187,
+    "fo_lost": 214,
+    "fo_pct": 46.63
   },
   {
     "league": "DEL2",
@@ -2962,9 +2939,9 @@
     "pp_goals": 1,
     "sh_goals": 0,
     "pim": 8,
-    "fo_won": 154,
-    "fo_lost": 138,
-    "fo_pct": 52.74
+    "fo_won": 159,
+    "fo_lost": 142,
+    "fo_pct": 52.82
   },
   {
     "league": "DEL2",
@@ -3078,8 +3055,8 @@
     "sh_goals": 0,
     "pim": 41,
     "fo_won": 64,
-    "fo_lost": 88,
-    "fo_pct": 42.11
+    "fo_lost": 89,
+    "fo_pct": 41.83
   },
   {
     "league": "DEL",
@@ -3123,6 +3100,29 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 20,
+    "fo_won": 0,
+    "fo_lost": 0,
+    "fo_pct": 0.0
+  },
+  {
+    "league": "DEL2",
+    "type": "skater",
+    "team_code": "RVT",
+    "team_name": null,
+    "name_real": "Julian Eichinger",
+    "number": 91,
+    "nation": "nan",
+    "position_raw": "DE",
+    "position_group": "D",
+    "gp": 29,
+    "goals": 1,
+    "assists": 9,
+    "points": 10,
+    "points_per_game": 0.3448275862068966,
+    "plus_minus": 6,
+    "pp_goals": 0,
+    "sh_goals": 0,
+    "pim": 12,
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0
@@ -3376,9 +3376,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 4,
-    "fo_won": 47,
-    "fo_lost": 71,
-    "fo_pct": 39.83
+    "fo_won": 49,
+    "fo_lost": 72,
+    "fo_pct": 40.5
   },
   {
     "league": "DEL2",
@@ -3468,9 +3468,9 @@
     "pp_goals": 3,
     "sh_goals": 0,
     "pim": 28,
-    "fo_won": 11,
-    "fo_lost": 18,
-    "fo_pct": 37.93
+    "fo_won": 13,
+    "fo_lost": 23,
+    "fo_pct": 36.11
   },
   {
     "league": "DEL2",
@@ -3675,9 +3675,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 22,
-    "fo_won": 3,
-    "fo_lost": 1,
-    "fo_pct": 75.0
+    "fo_won": 7,
+    "fo_lost": 5,
+    "fo_pct": 58.33
   },
   {
     "league": "DEL2",
@@ -3721,9 +3721,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 8,
-    "fo_won": 134,
-    "fo_lost": 201,
-    "fo_pct": 40.0
+    "fo_won": 138,
+    "fo_lost": 211,
+    "fo_pct": 39.54
   },
   {
     "league": "DEL2",
@@ -3809,7 +3809,7 @@
     "assists": 8,
     "points": 8,
     "points_per_game": 0.27586206896551724,
-    "plus_minus": 0,
+    "plus_minus": -1,
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 20,
@@ -3859,9 +3859,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 8,
-    "fo_won": 190,
-    "fo_lost": 172,
-    "fo_pct": 52.49
+    "fo_won": 197,
+    "fo_lost": 183,
+    "fo_pct": 51.84
   },
   {
     "league": "DEL2",
@@ -3924,13 +3924,13 @@
     "assists": 4,
     "points": 7,
     "points_per_game": 0.25,
-    "plus_minus": -2,
+    "plus_minus": -1,
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 12,
     "fo_won": 3,
-    "fo_lost": 3,
-    "fo_pct": 50.0
+    "fo_lost": 5,
+    "fo_pct": 37.5
   },
   {
     "league": "DEL2",
@@ -4066,9 +4066,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 4,
-    "fo_won": 133,
-    "fo_lost": 162,
-    "fo_pct": 45.08
+    "fo_won": 136,
+    "fo_lost": 173,
+    "fo_pct": 44.01
   },
   {
     "league": "DEL2",
@@ -4112,9 +4112,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 0,
-    "fo_won": 135,
-    "fo_lost": 113,
-    "fo_pct": 54.44
+    "fo_won": 138,
+    "fo_lost": 115,
+    "fo_pct": 54.55
   },
   {
     "league": "DEL2",
@@ -4434,9 +4434,9 @@
     "pp_goals": 1,
     "sh_goals": 0,
     "pim": 2,
-    "fo_won": 52,
-    "fo_lost": 56,
-    "fo_pct": 48.15
+    "fo_won": 53,
+    "fo_lost": 60,
+    "fo_pct": 46.9
   },
   {
     "league": "DEL2",
@@ -4618,9 +4618,9 @@
     "pp_goals": 1,
     "sh_goals": 0,
     "pim": 16,
-    "fo_won": 161,
-    "fo_lost": 143,
-    "fo_pct": 52.96
+    "fo_won": 170,
+    "fo_lost": 147,
+    "fo_pct": 53.63
   },
   {
     "league": "DEL2",
@@ -4664,9 +4664,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 0,
-    "fo_won": 4,
-    "fo_lost": 5,
-    "fo_pct": 44.44
+    "fo_won": 6,
+    "fo_lost": 6,
+    "fo_pct": 50.0
   },
   {
     "league": "DEL2",
@@ -4802,9 +4802,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 4,
-    "fo_won": 132,
-    "fo_lost": 124,
-    "fo_pct": 51.56
+    "fo_won": 141,
+    "fo_lost": 135,
+    "fo_pct": 51.09
   },
   {
     "league": "DEL2",
@@ -5170,9 +5170,9 @@
     "pp_goals": 0,
     "sh_goals": 1,
     "pim": 15,
-    "fo_won": 89,
-    "fo_lost": 145,
-    "fo_pct": 38.03
+    "fo_won": 91,
+    "fo_lost": 151,
+    "fo_pct": 37.6
   },
   {
     "league": "DEL2",
@@ -5258,13 +5258,13 @@
     "assists": 3,
     "points": 4,
     "points_per_game": 0.17391304347826086,
-    "plus_minus": 1,
+    "plus_minus": 0,
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 15,
     "fo_won": 27,
-    "fo_lost": 46,
-    "fo_pct": 36.99
+    "fo_lost": 47,
+    "fo_pct": 36.49
   },
   {
     "league": "DEL2",
@@ -5304,7 +5304,7 @@
     "assists": 3,
     "points": 4,
     "points_per_game": 0.14285714285714285,
-    "plus_minus": 0,
+    "plus_minus": 1,
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 13,
@@ -5614,6 +5614,29 @@
   {
     "league": "DEL2",
     "type": "skater",
+    "team_code": "LFX",
+    "team_name": null,
+    "name_real": "Markus Freis",
+    "number": 95,
+    "nation": "nan",
+    "position_raw": "DE",
+    "position_group": "D",
+    "gp": 21,
+    "goals": 1,
+    "assists": 2,
+    "points": 3,
+    "points_per_game": 0.14285714285714285,
+    "plus_minus": 4,
+    "pp_goals": 0,
+    "sh_goals": 0,
+    "pim": 22,
+    "fo_won": 0,
+    "fo_lost": 0,
+    "fo_pct": 0.0
+  },
+  {
+    "league": "DEL2",
+    "type": "skater",
     "team_code": "EPC",
     "team_name": null,
     "name_real": "Felix Thomas",
@@ -5654,8 +5677,8 @@
     "sh_goals": 0,
     "pim": 2,
     "fo_won": 18,
-    "fo_lost": 17,
-    "fo_pct": 51.43
+    "fo_lost": 18,
+    "fo_pct": 50.0
   },
   {
     "league": "DEL2",
@@ -5929,9 +5952,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 4,
-    "fo_won": 28,
-    "fo_lost": 23,
-    "fo_pct": 54.9
+    "fo_won": 41,
+    "fo_lost": 30,
+    "fo_pct": 57.75
   },
   {
     "league": "DEL2",
@@ -6067,29 +6090,6 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 6,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0
-  },
-  {
-    "league": "DEL2",
-    "type": "skater",
-    "team_code": "LFX",
-    "team_name": null,
-    "name_real": "Markus Freis",
-    "number": 95,
-    "nation": "nan",
-    "position_raw": "DE",
-    "position_group": "D",
-    "gp": 21,
-    "goals": 1,
-    "assists": 1,
-    "points": 2,
-    "points_per_game": 0.09523809523809523,
-    "plus_minus": 4,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 22,
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0
@@ -6251,9 +6251,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 0,
-    "fo_won": 5,
-    "fo_lost": 6,
-    "fo_pct": 45.45
+    "fo_won": 9,
+    "fo_lost": 10,
+    "fo_pct": 47.37
   },
   {
     "league": "DEL",
@@ -6297,9 +6297,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 0,
-    "fo_won": 32,
-    "fo_lost": 32,
-    "fo_pct": 50.0
+    "fo_won": 43,
+    "fo_lost": 40,
+    "fo_pct": 51.81
   },
   {
     "league": "DEL2",
@@ -6346,29 +6346,6 @@
     "fo_won": 2,
     "fo_lost": 3,
     "fo_pct": 40.0
-  },
-  {
-    "league": "DEL2",
-    "type": "skater",
-    "team_code": "FRB",
-    "team_name": null,
-    "name_real": "Colin Schlenker",
-    "number": 8,
-    "nation": "nan",
-    "position_raw": "DE (U21)",
-    "position_group": "D",
-    "gp": 9,
-    "goals": 0,
-    "assists": 2,
-    "points": 2,
-    "points_per_game": 0.2222222222222222,
-    "plus_minus": 0,
-    "pp_goals": 0,
-    "sh_goals": 0,
-    "pim": 2,
-    "fo_won": 0,
-    "fo_lost": 0,
-    "fo_pct": 0.0
   },
   {
     "league": "DEL2",
@@ -6523,7 +6500,7 @@
     "assists": 2,
     "points": 2,
     "points_per_game": 0.07407407407407407,
-    "plus_minus": -7,
+    "plus_minus": -6,
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 6,
@@ -6596,9 +6573,9 @@
     "pp_goals": 1,
     "sh_goals": 0,
     "pim": 9,
-    "fo_won": 18,
-    "fo_lost": 8,
-    "fo_pct": 69.23
+    "fo_won": 28,
+    "fo_lost": 17,
+    "fo_pct": 62.22
   },
   {
     "league": "DEL",
@@ -6665,9 +6642,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 10,
-    "fo_won": 62,
-    "fo_lost": 79,
-    "fo_pct": 43.97
+    "fo_won": 65,
+    "fo_lost": 80,
+    "fo_pct": 44.83
   },
   {
     "league": "DEL2",
@@ -6872,6 +6849,29 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 0,
+    "fo_won": 0,
+    "fo_lost": 0,
+    "fo_pct": 0.0
+  },
+  {
+    "league": "DEL2",
+    "type": "skater",
+    "team_code": "FRB",
+    "team_name": null,
+    "name_real": "Colin Schlenker",
+    "number": 8,
+    "nation": "nan",
+    "position_raw": "DE (U21)",
+    "position_group": "D",
+    "gp": 9,
+    "goals": 0,
+    "assists": 1,
+    "points": 1,
+    "points_per_game": 0.1111111111111111,
+    "plus_minus": 0,
+    "pp_goals": 0,
+    "sh_goals": 0,
+    "pim": 2,
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0
@@ -7535,7 +7535,7 @@
     "assists": 0,
     "points": 0,
     "points_per_game": 0.0,
-    "plus_minus": -2,
+    "plus_minus": -1,
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 0,
@@ -7608,9 +7608,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 6,
-    "fo_won": 5,
+    "fo_won": 6,
     "fo_lost": 3,
-    "fo_pct": 62.5
+    "fo_pct": 66.67
   },
   {
     "league": "DEL2",
@@ -7953,8 +7953,8 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 4,
-    "fo_won": 29,
-    "fo_lost": 58,
+    "fo_won": 30,
+    "fo_lost": 60,
     "fo_pct": 33.33
   },
   {
@@ -8230,8 +8230,8 @@
     "sh_goals": 0,
     "pim": 8,
     "fo_won": 2,
-    "fo_lost": 2,
-    "fo_pct": 50.0
+    "fo_lost": 3,
+    "fo_pct": 40.0
   },
   {
     "league": "DEL2",
@@ -8570,9 +8570,9 @@
     "shutouts": 3,
     "goals_against": 62,
     "gaa": 2.54,
-    "shots_against": 775,
-    "saves": 713,
-    "sv_pct": 92.0
+    "shots_against": 776,
+    "saves": 714,
+    "sv_pct": 92.01
   },
   {
     "league": "DEL2",
@@ -8591,9 +8591,9 @@
     "shutouts": 1,
     "goals_against": 72,
     "gaa": 2.97,
-    "shots_against": 824,
-    "saves": 752,
-    "sv_pct": 91.26
+    "shots_against": 826,
+    "saves": 754,
+    "sv_pct": 91.28
   },
   {
     "league": "DEL2",
@@ -8612,9 +8612,9 @@
     "shutouts": 3,
     "goals_against": 59,
     "gaa": 2.49,
-    "shots_against": 751,
-    "saves": 692,
-    "sv_pct": 92.14
+    "shots_against": 752,
+    "saves": 693,
+    "sv_pct": 92.15
   },
   {
     "league": "DEL2",
@@ -8633,9 +8633,9 @@
     "shutouts": 3,
     "goals_against": 52,
     "gaa": 2.32,
-    "shots_against": 682,
-    "saves": 630,
-    "sv_pct": 92.38
+    "shots_against": 676,
+    "saves": 624,
+    "sv_pct": 92.31
   },
   {
     "league": "DEL2",
@@ -8654,9 +8654,9 @@
     "shutouts": 1,
     "goals_against": 59,
     "gaa": 2.66,
-    "shots_against": 630,
-    "saves": 571,
-    "sv_pct": 90.63
+    "shots_against": 628,
+    "saves": 569,
+    "sv_pct": 90.61
   },
   {
     "league": "DEL2",
@@ -8675,9 +8675,9 @@
     "shutouts": 2,
     "goals_against": 55,
     "gaa": 2.48,
-    "shots_against": 604,
-    "saves": 549,
-    "sv_pct": 90.89
+    "shots_against": 605,
+    "saves": 550,
+    "sv_pct": 90.91
   },
   {
     "league": "DEL2",
@@ -8696,9 +8696,9 @@
     "shutouts": 2,
     "goals_against": 52,
     "gaa": 2.4,
-    "shots_against": 570,
-    "saves": 518,
-    "sv_pct": 90.88
+    "shots_against": 572,
+    "saves": 520,
+    "sv_pct": 90.91
   },
   {
     "league": "DEL2",
@@ -8780,9 +8780,9 @@
     "shutouts": 2,
     "goals_against": 43,
     "gaa": 2.52,
-    "shots_against": 486,
-    "saves": 443,
-    "sv_pct": 91.15
+    "shots_against": 487,
+    "saves": 444,
+    "sv_pct": 91.17
   },
   {
     "league": "DEL2",
@@ -8801,9 +8801,9 @@
     "shutouts": 0,
     "goals_against": 40,
     "gaa": 2.62,
-    "shots_against": 479,
-    "saves": 439,
-    "sv_pct": 91.65
+    "shots_against": 483,
+    "saves": 443,
+    "sv_pct": 91.72
   },
   {
     "league": "DEL2",
@@ -8822,9 +8822,9 @@
     "shutouts": 0,
     "goals_against": 39,
     "gaa": 2.75,
-    "shots_against": 462,
-    "saves": 423,
-    "sv_pct": 91.56
+    "shots_against": 463,
+    "saves": 424,
+    "sv_pct": 91.58
   },
   {
     "league": "DEL2",
@@ -8885,9 +8885,9 @@
     "shutouts": 0,
     "goals_against": 30,
     "gaa": 3.19,
-    "shots_against": 280,
-    "saves": 250,
-    "sv_pct": 89.29
+    "shots_against": 277,
+    "saves": 247,
+    "sv_pct": 89.17
   },
   {
     "league": "DEL2",
@@ -8906,9 +8906,9 @@
     "shutouts": 1,
     "goals_against": 32,
     "gaa": 3.74,
-    "shots_against": 285,
-    "saves": 253,
-    "sv_pct": 88.77
+    "shots_against": 283,
+    "saves": 251,
+    "sv_pct": 88.69
   },
   {
     "league": "DEL2",
@@ -9116,9 +9116,9 @@
     "shutouts": 1,
     "goals_against": 11,
     "gaa": 2.21,
-    "shots_against": 137,
-    "saves": 126,
-    "sv_pct": 91.97
+    "shots_against": 134,
+    "saves": 123,
+    "sv_pct": 91.79
   },
   {
     "league": "DEL2",
@@ -9221,8 +9221,8 @@
     "shutouts": 1,
     "goals_against": 0,
     "gaa": 0.0,
-    "shots_against": 31,
-    "saves": 31,
+    "shots_against": 27,
+    "saves": 27,
     "sv_pct": 100.0
   },
   {
@@ -9870,8 +9870,8 @@
     "sh_goals": 0,
     "pim": 2,
     "fo_won": 1,
-    "fo_lost": 0,
-    "fo_pct": 100.0
+    "fo_lost": 3,
+    "fo_pct": 25.0
   },
   {
     "league": "DEL",
@@ -9892,9 +9892,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 10,
-    "fo_won": 58,
-    "fo_lost": 79,
-    "fo_pct": 42.34
+    "fo_won": 63,
+    "fo_lost": 81,
+    "fo_pct": 43.75
   },
   {
     "league": "DEL",
@@ -10007,9 +10007,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 16,
-    "fo_won": 99,
-    "fo_lost": 117,
-    "fo_pct": 45.83
+    "fo_won": 103,
+    "fo_lost": 120,
+    "fo_pct": 46.19
   },
   {
     "league": "DEL",
@@ -10076,9 +10076,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 10,
-    "fo_won": 222,
-    "fo_lost": 228,
-    "fo_pct": 49.33
+    "fo_won": 231,
+    "fo_lost": 233,
+    "fo_pct": 49.78
   },
   {
     "league": "DEL",
@@ -10145,9 +10145,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 39,
-    "fo_won": 283,
-    "fo_lost": 266,
-    "fo_pct": 51.55
+    "fo_won": 291,
+    "fo_lost": 273,
+    "fo_pct": 51.6
   },
   {
     "league": "DEL",
@@ -10214,9 +10214,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 14,
-    "fo_won": 283,
-    "fo_lost": 265,
-    "fo_pct": 51.64
+    "fo_won": 286,
+    "fo_lost": 270,
+    "fo_pct": 51.44
   },
   {
     "league": "DEL",
@@ -10375,9 +10375,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 22,
-    "fo_won": 434,
-    "fo_lost": 310,
-    "fo_pct": 58.33
+    "fo_won": 445,
+    "fo_lost": 319,
+    "fo_pct": 58.25
   },
   {
     "league": "DEL",
@@ -10421,9 +10421,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 32,
-    "fo_won": 222,
-    "fo_lost": 219,
-    "fo_pct": 50.34
+    "fo_won": 234,
+    "fo_lost": 227,
+    "fo_pct": 50.76
   },
   {
     "league": "DEL",
@@ -10513,9 +10513,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 22,
-    "fo_won": 309,
-    "fo_lost": 218,
-    "fo_pct": 58.63
+    "fo_won": 317,
+    "fo_lost": 230,
+    "fo_pct": 57.95
   },
   {
     "league": "DEL",
@@ -10582,9 +10582,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 6,
-    "fo_won": 382,
-    "fo_lost": 308,
-    "fo_pct": 55.36
+    "fo_won": 388,
+    "fo_lost": 316,
+    "fo_pct": 55.11
   },
   {
     "league": "DEL",
@@ -10605,9 +10605,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 10,
-    "fo_won": 212,
-    "fo_lost": 182,
-    "fo_pct": 53.81
+    "fo_won": 216,
+    "fo_lost": 184,
+    "fo_pct": 54.0
   },
   {
     "league": "DEL",
@@ -10651,9 +10651,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 31,
-    "fo_won": 167,
-    "fo_lost": 184,
-    "fo_pct": 47.58
+    "fo_won": 173,
+    "fo_lost": 188,
+    "fo_pct": 47.92
   },
   {
     "league": "DEL",
@@ -10697,9 +10697,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 16,
-    "fo_won": 168,
-    "fo_lost": 111,
-    "fo_pct": 60.22
+    "fo_won": 173,
+    "fo_lost": 116,
+    "fo_pct": 59.86
   },
   {
     "league": "DEL",
@@ -10743,9 +10743,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 2,
-    "fo_won": 267,
-    "fo_lost": 275,
-    "fo_pct": 49.26
+    "fo_won": 284,
+    "fo_lost": 287,
+    "fo_pct": 49.74
   },
   {
     "league": "DEL",
@@ -10835,9 +10835,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 12,
-    "fo_won": 184,
-    "fo_lost": 196,
-    "fo_pct": 48.42
+    "fo_won": 189,
+    "fo_lost": 198,
+    "fo_pct": 48.84
   },
   {
     "league": "DEL",
@@ -10881,9 +10881,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 33,
-    "fo_won": 161,
-    "fo_lost": 121,
-    "fo_pct": 57.09
+    "fo_won": 167,
+    "fo_lost": 126,
+    "fo_pct": 57.0
   },
   {
     "league": "DEL",
@@ -10904,9 +10904,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 10,
-    "fo_won": 220,
-    "fo_lost": 168,
-    "fo_pct": 56.7
+    "fo_won": 225,
+    "fo_lost": 172,
+    "fo_pct": 56.68
   },
   {
     "league": "DEL",
@@ -10996,9 +10996,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 39,
-    "fo_won": 200,
-    "fo_lost": 164,
-    "fo_pct": 54.95
+    "fo_won": 207,
+    "fo_lost": 173,
+    "fo_pct": 54.47
   },
   {
     "league": "DEL",
@@ -11088,9 +11088,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 8,
-    "fo_won": 295,
+    "fo_won": 298,
     "fo_lost": 225,
-    "fo_pct": 56.73
+    "fo_pct": 56.98
   },
   {
     "league": "DEL",
@@ -11111,9 +11111,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 6,
-    "fo_won": 244,
-    "fo_lost": 167,
-    "fo_pct": 59.37
+    "fo_won": 254,
+    "fo_lost": 172,
+    "fo_pct": 59.62
   },
   {
     "league": "DEL",
@@ -11134,9 +11134,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 2,
-    "fo_won": 61,
-    "fo_lost": 101,
-    "fo_pct": 37.65
+    "fo_won": 66,
+    "fo_lost": 108,
+    "fo_pct": 37.93
   },
   {
     "league": "DEL",
@@ -11180,9 +11180,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 6,
-    "fo_won": 94,
-    "fo_lost": 86,
-    "fo_pct": 52.22
+    "fo_won": 99,
+    "fo_lost": 89,
+    "fo_pct": 52.66
   },
   {
     "league": "DEL",
@@ -11203,9 +11203,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 12,
-    "fo_won": 289,
-    "fo_lost": 250,
-    "fo_pct": 53.62
+    "fo_won": 298,
+    "fo_lost": 259,
+    "fo_pct": 53.5
   },
   {
     "league": "DEL",
@@ -11249,9 +11249,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 9,
-    "fo_won": 280,
-    "fo_lost": 206,
-    "fo_pct": 57.61
+    "fo_won": 288,
+    "fo_lost": 210,
+    "fo_pct": 57.83
   },
   {
     "league": "DEL",
@@ -11272,9 +11272,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 18,
-    "fo_won": 134,
-    "fo_lost": 136,
-    "fo_pct": 49.63
+    "fo_won": 140,
+    "fo_lost": 144,
+    "fo_pct": 49.3
   },
   {
     "league": "DEL",
@@ -11318,9 +11318,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 6,
-    "fo_won": 286,
-    "fo_lost": 274,
-    "fo_pct": 51.07
+    "fo_won": 297,
+    "fo_lost": 280,
+    "fo_pct": 51.47
   },
   {
     "league": "DEL",
@@ -11364,9 +11364,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 21,
-    "fo_won": 115,
-    "fo_lost": 108,
-    "fo_pct": 51.57
+    "fo_won": 117,
+    "fo_lost": 114,
+    "fo_pct": 50.65
   },
   {
     "league": "DEL",
@@ -11434,8 +11434,8 @@
     "sh_goals": 0,
     "pim": 12,
     "fo_won": 43,
-    "fo_lost": 41,
-    "fo_pct": 51.19
+    "fo_lost": 42,
+    "fo_pct": 50.59
   },
   {
     "league": "DEL",
@@ -11456,9 +11456,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 31,
-    "fo_won": 256,
-    "fo_lost": 234,
-    "fo_pct": 52.24
+    "fo_won": 263,
+    "fo_lost": 247,
+    "fo_pct": 51.57
   },
   {
     "league": "DEL",
@@ -11479,9 +11479,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 20,
-    "fo_won": 198,
-    "fo_lost": 147,
-    "fo_pct": 57.39
+    "fo_won": 203,
+    "fo_lost": 152,
+    "fo_pct": 57.18
   },
   {
     "league": "DEL",
@@ -11525,9 +11525,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 6,
-    "fo_won": 6,
+    "fo_won": 7,
     "fo_lost": 8,
-    "fo_pct": 42.86
+    "fo_pct": 46.67
   },
   {
     "league": "DEL",
@@ -11548,9 +11548,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 53,
-    "fo_won": 76,
-    "fo_lost": 51,
-    "fo_pct": 59.84
+    "fo_won": 82,
+    "fo_lost": 58,
+    "fo_pct": 58.57
   },
   {
     "league": "DEL",
@@ -11572,8 +11572,8 @@
     "sh_goals": 0,
     "pim": 46,
     "fo_won": 163,
-    "fo_lost": 102,
-    "fo_pct": 61.51
+    "fo_lost": 105,
+    "fo_pct": 60.82
   },
   {
     "league": "DEL",
@@ -11640,9 +11640,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 10,
-    "fo_won": 136,
-    "fo_lost": 215,
-    "fo_pct": 38.75
+    "fo_won": 140,
+    "fo_lost": 227,
+    "fo_pct": 38.15
   },
   {
     "league": "DEL",
@@ -11663,9 +11663,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 25,
-    "fo_won": 234,
-    "fo_lost": 271,
-    "fo_pct": 46.34
+    "fo_won": 246,
+    "fo_lost": 276,
+    "fo_pct": 47.13
   },
   {
     "league": "DEL",
@@ -11686,9 +11686,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 34,
-    "fo_won": 26,
+    "fo_won": 29,
     "fo_lost": 23,
-    "fo_pct": 53.06
+    "fo_pct": 55.77
   },
   {
     "league": "DEL",
@@ -11755,9 +11755,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 6,
-    "fo_won": 240,
-    "fo_lost": 280,
-    "fo_pct": 46.15
+    "fo_won": 247,
+    "fo_lost": 295,
+    "fo_pct": 45.57
   },
   {
     "league": "DEL",
@@ -11778,9 +11778,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 10,
-    "fo_won": 82,
-    "fo_lost": 74,
-    "fo_pct": 52.56
+    "fo_won": 95,
+    "fo_lost": 83,
+    "fo_pct": 53.37
   },
   {
     "league": "DEL",
@@ -11940,7 +11940,7 @@
     "sh_goals": 0,
     "pim": 4,
     "fo_won": 0,
-    "fo_lost": 1,
+    "fo_lost": 3,
     "fo_pct": 0.0
   },
   {
@@ -11962,9 +11962,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 10,
-    "fo_won": 13,
-    "fo_lost": 17,
-    "fo_pct": 43.33
+    "fo_won": 20,
+    "fo_lost": 24,
+    "fo_pct": 45.45
   },
   {
     "league": "DEL",
@@ -12123,9 +12123,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 6,
-    "fo_won": 135,
-    "fo_lost": 155,
-    "fo_pct": 46.55
+    "fo_won": 141,
+    "fo_lost": 159,
+    "fo_pct": 47.0
   },
   {
     "league": "DEL",
@@ -12169,9 +12169,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 16,
-    "fo_won": 6,
-    "fo_lost": 16,
-    "fo_pct": 27.27
+    "fo_won": 9,
+    "fo_lost": 20,
+    "fo_pct": 31.03
   },
   {
     "league": "DEL",
@@ -12376,9 +12376,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 35,
-    "fo_won": 168,
-    "fo_lost": 178,
-    "fo_pct": 48.55
+    "fo_won": 179,
+    "fo_lost": 188,
+    "fo_pct": 48.77
   },
   {
     "league": "DEL",
@@ -12491,9 +12491,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 21,
-    "fo_won": 8,
+    "fo_won": 10,
     "fo_lost": 3,
-    "fo_pct": 72.73
+    "fo_pct": 76.92
   },
   {
     "league": "DEL",
@@ -12514,9 +12514,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 23,
-    "fo_won": 190,
-    "fo_lost": 201,
-    "fo_pct": 48.59
+    "fo_won": 199,
+    "fo_lost": 208,
+    "fo_pct": 48.89
   },
   {
     "league": "DEL",
@@ -12537,9 +12537,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 8,
-    "fo_won": 200,
-    "fo_lost": 199,
-    "fo_pct": 50.13
+    "fo_won": 206,
+    "fo_lost": 202,
+    "fo_pct": 50.49
   },
   {
     "league": "DEL",
@@ -12606,9 +12606,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 14,
-    "fo_won": 118,
-    "fo_lost": 117,
-    "fo_pct": 50.21
+    "fo_won": 119,
+    "fo_lost": 122,
+    "fo_pct": 49.38
   },
   {
     "league": "DEL",
@@ -12744,9 +12744,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 8,
-    "fo_won": 116,
-    "fo_lost": 113,
-    "fo_pct": 50.66
+    "fo_won": 119,
+    "fo_lost": 115,
+    "fo_pct": 50.85
   },
   {
     "league": "DEL",
@@ -12928,9 +12928,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 8,
-    "fo_won": 40,
-    "fo_lost": 54,
-    "fo_pct": 42.55
+    "fo_won": 42,
+    "fo_lost": 59,
+    "fo_pct": 41.58
   },
   {
     "league": "DEL",
@@ -12951,9 +12951,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 24,
-    "fo_won": 281,
-    "fo_lost": 260,
-    "fo_pct": 51.94
+    "fo_won": 289,
+    "fo_lost": 270,
+    "fo_pct": 51.7
   },
   {
     "league": "DEL",
@@ -13112,9 +13112,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 13,
-    "fo_won": 255,
-    "fo_lost": 154,
-    "fo_pct": 62.35
+    "fo_won": 266,
+    "fo_lost": 162,
+    "fo_pct": 62.15
   },
   {
     "league": "DEL",
@@ -13296,9 +13296,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 8,
-    "fo_won": 215,
-    "fo_lost": 279,
-    "fo_pct": 43.52
+    "fo_won": 226,
+    "fo_lost": 297,
+    "fo_pct": 43.21
   },
   {
     "league": "DEL",
@@ -13365,9 +13365,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 18,
-    "fo_won": 197,
-    "fo_lost": 168,
-    "fo_pct": 53.97
+    "fo_won": 201,
+    "fo_lost": 170,
+    "fo_pct": 54.18
   },
   {
     "league": "DEL",
@@ -13388,9 +13388,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 10,
-    "fo_won": 147,
-    "fo_lost": 125,
-    "fo_pct": 54.04
+    "fo_won": 155,
+    "fo_lost": 132,
+    "fo_pct": 54.01
   },
   {
     "league": "DEL",
@@ -13480,9 +13480,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 6,
-    "fo_won": 121,
-    "fo_lost": 172,
-    "fo_pct": 41.3
+    "fo_won": 124,
+    "fo_lost": 176,
+    "fo_pct": 41.33
   },
   {
     "league": "DEL",
@@ -13504,8 +13504,8 @@
     "sh_goals": 0,
     "pim": 21,
     "fo_won": 19,
-    "fo_lost": 17,
-    "fo_pct": 52.78
+    "fo_lost": 18,
+    "fo_pct": 51.35
   },
   {
     "league": "DEL",
@@ -13572,9 +13572,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 8,
-    "fo_won": 71,
-    "fo_lost": 107,
-    "fo_pct": 39.89
+    "fo_won": 73,
+    "fo_lost": 112,
+    "fo_pct": 39.46
   },
   {
     "league": "DEL",
@@ -13618,9 +13618,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 2,
-    "fo_won": 143,
-    "fo_lost": 150,
-    "fo_pct": 48.81
+    "fo_won": 151,
+    "fo_lost": 159,
+    "fo_pct": 48.71
   },
   {
     "league": "DEL",
@@ -13802,9 +13802,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 6,
-    "fo_won": 138,
-    "fo_lost": 182,
-    "fo_pct": 43.13
+    "fo_won": 144,
+    "fo_lost": 191,
+    "fo_pct": 42.99
   },
   {
     "league": "DEL",
@@ -14170,9 +14170,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 4,
-    "fo_won": 15,
-    "fo_lost": 22,
-    "fo_pct": 40.54
+    "fo_won": 16,
+    "fo_lost": 23,
+    "fo_pct": 41.03
   },
   {
     "league": "DEL",
@@ -14400,9 +14400,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 4,
-    "fo_won": 69,
-    "fo_lost": 90,
-    "fo_pct": 43.4
+    "fo_won": 73,
+    "fo_lost": 95,
+    "fo_pct": 43.45
   },
   {
     "league": "DEL",
@@ -14492,9 +14492,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 6,
-    "fo_won": 38,
+    "fo_won": 39,
     "fo_lost": 57,
-    "fo_pct": 40.0
+    "fo_pct": 40.63
   },
   {
     "league": "DEL",
@@ -14699,9 +14699,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 4,
-    "fo_won": 124,
-    "fo_lost": 142,
-    "fo_pct": 46.62
+    "fo_won": 129,
+    "fo_lost": 148,
+    "fo_pct": 46.57
   },
   {
     "league": "DEL",
@@ -14722,9 +14722,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 12,
-    "fo_won": 12,
+    "fo_won": 14,
     "fo_lost": 23,
-    "fo_pct": 34.29
+    "fo_pct": 37.84
   },
   {
     "league": "DEL",
@@ -14814,9 +14814,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 4,
-    "fo_won": 27,
-    "fo_lost": 43,
-    "fo_pct": 38.57
+    "fo_won": 28,
+    "fo_lost": 49,
+    "fo_pct": 36.36
   },
   {
     "league": "DEL",
@@ -14906,9 +14906,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 6,
-    "fo_won": 61,
-    "fo_lost": 57,
-    "fo_pct": 51.69
+    "fo_won": 65,
+    "fo_lost": 63,
+    "fo_pct": 50.78
   },
   {
     "league": "DEL",
@@ -15090,9 +15090,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 0,
-    "fo_won": 26,
-    "fo_lost": 35,
-    "fo_pct": 42.62
+    "fo_won": 33,
+    "fo_lost": 43,
+    "fo_pct": 43.42
   },
   {
     "league": "DEL",
@@ -15136,9 +15136,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 6,
-    "fo_won": 20,
-    "fo_lost": 17,
-    "fo_pct": 54.05
+    "fo_won": 23,
+    "fo_lost": 24,
+    "fo_pct": 48.94
   },
   {
     "league": "DEL",
@@ -15205,9 +15205,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 2,
-    "fo_won": 18,
-    "fo_lost": 18,
-    "fo_pct": 50.0
+    "fo_won": 25,
+    "fo_lost": 21,
+    "fo_pct": 54.35
   },
   {
     "league": "DEL",
@@ -15251,9 +15251,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 17,
-    "fo_won": 47,
-    "fo_lost": 72,
-    "fo_pct": 39.5
+    "fo_won": 52,
+    "fo_lost": 76,
+    "fo_pct": 40.63
   },
   {
     "league": "DEL",
@@ -15804,8 +15804,8 @@
     "sh_goals": 0,
     "pim": 2,
     "fo_won": 85,
-    "fo_lost": 109,
-    "fo_pct": 43.81
+    "fo_lost": 112,
+    "fo_pct": 43.15
   },
   {
     "league": "DEL",
@@ -15941,9 +15941,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 4,
-    "fo_won": 33,
-    "fo_lost": 58,
-    "fo_pct": 36.26
+    "fo_won": 36,
+    "fo_lost": 60,
+    "fo_pct": 37.5
   },
   {
     "league": "DEL",
@@ -16217,9 +16217,9 @@
     "pp_goals": 0,
     "sh_goals": 0,
     "pim": 2,
-    "fo_won": 3,
+    "fo_won": 4,
     "fo_lost": 1,
-    "fo_pct": 75.0
+    "fo_pct": 80.0
   },
   {
     "league": "DEL",
