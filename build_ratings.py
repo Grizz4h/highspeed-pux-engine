@@ -19,6 +19,7 @@ Output:
 from __future__ import annotations
 
 import json
+import logging
 import math
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
@@ -27,6 +28,14 @@ from typing import Any, Dict, List, Optional, Tuple
 DATA_DIR = Path("data")
 BASELINE_FILE = DATA_DIR / "all_players_baseline.json"
 OUT_FILE = DATA_DIR / "players_rated.json"
+
+# Logging setup
+logging.basicConfig(
+    filename='rating_calculation.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
 
 
 # ----------------- Helfer -----------------
@@ -131,6 +140,7 @@ def build_skater_ratings(players: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
 
     # Relevante Rohwerte für Normalisierung sammeln (Ligaweit)
     goals_list = []
+    assists_list = []
     points_list = []
     ppg_list = []
     plusminus_list = []
@@ -141,6 +151,7 @@ def build_skater_ratings(players: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     for p in skaters:
         gp = _to_int(p.get("gp"))
         goals = _to_int(p.get("goals"))
+        assists = _to_int(p.get("assists", 0))  # Fallback, falls nicht direkt
         points = _to_int(p.get("points"))
         ppg = _to_float(p.get("points_per_game"))
 
@@ -157,6 +168,7 @@ def build_skater_ratings(players: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         fo_pct_val = _to_float(fo_pct) if fo_pct is not None else 0.0
 
         goals_list.append(float(goals))
+        assists_list.append(float(assists))
         points_list.append(float(points))
         ppg_list.append(ppg)
         plusminus_list.append(float(plus_m_val))
@@ -166,6 +178,7 @@ def build_skater_ratings(players: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
 
     # Z-Score-Parameter (Ligaweit)
     g_mu, g_sigma = _z_params(goals_list)
+    a_mu, a_sigma = _z_params(assists_list)
     p_mu, p_sigma = _z_params(points_list)
     ppg_mu, ppg_sigma = _z_params(ppg_list)
     pm_mu, pm_sigma = _z_params(plusminus_list)
@@ -175,11 +188,16 @@ def build_skater_ratings(players: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
 
     rated: List[Dict[str, Any]] = []
 
+    logged_forward = False
+    logged_offensive_d = False
+    logged_defensive_d = False
+
     for p in skaters:
         base = dict(p)  # Kopie
 
         gp = _to_int(p.get("gp"))
         goals = _to_int(p.get("goals"))
+        assists = _to_int(p.get("assists", 0))
         points = _to_int(p.get("points"))
         ppg = _to_float(p.get("points_per_game"))
 
@@ -195,8 +213,9 @@ def build_skater_ratings(players: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         pos_group = _pos_group(p) or "F"
 
         # --------- Normierte Komponenten (Z-Score → [0,1]) ---------
-        # Offense: Tore, Punkte, Punkte/Spiel
+        # Offense: Tore, Assists, Punkte, Punkte/Spiel
         g_norm   = _norm_z(float(goals),  g_mu,   g_sigma)
+        a_norm   = _norm_z(float(assists), a_mu,   a_sigma)
         p_norm   = _norm_z(float(points), p_mu,   p_sigma)
         ppg_norm = _norm_z(ppg,           ppg_mu, ppg_sigma)
 
@@ -219,8 +238,8 @@ def build_skater_ratings(players: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
 
         # --------- Gewichtung nach Position ---------
         if pos_group == "D":
-            # Verteidiger: Defense wichtiger, Offense etwas abgeschwächt
-            offense_score = 0.4 * g_norm + 0.6 * ppg_norm
+            # Verteidiger: Defense wichtiger, Offense etwas abgeschwächt, aber Assists belohnen
+            offense_score = 0.25 * g_norm + 0.35 * a_norm + 0.4 * ppg_norm
             defense_score = 0.7 * pm_norm + 0.3 * pimpg_norm
         else:
             # Stürmer
@@ -242,6 +261,33 @@ def build_skater_ratings(players: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         base["rating_speed"]      = _rating(speed_score)
         base["rating_chemistry"]  = _rating(chem_score)
         base["rating_overall"]    = _rating(overall)
+
+        # Log Beispiele für verschiedene Spielertypen
+        name = p.get('name_raw', 'Unknown')
+        if pos_group == "F" and not logged_forward and points > 30:  # Beispiel Stürmer mit vielen Points
+            logged_forward = True
+            logging.info(f"Beispiel Stürmer: {name} (F)")
+            logging.info(f"  Formel Offense: 0.5 * G_norm + 0.3 * P_norm + 0.2 * PPG_norm")
+            logging.info(f"  Rohwerte: Goals={goals}, Assists={assists}, Points={points}, PPG={ppg:.2f}, +/-={plus_m_val}, PIM/G={pimpg:.2f}")
+            logging.info(f"  Normiert (Z-Score 0-1): G={g_norm:.3f}, A={a_norm:.3f}, P={p_norm:.3f}, PPG={ppg_norm:.3f}, PM={pm_norm:.3f}, PIM={pimpg_norm:.3f}")
+            logging.info(f"  Scores (gewichtet): Offense={offense_score:.3f}, Defense={defense_score:.3f}, Speed={speed_score:.3f}, Chem={chem_score:.3f}, Overall={overall:.3f}")
+            logging.info(f"  Ratings (40-99): Off={base['rating_offense']}, Def={base['rating_defense']}, Speed={base['rating_speed']}, Chem={base['rating_chemistry']}, Overall={base['rating_overall']}")
+        elif pos_group == "D" and not logged_offensive_d and assists > 20 and plus_m_val > 10:  # Offensiver D
+            logged_offensive_d = True
+            logging.info(f"Beispiel Offensiver Verteidiger: {name} (D)")
+            logging.info(f"  Formel Offense: 0.25 * G_norm + 0.35 * A_norm + 0.4 * PPG_norm (Assists belohnen!)")
+            logging.info(f"  Rohwerte: Goals={goals}, Assists={assists}, Points={points}, PPG={ppg:.2f}, +/-={plus_m_val}, PIM/G={pimpg:.2f}")
+            logging.info(f"  Normiert (Z-Score 0-1): G={g_norm:.3f}, A={a_norm:.3f}, P={p_norm:.3f}, PPG={ppg_norm:.3f}, PM={pm_norm:.3f}, PIM={pimpg_norm:.3f}")
+            logging.info(f"  Scores (gewichtet): Offense={offense_score:.3f}, Defense={defense_score:.3f}, Speed={speed_score:.3f}, Chem={chem_score:.3f}, Overall={overall:.3f}")
+            logging.info(f"  Ratings (40-99): Off={base['rating_offense']}, Def={base['rating_defense']}, Speed={base['rating_speed']}, Chem={base['rating_chemistry']}, Overall={base['rating_overall']}")
+        elif pos_group == "D" and not logged_defensive_d and plus_m_val > 15 and assists < 10:  # Defensiver D
+            logged_defensive_d = True
+            logging.info(f"Beispiel Defensiver Verteidiger: {name} (D)")
+            logging.info(f"  Formel Defense: 0.7 * PM_norm + 0.3 * PIM_norm (Plus/Minus ist King!)")
+            logging.info(f"  Rohwerte: Goals={goals}, Assists={assists}, Points={points}, PPG={ppg:.2f}, +/-={plus_m_val}, PIM/G={pimpg:.2f}")
+            logging.info(f"  Normiert (Z-Score 0-1): G={g_norm:.3f}, A={a_norm:.3f}, P={p_norm:.3f}, PPG={ppg_norm:.3f}, PM={pm_norm:.3f}, PIM={pimpg_norm:.3f}")
+            logging.info(f"  Scores (gewichtet): Offense={offense_score:.3f}, Defense={defense_score:.3f}, Speed={speed_score:.3f}, Chem={chem_score:.3f}, Overall={overall:.3f}")
+            logging.info(f"  Ratings (40-99): Off={base['rating_offense']}, Def={base['rating_defense']}, Speed={base['rating_speed']}, Chem={base['rating_chemistry']}, Overall={base['rating_overall']}")
 
         rated.append(base)
 
@@ -301,6 +347,8 @@ def build_goalie_ratings(players: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
 
     rated: List[Dict[str, Any]] = []
 
+    goalie_rated: List[Dict[str, Any]] = []
+
     for g in goalies:
         base = dict(g)
 
@@ -349,12 +397,22 @@ def build_goalie_ratings(players: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         base["rating_chemistry"] = _rating(chem_score)
         base["rating_overall"] = _rating(overall)
 
+        # Log Beispiel Goalie
+        if len(goalie_rated) == 0:
+            name = g.get('name_raw', 'Unknown')
+            logging.info(f"Beispiel Goalie: {name} (G)")
+            logging.info(f"  Formel Defense: 0.55 * SV%_norm + 0.35 * GAA_norm + 0.10 * Shots_norm (Save% ist entscheidend!)")
+            logging.info(f"  Rohwerte: GP={gp}, SV%={sv_pct_val:.3f}, GAA={gaa_val:.2f}, Shots={shots_against}, Wins={wins}, SO={shutouts}")
+            logging.info(f"  Normiert (Z-Score 0-1): SV%={sv_norm:.3f}, GAA={gaa_norm:.3f}, Shots={shots_norm:.3f}, GP={gp_norm:.3f}, Min={min_norm:.3f}, Wins={wins_norm:.3f}, SO={so_norm:.3f}")
+            logging.info(f"  Scores (gewichtet): Offense={offense_score:.3f}, Defense={defense_score:.3f}, Speed={speed_score:.3f}, Chem={chem_score:.3f}, Overall={overall:.3f}")
+            logging.info(f"  Ratings (40-99): Off={base['rating_offense']}, Def={base['rating_defense']}, Speed={base['rating_speed']}, Chem={base['rating_chemistry']}, Overall={base['rating_overall']}")
+
         # Wichtig: Fangquote sauber in players_rated.json hinterlegen
         base["save_pct"] = sv_pct_val
 
-        rated.append(base)
+        goalie_rated.append(base)
 
-    return rated
+    return goalie_rated
 
 
 

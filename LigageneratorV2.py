@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import random
+import logging
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Tuple, Optional
@@ -44,6 +45,14 @@ def _clean_for_json(obj: Any) -> Any:
 
     return obj
 import re
+
+# Logging setup
+logging.basicConfig(
+    filename='liga_simulation.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
 
 def to_index(value: str) -> int:
     """
@@ -402,9 +411,13 @@ def _export_tables(nord_df: pd.DataFrame, sued_df: pd.DataFrame, stats: pd.DataF
         d = df.copy()
         d.rename(columns={"Goals For": "GF", "Goals Against": "GA"}, inplace=True)
         d["GD"] = d["GF"] - d["GA"]
-        return d.sort_values(["Points", "GF"], ascending=False)[
+        if "last5" not in d.columns:
+            d["last5"] = [[] for _ in range(len(d))]
+        result = d.sort_values(["Points", "GF"], ascending=False)[
             ["Team", "Points", "GF", "GA", "GD"]
         ].to_dict("records")
+        logging.info(f"Exported table with last5: {result[0] if result else 'No data'}")
+        return result
 
     top = stats.sort_values("Points", ascending=False).head(20)[
         ["Player", "Team", "Number", "PositionGroup", "Goals", "Assists", "Points"]
@@ -440,6 +453,35 @@ def save_spieltag_json(
     if lineups is not None:
         payload["lineups"] = lineups  # <<< NEU
     _save_json(SPIELTAG_DIR / season_folder(season), f"spieltag_{gameday:02}.json", payload)
+
+    # Auch in stats/ speichern, falls die App das lädt
+    teams = []
+    for team in payload["tabelle_nord"] + payload["tabelle_sued"]:
+        team_dict = dict(team)
+        team_name = team["Team"]
+        # last5 aus df holen
+        nord_row = nord[nord["Team"] == team_name]
+        if not nord_row.empty:
+            last5_val = nord_row["last5"].iloc[0]
+            team_dict["last5"] = last5_val
+            logging.info(f"Team {team_name} last5 from nord: {last5_val}")
+        else:
+            sued_row = sued[sued["Team"] == team_name]
+            if not sued_row.empty:
+                last5_val = sued_row["last5"].iloc[0]
+                team_dict["last5"] = last5_val
+                logging.info(f"Team {team_name} last5 from sued: {last5_val}")
+            else:
+                team_dict["last5"] = []
+                logging.info(f"Team {team_name} last5 not found, set to []")
+        teams.append(team_dict)
+    logging.info(f"Saving to stats: {teams[0]['last5'] if teams else 'No teams'}")
+    _save_json(STATS_DIR / season_folder(season) / "league", f"after_spieltag_{gameday:02}.json", {
+        "season": season,
+        "upto_matchday": gameday,
+        "generated_at": datetime.now().isoformat(),
+        "teams": teams,
+    })
 
 
 
@@ -499,6 +541,8 @@ def save_replay_json(
             "conference": conference,
             "home": {"id": home, "name": home, "score": g_home},
             "away": {"id": away, "name": away, "score": g_away},
+            "overtime": m.get("overtime", False),
+            "shootout": m.get("shootout", False),
             "events": m.get("events", []),
         }
 
@@ -600,11 +644,14 @@ def _build_game_logs_from_spieltage(season: int) -> Dict[str, List[Dict[str, Any
             gh = int(r["g_home"])
             ga = int(r["g_away"])
             conf = r.get("conference")
+            is_ot_so = r.get("overtime", False) or r.get("shootout", False)
 
             if gh > ga:
-                home_res, away_res = "W", "L"
+                home_res = "W2" if is_ot_so else "W"
+                away_res = "L1" if is_ot_so else "L"
             elif gh < ga:
-                home_res, away_res = "L", "W"
+                home_res = "L1" if is_ot_so else "L"
+                away_res = "W2" if is_ot_so else "W"
             else:
                 home_res, away_res = "T", "T"
 
@@ -1199,6 +1246,7 @@ def simulate_match(
     stats: pd.DataFrame,
     conf: str
 ) -> Tuple[str, Dict[str, Any], Dict[str, Any]]:
+    logging.info(f"Simuliere Liga-Spiel: {home} vs {away} in {conf}")
     r_h = df[df["Team"] == home].iloc[0]
     r_a = df[df["Team"] == away].iloc[0]
 
@@ -1208,16 +1256,74 @@ def simulate_match(
 
     g_home = max(0, int(random.gauss(p_home * 5, 1)))
     g_away = max(0, int(random.gauss((1 - p_home) * 5, 1)))
+    logging.info(f"Reguläre Tore: {home} {g_home}:{g_away} {away}")
 
-    df.loc[df["Team"] == home, ["Goals For", "Goals Against"]] += [g_home, g_away]
-    df.loc[df["Team"] == away, ["Goals For", "Goals Against"]] += [g_away, g_home]
-
-    if g_home > g_away:
-        df.loc[df["Team"] == home, "Points"] += 3
-    elif g_away > g_home:
-        df.loc[df["Team"] == away, "Points"] += 3
-    else:
+    is_overtime = False
+    is_shootout = False
+    ot_home = 0
+    ot_away = 0
+    so_home = 0
+    so_away = 0
+    if g_home == g_away:
         df.loc[df["Team"].isin([home, away]), "Points"] += 1
+        is_overtime = True
+        if random.random() < p_home:
+            ot_home = 1
+        else:
+            ot_away = 1
+        g_home += ot_home
+        g_away += ot_away
+        if g_home == g_away:
+            is_shootout = True
+            if random.random() < p_home * 0.7:
+                so_home = 1
+            else:
+                so_away = 1
+            g_home += so_home
+            g_away += so_away
+
+    logging.info(f"Endergebnis: {home} {g_home}:{g_away} {away} - Overtime: {is_overtime}, Shootout: {is_shootout}")
+    if g_home > g_away:
+        if is_overtime or is_shootout:
+            df.loc[df["Team"] == home, "Points"] += 1
+        else:
+            df.loc[df["Team"] == home, "Points"] += 3
+    elif g_away > g_home:
+        if is_overtime or is_shootout:
+            df.loc[df["Team"] == away, "Points"] += 1
+        else:
+            df.loc[df["Team"] == away, "Points"] += 3
+    else:
+        # Unentschieden nach allem, aber sollte nicht
+        pass
+
+    # Update last5 für Teams
+    if g_home > g_away:
+        home_result = "W2" if is_overtime or is_shootout else "W"
+        away_result = "L1" if is_overtime or is_shootout else "L"
+    else:
+        home_result = "L1" if is_overtime or is_shootout else "L"
+        away_result = "W2" if is_overtime or is_shootout else "W"
+
+    # Home Team last5
+    if "last5" not in df.columns:
+        df["last5"] = [[] for _ in range(len(df))]
+    current_last5_home = df.loc[df["Team"] == home, "last5"].iloc[0]
+    if not isinstance(current_last5_home, list):
+        current_last5_home = []
+    current_last5_home.append(home_result)
+    df.loc[df["Team"] == home, "last5"] = [current_last5_home[-5:]]
+
+    logging.info(f"Updated last5 for {home}: {df.loc[df['Team'] == home, 'last5'].iloc[0]}")
+
+    # Away Team last5
+    current_last5_away = df.loc[df["Team"] == away, "last5"].iloc[0]
+    if not isinstance(current_last5_away, list):
+        current_last5_away = []
+    current_last5_away.append(away_result)
+    df.loc[df["Team"] == away, "last5"] = [current_last5_away[-5:]]
+
+    logging.info(f"Updated last5 for {away}: {df.loc[df['Team'] == away, 'last5'].iloc[0]}")
 
     update_player_stats(home, g_home, df, stats)
     update_player_stats(away, g_away, df, stats)
@@ -1229,6 +1335,8 @@ def simulate_match(
         "g_home": g_home,
         "g_away": g_away,
         "conference": conf,
+        "overtime": is_overtime,
+        "shootout": is_shootout,
     }
 
     def _get_skaters(team_name: str) -> List[Dict[str, Any]]:
@@ -1306,12 +1414,91 @@ def simulate_match(
 
         action_id += 1
 
+    if is_overtime:
+        events.append({
+            "i": current_index,
+            "t": current_index,
+            "action_id": action_id,
+            "step_in_action": 0,
+            "team": "none",
+            "zone": "none",
+            "type": "overtime",
+            "result": "start",
+            "player_main": None,
+            "player_main_number": None,
+            "player_secondary": None,
+            "player_secondary_number": None,
+            "details": {},
+        })
+        current_index += 1
+        action_id += 1
+        if ot_home > 0 or ot_away > 0:
+            team_key = "home" if ot_home > 0 else "away"
+            player_main, player_main_number, player_secondary, player_secondary_number = _pick_pair(team_key)
+            events.append({
+                "i": current_index,
+                "t": current_index,
+                "action_id": action_id,
+                "step_in_action": 0,
+                "team": team_key,
+                "zone": "offensive",
+                "type": "goal",
+                "result": "goal",
+                "player_main": player_main,
+                "player_main_number": player_main_number,
+                "player_secondary": player_secondary,
+                "player_secondary_number": player_secondary_number,
+                "details": {},
+            })
+            current_index += 1
+            action_id += 1
+        if is_shootout:
+            events.append({
+                "i": current_index,
+                "t": current_index,
+                "action_id": action_id,
+                "step_in_action": 0,
+                "team": "none",
+                "zone": "none",
+                "type": "shootout",
+                "result": "start",
+                "player_main": None,
+                "player_main_number": None,
+                "player_secondary": None,
+                "player_secondary_number": None,
+                "details": {},
+            })
+            current_index += 1
+            action_id += 1
+            if so_home > 0 or so_away > 0:
+                team_key = "home" if so_home > 0 else "away"
+                player_main, player_main_number, player_secondary, player_secondary_number = _pick_pair(team_key)
+                events.append({
+                    "i": current_index,
+                    "t": current_index,
+                    "action_id": action_id,
+                    "step_in_action": 0,
+                    "team": team_key,
+                    "zone": "offensive",
+                    "type": "shootout_goal",
+                    "result": "goal",
+                    "player_main": player_main,
+                    "player_main_number": player_main_number,
+                    "player_secondary": player_secondary,
+                    "player_secondary_number": player_secondary_number,
+                    "details": {},
+                })
+                current_index += 1
+                action_id += 1
+
     replay_struct: Dict[str, Any] = {
         "home": home,
         "away": away,
         "g_home": g_home,
         "g_away": g_away,
         "conference": conf,
+        "overtime": is_overtime,
+        "shootout": is_shootout,
         "events": events,
     }
 
@@ -1339,6 +1526,7 @@ def simulate_playoff_match(
     sued: pd.DataFrame,
     stats: pd.DataFrame
 ) -> Tuple[str, str, Dict[str, int]]:
+    logging.info(f"Simuliere Playoff-Spiel: {a} vs {b}")
     dfA = nord if a in list(nord["Team"]) else sued
     dfB = nord if b in list(nord["Team"]) else sued
 
@@ -1352,9 +1540,27 @@ def simulate_playoff_match(
     prob = pA / (pA + pB)
     gA = max(0, int(random.gauss(prob * 5, 1)))
     gB = max(0, int(random.gauss((1 - prob) * 5, 1)))
+    logging.info(f"Reguläre Tore: {a} {gA}:{gB} {b}")
+
+    if gA == gB:
+        # Overtime
+        if random.random() < prob:
+            gA += 1
+        else:
+            gB += 1
+        if gA == gB:
+            # Shootout
+            if random.random() < prob * 0.7:
+                gA += 1
+            else:
+                gB += 1
+        logging.info(f"Nach OT/SO: {a} {gA}:{gB} {b}")
+
     update_player_stats(a, gA, dfA, stats)
     update_player_stats(b, gB, dfB, stats)
-    return f"{a} {gA}:{gB} {b}", (a if gA > gB else b), {"g_home": gA, "g_away": gB}
+    winner = a if gA > gB else b
+    logging.info(f"Gewinner: {winner}")
+    return f"{a} {gA}:{gB} {b}", winner, {"g_home": gA, "g_away": gB}
 
 
 def simulate_series_best_of(

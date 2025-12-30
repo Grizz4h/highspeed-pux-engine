@@ -161,11 +161,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 86,
+    "rating_offense": 91,
     "rating_defense": 85,
     "rating_speed": 85,
     "rating_chemistry": 81,
-    "rating_overall": 86
+    "rating_overall": 87
   },
   {
     "league": "DEL2",
@@ -777,7 +777,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 83,
+    "rating_offense": 84,
     "rating_defense": 84,
     "rating_speed": 81,
     "rating_chemistry": 80,
@@ -805,11 +805,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 83,
+    "rating_offense": 84,
     "rating_defense": 71,
     "rating_speed": 81,
     "rating_chemistry": 72,
-    "rating_overall": 77
+    "rating_overall": 78
   },
   {
     "league": "DEL2",
@@ -1225,11 +1225,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 77,
+    "rating_offense": 80,
     "rating_defense": 61,
     "rating_speed": 78,
     "rating_chemistry": 66,
-    "rating_overall": 70
+    "rating_overall": 71
   },
   {
     "league": "DEL2",
@@ -1421,11 +1421,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 75,
+    "rating_offense": 78,
     "rating_defense": 81,
     "rating_speed": 77,
     "rating_chemistry": 79,
-    "rating_overall": 78
+    "rating_overall": 79
   },
   {
     "league": "DEL2",
@@ -1505,11 +1505,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 73,
+    "rating_offense": 78,
     "rating_defense": 70,
     "rating_speed": 77,
     "rating_chemistry": 72,
-    "rating_overall": 72
+    "rating_overall": 74
   },
   {
     "league": "DEL2",
@@ -1561,11 +1561,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 74,
+    "rating_offense": 77,
     "rating_defense": 70,
     "rating_speed": 76,
     "rating_chemistry": 72,
-    "rating_overall": 72
+    "rating_overall": 73
   },
   {
     "league": "DEL2",
@@ -1701,11 +1701,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 74,
+    "rating_offense": 76,
     "rating_defense": 73,
     "rating_speed": 75,
     "rating_chemistry": 73,
-    "rating_overall": 74
+    "rating_overall": 75
   },
   {
     "league": "DEL2",
@@ -1897,11 +1897,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 71,
+    "rating_offense": 75,
     "rating_defense": 72,
     "rating_speed": 75,
     "rating_chemistry": 73,
-    "rating_overall": 72
+    "rating_overall": 73
   },
   {
     "league": "DEL2",
@@ -2093,11 +2093,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 71,
+    "rating_offense": 73,
     "rating_defense": 61,
     "rating_speed": 74,
     "rating_chemistry": 67,
-    "rating_overall": 67
+    "rating_overall": 68
   },
   {
     "league": "DEL2",
@@ -2457,11 +2457,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 68,
+    "rating_offense": 73,
     "rating_defense": 71,
     "rating_speed": 73,
     "rating_chemistry": 72,
-    "rating_overall": 71
+    "rating_overall": 72
   },
   {
     "league": "DEL2",
@@ -2709,11 +2709,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 70,
+    "rating_offense": 72,
     "rating_defense": 75,
     "rating_speed": 73,
     "rating_chemistry": 74,
-    "rating_overall": 73
+    "rating_overall": 74
   },
   {
     "league": "DEL2",
@@ -2765,11 +2765,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 69,
+    "rating_offense": 72,
     "rating_defense": 78,
     "rating_speed": 73,
     "rating_chemistry": 77,
-    "rating_overall": 74
+    "rating_overall": 75
   },
   {
     "league": "DEL2",
@@ -3045,11 +3045,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 68,
+    "rating_offense": 70,
     "rating_defense": 73,
     "rating_speed": 72,
     "rating_chemistry": 74,
-    "rating_overall": 71
+    "rating_overall": 72
   },
   {
     "league": "DEL2",
@@ -3073,11 +3073,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 68,
+    "rating_offense": 70,
     "rating_defense": 89,
     "rating_speed": 72,
     "rating_chemistry": 84,
-    "rating_overall": 78
+    "rating_overall": 79
   },
   {
     "league": "DEL2",
@@ -3325,7 +3325,7 @@
     "fo_won": 217,
     "fo_lost": 221,
     "fo_pct": 49.54,
-    "rating_offense": 69,
+    "rating_offense": 70,
     "rating_defense": 71,
     "rating_speed": 71,
     "rating_chemistry": 72,
@@ -3381,11 +3381,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 67,
+    "rating_offense": 69,
     "rating_defense": 75,
     "rating_speed": 71,
     "rating_chemistry": 75,
-    "rating_overall": 71
+    "rating_overall": 72
   },
   {
     "league": "DEL2",
@@ -3409,11 +3409,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 66,
+    "rating_offense": 69,
     "rating_defense": 79,
     "rating_speed": 72,
     "rating_chemistry": 78,
-    "rating_overall": 73
+    "rating_overall": 74
   },
   {
     "league": "DEL2",
@@ -3465,7 +3465,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 71,
+    "rating_offense": 69,
     "rating_defense": 74,
     "rating_speed": 70,
     "rating_chemistry": 73,
@@ -3493,11 +3493,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 73,
+    "rating_offense": 71,
     "rating_defense": 74,
     "rating_speed": 70,
     "rating_chemistry": 70,
-    "rating_overall": 73
+    "rating_overall": 72
   },
   {
     "league": "DEL2",
@@ -3609,7 +3609,7 @@
     "rating_defense": 68,
     "rating_speed": 70,
     "rating_chemistry": 69,
-    "rating_overall": 68
+    "rating_overall": 69
   },
   {
     "league": "DEL2",
@@ -3633,7 +3633,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 68,
+    "rating_offense": 69,
     "rating_defense": 66,
     "rating_speed": 70,
     "rating_chemistry": 69,
@@ -3661,11 +3661,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 67,
+    "rating_offense": 68,
     "rating_defense": 68,
     "rating_speed": 71,
     "rating_chemistry": 71,
-    "rating_overall": 68
+    "rating_overall": 69
   },
   {
     "league": "DEL2",
@@ -3689,11 +3689,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 67,
+    "rating_offense": 69,
     "rating_defense": 59,
     "rating_speed": 70,
     "rating_chemistry": 64,
-    "rating_overall": 64
+    "rating_overall": 65
   },
   {
     "league": "DEL2",
@@ -3745,11 +3745,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 66,
+    "rating_offense": 69,
     "rating_defense": 82,
     "rating_speed": 72,
     "rating_chemistry": 81,
-    "rating_overall": 74
+    "rating_overall": 76
   },
   {
     "league": "DEL2",
@@ -3773,11 +3773,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 66,
+    "rating_offense": 69,
     "rating_defense": 75,
     "rating_speed": 70,
     "rating_chemistry": 74,
-    "rating_overall": 71
+    "rating_overall": 72
   },
   {
     "league": "DEL2",
@@ -3801,11 +3801,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 66,
+    "rating_offense": 68,
     "rating_defense": 76,
     "rating_speed": 71,
     "rating_chemistry": 75,
-    "rating_overall": 71
+    "rating_overall": 72
   },
   {
     "league": "DEL2",
@@ -3829,11 +3829,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 66,
+    "rating_offense": 68,
     "rating_defense": 77,
     "rating_speed": 71,
     "rating_chemistry": 76,
-    "rating_overall": 72
+    "rating_overall": 73
   },
   {
     "league": "DEL2",
@@ -3857,11 +3857,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 66,
+    "rating_offense": 68,
     "rating_defense": 68,
     "rating_speed": 71,
     "rating_chemistry": 71,
-    "rating_overall": 68
+    "rating_overall": 69
   },
   {
     "league": "DEL2",
@@ -3885,11 +3885,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 66,
+    "rating_offense": 69,
     "rating_defense": 61,
     "rating_speed": 70,
     "rating_chemistry": 66,
-    "rating_overall": 64
+    "rating_overall": 66
   },
   {
     "league": "DEL2",
@@ -4137,11 +4137,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 65,
+    "rating_offense": 68,
     "rating_defense": 74,
     "rating_speed": 70,
     "rating_chemistry": 74,
-    "rating_overall": 70
+    "rating_overall": 71
   },
   {
     "league": "DEL2",
@@ -4165,7 +4165,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 68,
+    "rating_offense": 70,
     "rating_defense": 69,
     "rating_speed": 69,
     "rating_chemistry": 66,
@@ -4305,11 +4305,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 67,
+    "rating_offense": 66,
     "rating_defense": 76,
     "rating_speed": 70,
     "rating_chemistry": 76,
-    "rating_overall": 72
+    "rating_overall": 71
   },
   {
     "league": "DEL2",
@@ -4501,11 +4501,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 65,
+    "rating_offense": 66,
     "rating_defense": 77,
     "rating_speed": 70,
     "rating_chemistry": 76,
-    "rating_overall": 71
+    "rating_overall": 72
   },
   {
     "league": "DEL2",
@@ -4557,11 +4557,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 65,
+    "rating_offense": 66,
     "rating_defense": 70,
     "rating_speed": 70,
     "rating_chemistry": 72,
-    "rating_overall": 68
+    "rating_overall": 69
   },
   {
     "league": "DEL2",
@@ -4613,11 +4613,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 64,
+    "rating_offense": 66,
     "rating_defense": 75,
     "rating_speed": 70,
     "rating_chemistry": 75,
-    "rating_overall": 70
+    "rating_overall": 71
   },
   {
     "league": "DEL2",
@@ -4641,11 +4641,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 64,
+    "rating_offense": 66,
     "rating_defense": 67,
     "rating_speed": 70,
     "rating_chemistry": 71,
-    "rating_overall": 67
+    "rating_overall": 68
   },
   {
     "league": "DEL2",
@@ -4809,11 +4809,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 66,
+    "rating_offense": 65,
     "rating_defense": 60,
     "rating_speed": 69,
     "rating_chemistry": 66,
-    "rating_overall": 64
+    "rating_overall": 63
   },
   {
     "league": "DEL2",
@@ -5033,11 +5033,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 64,
+    "rating_offense": 66,
     "rating_defense": 71,
     "rating_speed": 69,
     "rating_chemistry": 73,
-    "rating_overall": 68
+    "rating_overall": 69
   },
   {
     "league": "DEL2",
@@ -5089,11 +5089,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 63,
+    "rating_offense": 66,
     "rating_defense": 71,
     "rating_speed": 69,
     "rating_chemistry": 72,
-    "rating_overall": 68
+    "rating_overall": 69
   },
   {
     "league": "DEL2",
@@ -5117,11 +5117,11 @@
     "fo_won": 1,
     "fo_lost": 1,
     "fo_pct": 50.0,
-    "rating_offense": 63,
+    "rating_offense": 65,
     "rating_defense": 68,
     "rating_speed": 69,
     "rating_chemistry": 71,
-    "rating_overall": 66
+    "rating_overall": 67
   },
   {
     "league": "DEL2",
@@ -5201,7 +5201,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 66,
+    "rating_offense": 65,
     "rating_defense": 59,
     "rating_speed": 67,
     "rating_chemistry": 64,
@@ -5705,7 +5705,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 66,
+    "rating_offense": 65,
     "rating_defense": 76,
     "rating_speed": 64,
     "rating_chemistry": 69,
@@ -5761,7 +5761,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 63,
+    "rating_offense": 64,
     "rating_defense": 70,
     "rating_speed": 66,
     "rating_chemistry": 70,
@@ -5789,7 +5789,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 63,
+    "rating_offense": 64,
     "rating_defense": 75,
     "rating_speed": 66,
     "rating_chemistry": 73,
@@ -5817,7 +5817,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 63,
+    "rating_offense": 64,
     "rating_defense": 70,
     "rating_speed": 67,
     "rating_chemistry": 71,
@@ -5901,7 +5901,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 64,
+    "rating_offense": 65,
     "rating_defense": 72,
     "rating_speed": 65,
     "rating_chemistry": 68,
@@ -5929,7 +5929,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 64,
     "rating_defense": 77,
     "rating_speed": 67,
     "rating_chemistry": 75,
@@ -5957,11 +5957,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 64,
     "rating_defense": 55,
     "rating_speed": 67,
     "rating_chemistry": 63,
-    "rating_overall": 60
+    "rating_overall": 61
   },
   {
     "league": "DEL2",
@@ -5985,11 +5985,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 64,
     "rating_defense": 67,
     "rating_speed": 67,
     "rating_chemistry": 70,
-    "rating_overall": 65
+    "rating_overall": 66
   },
   {
     "league": "DEL2",
@@ -6013,7 +6013,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 63,
     "rating_defense": 71,
     "rating_speed": 68,
     "rating_chemistry": 73,
@@ -6041,11 +6041,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 63,
     "rating_defense": 67,
     "rating_speed": 68,
     "rating_chemistry": 71,
-    "rating_overall": 65
+    "rating_overall": 66
   },
   {
     "league": "DEL2",
@@ -6269,7 +6269,7 @@
     "rating_defense": 74,
     "rating_speed": 67,
     "rating_chemistry": 74,
-    "rating_overall": 69
+    "rating_overall": 68
   },
   {
     "league": "DEL2",
@@ -6321,7 +6321,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 69,
+    "rating_offense": 67,
     "rating_defense": 72,
     "rating_speed": 65,
     "rating_chemistry": 64,
@@ -6573,11 +6573,11 @@
     "fo_won": 3,
     "fo_lost": 5,
     "fo_pct": 37.5,
-    "rating_offense": 61,
+    "rating_offense": 62,
     "rating_defense": 55,
     "rating_speed": 67,
     "rating_chemistry": 63,
-    "rating_overall": 59
+    "rating_overall": 60
   },
   {
     "league": "DEL2",
@@ -6601,11 +6601,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 61,
+    "rating_offense": 62,
     "rating_defense": 66,
     "rating_speed": 67,
     "rating_chemistry": 70,
-    "rating_overall": 64
+    "rating_overall": 65
   },
   {
     "league": "DEL2",
@@ -6629,11 +6629,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 61,
+    "rating_offense": 62,
     "rating_defense": 81,
     "rating_speed": 67,
     "rating_chemistry": 79,
-    "rating_overall": 71
+    "rating_overall": 72
   },
   {
     "league": "DEL2",
@@ -7021,7 +7021,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 65,
+    "rating_offense": 64,
     "rating_defense": 76,
     "rating_speed": 62,
     "rating_chemistry": 67,
@@ -7049,7 +7049,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 61,
+    "rating_offense": 62,
     "rating_defense": 64,
     "rating_speed": 63,
     "rating_chemistry": 63,
@@ -7077,11 +7077,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 61,
+    "rating_offense": 62,
     "rating_defense": 74,
     "rating_speed": 64,
     "rating_chemistry": 71,
-    "rating_overall": 67
+    "rating_overall": 68
   },
   {
     "league": "DEL2",
@@ -7105,11 +7105,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 61,
+    "rating_offense": 62,
     "rating_defense": 65,
     "rating_speed": 65,
     "rating_chemistry": 68,
-    "rating_overall": 63
+    "rating_overall": 64
   },
   {
     "league": "DEL2",
@@ -7217,7 +7217,7 @@
     "fo_won": 18,
     "fo_lost": 32,
     "fo_pct": 36.0,
-    "rating_offense": 61,
+    "rating_offense": 60,
     "rating_defense": 73,
     "rating_speed": 65,
     "rating_chemistry": 74,
@@ -7305,7 +7305,7 @@
     "rating_defense": 80,
     "rating_speed": 65,
     "rating_chemistry": 74,
-    "rating_overall": 71
+    "rating_overall": 72
   },
   {
     "league": "DEL2",
@@ -7753,7 +7753,7 @@
     "rating_defense": 67,
     "rating_speed": 61,
     "rating_chemistry": 64,
-    "rating_overall": 63
+    "rating_overall": 64
   },
   {
     "league": "DEL2",
@@ -7805,7 +7805,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 60,
+    "rating_offense": 61,
     "rating_defense": 65,
     "rating_speed": 62,
     "rating_chemistry": 65,
@@ -7861,7 +7861,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 60,
+    "rating_offense": 61,
     "rating_defense": 70,
     "rating_speed": 63,
     "rating_chemistry": 69,
@@ -7889,7 +7889,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 60,
+    "rating_offense": 61,
     "rating_defense": 71,
     "rating_speed": 64,
     "rating_chemistry": 71,
@@ -8509,7 +8509,7 @@
     "rating_defense": 73,
     "rating_speed": 59,
     "rating_chemistry": 67,
-    "rating_overall": 65
+    "rating_overall": 66
   },
   {
     "league": "DEL2",
@@ -8589,7 +8589,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 59,
+    "rating_offense": 60,
     "rating_defense": 71,
     "rating_speed": 61,
     "rating_chemistry": 68,
@@ -8617,7 +8617,7 @@
     "fo_won": 0,
     "fo_lost": 2,
     "fo_pct": 0.0,
-    "rating_offense": 59,
+    "rating_offense": 60,
     "rating_defense": 66,
     "rating_speed": 61,
     "rating_chemistry": 66,
@@ -8645,7 +8645,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 59,
+    "rating_offense": 60,
     "rating_defense": 73,
     "rating_speed": 62,
     "rating_chemistry": 71,
@@ -8677,7 +8677,7 @@
     "rating_defense": 66,
     "rating_speed": 65,
     "rating_chemistry": 70,
-    "rating_overall": 63
+    "rating_overall": 64
   },
   {
     "league": "DEL2",
@@ -8925,7 +8925,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 60,
+    "rating_offense": 61,
     "rating_defense": 66,
     "rating_speed": 67,
     "rating_chemistry": 71,
@@ -9009,11 +9009,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 66,
+    "rating_offense": 63,
     "rating_defense": 73,
     "rating_speed": 60,
     "rating_chemistry": 64,
-    "rating_overall": 68
+    "rating_overall": 67
   },
   {
     "league": "DEL2",
@@ -9149,11 +9149,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 61,
+    "rating_offense": 62,
     "rating_defense": 74,
     "rating_speed": 64,
     "rating_chemistry": 72,
-    "rating_overall": 67
+    "rating_overall": 68
   },
   {
     "league": "DEL2",
@@ -9345,11 +9345,11 @@
     "fo_won": 1,
     "fo_lost": 2,
     "fo_pct": 33.33,
-    "rating_offense": 66,
+    "rating_offense": 67,
     "rating_defense": 59,
     "rating_speed": 71,
     "rating_chemistry": 66,
-    "rating_overall": 63
+    "rating_overall": 64
   },
   {
     "league": "DEL2",
@@ -9513,7 +9513,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 59,
+    "rating_offense": 60,
     "rating_defense": 65,
     "rating_speed": 61,
     "rating_chemistry": 65,
@@ -9933,7 +9933,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 63,
     "rating_defense": 69,
     "rating_speed": 66,
     "rating_chemistry": 70,
@@ -10101,7 +10101,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 60,
+    "rating_offense": 61,
     "rating_defense": 74,
     "rating_speed": 63,
     "rating_chemistry": 71,
@@ -10325,11 +10325,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 66,
+    "rating_offense": 63,
     "rating_defense": 71,
     "rating_speed": 68,
     "rating_chemistry": 73,
-    "rating_overall": 69
+    "rating_overall": 68
   },
   {
     "league": "DEL2",
@@ -10605,11 +10605,11 @@
     "fo_won": 1,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 87,
+    "rating_offense": 91,
     "rating_defense": 88,
     "rating_speed": 85,
     "rating_chemistry": 84,
-    "rating_overall": 87
+    "rating_overall": 89
   },
   {
     "league": "DEL",
@@ -10717,11 +10717,11 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 91,
+    "rating_offense": 89,
     "rating_defense": 83,
     "rating_speed": 84,
     "rating_chemistry": 81,
-    "rating_overall": 86
+    "rating_overall": 85
   },
   {
     "league": "DEL",
@@ -11193,7 +11193,7 @@
     "fo_won": 1,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 82,
+    "rating_offense": 84,
     "rating_defense": 69,
     "rating_speed": 81,
     "rating_chemistry": 73,
@@ -11221,11 +11221,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 82,
+    "rating_offense": 83,
     "rating_defense": 79,
     "rating_speed": 81,
     "rating_chemistry": 79,
-    "rating_overall": 80
+    "rating_overall": 81
   },
   {
     "league": "DEL",
@@ -11333,11 +11333,11 @@
     "fo_won": 3,
     "fo_lost": 3,
     "fo_pct": 50.0,
-    "rating_offense": 76,
+    "rating_offense": 83,
     "rating_defense": 74,
     "rating_speed": 81,
     "rating_chemistry": 76,
-    "rating_overall": 76
+    "rating_overall": 79
   },
   {
     "league": "DEL",
@@ -11725,7 +11725,7 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 81,
+    "rating_offense": 82,
     "rating_defense": 55,
     "rating_speed": 79,
     "rating_chemistry": 62,
@@ -11977,11 +11977,11 @@
     "fo_won": 1,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 77,
+    "rating_offense": 79,
     "rating_defense": 73,
     "rating_speed": 78,
     "rating_chemistry": 75,
-    "rating_overall": 75
+    "rating_overall": 76
   },
   {
     "league": "DEL",
@@ -12061,11 +12061,11 @@
     "fo_won": 3,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 75,
+    "rating_offense": 78,
     "rating_defense": 81,
     "rating_speed": 78,
     "rating_chemistry": 80,
-    "rating_overall": 78
+    "rating_overall": 79
   },
   {
     "league": "DEL",
@@ -12089,11 +12089,11 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 75,
+    "rating_offense": 80,
     "rating_defense": 68,
     "rating_speed": 78,
     "rating_chemistry": 71,
-    "rating_overall": 72
+    "rating_overall": 74
   },
   {
     "league": "DEL",
@@ -12425,11 +12425,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 75,
+    "rating_offense": 78,
     "rating_defense": 84,
     "rating_speed": 77,
     "rating_chemistry": 81,
-    "rating_overall": 79
+    "rating_overall": 80
   },
   {
     "league": "DEL",
@@ -12621,11 +12621,11 @@
     "fo_won": 0,
     "fo_lost": 2,
     "fo_pct": 0.0,
-    "rating_offense": 72,
+    "rating_offense": 78,
     "rating_defense": 67,
     "rating_speed": 77,
     "rating_chemistry": 70,
-    "rating_overall": 71
+    "rating_overall": 73
   },
   {
     "league": "DEL",
@@ -12873,11 +12873,11 @@
     "fo_won": 2,
     "fo_lost": 4,
     "fo_pct": 33.33,
-    "rating_offense": 71,
+    "rating_offense": 76,
     "rating_defense": 87,
     "rating_speed": 76,
     "rating_chemistry": 83,
-    "rating_overall": 79
+    "rating_overall": 81
   },
   {
     "league": "DEL",
@@ -12901,11 +12901,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 72,
+    "rating_offense": 77,
     "rating_defense": 80,
     "rating_speed": 76,
     "rating_chemistry": 78,
-    "rating_overall": 77
+    "rating_overall": 78
   },
   {
     "league": "DEL",
@@ -13097,11 +13097,11 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 73,
+    "rating_offense": 75,
     "rating_defense": 75,
     "rating_speed": 76,
     "rating_chemistry": 76,
-    "rating_overall": 74
+    "rating_overall": 75
   },
   {
     "league": "DEL",
@@ -13125,11 +13125,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 73,
+    "rating_offense": 75,
     "rating_defense": 73,
     "rating_speed": 76,
     "rating_chemistry": 75,
-    "rating_overall": 73
+    "rating_overall": 74
   },
   {
     "league": "DEL",
@@ -13209,11 +13209,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 72,
+    "rating_offense": 75,
     "rating_defense": 68,
     "rating_speed": 76,
     "rating_chemistry": 73,
-    "rating_overall": 71
+    "rating_overall": 72
   },
   {
     "league": "DEL",
@@ -13237,11 +13237,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 72,
+    "rating_offense": 75,
     "rating_defense": 87,
     "rating_speed": 76,
     "rating_chemistry": 84,
-    "rating_overall": 79
+    "rating_overall": 80
   },
   {
     "league": "DEL",
@@ -13265,11 +13265,11 @@
     "fo_won": 2,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 71,
+    "rating_offense": 75,
     "rating_defense": 71,
     "rating_speed": 76,
     "rating_chemistry": 74,
-    "rating_overall": 72
+    "rating_overall": 73
   },
   {
     "league": "DEL",
@@ -13349,11 +13349,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 75,
+    "rating_offense": 74,
     "rating_defense": 72,
     "rating_speed": 75,
     "rating_chemistry": 75,
-    "rating_overall": 74
+    "rating_overall": 73
   },
   {
     "league": "DEL",
@@ -13489,11 +13489,11 @@
     "fo_won": 0,
     "fo_lost": 2,
     "fo_pct": 0.0,
-    "rating_offense": 72,
+    "rating_offense": 74,
     "rating_defense": 72,
     "rating_speed": 75,
     "rating_chemistry": 74,
-    "rating_overall": 72
+    "rating_overall": 73
   },
   {
     "league": "DEL",
@@ -13517,11 +13517,11 @@
     "fo_won": 1,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 70,
+    "rating_offense": 74,
     "rating_defense": 61,
     "rating_speed": 75,
     "rating_chemistry": 69,
-    "rating_overall": 67
+    "rating_overall": 68
   },
   {
     "league": "DEL",
@@ -13797,11 +13797,11 @@
     "fo_won": 2,
     "fo_lost": 11,
     "fo_pct": 15.38,
-    "rating_offense": 71,
+    "rating_offense": 74,
     "rating_defense": 76,
     "rating_speed": 74,
     "rating_chemistry": 76,
-    "rating_overall": 74
+    "rating_overall": 75
   },
   {
     "league": "DEL",
@@ -13909,7 +13909,7 @@
     "fo_won": 2,
     "fo_lost": 2,
     "fo_pct": 50.0,
-    "rating_offense": 73,
+    "rating_offense": 72,
     "rating_defense": 75,
     "rating_speed": 74,
     "rating_chemistry": 77,
@@ -13993,11 +13993,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 71,
+    "rating_offense": 73,
     "rating_defense": 73,
     "rating_speed": 73,
     "rating_chemistry": 74,
-    "rating_overall": 72
+    "rating_overall": 73
   },
   {
     "league": "DEL",
@@ -14021,11 +14021,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 69,
+    "rating_offense": 72,
     "rating_defense": 52,
     "rating_speed": 74,
     "rating_chemistry": 63,
-    "rating_overall": 62
+    "rating_overall": 63
   },
   {
     "league": "DEL",
@@ -14049,11 +14049,11 @@
     "fo_won": 0,
     "fo_lost": 2,
     "fo_pct": 0.0,
-    "rating_offense": 69,
+    "rating_offense": 72,
     "rating_defense": 74,
     "rating_speed": 74,
     "rating_chemistry": 76,
-    "rating_overall": 72
+    "rating_overall": 73
   },
   {
     "league": "DEL",
@@ -14077,11 +14077,11 @@
     "fo_won": 2,
     "fo_lost": 1,
     "fo_pct": 66.67,
-    "rating_offense": 68,
+    "rating_offense": 72,
     "rating_defense": 75,
     "rating_speed": 74,
     "rating_chemistry": 76,
-    "rating_overall": 72
+    "rating_overall": 74
   },
   {
     "league": "DEL",
@@ -14161,11 +14161,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 70,
+    "rating_offense": 71,
     "rating_defense": 67,
     "rating_speed": 73,
     "rating_chemistry": 72,
-    "rating_overall": 69
+    "rating_overall": 70
   },
   {
     "league": "DEL",
@@ -14189,7 +14189,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 69,
+    "rating_offense": 71,
     "rating_defense": 79,
     "rating_speed": 74,
     "rating_chemistry": 79,
@@ -14217,11 +14217,11 @@
     "fo_won": 0,
     "fo_lost": 2,
     "fo_pct": 0.0,
-    "rating_offense": 69,
+    "rating_offense": 71,
     "rating_defense": 75,
     "rating_speed": 73,
     "rating_chemistry": 76,
-    "rating_overall": 72
+    "rating_overall": 73
   },
   {
     "league": "DEL",
@@ -14245,11 +14245,11 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 68,
+    "rating_offense": 71,
     "rating_defense": 87,
     "rating_speed": 73,
     "rating_chemistry": 82,
-    "rating_overall": 77
+    "rating_overall": 78
   },
   {
     "league": "DEL",
@@ -14273,11 +14273,11 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 68,
+    "rating_offense": 71,
     "rating_defense": 87,
     "rating_speed": 73,
     "rating_chemistry": 83,
-    "rating_overall": 77
+    "rating_overall": 78
   },
   {
     "league": "DEL",
@@ -14525,7 +14525,7 @@
     "fo_won": 2,
     "fo_lost": 1,
     "fo_pct": 66.67,
-    "rating_offense": 69,
+    "rating_offense": 70,
     "rating_defense": 65,
     "rating_speed": 73,
     "rating_chemistry": 71,
@@ -14609,11 +14609,11 @@
     "fo_won": 2,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 68,
+    "rating_offense": 70,
     "rating_defense": 86,
     "rating_speed": 73,
     "rating_chemistry": 82,
-    "rating_overall": 77
+    "rating_overall": 78
   },
   {
     "league": "DEL",
@@ -14777,11 +14777,11 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 68,
+    "rating_offense": 69,
     "rating_defense": 54,
     "rating_speed": 72,
     "rating_chemistry": 65,
-    "rating_overall": 62
+    "rating_overall": 63
   },
   {
     "league": "DEL",
@@ -14945,11 +14945,11 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 65,
+    "rating_offense": 69,
     "rating_defense": 60,
     "rating_speed": 72,
     "rating_chemistry": 68,
-    "rating_overall": 64
+    "rating_overall": 66
   },
   {
     "league": "DEL",
@@ -15169,7 +15169,7 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 67,
+    "rating_offense": 68,
     "rating_defense": 60,
     "rating_speed": 72,
     "rating_chemistry": 68,
@@ -15225,11 +15225,11 @@
     "fo_won": 0,
     "fo_lost": 2,
     "fo_pct": 0.0,
-    "rating_offense": 66,
+    "rating_offense": 68,
     "rating_defense": 90,
     "rating_speed": 71,
     "rating_chemistry": 84,
-    "rating_overall": 78
+    "rating_overall": 79
   },
   {
     "league": "DEL",
@@ -15253,11 +15253,11 @@
     "fo_won": 1,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 66,
+    "rating_offense": 69,
     "rating_defense": 67,
     "rating_speed": 70,
     "rating_chemistry": 70,
-    "rating_overall": 67
+    "rating_overall": 68
   },
   {
     "league": "DEL",
@@ -15281,11 +15281,11 @@
     "fo_won": 3,
     "fo_lost": 2,
     "fo_pct": 60.0,
-    "rating_offense": 65,
+    "rating_offense": 68,
     "rating_defense": 58,
     "rating_speed": 72,
     "rating_chemistry": 68,
-    "rating_overall": 63
+    "rating_overall": 64
   },
   {
     "league": "DEL",
@@ -15309,11 +15309,11 @@
     "fo_won": 1,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 64,
+    "rating_offense": 68,
     "rating_defense": 62,
     "rating_speed": 72,
     "rating_chemistry": 68,
-    "rating_overall": 65
+    "rating_overall": 66
   },
   {
     "league": "DEL",
@@ -15365,11 +15365,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 68,
+    "rating_offense": 69,
     "rating_defense": 62,
     "rating_speed": 69,
     "rating_chemistry": 65,
-    "rating_overall": 65
+    "rating_overall": 66
   },
   {
     "league": "DEL",
@@ -15617,11 +15617,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 65,
+    "rating_offense": 66,
     "rating_defense": 79,
     "rating_speed": 70,
     "rating_chemistry": 77,
-    "rating_overall": 72
+    "rating_overall": 73
   },
   {
     "league": "DEL",
@@ -15645,7 +15645,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 65,
+    "rating_offense": 66,
     "rating_defense": 83,
     "rating_speed": 71,
     "rating_chemistry": 81,
@@ -15673,7 +15673,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 69,
+    "rating_offense": 70,
     "rating_defense": 70,
     "rating_speed": 68,
     "rating_chemistry": 66,
@@ -15701,7 +15701,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 67,
+    "rating_offense": 68,
     "rating_defense": 73,
     "rating_speed": 68,
     "rating_chemistry": 70,
@@ -15729,11 +15729,11 @@
     "fo_won": 0,
     "fo_lost": 3,
     "fo_pct": 0.0,
-    "rating_offense": 66,
+    "rating_offense": 67,
     "rating_defense": 73,
     "rating_speed": 68,
     "rating_chemistry": 71,
-    "rating_overall": 69
+    "rating_overall": 70
   },
   {
     "league": "DEL",
@@ -15757,7 +15757,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 65,
+    "rating_offense": 67,
     "rating_defense": 74,
     "rating_speed": 69,
     "rating_chemistry": 73,
@@ -15957,7 +15957,7 @@
     "rating_defense": 53,
     "rating_speed": 69,
     "rating_chemistry": 63,
-    "rating_overall": 60
+    "rating_overall": 61
   },
   {
     "league": "DEL",
@@ -15981,7 +15981,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 64,
+    "rating_offense": 65,
     "rating_defense": 79,
     "rating_speed": 70,
     "rating_chemistry": 79,
@@ -16065,11 +16065,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 66,
+    "rating_offense": 68,
     "rating_defense": 64,
     "rating_speed": 67,
     "rating_chemistry": 62,
-    "rating_overall": 65
+    "rating_overall": 66
   },
   {
     "league": "DEL",
@@ -16093,11 +16093,11 @@
     "fo_won": 2,
     "fo_lost": 3,
     "fo_pct": 40.0,
-    "rating_offense": 63,
+    "rating_offense": 65,
     "rating_defense": 80,
     "rating_speed": 69,
     "rating_chemistry": 79,
-    "rating_overall": 72
+    "rating_overall": 73
   },
   {
     "league": "DEL",
@@ -16205,7 +16205,7 @@
     "fo_won": 0,
     "fo_lost": 3,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 64,
     "rating_defense": 49,
     "rating_speed": 69,
     "rating_chemistry": 62,
@@ -16233,7 +16233,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 64,
     "rating_defense": 74,
     "rating_speed": 69,
     "rating_chemistry": 76,
@@ -16289,7 +16289,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 65,
+    "rating_offense": 64,
     "rating_defense": 67,
     "rating_speed": 67,
     "rating_chemistry": 70,
@@ -16345,11 +16345,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 63,
+    "rating_offense": 64,
     "rating_defense": 78,
     "rating_speed": 66,
     "rating_chemistry": 75,
-    "rating_overall": 70
+    "rating_overall": 71
   },
   {
     "league": "DEL",
@@ -16373,11 +16373,11 @@
     "fo_won": 1,
     "fo_lost": 1,
     "fo_pct": 50.0,
-    "rating_offense": 63,
+    "rating_offense": 64,
     "rating_defense": 60,
     "rating_speed": 67,
     "rating_chemistry": 66,
-    "rating_overall": 62
+    "rating_overall": 63
   },
   {
     "league": "DEL",
@@ -16457,7 +16457,7 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 63,
     "rating_defense": 54,
     "rating_speed": 69,
     "rating_chemistry": 64,
@@ -16485,7 +16485,7 @@
     "fo_won": 1,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 62,
+    "rating_offense": 63,
     "rating_defense": 83,
     "rating_speed": 69,
     "rating_chemistry": 81,
@@ -16569,11 +16569,11 @@
     "fo_won": 0,
     "fo_lost": 1,
     "fo_pct": 0.0,
-    "rating_offense": 61,
+    "rating_offense": 63,
     "rating_defense": 53,
     "rating_speed": 69,
     "rating_chemistry": 64,
-    "rating_overall": 59
+    "rating_overall": 60
   },
   {
     "league": "DEL",
@@ -16597,7 +16597,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 61,
+    "rating_offense": 63,
     "rating_defense": 63,
     "rating_speed": 69,
     "rating_chemistry": 70,
@@ -16681,11 +16681,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 66,
+    "rating_offense": 64,
     "rating_defense": 74,
     "rating_speed": 63,
     "rating_chemistry": 67,
-    "rating_overall": 69
+    "rating_overall": 68
   },
   {
     "league": "DEL",
@@ -16821,7 +16821,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 62,
+    "rating_offense": 63,
     "rating_defense": 67,
     "rating_speed": 65,
     "rating_chemistry": 68,
@@ -16905,11 +16905,11 @@
     "fo_won": 3,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 61,
+    "rating_offense": 63,
     "rating_defense": 61,
     "rating_speed": 66,
     "rating_chemistry": 66,
-    "rating_overall": 62
+    "rating_overall": 63
   },
   {
     "league": "DEL",
@@ -16933,11 +16933,11 @@
     "fo_won": 0,
     "fo_lost": 2,
     "fo_pct": 0.0,
-    "rating_offense": 63,
+    "rating_offense": 62,
     "rating_defense": 59,
     "rating_speed": 65,
     "rating_chemistry": 64,
-    "rating_overall": 62
+    "rating_overall": 61
   },
   {
     "league": "DEL",
@@ -17269,7 +17269,7 @@
     "fo_won": 1,
     "fo_lost": 0,
     "fo_pct": 100.0,
-    "rating_offense": 61,
+    "rating_offense": 62,
     "rating_defense": 66,
     "rating_speed": 64,
     "rating_chemistry": 67,
@@ -17493,7 +17493,7 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 61,
+    "rating_offense": 60,
     "rating_defense": 71,
     "rating_speed": 66,
     "rating_chemistry": 73,
@@ -17693,7 +17693,7 @@
     "rating_defense": 67,
     "rating_speed": 61,
     "rating_chemistry": 64,
-    "rating_overall": 63
+    "rating_overall": 64
   },
   {
     "league": "DEL",
@@ -17721,7 +17721,7 @@
     "rating_defense": 55,
     "rating_speed": 61,
     "rating_chemistry": 58,
-    "rating_overall": 58
+    "rating_overall": 59
   },
   {
     "league": "DEL",
@@ -18053,11 +18053,11 @@
     "fo_won": 0,
     "fo_lost": 0,
     "fo_pct": 0.0,
-    "rating_offense": 59,
+    "rating_offense": 60,
     "rating_defense": 72,
     "rating_speed": 60,
     "rating_chemistry": 68,
-    "rating_overall": 65
+    "rating_overall": 66
   },
   {
     "league": "DEL",

@@ -1,0 +1,1396 @@
+2025-12-30 14:51:27 - INFO - Simuliere Liga-Spiel: Bad Nauheim Devils vs Köln Blitzhaie in Nord
+2025-12-30 14:51:27 - INFO - Reguläre Tore: Bad Nauheim Devils 2:3 Köln Blitzhaie
+2025-12-30 14:51:27 - INFO - Endergebnis: Bad Nauheim Devils 2:3 Köln Blitzhaie - Overtime: False, Shootout: False
+2025-12-30 14:51:27 - INFO - Simuliere Liga-Spiel: Krefeld Kernschlag vs Iserlohn Miners in Nord
+2025-12-30 14:51:27 - INFO - Reguläre Tore: Krefeld Kernschlag 1:1 Iserlohn Miners
+2025-12-30 14:51:27 - INFO - Endergebnis: Krefeld Kernschlag 2:1 Iserlohn Miners - Overtime: True, Shootout: False
+2025-12-30 14:51:27 - INFO - Simuliere Liga-Spiel: Kassel Zenit vs Frankfurt Core in Nord
+2025-12-30 14:51:27 - INFO - Reguläre Tore: Kassel Zenit 1:1 Frankfurt Core
+2025-12-30 14:51:27 - INFO - Endergebnis: Kassel Zenit 1:2 Frankfurt Core - Overtime: True, Shootout: False
+2025-12-30 14:51:27 - INFO - Simuliere Liga-Spiel: Wolfsburg Voltsturm vs Düsseldorf Aurora in Nord
+2025-12-30 14:51:27 - INFO - Reguläre Tore: Wolfsburg Voltsturm 2:3 Düsseldorf Aurora
+2025-12-30 14:51:27 - INFO - Endergebnis: Wolfsburg Voltsturm 2:3 Düsseldorf Aurora - Overtime: False, Shootout: False
+2025-12-30 14:51:27 - INFO - Simuliere Liga-Spiel: Whiteout Berlin vs Bremerhaven Trident in Nord
+2025-12-30 14:51:27 - INFO - Reguläre Tore: Whiteout Berlin 3:3 Bremerhaven Trident
+2025-12-30 14:51:27 - INFO - Endergebnis: Whiteout Berlin 3:4 Bremerhaven Trident - Overtime: True, Shootout: False
+2025-12-30 14:51:27 - INFO - Simuliere Liga-Spiel: Augsburg Ferox vs Nürnberg Eistiger in Süd
+2025-12-30 14:51:27 - INFO - Reguläre Tore: Augsburg Ferox 2:2 Nürnberg Eistiger
+2025-12-30 14:51:27 - INFO - Endergebnis: Augsburg Ferox 2:3 Nürnberg Eistiger - Overtime: True, Shootout: False
+2025-12-30 14:51:27 - INFO - Simuliere Liga-Spiel: Novadelta Panther vs Regensburg Pulse in Süd
+2025-12-30 14:51:27 - INFO - Reguläre Tore: Novadelta Panther 2:3 Regensburg Pulse
+2025-12-30 14:51:27 - INFO - Endergebnis: Novadelta Panther 2:3 Regensburg Pulse - Overtime: False, Shootout: False
+2025-12-30 14:51:27 - INFO - Simuliere Liga-Spiel: Ravensburg Zenit Falken vs Mannheim Ventus in Süd
+2025-12-30 14:51:27 - INFO - Reguläre Tore: Ravensburg Zenit Falken 1:2 Mannheim Ventus
+2025-12-30 14:51:27 - INFO - Endergebnis: Ravensburg Zenit Falken 1:2 Mannheim Ventus - Overtime: False, Shootout: False
+2025-12-30 14:51:27 - INFO - Simuliere Liga-Spiel: Straubing Forest Tigers vs München FluxBullen in Süd
+2025-12-30 14:51:27 - INFO - Reguläre Tore: Straubing Forest Tigers 0:1 München FluxBullen
+2025-12-30 14:51:27 - INFO - Endergebnis: Straubing Forest Tigers 0:1 München FluxBullen - Overtime: False, Shootout: False
+2025-12-30 14:51:27 - INFO - Simuliere Liga-Spiel: Schwenningen Sturmflügel vs Landshut Lichtkern in Süd
+2025-12-30 14:51:27 - INFO - Reguläre Tore: Schwenningen Sturmflügel 2:2 Landshut Lichtkern
+2025-12-30 14:51:27 - INFO - Endergebnis: Schwenningen Sturmflügel 3:2 Landshut Lichtkern - Overtime: True, Shootout: False
+2025-12-30 15:00:23 - INFO - Simuliere Liga-Spiel: Iserlohn Miners vs Bad Nauheim Devils in Nord
+2025-12-30 15:00:23 - INFO - Reguläre Tore: Iserlohn Miners 2:3 Bad Nauheim Devils
+2025-12-30 15:00:23 - INFO - Endergebnis: Iserlohn Miners 2:3 Bad Nauheim Devils - Overtime: False, Shootout: False
+2025-12-30 15:00:23 - INFO - Simuliere Liga-Spiel: Frankfurt Core vs Köln Blitzhaie in Nord
+2025-12-30 15:00:23 - INFO - Reguläre Tore: Frankfurt Core 3:4 Köln Blitzhaie
+2025-12-30 15:00:23 - INFO - Endergebnis: Frankfurt Core 3:4 Köln Blitzhaie - Overtime: False, Shootout: False
+2025-12-30 15:00:23 - INFO - Simuliere Liga-Spiel: Düsseldorf Aurora vs Krefeld Kernschlag in Nord
+2025-12-30 15:00:23 - INFO - Reguläre Tore: Düsseldorf Aurora 2:1 Krefeld Kernschlag
+2025-12-30 15:00:23 - INFO - Endergebnis: Düsseldorf Aurora 2:1 Krefeld Kernschlag - Overtime: False, Shootout: False
+2025-12-30 15:00:23 - INFO - Simuliere Liga-Spiel: Bremerhaven Trident vs Kassel Zenit in Nord
+2025-12-30 15:00:23 - INFO - Reguläre Tore: Bremerhaven Trident 4:2 Kassel Zenit
+2025-12-30 15:00:23 - INFO - Endergebnis: Bremerhaven Trident 4:2 Kassel Zenit - Overtime: False, Shootout: False
+2025-12-30 15:00:23 - INFO - Simuliere Liga-Spiel: Whiteout Berlin vs Wolfsburg Voltsturm in Nord
+2025-12-30 15:00:23 - INFO - Reguläre Tore: Whiteout Berlin 1:2 Wolfsburg Voltsturm
+2025-12-30 15:00:23 - INFO - Endergebnis: Whiteout Berlin 1:2 Wolfsburg Voltsturm - Overtime: False, Shootout: False
+2025-12-30 15:00:23 - INFO - Simuliere Liga-Spiel: Augsburg Ferox vs Novadelta Panther in Süd
+2025-12-30 15:00:23 - INFO - Reguläre Tore: Augsburg Ferox 3:2 Novadelta Panther
+2025-12-30 15:00:23 - INFO - Endergebnis: Augsburg Ferox 3:2 Novadelta Panther - Overtime: False, Shootout: False
+2025-12-30 15:00:23 - INFO - Simuliere Liga-Spiel: Mannheim Ventus vs Nürnberg Eistiger in Süd
+2025-12-30 15:00:23 - INFO - Reguläre Tore: Mannheim Ventus 2:3 Nürnberg Eistiger
+2025-12-30 15:00:23 - INFO - Endergebnis: Mannheim Ventus 2:3 Nürnberg Eistiger - Overtime: False, Shootout: False
+2025-12-30 15:00:23 - INFO - Simuliere Liga-Spiel: München FluxBullen vs Regensburg Pulse in Süd
+2025-12-30 15:00:23 - INFO - Reguläre Tore: München FluxBullen 2:2 Regensburg Pulse
+2025-12-30 15:00:23 - INFO - Endergebnis: München FluxBullen 2:3 Regensburg Pulse - Overtime: True, Shootout: False
+2025-12-30 15:00:23 - INFO - Simuliere Liga-Spiel: Landshut Lichtkern vs Ravensburg Zenit Falken in Süd
+2025-12-30 15:00:23 - INFO - Reguläre Tore: Landshut Lichtkern 1:1 Ravensburg Zenit Falken
+2025-12-30 15:00:23 - INFO - Endergebnis: Landshut Lichtkern 1:2 Ravensburg Zenit Falken - Overtime: True, Shootout: False
+2025-12-30 15:00:23 - INFO - Simuliere Liga-Spiel: Schwenningen Sturmflügel vs Straubing Forest Tigers in Süd
+2025-12-30 15:00:23 - INFO - Reguläre Tore: Schwenningen Sturmflügel 3:2 Straubing Forest Tigers
+2025-12-30 15:00:23 - INFO - Endergebnis: Schwenningen Sturmflügel 3:2 Straubing Forest Tigers - Overtime: False, Shootout: False
+2025-12-30 15:01:16 - INFO - Simuliere Liga-Spiel: Bad Nauheim Devils vs Frankfurt Core in Nord
+2025-12-30 15:01:16 - INFO - Reguläre Tore: Bad Nauheim Devils 2:2 Frankfurt Core
+2025-12-30 15:01:16 - INFO - Endergebnis: Bad Nauheim Devils 3:2 Frankfurt Core - Overtime: True, Shootout: False
+2025-12-30 15:01:16 - INFO - Simuliere Liga-Spiel: Iserlohn Miners vs Düsseldorf Aurora in Nord
+2025-12-30 15:01:16 - INFO - Reguläre Tore: Iserlohn Miners 2:1 Düsseldorf Aurora
+2025-12-30 15:01:16 - INFO - Endergebnis: Iserlohn Miners 2:1 Düsseldorf Aurora - Overtime: False, Shootout: False
+2025-12-30 15:01:16 - INFO - Simuliere Liga-Spiel: Köln Blitzhaie vs Bremerhaven Trident in Nord
+2025-12-30 15:01:16 - INFO - Reguläre Tore: Köln Blitzhaie 2:1 Bremerhaven Trident
+2025-12-30 15:01:16 - INFO - Endergebnis: Köln Blitzhaie 2:1 Bremerhaven Trident - Overtime: False, Shootout: False
+2025-12-30 15:01:16 - INFO - Simuliere Liga-Spiel: Krefeld Kernschlag vs Whiteout Berlin in Nord
+2025-12-30 15:01:16 - INFO - Reguläre Tore: Krefeld Kernschlag 2:3 Whiteout Berlin
+2025-12-30 15:01:16 - INFO - Endergebnis: Krefeld Kernschlag 2:3 Whiteout Berlin - Overtime: False, Shootout: False
+2025-12-30 15:01:16 - INFO - Simuliere Liga-Spiel: Kassel Zenit vs Wolfsburg Voltsturm in Nord
+2025-12-30 15:01:16 - INFO - Reguläre Tore: Kassel Zenit 2:2 Wolfsburg Voltsturm
+2025-12-30 15:01:16 - INFO - Endergebnis: Kassel Zenit 3:2 Wolfsburg Voltsturm - Overtime: True, Shootout: False
+2025-12-30 15:01:16 - INFO - Simuliere Liga-Spiel: Augsburg Ferox vs Mannheim Ventus in Süd
+2025-12-30 15:01:16 - INFO - Reguläre Tore: Augsburg Ferox 3:4 Mannheim Ventus
+2025-12-30 15:01:16 - INFO - Endergebnis: Augsburg Ferox 3:4 Mannheim Ventus - Overtime: False, Shootout: False
+2025-12-30 15:01:16 - INFO - Simuliere Liga-Spiel: Novadelta Panther vs München FluxBullen in Süd
+2025-12-30 15:01:16 - INFO - Reguläre Tore: Novadelta Panther 2:1 München FluxBullen
+2025-12-30 15:01:16 - INFO - Endergebnis: Novadelta Panther 2:1 München FluxBullen - Overtime: False, Shootout: False
+2025-12-30 15:01:16 - INFO - Simuliere Liga-Spiel: Nürnberg Eistiger vs Landshut Lichtkern in Süd
+2025-12-30 15:01:16 - INFO - Reguläre Tore: Nürnberg Eistiger 3:1 Landshut Lichtkern
+2025-12-30 15:01:16 - INFO - Endergebnis: Nürnberg Eistiger 3:1 Landshut Lichtkern - Overtime: False, Shootout: False
+2025-12-30 15:01:17 - INFO - Simuliere Liga-Spiel: Regensburg Pulse vs Schwenningen Sturmflügel in Süd
+2025-12-30 15:01:17 - INFO - Reguläre Tore: Regensburg Pulse 2:2 Schwenningen Sturmflügel
+2025-12-30 15:01:17 - INFO - Endergebnis: Regensburg Pulse 3:2 Schwenningen Sturmflügel - Overtime: True, Shootout: False
+2025-12-30 15:01:17 - INFO - Simuliere Liga-Spiel: Ravensburg Zenit Falken vs Straubing Forest Tigers in Süd
+2025-12-30 15:01:17 - INFO - Reguläre Tore: Ravensburg Zenit Falken 3:1 Straubing Forest Tigers
+2025-12-30 15:01:17 - INFO - Endergebnis: Ravensburg Zenit Falken 3:1 Straubing Forest Tigers - Overtime: False, Shootout: False
+2025-12-30 15:27:27 - INFO - Simuliere Liga-Spiel: Düsseldorf Aurora vs Bad Nauheim Devils in Nord
+2025-12-30 15:27:27 - INFO - Reguläre Tore: Düsseldorf Aurora 0:1 Bad Nauheim Devils
+2025-12-30 15:27:27 - INFO - Endergebnis: Düsseldorf Aurora 0:1 Bad Nauheim Devils - Overtime: False, Shootout: False
+2025-12-30 15:27:27 - INFO - Simuliere Liga-Spiel: Bremerhaven Trident vs Frankfurt Core in Nord
+2025-12-30 15:27:27 - INFO - Reguläre Tore: Bremerhaven Trident 0:2 Frankfurt Core
+2025-12-30 15:27:27 - INFO - Endergebnis: Bremerhaven Trident 0:2 Frankfurt Core - Overtime: False, Shootout: False
+2025-12-30 15:27:27 - INFO - Simuliere Liga-Spiel: Whiteout Berlin vs Iserlohn Miners in Nord
+2025-12-30 15:27:27 - INFO - Reguläre Tore: Whiteout Berlin 3:0 Iserlohn Miners
+2025-12-30 15:27:27 - INFO - Endergebnis: Whiteout Berlin 3:0 Iserlohn Miners - Overtime: False, Shootout: False
+2025-12-30 15:27:27 - INFO - Simuliere Liga-Spiel: Wolfsburg Voltsturm vs Köln Blitzhaie in Nord
+2025-12-30 15:27:27 - INFO - Reguläre Tore: Wolfsburg Voltsturm 4:0 Köln Blitzhaie
+2025-12-30 15:27:27 - INFO - Endergebnis: Wolfsburg Voltsturm 4:0 Köln Blitzhaie - Overtime: False, Shootout: False
+2025-12-30 15:27:27 - INFO - Simuliere Liga-Spiel: Kassel Zenit vs Krefeld Kernschlag in Nord
+2025-12-30 15:27:27 - INFO - Reguläre Tore: Kassel Zenit 2:3 Krefeld Kernschlag
+2025-12-30 15:27:27 - INFO - Endergebnis: Kassel Zenit 2:3 Krefeld Kernschlag - Overtime: False, Shootout: False
+2025-12-30 15:27:27 - INFO - Simuliere Liga-Spiel: München FluxBullen vs Augsburg Ferox in Süd
+2025-12-30 15:27:27 - INFO - Reguläre Tore: München FluxBullen 2:3 Augsburg Ferox
+2025-12-30 15:27:27 - INFO - Endergebnis: München FluxBullen 2:3 Augsburg Ferox - Overtime: False, Shootout: False
+2025-12-30 15:27:27 - INFO - Simuliere Liga-Spiel: Landshut Lichtkern vs Mannheim Ventus in Süd
+2025-12-30 15:27:27 - INFO - Reguläre Tore: Landshut Lichtkern 3:1 Mannheim Ventus
+2025-12-30 15:27:27 - INFO - Endergebnis: Landshut Lichtkern 3:1 Mannheim Ventus - Overtime: False, Shootout: False
+2025-12-30 15:27:27 - INFO - Simuliere Liga-Spiel: Schwenningen Sturmflügel vs Novadelta Panther in Süd
+2025-12-30 15:27:27 - INFO - Reguläre Tore: Schwenningen Sturmflügel 2:3 Novadelta Panther
+2025-12-30 15:27:27 - INFO - Endergebnis: Schwenningen Sturmflügel 2:3 Novadelta Panther - Overtime: False, Shootout: False
+2025-12-30 15:27:27 - INFO - Simuliere Liga-Spiel: Straubing Forest Tigers vs Nürnberg Eistiger in Süd
+2025-12-30 15:27:27 - INFO - Reguläre Tore: Straubing Forest Tigers 2:4 Nürnberg Eistiger
+2025-12-30 15:27:27 - INFO - Endergebnis: Straubing Forest Tigers 2:4 Nürnberg Eistiger - Overtime: False, Shootout: False
+2025-12-30 15:27:27 - INFO - Simuliere Liga-Spiel: Ravensburg Zenit Falken vs Regensburg Pulse in Süd
+2025-12-30 15:27:27 - INFO - Reguläre Tore: Ravensburg Zenit Falken 1:3 Regensburg Pulse
+2025-12-30 15:27:27 - INFO - Endergebnis: Ravensburg Zenit Falken 1:3 Regensburg Pulse - Overtime: False, Shootout: False
+2025-12-30 15:27:44 - INFO - Simuliere Liga-Spiel: Bad Nauheim Devils vs Bremerhaven Trident in Nord
+2025-12-30 15:27:44 - INFO - Reguläre Tore: Bad Nauheim Devils 3:4 Bremerhaven Trident
+2025-12-30 15:27:44 - INFO - Endergebnis: Bad Nauheim Devils 3:4 Bremerhaven Trident - Overtime: False, Shootout: False
+2025-12-30 15:27:44 - INFO - Simuliere Liga-Spiel: Düsseldorf Aurora vs Whiteout Berlin in Nord
+2025-12-30 15:27:44 - INFO - Reguläre Tore: Düsseldorf Aurora 0:3 Whiteout Berlin
+2025-12-30 15:27:44 - INFO - Endergebnis: Düsseldorf Aurora 0:3 Whiteout Berlin - Overtime: False, Shootout: False
+2025-12-30 15:27:44 - INFO - Simuliere Liga-Spiel: Frankfurt Core vs Wolfsburg Voltsturm in Nord
+2025-12-30 15:27:44 - INFO - Reguläre Tore: Frankfurt Core 3:2 Wolfsburg Voltsturm
+2025-12-30 15:27:44 - INFO - Endergebnis: Frankfurt Core 3:2 Wolfsburg Voltsturm - Overtime: False, Shootout: False
+2025-12-30 15:27:44 - INFO - Simuliere Liga-Spiel: Iserlohn Miners vs Kassel Zenit in Nord
+2025-12-30 15:27:44 - INFO - Reguläre Tore: Iserlohn Miners 1:2 Kassel Zenit
+2025-12-30 15:27:44 - INFO - Endergebnis: Iserlohn Miners 1:2 Kassel Zenit - Overtime: False, Shootout: False
+2025-12-30 15:27:44 - INFO - Simuliere Liga-Spiel: Köln Blitzhaie vs Krefeld Kernschlag in Nord
+2025-12-30 15:27:44 - INFO - Reguläre Tore: Köln Blitzhaie 4:2 Krefeld Kernschlag
+2025-12-30 15:27:44 - INFO - Endergebnis: Köln Blitzhaie 4:2 Krefeld Kernschlag - Overtime: False, Shootout: False
+2025-12-30 15:27:44 - INFO - Simuliere Liga-Spiel: Augsburg Ferox vs Landshut Lichtkern in Süd
+2025-12-30 15:27:44 - INFO - Reguläre Tore: Augsburg Ferox 4:3 Landshut Lichtkern
+2025-12-30 15:27:44 - INFO - Endergebnis: Augsburg Ferox 4:3 Landshut Lichtkern - Overtime: False, Shootout: False
+2025-12-30 15:27:44 - INFO - Simuliere Liga-Spiel: München FluxBullen vs Schwenningen Sturmflügel in Süd
+2025-12-30 15:27:44 - INFO - Reguläre Tore: München FluxBullen 2:0 Schwenningen Sturmflügel
+2025-12-30 15:27:44 - INFO - Endergebnis: München FluxBullen 2:0 Schwenningen Sturmflügel - Overtime: False, Shootout: False
+2025-12-30 15:27:44 - INFO - Simuliere Liga-Spiel: Mannheim Ventus vs Straubing Forest Tigers in Süd
+2025-12-30 15:27:44 - INFO - Reguläre Tore: Mannheim Ventus 3:1 Straubing Forest Tigers
+2025-12-30 15:27:44 - INFO - Endergebnis: Mannheim Ventus 3:1 Straubing Forest Tigers - Overtime: False, Shootout: False
+2025-12-30 15:27:44 - INFO - Simuliere Liga-Spiel: Novadelta Panther vs Ravensburg Zenit Falken in Süd
+2025-12-30 15:27:44 - INFO - Reguläre Tore: Novadelta Panther 2:1 Ravensburg Zenit Falken
+2025-12-30 15:27:44 - INFO - Endergebnis: Novadelta Panther 2:1 Ravensburg Zenit Falken - Overtime: False, Shootout: False
+2025-12-30 15:27:45 - INFO - Simuliere Liga-Spiel: Nürnberg Eistiger vs Regensburg Pulse in Süd
+2025-12-30 15:27:45 - INFO - Reguläre Tore: Nürnberg Eistiger 1:1 Regensburg Pulse
+2025-12-30 15:27:45 - INFO - Endergebnis: Nürnberg Eistiger 2:1 Regensburg Pulse - Overtime: True, Shootout: False
+2025-12-30 15:28:38 - INFO - Simuliere Liga-Spiel: Whiteout Berlin vs Bad Nauheim Devils in Nord
+2025-12-30 15:28:38 - INFO - Reguläre Tore: Whiteout Berlin 1:2 Bad Nauheim Devils
+2025-12-30 15:28:38 - INFO - Endergebnis: Whiteout Berlin 1:2 Bad Nauheim Devils - Overtime: False, Shootout: False
+2025-12-30 15:28:38 - INFO - Simuliere Liga-Spiel: Wolfsburg Voltsturm vs Bremerhaven Trident in Nord
+2025-12-30 15:28:38 - INFO - Reguläre Tore: Wolfsburg Voltsturm 0:3 Bremerhaven Trident
+2025-12-30 15:28:38 - INFO - Endergebnis: Wolfsburg Voltsturm 0:3 Bremerhaven Trident - Overtime: False, Shootout: False
+2025-12-30 15:28:38 - INFO - Simuliere Liga-Spiel: Kassel Zenit vs Düsseldorf Aurora in Nord
+2025-12-30 15:28:38 - INFO - Reguläre Tore: Kassel Zenit 1:2 Düsseldorf Aurora
+2025-12-30 15:28:38 - INFO - Endergebnis: Kassel Zenit 1:2 Düsseldorf Aurora - Overtime: False, Shootout: False
+2025-12-30 15:28:38 - INFO - Simuliere Liga-Spiel: Krefeld Kernschlag vs Frankfurt Core in Nord
+2025-12-30 15:28:38 - INFO - Reguläre Tore: Krefeld Kernschlag 1:1 Frankfurt Core
+2025-12-30 15:28:38 - INFO - Endergebnis: Krefeld Kernschlag 1:2 Frankfurt Core - Overtime: True, Shootout: False
+2025-12-30 15:28:38 - INFO - Simuliere Liga-Spiel: Köln Blitzhaie vs Iserlohn Miners in Nord
+2025-12-30 15:28:38 - INFO - Reguläre Tore: Köln Blitzhaie 3:1 Iserlohn Miners
+2025-12-30 15:28:38 - INFO - Endergebnis: Köln Blitzhaie 3:1 Iserlohn Miners - Overtime: False, Shootout: False
+2025-12-30 15:28:39 - INFO - Simuliere Liga-Spiel: Schwenningen Sturmflügel vs Augsburg Ferox in Süd
+2025-12-30 15:28:39 - INFO - Reguläre Tore: Schwenningen Sturmflügel 4:2 Augsburg Ferox
+2025-12-30 15:28:39 - INFO - Endergebnis: Schwenningen Sturmflügel 4:2 Augsburg Ferox - Overtime: False, Shootout: False
+2025-12-30 15:28:39 - INFO - Simuliere Liga-Spiel: Straubing Forest Tigers vs Landshut Lichtkern in Süd
+2025-12-30 15:28:39 - INFO - Reguläre Tore: Straubing Forest Tigers 2:2 Landshut Lichtkern
+2025-12-30 15:28:39 - INFO - Endergebnis: Straubing Forest Tigers 2:3 Landshut Lichtkern - Overtime: True, Shootout: False
+2025-12-30 15:28:39 - INFO - Simuliere Liga-Spiel: Ravensburg Zenit Falken vs München FluxBullen in Süd
+2025-12-30 15:28:39 - INFO - Reguläre Tore: Ravensburg Zenit Falken 1:2 München FluxBullen
+2025-12-30 15:28:39 - INFO - Endergebnis: Ravensburg Zenit Falken 1:2 München FluxBullen - Overtime: False, Shootout: False
+2025-12-30 15:28:39 - INFO - Simuliere Liga-Spiel: Regensburg Pulse vs Mannheim Ventus in Süd
+2025-12-30 15:28:39 - INFO - Reguläre Tore: Regensburg Pulse 1:3 Mannheim Ventus
+2025-12-30 15:28:39 - INFO - Endergebnis: Regensburg Pulse 1:3 Mannheim Ventus - Overtime: False, Shootout: False
+2025-12-30 15:28:39 - INFO - Simuliere Liga-Spiel: Nürnberg Eistiger vs Novadelta Panther in Süd
+2025-12-30 15:28:39 - INFO - Reguläre Tore: Nürnberg Eistiger 2:2 Novadelta Panther
+2025-12-30 15:28:39 - INFO - Endergebnis: Nürnberg Eistiger 3:2 Novadelta Panther - Overtime: True, Shootout: False
+2025-12-30 15:33:40 - INFO - Simuliere Liga-Spiel: Bad Nauheim Devils vs Wolfsburg Voltsturm in Nord
+2025-12-30 15:33:40 - INFO - Reguläre Tore: Bad Nauheim Devils 2:2 Wolfsburg Voltsturm
+2025-12-30 15:33:40 - INFO - Endergebnis: Bad Nauheim Devils 3:2 Wolfsburg Voltsturm - Overtime: True, Shootout: False
+2025-12-30 15:33:40 - INFO - Simuliere Liga-Spiel: Whiteout Berlin vs Kassel Zenit in Nord
+2025-12-30 15:33:40 - INFO - Reguläre Tore: Whiteout Berlin 3:0 Kassel Zenit
+2025-12-30 15:33:40 - INFO - Endergebnis: Whiteout Berlin 3:0 Kassel Zenit - Overtime: False, Shootout: False
+2025-12-30 15:33:40 - INFO - Simuliere Liga-Spiel: Bremerhaven Trident vs Krefeld Kernschlag in Nord
+2025-12-30 15:33:40 - INFO - Reguläre Tore: Bremerhaven Trident 4:2 Krefeld Kernschlag
+2025-12-30 15:33:40 - INFO - Endergebnis: Bremerhaven Trident 4:2 Krefeld Kernschlag - Overtime: False, Shootout: False
+2025-12-30 15:33:40 - INFO - Simuliere Liga-Spiel: Düsseldorf Aurora vs Köln Blitzhaie in Nord
+2025-12-30 15:33:40 - INFO - Reguläre Tore: Düsseldorf Aurora 2:2 Köln Blitzhaie
+2025-12-30 15:33:40 - INFO - Endergebnis: Düsseldorf Aurora 2:3 Köln Blitzhaie - Overtime: True, Shootout: False
+2025-12-30 15:33:40 - INFO - Simuliere Liga-Spiel: Frankfurt Core vs Iserlohn Miners in Nord
+2025-12-30 15:33:40 - INFO - Reguläre Tore: Frankfurt Core 1:0 Iserlohn Miners
+2025-12-30 15:33:40 - INFO - Endergebnis: Frankfurt Core 1:0 Iserlohn Miners - Overtime: False, Shootout: False
+2025-12-30 15:33:41 - INFO - Simuliere Liga-Spiel: Augsburg Ferox vs Straubing Forest Tigers in Süd
+2025-12-30 15:33:41 - INFO - Reguläre Tore: Augsburg Ferox 1:1 Straubing Forest Tigers
+2025-12-30 15:33:41 - INFO - Endergebnis: Augsburg Ferox 2:1 Straubing Forest Tigers - Overtime: True, Shootout: False
+2025-12-30 15:33:41 - INFO - Simuliere Liga-Spiel: Schwenningen Sturmflügel vs Ravensburg Zenit Falken in Süd
+2025-12-30 15:33:41 - INFO - Reguläre Tore: Schwenningen Sturmflügel 1:2 Ravensburg Zenit Falken
+2025-12-30 15:33:41 - INFO - Endergebnis: Schwenningen Sturmflügel 1:2 Ravensburg Zenit Falken - Overtime: False, Shootout: False
+2025-12-30 15:33:41 - INFO - Simuliere Liga-Spiel: Landshut Lichtkern vs Regensburg Pulse in Süd
+2025-12-30 15:33:41 - INFO - Reguläre Tore: Landshut Lichtkern 3:5 Regensburg Pulse
+2025-12-30 15:33:41 - INFO - Endergebnis: Landshut Lichtkern 3:5 Regensburg Pulse - Overtime: False, Shootout: False
+2025-12-30 15:33:41 - INFO - Simuliere Liga-Spiel: München FluxBullen vs Nürnberg Eistiger in Süd
+2025-12-30 15:33:41 - INFO - Reguläre Tore: München FluxBullen 1:3 Nürnberg Eistiger
+2025-12-30 15:33:41 - INFO - Endergebnis: München FluxBullen 1:3 Nürnberg Eistiger - Overtime: False, Shootout: False
+2025-12-30 15:33:41 - INFO - Simuliere Liga-Spiel: Novadelta Panther vs Mannheim Ventus in Süd
+2025-12-30 15:33:41 - INFO - Reguläre Tore: Novadelta Panther 3:2 Mannheim Ventus
+2025-12-30 15:33:41 - INFO - Endergebnis: Novadelta Panther 3:2 Mannheim Ventus - Overtime: False, Shootout: False
+2025-12-30 15:35:06 - INFO - Simuliere Liga-Spiel: Kassel Zenit vs Bad Nauheim Devils in Nord
+2025-12-30 15:35:06 - INFO - Reguläre Tore: Kassel Zenit 2:3 Bad Nauheim Devils
+2025-12-30 15:35:06 - INFO - Endergebnis: Kassel Zenit 2:3 Bad Nauheim Devils - Overtime: False, Shootout: False
+2025-12-30 15:35:06 - INFO - Simuliere Liga-Spiel: Krefeld Kernschlag vs Wolfsburg Voltsturm in Nord
+2025-12-30 15:35:06 - INFO - Reguläre Tore: Krefeld Kernschlag 0:3 Wolfsburg Voltsturm
+2025-12-30 15:35:06 - INFO - Endergebnis: Krefeld Kernschlag 0:3 Wolfsburg Voltsturm - Overtime: False, Shootout: False
+2025-12-30 15:35:06 - INFO - Simuliere Liga-Spiel: Köln Blitzhaie vs Whiteout Berlin in Nord
+2025-12-30 15:35:06 - INFO - Reguläre Tore: Köln Blitzhaie 2:3 Whiteout Berlin
+2025-12-30 15:35:06 - INFO - Endergebnis: Köln Blitzhaie 2:3 Whiteout Berlin - Overtime: False, Shootout: False
+2025-12-30 15:35:06 - INFO - Simuliere Liga-Spiel: Iserlohn Miners vs Bremerhaven Trident in Nord
+2025-12-30 15:35:06 - INFO - Reguläre Tore: Iserlohn Miners 2:2 Bremerhaven Trident
+2025-12-30 15:35:06 - INFO - Endergebnis: Iserlohn Miners 3:2 Bremerhaven Trident - Overtime: True, Shootout: False
+2025-12-30 15:35:06 - INFO - Simuliere Liga-Spiel: Frankfurt Core vs Düsseldorf Aurora in Nord
+2025-12-30 15:35:06 - INFO - Reguläre Tore: Frankfurt Core 2:2 Düsseldorf Aurora
+2025-12-30 15:35:06 - INFO - Endergebnis: Frankfurt Core 2:3 Düsseldorf Aurora - Overtime: True, Shootout: False
+2025-12-30 15:35:07 - INFO - Simuliere Liga-Spiel: Ravensburg Zenit Falken vs Augsburg Ferox in Süd
+2025-12-30 15:35:07 - INFO - Reguläre Tore: Ravensburg Zenit Falken 2:4 Augsburg Ferox
+2025-12-30 15:35:07 - INFO - Endergebnis: Ravensburg Zenit Falken 2:4 Augsburg Ferox - Overtime: False, Shootout: False
+2025-12-30 15:35:07 - INFO - Simuliere Liga-Spiel: Regensburg Pulse vs Straubing Forest Tigers in Süd
+2025-12-30 15:35:07 - INFO - Reguläre Tore: Regensburg Pulse 3:4 Straubing Forest Tigers
+2025-12-30 15:35:07 - INFO - Endergebnis: Regensburg Pulse 3:4 Straubing Forest Tigers - Overtime: False, Shootout: False
+2025-12-30 15:35:07 - INFO - Simuliere Liga-Spiel: Nürnberg Eistiger vs Schwenningen Sturmflügel in Süd
+2025-12-30 15:35:07 - INFO - Reguläre Tore: Nürnberg Eistiger 1:2 Schwenningen Sturmflügel
+2025-12-30 15:35:07 - INFO - Endergebnis: Nürnberg Eistiger 1:2 Schwenningen Sturmflügel - Overtime: False, Shootout: False
+2025-12-30 15:35:07 - INFO - Simuliere Liga-Spiel: Landshut Lichtkern vs Novadelta Panther in Süd
+2025-12-30 15:35:07 - INFO - Reguläre Tore: Landshut Lichtkern 1:1 Novadelta Panther
+2025-12-30 15:35:07 - INFO - Endergebnis: Landshut Lichtkern 2:1 Novadelta Panther - Overtime: True, Shootout: False
+2025-12-30 15:35:07 - INFO - Simuliere Liga-Spiel: Mannheim Ventus vs München FluxBullen in Süd
+2025-12-30 15:35:07 - INFO - Reguläre Tore: Mannheim Ventus 2:2 München FluxBullen
+2025-12-30 15:35:07 - INFO - Endergebnis: Mannheim Ventus 3:2 München FluxBullen - Overtime: True, Shootout: False
+2025-12-30 15:38:11 - INFO - Simuliere Liga-Spiel: Bad Nauheim Devils vs Krefeld Kernschlag in Nord
+2025-12-30 15:38:11 - INFO - Reguläre Tore: Bad Nauheim Devils 1:2 Krefeld Kernschlag
+2025-12-30 15:38:11 - INFO - Endergebnis: Bad Nauheim Devils 1:2 Krefeld Kernschlag - Overtime: False, Shootout: False
+2025-12-30 15:38:11 - INFO - Simuliere Liga-Spiel: Kassel Zenit vs Köln Blitzhaie in Nord
+2025-12-30 15:38:11 - INFO - Reguläre Tore: Kassel Zenit 4:2 Köln Blitzhaie
+2025-12-30 15:38:11 - INFO - Endergebnis: Kassel Zenit 4:2 Köln Blitzhaie - Overtime: False, Shootout: False
+2025-12-30 15:38:11 - INFO - Simuliere Liga-Spiel: Wolfsburg Voltsturm vs Iserlohn Miners in Nord
+2025-12-30 15:38:11 - INFO - Reguläre Tore: Wolfsburg Voltsturm 3:2 Iserlohn Miners
+2025-12-30 15:38:11 - INFO - Endergebnis: Wolfsburg Voltsturm 3:2 Iserlohn Miners - Overtime: False, Shootout: False
+2025-12-30 15:38:11 - INFO - Simuliere Liga-Spiel: Whiteout Berlin vs Frankfurt Core in Nord
+2025-12-30 15:38:11 - INFO - Reguläre Tore: Whiteout Berlin 0:0 Frankfurt Core
+2025-12-30 15:38:11 - INFO - Endergebnis: Whiteout Berlin 1:0 Frankfurt Core - Overtime: True, Shootout: False
+2025-12-30 15:38:11 - INFO - Simuliere Liga-Spiel: Bremerhaven Trident vs Düsseldorf Aurora in Nord
+2025-12-30 15:38:11 - INFO - Reguläre Tore: Bremerhaven Trident 2:3 Düsseldorf Aurora
+2025-12-30 15:38:11 - INFO - Endergebnis: Bremerhaven Trident 2:3 Düsseldorf Aurora - Overtime: False, Shootout: False
+2025-12-30 15:38:11 - INFO - Simuliere Liga-Spiel: Augsburg Ferox vs Regensburg Pulse in Süd
+2025-12-30 15:38:11 - INFO - Reguläre Tore: Augsburg Ferox 2:1 Regensburg Pulse
+2025-12-30 15:38:11 - INFO - Endergebnis: Augsburg Ferox 2:1 Regensburg Pulse - Overtime: False, Shootout: False
+2025-12-30 15:38:11 - INFO - Simuliere Liga-Spiel: Ravensburg Zenit Falken vs Nürnberg Eistiger in Süd
+2025-12-30 15:38:11 - INFO - Reguläre Tore: Ravensburg Zenit Falken 2:2 Nürnberg Eistiger
+2025-12-30 15:38:11 - INFO - Endergebnis: Ravensburg Zenit Falken 3:2 Nürnberg Eistiger - Overtime: True, Shootout: False
+2025-12-30 15:38:11 - INFO - Simuliere Liga-Spiel: Novadelta Panther vs Straubing Forest Tigers in Süd
+2025-12-30 15:38:11 - INFO - Reguläre Tore: Novadelta Panther 3:3 Straubing Forest Tigers
+2025-12-30 15:38:11 - INFO - Endergebnis: Novadelta Panther 4:3 Straubing Forest Tigers - Overtime: True, Shootout: False
+2025-12-30 15:38:11 - INFO - Simuliere Liga-Spiel: Schwenningen Sturmflügel vs Mannheim Ventus in Süd
+2025-12-30 15:38:11 - INFO - Reguläre Tore: Schwenningen Sturmflügel 3:2 Mannheim Ventus
+2025-12-30 15:38:11 - INFO - Endergebnis: Schwenningen Sturmflügel 3:2 Mannheim Ventus - Overtime: False, Shootout: False
+2025-12-30 15:38:12 - INFO - Simuliere Liga-Spiel: Landshut Lichtkern vs München FluxBullen in Süd
+2025-12-30 15:38:12 - INFO - Reguläre Tore: Landshut Lichtkern 2:2 München FluxBullen
+2025-12-30 15:38:12 - INFO - Endergebnis: Landshut Lichtkern 2:3 München FluxBullen - Overtime: True, Shootout: False
+2025-12-30 15:39:39 - INFO - Simuliere Liga-Spiel: Köln Blitzhaie vs Bad Nauheim Devils in Nord
+2025-12-30 15:39:39 - INFO - Reguläre Tore: Köln Blitzhaie 2:2 Bad Nauheim Devils
+2025-12-30 15:39:39 - INFO - Endergebnis: Köln Blitzhaie 3:2 Bad Nauheim Devils - Overtime: True, Shootout: False
+2025-12-30 15:39:39 - INFO - Simuliere Liga-Spiel: Iserlohn Miners vs Krefeld Kernschlag in Nord
+2025-12-30 15:39:39 - INFO - Reguläre Tore: Iserlohn Miners 3:0 Krefeld Kernschlag
+2025-12-30 15:39:39 - INFO - Endergebnis: Iserlohn Miners 3:0 Krefeld Kernschlag - Overtime: False, Shootout: False
+2025-12-30 15:39:39 - INFO - Simuliere Liga-Spiel: Frankfurt Core vs Kassel Zenit in Nord
+2025-12-30 15:39:39 - INFO - Reguläre Tore: Frankfurt Core 3:2 Kassel Zenit
+2025-12-30 15:39:39 - INFO - Endergebnis: Frankfurt Core 3:2 Kassel Zenit - Overtime: False, Shootout: False
+2025-12-30 15:39:39 - INFO - Simuliere Liga-Spiel: Düsseldorf Aurora vs Wolfsburg Voltsturm in Nord
+2025-12-30 15:39:39 - INFO - Reguläre Tore: Düsseldorf Aurora 2:1 Wolfsburg Voltsturm
+2025-12-30 15:39:39 - INFO - Endergebnis: Düsseldorf Aurora 2:1 Wolfsburg Voltsturm - Overtime: False, Shootout: False
+2025-12-30 15:39:39 - INFO - Simuliere Liga-Spiel: Bremerhaven Trident vs Whiteout Berlin in Nord
+2025-12-30 15:39:39 - INFO - Reguläre Tore: Bremerhaven Trident 4:4 Whiteout Berlin
+2025-12-30 15:39:39 - INFO - Endergebnis: Bremerhaven Trident 4:5 Whiteout Berlin - Overtime: True, Shootout: False
+2025-12-30 15:39:39 - INFO - Simuliere Liga-Spiel: Nürnberg Eistiger vs Augsburg Ferox in Süd
+2025-12-30 15:39:39 - INFO - Reguläre Tore: Nürnberg Eistiger 3:3 Augsburg Ferox
+2025-12-30 15:39:39 - INFO - Endergebnis: Nürnberg Eistiger 4:3 Augsburg Ferox - Overtime: True, Shootout: False
+2025-12-30 15:39:39 - INFO - Simuliere Liga-Spiel: Regensburg Pulse vs Novadelta Panther in Süd
+2025-12-30 15:39:39 - INFO - Reguläre Tore: Regensburg Pulse 0:2 Novadelta Panther
+2025-12-30 15:39:39 - INFO - Endergebnis: Regensburg Pulse 0:2 Novadelta Panther - Overtime: False, Shootout: False
+2025-12-30 15:39:39 - INFO - Simuliere Liga-Spiel: Mannheim Ventus vs Ravensburg Zenit Falken in Süd
+2025-12-30 15:39:39 - INFO - Reguläre Tore: Mannheim Ventus 2:2 Ravensburg Zenit Falken
+2025-12-30 15:39:39 - INFO - Endergebnis: Mannheim Ventus 2:3 Ravensburg Zenit Falken - Overtime: True, Shootout: False
+2025-12-30 15:39:39 - INFO - Simuliere Liga-Spiel: München FluxBullen vs Straubing Forest Tigers in Süd
+2025-12-30 15:39:39 - INFO - Reguläre Tore: München FluxBullen 1:2 Straubing Forest Tigers
+2025-12-30 15:39:39 - INFO - Endergebnis: München FluxBullen 1:2 Straubing Forest Tigers - Overtime: False, Shootout: False
+2025-12-30 15:39:40 - INFO - Simuliere Liga-Spiel: Landshut Lichtkern vs Schwenningen Sturmflügel in Süd
+2025-12-30 15:39:40 - INFO - Reguläre Tore: Landshut Lichtkern 1:1 Schwenningen Sturmflügel
+2025-12-30 15:39:40 - INFO - Endergebnis: Landshut Lichtkern 2:1 Schwenningen Sturmflügel - Overtime: True, Shootout: False
+2025-12-30 15:39:49 - INFO - Simuliere Liga-Spiel: Bad Nauheim Devils vs Iserlohn Miners in Nord
+2025-12-30 15:39:49 - INFO - Reguläre Tore: Bad Nauheim Devils 1:2 Iserlohn Miners
+2025-12-30 15:39:49 - INFO - Endergebnis: Bad Nauheim Devils 1:2 Iserlohn Miners - Overtime: False, Shootout: False
+2025-12-30 15:39:49 - INFO - Simuliere Liga-Spiel: Köln Blitzhaie vs Frankfurt Core in Nord
+2025-12-30 15:39:49 - INFO - Reguläre Tore: Köln Blitzhaie 2:2 Frankfurt Core
+2025-12-30 15:39:49 - INFO - Endergebnis: Köln Blitzhaie 3:2 Frankfurt Core - Overtime: True, Shootout: False
+2025-12-30 15:39:49 - INFO - Simuliere Liga-Spiel: Krefeld Kernschlag vs Düsseldorf Aurora in Nord
+2025-12-30 15:39:49 - INFO - Reguläre Tore: Krefeld Kernschlag 2:0 Düsseldorf Aurora
+2025-12-30 15:39:49 - INFO - Endergebnis: Krefeld Kernschlag 2:0 Düsseldorf Aurora - Overtime: False, Shootout: False
+2025-12-30 15:39:49 - INFO - Simuliere Liga-Spiel: Kassel Zenit vs Bremerhaven Trident in Nord
+2025-12-30 15:39:49 - INFO - Reguläre Tore: Kassel Zenit 3:2 Bremerhaven Trident
+2025-12-30 15:39:49 - INFO - Endergebnis: Kassel Zenit 3:2 Bremerhaven Trident - Overtime: False, Shootout: False
+2025-12-30 15:39:49 - INFO - Simuliere Liga-Spiel: Wolfsburg Voltsturm vs Whiteout Berlin in Nord
+2025-12-30 15:39:49 - INFO - Reguläre Tore: Wolfsburg Voltsturm 2:2 Whiteout Berlin
+2025-12-30 15:39:49 - INFO - Endergebnis: Wolfsburg Voltsturm 3:2 Whiteout Berlin - Overtime: True, Shootout: False
+2025-12-30 15:39:49 - INFO - Simuliere Liga-Spiel: Augsburg Ferox vs Ravensburg Zenit Falken in Süd
+2025-12-30 15:39:49 - INFO - Reguläre Tore: Augsburg Ferox 2:2 Ravensburg Zenit Falken
+2025-12-30 15:39:49 - INFO - Endergebnis: Augsburg Ferox 2:3 Ravensburg Zenit Falken - Overtime: True, Shootout: False
+2025-12-30 15:39:49 - INFO - Simuliere Liga-Spiel: Straubing Forest Tigers vs Regensburg Pulse in Süd
+2025-12-30 15:39:49 - INFO - Reguläre Tore: Straubing Forest Tigers 2:0 Regensburg Pulse
+2025-12-30 15:39:49 - INFO - Endergebnis: Straubing Forest Tigers 2:0 Regensburg Pulse - Overtime: False, Shootout: False
+2025-12-30 15:39:49 - INFO - Simuliere Liga-Spiel: Schwenningen Sturmflügel vs Nürnberg Eistiger in Süd
+2025-12-30 15:39:49 - INFO - Reguläre Tore: Schwenningen Sturmflügel 2:2 Nürnberg Eistiger
+2025-12-30 15:39:49 - INFO - Endergebnis: Schwenningen Sturmflügel 2:3 Nürnberg Eistiger - Overtime: True, Shootout: False
+2025-12-30 15:39:49 - INFO - Simuliere Liga-Spiel: Novadelta Panther vs Landshut Lichtkern in Süd
+2025-12-30 15:39:49 - INFO - Reguläre Tore: Novadelta Panther 2:1 Landshut Lichtkern
+2025-12-30 15:39:49 - INFO - Endergebnis: Novadelta Panther 2:1 Landshut Lichtkern - Overtime: False, Shootout: False
+2025-12-30 15:39:50 - INFO - Simuliere Liga-Spiel: München FluxBullen vs Mannheim Ventus in Süd
+2025-12-30 15:39:50 - INFO - Reguläre Tore: München FluxBullen 2:3 Mannheim Ventus
+2025-12-30 15:39:50 - INFO - Endergebnis: München FluxBullen 2:3 Mannheim Ventus - Overtime: False, Shootout: False
+2025-12-30 15:41:03 - INFO - Simuliere Liga-Spiel: Frankfurt Core vs Bad Nauheim Devils in Nord
+2025-12-30 15:41:03 - INFO - Reguläre Tore: Frankfurt Core 3:3 Bad Nauheim Devils
+2025-12-30 15:41:03 - INFO - Endergebnis: Frankfurt Core 3:4 Bad Nauheim Devils - Overtime: True, Shootout: False
+2025-12-30 15:41:03 - INFO - Updated last5 for Frankfurt Core: L1
+2025-12-30 15:41:03 - INFO - Updated last5 for Bad Nauheim Devils: W2
+2025-12-30 15:41:03 - INFO - Simuliere Liga-Spiel: Düsseldorf Aurora vs Iserlohn Miners in Nord
+2025-12-30 15:41:03 - INFO - Reguläre Tore: Düsseldorf Aurora 3:1 Iserlohn Miners
+2025-12-30 15:41:03 - INFO - Endergebnis: Düsseldorf Aurora 3:1 Iserlohn Miners - Overtime: False, Shootout: False
+2025-12-30 15:41:03 - INFO - Updated last5 for Düsseldorf Aurora: W
+2025-12-30 15:41:03 - INFO - Updated last5 for Iserlohn Miners: L
+2025-12-30 15:41:03 - INFO - Simuliere Liga-Spiel: Bremerhaven Trident vs Köln Blitzhaie in Nord
+2025-12-30 15:41:03 - INFO - Reguläre Tore: Bremerhaven Trident 2:1 Köln Blitzhaie
+2025-12-30 15:41:03 - INFO - Endergebnis: Bremerhaven Trident 2:1 Köln Blitzhaie - Overtime: False, Shootout: False
+2025-12-30 15:41:03 - INFO - Updated last5 for Bremerhaven Trident: W
+2025-12-30 15:41:03 - INFO - Updated last5 for Köln Blitzhaie: L
+2025-12-30 15:41:03 - INFO - Simuliere Liga-Spiel: Whiteout Berlin vs Krefeld Kernschlag in Nord
+2025-12-30 15:41:03 - INFO - Reguläre Tore: Whiteout Berlin 4:1 Krefeld Kernschlag
+2025-12-30 15:41:03 - INFO - Endergebnis: Whiteout Berlin 4:1 Krefeld Kernschlag - Overtime: False, Shootout: False
+2025-12-30 15:41:03 - INFO - Updated last5 for Whiteout Berlin: W
+2025-12-30 15:41:03 - INFO - Updated last5 for Krefeld Kernschlag: L
+2025-12-30 15:41:03 - INFO - Simuliere Liga-Spiel: Wolfsburg Voltsturm vs Kassel Zenit in Nord
+2025-12-30 15:41:03 - INFO - Reguläre Tore: Wolfsburg Voltsturm 4:2 Kassel Zenit
+2025-12-30 15:41:03 - INFO - Endergebnis: Wolfsburg Voltsturm 4:2 Kassel Zenit - Overtime: False, Shootout: False
+2025-12-30 15:41:03 - INFO - Updated last5 for Wolfsburg Voltsturm: W
+2025-12-30 15:41:03 - INFO - Updated last5 for Kassel Zenit: L
+2025-12-30 15:41:03 - INFO - Simuliere Liga-Spiel: Mannheim Ventus vs Augsburg Ferox in Süd
+2025-12-30 15:41:03 - INFO - Reguläre Tore: Mannheim Ventus 1:0 Augsburg Ferox
+2025-12-30 15:41:03 - INFO - Endergebnis: Mannheim Ventus 1:0 Augsburg Ferox - Overtime: False, Shootout: False
+2025-12-30 15:41:03 - INFO - Updated last5 for Mannheim Ventus: W
+2025-12-30 15:41:03 - INFO - Updated last5 for Augsburg Ferox: L
+2025-12-30 15:41:03 - INFO - Simuliere Liga-Spiel: München FluxBullen vs Novadelta Panther in Süd
+2025-12-30 15:41:03 - INFO - Reguläre Tore: München FluxBullen 1:1 Novadelta Panther
+2025-12-30 15:41:03 - INFO - Endergebnis: München FluxBullen 1:2 Novadelta Panther - Overtime: True, Shootout: False
+2025-12-30 15:41:03 - INFO - Updated last5 for München FluxBullen: L1
+2025-12-30 15:41:03 - INFO - Updated last5 for Novadelta Panther: W2
+2025-12-30 15:41:03 - INFO - Simuliere Liga-Spiel: Landshut Lichtkern vs Nürnberg Eistiger in Süd
+2025-12-30 15:41:03 - INFO - Reguläre Tore: Landshut Lichtkern 0:2 Nürnberg Eistiger
+2025-12-30 15:41:03 - INFO - Endergebnis: Landshut Lichtkern 0:2 Nürnberg Eistiger - Overtime: False, Shootout: False
+2025-12-30 15:41:03 - INFO - Updated last5 for Landshut Lichtkern: L
+2025-12-30 15:41:03 - INFO - Updated last5 for Nürnberg Eistiger: W
+2025-12-30 15:41:04 - INFO - Simuliere Liga-Spiel: Schwenningen Sturmflügel vs Regensburg Pulse in Süd
+2025-12-30 15:41:04 - INFO - Reguläre Tore: Schwenningen Sturmflügel 2:3 Regensburg Pulse
+2025-12-30 15:41:04 - INFO - Endergebnis: Schwenningen Sturmflügel 2:3 Regensburg Pulse - Overtime: False, Shootout: False
+2025-12-30 15:41:04 - INFO - Updated last5 for Schwenningen Sturmflügel: L
+2025-12-30 15:41:04 - INFO - Updated last5 for Regensburg Pulse: W
+2025-12-30 15:41:04 - INFO - Simuliere Liga-Spiel: Straubing Forest Tigers vs Ravensburg Zenit Falken in Süd
+2025-12-30 15:41:04 - INFO - Reguläre Tore: Straubing Forest Tigers 2:0 Ravensburg Zenit Falken
+2025-12-30 15:41:04 - INFO - Endergebnis: Straubing Forest Tigers 2:0 Ravensburg Zenit Falken - Overtime: False, Shootout: False
+2025-12-30 15:41:04 - INFO - Updated last5 for Straubing Forest Tigers: W
+2025-12-30 15:41:04 - INFO - Updated last5 for Ravensburg Zenit Falken: L
+2025-12-30 15:43:44 - INFO - Simuliere Liga-Spiel: Bad Nauheim Devils vs Düsseldorf Aurora in Nord
+2025-12-30 15:43:44 - INFO - Reguläre Tore: Bad Nauheim Devils 3:1 Düsseldorf Aurora
+2025-12-30 15:43:44 - INFO - Endergebnis: Bad Nauheim Devils 3:1 Düsseldorf Aurora - Overtime: False, Shootout: False
+2025-12-30 15:43:44 - INFO - Updated last5 for Bad Nauheim Devils: W
+2025-12-30 15:43:44 - INFO - Updated last5 for Düsseldorf Aurora: L
+2025-12-30 15:43:44 - INFO - Simuliere Liga-Spiel: Frankfurt Core vs Bremerhaven Trident in Nord
+2025-12-30 15:43:44 - INFO - Reguläre Tore: Frankfurt Core 4:3 Bremerhaven Trident
+2025-12-30 15:43:44 - INFO - Endergebnis: Frankfurt Core 4:3 Bremerhaven Trident - Overtime: False, Shootout: False
+2025-12-30 15:43:44 - INFO - Updated last5 for Frankfurt Core: W
+2025-12-30 15:43:44 - INFO - Updated last5 for Bremerhaven Trident: L
+2025-12-30 15:43:44 - INFO - Simuliere Liga-Spiel: Iserlohn Miners vs Whiteout Berlin in Nord
+2025-12-30 15:43:44 - INFO - Reguläre Tore: Iserlohn Miners 2:2 Whiteout Berlin
+2025-12-30 15:43:44 - INFO - Endergebnis: Iserlohn Miners 2:3 Whiteout Berlin - Overtime: True, Shootout: False
+2025-12-30 15:43:44 - INFO - Updated last5 for Iserlohn Miners: L1
+2025-12-30 15:43:44 - INFO - Updated last5 for Whiteout Berlin: W2
+2025-12-30 15:43:44 - INFO - Simuliere Liga-Spiel: Köln Blitzhaie vs Wolfsburg Voltsturm in Nord
+2025-12-30 15:43:44 - INFO - Reguläre Tore: Köln Blitzhaie 2:1 Wolfsburg Voltsturm
+2025-12-30 15:43:44 - INFO - Endergebnis: Köln Blitzhaie 2:1 Wolfsburg Voltsturm - Overtime: False, Shootout: False
+2025-12-30 15:43:44 - INFO - Updated last5 for Köln Blitzhaie: W
+2025-12-30 15:43:44 - INFO - Updated last5 for Wolfsburg Voltsturm: L
+2025-12-30 15:43:44 - INFO - Simuliere Liga-Spiel: Krefeld Kernschlag vs Kassel Zenit in Nord
+2025-12-30 15:43:44 - INFO - Reguläre Tore: Krefeld Kernschlag 0:2 Kassel Zenit
+2025-12-30 15:43:44 - INFO - Endergebnis: Krefeld Kernschlag 0:2 Kassel Zenit - Overtime: False, Shootout: False
+2025-12-30 15:43:44 - INFO - Updated last5 for Krefeld Kernschlag: L
+2025-12-30 15:43:44 - INFO - Updated last5 for Kassel Zenit: W
+2025-12-30 15:43:45 - INFO - Simuliere Liga-Spiel: Augsburg Ferox vs München FluxBullen in Süd
+2025-12-30 15:43:45 - INFO - Reguläre Tore: Augsburg Ferox 1:3 München FluxBullen
+2025-12-30 15:43:45 - INFO - Endergebnis: Augsburg Ferox 1:3 München FluxBullen - Overtime: False, Shootout: False
+2025-12-30 15:43:45 - INFO - Updated last5 for Augsburg Ferox: L
+2025-12-30 15:43:45 - INFO - Updated last5 for München FluxBullen: W
+2025-12-30 15:43:45 - INFO - Simuliere Liga-Spiel: Mannheim Ventus vs Landshut Lichtkern in Süd
+2025-12-30 15:43:45 - INFO - Reguläre Tore: Mannheim Ventus 2:3 Landshut Lichtkern
+2025-12-30 15:43:45 - INFO - Endergebnis: Mannheim Ventus 2:3 Landshut Lichtkern - Overtime: False, Shootout: False
+2025-12-30 15:43:45 - INFO - Updated last5 for Mannheim Ventus: L
+2025-12-30 15:43:45 - INFO - Updated last5 for Landshut Lichtkern: W
+2025-12-30 15:43:45 - INFO - Simuliere Liga-Spiel: Novadelta Panther vs Schwenningen Sturmflügel in Süd
+2025-12-30 15:43:45 - INFO - Reguläre Tore: Novadelta Panther 1:2 Schwenningen Sturmflügel
+2025-12-30 15:43:45 - INFO - Endergebnis: Novadelta Panther 1:2 Schwenningen Sturmflügel - Overtime: False, Shootout: False
+2025-12-30 15:43:45 - INFO - Updated last5 for Novadelta Panther: L
+2025-12-30 15:43:45 - INFO - Updated last5 for Schwenningen Sturmflügel: W
+2025-12-30 15:43:45 - INFO - Simuliere Liga-Spiel: Nürnberg Eistiger vs Straubing Forest Tigers in Süd
+2025-12-30 15:43:45 - INFO - Reguläre Tore: Nürnberg Eistiger 3:2 Straubing Forest Tigers
+2025-12-30 15:43:45 - INFO - Endergebnis: Nürnberg Eistiger 3:2 Straubing Forest Tigers - Overtime: False, Shootout: False
+2025-12-30 15:43:45 - INFO - Updated last5 for Nürnberg Eistiger: W
+2025-12-30 15:43:45 - INFO - Updated last5 for Straubing Forest Tigers: L
+2025-12-30 15:43:45 - INFO - Simuliere Liga-Spiel: Regensburg Pulse vs Ravensburg Zenit Falken in Süd
+2025-12-30 15:43:45 - INFO - Reguläre Tore: Regensburg Pulse 2:1 Ravensburg Zenit Falken
+2025-12-30 15:43:45 - INFO - Endergebnis: Regensburg Pulse 2:1 Ravensburg Zenit Falken - Overtime: False, Shootout: False
+2025-12-30 15:43:45 - INFO - Updated last5 for Regensburg Pulse: W
+2025-12-30 15:43:45 - INFO - Updated last5 for Ravensburg Zenit Falken: L
+2025-12-30 15:43:45 - INFO - Exported table with last5: {'Team': 'Frankfurt Core', 'Points': 30, 'GF': 9, 'GA': 8, 'GD': 1, 'last5': 'W'}
+2025-12-30 15:43:45 - INFO - Exported table with last5: {'Team': 'Nürnberg Eistiger', 'Points': 37, 'GF': 7, 'GA': 4, 'GD': 3, 'last5': 'W'}
+2025-12-30 15:43:48 - INFO - Exported table with last5: {'Team': 'Frankfurt Core', 'Points': 30, 'GF': 9, 'GA': 8, 'GD': 1, 'last5': 'W'}
+2025-12-30 15:43:48 - INFO - Exported table with last5: {'Team': 'Nürnberg Eistiger', 'Points': 37, 'GF': 7, 'GA': 4, 'GD': 3, 'last5': 'W'}
+2025-12-30 15:44:08 - INFO - Exported table with last5: {'Team': 'Frankfurt Core', 'Points': 30, 'GF': 9, 'GA': 8, 'GD': 1, 'last5': 'W'}
+2025-12-30 15:44:08 - INFO - Exported table with last5: {'Team': 'Nürnberg Eistiger', 'Points': 37, 'GF': 7, 'GA': 4, 'GD': 3, 'last5': 'W'}
+2025-12-30 15:44:49 - INFO - Simuliere Liga-Spiel: Bremerhaven Trident vs Bad Nauheim Devils in Nord
+2025-12-30 15:44:49 - INFO - Reguläre Tore: Bremerhaven Trident 2:3 Bad Nauheim Devils
+2025-12-30 15:44:49 - INFO - Endergebnis: Bremerhaven Trident 2:3 Bad Nauheim Devils - Overtime: False, Shootout: False
+2025-12-30 15:44:49 - INFO - Updated last5 for Bremerhaven Trident: L
+2025-12-30 15:44:49 - INFO - Updated last5 for Bad Nauheim Devils: W
+2025-12-30 15:44:49 - INFO - Simuliere Liga-Spiel: Whiteout Berlin vs Düsseldorf Aurora in Nord
+2025-12-30 15:44:49 - INFO - Reguläre Tore: Whiteout Berlin 2:2 Düsseldorf Aurora
+2025-12-30 15:44:49 - INFO - Endergebnis: Whiteout Berlin 2:3 Düsseldorf Aurora - Overtime: True, Shootout: False
+2025-12-30 15:44:49 - INFO - Updated last5 for Whiteout Berlin: L1
+2025-12-30 15:44:49 - INFO - Updated last5 for Düsseldorf Aurora: W2
+2025-12-30 15:44:49 - INFO - Simuliere Liga-Spiel: Wolfsburg Voltsturm vs Frankfurt Core in Nord
+2025-12-30 15:44:49 - INFO - Reguläre Tore: Wolfsburg Voltsturm 2:2 Frankfurt Core
+2025-12-30 15:44:49 - INFO - Endergebnis: Wolfsburg Voltsturm 2:3 Frankfurt Core - Overtime: True, Shootout: False
+2025-12-30 15:44:49 - INFO - Updated last5 for Wolfsburg Voltsturm: L1
+2025-12-30 15:44:49 - INFO - Updated last5 for Frankfurt Core: W2
+2025-12-30 15:44:49 - INFO - Simuliere Liga-Spiel: Kassel Zenit vs Iserlohn Miners in Nord
+2025-12-30 15:44:49 - INFO - Reguläre Tore: Kassel Zenit 2:2 Iserlohn Miners
+2025-12-30 15:44:49 - INFO - Endergebnis: Kassel Zenit 2:3 Iserlohn Miners - Overtime: True, Shootout: False
+2025-12-30 15:44:49 - INFO - Updated last5 for Kassel Zenit: L1
+2025-12-30 15:44:49 - INFO - Updated last5 for Iserlohn Miners: W2
+2025-12-30 15:44:49 - INFO - Simuliere Liga-Spiel: Krefeld Kernschlag vs Köln Blitzhaie in Nord
+2025-12-30 15:44:49 - INFO - Reguläre Tore: Krefeld Kernschlag 1:1 Köln Blitzhaie
+2025-12-30 15:44:49 - INFO - Endergebnis: Krefeld Kernschlag 1:2 Köln Blitzhaie - Overtime: True, Shootout: False
+2025-12-30 15:44:49 - INFO - Updated last5 for Krefeld Kernschlag: L1
+2025-12-30 15:44:49 - INFO - Updated last5 for Köln Blitzhaie: W2
+2025-12-30 15:44:49 - INFO - Simuliere Liga-Spiel: Landshut Lichtkern vs Augsburg Ferox in Süd
+2025-12-30 15:44:49 - INFO - Reguläre Tore: Landshut Lichtkern 1:4 Augsburg Ferox
+2025-12-30 15:44:49 - INFO - Endergebnis: Landshut Lichtkern 1:4 Augsburg Ferox - Overtime: False, Shootout: False
+2025-12-30 15:44:49 - INFO - Updated last5 for Landshut Lichtkern: L
+2025-12-30 15:44:49 - INFO - Updated last5 for Augsburg Ferox: W
+2025-12-30 15:44:49 - INFO - Simuliere Liga-Spiel: Schwenningen Sturmflügel vs München FluxBullen in Süd
+2025-12-30 15:44:49 - INFO - Reguläre Tore: Schwenningen Sturmflügel 3:2 München FluxBullen
+2025-12-30 15:44:49 - INFO - Endergebnis: Schwenningen Sturmflügel 3:2 München FluxBullen - Overtime: False, Shootout: False
+2025-12-30 15:44:49 - INFO - Updated last5 for Schwenningen Sturmflügel: W
+2025-12-30 15:44:49 - INFO - Updated last5 for München FluxBullen: L
+2025-12-30 15:44:49 - INFO - Simuliere Liga-Spiel: Straubing Forest Tigers vs Mannheim Ventus in Süd
+2025-12-30 15:44:49 - INFO - Reguläre Tore: Straubing Forest Tigers 1:0 Mannheim Ventus
+2025-12-30 15:44:49 - INFO - Endergebnis: Straubing Forest Tigers 1:0 Mannheim Ventus - Overtime: False, Shootout: False
+2025-12-30 15:44:49 - INFO - Updated last5 for Straubing Forest Tigers: W
+2025-12-30 15:44:49 - INFO - Updated last5 for Mannheim Ventus: L
+2025-12-30 15:44:49 - INFO - Simuliere Liga-Spiel: Ravensburg Zenit Falken vs Novadelta Panther in Süd
+2025-12-30 15:44:49 - INFO - Reguläre Tore: Ravensburg Zenit Falken 1:2 Novadelta Panther
+2025-12-30 15:44:49 - INFO - Endergebnis: Ravensburg Zenit Falken 1:2 Novadelta Panther - Overtime: False, Shootout: False
+2025-12-30 15:44:49 - INFO - Updated last5 for Ravensburg Zenit Falken: L
+2025-12-30 15:44:49 - INFO - Updated last5 for Novadelta Panther: W
+2025-12-30 15:44:49 - INFO - Simuliere Liga-Spiel: Regensburg Pulse vs Nürnberg Eistiger in Süd
+2025-12-30 15:44:49 - INFO - Reguläre Tore: Regensburg Pulse 3:0 Nürnberg Eistiger
+2025-12-30 15:44:49 - INFO - Endergebnis: Regensburg Pulse 3:0 Nürnberg Eistiger - Overtime: False, Shootout: False
+2025-12-30 15:44:49 - INFO - Updated last5 for Regensburg Pulse: W
+2025-12-30 15:44:49 - INFO - Updated last5 for Nürnberg Eistiger: L
+2025-12-30 15:44:50 - INFO - Exported table with last5: {'Team': 'Frankfurt Core', 'Points': 32, 'GF': 9, 'GA': 8, 'GD': 1, 'last5': 'W2'}
+2025-12-30 15:44:50 - INFO - Exported table with last5: {'Team': 'Nürnberg Eistiger', 'Points': 37, 'GF': 7, 'GA': 4, 'GD': 3, 'last5': 'L'}
+2025-12-30 15:44:53 - INFO - Exported table with last5: {'Team': 'Frankfurt Core', 'Points': 32, 'GF': 9, 'GA': 8, 'GD': 1, 'last5': 'W2'}
+2025-12-30 15:44:53 - INFO - Exported table with last5: {'Team': 'Nürnberg Eistiger', 'Points': 37, 'GF': 7, 'GA': 4, 'GD': 3, 'last5': 'L'}
+2025-12-30 15:45:04 - INFO - Exported table with last5: {'Team': 'Frankfurt Core', 'Points': 32, 'GF': 9, 'GA': 8, 'GD': 1, 'last5': 'W2'}
+2025-12-30 15:45:04 - INFO - Exported table with last5: {'Team': 'Nürnberg Eistiger', 'Points': 37, 'GF': 7, 'GA': 4, 'GD': 3, 'last5': 'L'}
+2025-12-30 15:45:16 - INFO - Simuliere Playoff-Spiel: Frankfurt Core vs Regensburg Pulse
+2025-12-30 15:45:16 - INFO - Reguläre Tore: Frankfurt Core 2:3 Regensburg Pulse
+2025-12-30 15:45:16 - INFO - Gewinner: Regensburg Pulse
+2025-12-30 15:45:16 - INFO - Simuliere Playoff-Spiel: Frankfurt Core vs Regensburg Pulse
+2025-12-30 15:45:16 - INFO - Reguläre Tore: Frankfurt Core 1:0 Regensburg Pulse
+2025-12-30 15:45:16 - INFO - Gewinner: Frankfurt Core
+2025-12-30 15:45:16 - INFO - Simuliere Playoff-Spiel: Frankfurt Core vs Regensburg Pulse
+2025-12-30 15:45:16 - INFO - Reguläre Tore: Frankfurt Core 2:2 Regensburg Pulse
+2025-12-30 15:45:16 - INFO - Nach OT/SO: Frankfurt Core 3:2 Regensburg Pulse
+2025-12-30 15:45:16 - INFO - Gewinner: Frankfurt Core
+2025-12-30 15:45:16 - INFO - Simuliere Playoff-Spiel: Frankfurt Core vs Regensburg Pulse
+2025-12-30 15:45:16 - INFO - Reguläre Tore: Frankfurt Core 4:2 Regensburg Pulse
+2025-12-30 15:45:16 - INFO - Gewinner: Frankfurt Core
+2025-12-30 15:45:16 - INFO - Simuliere Playoff-Spiel: Frankfurt Core vs Regensburg Pulse
+2025-12-30 15:45:16 - INFO - Reguläre Tore: Frankfurt Core 1:2 Regensburg Pulse
+2025-12-30 15:45:17 - INFO - Gewinner: Regensburg Pulse
+2025-12-30 15:45:17 - INFO - Simuliere Playoff-Spiel: Frankfurt Core vs Regensburg Pulse
+2025-12-30 15:45:17 - INFO - Reguläre Tore: Frankfurt Core 2:3 Regensburg Pulse
+2025-12-30 15:45:17 - INFO - Gewinner: Regensburg Pulse
+2025-12-30 15:45:17 - INFO - Simuliere Playoff-Spiel: Frankfurt Core vs Regensburg Pulse
+2025-12-30 15:45:17 - INFO - Reguläre Tore: Frankfurt Core 1:2 Regensburg Pulse
+2025-12-30 15:45:17 - INFO - Gewinner: Regensburg Pulse
+2025-12-30 15:45:17 - INFO - Simuliere Playoff-Spiel: Düsseldorf Aurora vs Augsburg Ferox
+2025-12-30 15:45:17 - INFO - Reguläre Tore: Düsseldorf Aurora 3:1 Augsburg Ferox
+2025-12-30 15:45:17 - INFO - Gewinner: Düsseldorf Aurora
+2025-12-30 15:45:17 - INFO - Simuliere Playoff-Spiel: Düsseldorf Aurora vs Augsburg Ferox
+2025-12-30 15:45:17 - INFO - Reguläre Tore: Düsseldorf Aurora 0:3 Augsburg Ferox
+2025-12-30 15:45:17 - INFO - Gewinner: Augsburg Ferox
+2025-12-30 15:45:17 - INFO - Simuliere Playoff-Spiel: Düsseldorf Aurora vs Augsburg Ferox
+2025-12-30 15:45:17 - INFO - Reguläre Tore: Düsseldorf Aurora 1:2 Augsburg Ferox
+2025-12-30 15:45:17 - INFO - Gewinner: Augsburg Ferox
+2025-12-30 15:45:17 - INFO - Simuliere Playoff-Spiel: Düsseldorf Aurora vs Augsburg Ferox
+2025-12-30 15:45:17 - INFO - Reguläre Tore: Düsseldorf Aurora 3:4 Augsburg Ferox
+2025-12-30 15:45:17 - INFO - Gewinner: Augsburg Ferox
+2025-12-30 15:45:17 - INFO - Simuliere Playoff-Spiel: Düsseldorf Aurora vs Augsburg Ferox
+2025-12-30 15:45:17 - INFO - Reguläre Tore: Düsseldorf Aurora 2:4 Augsburg Ferox
+2025-12-30 15:45:17 - INFO - Gewinner: Augsburg Ferox
+2025-12-30 15:45:17 - INFO - Simuliere Playoff-Spiel: Bad Nauheim Devils vs Novadelta Panther
+2025-12-30 15:45:17 - INFO - Reguläre Tore: Bad Nauheim Devils 2:2 Novadelta Panther
+2025-12-30 15:45:17 - INFO - Nach OT/SO: Bad Nauheim Devils 2:3 Novadelta Panther
+2025-12-30 15:45:17 - INFO - Gewinner: Novadelta Panther
+2025-12-30 15:45:17 - INFO - Simuliere Playoff-Spiel: Bad Nauheim Devils vs Novadelta Panther
+2025-12-30 15:45:17 - INFO - Reguläre Tore: Bad Nauheim Devils 4:3 Novadelta Panther
+2025-12-30 15:45:17 - INFO - Gewinner: Bad Nauheim Devils
+2025-12-30 15:45:17 - INFO - Simuliere Playoff-Spiel: Bad Nauheim Devils vs Novadelta Panther
+2025-12-30 15:45:17 - INFO - Reguläre Tore: Bad Nauheim Devils 2:2 Novadelta Panther
+2025-12-30 15:45:17 - INFO - Nach OT/SO: Bad Nauheim Devils 2:3 Novadelta Panther
+2025-12-30 15:45:17 - INFO - Gewinner: Novadelta Panther
+2025-12-30 15:45:17 - INFO - Simuliere Playoff-Spiel: Bad Nauheim Devils vs Novadelta Panther
+2025-12-30 15:45:17 - INFO - Reguläre Tore: Bad Nauheim Devils 3:2 Novadelta Panther
+2025-12-30 15:45:17 - INFO - Gewinner: Bad Nauheim Devils
+2025-12-30 15:45:17 - INFO - Simuliere Playoff-Spiel: Bad Nauheim Devils vs Novadelta Panther
+2025-12-30 15:45:17 - INFO - Reguläre Tore: Bad Nauheim Devils 2:1 Novadelta Panther
+2025-12-30 15:45:17 - INFO - Gewinner: Bad Nauheim Devils
+2025-12-30 15:45:17 - INFO - Simuliere Playoff-Spiel: Bad Nauheim Devils vs Novadelta Panther
+2025-12-30 15:45:17 - INFO - Reguläre Tore: Bad Nauheim Devils 4:5 Novadelta Panther
+2025-12-30 15:45:17 - INFO - Gewinner: Novadelta Panther
+2025-12-30 15:45:17 - INFO - Simuliere Playoff-Spiel: Bad Nauheim Devils vs Novadelta Panther
+2025-12-30 15:45:17 - INFO - Reguläre Tore: Bad Nauheim Devils 2:1 Novadelta Panther
+2025-12-30 15:45:17 - INFO - Gewinner: Bad Nauheim Devils
+2025-12-30 15:45:17 - INFO - Simuliere Playoff-Spiel: Whiteout Berlin vs Nürnberg Eistiger
+2025-12-30 15:45:17 - INFO - Reguläre Tore: Whiteout Berlin 2:0 Nürnberg Eistiger
+2025-12-30 15:45:17 - INFO - Gewinner: Whiteout Berlin
+2025-12-30 15:45:17 - INFO - Simuliere Playoff-Spiel: Whiteout Berlin vs Nürnberg Eistiger
+2025-12-30 15:45:17 - INFO - Reguläre Tore: Whiteout Berlin 2:2 Nürnberg Eistiger
+2025-12-30 15:45:17 - INFO - Nach OT/SO: Whiteout Berlin 2:3 Nürnberg Eistiger
+2025-12-30 15:45:17 - INFO - Gewinner: Nürnberg Eistiger
+2025-12-30 15:45:17 - INFO - Simuliere Playoff-Spiel: Whiteout Berlin vs Nürnberg Eistiger
+2025-12-30 15:45:17 - INFO - Reguläre Tore: Whiteout Berlin 4:1 Nürnberg Eistiger
+2025-12-30 15:45:17 - INFO - Gewinner: Whiteout Berlin
+2025-12-30 15:45:17 - INFO - Simuliere Playoff-Spiel: Whiteout Berlin vs Nürnberg Eistiger
+2025-12-30 15:45:17 - INFO - Reguläre Tore: Whiteout Berlin 0:4 Nürnberg Eistiger
+2025-12-30 15:45:17 - INFO - Gewinner: Nürnberg Eistiger
+2025-12-30 15:45:17 - INFO - Simuliere Playoff-Spiel: Whiteout Berlin vs Nürnberg Eistiger
+2025-12-30 15:45:17 - INFO - Reguläre Tore: Whiteout Berlin 1:3 Nürnberg Eistiger
+2025-12-30 15:45:17 - INFO - Gewinner: Nürnberg Eistiger
+2025-12-30 15:45:17 - INFO - Simuliere Playoff-Spiel: Whiteout Berlin vs Nürnberg Eistiger
+2025-12-30 15:45:17 - INFO - Reguläre Tore: Whiteout Berlin 3:2 Nürnberg Eistiger
+2025-12-30 15:45:17 - INFO - Gewinner: Whiteout Berlin
+2025-12-30 15:45:17 - INFO - Simuliere Playoff-Spiel: Whiteout Berlin vs Nürnberg Eistiger
+2025-12-30 15:45:17 - INFO - Reguläre Tore: Whiteout Berlin 1:2 Nürnberg Eistiger
+2025-12-30 15:45:17 - INFO - Gewinner: Nürnberg Eistiger
+2025-12-30 15:45:17 - INFO - Exported table with last5: {'Team': 'Frankfurt Core', 'Points': 32, 'GF': 9, 'GA': 8, 'GD': 1, 'last5': 'W2'}
+2025-12-30 15:45:17 - INFO - Exported table with last5: {'Team': 'Nürnberg Eistiger', 'Points': 37, 'GF': 7, 'GA': 4, 'GD': 3, 'last5': 'L'}
+2025-12-30 15:45:21 - INFO - Exported table with last5: {'Team': 'Frankfurt Core', 'Points': 32, 'GF': 9, 'GA': 8, 'GD': 1, 'last5': 'W2'}
+2025-12-30 15:45:21 - INFO - Exported table with last5: {'Team': 'Nürnberg Eistiger', 'Points': 37, 'GF': 7, 'GA': 4, 'GD': 3, 'last5': 'L'}
+2025-12-30 15:45:32 - INFO - Simuliere Playoff-Spiel: Regensburg Pulse vs Augsburg Ferox
+2025-12-30 15:45:32 - INFO - Reguläre Tore: Regensburg Pulse 2:1 Augsburg Ferox
+2025-12-30 15:45:32 - INFO - Gewinner: Regensburg Pulse
+2025-12-30 15:45:32 - INFO - Simuliere Playoff-Spiel: Regensburg Pulse vs Augsburg Ferox
+2025-12-30 15:45:32 - INFO - Reguläre Tore: Regensburg Pulse 2:2 Augsburg Ferox
+2025-12-30 15:45:32 - INFO - Nach OT/SO: Regensburg Pulse 3:2 Augsburg Ferox
+2025-12-30 15:45:32 - INFO - Gewinner: Regensburg Pulse
+2025-12-30 15:45:32 - INFO - Simuliere Playoff-Spiel: Regensburg Pulse vs Augsburg Ferox
+2025-12-30 15:45:32 - INFO - Reguläre Tore: Regensburg Pulse 3:2 Augsburg Ferox
+2025-12-30 15:45:32 - INFO - Gewinner: Regensburg Pulse
+2025-12-30 15:45:32 - INFO - Simuliere Playoff-Spiel: Regensburg Pulse vs Augsburg Ferox
+2025-12-30 15:45:32 - INFO - Reguläre Tore: Regensburg Pulse 2:1 Augsburg Ferox
+2025-12-30 15:45:32 - INFO - Gewinner: Regensburg Pulse
+2025-12-30 15:45:32 - INFO - Simuliere Playoff-Spiel: Bad Nauheim Devils vs Nürnberg Eistiger
+2025-12-30 15:45:32 - INFO - Reguläre Tore: Bad Nauheim Devils 3:2 Nürnberg Eistiger
+2025-12-30 15:45:32 - INFO - Gewinner: Bad Nauheim Devils
+2025-12-30 15:45:32 - INFO - Simuliere Playoff-Spiel: Bad Nauheim Devils vs Nürnberg Eistiger
+2025-12-30 15:45:32 - INFO - Reguläre Tore: Bad Nauheim Devils 1:0 Nürnberg Eistiger
+2025-12-30 15:45:32 - INFO - Gewinner: Bad Nauheim Devils
+2025-12-30 15:45:32 - INFO - Simuliere Playoff-Spiel: Bad Nauheim Devils vs Nürnberg Eistiger
+2025-12-30 15:45:32 - INFO - Reguläre Tore: Bad Nauheim Devils 3:1 Nürnberg Eistiger
+2025-12-30 15:45:32 - INFO - Gewinner: Bad Nauheim Devils
+2025-12-30 15:45:32 - INFO - Simuliere Playoff-Spiel: Bad Nauheim Devils vs Nürnberg Eistiger
+2025-12-30 15:45:32 - INFO - Reguläre Tore: Bad Nauheim Devils 3:3 Nürnberg Eistiger
+2025-12-30 15:45:32 - INFO - Nach OT/SO: Bad Nauheim Devils 4:3 Nürnberg Eistiger
+2025-12-30 15:45:32 - INFO - Gewinner: Bad Nauheim Devils
+2025-12-30 15:45:32 - INFO - Exported table with last5: {'Team': 'Frankfurt Core', 'Points': 32, 'GF': 9, 'GA': 8, 'GD': 1, 'last5': 'W2'}
+2025-12-30 15:45:32 - INFO - Exported table with last5: {'Team': 'Nürnberg Eistiger', 'Points': 37, 'GF': 7, 'GA': 4, 'GD': 3, 'last5': 'L'}
+2025-12-30 15:45:35 - INFO - Exported table with last5: {'Team': 'Frankfurt Core', 'Points': 32, 'GF': 9, 'GA': 8, 'GD': 1, 'last5': 'W2'}
+2025-12-30 15:45:35 - INFO - Exported table with last5: {'Team': 'Nürnberg Eistiger', 'Points': 37, 'GF': 7, 'GA': 4, 'GD': 3, 'last5': 'L'}
+2025-12-30 15:45:40 - INFO - Simuliere Playoff-Spiel: Regensburg Pulse vs Bad Nauheim Devils
+2025-12-30 15:45:40 - INFO - Reguläre Tore: Regensburg Pulse 3:2 Bad Nauheim Devils
+2025-12-30 15:45:40 - INFO - Gewinner: Regensburg Pulse
+2025-12-30 15:45:40 - INFO - Simuliere Playoff-Spiel: Regensburg Pulse vs Bad Nauheim Devils
+2025-12-30 15:45:40 - INFO - Reguläre Tore: Regensburg Pulse 3:3 Bad Nauheim Devils
+2025-12-30 15:45:40 - INFO - Nach OT/SO: Regensburg Pulse 3:4 Bad Nauheim Devils
+2025-12-30 15:45:40 - INFO - Gewinner: Bad Nauheim Devils
+2025-12-30 15:45:40 - INFO - Simuliere Playoff-Spiel: Regensburg Pulse vs Bad Nauheim Devils
+2025-12-30 15:45:40 - INFO - Reguläre Tore: Regensburg Pulse 1:3 Bad Nauheim Devils
+2025-12-30 15:45:40 - INFO - Gewinner: Bad Nauheim Devils
+2025-12-30 15:45:40 - INFO - Simuliere Playoff-Spiel: Regensburg Pulse vs Bad Nauheim Devils
+2025-12-30 15:45:40 - INFO - Reguläre Tore: Regensburg Pulse 3:1 Bad Nauheim Devils
+2025-12-30 15:45:40 - INFO - Gewinner: Regensburg Pulse
+2025-12-30 15:45:40 - INFO - Simuliere Playoff-Spiel: Regensburg Pulse vs Bad Nauheim Devils
+2025-12-30 15:45:40 - INFO - Reguläre Tore: Regensburg Pulse 4:2 Bad Nauheim Devils
+2025-12-30 15:45:40 - INFO - Gewinner: Regensburg Pulse
+2025-12-30 15:45:40 - INFO - Simuliere Playoff-Spiel: Regensburg Pulse vs Bad Nauheim Devils
+2025-12-30 15:45:40 - INFO - Reguläre Tore: Regensburg Pulse 3:2 Bad Nauheim Devils
+2025-12-30 15:45:40 - INFO - Gewinner: Regensburg Pulse
+2025-12-30 15:45:40 - INFO - Exported table with last5: {'Team': 'Frankfurt Core', 'Points': 32, 'GF': 9, 'GA': 8, 'GD': 1, 'last5': 'W2'}
+2025-12-30 15:45:40 - INFO - Exported table with last5: {'Team': 'Nürnberg Eistiger', 'Points': 37, 'GF': 7, 'GA': 4, 'GD': 3, 'last5': 'L'}
+2025-12-30 15:45:43 - INFO - Exported table with last5: {'Team': 'Bad Nauheim Devils', 'Points': 0, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': []}
+2025-12-30 15:45:43 - INFO - Exported table with last5: {'Team': 'Augsburg Ferox', 'Points': 0, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': []}
+2025-12-30 15:45:49 - INFO - Exported table with last5: {'Team': 'Bad Nauheim Devils', 'Points': 0, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': []}
+2025-12-30 15:45:49 - INFO - Exported table with last5: {'Team': 'Augsburg Ferox', 'Points': 0, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': []}
+2025-12-30 15:45:56 - INFO - Simuliere Liga-Spiel: Bad Nauheim Devils vs Whiteout Berlin in Nord
+2025-12-30 15:45:56 - INFO - Reguläre Tore: Bad Nauheim Devils 1:3 Whiteout Berlin
+2025-12-30 15:45:56 - INFO - Endergebnis: Bad Nauheim Devils 1:3 Whiteout Berlin - Overtime: False, Shootout: False
+2025-12-30 15:45:56 - INFO - Updated last5 for Bad Nauheim Devils: L
+2025-12-30 15:45:56 - INFO - Updated last5 for Whiteout Berlin: W
+2025-12-30 15:45:56 - INFO - Simuliere Liga-Spiel: Bremerhaven Trident vs Wolfsburg Voltsturm in Nord
+2025-12-30 15:45:56 - INFO - Reguläre Tore: Bremerhaven Trident 3:2 Wolfsburg Voltsturm
+2025-12-30 15:45:56 - INFO - Endergebnis: Bremerhaven Trident 3:2 Wolfsburg Voltsturm - Overtime: False, Shootout: False
+2025-12-30 15:45:56 - INFO - Updated last5 for Bremerhaven Trident: W
+2025-12-30 15:45:56 - INFO - Updated last5 for Wolfsburg Voltsturm: L
+2025-12-30 15:45:57 - INFO - Simuliere Liga-Spiel: Düsseldorf Aurora vs Kassel Zenit in Nord
+2025-12-30 15:45:57 - INFO - Reguläre Tore: Düsseldorf Aurora 2:2 Kassel Zenit
+2025-12-30 15:45:57 - INFO - Endergebnis: Düsseldorf Aurora 3:2 Kassel Zenit - Overtime: True, Shootout: False
+2025-12-30 15:45:57 - INFO - Updated last5 for Düsseldorf Aurora: W2
+2025-12-30 15:45:57 - INFO - Updated last5 for Kassel Zenit: L1
+2025-12-30 15:45:57 - INFO - Simuliere Liga-Spiel: Frankfurt Core vs Krefeld Kernschlag in Nord
+2025-12-30 15:45:57 - INFO - Reguläre Tore: Frankfurt Core 3:3 Krefeld Kernschlag
+2025-12-30 15:45:57 - INFO - Endergebnis: Frankfurt Core 4:3 Krefeld Kernschlag - Overtime: True, Shootout: False
+2025-12-30 15:45:57 - INFO - Updated last5 for Frankfurt Core: W2
+2025-12-30 15:45:57 - INFO - Updated last5 for Krefeld Kernschlag: L1
+2025-12-30 15:45:57 - INFO - Simuliere Liga-Spiel: Iserlohn Miners vs Köln Blitzhaie in Nord
+2025-12-30 15:45:57 - INFO - Reguläre Tore: Iserlohn Miners 5:3 Köln Blitzhaie
+2025-12-30 15:45:57 - INFO - Endergebnis: Iserlohn Miners 5:3 Köln Blitzhaie - Overtime: False, Shootout: False
+2025-12-30 15:45:57 - INFO - Updated last5 for Iserlohn Miners: W
+2025-12-30 15:45:57 - INFO - Updated last5 for Köln Blitzhaie: L
+2025-12-30 15:45:57 - INFO - Simuliere Liga-Spiel: Augsburg Ferox vs Schwenningen Sturmflügel in Süd
+2025-12-30 15:45:57 - INFO - Reguläre Tore: Augsburg Ferox 1:2 Schwenningen Sturmflügel
+2025-12-30 15:45:57 - INFO - Endergebnis: Augsburg Ferox 1:2 Schwenningen Sturmflügel - Overtime: False, Shootout: False
+2025-12-30 15:45:57 - INFO - Updated last5 for Augsburg Ferox: L
+2025-12-30 15:45:57 - INFO - Updated last5 for Schwenningen Sturmflügel: W
+2025-12-30 15:45:57 - INFO - Simuliere Liga-Spiel: Landshut Lichtkern vs Straubing Forest Tigers in Süd
+2025-12-30 15:45:57 - INFO - Reguläre Tore: Landshut Lichtkern 2:1 Straubing Forest Tigers
+2025-12-30 15:45:57 - INFO - Endergebnis: Landshut Lichtkern 2:1 Straubing Forest Tigers - Overtime: False, Shootout: False
+2025-12-30 15:45:57 - INFO - Updated last5 for Landshut Lichtkern: W
+2025-12-30 15:45:57 - INFO - Updated last5 for Straubing Forest Tigers: L
+2025-12-30 15:45:57 - INFO - Simuliere Liga-Spiel: München FluxBullen vs Ravensburg Zenit Falken in Süd
+2025-12-30 15:45:57 - INFO - Reguläre Tore: München FluxBullen 2:2 Ravensburg Zenit Falken
+2025-12-30 15:45:57 - INFO - Endergebnis: München FluxBullen 3:2 Ravensburg Zenit Falken - Overtime: True, Shootout: False
+2025-12-30 15:45:57 - INFO - Updated last5 for München FluxBullen: W2
+2025-12-30 15:45:57 - INFO - Updated last5 for Ravensburg Zenit Falken: L1
+2025-12-30 15:45:57 - INFO - Simuliere Liga-Spiel: Mannheim Ventus vs Regensburg Pulse in Süd
+2025-12-30 15:45:57 - INFO - Reguläre Tore: Mannheim Ventus 1:2 Regensburg Pulse
+2025-12-30 15:45:57 - INFO - Endergebnis: Mannheim Ventus 1:2 Regensburg Pulse - Overtime: False, Shootout: False
+2025-12-30 15:45:57 - INFO - Updated last5 for Mannheim Ventus: L
+2025-12-30 15:45:57 - INFO - Updated last5 for Regensburg Pulse: W
+2025-12-30 15:45:57 - INFO - Simuliere Liga-Spiel: Novadelta Panther vs Nürnberg Eistiger in Süd
+2025-12-30 15:45:57 - INFO - Reguläre Tore: Novadelta Panther 2:2 Nürnberg Eistiger
+2025-12-30 15:45:57 - INFO - Endergebnis: Novadelta Panther 3:2 Nürnberg Eistiger - Overtime: True, Shootout: False
+2025-12-30 15:45:57 - INFO - Updated last5 for Novadelta Panther: W2
+2025-12-30 15:45:57 - INFO - Updated last5 for Nürnberg Eistiger: L1
+2025-12-30 15:45:57 - INFO - Exported table with last5: {'Team': 'Bremerhaven Trident', 'Points': 3, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:45:57 - INFO - Exported table with last5: {'Team': 'Landshut Lichtkern', 'Points': 3, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:46:01 - INFO - Exported table with last5: {'Team': 'Bremerhaven Trident', 'Points': 3, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:46:01 - INFO - Exported table with last5: {'Team': 'Landshut Lichtkern', 'Points': 3, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:46:09 - INFO - Simuliere Liga-Spiel: Wolfsburg Voltsturm vs Bad Nauheim Devils in Nord
+2025-12-30 15:46:09 - INFO - Reguläre Tore: Wolfsburg Voltsturm 1:2 Bad Nauheim Devils
+2025-12-30 15:46:09 - INFO - Endergebnis: Wolfsburg Voltsturm 1:2 Bad Nauheim Devils - Overtime: False, Shootout: False
+2025-12-30 15:46:09 - INFO - Updated last5 for Wolfsburg Voltsturm: L
+2025-12-30 15:46:09 - INFO - Updated last5 for Bad Nauheim Devils: W
+2025-12-30 15:46:09 - INFO - Simuliere Liga-Spiel: Kassel Zenit vs Whiteout Berlin in Nord
+2025-12-30 15:46:09 - INFO - Reguläre Tore: Kassel Zenit 1:4 Whiteout Berlin
+2025-12-30 15:46:09 - INFO - Endergebnis: Kassel Zenit 1:4 Whiteout Berlin - Overtime: False, Shootout: False
+2025-12-30 15:46:09 - INFO - Updated last5 for Kassel Zenit: L
+2025-12-30 15:46:09 - INFO - Updated last5 for Whiteout Berlin: W
+2025-12-30 15:46:09 - INFO - Simuliere Liga-Spiel: Krefeld Kernschlag vs Bremerhaven Trident in Nord
+2025-12-30 15:46:09 - INFO - Reguläre Tore: Krefeld Kernschlag 1:4 Bremerhaven Trident
+2025-12-30 15:46:09 - INFO - Endergebnis: Krefeld Kernschlag 1:4 Bremerhaven Trident - Overtime: False, Shootout: False
+2025-12-30 15:46:09 - INFO - Updated last5 for Krefeld Kernschlag: L
+2025-12-30 15:46:09 - INFO - Updated last5 for Bremerhaven Trident: W
+2025-12-30 15:46:09 - INFO - Simuliere Liga-Spiel: Köln Blitzhaie vs Düsseldorf Aurora in Nord
+2025-12-30 15:46:09 - INFO - Reguläre Tore: Köln Blitzhaie 1:2 Düsseldorf Aurora
+2025-12-30 15:46:09 - INFO - Endergebnis: Köln Blitzhaie 1:2 Düsseldorf Aurora - Overtime: False, Shootout: False
+2025-12-30 15:46:09 - INFO - Updated last5 for Köln Blitzhaie: L
+2025-12-30 15:46:09 - INFO - Updated last5 for Düsseldorf Aurora: W
+2025-12-30 15:46:09 - INFO - Simuliere Liga-Spiel: Iserlohn Miners vs Frankfurt Core in Nord
+2025-12-30 15:46:09 - INFO - Reguläre Tore: Iserlohn Miners 2:2 Frankfurt Core
+2025-12-30 15:46:09 - INFO - Endergebnis: Iserlohn Miners 3:2 Frankfurt Core - Overtime: True, Shootout: False
+2025-12-30 15:46:09 - INFO - Updated last5 for Iserlohn Miners: W2
+2025-12-30 15:46:09 - INFO - Updated last5 for Frankfurt Core: L1
+2025-12-30 15:46:09 - INFO - Simuliere Liga-Spiel: Straubing Forest Tigers vs Augsburg Ferox in Süd
+2025-12-30 15:46:09 - INFO - Reguläre Tore: Straubing Forest Tigers 2:1 Augsburg Ferox
+2025-12-30 15:46:09 - INFO - Endergebnis: Straubing Forest Tigers 2:1 Augsburg Ferox - Overtime: False, Shootout: False
+2025-12-30 15:46:09 - INFO - Updated last5 for Straubing Forest Tigers: W
+2025-12-30 15:46:09 - INFO - Updated last5 for Augsburg Ferox: L
+2025-12-30 15:46:09 - INFO - Simuliere Liga-Spiel: Ravensburg Zenit Falken vs Schwenningen Sturmflügel in Süd
+2025-12-30 15:46:09 - INFO - Reguläre Tore: Ravensburg Zenit Falken 3:4 Schwenningen Sturmflügel
+2025-12-30 15:46:09 - INFO - Endergebnis: Ravensburg Zenit Falken 3:4 Schwenningen Sturmflügel - Overtime: False, Shootout: False
+2025-12-30 15:46:09 - INFO - Updated last5 for Ravensburg Zenit Falken: L
+2025-12-30 15:46:09 - INFO - Updated last5 for Schwenningen Sturmflügel: W
+2025-12-30 15:46:09 - INFO - Simuliere Liga-Spiel: Regensburg Pulse vs Landshut Lichtkern in Süd
+2025-12-30 15:46:09 - INFO - Reguläre Tore: Regensburg Pulse 2:1 Landshut Lichtkern
+2025-12-30 15:46:10 - INFO - Endergebnis: Regensburg Pulse 2:1 Landshut Lichtkern - Overtime: False, Shootout: False
+2025-12-30 15:46:10 - INFO - Updated last5 for Regensburg Pulse: W
+2025-12-30 15:46:10 - INFO - Updated last5 for Landshut Lichtkern: L
+2025-12-30 15:46:10 - INFO - Simuliere Liga-Spiel: Nürnberg Eistiger vs München FluxBullen in Süd
+2025-12-30 15:46:10 - INFO - Reguläre Tore: Nürnberg Eistiger 1:2 München FluxBullen
+2025-12-30 15:46:10 - INFO - Endergebnis: Nürnberg Eistiger 1:2 München FluxBullen - Overtime: False, Shootout: False
+2025-12-30 15:46:10 - INFO - Updated last5 for Nürnberg Eistiger: L
+2025-12-30 15:46:10 - INFO - Updated last5 for München FluxBullen: W
+2025-12-30 15:46:10 - INFO - Simuliere Liga-Spiel: Mannheim Ventus vs Novadelta Panther in Süd
+2025-12-30 15:46:10 - INFO - Reguläre Tore: Mannheim Ventus 1:4 Novadelta Panther
+2025-12-30 15:46:10 - INFO - Endergebnis: Mannheim Ventus 1:4 Novadelta Panther - Overtime: False, Shootout: False
+2025-12-30 15:46:10 - INFO - Updated last5 for Mannheim Ventus: L
+2025-12-30 15:46:10 - INFO - Updated last5 for Novadelta Panther: W
+2025-12-30 15:46:10 - INFO - Exported table with last5: {'Team': 'Bremerhaven Trident', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:46:10 - INFO - Exported table with last5: {'Team': 'Regensburg Pulse', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:46:13 - INFO - Exported table with last5: {'Team': 'Bremerhaven Trident', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:46:13 - INFO - Exported table with last5: {'Team': 'Regensburg Pulse', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:47:39 - INFO - Exported table with last5: {'Team': 'Bremerhaven Trident', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:47:39 - INFO - Exported table with last5: {'Team': 'Regensburg Pulse', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:47:54 - INFO - Exported table with last5: {'Team': 'Bad Nauheim Devils', 'Points': 0, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': []}
+2025-12-30 15:47:54 - INFO - Exported table with last5: {'Team': 'Augsburg Ferox', 'Points': 0, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': []}
+2025-12-30 15:48:08 - INFO - Simuliere Liga-Spiel: Bad Nauheim Devils vs Whiteout Berlin in Nord
+2025-12-30 15:48:08 - INFO - Reguläre Tore: Bad Nauheim Devils 2:2 Whiteout Berlin
+2025-12-30 15:48:08 - INFO - Endergebnis: Bad Nauheim Devils 3:2 Whiteout Berlin - Overtime: True, Shootout: False
+2025-12-30 15:48:08 - INFO - Updated last5 for Bad Nauheim Devils: W2
+2025-12-30 15:48:08 - INFO - Updated last5 for Whiteout Berlin: L1
+2025-12-30 15:48:08 - INFO - Simuliere Liga-Spiel: Bremerhaven Trident vs Wolfsburg Voltsturm in Nord
+2025-12-30 15:48:08 - INFO - Reguläre Tore: Bremerhaven Trident 2:3 Wolfsburg Voltsturm
+2025-12-30 15:48:08 - INFO - Endergebnis: Bremerhaven Trident 2:3 Wolfsburg Voltsturm - Overtime: False, Shootout: False
+2025-12-30 15:48:08 - INFO - Updated last5 for Bremerhaven Trident: L
+2025-12-30 15:48:08 - INFO - Updated last5 for Wolfsburg Voltsturm: W
+2025-12-30 15:48:08 - INFO - Simuliere Liga-Spiel: Düsseldorf Aurora vs Kassel Zenit in Nord
+2025-12-30 15:48:08 - INFO - Reguläre Tore: Düsseldorf Aurora 3:4 Kassel Zenit
+2025-12-30 15:48:08 - INFO - Endergebnis: Düsseldorf Aurora 3:4 Kassel Zenit - Overtime: False, Shootout: False
+2025-12-30 15:48:08 - INFO - Updated last5 for Düsseldorf Aurora: L
+2025-12-30 15:48:08 - INFO - Updated last5 for Kassel Zenit: W
+2025-12-30 15:48:08 - INFO - Simuliere Liga-Spiel: Frankfurt Core vs Krefeld Kernschlag in Nord
+2025-12-30 15:48:08 - INFO - Reguläre Tore: Frankfurt Core 1:2 Krefeld Kernschlag
+2025-12-30 15:48:08 - INFO - Endergebnis: Frankfurt Core 1:2 Krefeld Kernschlag - Overtime: False, Shootout: False
+2025-12-30 15:48:08 - INFO - Updated last5 for Frankfurt Core: L
+2025-12-30 15:48:08 - INFO - Updated last5 for Krefeld Kernschlag: W
+2025-12-30 15:48:08 - INFO - Simuliere Liga-Spiel: Iserlohn Miners vs Köln Blitzhaie in Nord
+2025-12-30 15:48:08 - INFO - Reguläre Tore: Iserlohn Miners 2:2 Köln Blitzhaie
+2025-12-30 15:48:08 - INFO - Endergebnis: Iserlohn Miners 3:2 Köln Blitzhaie - Overtime: True, Shootout: False
+2025-12-30 15:48:08 - INFO - Updated last5 for Iserlohn Miners: W2
+2025-12-30 15:48:08 - INFO - Updated last5 for Köln Blitzhaie: L1
+2025-12-30 15:48:08 - INFO - Simuliere Liga-Spiel: Augsburg Ferox vs Schwenningen Sturmflügel in Süd
+2025-12-30 15:48:08 - INFO - Reguläre Tore: Augsburg Ferox 0:5 Schwenningen Sturmflügel
+2025-12-30 15:48:08 - INFO - Endergebnis: Augsburg Ferox 0:5 Schwenningen Sturmflügel - Overtime: False, Shootout: False
+2025-12-30 15:48:08 - INFO - Updated last5 for Augsburg Ferox: L
+2025-12-30 15:48:08 - INFO - Updated last5 for Schwenningen Sturmflügel: W
+2025-12-30 15:48:08 - INFO - Simuliere Liga-Spiel: Landshut Lichtkern vs Straubing Forest Tigers in Süd
+2025-12-30 15:48:08 - INFO - Reguläre Tore: Landshut Lichtkern 1:2 Straubing Forest Tigers
+2025-12-30 15:48:08 - INFO - Endergebnis: Landshut Lichtkern 1:2 Straubing Forest Tigers - Overtime: False, Shootout: False
+2025-12-30 15:48:08 - INFO - Updated last5 for Landshut Lichtkern: L
+2025-12-30 15:48:08 - INFO - Updated last5 for Straubing Forest Tigers: W
+2025-12-30 15:48:08 - INFO - Simuliere Liga-Spiel: München FluxBullen vs Ravensburg Zenit Falken in Süd
+2025-12-30 15:48:08 - INFO - Reguläre Tore: München FluxBullen 2:2 Ravensburg Zenit Falken
+2025-12-30 15:48:08 - INFO - Endergebnis: München FluxBullen 3:2 Ravensburg Zenit Falken - Overtime: True, Shootout: False
+2025-12-30 15:48:08 - INFO - Updated last5 for München FluxBullen: W2
+2025-12-30 15:48:08 - INFO - Updated last5 for Ravensburg Zenit Falken: L1
+2025-12-30 15:48:08 - INFO - Simuliere Liga-Spiel: Mannheim Ventus vs Regensburg Pulse in Süd
+2025-12-30 15:48:08 - INFO - Reguläre Tore: Mannheim Ventus 3:2 Regensburg Pulse
+2025-12-30 15:48:08 - INFO - Endergebnis: Mannheim Ventus 3:2 Regensburg Pulse - Overtime: False, Shootout: False
+2025-12-30 15:48:08 - INFO - Updated last5 for Mannheim Ventus: W
+2025-12-30 15:48:08 - INFO - Updated last5 for Regensburg Pulse: L
+2025-12-30 15:48:08 - INFO - Simuliere Liga-Spiel: Novadelta Panther vs Nürnberg Eistiger in Süd
+2025-12-30 15:48:08 - INFO - Reguläre Tore: Novadelta Panther 2:2 Nürnberg Eistiger
+2025-12-30 15:48:08 - INFO - Endergebnis: Novadelta Panther 2:3 Nürnberg Eistiger - Overtime: True, Shootout: False
+2025-12-30 15:48:08 - INFO - Updated last5 for Novadelta Panther: L1
+2025-12-30 15:48:08 - INFO - Updated last5 for Nürnberg Eistiger: W2
+2025-12-30 15:48:08 - INFO - Exported table with last5: {'Team': 'Krefeld Kernschlag', 'Points': 3, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:48:08 - INFO - Exported table with last5: {'Team': 'Mannheim Ventus', 'Points': 3, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:48:12 - INFO - Exported table with last5: {'Team': 'Krefeld Kernschlag', 'Points': 3, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:48:12 - INFO - Exported table with last5: {'Team': 'Mannheim Ventus', 'Points': 3, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:48:16 - INFO - Simuliere Liga-Spiel: Wolfsburg Voltsturm vs Bad Nauheim Devils in Nord
+2025-12-30 15:48:17 - INFO - Reguläre Tore: Wolfsburg Voltsturm 3:1 Bad Nauheim Devils
+2025-12-30 15:48:17 - INFO - Endergebnis: Wolfsburg Voltsturm 3:1 Bad Nauheim Devils - Overtime: False, Shootout: False
+2025-12-30 15:48:17 - INFO - Updated last5 for Wolfsburg Voltsturm: W
+2025-12-30 15:48:17 - INFO - Updated last5 for Bad Nauheim Devils: L
+2025-12-30 15:48:17 - INFO - Simuliere Liga-Spiel: Kassel Zenit vs Whiteout Berlin in Nord
+2025-12-30 15:48:17 - INFO - Reguläre Tore: Kassel Zenit 2:2 Whiteout Berlin
+2025-12-30 15:48:17 - INFO - Endergebnis: Kassel Zenit 3:2 Whiteout Berlin - Overtime: True, Shootout: False
+2025-12-30 15:48:17 - INFO - Updated last5 for Kassel Zenit: W2
+2025-12-30 15:48:17 - INFO - Updated last5 for Whiteout Berlin: L1
+2025-12-30 15:48:17 - INFO - Simuliere Liga-Spiel: Krefeld Kernschlag vs Bremerhaven Trident in Nord
+2025-12-30 15:48:17 - INFO - Reguläre Tore: Krefeld Kernschlag 1:2 Bremerhaven Trident
+2025-12-30 15:48:17 - INFO - Endergebnis: Krefeld Kernschlag 1:2 Bremerhaven Trident - Overtime: False, Shootout: False
+2025-12-30 15:48:17 - INFO - Updated last5 for Krefeld Kernschlag: L
+2025-12-30 15:48:17 - INFO - Updated last5 for Bremerhaven Trident: W
+2025-12-30 15:48:17 - INFO - Simuliere Liga-Spiel: Köln Blitzhaie vs Düsseldorf Aurora in Nord
+2025-12-30 15:48:17 - INFO - Reguläre Tore: Köln Blitzhaie 2:2 Düsseldorf Aurora
+2025-12-30 15:48:17 - INFO - Endergebnis: Köln Blitzhaie 3:2 Düsseldorf Aurora - Overtime: True, Shootout: False
+2025-12-30 15:48:17 - INFO - Updated last5 for Köln Blitzhaie: W2
+2025-12-30 15:48:17 - INFO - Updated last5 for Düsseldorf Aurora: L1
+2025-12-30 15:48:17 - INFO - Simuliere Liga-Spiel: Iserlohn Miners vs Frankfurt Core in Nord
+2025-12-30 15:48:17 - INFO - Reguläre Tore: Iserlohn Miners 2:5 Frankfurt Core
+2025-12-30 15:48:17 - INFO - Endergebnis: Iserlohn Miners 2:5 Frankfurt Core - Overtime: False, Shootout: False
+2025-12-30 15:48:17 - INFO - Updated last5 for Iserlohn Miners: L
+2025-12-30 15:48:17 - INFO - Updated last5 for Frankfurt Core: W
+2025-12-30 15:48:17 - INFO - Simuliere Liga-Spiel: Straubing Forest Tigers vs Augsburg Ferox in Süd
+2025-12-30 15:48:17 - INFO - Reguläre Tore: Straubing Forest Tigers 2:1 Augsburg Ferox
+2025-12-30 15:48:17 - INFO - Endergebnis: Straubing Forest Tigers 2:1 Augsburg Ferox - Overtime: False, Shootout: False
+2025-12-30 15:48:17 - INFO - Updated last5 for Straubing Forest Tigers: W
+2025-12-30 15:48:17 - INFO - Updated last5 for Augsburg Ferox: L
+2025-12-30 15:48:17 - INFO - Simuliere Liga-Spiel: Ravensburg Zenit Falken vs Schwenningen Sturmflügel in Süd
+2025-12-30 15:48:17 - INFO - Reguläre Tore: Ravensburg Zenit Falken 2:3 Schwenningen Sturmflügel
+2025-12-30 15:48:17 - INFO - Endergebnis: Ravensburg Zenit Falken 2:3 Schwenningen Sturmflügel - Overtime: False, Shootout: False
+2025-12-30 15:48:17 - INFO - Updated last5 for Ravensburg Zenit Falken: L
+2025-12-30 15:48:17 - INFO - Updated last5 for Schwenningen Sturmflügel: W
+2025-12-30 15:48:17 - INFO - Simuliere Liga-Spiel: Regensburg Pulse vs Landshut Lichtkern in Süd
+2025-12-30 15:48:17 - INFO - Reguläre Tore: Regensburg Pulse 3:2 Landshut Lichtkern
+2025-12-30 15:48:17 - INFO - Endergebnis: Regensburg Pulse 3:2 Landshut Lichtkern - Overtime: False, Shootout: False
+2025-12-30 15:48:17 - INFO - Updated last5 for Regensburg Pulse: W
+2025-12-30 15:48:17 - INFO - Updated last5 for Landshut Lichtkern: L
+2025-12-30 15:48:17 - INFO - Simuliere Liga-Spiel: Nürnberg Eistiger vs München FluxBullen in Süd
+2025-12-30 15:48:17 - INFO - Reguläre Tore: Nürnberg Eistiger 2:1 München FluxBullen
+2025-12-30 15:48:17 - INFO - Endergebnis: Nürnberg Eistiger 2:1 München FluxBullen - Overtime: False, Shootout: False
+2025-12-30 15:48:17 - INFO - Updated last5 for Nürnberg Eistiger: W
+2025-12-30 15:48:17 - INFO - Updated last5 for München FluxBullen: L
+2025-12-30 15:48:17 - INFO - Simuliere Liga-Spiel: Mannheim Ventus vs Novadelta Panther in Süd
+2025-12-30 15:48:17 - INFO - Reguläre Tore: Mannheim Ventus 2:3 Novadelta Panther
+2025-12-30 15:48:17 - INFO - Endergebnis: Mannheim Ventus 2:3 Novadelta Panther - Overtime: False, Shootout: False
+2025-12-30 15:48:17 - INFO - Updated last5 for Mannheim Ventus: L
+2025-12-30 15:48:17 - INFO - Updated last5 for Novadelta Panther: W
+2025-12-30 15:48:17 - INFO - Exported table with last5: {'Team': 'Wolfsburg Voltsturm', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:48:17 - INFO - Exported table with last5: {'Team': 'Straubing Forest Tigers', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:48:21 - INFO - Exported table with last5: {'Team': 'Wolfsburg Voltsturm', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:48:21 - INFO - Exported table with last5: {'Team': 'Straubing Forest Tigers', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:48:25 - INFO - Simuliere Liga-Spiel: Bad Nauheim Devils vs Kassel Zenit in Nord
+2025-12-30 15:48:25 - INFO - Reguläre Tore: Bad Nauheim Devils 0:4 Kassel Zenit
+2025-12-30 15:48:25 - INFO - Endergebnis: Bad Nauheim Devils 0:4 Kassel Zenit - Overtime: False, Shootout: False
+2025-12-30 15:48:25 - INFO - Updated last5 for Bad Nauheim Devils: L
+2025-12-30 15:48:25 - INFO - Updated last5 for Kassel Zenit: W
+2025-12-30 15:48:25 - INFO - Simuliere Liga-Spiel: Wolfsburg Voltsturm vs Krefeld Kernschlag in Nord
+2025-12-30 15:48:26 - INFO - Reguläre Tore: Wolfsburg Voltsturm 1:1 Krefeld Kernschlag
+2025-12-30 15:48:26 - INFO - Endergebnis: Wolfsburg Voltsturm 2:1 Krefeld Kernschlag - Overtime: True, Shootout: False
+2025-12-30 15:48:26 - INFO - Updated last5 for Wolfsburg Voltsturm: W2
+2025-12-30 15:48:26 - INFO - Updated last5 for Krefeld Kernschlag: L1
+2025-12-30 15:48:26 - INFO - Simuliere Liga-Spiel: Whiteout Berlin vs Köln Blitzhaie in Nord
+2025-12-30 15:48:26 - INFO - Reguläre Tore: Whiteout Berlin 3:1 Köln Blitzhaie
+2025-12-30 15:48:26 - INFO - Endergebnis: Whiteout Berlin 3:1 Köln Blitzhaie - Overtime: False, Shootout: False
+2025-12-30 15:48:26 - INFO - Updated last5 for Whiteout Berlin: W
+2025-12-30 15:48:26 - INFO - Updated last5 for Köln Blitzhaie: L
+2025-12-30 15:48:26 - INFO - Simuliere Liga-Spiel: Bremerhaven Trident vs Iserlohn Miners in Nord
+2025-12-30 15:48:26 - INFO - Reguläre Tore: Bremerhaven Trident 3:4 Iserlohn Miners
+2025-12-30 15:48:26 - INFO - Endergebnis: Bremerhaven Trident 3:4 Iserlohn Miners - Overtime: False, Shootout: False
+2025-12-30 15:48:26 - INFO - Updated last5 for Bremerhaven Trident: L
+2025-12-30 15:48:26 - INFO - Updated last5 for Iserlohn Miners: W
+2025-12-30 15:48:26 - INFO - Simuliere Liga-Spiel: Düsseldorf Aurora vs Frankfurt Core in Nord
+2025-12-30 15:48:26 - INFO - Reguläre Tore: Düsseldorf Aurora 3:2 Frankfurt Core
+2025-12-30 15:48:26 - INFO - Endergebnis: Düsseldorf Aurora 3:2 Frankfurt Core - Overtime: False, Shootout: False
+2025-12-30 15:48:26 - INFO - Updated last5 for Düsseldorf Aurora: W
+2025-12-30 15:48:26 - INFO - Updated last5 for Frankfurt Core: L
+2025-12-30 15:48:26 - INFO - Simuliere Liga-Spiel: Novadelta Panther vs Augsburg Ferox in Süd
+2025-12-30 15:48:26 - INFO - Reguläre Tore: Novadelta Panther 4:3 Augsburg Ferox
+2025-12-30 15:48:26 - INFO - Endergebnis: Novadelta Panther 4:3 Augsburg Ferox - Overtime: False, Shootout: False
+2025-12-30 15:48:26 - INFO - Updated last5 for Novadelta Panther: W
+2025-12-30 15:48:26 - INFO - Updated last5 for Augsburg Ferox: L
+2025-12-30 15:48:26 - INFO - Simuliere Liga-Spiel: Nürnberg Eistiger vs Mannheim Ventus in Süd
+2025-12-30 15:48:26 - INFO - Reguläre Tore: Nürnberg Eistiger 3:3 Mannheim Ventus
+2025-12-30 15:48:26 - INFO - Endergebnis: Nürnberg Eistiger 4:3 Mannheim Ventus - Overtime: True, Shootout: False
+2025-12-30 15:48:26 - INFO - Updated last5 for Nürnberg Eistiger: W2
+2025-12-30 15:48:26 - INFO - Updated last5 for Mannheim Ventus: L1
+2025-12-30 15:48:26 - INFO - Simuliere Liga-Spiel: Regensburg Pulse vs München FluxBullen in Süd
+2025-12-30 15:48:26 - INFO - Reguläre Tore: Regensburg Pulse 3:3 München FluxBullen
+2025-12-30 15:48:26 - INFO - Endergebnis: Regensburg Pulse 3:4 München FluxBullen - Overtime: True, Shootout: False
+2025-12-30 15:48:26 - INFO - Updated last5 for Regensburg Pulse: L1
+2025-12-30 15:48:26 - INFO - Updated last5 for München FluxBullen: W2
+2025-12-30 15:48:26 - INFO - Simuliere Liga-Spiel: Ravensburg Zenit Falken vs Landshut Lichtkern in Süd
+2025-12-30 15:48:26 - INFO - Reguläre Tore: Ravensburg Zenit Falken 2:2 Landshut Lichtkern
+2025-12-30 15:48:26 - INFO - Endergebnis: Ravensburg Zenit Falken 2:3 Landshut Lichtkern - Overtime: True, Shootout: False
+2025-12-30 15:48:26 - INFO - Updated last5 for Ravensburg Zenit Falken: L1
+2025-12-30 15:48:26 - INFO - Updated last5 for Landshut Lichtkern: W2
+2025-12-30 15:48:26 - INFO - Simuliere Liga-Spiel: Straubing Forest Tigers vs Schwenningen Sturmflügel in Süd
+2025-12-30 15:48:26 - INFO - Reguläre Tore: Straubing Forest Tigers 3:0 Schwenningen Sturmflügel
+2025-12-30 15:48:26 - INFO - Endergebnis: Straubing Forest Tigers 3:0 Schwenningen Sturmflügel - Overtime: False, Shootout: False
+2025-12-30 15:48:26 - INFO - Updated last5 for Straubing Forest Tigers: W
+2025-12-30 15:48:26 - INFO - Updated last5 for Schwenningen Sturmflügel: L
+2025-12-30 15:48:26 - INFO - Exported table with last5: {'Team': 'Kassel Zenit', 'Points': 8, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:48:26 - INFO - Exported table with last5: {'Team': 'Straubing Forest Tigers', 'Points': 9, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:48:30 - INFO - Exported table with last5: {'Team': 'Kassel Zenit', 'Points': 8, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:48:30 - INFO - Exported table with last5: {'Team': 'Straubing Forest Tigers', 'Points': 9, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:50:11 - INFO - Exported table with last5: {'Team': 'Kassel Zenit', 'Points': 8, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:50:11 - INFO - Exported table with last5: {'Team': 'Straubing Forest Tigers', 'Points': 9, 'GF': 0, 'GA': 0, 'GD': 0, 'last5': 'W'}
+2025-12-30 15:52:21 - INFO - Simuliere Liga-Spiel: Krefeld Kernschlag vs Bad Nauheim Devils in Nord
+2025-12-30 15:52:21 - INFO - Reguläre Tore: Krefeld Kernschlag 1:2 Bad Nauheim Devils
+2025-12-30 15:52:21 - INFO - Endergebnis: Krefeld Kernschlag 1:2 Bad Nauheim Devils - Overtime: False, Shootout: False
+2025-12-30 15:52:21 - INFO - Updated last5 for Krefeld Kernschlag: L
+2025-12-30 15:52:21 - INFO - Updated last5 for Bad Nauheim Devils: W
+2025-12-30 15:52:22 - INFO - Simuliere Liga-Spiel: Köln Blitzhaie vs Kassel Zenit in Nord
+2025-12-30 15:52:22 - INFO - Reguläre Tore: Köln Blitzhaie 3:1 Kassel Zenit
+2025-12-30 15:52:22 - INFO - Endergebnis: Köln Blitzhaie 3:1 Kassel Zenit - Overtime: False, Shootout: False
+2025-12-30 15:52:22 - INFO - Updated last5 for Köln Blitzhaie: W
+2025-12-30 15:52:22 - INFO - Updated last5 for Kassel Zenit: L
+2025-12-30 15:52:22 - INFO - Simuliere Liga-Spiel: Iserlohn Miners vs Wolfsburg Voltsturm in Nord
+2025-12-30 15:52:22 - INFO - Reguläre Tore: Iserlohn Miners 2:1 Wolfsburg Voltsturm
+2025-12-30 15:52:22 - INFO - Endergebnis: Iserlohn Miners 2:1 Wolfsburg Voltsturm - Overtime: False, Shootout: False
+2025-12-30 15:52:22 - INFO - Updated last5 for Iserlohn Miners: W
+2025-12-30 15:52:22 - INFO - Updated last5 for Wolfsburg Voltsturm: L
+2025-12-30 15:52:22 - INFO - Simuliere Liga-Spiel: Frankfurt Core vs Whiteout Berlin in Nord
+2025-12-30 15:52:22 - INFO - Reguläre Tore: Frankfurt Core 4:3 Whiteout Berlin
+2025-12-30 15:52:22 - INFO - Endergebnis: Frankfurt Core 4:3 Whiteout Berlin - Overtime: False, Shootout: False
+2025-12-30 15:52:22 - INFO - Updated last5 for Frankfurt Core: W
+2025-12-30 15:52:22 - INFO - Updated last5 for Whiteout Berlin: L
+2025-12-30 15:52:22 - INFO - Simuliere Liga-Spiel: Düsseldorf Aurora vs Bremerhaven Trident in Nord
+2025-12-30 15:52:22 - INFO - Reguläre Tore: Düsseldorf Aurora 2:2 Bremerhaven Trident
+2025-12-30 15:52:22 - INFO - Endergebnis: Düsseldorf Aurora 2:3 Bremerhaven Trident - Overtime: True, Shootout: False
+2025-12-30 15:52:22 - INFO - Updated last5 for Düsseldorf Aurora: L1
+2025-12-30 15:52:22 - INFO - Updated last5 for Bremerhaven Trident: W2
+2025-12-30 15:52:22 - INFO - Simuliere Liga-Spiel: Regensburg Pulse vs Augsburg Ferox in Süd
+2025-12-30 15:52:22 - INFO - Reguläre Tore: Regensburg Pulse 3:3 Augsburg Ferox
+2025-12-30 15:52:22 - INFO - Endergebnis: Regensburg Pulse 3:4 Augsburg Ferox - Overtime: True, Shootout: False
+2025-12-30 15:52:22 - INFO - Updated last5 for Regensburg Pulse: L1
+2025-12-30 15:52:22 - INFO - Updated last5 for Augsburg Ferox: W2
+2025-12-30 15:52:22 - INFO - Simuliere Liga-Spiel: Nürnberg Eistiger vs Ravensburg Zenit Falken in Süd
+2025-12-30 15:52:22 - INFO - Reguläre Tore: Nürnberg Eistiger 1:2 Ravensburg Zenit Falken
+2025-12-30 15:52:22 - INFO - Endergebnis: Nürnberg Eistiger 1:2 Ravensburg Zenit Falken - Overtime: False, Shootout: False
+2025-12-30 15:52:22 - INFO - Updated last5 for Nürnberg Eistiger: L
+2025-12-30 15:52:22 - INFO - Updated last5 for Ravensburg Zenit Falken: W
+2025-12-30 15:52:22 - INFO - Simuliere Liga-Spiel: Straubing Forest Tigers vs Novadelta Panther in Süd
+2025-12-30 15:52:22 - INFO - Reguläre Tore: Straubing Forest Tigers 2:2 Novadelta Panther
+2025-12-30 15:52:22 - INFO - Endergebnis: Straubing Forest Tigers 2:3 Novadelta Panther - Overtime: True, Shootout: False
+2025-12-30 15:52:22 - INFO - Updated last5 for Straubing Forest Tigers: L1
+2025-12-30 15:52:22 - INFO - Updated last5 for Novadelta Panther: W2
+2025-12-30 15:52:22 - INFO - Simuliere Liga-Spiel: Mannheim Ventus vs Schwenningen Sturmflügel in Süd
+2025-12-30 15:52:22 - INFO - Reguläre Tore: Mannheim Ventus 1:1 Schwenningen Sturmflügel
+2025-12-30 15:52:22 - INFO - Endergebnis: Mannheim Ventus 2:1 Schwenningen Sturmflügel - Overtime: True, Shootout: False
+2025-12-30 15:52:22 - INFO - Updated last5 for Mannheim Ventus: W2
+2025-12-30 15:52:22 - INFO - Updated last5 for Schwenningen Sturmflügel: L1
+2025-12-30 15:52:22 - INFO - Simuliere Liga-Spiel: München FluxBullen vs Landshut Lichtkern in Süd
+2025-12-30 15:52:22 - INFO - Reguläre Tore: München FluxBullen 1:2 Landshut Lichtkern
+2025-12-30 15:52:22 - INFO - Endergebnis: München FluxBullen 1:2 Landshut Lichtkern - Overtime: False, Shootout: False
+2025-12-30 15:52:22 - INFO - Updated last5 for München FluxBullen: L
+2025-12-30 15:52:22 - INFO - Updated last5 for Landshut Lichtkern: W
+2025-12-30 15:52:22 - INFO - Exported table with last5: {'Team': 'Iserlohn Miners', 'Points': 8, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:52:22 - INFO - Exported table with last5: {'Team': 'Straubing Forest Tigers', 'Points': 10, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:52:26 - INFO - Exported table with last5: {'Team': 'Iserlohn Miners', 'Points': 8, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:52:26 - INFO - Exported table with last5: {'Team': 'Straubing Forest Tigers', 'Points': 10, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:52:57 - INFO - Exported table with last5: {'Team': 'Bad Nauheim Devils', 'Points': 0, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:52:57 - INFO - Exported table with last5: {'Team': 'Augsburg Ferox', 'Points': 0, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:54:07 - INFO - Exported table with last5: {'Team': 'Bad Nauheim Devils', 'Points': 0, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:54:07 - INFO - Exported table with last5: {'Team': 'Augsburg Ferox', 'Points': 0, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:55:19 - INFO - Simuliere Liga-Spiel: Bad Nauheim Devils vs Whiteout Berlin in Nord
+2025-12-30 15:55:19 - INFO - Reguläre Tore: Bad Nauheim Devils 2:3 Whiteout Berlin
+2025-12-30 15:55:19 - INFO - Endergebnis: Bad Nauheim Devils 2:3 Whiteout Berlin - Overtime: False, Shootout: False
+2025-12-30 15:55:19 - INFO - Updated last5 for Bad Nauheim Devils: L
+2025-12-30 15:55:19 - INFO - Updated last5 for Whiteout Berlin: W
+2025-12-30 15:55:19 - INFO - Simuliere Liga-Spiel: Bremerhaven Trident vs Wolfsburg Voltsturm in Nord
+2025-12-30 15:55:19 - INFO - Reguläre Tore: Bremerhaven Trident 2:3 Wolfsburg Voltsturm
+2025-12-30 15:55:19 - INFO - Endergebnis: Bremerhaven Trident 2:3 Wolfsburg Voltsturm - Overtime: False, Shootout: False
+2025-12-30 15:55:19 - INFO - Updated last5 for Bremerhaven Trident: L
+2025-12-30 15:55:19 - INFO - Updated last5 for Wolfsburg Voltsturm: W
+2025-12-30 15:55:19 - INFO - Simuliere Liga-Spiel: Düsseldorf Aurora vs Kassel Zenit in Nord
+2025-12-30 15:55:19 - INFO - Reguläre Tore: Düsseldorf Aurora 3:3 Kassel Zenit
+2025-12-30 15:55:19 - INFO - Endergebnis: Düsseldorf Aurora 3:4 Kassel Zenit - Overtime: True, Shootout: False
+2025-12-30 15:55:19 - INFO - Updated last5 for Düsseldorf Aurora: L1
+2025-12-30 15:55:19 - INFO - Updated last5 for Kassel Zenit: W2
+2025-12-30 15:55:19 - INFO - Simuliere Liga-Spiel: Frankfurt Core vs Krefeld Kernschlag in Nord
+2025-12-30 15:55:20 - INFO - Reguläre Tore: Frankfurt Core 2:2 Krefeld Kernschlag
+2025-12-30 15:55:20 - INFO - Endergebnis: Frankfurt Core 3:2 Krefeld Kernschlag - Overtime: True, Shootout: False
+2025-12-30 15:55:20 - INFO - Updated last5 for Frankfurt Core: W2
+2025-12-30 15:55:20 - INFO - Updated last5 for Krefeld Kernschlag: L1
+2025-12-30 15:55:20 - INFO - Simuliere Liga-Spiel: Iserlohn Miners vs Köln Blitzhaie in Nord
+2025-12-30 15:55:20 - INFO - Reguläre Tore: Iserlohn Miners 2:0 Köln Blitzhaie
+2025-12-30 15:55:20 - INFO - Endergebnis: Iserlohn Miners 2:0 Köln Blitzhaie - Overtime: False, Shootout: False
+2025-12-30 15:55:20 - INFO - Updated last5 for Iserlohn Miners: W
+2025-12-30 15:55:20 - INFO - Updated last5 for Köln Blitzhaie: L
+2025-12-30 15:55:20 - INFO - Simuliere Liga-Spiel: Augsburg Ferox vs Schwenningen Sturmflügel in Süd
+2025-12-30 15:55:20 - INFO - Reguläre Tore: Augsburg Ferox 1:2 Schwenningen Sturmflügel
+2025-12-30 15:55:20 - INFO - Endergebnis: Augsburg Ferox 1:2 Schwenningen Sturmflügel - Overtime: False, Shootout: False
+2025-12-30 15:55:20 - INFO - Updated last5 for Augsburg Ferox: L
+2025-12-30 15:55:20 - INFO - Updated last5 for Schwenningen Sturmflügel: W
+2025-12-30 15:55:20 - INFO - Simuliere Liga-Spiel: Landshut Lichtkern vs Straubing Forest Tigers in Süd
+2025-12-30 15:55:20 - INFO - Reguläre Tore: Landshut Lichtkern 3:3 Straubing Forest Tigers
+2025-12-30 15:55:20 - INFO - Endergebnis: Landshut Lichtkern 3:4 Straubing Forest Tigers - Overtime: True, Shootout: False
+2025-12-30 15:55:20 - INFO - Updated last5 for Landshut Lichtkern: L1
+2025-12-30 15:55:20 - INFO - Updated last5 for Straubing Forest Tigers: W2
+2025-12-30 15:55:20 - INFO - Simuliere Liga-Spiel: München FluxBullen vs Ravensburg Zenit Falken in Süd
+2025-12-30 15:55:20 - INFO - Reguläre Tore: München FluxBullen 2:2 Ravensburg Zenit Falken
+2025-12-30 15:55:20 - INFO - Endergebnis: München FluxBullen 3:2 Ravensburg Zenit Falken - Overtime: True, Shootout: False
+2025-12-30 15:55:20 - INFO - Updated last5 for München FluxBullen: W2
+2025-12-30 15:55:20 - INFO - Updated last5 for Ravensburg Zenit Falken: L1
+2025-12-30 15:55:20 - INFO - Simuliere Liga-Spiel: Mannheim Ventus vs Regensburg Pulse in Süd
+2025-12-30 15:55:20 - INFO - Reguläre Tore: Mannheim Ventus 2:3 Regensburg Pulse
+2025-12-30 15:55:20 - INFO - Endergebnis: Mannheim Ventus 2:3 Regensburg Pulse - Overtime: False, Shootout: False
+2025-12-30 15:55:20 - INFO - Updated last5 for Mannheim Ventus: L
+2025-12-30 15:55:20 - INFO - Updated last5 for Regensburg Pulse: W
+2025-12-30 15:55:20 - INFO - Simuliere Liga-Spiel: Novadelta Panther vs Nürnberg Eistiger in Süd
+2025-12-30 15:55:20 - INFO - Reguläre Tore: Novadelta Panther 2:1 Nürnberg Eistiger
+2025-12-30 15:55:20 - INFO - Endergebnis: Novadelta Panther 2:1 Nürnberg Eistiger - Overtime: False, Shootout: False
+2025-12-30 15:55:20 - INFO - Updated last5 for Novadelta Panther: W
+2025-12-30 15:55:20 - INFO - Updated last5 for Nürnberg Eistiger: L
+2025-12-30 15:55:20 - INFO - Exported table with last5: {'Team': 'Iserlohn Miners', 'Points': 3, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:55:20 - INFO - Exported table with last5: {'Team': 'Novadelta Panther', 'Points': 3, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:55:24 - INFO - Exported table with last5: {'Team': 'Iserlohn Miners', 'Points': 3, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:55:24 - INFO - Exported table with last5: {'Team': 'Novadelta Panther', 'Points': 3, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:56:53 - INFO - Simuliere Liga-Spiel: Wolfsburg Voltsturm vs Bad Nauheim Devils in Nord
+2025-12-30 15:56:53 - INFO - Reguläre Tore: Wolfsburg Voltsturm 2:1 Bad Nauheim Devils
+2025-12-30 15:56:53 - INFO - Endergebnis: Wolfsburg Voltsturm 2:1 Bad Nauheim Devils - Overtime: False, Shootout: False
+2025-12-30 15:56:53 - INFO - Updated last5 for Wolfsburg Voltsturm: W
+2025-12-30 15:56:53 - INFO - Updated last5 for Bad Nauheim Devils: L
+2025-12-30 15:56:53 - INFO - Simuliere Liga-Spiel: Kassel Zenit vs Whiteout Berlin in Nord
+2025-12-30 15:56:53 - INFO - Reguläre Tore: Kassel Zenit 3:4 Whiteout Berlin
+2025-12-30 15:56:53 - INFO - Endergebnis: Kassel Zenit 3:4 Whiteout Berlin - Overtime: False, Shootout: False
+2025-12-30 15:56:53 - INFO - Updated last5 for Kassel Zenit: L
+2025-12-30 15:56:53 - INFO - Updated last5 for Whiteout Berlin: W
+2025-12-30 15:56:53 - INFO - Simuliere Liga-Spiel: Krefeld Kernschlag vs Bremerhaven Trident in Nord
+2025-12-30 15:56:53 - INFO - Reguläre Tore: Krefeld Kernschlag 2:3 Bremerhaven Trident
+2025-12-30 15:56:53 - INFO - Endergebnis: Krefeld Kernschlag 2:3 Bremerhaven Trident - Overtime: False, Shootout: False
+2025-12-30 15:56:53 - INFO - Updated last5 for Krefeld Kernschlag: L
+2025-12-30 15:56:53 - INFO - Updated last5 for Bremerhaven Trident: W
+2025-12-30 15:56:53 - INFO - Simuliere Liga-Spiel: Köln Blitzhaie vs Düsseldorf Aurora in Nord
+2025-12-30 15:56:53 - INFO - Reguläre Tore: Köln Blitzhaie 1:2 Düsseldorf Aurora
+2025-12-30 15:56:53 - INFO - Endergebnis: Köln Blitzhaie 1:2 Düsseldorf Aurora - Overtime: False, Shootout: False
+2025-12-30 15:56:53 - INFO - Updated last5 for Köln Blitzhaie: L
+2025-12-30 15:56:53 - INFO - Updated last5 for Düsseldorf Aurora: W
+2025-12-30 15:56:53 - INFO - Simuliere Liga-Spiel: Iserlohn Miners vs Frankfurt Core in Nord
+2025-12-30 15:56:53 - INFO - Reguläre Tore: Iserlohn Miners 2:2 Frankfurt Core
+2025-12-30 15:56:53 - INFO - Endergebnis: Iserlohn Miners 2:3 Frankfurt Core - Overtime: True, Shootout: False
+2025-12-30 15:56:53 - INFO - Updated last5 for Iserlohn Miners: L1
+2025-12-30 15:56:53 - INFO - Updated last5 for Frankfurt Core: W2
+2025-12-30 15:56:53 - INFO - Simuliere Liga-Spiel: Straubing Forest Tigers vs Augsburg Ferox in Süd
+2025-12-30 15:56:53 - INFO - Reguläre Tore: Straubing Forest Tigers 5:2 Augsburg Ferox
+2025-12-30 15:56:53 - INFO - Endergebnis: Straubing Forest Tigers 5:2 Augsburg Ferox - Overtime: False, Shootout: False
+2025-12-30 15:56:53 - INFO - Updated last5 for Straubing Forest Tigers: W
+2025-12-30 15:56:53 - INFO - Updated last5 for Augsburg Ferox: L
+2025-12-30 15:56:53 - INFO - Simuliere Liga-Spiel: Ravensburg Zenit Falken vs Schwenningen Sturmflügel in Süd
+2025-12-30 15:56:53 - INFO - Reguläre Tore: Ravensburg Zenit Falken 1:1 Schwenningen Sturmflügel
+2025-12-30 15:56:53 - INFO - Endergebnis: Ravensburg Zenit Falken 2:1 Schwenningen Sturmflügel - Overtime: True, Shootout: False
+2025-12-30 15:56:53 - INFO - Updated last5 for Ravensburg Zenit Falken: W2
+2025-12-30 15:56:53 - INFO - Updated last5 for Schwenningen Sturmflügel: L1
+2025-12-30 15:56:53 - INFO - Simuliere Liga-Spiel: Regensburg Pulse vs Landshut Lichtkern in Süd
+2025-12-30 15:56:53 - INFO - Reguläre Tore: Regensburg Pulse 1:2 Landshut Lichtkern
+2025-12-30 15:56:53 - INFO - Endergebnis: Regensburg Pulse 1:2 Landshut Lichtkern - Overtime: False, Shootout: False
+2025-12-30 15:56:53 - INFO - Updated last5 for Regensburg Pulse: L
+2025-12-30 15:56:53 - INFO - Updated last5 for Landshut Lichtkern: W
+2025-12-30 15:56:53 - INFO - Simuliere Liga-Spiel: Nürnberg Eistiger vs München FluxBullen in Süd
+2025-12-30 15:56:53 - INFO - Reguläre Tore: Nürnberg Eistiger 1:1 München FluxBullen
+2025-12-30 15:56:53 - INFO - Endergebnis: Nürnberg Eistiger 1:2 München FluxBullen - Overtime: True, Shootout: False
+2025-12-30 15:56:53 - INFO - Updated last5 for Nürnberg Eistiger: L1
+2025-12-30 15:56:53 - INFO - Updated last5 for München FluxBullen: W2
+2025-12-30 15:56:53 - INFO - Simuliere Liga-Spiel: Mannheim Ventus vs Novadelta Panther in Süd
+2025-12-30 15:56:53 - INFO - Reguläre Tore: Mannheim Ventus 1:2 Novadelta Panther
+2025-12-30 15:56:53 - INFO - Endergebnis: Mannheim Ventus 1:2 Novadelta Panther - Overtime: False, Shootout: False
+2025-12-30 15:56:53 - INFO - Updated last5 for Mannheim Ventus: L
+2025-12-30 15:56:53 - INFO - Updated last5 for Novadelta Panther: W
+2025-12-30 15:56:54 - INFO - Exported table with last5: {'Team': 'Wolfsburg Voltsturm', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:56:54 - INFO - Exported table with last5: {'Team': 'Novadelta Panther', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:56:57 - INFO - Exported table with last5: {'Team': 'Wolfsburg Voltsturm', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:56:57 - INFO - Exported table with last5: {'Team': 'Novadelta Panther', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:58:24 - INFO - Exported table with last5: {'Team': 'Wolfsburg Voltsturm', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:58:24 - INFO - Exported table with last5: {'Team': 'Novadelta Panther', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:58:45 - INFO - Exported table with last5: {'Team': 'Bad Nauheim Devils', 'Points': 0, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:58:45 - INFO - Exported table with last5: {'Team': 'Augsburg Ferox', 'Points': 0, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:58:50 - INFO - Simuliere Liga-Spiel: Bad Nauheim Devils vs Whiteout Berlin in Nord
+2025-12-30 15:58:50 - INFO - Reguläre Tore: Bad Nauheim Devils 1:2 Whiteout Berlin
+2025-12-30 15:58:50 - INFO - Endergebnis: Bad Nauheim Devils 1:2 Whiteout Berlin - Overtime: False, Shootout: False
+2025-12-30 15:58:50 - INFO - Updated last5 for Bad Nauheim Devils: L
+2025-12-30 15:58:50 - INFO - Updated last5 for Whiteout Berlin: W
+2025-12-30 15:58:50 - INFO - Simuliere Liga-Spiel: Bremerhaven Trident vs Wolfsburg Voltsturm in Nord
+2025-12-30 15:58:50 - INFO - Reguläre Tore: Bremerhaven Trident 1:3 Wolfsburg Voltsturm
+2025-12-30 15:58:50 - INFO - Endergebnis: Bremerhaven Trident 1:3 Wolfsburg Voltsturm - Overtime: False, Shootout: False
+2025-12-30 15:58:50 - INFO - Updated last5 for Bremerhaven Trident: L
+2025-12-30 15:58:50 - INFO - Updated last5 for Wolfsburg Voltsturm: W
+2025-12-30 15:58:50 - INFO - Simuliere Liga-Spiel: Düsseldorf Aurora vs Kassel Zenit in Nord
+2025-12-30 15:58:50 - INFO - Reguläre Tore: Düsseldorf Aurora 1:4 Kassel Zenit
+2025-12-30 15:58:50 - INFO - Endergebnis: Düsseldorf Aurora 1:4 Kassel Zenit - Overtime: False, Shootout: False
+2025-12-30 15:58:50 - INFO - Updated last5 for Düsseldorf Aurora: L
+2025-12-30 15:58:50 - INFO - Updated last5 for Kassel Zenit: W
+2025-12-30 15:58:50 - INFO - Simuliere Liga-Spiel: Frankfurt Core vs Krefeld Kernschlag in Nord
+2025-12-30 15:58:50 - INFO - Reguläre Tore: Frankfurt Core 1:2 Krefeld Kernschlag
+2025-12-30 15:58:50 - INFO - Endergebnis: Frankfurt Core 1:2 Krefeld Kernschlag - Overtime: False, Shootout: False
+2025-12-30 15:58:50 - INFO - Updated last5 for Frankfurt Core: L
+2025-12-30 15:58:50 - INFO - Updated last5 for Krefeld Kernschlag: W
+2025-12-30 15:58:50 - INFO - Simuliere Liga-Spiel: Iserlohn Miners vs Köln Blitzhaie in Nord
+2025-12-30 15:58:50 - INFO - Reguläre Tore: Iserlohn Miners 3:2 Köln Blitzhaie
+2025-12-30 15:58:50 - INFO - Endergebnis: Iserlohn Miners 3:2 Köln Blitzhaie - Overtime: False, Shootout: False
+2025-12-30 15:58:50 - INFO - Updated last5 for Iserlohn Miners: W
+2025-12-30 15:58:50 - INFO - Updated last5 for Köln Blitzhaie: L
+2025-12-30 15:58:50 - INFO - Simuliere Liga-Spiel: Augsburg Ferox vs Schwenningen Sturmflügel in Süd
+2025-12-30 15:58:50 - INFO - Reguläre Tore: Augsburg Ferox 3:1 Schwenningen Sturmflügel
+2025-12-30 15:58:50 - INFO - Endergebnis: Augsburg Ferox 3:1 Schwenningen Sturmflügel - Overtime: False, Shootout: False
+2025-12-30 15:58:51 - INFO - Updated last5 for Augsburg Ferox: W
+2025-12-30 15:58:51 - INFO - Updated last5 for Schwenningen Sturmflügel: L
+2025-12-30 15:58:51 - INFO - Simuliere Liga-Spiel: Landshut Lichtkern vs Straubing Forest Tigers in Süd
+2025-12-30 15:58:51 - INFO - Reguläre Tore: Landshut Lichtkern 2:0 Straubing Forest Tigers
+2025-12-30 15:58:51 - INFO - Endergebnis: Landshut Lichtkern 2:0 Straubing Forest Tigers - Overtime: False, Shootout: False
+2025-12-30 15:58:51 - INFO - Updated last5 for Landshut Lichtkern: W
+2025-12-30 15:58:51 - INFO - Updated last5 for Straubing Forest Tigers: L
+2025-12-30 15:58:51 - INFO - Simuliere Liga-Spiel: München FluxBullen vs Ravensburg Zenit Falken in Süd
+2025-12-30 15:58:51 - INFO - Reguläre Tore: München FluxBullen 1:3 Ravensburg Zenit Falken
+2025-12-30 15:58:51 - INFO - Endergebnis: München FluxBullen 1:3 Ravensburg Zenit Falken - Overtime: False, Shootout: False
+2025-12-30 15:58:51 - INFO - Updated last5 for München FluxBullen: L
+2025-12-30 15:58:51 - INFO - Updated last5 for Ravensburg Zenit Falken: W
+2025-12-30 15:58:51 - INFO - Simuliere Liga-Spiel: Mannheim Ventus vs Regensburg Pulse in Süd
+2025-12-30 15:58:51 - INFO - Reguläre Tore: Mannheim Ventus 2:2 Regensburg Pulse
+2025-12-30 15:58:51 - INFO - Endergebnis: Mannheim Ventus 2:3 Regensburg Pulse - Overtime: True, Shootout: False
+2025-12-30 15:58:51 - INFO - Updated last5 for Mannheim Ventus: L1
+2025-12-30 15:58:51 - INFO - Updated last5 for Regensburg Pulse: W2
+2025-12-30 15:58:51 - INFO - Simuliere Liga-Spiel: Novadelta Panther vs Nürnberg Eistiger in Süd
+2025-12-30 15:58:51 - INFO - Reguläre Tore: Novadelta Panther 2:2 Nürnberg Eistiger
+2025-12-30 15:58:51 - INFO - Endergebnis: Novadelta Panther 3:2 Nürnberg Eistiger - Overtime: True, Shootout: False
+2025-12-30 15:58:51 - INFO - Updated last5 for Novadelta Panther: W2
+2025-12-30 15:58:51 - INFO - Updated last5 for Nürnberg Eistiger: L1
+2025-12-30 15:58:51 - INFO - Exported table with last5: {'Team': 'Iserlohn Miners', 'Points': 3, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:58:51 - INFO - Exported table with last5: {'Team': 'Augsburg Ferox', 'Points': 3, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:58:51 - INFO - Saving to stats: W
+2025-12-30 15:58:54 - INFO - Exported table with last5: {'Team': 'Iserlohn Miners', 'Points': 3, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:58:54 - INFO - Exported table with last5: {'Team': 'Augsburg Ferox', 'Points': 3, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:59:19 - INFO - Simuliere Liga-Spiel: Wolfsburg Voltsturm vs Bad Nauheim Devils in Nord
+2025-12-30 15:59:19 - INFO - Reguläre Tore: Wolfsburg Voltsturm 3:1 Bad Nauheim Devils
+2025-12-30 15:59:19 - INFO - Endergebnis: Wolfsburg Voltsturm 3:1 Bad Nauheim Devils - Overtime: False, Shootout: False
+2025-12-30 15:59:19 - INFO - Updated last5 for Wolfsburg Voltsturm: W
+2025-12-30 15:59:19 - INFO - Updated last5 for Bad Nauheim Devils: L
+2025-12-30 15:59:20 - INFO - Simuliere Liga-Spiel: Kassel Zenit vs Whiteout Berlin in Nord
+2025-12-30 15:59:20 - INFO - Reguläre Tore: Kassel Zenit 2:1 Whiteout Berlin
+2025-12-30 15:59:20 - INFO - Endergebnis: Kassel Zenit 2:1 Whiteout Berlin - Overtime: False, Shootout: False
+2025-12-30 15:59:20 - INFO - Updated last5 for Kassel Zenit: W
+2025-12-30 15:59:20 - INFO - Updated last5 for Whiteout Berlin: L
+2025-12-30 15:59:20 - INFO - Simuliere Liga-Spiel: Krefeld Kernschlag vs Bremerhaven Trident in Nord
+2025-12-30 15:59:20 - INFO - Reguläre Tore: Krefeld Kernschlag 0:3 Bremerhaven Trident
+2025-12-30 15:59:20 - INFO - Endergebnis: Krefeld Kernschlag 0:3 Bremerhaven Trident - Overtime: False, Shootout: False
+2025-12-30 15:59:20 - INFO - Updated last5 for Krefeld Kernschlag: L
+2025-12-30 15:59:20 - INFO - Updated last5 for Bremerhaven Trident: W
+2025-12-30 15:59:20 - INFO - Simuliere Liga-Spiel: Köln Blitzhaie vs Düsseldorf Aurora in Nord
+2025-12-30 15:59:20 - INFO - Reguläre Tore: Köln Blitzhaie 2:3 Düsseldorf Aurora
+2025-12-30 15:59:20 - INFO - Endergebnis: Köln Blitzhaie 2:3 Düsseldorf Aurora - Overtime: False, Shootout: False
+2025-12-30 15:59:20 - INFO - Updated last5 for Köln Blitzhaie: L
+2025-12-30 15:59:20 - INFO - Updated last5 for Düsseldorf Aurora: W
+2025-12-30 15:59:20 - INFO - Simuliere Liga-Spiel: Iserlohn Miners vs Frankfurt Core in Nord
+2025-12-30 15:59:20 - INFO - Reguläre Tore: Iserlohn Miners 2:3 Frankfurt Core
+2025-12-30 15:59:20 - INFO - Endergebnis: Iserlohn Miners 2:3 Frankfurt Core - Overtime: False, Shootout: False
+2025-12-30 15:59:20 - INFO - Updated last5 for Iserlohn Miners: L
+2025-12-30 15:59:20 - INFO - Updated last5 for Frankfurt Core: W
+2025-12-30 15:59:20 - INFO - Simuliere Liga-Spiel: Straubing Forest Tigers vs Augsburg Ferox in Süd
+2025-12-30 15:59:20 - INFO - Reguläre Tore: Straubing Forest Tigers 2:1 Augsburg Ferox
+2025-12-30 15:59:20 - INFO - Endergebnis: Straubing Forest Tigers 2:1 Augsburg Ferox - Overtime: False, Shootout: False
+2025-12-30 15:59:20 - INFO - Updated last5 for Straubing Forest Tigers: W
+2025-12-30 15:59:20 - INFO - Updated last5 for Augsburg Ferox: L
+2025-12-30 15:59:20 - INFO - Simuliere Liga-Spiel: Ravensburg Zenit Falken vs Schwenningen Sturmflügel in Süd
+2025-12-30 15:59:20 - INFO - Reguläre Tore: Ravensburg Zenit Falken 2:1 Schwenningen Sturmflügel
+2025-12-30 15:59:20 - INFO - Endergebnis: Ravensburg Zenit Falken 2:1 Schwenningen Sturmflügel - Overtime: False, Shootout: False
+2025-12-30 15:59:20 - INFO - Updated last5 for Ravensburg Zenit Falken: W
+2025-12-30 15:59:20 - INFO - Updated last5 for Schwenningen Sturmflügel: L
+2025-12-30 15:59:20 - INFO - Simuliere Liga-Spiel: Regensburg Pulse vs Landshut Lichtkern in Süd
+2025-12-30 15:59:20 - INFO - Reguläre Tore: Regensburg Pulse 1:3 Landshut Lichtkern
+2025-12-30 15:59:20 - INFO - Endergebnis: Regensburg Pulse 1:3 Landshut Lichtkern - Overtime: False, Shootout: False
+2025-12-30 15:59:20 - INFO - Updated last5 for Regensburg Pulse: L
+2025-12-30 15:59:20 - INFO - Updated last5 for Landshut Lichtkern: W
+2025-12-30 15:59:20 - INFO - Simuliere Liga-Spiel: Nürnberg Eistiger vs München FluxBullen in Süd
+2025-12-30 15:59:20 - INFO - Reguläre Tore: Nürnberg Eistiger 3:1 München FluxBullen
+2025-12-30 15:59:20 - INFO - Endergebnis: Nürnberg Eistiger 3:1 München FluxBullen - Overtime: False, Shootout: False
+2025-12-30 15:59:20 - INFO - Updated last5 for Nürnberg Eistiger: W
+2025-12-30 15:59:20 - INFO - Updated last5 for München FluxBullen: L
+2025-12-30 15:59:20 - INFO - Simuliere Liga-Spiel: Mannheim Ventus vs Novadelta Panther in Süd
+2025-12-30 15:59:20 - INFO - Reguläre Tore: Mannheim Ventus 2:1 Novadelta Panther
+2025-12-30 15:59:20 - INFO - Endergebnis: Mannheim Ventus 2:1 Novadelta Panther - Overtime: False, Shootout: False
+2025-12-30 15:59:20 - INFO - Updated last5 for Mannheim Ventus: W
+2025-12-30 15:59:20 - INFO - Updated last5 for Novadelta Panther: L
+2025-12-30 15:59:20 - INFO - Exported table with last5: {'Team': 'Kassel Zenit', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:59:20 - INFO - Exported table with last5: {'Team': 'Landshut Lichtkern', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:59:20 - INFO - Saving to stats: W
+2025-12-30 15:59:23 - INFO - Exported table with last5: {'Team': 'Kassel Zenit', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:59:23 - INFO - Exported table with last5: {'Team': 'Landshut Lichtkern', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:59:40 - INFO - Simuliere Liga-Spiel: Bad Nauheim Devils vs Kassel Zenit in Nord
+2025-12-30 15:59:40 - INFO - Reguläre Tore: Bad Nauheim Devils 2:2 Kassel Zenit
+2025-12-30 15:59:40 - INFO - Endergebnis: Bad Nauheim Devils 3:2 Kassel Zenit - Overtime: True, Shootout: False
+2025-12-30 15:59:40 - INFO - Updated last5 for Bad Nauheim Devils: W2
+2025-12-30 15:59:40 - INFO - Updated last5 for Kassel Zenit: L1
+2025-12-30 15:59:40 - INFO - Simuliere Liga-Spiel: Wolfsburg Voltsturm vs Krefeld Kernschlag in Nord
+2025-12-30 15:59:40 - INFO - Reguläre Tore: Wolfsburg Voltsturm 2:2 Krefeld Kernschlag
+2025-12-30 15:59:40 - INFO - Endergebnis: Wolfsburg Voltsturm 3:2 Krefeld Kernschlag - Overtime: True, Shootout: False
+2025-12-30 15:59:40 - INFO - Updated last5 for Wolfsburg Voltsturm: W2
+2025-12-30 15:59:40 - INFO - Updated last5 for Krefeld Kernschlag: L1
+2025-12-30 15:59:40 - INFO - Simuliere Liga-Spiel: Whiteout Berlin vs Köln Blitzhaie in Nord
+2025-12-30 15:59:40 - INFO - Reguläre Tore: Whiteout Berlin 3:2 Köln Blitzhaie
+2025-12-30 15:59:40 - INFO - Endergebnis: Whiteout Berlin 3:2 Köln Blitzhaie - Overtime: False, Shootout: False
+2025-12-30 15:59:40 - INFO - Updated last5 for Whiteout Berlin: W
+2025-12-30 15:59:40 - INFO - Updated last5 for Köln Blitzhaie: L
+2025-12-30 15:59:40 - INFO - Simuliere Liga-Spiel: Bremerhaven Trident vs Iserlohn Miners in Nord
+2025-12-30 15:59:40 - INFO - Reguläre Tore: Bremerhaven Trident 3:3 Iserlohn Miners
+2025-12-30 15:59:40 - INFO - Endergebnis: Bremerhaven Trident 3:4 Iserlohn Miners - Overtime: True, Shootout: False
+2025-12-30 15:59:40 - INFO - Updated last5 for Bremerhaven Trident: L1
+2025-12-30 15:59:40 - INFO - Updated last5 for Iserlohn Miners: W2
+2025-12-30 15:59:40 - INFO - Simuliere Liga-Spiel: Düsseldorf Aurora vs Frankfurt Core in Nord
+2025-12-30 15:59:40 - INFO - Reguläre Tore: Düsseldorf Aurora 2:3 Frankfurt Core
+2025-12-30 15:59:40 - INFO - Endergebnis: Düsseldorf Aurora 2:3 Frankfurt Core - Overtime: False, Shootout: False
+2025-12-30 15:59:40 - INFO - Updated last5 for Düsseldorf Aurora: L
+2025-12-30 15:59:40 - INFO - Updated last5 for Frankfurt Core: W
+2025-12-30 15:59:40 - INFO - Simuliere Liga-Spiel: Novadelta Panther vs Augsburg Ferox in Süd
+2025-12-30 15:59:40 - INFO - Reguläre Tore: Novadelta Panther 3:3 Augsburg Ferox
+2025-12-30 15:59:40 - INFO - Endergebnis: Novadelta Panther 4:3 Augsburg Ferox - Overtime: True, Shootout: False
+2025-12-30 15:59:40 - INFO - Updated last5 for Novadelta Panther: W2
+2025-12-30 15:59:40 - INFO - Updated last5 for Augsburg Ferox: L1
+2025-12-30 15:59:40 - INFO - Simuliere Liga-Spiel: Nürnberg Eistiger vs Mannheim Ventus in Süd
+2025-12-30 15:59:40 - INFO - Reguläre Tore: Nürnberg Eistiger 2:3 Mannheim Ventus
+2025-12-30 15:59:40 - INFO - Endergebnis: Nürnberg Eistiger 2:3 Mannheim Ventus - Overtime: False, Shootout: False
+2025-12-30 15:59:40 - INFO - Updated last5 for Nürnberg Eistiger: L
+2025-12-30 15:59:40 - INFO - Updated last5 for Mannheim Ventus: W
+2025-12-30 15:59:41 - INFO - Simuliere Liga-Spiel: Regensburg Pulse vs München FluxBullen in Süd
+2025-12-30 15:59:41 - INFO - Reguläre Tore: Regensburg Pulse 0:2 München FluxBullen
+2025-12-30 15:59:41 - INFO - Endergebnis: Regensburg Pulse 0:2 München FluxBullen - Overtime: False, Shootout: False
+2025-12-30 15:59:41 - INFO - Updated last5 for Regensburg Pulse: L
+2025-12-30 15:59:41 - INFO - Updated last5 for München FluxBullen: W
+2025-12-30 15:59:41 - INFO - Simuliere Liga-Spiel: Ravensburg Zenit Falken vs Landshut Lichtkern in Süd
+2025-12-30 15:59:41 - INFO - Reguläre Tore: Ravensburg Zenit Falken 3:2 Landshut Lichtkern
+2025-12-30 15:59:41 - INFO - Endergebnis: Ravensburg Zenit Falken 3:2 Landshut Lichtkern - Overtime: False, Shootout: False
+2025-12-30 15:59:41 - INFO - Updated last5 for Ravensburg Zenit Falken: W
+2025-12-30 15:59:41 - INFO - Updated last5 for Landshut Lichtkern: L
+2025-12-30 15:59:41 - INFO - Simuliere Liga-Spiel: Straubing Forest Tigers vs Schwenningen Sturmflügel in Süd
+2025-12-30 15:59:41 - INFO - Reguläre Tore: Straubing Forest Tigers 3:2 Schwenningen Sturmflügel
+2025-12-30 15:59:41 - INFO - Endergebnis: Straubing Forest Tigers 3:2 Schwenningen Sturmflügel - Overtime: False, Shootout: False
+2025-12-30 15:59:41 - INFO - Updated last5 for Straubing Forest Tigers: W
+2025-12-30 15:59:41 - INFO - Updated last5 for Schwenningen Sturmflügel: L
+2025-12-30 15:59:41 - INFO - Exported table with last5: {'Team': 'Wolfsburg Voltsturm', 'Points': 8, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:59:41 - INFO - Exported table with last5: {'Team': 'Ravensburg Zenit Falken', 'Points': 9, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:59:41 - INFO - Saving to stats: W2
+2025-12-30 15:59:44 - INFO - Exported table with last5: {'Team': 'Wolfsburg Voltsturm', 'Points': 8, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 15:59:44 - INFO - Exported table with last5: {'Team': 'Ravensburg Zenit Falken', 'Points': 9, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:01:56 - INFO - Exported table with last5: {'Team': 'Wolfsburg Voltsturm', 'Points': 8, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:01:56 - INFO - Exported table with last5: {'Team': 'Ravensburg Zenit Falken', 'Points': 9, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:02:28 - INFO - Simuliere Liga-Spiel: Krefeld Kernschlag vs Bad Nauheim Devils in Nord
+2025-12-30 16:02:28 - INFO - Reguläre Tore: Krefeld Kernschlag 3:3 Bad Nauheim Devils
+2025-12-30 16:02:28 - INFO - Endergebnis: Krefeld Kernschlag 4:3 Bad Nauheim Devils - Overtime: True, Shootout: False
+2025-12-30 16:02:28 - INFO - Updated last5 for Krefeld Kernschlag: W2
+2025-12-30 16:02:28 - INFO - Updated last5 for Bad Nauheim Devils: L1
+2025-12-30 16:02:28 - INFO - Simuliere Liga-Spiel: Köln Blitzhaie vs Kassel Zenit in Nord
+2025-12-30 16:02:28 - INFO - Reguläre Tore: Köln Blitzhaie 3:0 Kassel Zenit
+2025-12-30 16:02:28 - INFO - Endergebnis: Köln Blitzhaie 3:0 Kassel Zenit - Overtime: False, Shootout: False
+2025-12-30 16:02:28 - INFO - Updated last5 for Köln Blitzhaie: W
+2025-12-30 16:02:28 - INFO - Updated last5 for Kassel Zenit: L
+2025-12-30 16:02:28 - INFO - Simuliere Liga-Spiel: Iserlohn Miners vs Wolfsburg Voltsturm in Nord
+2025-12-30 16:02:28 - INFO - Reguläre Tore: Iserlohn Miners 2:2 Wolfsburg Voltsturm
+2025-12-30 16:02:28 - INFO - Endergebnis: Iserlohn Miners 3:2 Wolfsburg Voltsturm - Overtime: True, Shootout: False
+2025-12-30 16:02:28 - INFO - Updated last5 for Iserlohn Miners: W2
+2025-12-30 16:02:28 - INFO - Updated last5 for Wolfsburg Voltsturm: L1
+2025-12-30 16:02:28 - INFO - Simuliere Liga-Spiel: Frankfurt Core vs Whiteout Berlin in Nord
+2025-12-30 16:02:28 - INFO - Reguläre Tore: Frankfurt Core 2:2 Whiteout Berlin
+2025-12-30 16:02:28 - INFO - Endergebnis: Frankfurt Core 2:3 Whiteout Berlin - Overtime: True, Shootout: False
+2025-12-30 16:02:28 - INFO - Updated last5 for Frankfurt Core: L1
+2025-12-30 16:02:28 - INFO - Updated last5 for Whiteout Berlin: W2
+2025-12-30 16:02:28 - INFO - Simuliere Liga-Spiel: Düsseldorf Aurora vs Bremerhaven Trident in Nord
+2025-12-30 16:02:28 - INFO - Reguläre Tore: Düsseldorf Aurora 4:4 Bremerhaven Trident
+2025-12-30 16:02:28 - INFO - Endergebnis: Düsseldorf Aurora 5:4 Bremerhaven Trident - Overtime: True, Shootout: False
+2025-12-30 16:02:28 - INFO - Updated last5 for Düsseldorf Aurora: W2
+2025-12-30 16:02:28 - INFO - Updated last5 for Bremerhaven Trident: L1
+2025-12-30 16:02:29 - INFO - Simuliere Liga-Spiel: Regensburg Pulse vs Augsburg Ferox in Süd
+2025-12-30 16:02:29 - INFO - Reguläre Tore: Regensburg Pulse 3:1 Augsburg Ferox
+2025-12-30 16:02:29 - INFO - Endergebnis: Regensburg Pulse 3:1 Augsburg Ferox - Overtime: False, Shootout: False
+2025-12-30 16:02:29 - INFO - Updated last5 for Regensburg Pulse: W
+2025-12-30 16:02:29 - INFO - Updated last5 for Augsburg Ferox: L
+2025-12-30 16:02:29 - INFO - Simuliere Liga-Spiel: Nürnberg Eistiger vs Ravensburg Zenit Falken in Süd
+2025-12-30 16:02:29 - INFO - Reguläre Tore: Nürnberg Eistiger 3:2 Ravensburg Zenit Falken
+2025-12-30 16:02:29 - INFO - Endergebnis: Nürnberg Eistiger 3:2 Ravensburg Zenit Falken - Overtime: False, Shootout: False
+2025-12-30 16:02:29 - INFO - Updated last5 for Nürnberg Eistiger: W
+2025-12-30 16:02:29 - INFO - Updated last5 for Ravensburg Zenit Falken: L
+2025-12-30 16:02:29 - INFO - Simuliere Liga-Spiel: Straubing Forest Tigers vs Novadelta Panther in Süd
+2025-12-30 16:02:29 - INFO - Reguläre Tore: Straubing Forest Tigers 0:2 Novadelta Panther
+2025-12-30 16:02:29 - INFO - Endergebnis: Straubing Forest Tigers 0:2 Novadelta Panther - Overtime: False, Shootout: False
+2025-12-30 16:02:29 - INFO - Updated last5 for Straubing Forest Tigers: L
+2025-12-30 16:02:29 - INFO - Updated last5 for Novadelta Panther: W
+2025-12-30 16:02:29 - INFO - Simuliere Liga-Spiel: Mannheim Ventus vs Schwenningen Sturmflügel in Süd
+2025-12-30 16:02:29 - INFO - Reguläre Tore: Mannheim Ventus 0:3 Schwenningen Sturmflügel
+2025-12-30 16:02:29 - INFO - Endergebnis: Mannheim Ventus 0:3 Schwenningen Sturmflügel - Overtime: False, Shootout: False
+2025-12-30 16:02:29 - INFO - Updated last5 for Mannheim Ventus: L
+2025-12-30 16:02:29 - INFO - Updated last5 for Schwenningen Sturmflügel: W
+2025-12-30 16:02:29 - INFO - Simuliere Liga-Spiel: München FluxBullen vs Landshut Lichtkern in Süd
+2025-12-30 16:02:29 - INFO - Reguläre Tore: München FluxBullen 2:3 Landshut Lichtkern
+2025-12-30 16:02:29 - INFO - Endergebnis: München FluxBullen 2:3 Landshut Lichtkern - Overtime: False, Shootout: False
+2025-12-30 16:02:29 - INFO - Updated last5 for München FluxBullen: L
+2025-12-30 16:02:29 - INFO - Updated last5 for Landshut Lichtkern: W
+2025-12-30 16:02:29 - INFO - Exported table with last5: {'Team': 'Wolfsburg Voltsturm', 'Points': 9, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:02:29 - INFO - Exported table with last5: {'Team': 'Landshut Lichtkern', 'Points': 9, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:02:29 - INFO - Team Wolfsburg Voltsturm last5 from nord: L1
+2025-12-30 16:02:29 - INFO - Team Whiteout Berlin last5 from nord: W2
+2025-12-30 16:02:29 - INFO - Team Frankfurt Core last5 from nord: L1
+2025-12-30 16:02:29 - INFO - Team Iserlohn Miners last5 from nord: W2
+2025-12-30 16:02:29 - INFO - Team Kassel Zenit last5 from nord: L
+2025-12-30 16:02:29 - INFO - Team Krefeld Kernschlag last5 from nord: W2
+2025-12-30 16:02:29 - INFO - Team Bremerhaven Trident last5 from nord: L1
+2025-12-30 16:02:29 - INFO - Team Düsseldorf Aurora last5 from nord: W2
+2025-12-30 16:02:29 - INFO - Team Bad Nauheim Devils last5 from nord: L1
+2025-12-30 16:02:29 - INFO - Team Köln Blitzhaie last5 from nord: W
+2025-12-30 16:02:29 - INFO - Team Landshut Lichtkern last5 from sued: W
+2025-12-30 16:02:29 - INFO - Team Ravensburg Zenit Falken last5 from sued: L
+2025-12-30 16:02:29 - INFO - Team Mannheim Ventus last5 from sued: L
+2025-12-30 16:02:29 - INFO - Team Novadelta Panther last5 from sued: W
+2025-12-30 16:02:29 - INFO - Team Nürnberg Eistiger last5 from sued: W
+2025-12-30 16:02:29 - INFO - Team Straubing Forest Tigers last5 from sued: L
+2025-12-30 16:02:29 - INFO - Team Regensburg Pulse last5 from sued: W
+2025-12-30 16:02:29 - INFO - Team Augsburg Ferox last5 from sued: L
+2025-12-30 16:02:29 - INFO - Team München FluxBullen last5 from sued: L
+2025-12-30 16:02:29 - INFO - Team Schwenningen Sturmflügel last5 from sued: W
+2025-12-30 16:02:29 - INFO - Saving to stats: L1
+2025-12-30 16:02:32 - INFO - Exported table with last5: {'Team': 'Wolfsburg Voltsturm', 'Points': 9, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:02:32 - INFO - Exported table with last5: {'Team': 'Landshut Lichtkern', 'Points': 9, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:05:32 - INFO - Simuliere Liga-Spiel: Bad Nauheim Devils vs Köln Blitzhaie in Nord
+2025-12-30 16:05:32 - INFO - Reguläre Tore: Bad Nauheim Devils 2:2 Köln Blitzhaie
+2025-12-30 16:05:32 - INFO - Endergebnis: Bad Nauheim Devils 2:3 Köln Blitzhaie - Overtime: True, Shootout: False
+2025-12-30 16:05:32 - INFO - Updated last5 for Bad Nauheim Devils: L1
+2025-12-30 16:05:32 - INFO - Updated last5 for Köln Blitzhaie: W2
+2025-12-30 16:05:32 - INFO - Simuliere Liga-Spiel: Krefeld Kernschlag vs Iserlohn Miners in Nord
+2025-12-30 16:05:32 - INFO - Reguläre Tore: Krefeld Kernschlag 4:2 Iserlohn Miners
+2025-12-30 16:05:32 - INFO - Endergebnis: Krefeld Kernschlag 4:2 Iserlohn Miners - Overtime: False, Shootout: False
+2025-12-30 16:05:32 - INFO - Updated last5 for Krefeld Kernschlag: W
+2025-12-30 16:05:32 - INFO - Updated last5 for Iserlohn Miners: L
+2025-12-30 16:05:32 - INFO - Simuliere Liga-Spiel: Kassel Zenit vs Frankfurt Core in Nord
+2025-12-30 16:05:32 - INFO - Reguläre Tore: Kassel Zenit 1:2 Frankfurt Core
+2025-12-30 16:05:32 - INFO - Endergebnis: Kassel Zenit 1:2 Frankfurt Core - Overtime: False, Shootout: False
+2025-12-30 16:05:32 - INFO - Updated last5 for Kassel Zenit: L
+2025-12-30 16:05:32 - INFO - Updated last5 for Frankfurt Core: W
+2025-12-30 16:05:32 - INFO - Simuliere Liga-Spiel: Wolfsburg Voltsturm vs Düsseldorf Aurora in Nord
+2025-12-30 16:05:32 - INFO - Reguläre Tore: Wolfsburg Voltsturm 2:1 Düsseldorf Aurora
+2025-12-30 16:05:32 - INFO - Endergebnis: Wolfsburg Voltsturm 2:1 Düsseldorf Aurora - Overtime: False, Shootout: False
+2025-12-30 16:05:32 - INFO - Updated last5 for Wolfsburg Voltsturm: W
+2025-12-30 16:05:32 - INFO - Updated last5 for Düsseldorf Aurora: L
+2025-12-30 16:05:32 - INFO - Simuliere Liga-Spiel: Whiteout Berlin vs Bremerhaven Trident in Nord
+2025-12-30 16:05:32 - INFO - Reguläre Tore: Whiteout Berlin 1:3 Bremerhaven Trident
+2025-12-30 16:05:32 - INFO - Endergebnis: Whiteout Berlin 1:3 Bremerhaven Trident - Overtime: False, Shootout: False
+2025-12-30 16:05:32 - INFO - Updated last5 for Whiteout Berlin: L
+2025-12-30 16:05:32 - INFO - Updated last5 for Bremerhaven Trident: W
+2025-12-30 16:05:32 - INFO - Simuliere Liga-Spiel: Augsburg Ferox vs Nürnberg Eistiger in Süd
+2025-12-30 16:05:32 - INFO - Reguläre Tore: Augsburg Ferox 2:2 Nürnberg Eistiger
+2025-12-30 16:05:32 - INFO - Endergebnis: Augsburg Ferox 2:3 Nürnberg Eistiger - Overtime: True, Shootout: False
+2025-12-30 16:05:32 - INFO - Updated last5 for Augsburg Ferox: L1
+2025-12-30 16:05:32 - INFO - Updated last5 for Nürnberg Eistiger: W2
+2025-12-30 16:05:32 - INFO - Simuliere Liga-Spiel: Novadelta Panther vs Regensburg Pulse in Süd
+2025-12-30 16:05:32 - INFO - Reguläre Tore: Novadelta Panther 3:2 Regensburg Pulse
+2025-12-30 16:05:32 - INFO - Endergebnis: Novadelta Panther 3:2 Regensburg Pulse - Overtime: False, Shootout: False
+2025-12-30 16:05:32 - INFO - Updated last5 for Novadelta Panther: W
+2025-12-30 16:05:32 - INFO - Updated last5 for Regensburg Pulse: L
+2025-12-30 16:05:32 - INFO - Simuliere Liga-Spiel: Ravensburg Zenit Falken vs Mannheim Ventus in Süd
+2025-12-30 16:05:32 - INFO - Reguläre Tore: Ravensburg Zenit Falken 1:1 Mannheim Ventus
+2025-12-30 16:05:32 - INFO - Endergebnis: Ravensburg Zenit Falken 1:2 Mannheim Ventus - Overtime: True, Shootout: False
+2025-12-30 16:05:32 - INFO - Updated last5 for Ravensburg Zenit Falken: L1
+2025-12-30 16:05:32 - INFO - Updated last5 for Mannheim Ventus: W2
+2025-12-30 16:05:33 - INFO - Simuliere Liga-Spiel: Straubing Forest Tigers vs München FluxBullen in Süd
+2025-12-30 16:05:33 - INFO - Reguläre Tore: Straubing Forest Tigers 3:2 München FluxBullen
+2025-12-30 16:05:33 - INFO - Endergebnis: Straubing Forest Tigers 3:2 München FluxBullen - Overtime: False, Shootout: False
+2025-12-30 16:05:33 - INFO - Updated last5 for Straubing Forest Tigers: W
+2025-12-30 16:05:33 - INFO - Updated last5 for München FluxBullen: L
+2025-12-30 16:05:33 - INFO - Simuliere Liga-Spiel: Schwenningen Sturmflügel vs Landshut Lichtkern in Süd
+2025-12-30 16:05:33 - INFO - Reguläre Tore: Schwenningen Sturmflügel 3:2 Landshut Lichtkern
+2025-12-30 16:05:33 - INFO - Endergebnis: Schwenningen Sturmflügel 3:2 Landshut Lichtkern - Overtime: False, Shootout: False
+2025-12-30 16:05:33 - INFO - Updated last5 for Schwenningen Sturmflügel: W
+2025-12-30 16:05:33 - INFO - Updated last5 for Landshut Lichtkern: L
+2025-12-30 16:05:33 - INFO - Exported table with last5: {'Team': 'Wolfsburg Voltsturm', 'Points': 12, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:05:33 - INFO - Exported table with last5: {'Team': 'Novadelta Panther', 'Points': 10, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:05:33 - INFO - Team Wolfsburg Voltsturm last5 from nord: W
+2025-12-30 16:05:33 - INFO - Team Frankfurt Core last5 from nord: W
+2025-12-30 16:05:33 - INFO - Team Krefeld Kernschlag last5 from nord: W
+2025-12-30 16:05:33 - INFO - Team Bremerhaven Trident last5 from nord: W
+2025-12-30 16:05:33 - INFO - Team Whiteout Berlin last5 from nord: L
+2025-12-30 16:05:33 - INFO - Team Iserlohn Miners last5 from nord: L
+2025-12-30 16:05:33 - INFO - Team Kassel Zenit last5 from nord: L
+2025-12-30 16:05:33 - INFO - Team Düsseldorf Aurora last5 from nord: L
+2025-12-30 16:05:33 - INFO - Team Köln Blitzhaie last5 from nord: W2
+2025-12-30 16:05:33 - INFO - Team Bad Nauheim Devils last5 from nord: L1
+2025-12-30 16:05:33 - INFO - Team Novadelta Panther last5 from sued: W
+2025-12-30 16:05:33 - INFO - Team Ravensburg Zenit Falken last5 from sued: L1
+2025-12-30 16:05:33 - INFO - Team Landshut Lichtkern last5 from sued: L
+2025-12-30 16:05:33 - INFO - Team Mannheim Ventus last5 from sued: W2
+2025-12-30 16:05:33 - INFO - Team Nürnberg Eistiger last5 from sued: W2
+2025-12-30 16:05:33 - INFO - Team Straubing Forest Tigers last5 from sued: W
+2025-12-30 16:05:33 - INFO - Team Schwenningen Sturmflügel last5 from sued: W
+2025-12-30 16:05:33 - INFO - Team Augsburg Ferox last5 from sued: L1
+2025-12-30 16:05:33 - INFO - Team Regensburg Pulse last5 from sued: L
+2025-12-30 16:05:33 - INFO - Team München FluxBullen last5 from sued: L
+2025-12-30 16:05:33 - INFO - Saving to stats: W
+2025-12-30 16:05:36 - INFO - Exported table with last5: {'Team': 'Wolfsburg Voltsturm', 'Points': 12, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:05:36 - INFO - Exported table with last5: {'Team': 'Novadelta Panther', 'Points': 10, 'GF': 0, 'GA': 0, 'GD': 0}

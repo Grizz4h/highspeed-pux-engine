@@ -17,6 +17,12 @@ import pandas as pd
 import streamlit as st
 from PIL import Image
 
+# Setze den Port für die Sandbox auf 9502
+if is_sandbox_mode():
+    st.set_page_config(page_title="PUX Liga Simulator (Sandbox)", server_port=9502)
+else:
+    st.set_page_config(page_title="PUX Liga Simulator")
+
 DATA_REPO_PATH = Path("/opt/highspeed/data")
 PUBLISHER_DIR  = Path("/opt/highspeed/publisher")
 SCRIPT_PULL    = PUBLISHER_DIR / "data_pull.sh"
@@ -347,6 +353,21 @@ with st.sidebar:
             else:
                 st.toast(f"Konnte Spieltag nicht simulieren (Status: {status}).", icon="❌")
  
+
+    if is_sandbox_mode():
+        st.markdown("### 🗑️ Reset Sandbox")
+        if st.button(
+            "🗑️ Alle Daten löschen & neu starten",
+            key="btn_reset",
+            use_container_width=True
+        ):
+            import shutil
+            if DATA_DIR.exists():
+                shutil.rmtree(DATA_DIR)
+                st.success(f"🗑️ Gelöscht: {DATA_DIR}")
+            st.success("✅ Sandbox zurückgesetzt! Seite neu laden.")
+            st.cache_data.clear()
+            st.rerun()
 
 
     if st.button("🏒 Nächste Playoff-Runde (Bo7) simulieren", key="btn_po_round", use_container_width=True):
