@@ -1187,6 +1187,28 @@ def calc_strength(row: pd.Series, home: bool = False) -> float:
     return round(total, 2)
 
 
+def seasonal_form_factor(matchday: int, team: str, total_matchdays: int = 18, base_amplitude: float = 0.1, damping: float = 2.0) -> float:
+    """
+    Berechnet einen saisonalen Form-Faktor für ein Team an einem bestimmten Matchday.
+    - Früh: Hohe Schwankungen (Überschwingen).
+    - Später: Abnehmend, einpendelnd.
+    - Deterministisch pro Team/Matchday via Seed.
+    """
+    # Seed für Reproduzierbarkeit
+    seed = hash(f"{team}_{matchday}") % (2**32)
+    random.seed(seed)
+    
+    # Exponentielle Dämpfung: Amplitude nimmt ab
+    progress = (matchday - 1) / total_matchdays  # 0 bis 1
+    amplitude = base_amplitude * math.exp(-damping * progress)
+    
+    # Zufälliger Faktor um 1 herum
+    factor = 1 + random.gauss(0, amplitude)
+    
+    # Begrenze auf vernünftige Werte (z.B. 0.8 bis 1.2)
+    return max(0.8, min(1.2, factor))
+
+
 # ------------------------------------------------
 # 6c  STATS-UPDATES
 # ------------------------------------------------
@@ -1244,7 +1266,8 @@ def simulate_match(
     home: str,
     away: str,
     stats: pd.DataFrame,
-    conf: str
+    conf: str,
+    matchday: int
 ) -> Tuple[str, Dict[str, Any], Dict[str, Any]]:
     logging.info(f"Simuliere Liga-Spiel: {home} vs {away} in {conf}")
     r_h = df[df["Team"] == home].iloc[0]
@@ -1252,6 +1275,13 @@ def simulate_match(
 
     strength_home = calc_strength(r_h, True)
     strength_away = calc_strength(r_a, False)
+    
+    # Saisonale Form-Modulation
+    form_home = seasonal_form_factor(matchday, home)
+    form_away = seasonal_form_factor(matchday, away)
+    strength_home *= form_home
+    strength_away *= form_away
+    
     p_home = strength_home / (strength_home + strength_away)
 
     g_home = max(0, int(random.gauss(p_home * 5, 1)))
@@ -1707,7 +1737,7 @@ def step_regular_season_once() -> Dict[str, Any]:
         print(strength_nord.to_string(index=False))
 
     for m in today_nord_matches:
-        s, j, replay = simulate_match(nord, *m, stats, "Nord")
+        s, j, replay = simulate_match(nord, *m, stats, "Nord", spieltag)
         print(s)
         results_json.append(j)
         replay_matches.append(replay)
@@ -1728,7 +1758,7 @@ def step_regular_season_once() -> Dict[str, Any]:
         print(strength_sued.to_string(index=False))
 
     for m in today_sued_matches:
-        s, j, replay = simulate_match(sued, *m, stats, "Süd")
+        s, j, replay = simulate_match(sued, *m, stats, "Süd", spieltag)
         print(s)
         results_json.append(j)
         replay_matches.append(replay)
