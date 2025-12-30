@@ -1281,6 +1281,7 @@ def simulate_match(
     form_away = seasonal_form_factor(matchday, away)
     strength_home *= form_home
     strength_away *= form_away
+    logging.info(f"Form factors (Matchday {matchday}): {home} {form_home:.2f}, {away} {form_away:.2f}")
     
     p_home = strength_home / (strength_home + strength_away)
 

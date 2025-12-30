@@ -17,11 +17,9 @@ import pandas as pd
 import streamlit as st
 from PIL import Image
 
-# Setze den Port für die Sandbox auf 9502
-if is_sandbox_mode():
-    st.set_page_config(page_title="PUX Liga Simulator (Sandbox)", server_port=9502)
-else:
-    st.set_page_config(page_title="PUX Liga Simulator")
+import pandas as pd
+import streamlit as st
+from PIL import Image
 
 DATA_REPO_PATH = Path("/opt/highspeed/data")
 PUBLISHER_DIR  = Path("/opt/highspeed/publisher")
@@ -64,6 +62,12 @@ def mode_badge() -> str:
 if is_sandbox_mode() and is_ssot_root():
     st.error("FATAL: SANDBOX mode but DATA_ROOT points to SSOT. Fix systemd env.", icon="🛑")
     st.stop()
+
+# Setze den Port für die Sandbox auf 9502
+if is_sandbox_mode():
+    st.set_page_config(page_title="PUX Liga Simulator (Sandbox)")
+else:
+    st.set_page_config(page_title="PUX Liga Simulator")
 
 
 
