@@ -11,7 +11,14 @@ from typing import Dict, List, Any
 
 from narrative import render_two_line_narrative
 
-DATA_DIR = Path("data")
+import os
+
+env_root = os.environ.get("HIGHSPEED_DATA_ROOT")
+if not env_root:
+    raise RuntimeError("HIGHSPEED_DATA_ROOT ist nicht gesetzt.")
+DATA_ROOT = Path(env_root)
+
+DATA_DIR = DATA_ROOT
 REPLAY_DIR = DATA_DIR / "replays"
 LIBRARY_FILE = Path("narrative_library.json")
 

@@ -1808,7 +1808,7 @@ def step_regular_season_once() -> Dict[str, Any]:
 
     # Generate summaries
     import subprocess
-    subprocess.run(["python", "generate_summaries.py"], cwd=BASE_DIR)
+    subprocess.run(["python", "generate_summaries.py"], cwd=".")
 
     save_league_stats_snapshot(
         season=season,
