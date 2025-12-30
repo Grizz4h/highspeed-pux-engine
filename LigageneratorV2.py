@@ -1285,9 +1285,15 @@ def simulate_match(
     
     p_home = strength_home / (strength_home + strength_away)
 
-    g_home = max(0, int(random.gauss(p_home * 6, 1)))
-    g_away = max(0, int(random.gauss((1 - p_home) * 6, 1)))
-    logging.info(f"Reguläre Tore: {home} {g_home}:{g_away} {away}")
+    # Variabilität: Bei ausgeglichenen Spielen höhere Std für mehr Zufall (deutlichere Ergebnisse)
+    balance = abs(p_home - 0.5)  # 0 = perfekt ausgeglichen, 0.5 = eindeutig
+    std_base = 0.8
+    std_variance = 0.8 * (1 - 2 * balance)  # Mehr Varianz bei balance=0
+    std = std_base + std_variance
+
+    g_home = max(0, int(random.gauss(p_home * 6, std)))
+    g_away = max(0, int(random.gauss((1 - p_home) * 6, std)))
+    logging.info(f"Reguläre Tore (Std={std:.2f}): {home} {g_home}:{g_away} {away}")
 
     is_overtime = False
     is_shootout = False
@@ -1569,9 +1575,16 @@ def simulate_playoff_match(
     pA = calc_strength(rA, True)
     pB = calc_strength(rB, False)
     prob = pA / (pA + pB)
-    gA = max(0, int(random.gauss(prob * 6, 1)))
-    gB = max(0, int(random.gauss((1 - prob) * 6, 1)))
-    logging.info(f"Reguläre Tore: {a} {gA}:{gB} {b}")
+
+    # Variabilität: Bei ausgeglichenen Spielen höhere Std
+    balance = abs(prob - 0.5)
+    std_base = 0.8
+    std_variance = 0.8 * (1 - 2 * balance)
+    std = std_base + std_variance
+
+    gA = max(0, int(random.gauss(prob * 6, std)))
+    gB = max(0, int(random.gauss((1 - prob) * 6, std)))
+    logging.info(f"Reguläre Tore (Std={std:.2f}): {a} {gA}:{gB} {b}")
 
     if gA == gB:
         # Overtime
