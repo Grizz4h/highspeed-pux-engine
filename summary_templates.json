@@ -1,0 +1,32 @@
+{
+  "goal_templates": [
+    "{scorer} erzielt das Tor zum {score}!",
+    "Treffer von {scorer} – es steht {score}!",
+    "{scorer} netzt ein – {score}!",
+    "Tor für {scorer}, jetzt {score}!",
+    "{scorer} trifft – Spielstand {score}!"
+  ],
+  "assist_templates": [
+    "Vorlage von {assist}.",
+    "Assist durch {assist}.",
+    "Pass von {assist} führt zum Tor.",
+    "{assist} legt vor."
+  ],
+  "summary_templates": [
+    "Das Spiel endet {result}.",
+    "Endstand: {result}.",
+    "Finale: {result}.",
+    "Das Match geht mit {result} aus.",
+    "Ergebnis: {result}."
+  ],
+  "ot_templates": [
+    "Nach Overtime: {result}.",
+    "Verlängerung bringt {result}.",
+    "OT entscheidet: {result}."
+  ],
+  "so_templates": [
+    "Shootout: {result}.",
+    "Penalty-Schießen: {result}.",
+    "SO bringt {result}."
+  ]
+}

@@ -1566,3 +1566,525 @@
 2025-12-30 16:46:59 - INFO - Exported table with last5: {'Team': 'Straubing Forest Tigers', 'Points': 15, 'GF': 0, 'GA': 0, 'GD': 0}
 2025-12-30 16:47:05 - INFO - Exported table with last5: {'Team': 'Wolfsburg Voltsturm', 'Points': 16, 'GF': 0, 'GA': 0, 'GD': 0}
 2025-12-30 16:47:05 - INFO - Exported table with last5: {'Team': 'Straubing Forest Tigers', 'Points': 15, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:50:20 - INFO - Simuliere Liga-Spiel: Düsseldorf Aurora vs Bad Nauheim Devils in Nord
+2025-12-30 16:50:20 - INFO - Form factors (Matchday 8): Düsseldorf Aurora 0.94, Bad Nauheim Devils 0.95
+2025-12-30 16:50:20 - INFO - Reguläre Tore (Std=1.60): Düsseldorf Aurora 2:2 Bad Nauheim Devils
+2025-12-30 16:50:20 - INFO - Endergebnis: Düsseldorf Aurora 2:3 Bad Nauheim Devils - Overtime: True, Shootout: False
+2025-12-30 16:50:20 - INFO - Updated last5 for Düsseldorf Aurora: L1
+2025-12-30 16:50:20 - INFO - Updated last5 for Bad Nauheim Devils: W2
+2025-12-30 16:50:20 - INFO - Simuliere Liga-Spiel: Bremerhaven Trident vs Frankfurt Core in Nord
+2025-12-30 16:50:20 - INFO - Form factors (Matchday 8): Bremerhaven Trident 1.01, Frankfurt Core 1.01
+2025-12-30 16:50:20 - INFO - Reguläre Tore (Std=1.54): Bremerhaven Trident 2:1 Frankfurt Core
+2025-12-30 16:50:20 - INFO - Endergebnis: Bremerhaven Trident 2:1 Frankfurt Core - Overtime: False, Shootout: False
+2025-12-30 16:50:20 - INFO - Updated last5 for Bremerhaven Trident: W
+2025-12-30 16:50:20 - INFO - Updated last5 for Frankfurt Core: L
+2025-12-30 16:50:20 - INFO - Simuliere Liga-Spiel: Whiteout Berlin vs Iserlohn Miners in Nord
+2025-12-30 16:50:20 - INFO - Form factors (Matchday 8): Whiteout Berlin 0.98, Iserlohn Miners 1.06
+2025-12-30 16:50:20 - INFO - Reguläre Tore (Std=1.58): Whiteout Berlin 4:2 Iserlohn Miners
+2025-12-30 16:50:20 - INFO - Endergebnis: Whiteout Berlin 4:2 Iserlohn Miners - Overtime: False, Shootout: False
+2025-12-30 16:50:20 - INFO - Updated last5 for Whiteout Berlin: W
+2025-12-30 16:50:20 - INFO - Updated last5 for Iserlohn Miners: L
+2025-12-30 16:50:20 - INFO - Simuliere Liga-Spiel: Wolfsburg Voltsturm vs Köln Blitzhaie in Nord
+2025-12-30 16:50:20 - INFO - Form factors (Matchday 8): Wolfsburg Voltsturm 0.94, Köln Blitzhaie 1.05
+2025-12-30 16:50:20 - INFO - Reguläre Tore (Std=1.59): Wolfsburg Voltsturm 3:3 Köln Blitzhaie
+2025-12-30 16:50:20 - INFO - Endergebnis: Wolfsburg Voltsturm 3:4 Köln Blitzhaie - Overtime: True, Shootout: False
+2025-12-30 16:50:20 - INFO - Updated last5 for Wolfsburg Voltsturm: L1
+2025-12-30 16:50:20 - INFO - Updated last5 for Köln Blitzhaie: W2
+2025-12-30 16:50:20 - INFO - Simuliere Liga-Spiel: Kassel Zenit vs Krefeld Kernschlag in Nord
+2025-12-30 16:50:20 - INFO - Form factors (Matchday 8): Kassel Zenit 0.95, Krefeld Kernschlag 1.02
+2025-12-30 16:50:20 - INFO - Reguläre Tore (Std=1.57): Kassel Zenit 5:4 Krefeld Kernschlag
+2025-12-30 16:50:20 - INFO - Endergebnis: Kassel Zenit 5:4 Krefeld Kernschlag - Overtime: False, Shootout: False
+2025-12-30 16:50:20 - INFO - Updated last5 for Kassel Zenit: W
+2025-12-30 16:50:20 - INFO - Updated last5 for Krefeld Kernschlag: L
+2025-12-30 16:50:21 - INFO - Simuliere Liga-Spiel: München FluxBullen vs Augsburg Ferox in Süd
+2025-12-30 16:50:21 - INFO - Form factors (Matchday 8): München FluxBullen 0.92, Augsburg Ferox 1.12
+2025-12-30 16:50:21 - INFO - Reguläre Tore (Std=1.56): München FluxBullen 4:4 Augsburg Ferox
+2025-12-30 16:50:21 - INFO - Endergebnis: München FluxBullen 5:4 Augsburg Ferox - Overtime: True, Shootout: False
+2025-12-30 16:50:21 - INFO - Updated last5 for München FluxBullen: W2
+2025-12-30 16:50:21 - INFO - Updated last5 for Augsburg Ferox: L1
+2025-12-30 16:50:21 - INFO - Simuliere Liga-Spiel: Landshut Lichtkern vs Mannheim Ventus in Süd
+2025-12-30 16:50:21 - INFO - Form factors (Matchday 8): Landshut Lichtkern 1.00, Mannheim Ventus 1.04
+2025-12-30 16:50:21 - INFO - Reguläre Tore (Std=1.58): Landshut Lichtkern 4:0 Mannheim Ventus
+2025-12-30 16:50:21 - INFO - Endergebnis: Landshut Lichtkern 4:0 Mannheim Ventus - Overtime: False, Shootout: False
+2025-12-30 16:50:21 - INFO - Updated last5 for Landshut Lichtkern: W
+2025-12-30 16:50:21 - INFO - Updated last5 for Mannheim Ventus: L
+2025-12-30 16:50:21 - INFO - Simuliere Liga-Spiel: Schwenningen Sturmflügel vs Novadelta Panther in Süd
+2025-12-30 16:50:21 - INFO - Form factors (Matchday 8): Schwenningen Sturmflügel 1.07, Novadelta Panther 1.07
+2025-12-30 16:50:21 - INFO - Reguläre Tore (Std=1.59): Schwenningen Sturmflügel 2:4 Novadelta Panther
+2025-12-30 16:50:21 - INFO - Endergebnis: Schwenningen Sturmflügel 2:4 Novadelta Panther - Overtime: False, Shootout: False
+2025-12-30 16:50:21 - INFO - Updated last5 for Schwenningen Sturmflügel: L
+2025-12-30 16:50:21 - INFO - Updated last5 for Novadelta Panther: W
+2025-12-30 16:50:21 - INFO - Simuliere Liga-Spiel: Straubing Forest Tigers vs Nürnberg Eistiger in Süd
+2025-12-30 16:50:21 - INFO - Form factors (Matchday 8): Straubing Forest Tigers 0.99, Nürnberg Eistiger 1.06
+2025-12-30 16:50:21 - INFO - Reguläre Tore (Std=1.59): Straubing Forest Tigers 2:3 Nürnberg Eistiger
+2025-12-30 16:50:21 - INFO - Endergebnis: Straubing Forest Tigers 2:3 Nürnberg Eistiger - Overtime: False, Shootout: False
+2025-12-30 16:50:21 - INFO - Updated last5 for Straubing Forest Tigers: L
+2025-12-30 16:50:21 - INFO - Updated last5 for Nürnberg Eistiger: W
+2025-12-30 16:50:21 - INFO - Simuliere Liga-Spiel: Ravensburg Zenit Falken vs Regensburg Pulse in Süd
+2025-12-30 16:50:21 - INFO - Form factors (Matchday 8): Ravensburg Zenit Falken 1.11, Regensburg Pulse 0.95
+2025-12-30 16:50:21 - INFO - Reguläre Tore (Std=1.50): Ravensburg Zenit Falken 4:2 Regensburg Pulse
+2025-12-30 16:50:21 - INFO - Endergebnis: Ravensburg Zenit Falken 4:2 Regensburg Pulse - Overtime: False, Shootout: False
+2025-12-30 16:50:21 - INFO - Updated last5 for Ravensburg Zenit Falken: W
+2025-12-30 16:50:21 - INFO - Updated last5 for Regensburg Pulse: L
+2025-12-30 16:50:21 - INFO - Exported table with last5: {'Team': 'Wolfsburg Voltsturm', 'Points': 17, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:50:21 - INFO - Exported table with last5: {'Team': 'Novadelta Panther', 'Points': 16, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:50:21 - INFO - Team Wolfsburg Voltsturm last5 from nord: L1
+2025-12-30 16:50:21 - INFO - Team Frankfurt Core last5 from nord: L
+2025-12-30 16:50:21 - INFO - Team Kassel Zenit last5 from nord: W
+2025-12-30 16:50:21 - INFO - Team Krefeld Kernschlag last5 from nord: L
+2025-12-30 16:50:21 - INFO - Team Bremerhaven Trident last5 from nord: W
+2025-12-30 16:50:21 - INFO - Team Whiteout Berlin last5 from nord: W
+2025-12-30 16:50:21 - INFO - Team Köln Blitzhaie last5 from nord: W2
+2025-12-30 16:50:21 - INFO - Team Bad Nauheim Devils last5 from nord: W2
+2025-12-30 16:50:21 - INFO - Team Düsseldorf Aurora last5 from nord: L1
+2025-12-30 16:50:21 - INFO - Team Iserlohn Miners last5 from nord: L
+2025-12-30 16:50:21 - INFO - Team Novadelta Panther last5 from sued: W
+2025-12-30 16:50:21 - INFO - Team Ravensburg Zenit Falken last5 from sued: W
+2025-12-30 16:50:21 - INFO - Team Straubing Forest Tigers last5 from sued: L
+2025-12-30 16:50:21 - INFO - Team Nürnberg Eistiger last5 from sued: W
+2025-12-30 16:50:21 - INFO - Team Landshut Lichtkern last5 from sued: W
+2025-12-30 16:50:21 - INFO - Team Mannheim Ventus last5 from sued: L
+2025-12-30 16:50:21 - INFO - Team München FluxBullen last5 from sued: W2
+2025-12-30 16:50:21 - INFO - Team Augsburg Ferox last5 from sued: L1
+2025-12-30 16:50:21 - INFO - Team Schwenningen Sturmflügel last5 from sued: L
+2025-12-30 16:50:21 - INFO - Team Regensburg Pulse last5 from sued: L
+2025-12-30 16:50:21 - INFO - Saving to stats: L1
+2025-12-30 16:50:25 - INFO - Exported table with last5: {'Team': 'Wolfsburg Voltsturm', 'Points': 17, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:50:25 - INFO - Exported table with last5: {'Team': 'Novadelta Panther', 'Points': 16, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:51:08 - INFO - Exported table with last5: {'Team': 'Wolfsburg Voltsturm', 'Points': 17, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:51:09 - INFO - Exported table with last5: {'Team': 'Novadelta Panther', 'Points': 16, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:51:51 - INFO - Simuliere Liga-Spiel: Bad Nauheim Devils vs Bremerhaven Trident in Nord
+2025-12-30 16:51:51 - INFO - Form factors (Matchday 9): Bad Nauheim Devils 0.91, Bremerhaven Trident 0.95
+2025-12-30 16:51:51 - INFO - Reguläre Tore (Std=1.56): Bad Nauheim Devils 2:1 Bremerhaven Trident
+2025-12-30 16:51:51 - INFO - Endergebnis: Bad Nauheim Devils 2:1 Bremerhaven Trident - Overtime: False, Shootout: False
+2025-12-30 16:51:52 - INFO - Updated last5 for Bad Nauheim Devils: W
+2025-12-30 16:51:52 - INFO - Updated last5 for Bremerhaven Trident: L
+2025-12-30 16:51:52 - INFO - Simuliere Liga-Spiel: Düsseldorf Aurora vs Whiteout Berlin in Nord
+2025-12-30 16:51:52 - INFO - Form factors (Matchday 9): Düsseldorf Aurora 1.07, Whiteout Berlin 1.00
+2025-12-30 16:51:52 - INFO - Reguläre Tore (Std=1.56): Düsseldorf Aurora 4:0 Whiteout Berlin
+2025-12-30 16:51:52 - INFO - Endergebnis: Düsseldorf Aurora 4:0 Whiteout Berlin - Overtime: False, Shootout: False
+2025-12-30 16:51:52 - INFO - Updated last5 for Düsseldorf Aurora: W
+2025-12-30 16:51:52 - INFO - Updated last5 for Whiteout Berlin: L
+2025-12-30 16:51:52 - INFO - Simuliere Liga-Spiel: Frankfurt Core vs Wolfsburg Voltsturm in Nord
+2025-12-30 16:51:52 - INFO - Form factors (Matchday 9): Frankfurt Core 1.01, Wolfsburg Voltsturm 1.03
+2025-12-30 16:51:52 - INFO - Reguläre Tore (Std=1.55): Frankfurt Core 4:3 Wolfsburg Voltsturm
+2025-12-30 16:51:52 - INFO - Endergebnis: Frankfurt Core 4:3 Wolfsburg Voltsturm - Overtime: False, Shootout: False
+2025-12-30 16:51:52 - INFO - Updated last5 for Frankfurt Core: W
+2025-12-30 16:51:52 - INFO - Updated last5 for Wolfsburg Voltsturm: L
+2025-12-30 16:51:52 - INFO - Simuliere Liga-Spiel: Iserlohn Miners vs Kassel Zenit in Nord
+2025-12-30 16:51:52 - INFO - Form factors (Matchday 9): Iserlohn Miners 1.02, Kassel Zenit 1.04
+2025-12-30 16:51:52 - INFO - Reguläre Tore (Std=1.60): Iserlohn Miners 0:1 Kassel Zenit
+2025-12-30 16:51:52 - INFO - Endergebnis: Iserlohn Miners 0:1 Kassel Zenit - Overtime: False, Shootout: False
+2025-12-30 16:51:52 - INFO - Updated last5 for Iserlohn Miners: L
+2025-12-30 16:51:52 - INFO - Updated last5 for Kassel Zenit: W
+2025-12-30 16:51:52 - INFO - Simuliere Liga-Spiel: Köln Blitzhaie vs Krefeld Kernschlag in Nord
+2025-12-30 16:51:52 - INFO - Form factors (Matchday 9): Köln Blitzhaie 1.06, Krefeld Kernschlag 1.07
+2025-12-30 16:51:52 - INFO - Reguläre Tore (Std=1.58): Köln Blitzhaie 3:2 Krefeld Kernschlag
+2025-12-30 16:51:52 - INFO - Endergebnis: Köln Blitzhaie 3:2 Krefeld Kernschlag - Overtime: False, Shootout: False
+2025-12-30 16:51:52 - INFO - Updated last5 for Köln Blitzhaie: W
+2025-12-30 16:51:52 - INFO - Updated last5 for Krefeld Kernschlag: L
+2025-12-30 16:51:52 - INFO - Simuliere Liga-Spiel: Augsburg Ferox vs Landshut Lichtkern in Süd
+2025-12-30 16:51:52 - INFO - Form factors (Matchday 9): Augsburg Ferox 1.01, Landshut Lichtkern 0.98
+2025-12-30 16:51:52 - INFO - Reguläre Tore (Std=1.59): Augsburg Ferox 1:3 Landshut Lichtkern
+2025-12-30 16:51:52 - INFO - Endergebnis: Augsburg Ferox 1:3 Landshut Lichtkern - Overtime: False, Shootout: False
+2025-12-30 16:51:52 - INFO - Updated last5 for Augsburg Ferox: L
+2025-12-30 16:51:52 - INFO - Updated last5 for Landshut Lichtkern: W
+2025-12-30 16:51:52 - INFO - Simuliere Liga-Spiel: München FluxBullen vs Schwenningen Sturmflügel in Süd
+2025-12-30 16:51:52 - INFO - Form factors (Matchday 9): München FluxBullen 0.98, Schwenningen Sturmflügel 1.03
+2025-12-30 16:51:52 - INFO - Reguläre Tore (Std=1.58): München FluxBullen 3:1 Schwenningen Sturmflügel
+2025-12-30 16:51:52 - INFO - Endergebnis: München FluxBullen 3:1 Schwenningen Sturmflügel - Overtime: False, Shootout: False
+2025-12-30 16:51:52 - INFO - Updated last5 for München FluxBullen: W
+2025-12-30 16:51:52 - INFO - Updated last5 for Schwenningen Sturmflügel: L
+2025-12-30 16:51:52 - INFO - Simuliere Liga-Spiel: Mannheim Ventus vs Straubing Forest Tigers in Süd
+2025-12-30 16:51:52 - INFO - Form factors (Matchday 9): Mannheim Ventus 0.96, Straubing Forest Tigers 0.97
+2025-12-30 16:51:52 - INFO - Reguläre Tore (Std=1.58): Mannheim Ventus 1:3 Straubing Forest Tigers
+2025-12-30 16:51:52 - INFO - Endergebnis: Mannheim Ventus 1:3 Straubing Forest Tigers - Overtime: False, Shootout: False
+2025-12-30 16:51:52 - INFO - Updated last5 for Mannheim Ventus: L
+2025-12-30 16:51:52 - INFO - Updated last5 for Straubing Forest Tigers: W
+2025-12-30 16:51:52 - INFO - Simuliere Liga-Spiel: Novadelta Panther vs Ravensburg Zenit Falken in Süd
+2025-12-30 16:51:52 - INFO - Form factors (Matchday 9): Novadelta Panther 1.03, Ravensburg Zenit Falken 1.01
+2025-12-30 16:51:52 - INFO - Reguläre Tore (Std=1.55): Novadelta Panther 3:0 Ravensburg Zenit Falken
+2025-12-30 16:51:52 - INFO - Endergebnis: Novadelta Panther 3:0 Ravensburg Zenit Falken - Overtime: False, Shootout: False
+2025-12-30 16:51:52 - INFO - Updated last5 for Novadelta Panther: W
+2025-12-30 16:51:52 - INFO - Updated last5 for Ravensburg Zenit Falken: L
+2025-12-30 16:51:52 - INFO - Simuliere Liga-Spiel: Nürnberg Eistiger vs Regensburg Pulse in Süd
+2025-12-30 16:51:52 - INFO - Form factors (Matchday 9): Nürnberg Eistiger 1.02, Regensburg Pulse 1.05
+2025-12-30 16:51:52 - INFO - Reguläre Tore (Std=1.59): Nürnberg Eistiger 3:4 Regensburg Pulse
+2025-12-30 16:51:52 - INFO - Endergebnis: Nürnberg Eistiger 3:4 Regensburg Pulse - Overtime: False, Shootout: False
+2025-12-30 16:51:52 - INFO - Updated last5 for Nürnberg Eistiger: L
+2025-12-30 16:51:52 - INFO - Updated last5 for Regensburg Pulse: W
+2025-12-30 16:51:52 - INFO - Exported table with last5: {'Team': 'Frankfurt Core', 'Points': 18, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:51:52 - INFO - Exported table with last5: {'Team': 'Novadelta Panther', 'Points': 19, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:51:52 - INFO - Team Frankfurt Core last5 from nord: W
+2025-12-30 16:51:52 - INFO - Team Kassel Zenit last5 from nord: W
+2025-12-30 16:51:52 - INFO - Team Wolfsburg Voltsturm last5 from nord: L
+2025-12-30 16:51:52 - INFO - Team Krefeld Kernschlag last5 from nord: L
+2025-12-30 16:51:52 - INFO - Team Köln Blitzhaie last5 from nord: W
+2025-12-30 16:51:52 - INFO - Team Bad Nauheim Devils last5 from nord: W
+2025-12-30 16:51:52 - INFO - Team Bremerhaven Trident last5 from nord: L
+2025-12-30 16:51:52 - INFO - Team Düsseldorf Aurora last5 from nord: W
+2025-12-30 16:51:52 - INFO - Team Whiteout Berlin last5 from nord: L
+2025-12-30 16:51:52 - INFO - Team Iserlohn Miners last5 from nord: L
+2025-12-30 16:51:52 - INFO - Team Novadelta Panther last5 from sued: W
+2025-12-30 16:51:52 - INFO - Team Straubing Forest Tigers last5 from sued: W
+2025-12-30 16:51:52 - INFO - Team Landshut Lichtkern last5 from sued: W
+2025-12-30 16:51:52 - INFO - Team Ravensburg Zenit Falken last5 from sued: L
+2025-12-30 16:51:52 - INFO - Team München FluxBullen last5 from sued: W
+2025-12-30 16:51:52 - INFO - Team Nürnberg Eistiger last5 from sued: L
+2025-12-30 16:51:52 - INFO - Team Mannheim Ventus last5 from sued: L
+2025-12-30 16:51:52 - INFO - Team Augsburg Ferox last5 from sued: L
+2025-12-30 16:51:52 - INFO - Team Schwenningen Sturmflügel last5 from sued: L
+2025-12-30 16:51:52 - INFO - Team Regensburg Pulse last5 from sued: W
+2025-12-30 16:51:52 - INFO - Saving to stats: W
+2025-12-30 16:51:56 - INFO - Exported table with last5: {'Team': 'Frankfurt Core', 'Points': 18, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:51:56 - INFO - Exported table with last5: {'Team': 'Novadelta Panther', 'Points': 19, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:52:02 - INFO - Exported table with last5: {'Team': 'Frankfurt Core', 'Points': 18, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:52:03 - INFO - Exported table with last5: {'Team': 'Novadelta Panther', 'Points': 19, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:52:12 - INFO - Exported table with last5: {'Team': 'Bad Nauheim Devils', 'Points': 0, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:52:12 - INFO - Exported table with last5: {'Team': 'Augsburg Ferox', 'Points': 0, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:52:16 - INFO - Simuliere Liga-Spiel: Bad Nauheim Devils vs Whiteout Berlin in Nord
+2025-12-30 16:52:16 - INFO - Form factors (Matchday 1): Bad Nauheim Devils 1.07, Whiteout Berlin 0.85
+2025-12-30 16:52:16 - INFO - Reguläre Tore (Std=1.50): Bad Nauheim Devils 4:4 Whiteout Berlin
+2025-12-30 16:52:16 - INFO - Endergebnis: Bad Nauheim Devils 4:5 Whiteout Berlin - Overtime: True, Shootout: False
+2025-12-30 16:52:16 - INFO - Updated last5 for Bad Nauheim Devils: L1
+2025-12-30 16:52:16 - INFO - Updated last5 for Whiteout Berlin: W2
+2025-12-30 16:52:16 - INFO - Simuliere Liga-Spiel: Bremerhaven Trident vs Wolfsburg Voltsturm in Nord
+2025-12-30 16:52:16 - INFO - Form factors (Matchday 1): Bremerhaven Trident 0.96, Wolfsburg Voltsturm 0.80
+2025-12-30 16:52:16 - INFO - Reguläre Tore (Std=1.52): Bremerhaven Trident 4:3 Wolfsburg Voltsturm
+2025-12-30 16:52:16 - INFO - Endergebnis: Bremerhaven Trident 4:3 Wolfsburg Voltsturm - Overtime: False, Shootout: False
+2025-12-30 16:52:16 - INFO - Updated last5 for Bremerhaven Trident: W
+2025-12-30 16:52:16 - INFO - Updated last5 for Wolfsburg Voltsturm: L
+2025-12-30 16:52:16 - INFO - Simuliere Liga-Spiel: Düsseldorf Aurora vs Kassel Zenit in Nord
+2025-12-30 16:52:16 - INFO - Form factors (Matchday 1): Düsseldorf Aurora 1.20, Kassel Zenit 0.82
+2025-12-30 16:52:16 - INFO - Reguläre Tore (Std=1.43): Düsseldorf Aurora 3:0 Kassel Zenit
+2025-12-30 16:52:16 - INFO - Endergebnis: Düsseldorf Aurora 3:0 Kassel Zenit - Overtime: False, Shootout: False
+2025-12-30 16:52:16 - INFO - Updated last5 for Düsseldorf Aurora: W
+2025-12-30 16:52:16 - INFO - Updated last5 for Kassel Zenit: L
+2025-12-30 16:52:16 - INFO - Simuliere Liga-Spiel: Frankfurt Core vs Krefeld Kernschlag in Nord
+2025-12-30 16:52:16 - INFO - Form factors (Matchday 1): Frankfurt Core 0.99, Krefeld Kernschlag 1.12
+2025-12-30 16:52:16 - INFO - Reguläre Tore (Std=1.53): Frankfurt Core 2:3 Krefeld Kernschlag
+2025-12-30 16:52:16 - INFO - Endergebnis: Frankfurt Core 2:3 Krefeld Kernschlag - Overtime: False, Shootout: False
+2025-12-30 16:52:16 - INFO - Updated last5 for Frankfurt Core: L
+2025-12-30 16:52:16 - INFO - Updated last5 for Krefeld Kernschlag: W
+2025-12-30 16:52:16 - INFO - Simuliere Liga-Spiel: Iserlohn Miners vs Köln Blitzhaie in Nord
+2025-12-30 16:52:16 - INFO - Form factors (Matchday 1): Iserlohn Miners 0.99, Köln Blitzhaie 1.07
+2025-12-30 16:52:16 - INFO - Reguläre Tore (Std=1.55): Iserlohn Miners 2:3 Köln Blitzhaie
+2025-12-30 16:52:16 - INFO - Endergebnis: Iserlohn Miners 2:3 Köln Blitzhaie - Overtime: False, Shootout: False
+2025-12-30 16:52:16 - INFO - Updated last5 for Iserlohn Miners: L
+2025-12-30 16:52:16 - INFO - Updated last5 for Köln Blitzhaie: W
+2025-12-30 16:52:16 - INFO - Simuliere Liga-Spiel: Augsburg Ferox vs Schwenningen Sturmflügel in Süd
+2025-12-30 16:52:16 - INFO - Form factors (Matchday 1): Augsburg Ferox 0.88, Schwenningen Sturmflügel 1.03
+2025-12-30 16:52:16 - INFO - Reguläre Tore (Std=1.56): Augsburg Ferox 5:0 Schwenningen Sturmflügel
+2025-12-30 16:52:16 - INFO - Endergebnis: Augsburg Ferox 5:0 Schwenningen Sturmflügel - Overtime: False, Shootout: False
+2025-12-30 16:52:16 - INFO - Updated last5 for Augsburg Ferox: W
+2025-12-30 16:52:16 - INFO - Updated last5 for Schwenningen Sturmflügel: L
+2025-12-30 16:52:16 - INFO - Simuliere Liga-Spiel: Landshut Lichtkern vs Straubing Forest Tigers in Süd
+2025-12-30 16:52:16 - INFO - Form factors (Matchday 1): Landshut Lichtkern 0.80, Straubing Forest Tigers 1.06
+2025-12-30 16:52:16 - INFO - Reguläre Tore (Std=1.47): Landshut Lichtkern 1:5 Straubing Forest Tigers
+2025-12-30 16:52:16 - INFO - Endergebnis: Landshut Lichtkern 1:5 Straubing Forest Tigers - Overtime: False, Shootout: False
+2025-12-30 16:52:16 - INFO - Updated last5 for Landshut Lichtkern: L
+2025-12-30 16:52:16 - INFO - Updated last5 for Straubing Forest Tigers: W
+2025-12-30 16:52:16 - INFO - Simuliere Liga-Spiel: München FluxBullen vs Ravensburg Zenit Falken in Süd
+2025-12-30 16:52:16 - INFO - Form factors (Matchday 1): München FluxBullen 1.17, Ravensburg Zenit Falken 1.02
+2025-12-30 16:52:16 - INFO - Reguläre Tore (Std=1.51): München FluxBullen 2:0 Ravensburg Zenit Falken
+2025-12-30 16:52:16 - INFO - Endergebnis: München FluxBullen 2:0 Ravensburg Zenit Falken - Overtime: False, Shootout: False
+2025-12-30 16:52:16 - INFO - Updated last5 for München FluxBullen: W
+2025-12-30 16:52:16 - INFO - Updated last5 for Ravensburg Zenit Falken: L
+2025-12-30 16:52:16 - INFO - Simuliere Liga-Spiel: Mannheim Ventus vs Regensburg Pulse in Süd
+2025-12-30 16:52:16 - INFO - Form factors (Matchday 1): Mannheim Ventus 0.92, Regensburg Pulse 1.03
+2025-12-30 16:52:16 - INFO - Reguläre Tore (Std=1.58): Mannheim Ventus 3:2 Regensburg Pulse
+2025-12-30 16:52:16 - INFO - Endergebnis: Mannheim Ventus 3:2 Regensburg Pulse - Overtime: False, Shootout: False
+2025-12-30 16:52:16 - INFO - Updated last5 for Mannheim Ventus: W
+2025-12-30 16:52:16 - INFO - Updated last5 for Regensburg Pulse: L
+2025-12-30 16:52:16 - INFO - Simuliere Liga-Spiel: Novadelta Panther vs Nürnberg Eistiger in Süd
+2025-12-30 16:52:16 - INFO - Form factors (Matchday 1): Novadelta Panther 0.86, Nürnberg Eistiger 1.02
+2025-12-30 16:52:16 - INFO - Reguläre Tore (Std=1.58): Novadelta Panther 2:1 Nürnberg Eistiger
+2025-12-30 16:52:16 - INFO - Endergebnis: Novadelta Panther 2:1 Nürnberg Eistiger - Overtime: False, Shootout: False
+2025-12-30 16:52:16 - INFO - Updated last5 for Novadelta Panther: W
+2025-12-30 16:52:16 - INFO - Updated last5 for Nürnberg Eistiger: L
+2025-12-30 16:52:16 - INFO - Exported table with last5: {'Team': 'Bremerhaven Trident', 'Points': 3, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:52:16 - INFO - Exported table with last5: {'Team': 'Augsburg Ferox', 'Points': 3, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:52:16 - INFO - Team Bremerhaven Trident last5 from nord: W
+2025-12-30 16:52:16 - INFO - Team Düsseldorf Aurora last5 from nord: W
+2025-12-30 16:52:16 - INFO - Team Köln Blitzhaie last5 from nord: W
+2025-12-30 16:52:16 - INFO - Team Krefeld Kernschlag last5 from nord: W
+2025-12-30 16:52:16 - INFO - Team Whiteout Berlin last5 from nord: W2
+2025-12-30 16:52:16 - INFO - Team Bad Nauheim Devils last5 from nord: L1
+2025-12-30 16:52:16 - INFO - Team Frankfurt Core last5 from nord: L
+2025-12-30 16:52:16 - INFO - Team Iserlohn Miners last5 from nord: L
+2025-12-30 16:52:16 - INFO - Team Kassel Zenit last5 from nord: L
+2025-12-30 16:52:16 - INFO - Team Wolfsburg Voltsturm last5 from nord: L
+2025-12-30 16:52:16 - INFO - Team Augsburg Ferox last5 from sued: W
+2025-12-30 16:52:16 - INFO - Team München FluxBullen last5 from sued: W
+2025-12-30 16:52:16 - INFO - Team Mannheim Ventus last5 from sued: W
+2025-12-30 16:52:16 - INFO - Team Novadelta Panther last5 from sued: W
+2025-12-30 16:52:16 - INFO - Team Straubing Forest Tigers last5 from sued: W
+2025-12-30 16:52:16 - INFO - Team Landshut Lichtkern last5 from sued: L
+2025-12-30 16:52:16 - INFO - Team Nürnberg Eistiger last5 from sued: L
+2025-12-30 16:52:16 - INFO - Team Regensburg Pulse last5 from sued: L
+2025-12-30 16:52:16 - INFO - Team Ravensburg Zenit Falken last5 from sued: L
+2025-12-30 16:52:17 - INFO - Team Schwenningen Sturmflügel last5 from sued: L
+2025-12-30 16:52:17 - INFO - Saving to stats: W
+2025-12-30 16:52:20 - INFO - Exported table with last5: {'Team': 'Bremerhaven Trident', 'Points': 3, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:52:20 - INFO - Exported table with last5: {'Team': 'Augsburg Ferox', 'Points': 3, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:52:32 - INFO - Simuliere Liga-Spiel: Wolfsburg Voltsturm vs Bad Nauheim Devils in Nord
+2025-12-30 16:52:32 - INFO - Form factors (Matchday 2): Wolfsburg Voltsturm 1.00, Bad Nauheim Devils 1.04
+2025-12-30 16:52:32 - INFO - Reguläre Tore (Std=1.59): Wolfsburg Voltsturm 3:0 Bad Nauheim Devils
+2025-12-30 16:52:32 - INFO - Endergebnis: Wolfsburg Voltsturm 3:0 Bad Nauheim Devils - Overtime: False, Shootout: False
+2025-12-30 16:52:32 - INFO - Updated last5 for Wolfsburg Voltsturm: W
+2025-12-30 16:52:32 - INFO - Updated last5 for Bad Nauheim Devils: L
+2025-12-30 16:52:32 - INFO - Simuliere Liga-Spiel: Kassel Zenit vs Whiteout Berlin in Nord
+2025-12-30 16:52:32 - INFO - Form factors (Matchday 2): Kassel Zenit 0.93, Whiteout Berlin 0.96
+2025-12-30 16:52:32 - INFO - Reguläre Tore (Std=1.57): Kassel Zenit 2:4 Whiteout Berlin
+2025-12-30 16:52:32 - INFO - Endergebnis: Kassel Zenit 2:4 Whiteout Berlin - Overtime: False, Shootout: False
+2025-12-30 16:52:32 - INFO - Updated last5 for Kassel Zenit: L
+2025-12-30 16:52:32 - INFO - Updated last5 for Whiteout Berlin: W
+2025-12-30 16:52:33 - INFO - Simuliere Liga-Spiel: Krefeld Kernschlag vs Bremerhaven Trident in Nord
+2025-12-30 16:52:33 - INFO - Form factors (Matchday 2): Krefeld Kernschlag 1.19, Bremerhaven Trident 1.05
+2025-12-30 16:52:33 - INFO - Reguläre Tore (Std=1.56): Krefeld Kernschlag 3:2 Bremerhaven Trident
+2025-12-30 16:52:33 - INFO - Endergebnis: Krefeld Kernschlag 3:2 Bremerhaven Trident - Overtime: False, Shootout: False
+2025-12-30 16:52:33 - INFO - Updated last5 for Krefeld Kernschlag: W
+2025-12-30 16:52:33 - INFO - Updated last5 for Bremerhaven Trident: L
+2025-12-30 16:52:33 - INFO - Simuliere Liga-Spiel: Köln Blitzhaie vs Düsseldorf Aurora in Nord
+2025-12-30 16:52:33 - INFO - Form factors (Matchday 2): Köln Blitzhaie 1.20, Düsseldorf Aurora 0.97
+2025-12-30 16:52:33 - INFO - Reguläre Tore (Std=1.48): Köln Blitzhaie 3:2 Düsseldorf Aurora
+2025-12-30 16:52:33 - INFO - Endergebnis: Köln Blitzhaie 3:2 Düsseldorf Aurora - Overtime: False, Shootout: False
+2025-12-30 16:52:33 - INFO - Updated last5 for Köln Blitzhaie: W
+2025-12-30 16:52:33 - INFO - Updated last5 for Düsseldorf Aurora: L
+2025-12-30 16:52:33 - INFO - Simuliere Liga-Spiel: Iserlohn Miners vs Frankfurt Core in Nord
+2025-12-30 16:52:33 - INFO - Form factors (Matchday 2): Iserlohn Miners 0.96, Frankfurt Core 1.06
+2025-12-30 16:52:33 - INFO - Reguläre Tore (Std=1.60): Iserlohn Miners 3:1 Frankfurt Core
+2025-12-30 16:52:33 - INFO - Endergebnis: Iserlohn Miners 3:1 Frankfurt Core - Overtime: False, Shootout: False
+2025-12-30 16:52:33 - INFO - Updated last5 for Iserlohn Miners: W
+2025-12-30 16:52:33 - INFO - Updated last5 for Frankfurt Core: L
+2025-12-30 16:52:33 - INFO - Simuliere Liga-Spiel: Straubing Forest Tigers vs Augsburg Ferox in Süd
+2025-12-30 16:52:33 - INFO - Form factors (Matchday 2): Straubing Forest Tigers 1.04, Augsburg Ferox 1.01
+2025-12-30 16:52:33 - INFO - Reguläre Tore (Std=1.53): Straubing Forest Tigers 2:3 Augsburg Ferox
+2025-12-30 16:52:33 - INFO - Endergebnis: Straubing Forest Tigers 2:3 Augsburg Ferox - Overtime: False, Shootout: False
+2025-12-30 16:52:33 - INFO - Updated last5 for Straubing Forest Tigers: L
+2025-12-30 16:52:33 - INFO - Updated last5 for Augsburg Ferox: W
+2025-12-30 16:52:33 - INFO - Simuliere Liga-Spiel: Ravensburg Zenit Falken vs Schwenningen Sturmflügel in Süd
+2025-12-30 16:52:33 - INFO - Form factors (Matchday 2): Ravensburg Zenit Falken 1.16, Schwenningen Sturmflügel 1.08
+2025-12-30 16:52:33 - INFO - Reguläre Tore (Std=1.54): Ravensburg Zenit Falken 2:4 Schwenningen Sturmflügel
+2025-12-30 16:52:33 - INFO - Endergebnis: Ravensburg Zenit Falken 2:4 Schwenningen Sturmflügel - Overtime: False, Shootout: False
+2025-12-30 16:52:33 - INFO - Updated last5 for Ravensburg Zenit Falken: L
+2025-12-30 16:52:33 - INFO - Updated last5 for Schwenningen Sturmflügel: W
+2025-12-30 16:52:33 - INFO - Simuliere Liga-Spiel: Regensburg Pulse vs Landshut Lichtkern in Süd
+2025-12-30 16:52:33 - INFO - Form factors (Matchday 2): Regensburg Pulse 1.00, Landshut Lichtkern 1.04
+2025-12-30 16:52:33 - INFO - Reguläre Tore (Std=1.57): Regensburg Pulse 2:3 Landshut Lichtkern
+2025-12-30 16:52:33 - INFO - Endergebnis: Regensburg Pulse 2:3 Landshut Lichtkern - Overtime: False, Shootout: False
+2025-12-30 16:52:33 - INFO - Updated last5 for Regensburg Pulse: L
+2025-12-30 16:52:33 - INFO - Updated last5 for Landshut Lichtkern: W
+2025-12-30 16:52:33 - INFO - Simuliere Liga-Spiel: Nürnberg Eistiger vs München FluxBullen in Süd
+2025-12-30 16:52:33 - INFO - Form factors (Matchday 2): Nürnberg Eistiger 1.08, München FluxBullen 1.03
+2025-12-30 16:52:33 - INFO - Reguläre Tore (Std=1.56): Nürnberg Eistiger 5:1 München FluxBullen
+2025-12-30 16:52:33 - INFO - Endergebnis: Nürnberg Eistiger 5:1 München FluxBullen - Overtime: False, Shootout: False
+2025-12-30 16:52:33 - INFO - Updated last5 for Nürnberg Eistiger: W
+2025-12-30 16:52:33 - INFO - Updated last5 for München FluxBullen: L
+2025-12-30 16:52:33 - INFO - Simuliere Liga-Spiel: Mannheim Ventus vs Novadelta Panther in Süd
+2025-12-30 16:52:33 - INFO - Form factors (Matchday 2): Mannheim Ventus 0.93, Novadelta Panther 1.10
+2025-12-30 16:52:33 - INFO - Reguläre Tore (Std=1.52): Mannheim Ventus 3:4 Novadelta Panther
+2025-12-30 16:52:33 - INFO - Endergebnis: Mannheim Ventus 3:4 Novadelta Panther - Overtime: False, Shootout: False
+2025-12-30 16:52:33 - INFO - Updated last5 for Mannheim Ventus: L
+2025-12-30 16:52:33 - INFO - Updated last5 for Novadelta Panther: W
+2025-12-30 16:52:33 - INFO - Exported table with last5: {'Team': 'Köln Blitzhaie', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:52:33 - INFO - Exported table with last5: {'Team': 'Augsburg Ferox', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:52:33 - INFO - Team Köln Blitzhaie last5 from nord: W
+2025-12-30 16:52:33 - INFO - Team Krefeld Kernschlag last5 from nord: W
+2025-12-30 16:52:33 - INFO - Team Whiteout Berlin last5 from nord: W
+2025-12-30 16:52:33 - INFO - Team Bremerhaven Trident last5 from nord: L
+2025-12-30 16:52:33 - INFO - Team Düsseldorf Aurora last5 from nord: L
+2025-12-30 16:52:33 - INFO - Team Iserlohn Miners last5 from nord: W
+2025-12-30 16:52:33 - INFO - Team Wolfsburg Voltsturm last5 from nord: W
+2025-12-30 16:52:33 - INFO - Team Bad Nauheim Devils last5 from nord: L
+2025-12-30 16:52:33 - INFO - Team Frankfurt Core last5 from nord: L
+2025-12-30 16:52:33 - INFO - Team Kassel Zenit last5 from nord: L
+2025-12-30 16:52:33 - INFO - Team Augsburg Ferox last5 from sued: W
+2025-12-30 16:52:33 - INFO - Team Novadelta Panther last5 from sued: W
+2025-12-30 16:52:33 - INFO - Team Landshut Lichtkern last5 from sued: W
+2025-12-30 16:52:33 - INFO - Team München FluxBullen last5 from sued: L
+2025-12-30 16:52:33 - INFO - Team Mannheim Ventus last5 from sued: L
+2025-12-30 16:52:33 - INFO - Team Nürnberg Eistiger last5 from sued: W
+2025-12-30 16:52:33 - INFO - Team Straubing Forest Tigers last5 from sued: L
+2025-12-30 16:52:33 - INFO - Team Schwenningen Sturmflügel last5 from sued: W
+2025-12-30 16:52:33 - INFO - Team Regensburg Pulse last5 from sued: L
+2025-12-30 16:52:33 - INFO - Team Ravensburg Zenit Falken last5 from sued: L
+2025-12-30 16:52:33 - INFO - Saving to stats: W
+2025-12-30 16:52:37 - INFO - Exported table with last5: {'Team': 'Köln Blitzhaie', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:52:37 - INFO - Exported table with last5: {'Team': 'Augsburg Ferox', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:52:42 - INFO - Exported table with last5: {'Team': 'Köln Blitzhaie', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:52:42 - INFO - Exported table with last5: {'Team': 'Augsburg Ferox', 'Points': 6, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:52:58 - INFO - Simuliere Liga-Spiel: Bad Nauheim Devils vs Kassel Zenit in Nord
+2025-12-30 16:52:58 - INFO - Form factors (Matchday 3): Bad Nauheim Devils 1.07, Kassel Zenit 1.04
+2025-12-30 16:52:58 - INFO - Reguläre Tore (Std=1.60): Bad Nauheim Devils 5:1 Kassel Zenit
+2025-12-30 16:52:58 - INFO - Endergebnis: Bad Nauheim Devils 5:1 Kassel Zenit - Overtime: False, Shootout: False
+2025-12-30 16:52:58 - INFO - Updated last5 for Bad Nauheim Devils: W
+2025-12-30 16:52:58 - INFO - Updated last5 for Kassel Zenit: L
+2025-12-30 16:52:58 - INFO - Simuliere Liga-Spiel: Wolfsburg Voltsturm vs Krefeld Kernschlag in Nord
+2025-12-30 16:52:58 - INFO - Form factors (Matchday 3): Wolfsburg Voltsturm 0.90, Krefeld Kernschlag 1.07
+2025-12-30 16:52:58 - INFO - Reguläre Tore (Std=1.52): Wolfsburg Voltsturm 5:0 Krefeld Kernschlag
+2025-12-30 16:52:58 - INFO - Endergebnis: Wolfsburg Voltsturm 5:0 Krefeld Kernschlag - Overtime: False, Shootout: False
+2025-12-30 16:52:58 - INFO - Updated last5 for Wolfsburg Voltsturm: W
+2025-12-30 16:52:58 - INFO - Updated last5 for Krefeld Kernschlag: L
+2025-12-30 16:52:58 - INFO - Simuliere Liga-Spiel: Whiteout Berlin vs Köln Blitzhaie in Nord
+2025-12-30 16:52:58 - INFO - Form factors (Matchday 3): Whiteout Berlin 1.05, Köln Blitzhaie 0.83
+2025-12-30 16:52:58 - INFO - Reguläre Tore (Std=1.50): Whiteout Berlin 2:1 Köln Blitzhaie
+2025-12-30 16:52:58 - INFO - Endergebnis: Whiteout Berlin 2:1 Köln Blitzhaie - Overtime: False, Shootout: False
+2025-12-30 16:52:58 - INFO - Updated last5 for Whiteout Berlin: W
+2025-12-30 16:52:58 - INFO - Updated last5 for Köln Blitzhaie: L
+2025-12-30 16:52:58 - INFO - Simuliere Liga-Spiel: Bremerhaven Trident vs Iserlohn Miners in Nord
+2025-12-30 16:52:58 - INFO - Form factors (Matchday 3): Bremerhaven Trident 1.09, Iserlohn Miners 1.01
+2025-12-30 16:52:58 - INFO - Reguläre Tore (Std=1.56): Bremerhaven Trident 3:4 Iserlohn Miners
+2025-12-30 16:52:58 - INFO - Endergebnis: Bremerhaven Trident 3:4 Iserlohn Miners - Overtime: False, Shootout: False
+2025-12-30 16:52:58 - INFO - Updated last5 for Bremerhaven Trident: L
+2025-12-30 16:52:58 - INFO - Updated last5 for Iserlohn Miners: W
+2025-12-30 16:52:58 - INFO - Simuliere Liga-Spiel: Düsseldorf Aurora vs Frankfurt Core in Nord
+2025-12-30 16:52:58 - INFO - Form factors (Matchday 3): Düsseldorf Aurora 1.10, Frankfurt Core 1.05
+2025-12-30 16:52:58 - INFO - Reguläre Tore (Std=1.54): Düsseldorf Aurora 3:2 Frankfurt Core
+2025-12-30 16:52:58 - INFO - Endergebnis: Düsseldorf Aurora 3:2 Frankfurt Core - Overtime: False, Shootout: False
+2025-12-30 16:52:58 - INFO - Updated last5 for Düsseldorf Aurora: W
+2025-12-30 16:52:58 - INFO - Updated last5 for Frankfurt Core: L
+2025-12-30 16:52:58 - INFO - Simuliere Liga-Spiel: Novadelta Panther vs Augsburg Ferox in Süd
+2025-12-30 16:52:58 - INFO - Form factors (Matchday 3): Novadelta Panther 1.01, Augsburg Ferox 0.99
+2025-12-30 16:52:58 - INFO - Reguläre Tore (Std=1.57): Novadelta Panther 5:4 Augsburg Ferox
+2025-12-30 16:52:58 - INFO - Endergebnis: Novadelta Panther 5:4 Augsburg Ferox - Overtime: False, Shootout: False
+2025-12-30 16:52:58 - INFO - Updated last5 for Novadelta Panther: W
+2025-12-30 16:52:58 - INFO - Updated last5 for Augsburg Ferox: L
+2025-12-30 16:52:58 - INFO - Simuliere Liga-Spiel: Nürnberg Eistiger vs Mannheim Ventus in Süd
+2025-12-30 16:52:58 - INFO - Form factors (Matchday 3): Nürnberg Eistiger 0.99, Mannheim Ventus 1.20
+2025-12-30 16:52:58 - INFO - Reguläre Tore (Std=1.54): Nürnberg Eistiger 4:0 Mannheim Ventus
+2025-12-30 16:52:58 - INFO - Endergebnis: Nürnberg Eistiger 4:0 Mannheim Ventus - Overtime: False, Shootout: False
+2025-12-30 16:52:58 - INFO - Updated last5 for Nürnberg Eistiger: W
+2025-12-30 16:52:58 - INFO - Updated last5 for Mannheim Ventus: L
+2025-12-30 16:52:58 - INFO - Simuliere Liga-Spiel: Regensburg Pulse vs München FluxBullen in Süd
+2025-12-30 16:52:58 - INFO - Form factors (Matchday 3): Regensburg Pulse 1.11, München FluxBullen 1.06
+2025-12-30 16:52:58 - INFO - Reguläre Tore (Std=1.60): Regensburg Pulse 1:1 München FluxBullen
+2025-12-30 16:52:58 - INFO - Endergebnis: Regensburg Pulse 2:1 München FluxBullen - Overtime: True, Shootout: False
+2025-12-30 16:52:58 - INFO - Updated last5 for Regensburg Pulse: W2
+2025-12-30 16:52:58 - INFO - Updated last5 for München FluxBullen: L1
+2025-12-30 16:52:58 - INFO - Simuliere Liga-Spiel: Ravensburg Zenit Falken vs Landshut Lichtkern in Süd
+2025-12-30 16:52:58 - INFO - Form factors (Matchday 3): Ravensburg Zenit Falken 1.10, Landshut Lichtkern 1.01
+2025-12-30 16:52:58 - INFO - Reguläre Tore (Std=1.59): Ravensburg Zenit Falken 3:3 Landshut Lichtkern
+2025-12-30 16:52:58 - INFO - Endergebnis: Ravensburg Zenit Falken 4:3 Landshut Lichtkern - Overtime: True, Shootout: False
+2025-12-30 16:52:58 - INFO - Updated last5 for Ravensburg Zenit Falken: W2
+2025-12-30 16:52:58 - INFO - Updated last5 for Landshut Lichtkern: L1
+2025-12-30 16:52:59 - INFO - Simuliere Liga-Spiel: Straubing Forest Tigers vs Schwenningen Sturmflügel in Süd
+2025-12-30 16:52:59 - INFO - Form factors (Matchday 3): Straubing Forest Tigers 1.13, Schwenningen Sturmflügel 0.99
+2025-12-30 16:52:59 - INFO - Reguläre Tore (Std=1.51): Straubing Forest Tigers 0:3 Schwenningen Sturmflügel
+2025-12-30 16:52:59 - INFO - Endergebnis: Straubing Forest Tigers 0:3 Schwenningen Sturmflügel - Overtime: False, Shootout: False
+2025-12-30 16:52:59 - INFO - Updated last5 for Straubing Forest Tigers: L
+2025-12-30 16:52:59 - INFO - Updated last5 for Schwenningen Sturmflügel: W
+2025-12-30 16:52:59 - INFO - Exported table with last5: {'Team': 'Whiteout Berlin', 'Points': 8, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:52:59 - INFO - Exported table with last5: {'Team': 'Novadelta Panther', 'Points': 9, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:52:59 - INFO - Team Whiteout Berlin last5 from nord: W
+2025-12-30 16:52:59 - INFO - Team Düsseldorf Aurora last5 from nord: W
+2025-12-30 16:52:59 - INFO - Team Iserlohn Miners last5 from nord: W
+2025-12-30 16:52:59 - INFO - Team Köln Blitzhaie last5 from nord: L
+2025-12-30 16:52:59 - INFO - Team Krefeld Kernschlag last5 from nord: L
+2025-12-30 16:52:59 - INFO - Team Wolfsburg Voltsturm last5 from nord: W
+2025-12-30 16:52:59 - INFO - Team Bad Nauheim Devils last5 from nord: W
+2025-12-30 16:52:59 - INFO - Team Bremerhaven Trident last5 from nord: L
+2025-12-30 16:52:59 - INFO - Team Frankfurt Core last5 from nord: L
+2025-12-30 16:52:59 - INFO - Team Kassel Zenit last5 from nord: L
+2025-12-30 16:52:59 - INFO - Team Novadelta Panther last5 from sued: W
+2025-12-30 16:52:59 - INFO - Team Augsburg Ferox last5 from sued: L
+2025-12-30 16:52:59 - INFO - Team Nürnberg Eistiger last5 from sued: W
+2025-12-30 16:52:59 - INFO - Team Schwenningen Sturmflügel last5 from sued: W
+2025-12-30 16:52:59 - INFO - Team Landshut Lichtkern last5 from sued: L1
+2025-12-30 16:52:59 - INFO - Team München FluxBullen last5 from sued: L1
+2025-12-30 16:52:59 - INFO - Team Mannheim Ventus last5 from sued: L
+2025-12-30 16:52:59 - INFO - Team Straubing Forest Tigers last5 from sued: L
+2025-12-30 16:52:59 - INFO - Team Regensburg Pulse last5 from sued: W2
+2025-12-30 16:52:59 - INFO - Team Ravensburg Zenit Falken last5 from sued: W2
+2025-12-30 16:52:59 - INFO - Saving to stats: W
+2025-12-30 16:53:02 - INFO - Exported table with last5: {'Team': 'Whiteout Berlin', 'Points': 8, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:53:02 - INFO - Exported table with last5: {'Team': 'Novadelta Panther', 'Points': 9, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:53:42 - INFO - Simuliere Liga-Spiel: Krefeld Kernschlag vs Bad Nauheim Devils in Nord
+2025-12-30 16:53:42 - INFO - Form factors (Matchday 4): Krefeld Kernschlag 1.04, Bad Nauheim Devils 0.93
+2025-12-30 16:53:42 - INFO - Reguläre Tore (Std=1.52): Krefeld Kernschlag 0:3 Bad Nauheim Devils
+2025-12-30 16:53:42 - INFO - Endergebnis: Krefeld Kernschlag 0:3 Bad Nauheim Devils - Overtime: False, Shootout: False
+2025-12-30 16:53:42 - INFO - Updated last5 for Krefeld Kernschlag: L
+2025-12-30 16:53:42 - INFO - Updated last5 for Bad Nauheim Devils: W
+2025-12-30 16:53:42 - INFO - Simuliere Liga-Spiel: Köln Blitzhaie vs Kassel Zenit in Nord
+2025-12-30 16:53:42 - INFO - Form factors (Matchday 4): Köln Blitzhaie 0.85, Kassel Zenit 0.94
+2025-12-30 16:53:42 - INFO - Reguläre Tore (Std=1.55): Köln Blitzhaie 3:2 Kassel Zenit
+2025-12-30 16:53:42 - INFO - Endergebnis: Köln Blitzhaie 3:2 Kassel Zenit - Overtime: False, Shootout: False
+2025-12-30 16:53:42 - INFO - Updated last5 for Köln Blitzhaie: W
+2025-12-30 16:53:42 - INFO - Updated last5 for Kassel Zenit: L
+2025-12-30 16:53:42 - INFO - Simuliere Liga-Spiel: Iserlohn Miners vs Wolfsburg Voltsturm in Nord
+2025-12-30 16:53:42 - INFO - Form factors (Matchday 4): Iserlohn Miners 0.91, Wolfsburg Voltsturm 1.04
+2025-12-30 16:53:42 - INFO - Reguläre Tore (Std=1.57): Iserlohn Miners 0:0 Wolfsburg Voltsturm
+2025-12-30 16:53:42 - INFO - Endergebnis: Iserlohn Miners 1:0 Wolfsburg Voltsturm - Overtime: True, Shootout: False
+2025-12-30 16:53:42 - INFO - Updated last5 for Iserlohn Miners: W2
+2025-12-30 16:53:42 - INFO - Updated last5 for Wolfsburg Voltsturm: L1
+2025-12-30 16:53:42 - INFO - Simuliere Liga-Spiel: Frankfurt Core vs Whiteout Berlin in Nord
+2025-12-30 16:53:42 - INFO - Form factors (Matchday 4): Frankfurt Core 0.98, Whiteout Berlin 1.09
+2025-12-30 16:53:42 - INFO - Reguläre Tore (Std=1.52): Frankfurt Core 4:3 Whiteout Berlin
+2025-12-30 16:53:42 - INFO - Endergebnis: Frankfurt Core 4:3 Whiteout Berlin - Overtime: False, Shootout: False
+2025-12-30 16:53:42 - INFO - Updated last5 for Frankfurt Core: W
+2025-12-30 16:53:42 - INFO - Updated last5 for Whiteout Berlin: L
+2025-12-30 16:53:42 - INFO - Simuliere Liga-Spiel: Düsseldorf Aurora vs Bremerhaven Trident in Nord
+2025-12-30 16:53:42 - INFO - Form factors (Matchday 4): Düsseldorf Aurora 1.15, Bremerhaven Trident 0.93
+2025-12-30 16:53:42 - INFO - Reguläre Tore (Std=1.53): Düsseldorf Aurora 6:0 Bremerhaven Trident
+2025-12-30 16:53:42 - INFO - Endergebnis: Düsseldorf Aurora 6:0 Bremerhaven Trident - Overtime: False, Shootout: False
+2025-12-30 16:53:42 - INFO - Updated last5 for Düsseldorf Aurora: W
+2025-12-30 16:53:42 - INFO - Updated last5 for Bremerhaven Trident: L
+2025-12-30 16:53:42 - INFO - Simuliere Liga-Spiel: Regensburg Pulse vs Augsburg Ferox in Süd
+2025-12-30 16:53:42 - INFO - Form factors (Matchday 4): Regensburg Pulse 1.01, Augsburg Ferox 1.09
+2025-12-30 16:53:42 - INFO - Reguläre Tore (Std=1.59): Regensburg Pulse 3:3 Augsburg Ferox
+2025-12-30 16:53:42 - INFO - Endergebnis: Regensburg Pulse 3:4 Augsburg Ferox - Overtime: True, Shootout: False
+2025-12-30 16:53:42 - INFO - Updated last5 for Regensburg Pulse: L1
+2025-12-30 16:53:42 - INFO - Updated last5 for Augsburg Ferox: W2
+2025-12-30 16:53:42 - INFO - Simuliere Liga-Spiel: Nürnberg Eistiger vs Ravensburg Zenit Falken in Süd
+2025-12-30 16:53:42 - INFO - Form factors (Matchday 4): Nürnberg Eistiger 0.98, Ravensburg Zenit Falken 0.95
+2025-12-30 16:53:42 - INFO - Reguläre Tore (Std=1.55): Nürnberg Eistiger 1:0 Ravensburg Zenit Falken
+2025-12-30 16:53:42 - INFO - Endergebnis: Nürnberg Eistiger 1:0 Ravensburg Zenit Falken - Overtime: False, Shootout: False
+2025-12-30 16:53:42 - INFO - Updated last5 for Nürnberg Eistiger: W
+2025-12-30 16:53:42 - INFO - Updated last5 for Ravensburg Zenit Falken: L
+2025-12-30 16:53:42 - INFO - Simuliere Liga-Spiel: Straubing Forest Tigers vs Novadelta Panther in Süd
+2025-12-30 16:53:42 - INFO - Form factors (Matchday 4): Straubing Forest Tigers 1.06, Novadelta Panther 1.07
+2025-12-30 16:53:42 - INFO - Reguläre Tore (Std=1.57): Straubing Forest Tigers 3:4 Novadelta Panther
+2025-12-30 16:53:42 - INFO - Endergebnis: Straubing Forest Tigers 3:4 Novadelta Panther - Overtime: False, Shootout: False
+2025-12-30 16:53:42 - INFO - Updated last5 for Straubing Forest Tigers: L
+2025-12-30 16:53:42 - INFO - Updated last5 for Novadelta Panther: W
+2025-12-30 16:53:42 - INFO - Simuliere Liga-Spiel: Mannheim Ventus vs Schwenningen Sturmflügel in Süd
+2025-12-30 16:53:42 - INFO - Form factors (Matchday 4): Mannheim Ventus 1.03, Schwenningen Sturmflügel 0.96
+2025-12-30 16:53:42 - INFO - Reguläre Tore (Std=1.56): Mannheim Ventus 5:2 Schwenningen Sturmflügel
+2025-12-30 16:53:42 - INFO - Endergebnis: Mannheim Ventus 5:2 Schwenningen Sturmflügel - Overtime: False, Shootout: False
+2025-12-30 16:53:42 - INFO - Updated last5 for Mannheim Ventus: W
+2025-12-30 16:53:42 - INFO - Updated last5 for Schwenningen Sturmflügel: L
+2025-12-30 16:53:42 - INFO - Simuliere Liga-Spiel: München FluxBullen vs Landshut Lichtkern in Süd
+2025-12-30 16:53:42 - INFO - Form factors (Matchday 4): München FluxBullen 0.98, Landshut Lichtkern 1.01
+2025-12-30 16:53:42 - INFO - Reguläre Tore (Std=1.59): München FluxBullen 4:2 Landshut Lichtkern
+2025-12-30 16:53:42 - INFO - Endergebnis: München FluxBullen 4:2 Landshut Lichtkern - Overtime: False, Shootout: False
+2025-12-30 16:53:42 - INFO - Updated last5 for München FluxBullen: W
+2025-12-30 16:53:42 - INFO - Updated last5 for Landshut Lichtkern: L
+2025-12-30 16:53:42 - INFO - Exported table with last5: {'Team': 'Düsseldorf Aurora', 'Points': 9, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:53:42 - INFO - Exported table with last5: {'Team': 'Novadelta Panther', 'Points': 12, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:53:42 - INFO - Team Düsseldorf Aurora last5 from nord: W
+2025-12-30 16:53:42 - INFO - Team Köln Blitzhaie last5 from nord: W
+2025-12-30 16:53:42 - INFO - Team Iserlohn Miners last5 from nord: W2
+2025-12-30 16:53:42 - INFO - Team Whiteout Berlin last5 from nord: L
+2025-12-30 16:53:42 - INFO - Team Bad Nauheim Devils last5 from nord: W
+2025-12-30 16:53:42 - INFO - Team Wolfsburg Voltsturm last5 from nord: L1
+2025-12-30 16:53:42 - INFO - Team Krefeld Kernschlag last5 from nord: L
+2025-12-30 16:53:42 - INFO - Team Bremerhaven Trident last5 from nord: L
+2025-12-30 16:53:42 - INFO - Team Frankfurt Core last5 from nord: W
+2025-12-30 16:53:42 - INFO - Team Kassel Zenit last5 from nord: L
+2025-12-30 16:53:42 - INFO - Team Novadelta Panther last5 from sued: W
+2025-12-30 16:53:42 - INFO - Team Nürnberg Eistiger last5 from sued: W
+2025-12-30 16:53:42 - INFO - Team Augsburg Ferox last5 from sued: W2
+2025-12-30 16:53:42 - INFO - Team München FluxBullen last5 from sued: W
+2025-12-30 16:53:42 - INFO - Team Mannheim Ventus last5 from sued: W
+2025-12-30 16:53:42 - INFO - Team Schwenningen Sturmflügel last5 from sued: L
+2025-12-30 16:53:42 - INFO - Team Landshut Lichtkern last5 from sued: L
+2025-12-30 16:53:42 - INFO - Team Regensburg Pulse last5 from sued: L1
+2025-12-30 16:53:42 - INFO - Team Straubing Forest Tigers last5 from sued: L
+2025-12-30 16:53:42 - INFO - Team Ravensburg Zenit Falken last5 from sued: L
+2025-12-30 16:53:42 - INFO - Saving to stats: W
+2025-12-30 16:53:46 - INFO - Exported table with last5: {'Team': 'Düsseldorf Aurora', 'Points': 9, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:53:46 - INFO - Exported table with last5: {'Team': 'Novadelta Panther', 'Points': 12, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:53:56 - INFO - Exported table with last5: {'Team': 'Düsseldorf Aurora', 'Points': 9, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 16:53:56 - INFO - Exported table with last5: {'Team': 'Novadelta Panther', 'Points': 12, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 17:15:39 - INFO - Exported table with last5: {'Team': 'Düsseldorf Aurora', 'Points': 9, 'GF': 0, 'GA': 0, 'GD': 0}
+2025-12-30 17:15:39 - INFO - Exported table with last5: {'Team': 'Novadelta Panther', 'Points': 12, 'GF': 0, 'GA': 0, 'GD': 0}

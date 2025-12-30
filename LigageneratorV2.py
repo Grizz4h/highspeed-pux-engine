@@ -1806,6 +1806,10 @@ def step_regular_season_once() -> Dict[str, Any]:
 
     save_replay_json(season, spieltag, replay_matches)
 
+    # Generate summaries
+    import subprocess
+    subprocess.run(["python", "generate_summaries.py"], cwd=BASE_DIR)
+
     save_league_stats_snapshot(
         season=season,
         upto_matchday=spieltag,
