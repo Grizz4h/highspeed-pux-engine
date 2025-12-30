@@ -1,0 +1,68 @@
+{
+  "version": "2025-12",
+  "styles": {
+    "delta_net_sport": {
+      "sentence_count": 2
+    }
+  },
+  "fragments": {
+    "openers": [
+      {"id": "opener_close", "w": 10, "t": "{home_team} und {away_team} liefern sich ein knappes Duell.", "requires": ["close_game"]},
+      {"id": "opener_blowout", "w": 8, "t": "{winner} dominiert {loser} von Beginn an.", "requires": ["blowout"]},
+      {"id": "opener_chaos", "w": 6, "t": "Ein chaotisches Spiel mit vielen Führungswechseln.", "requires": ["chaos_game"]},
+      {"id": "opener_defensive", "w": 7, "t": "Defensivstarke Mannschaften bestimmen das Geschehen.", "requires": ["goalie_decided"]},
+      {"id": "opener_eiskalt", "w": 5, "t": "{winner} nutzt eiskalt die Chancen.", "requires": []},
+      {"id": "opener_late", "w": 9, "t": "Spannung bis zum Schluss.", "requires": ["late_decider"]},
+      {"id": "opener_comeback", "w": 8, "t": "{winner} dreht das Spiel in der Schlussphase.", "requires": ["comeback"]},
+      {"id": "opener_lead_changes", "w": 7, "t": "Mehrfache Führungswechsel halten die Spannung hoch.", "requires": ["lead_changes"]},
+      {"id": "opener_pp_edge", "w": 6, "t": "Überzahl-Situationen entscheiden das Match.", "requires": ["special_teams_edge"]},
+      {"id": "opener_neutral", "w": 1, "t": "{home_team} trifft auf {away_team} in einem Liga-Spiel.", "requires": []},
+      {"id": "opener_ot", "w": 5, "t": "Das Spiel geht in die Verlängerung.", "requires": ["ot_game"]},
+      {"id": "opener_so", "w": 4, "t": "Penalty-Schießen entscheidet.", "requires": ["so_game"]},
+      {"id": "opener_dominance", "w": 6, "t": "{winner} zeigt klare Überlegenheit.", "requires": ["blowout"]},
+      {"id": "opener_turnovers", "w": 5, "t": "Ballverluste prägen das Spiel.", "requires": ["chaos_game"]},
+      {"id": "opener_pk", "w": 4, "t": "Strafzeiten beeinflussen den Verlauf.", "requires": ["chaos_game"]}
+    ],
+    "factor_line2": [
+      {"id": "line2_goalie", "w": 10, "t": "Die Torhüter leisten Großartiges.", "requires": ["goalie_decided"]},
+      {"id": "line2_late_decider", "w": 9, "t": "Das entscheidende Tor fällt in Minute {decisive_minute}.", "requires": ["late_decider"]},
+      {"id": "line2_turnovers", "w": 7, "t": "Viele Ballverluste erschweren den Spielfluss.", "requires": ["chaos_game"]},
+      {"id": "line2_comeback", "w": 8, "t": "Ein starkes Comeback sichert den Sieg.", "requires": ["comeback"]},
+      {"id": "line2_lead_changes", "w": 7, "t": "{lead_changes} Führungswechsel halten die Zuschauer in Atem.", "requires": ["lead_changes"]},
+      {"id": "line2_pp", "w": 6, "t": "Powerplay-Tore entscheiden das Spiel.", "requires": ["special_teams_edge"]},
+      {"id": "line2_dominance", "w": 5, "t": "{winner} kontrolliert das Spiel über die gesamte Distanz.", "requires": ["blowout"]},
+      {"id": "line2_close", "w": 6, "t": "Ein enges Spiel geht an {winner}.", "requires": ["close_game"]},
+      {"id": "line2_chaos", "w": 4, "t": "Unübersichtlich und turbulent.", "requires": ["chaos_game"]},
+      {"id": "line2_eiskalt", "w": 5, "t": "{winner} bleibt effizient.", "requires": []},
+      {"id": "line2_defensive", "w": 6, "t": "Defensive Stabilität bringt den Sieg.", "requires": ["goalie_decided"]},
+      {"id": "line2_ot_win", "w": 8, "t": "Verlängerung bringt die Entscheidung.", "requires": ["ot_game"]},
+      {"id": "line2_so_win", "w": 7, "t": "Shootout entscheidet.", "requires": ["so_game"]},
+      {"id": "line2_gwg", "w": 9, "t": "Game-winning-goal in Minute {gwg_minute}.", "requires": ["late_decider"]},
+      {"id": "line2_goal_diff", "w": 5, "t": "Endstand {result} mit {goal_diff} Toren Differenz.", "requires": []},
+      {"id": "line2_pk", "w": 4, "t": "Strafzeiten spielen eine Rolle.", "requires": ["chaos_game"]},
+      {"id": "line2_pp_edge", "w": 6, "t": "Überzahl bringt den Unterschied.", "requires": ["special_teams_edge"]},
+      {"id": "line2_comeback_detail", "w": 7, "t": "{loser} führt, aber {winner} dreht auf.", "requires": ["comeback"]},
+      {"id": "line2_lead_detail", "w": 6, "t": "Mehrfache Führungen wechseln.", "requires": ["lead_changes"]},
+      {"id": "line2_blowout_detail", "w": 5, "t": "{winner} lässt nichts anbrennen.", "requires": ["blowout"]},
+      {"id": "line2_close_detail", "w": 6, "t": "Knapp und spannend bis zum Ende.", "requires": ["close_game"]},
+      {"id": "line2_turnover_detail", "w": 4, "t": "Fehler kosten Punkte.", "requires": ["chaos_game"]},
+      {"id": "line2_goalie_detail", "w": 8, "t": "Torhüter-Duell entscheidet.", "requires": ["goalie_decided"]},
+      {"id": "line2_special", "w": 5, "t": "Spezialteams machen den Unterschied.", "requires": ["special_teams_edge"]},
+      {"id": "line2_neutral", "w": 1, "t": "Ein ausgeglichenes Spiel.", "requires": []}
+    ],
+    "ot_line2": [
+      {"id": "ot_win", "w": 10, "t": "Overtime bringt {result}.", "requires": ["ot_game"]},
+      {"id": "ot_decisive", "w": 8, "t": "Verlängerung entscheidet in Minute {decisive_minute}.", "requires": ["ot_game", "late_decider"]},
+      {"id": "ot_comeback", "w": 7, "t": "Comeback in OT.", "requires": ["ot_game", "comeback"]},
+      {"id": "ot_close", "w": 6, "t": "Knapp in der Verlängerung.", "requires": ["ot_game", "close_game"]},
+      {"id": "ot_neutral", "w": 1, "t": "OT bringt die Entscheidung.", "requires": ["ot_game"]}
+    ],
+    "so_line2": [
+      {"id": "so_win", "w": 10, "t": "Shootout: {result}.", "requires": ["so_game"]},
+      {"id": "so_decisive", "w": 8, "t": "Penalty-Schießen entscheidet.", "requires": ["so_game"]},
+      {"id": "so_close", "w": 6, "t": "Knapp im SO.", "requires": ["so_game", "close_game"]},
+      {"id": "so_comeback", "w": 5, "t": "Comeback im Shootout.", "requires": ["so_game", "comeback"]},
+      {"id": "so_neutral", "w": 1, "t": "SO bringt {result}.", "requires": ["so_game"]}
+    ]
+  }
+}
