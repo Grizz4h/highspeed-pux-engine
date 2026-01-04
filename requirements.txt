@@ -198,6 +198,7 @@ types-toposort==1.10
 types-tqdm==4.67
 types-translationstring==1.4
 types-tree-sitter-languages==1.10
+lxml==6.0.2
 types-ttkthemes==3.2
 types-ujson==5.10
 types-unidiff==0.7

@@ -527,6 +527,61 @@ def data_git(*args: str) -> tuple[int, str]:
 def pointers_git(*args: str) -> tuple[int, str]:
     return _run_in(["git", *args], POINTERS_REPO_PATH)
 
+
+def list_data_commits(limit: int = 30) -> tuple[int, list[dict[str, str]] | str]:
+    """Liest die letzten Commits aus dem DATA-Repo für Rollback-Auswahl."""
+    code, out = data_git("--no-pager", "log", "--oneline", f"-n{limit}")
+    if code != 0:
+        return code, out
+
+    commits: list[dict[str, str]] = []
+    for line in out.splitlines():
+        parts = line.strip().split(maxsplit=1)
+        if not parts:
+            continue
+        sha = parts[0]
+        subj = parts[1] if len(parts) > 1 else "(kein Betreff)"
+        commits.append({"sha": sha, "subj": subj})
+
+    return 0, commits
+
+
+# --- Rollback Daten-Repo auf Commit ---
+st.markdown("### Rollback Daten (Spieltage/Saves)")
+code_commits, commits = list_data_commits(limit=40)
+if code_commits != 0:
+    st.warning(f"Konnte Commits nicht laden: {commits}")
+elif not commits:
+    st.info("Keine Commits gefunden.")
+else:
+    options = [f"{c['sha'][:10]} · {c['subj']}" for c in commits]
+    sel = st.selectbox("Commit auswählen", options=options, key="sb_rollback_commit")
+    chosen = commits[options.index(sel)]
+
+    confirm_rb = st.checkbox(
+        "Ja, Daten-Repo (spieltage/saves/etc.) hart auf diesen Commit zurücksetzen.",
+        value=False,
+        key="cb_confirm_rb"
+    )
+
+    if st.button("⏪ Rollback auf Commit", key="btn_rollback", use_container_width=True, disabled=not confirm_rb):
+        with st.spinner("Rollback läuft..."):
+            steps = [
+                ("git fetch origin", data_git("fetch", "origin")),
+                ("git checkout main", data_git("checkout", "main")),
+                (f"git reset --hard {chosen['sha']}", data_git("reset", "--hard", chosen["sha"])),
+                ("git clean -fd", data_git("clean", "-fd")),
+            ]
+
+            errors = [(name, rc, out) for name, (rc, out) in steps if rc != 0]
+            if errors:
+                msg = "\n".join([f"{name}: {out}" for name, rc, out in errors])
+                st.error(f"Rollback fehlgeschlagen:\n{msg}")
+            else:
+                st.success(f"Rollback auf {chosen['sha'][:10]} abgeschlossen. Engine kann ab diesem Stand weiter simulieren.")
+                st.cache_data.clear()
+
+
 def set_pointer(which: str, source_branch: str, full_sha: str) -> tuple[int, str]:
     """
     Setzt Pointer in pointers/dev.json oder pointers/prod.json auf den gegebenen commit.

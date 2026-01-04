@@ -47,6 +47,7 @@ def _clean_for_json(obj: Any) -> Any:
 import re
 
 # Logging setup
+os.makedirs('logs', exist_ok=True)
 logging.basicConfig(
     filename='logs/liga_simulation.log',
     level=logging.INFO,
