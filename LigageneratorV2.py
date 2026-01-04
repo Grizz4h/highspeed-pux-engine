@@ -165,6 +165,33 @@ def savefile_for_season(season: int) -> Path:
     return DATA_ROOT / "saves" / season_folder(season) / "savegame.json"
 
 
+def find_max_spieltag_in_repo(season: int) -> int:
+    """
+    Scannt das Repo und findet die höchste Spieltag-Nr., für die spieltage/saison_XX/spieltag_YY existiert.
+    Nützlich nach Rollback, um herauszufinden, welcher Spieltag tatsächlich noch im Repo ist.
+    """
+    season_dir = SPIELTAG_DIR / season_folder(season)
+    if not season_dir.exists():
+        return 0
+    
+    spieltag_dirs = [
+        p for p in season_dir.iterdir()
+        if p.is_dir() and p.name.startswith("spieltag_")
+    ]
+    
+    if not spieltag_dirs:
+        return 0
+    
+    max_spieltag = 0
+    for sd in spieltag_dirs:
+        try:
+            spieltag_num = int(sd.name.split("_")[1])
+            max_spieltag = max(max_spieltag, spieltag_num)
+        except (ValueError, IndexError):
+            continue
+    
+    return max_spieltag
+
 
 # ------------------------------------------------
 # 3a SPIELPLAN-GENERATOR (REINES ROUND-ROBIN)
@@ -1188,15 +1215,23 @@ def calc_strength(row: pd.Series, home: bool = False) -> float:
     return round(total, 2)
 
 
-def seasonal_form_factor(matchday: int, team: str, total_matchdays: int = 18, base_amplitude: float = 0.1, damping: float = 2.0) -> float:
+def seasonal_form_factor(matchday: int, team: str, total_matchdays: int = 18, base_amplitude: float = 0.1, damping: float = 2.0, run_id: int = 0) -> float:
     """
     Berechnet einen saisonalen Form-Faktor für ein Team an einem bestimmten Matchday.
     - Früh: Hohe Schwankungen (Überschwingen).
     - Später: Abnehmend, einpendelnd.
-    - Deterministisch pro Team/Matchday via Seed.
+    - Stochastisch pro Team/Matchday/Run via run_id (ermöglicht Variationen bei Re-Simulationen).
+    
+    Args:
+        matchday: Spieltag (1-basiertiert)
+        team: Team-Name
+        total_matchdays: Gesamtzahl Spieltage (default 18)
+        base_amplitude: Basis-Schwankungsamplitude
+        damping: Dämpfungsfaktor für exponentielle Abnahme
+        run_id: Eindeutige Simulationsnummer für Variationen (0 = Reproduzierbar, >0 = Stochastisch)
     """
-    # Seed für Reproduzierbarkeit
-    seed = hash(f"{team}_{matchday}") % (2**32)
+    # Seed für Stochastik: run_id > 0 erzeugt unterschiedliche Ergebnisse
+    seed = hash(f"{team}_{matchday}_{run_id}") % (2**32)
     random.seed(seed)
     
     # Exponentielle Dämpfung: Amplitude nimmt ab
@@ -1268,7 +1303,8 @@ def simulate_match(
     away: str,
     stats: pd.DataFrame,
     conf: str,
-    matchday: int
+    matchday: int,
+    run_id: int = 0
 ) -> Tuple[str, Dict[str, Any], Dict[str, Any]]:
     logging.info(f"Simuliere Liga-Spiel: {home} vs {away} in {conf}")
     r_h = df[df["Team"] == home].iloc[0]
@@ -1278,8 +1314,8 @@ def simulate_match(
     strength_away = calc_strength(r_a, False)
     
     # Saisonale Form-Modulation
-    form_home = seasonal_form_factor(matchday, home)
-    form_away = seasonal_form_factor(matchday, away)
+    form_home = seasonal_form_factor(matchday, home, run_id=run_id)
+    form_away = seasonal_form_factor(matchday, away, run_id=run_id)
     strength_home *= form_home
     strength_away *= form_away
     logging.info(f"Form factors (Matchday {matchday}): {home} {form_home:.2f}, {away} {form_away:.2f}")
@@ -1736,6 +1772,8 @@ def step_regular_season_once() -> Dict[str, Any]:
 
     results_json: List[Dict[str, Any]] = []
     replay_matches: List[Dict[str, Any]] = []
+    seed_offset = (season * 100 + spieltag) % (2**32)  # Eindeutige Basis pro Spieltag
+    run_counter = 0  # Counter für stochastische Variation zwischen Re-Simulationen
 
     # --- NORD ---
     print("\n— Nord —")
@@ -1752,7 +1790,8 @@ def step_regular_season_once() -> Dict[str, Any]:
         print(strength_nord.to_string(index=False))
 
     for m in today_nord_matches:
-        s, j, replay = simulate_match(nord, *m, stats, "Nord", spieltag)
+        s, j, replay = simulate_match(nord, *m, stats, "Nord", spieltag, run_id=seed_offset + run_counter)
+        run_counter += 1
         print(s)
         results_json.append(j)
         replay_matches.append(replay)
@@ -1773,7 +1812,8 @@ def step_regular_season_once() -> Dict[str, Any]:
         print(strength_sued.to_string(index=False))
 
     for m in today_sued_matches:
-        s, j, replay = simulate_match(sued, *m, stats, "Süd", spieltag)
+        s, j, replay = simulate_match(sued, *m, stats, "Süd", spieltag, run_id=seed_offset + run_counter)
+        run_counter += 1
         print(s)
         results_json.append(j)
         replay_matches.append(replay)

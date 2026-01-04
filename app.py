@@ -25,6 +25,7 @@ DATA_REPO_PATH = Path("/opt/highspeed/data")
 PUBLISHER_DIR  = Path("/opt/highspeed/publisher")
 SCRIPT_PULL    = PUBLISHER_DIR / "data_pull.sh"
 SCRIPT_PUSH    = PUBLISHER_DIR / "data_push.sh"
+SCRIPT_REPLAY_PUSH = PUBLISHER_DIR / "replay_push.sh"
 SCRIPT_PUBLISH = PUBLISHER_DIR / "publish_live.sh"  # optional, falls vorhanden
 
 # Neues Pointer-Repo für saubere Trennung
@@ -564,33 +565,28 @@ else:
         key="cb_confirm_rb"
     )
 
-    if st.button("⏪ Rollback auf Commit", key="btn_rollback", use_container_width=True, disabled=not confirm_rb):
-        with st.spinner("Rollback läuft..."):
-            steps = [
-                ("git fetch origin", data_git("fetch", "origin")),
-                ("git checkout main", data_git("checkout", "main")),
-                (f"git reset --hard {chosen['sha']}", data_git("reset", "--hard", chosen["sha"])),
-                ("git clean -fd", data_git("clean", "-fd")),
-            ]
+    force_push_rb = st.checkbox(
+        "⚠️ Force-Push nach Rollback (überschreibt Remote-History, alte Commits werden gelöscht)",
+        value=False,
+        key="cb_force_push_rb"
+    )
 
-            errors = [(name, rc, out) for name, (rc, out) in steps if rc != 0]
-            if errors:
-                msg = "\n".join([f"{name}: {out}" for name, rc, out in errors])
-                st.error(f"Rollback fehlgeschlagen:\n{msg}")
-            else:
-                st.success(f"Rollback auf {chosen['sha'][:10]} abgeschlossen. Engine kann ab diesem Stand weiter simulieren.")
-                st.cache_data.clear()
+    if force_push_rb:
+        st.warning("⚠️ WICHTIG: Nach Force-Push müssen alle Pointer (dev/prod/replay) neu gesetzt werden, da alte Commits nicht mehr existieren!")
+
+    st.session_state.rollback_chosen = chosen if st.button("⏪ Rollback auf Commit", key="btn_rollback", use_container_width=True, disabled=not confirm_rb) else st.session_state.get("rollback_chosen")
+    st.session_state.rollback_force_push = force_push_rb if st.session_state.get("rollback_chosen") else False
 
 
 def set_pointer(which: str, source_branch: str, full_sha: str) -> tuple[int, str]:
     """
-    Setzt Pointer in pointers/dev.json oder pointers/prod.json auf den gegebenen commit.
+    Setzt Pointer in pointers/dev.json, pointers/prod.json oder pointers/replay.json auf den gegebenen commit.
     Arbeitet nur im Pointers-Repo, ohne Engine-Repo zu berühren.
     """
     if DATA_REPO_PATH.resolve() == POINTERS_REPO_PATH.resolve():
         return 1, "ERROR: Pointer repo darf nicht data repo sein. Konfiguration prüfen!"
     
-    if which not in ("dev", "prod"):
+    if which not in ("dev", "prod", "replay"):
         return 1, f"Invalid which: {which}"
     if len(full_sha) != 40 or not all(c in "0123456789abcdef" for c in full_sha):
         return 1, f"Invalid full SHA: {full_sha}"
@@ -724,6 +720,84 @@ with st.sidebar:
 
     st.divider()
 
+    # =========== ROLLBACK HANDLER ===========
+    # Execute rollback if button was clicked
+    if st.session_state.get("rollback_chosen"):
+        chosen = st.session_state.rollback_chosen
+        force_push_rb = st.session_state.get("rollback_force_push", False)
+        
+        with st.spinner("Rollback läuft..."):
+            steps = [
+                ("git fetch origin", data_git("fetch", "origin")),
+                ("git checkout main", data_git("checkout", "main")),
+                (f"git reset --hard {chosen['sha']}", data_git("reset", "--hard", chosen["sha"])),
+                ("git clean -fd", data_git("clean", "-fd")),
+            ]
+
+            if force_push_rb:
+                steps.append(("git push origin main --force", data_git("push", "origin", "main", "--force")))
+                # DEV Branch auch zurücksetzen, damit Pull später nicht überschreibt
+                steps.append(("git checkout dev", data_git("checkout", "dev")))
+                steps.append((f"git reset --hard {chosen['sha']}", data_git("reset", "--hard", chosen["sha"])))
+                steps.append(("git push origin dev --force", data_git("push", "origin", "dev", "--force")))
+                steps.append(("git checkout main", data_git("checkout", "main")))
+
+            errors = [(name, rc, out) for name, (rc, out) in steps if rc != 0]
+            if errors:
+                msg = "\n".join([f"{name}: {out}" for name, rc, out in errors])
+                st.error(f"Rollback fehlgeschlagen:\n{msg}")
+            else:
+                success_msg = f"Rollback auf {chosen['sha'][:10]} abgeschlossen."
+                if force_push_rb:
+                    success_msg += " Remote-History wurde überschrieben (force-push)."
+                
+                # Setze Pointer auf neuen Commit
+                st.info("Setze Pointer auf neuen Rollback-Commit...")
+                
+                pointer_errors = []
+                
+                # DEV-Pointer
+                code_dev, out_dev = set_pointer("dev", "dev", chosen["sha"])
+                if code_dev != 0:
+                    pointer_errors.append(f"DEV-Pointer: {out_dev}")
+                else:
+                    st.success(f"✅ DEV-Pointer gesetzt → {chosen['sha'][:10]}")
+                
+                # PROD-Pointer (optional, aber empfohlen bei Rollback)
+                code_prod, out_prod = set_pointer("prod", "dev", chosen["sha"])
+                if code_prod != 0:
+                    pointer_errors.append(f"PROD-Pointer: {out_prod}")
+                else:
+                    st.success(f"✅ PROD-Pointer gesetzt → {chosen['sha'][:10]}")
+                
+                if pointer_errors:
+                    st.warning("⚠️ Einige Pointer konnten nicht gesetzt werden:\n" + "\n".join(pointer_errors))
+                
+                st.success(success_msg + " Alle Pointer wurden auf den Rollback-Commit gesetzt. Engine kann ab diesem Stand weiter simulieren.")
+                
+                # Nach Rollback: State aktualisieren basierend auf Repo
+                st.info("Prüfe Spieltag im Repo...")
+                try:
+                    state = sim.load_state()
+                    if state:
+                        season = state.get("season", 1)
+                        max_spieltag = sim.find_max_spieltag_in_repo(season)
+                        if max_spieltag > 0:
+                            st.info(f"Setze Spieltag auf {max_spieltag} (höchster im Repo)")
+                            state["spieltag"] = max_spieltag
+                            sim.save_state(state)
+                            st.success(f"✅ State aktualisiert: Spieltag {max_spieltag}")
+                        else:
+                            st.warning(f"⚠️ Kein Spieltag im Repo gefunden, State bleibt unverändert")
+                    else:
+                        st.warning("⚠️ State konnte nicht geladen werden")
+                except Exception as e:
+                    st.error(f"Fehler beim State-Update: {e}")
+                
+                st.cache_data.clear()
+                st.session_state.rollback_chosen = None  # Reset state
+                st.rerun()  # Force UI update to show fresh commits
+
     if is_sandbox_mode():
         st.info("Git/Publish/Pointer sind in SANDBOX deaktiviert.", icon="🧷")
     else:
@@ -752,6 +826,21 @@ with st.sidebar:
                     code, out = _run(cmd)
                     if code == 0:
                         st.success("Pull OK")
+                        
+                        # Nach Pull: State korrigieren basierend auf tatsächlichem Repo
+                        try:
+                            state = sim.load_state()
+                            if state:
+                                season = state.get("season", 1)
+                                max_spieltag = sim.find_max_spieltag_in_repo(season)
+                                if max_spieltag > 0 and state.get("spieltag", 0) > max_spieltag:
+                                    st.info(f"State korrigiert: Spieltag {state['spieltag']} → {max_spieltag} (max im Repo)")
+                                    state["spieltag"] = max_spieltag
+                                    sim.save_state(state)
+                                    st.success(f"✅ State aktualisiert")
+                        except Exception as e:
+                            st.warning(f"Konnte State nicht korrigieren: {e}")
+                        
                         st.cache_data.clear()
                     else:
                         st.error("Pull FAIL")
@@ -849,6 +938,71 @@ with st.sidebar:
                         st.error("LIVE Pointer setzen fehlgeschlagen")
                     if out:
                         st.code(out)
+
+            st.divider()
+
+            # Replay Pointer (unabhängig von Main-Pointer)
+            st.markdown("### Replay-Konferenz Pointer")
+            st.caption("Setzt den Replay-Pointer unabhängig vom Main-Pointer. Für Live-Konferenz, die weiter ist als offizieller Stand.")
+            
+            if not md_rows:
+                st.info("Keine Commits verfügbar.")
+            else:
+                replay_options = [f"{r['md']} · {r['hash_short']} · {r['subject']}" for r in md_rows]
+                replay_sel = st.selectbox("Replay-Commit auswählen", options=replay_options, index=0, key="sb_replay_commit")
+                replay_chosen = md_rows[replay_options.index(replay_sel)]
+
+                st.markdown(f"**Replay-Auswahl:** `{replay_chosen['md']}` → `{replay_chosen['hash_short']}`")
+
+                confirm_replay = st.checkbox("Ja, ich will Replay Pointer setzen.", value=False, key="confirm_replay")
+                extra_confirm_replay = st.checkbox(
+                    "Ich weiß was ich tue: Das wirkt auf LIVE/SSOT.",
+                    value=False,
+                    key="confirm_live_danger_replay"
+                ) if is_ssot_root() else True
+                
+                btn_enabled = GIT_CONTROLS_ENABLED and confirm_replay and extra_confirm_replay
+                if not btn_enabled:
+                    reasons = []
+                    if not GIT_CONTROLS_ENABLED:
+                        reasons.append("Git Controls disabled")
+                    if not confirm_replay:
+                        reasons.append("Erste Checkbox nicht aktiviert")
+                    if not extra_confirm_replay:
+                        reasons.append("SSOT-Bestätigung fehlt")
+                    st.caption(f"⚠️ Button disabled: {', '.join(reasons)}")
+                
+                if st.button("🎬 Set REPLAY Pointer", use_container_width=True, disabled=not btn_enabled, key="btn_set_replay_pointer"):
+                    with st.spinner("Setze Replay Pointer..."):
+                        # 1. Pointer setzen
+                        code, out = set_pointer("replay", "main", replay_chosen["hash_full"])
+                        if code == 0:
+                            st.success(f"✅ REPLAY Pointer gesetzt → {replay_chosen['hash_short']}")
+                            
+                            # 2. Replay-Daten pushen (nur replays/ Ordner)
+                            st.info("Pushe Replay-Daten zum Web-Repo...")
+                            replay_push_script = PUBLISHER_DIR / "replay_push.sh"
+                            if replay_push_script.exists():
+                                push_code, push_out = _run([str(replay_push_script), replay_chosen["md"]])
+                                if push_code == 0:
+                                    st.success(f"✅ Replay-Daten gepusht ({replay_chosen['md']})")
+                                else:
+                                    st.warning(f"⚠️ Replay-Push fehlgeschlagen (Code {push_code})")
+                                if push_out:
+                                    with st.expander("Push Output"):
+                                        st.code(push_out)
+                            else:
+                                st.warning("⚠️ replay_push.sh nicht gefunden - Daten wurden nicht gepusht")
+                            
+                            st.info("Die Konferenz/Replay-Seite folgt jetzt diesem Stand (data-repo MAIN), während die Hauptseite beim PROD-Pointer bleibt.")
+                            st.cache_data.clear()
+                            st.session_state.pop("confirm_replay", None)
+                            st.rerun()
+                        else:
+                            st.error("❌ REPLAY Pointer setzen fehlgeschlagen")
+                        if out:
+                            with st.expander("Pointer Output"):
+                                st.code(out)
 
 
 # ============================================================
@@ -1207,8 +1361,11 @@ with tab_gamedays:
 
     gds = list_gamedays(sel_season, sig_season)
 
-    if "sel_gameday" not in st.session_state:
-        st.session_state.sel_gameday = (gds[-1] if gds else 1)
+    # Immer auf letzten verfügbaren Spieltag setzen
+    if gds:
+        st.session_state.sel_gameday = gds[-1]
+    elif "sel_gameday" not in st.session_state:
+        st.session_state.sel_gameday = 1
 
     cols = st.columns([2,3])
     with cols[0]:
@@ -1224,11 +1381,7 @@ with tab_gamedays:
             st.session_state.sel_gameday = st.selectbox(
                 "Spieltag",
                 options=gds or [1],
-                index=(
-                    gds.index(st.session_state.sel_gameday)
-                    if gds and st.session_state.sel_gameday in gds
-                    else (len(gds)-1 if gds else 0)
-                ),
+                index=(len(gds)-1 if gds else 0),
                 key="dd_gameday_browser"
             )
         with cnext:
@@ -1379,8 +1532,11 @@ with tab_playoffs:
 
     rounds = list_rounds(sel_po_season, sig_po_season)
 
-    if "po_round" not in st.session_state:
-        st.session_state.po_round = (rounds[-1] if rounds else 1)
+    # Immer auf letzte verfügbare Runde setzen
+    if rounds:
+        st.session_state.po_round = rounds[-1]
+    elif "po_round" not in st.session_state:
+        st.session_state.po_round = 1
 
     st.caption(f"Aktive Browser-Saison: {sel_po_season}")
 
@@ -1395,7 +1551,7 @@ with tab_playoffs:
             st.session_state.po_round = st.selectbox(
                 "Runde",
                 options=rounds,
-                index=(rounds.index(st.session_state.po_round) if st.session_state.po_round in rounds else len(rounds)-1),
+                index=(len(rounds)-1 if rounds else 0),
                 key="po_round_sel"
             )
         with rnext:
