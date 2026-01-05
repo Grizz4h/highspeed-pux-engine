@@ -122,15 +122,15 @@
     "nation": "GER",
     "position": "T",
     "games": 27,
-    "minutes": 1558.8,
+    "minutes": 1596.8333333333333,
     "wins": 12,
     "losses": 15,
     "shutouts": 3,
     "goals_against": 64,
-    "gaa": 2.46,
-    "shots_against": 796,
-    "saves": 732,
-    "save_pct": 91.96
+    "gaa": 2.4,
+    "shots_against": 806,
+    "saves": 742,
+    "save_pct": 92.06
   },
   {
     "league": "DEL",
@@ -198,15 +198,15 @@
     "nation": "GER",
     "position": "T",
     "games": 24,
-    "minutes": 1351.8666666666666,
+    "minutes": 1391.8666666666666,
     "wins": 12,
     "losses": 11,
     "shutouts": 0,
-    "goals_against": 69,
-    "gaa": 3.06,
-    "shots_against": 700,
-    "saves": 631,
-    "save_pct": 90.14
+    "goals_against": 70,
+    "gaa": 3.02,
+    "shots_against": 716,
+    "saves": 646,
+    "save_pct": 90.22
   },
   {
     "league": "DEL",
