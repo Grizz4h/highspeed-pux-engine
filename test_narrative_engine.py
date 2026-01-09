@@ -6,8 +6,9 @@ Test script for narrative_engine.py
 from narrative_engine import (
     form_score,
     classify_narrative,
-    pick_template,
     build_narratives_for_matchday,
+    NarrativeMemory,
+    generate_line1,
 )
 
 
@@ -97,27 +98,55 @@ def test_classify_narrative():
     print("✅ LOW_SCORING classification logic validated (in priority chain)")
 
 
-def test_pick_template():
-    """Test deterministic template picking."""
-    template1 = pick_template("SO_DRAMA", "saison-01-01-TeamA-TeamB-2-1")
-    template2 = pick_template("SO_DRAMA", "saison-01-01-TeamA-TeamB-2-1")
-    assert template1 == template2, "Same seed should produce same template"
-    print("✅ Deterministic template picking passed")
+def test_generate_line1():
+    """Test line1 generation with compositional structure."""
+    match = {
+        "home": "TeamA",
+        "away": "TeamB",
+        "g_home": 4,
+        "g_away": 2,
+        "overtime": False,
+        "shootout": False
+    }
     
-    # Different seeds should pick from same pool (at least 1 variant)
-    template3 = pick_template("SO_DRAMA", "saison-01-02-TeamA-TeamB-2-1")
-    # Could be same or different - we just check it's from the right type
-    assert "{Winner}" in template3 and "{Loser}" in template3
-    print("✅ Template format validation passed")
+    ctx = {
+        "season": 1,
+        "spieltag": 1,
+        "home_last5": ["W", "W", "L"],
+        "away_last5": ["L", "L", "W"]
+    }
+    
+    memory = NarrativeMemory()
+    used_openers = set()
+    used_adjectives = set()
+    
+    line1 = generate_line1(match, ctx, memory, used_openers, used_adjectives)
+    
+    # Verify it's a string
+    assert isinstance(line1, str), "Line1 should be a string"
+    assert len(line1) > 0, "Line1 should not be empty"
+    assert len(line1) <= 110, "Line1 should not exceed 110 chars"
+    
+    # Check determinism
+    memory2 = NarrativeMemory()
+    used_openers2 = set()
+    used_adjectives2 = set()
+    line1_again = generate_line1(match, ctx, memory2, used_openers2, used_adjectives2)
+    assert line1 == line1_again, "Same input should produce same output"
+    
+    print("✅ Line1 generation and determinism passed")
 
 
+def test_build_narratives_for_matchday():
+    """Test full narrative building pipeline."""
+    
 def test_build_narratives_for_matchday():
     """Test full narrative building pipeline."""
     
     spieltag_json = {
         "saison": 1,
         "spieltag": 1,
-        "results": [
+        "games": [
             {
                 "home": "Team A",
                 "away": "Team B",
@@ -125,32 +154,28 @@ def test_build_narratives_for_matchday():
                 "g_away": 1,
                 "overtime": False,
                 "shootout": False,
-                "conference": "Nord",
             },
             {
                 "home": "Team C",
                 "away": "Team D",
                 "g_home": 2,
-                "g_away": 2,
+                "g_away": 1,
                 "overtime": True,
                 "shootout": False,
-                "conference": "Sued",
             },
         ],
     }
     
     latest_json = {
-        "tabelle_nord": [
-            {"Team": "Team A", "last5": ["W", "W", "L", "W", "W"]},
-            {"Team": "Team B", "last5": ["L", "L", "L", "L", "L"]},
-        ],
-        "tabelle_sued": [
-            {"Team": "Team C", "last5": ["W", "W", "W", "W", "W"]},
-            {"Team": "Team D", "last5": ["W", "W", "W", "W", "W"]},
-        ],
+        "teams": {
+            "Team A": {"last5": ["W", "W", "L", "W", "W"]},
+            "Team B": {"last5": ["L", "L", "L", "L", "L"]},
+            "Team C": {"last5": ["W", "W", "W", "W", "W"]},
+            "Team D": {"last5": ["W", "W", "W", "W", "W"]},
+        },
     }
     
-    narratives = build_narratives_for_matchday(spieltag_json, latest_json, season=1)
+    narratives = build_narratives_for_matchday(spieltag_json, latest_json, season=1, spieltag=1)
     
     # Check structure
     assert "Team A-Team B" in narratives
@@ -159,24 +184,21 @@ def test_build_narratives_for_matchday():
     # Check Team A-Team B narrative
     na = narratives["Team A-Team B"]
     assert "line1" in na
-    assert "type" in na
-    assert "meta" in na
-    assert len(na["line1"]) <= 75, f"line1 too long: {len(na['line1'])} chars"
-    # Team A has form +4 (WWLWW), Team B has form -5 (LLLLL)
-    # Match: 3-1 (margin 2), so not DOMINATION (>=5) or STATEMENT (>=3, but this is margin=2)
-    # Actually margin >= 3 triggers STATEMENT_WIN, but this is margin=2
-    # So it should be one of the other categories
-    print(f"  Team A-Team B type: {na['type']} (margin: {na['meta']['margin']})")
-    # Let's just verify it's a valid type
-    assert na["type"] in ["SO_DRAMA", "OT_DRAMA", "SHUTOUT", "DOMINATION", "STATEMENT_WIN", "UPSET", "GRIND_WIN", "TRACK_MEET", "LOW_SCORING", "FALLBACK"]
-    print(f"  Team A-Team B: {na['line1']} ({na['type']})")
+    assert "line2" in na
+    assert len(na["line1"]) > 0, "line1 should not be empty"
+    assert len(na["line1"]) <= 110, f"line1 too long: {len(na['line1'])} chars"
+    assert na["line2"] == "", "line2 should be empty per spec"
+    
+    print(f"  Team A-Team B: {na['line1']}")
     
     # Check Team C-Team D narrative
     nd = narratives["Team C-Team D"]
     assert "line1" in nd
-    assert len(nd["line1"]) <= 75, f"line1 too long: {len(nd['line1'])} chars"
-    assert nd["type"] == "OT_DRAMA"  # Overtime game
-    print(f"  Team C-Team D: {nd['line1']} ({nd['type']})")
+    assert "line2" in nd
+    assert len(nd["line1"]) > 0, "line1 should not be empty"
+    assert len(nd["line1"]) <= 110, f"line1 too long: {len(nd['line1'])} chars"
+    
+    print(f"  Team C-Team D: {nd['line1']}")
     
     print("✅ build_narratives_for_matchday passed")
 
@@ -184,6 +206,6 @@ def test_build_narratives_for_matchday():
 if __name__ == "__main__":
     test_form_score()
     test_classify_narrative()
-    test_pick_template()
+    test_generate_line1()
     test_build_narratives_for_matchday()
     print("\n✅ All tests passed!")

@@ -1,191 +1,232 @@
 """
 narrative_engine.py
 
-Advanced deterministic narrative generation with anti-repeat memory.
-- Uses token pools and template families for high variety
-- Implements phrase memory to avoid recent repeats
-- Generates one-liner narratives (≤78 chars) for match graphics
+Advanced compositional narrative generation with strong anti-repeat memory.
+- Uses compositional sentence structure (PART A + B + C)
+- Large token pools for combinatorial variety
+- Strong anti-repeat system with narrative_memory.json
+- Deterministic output (same input → same text)
+- Generates longer, more varied narratives (70–110 chars)
 """
 
 import json
 import hashlib
 import random
 from pathlib import Path
-from typing import Dict, List, Any, Optional, Tuple
-from dataclasses import dataclass
+from typing import Dict, List, Any, Optional, Tuple, Set
+from dataclasses import dataclass, field
 
 
 # ============================================================
-# TOKEN POOLS
+# TOKEN POOLS - MASSIVELY EXPANDED
 # ============================================================
-VERBS_WIN = ["setzt sich durch", "holt den Sieg", "nimmt die Punkte", "zieht das Spiel", "entscheidet die Partie", "macht den Unterschied", "bringt's ins Ziel", "dreht das Ding"]
-VERBS_DRAMA = ["entscheidet es", "macht Schluss", "setzt den Stich", "zieht's auf seine Seite", "behält die Nerven", "packt es"]
-ADJ_TIGHT = ["knapp", "hauchdünn", "mit Minimalvorsprung", "auf Messers Schneide", "in einer engen Kiste"]
-ADJ_CLEAR = ["souverän", "deutlich", "ohne Wackler", "kontrolliert", "mit Ansage", "klar"]
-ADJ_DOM = ["dominant", "überlegen", "nach Belieben", "gnadenlos", "eine Klasse zu groß"]
-NOUN_DUEL = ["Duell", "Partie", "Match", "Spiel", "Abend", "Aufeinandertreffen"]
-ENDINGS = ["— Punkt.", "— fertig.", "— ohne Diskussion.", "— und zwar jetzt.", "— sauber."]
-STYLE_BITS = ["spät", "früh", "konsequent", "abgezockt", "eiskalt", "cool", "ruhig", "präzise"]
 
-# Capitalized versions
-ADJ_TIGHT_CAP = [w.capitalize() for w in ADJ_TIGHT]
-ADJ_CLEAR_CAP = [w.capitalize() for w in ADJ_CLEAR]
-ADJ_DOM_CAP = [w.capitalize() for w in ADJ_DOM]
+# OPENERS (Context setters)
+OPENERS_NEUTRAL = [
+    "In einem intensiven Duell",
+    "Nach einem umkämpften Spiel",
+    "In einer Partie mit klaren Phasen",
+    "Nach 60 umkämpften Minuten",
+    "In einem Spiel mit wechselnden Momenten",
+    "In einer taktisch geprägten Begegnung",
+    "Nach einem phasenweise offenen Schlagabtausch",
+    "In einem ausgeglichenen Kräftemessen",
+    "Nach intensiven 60 Minuten",
+    "In einer Partie mit beiden Seiten",
+    "Nach einem konzentrierten Auftritt",
+    "In einem disziplinierten Spiel",
+]
+
+OPENERS_TIGHT = [
+    "In einer engen Angelegenheit",
+    "In einem Spiel auf Messers Schneide",
+    "Nach einem Duell mit minimalen Abständen",
+    "In einer Partie, die lange offen blieb",
+    "Nach einem nervenaufreibenden Verlauf",
+    "In einem Spiel mit knappen Entscheidungen",
+    "Nach einem ständigen Hin und Her",
+    "In einer ausgeglichenen Partie",
+]
+
+OPENERS_DOM = [
+    "Von Beginn an",
+    "Über weite Strecken",
+    "Mit klarer Kontrolle",
+    "Mit frühem Zugriff auf das Spiel",
+    "Nach souveränem Start",
+    "Mit durchgängiger Spielkontrolle",
+    "Von der ersten Minute an",
+]
+
+OPENERS_DRAMA = [
+    "Nach dramatischem Verlauf",
+    "In einer spannungsgeladenen Partie",
+    "Nach nervenaufreibenden Phasen",
+    "In einem packenden Duell",
+]
+
+OPENERS_UPSET = [
+    "Gegen die Erwartung",
+    "Überraschend",
+    "In einer unerwarteten Wendung",
+    "Gegen den Trend",
+]
+
+# VERBS (Core action)
+VERBS_WIN = [
+    "setzt sich durch",
+    "holt sich den Sieg",
+    "nimmt die Punkte mit",
+    "entscheidet die Partie für sich",
+    "bringt das Spiel auf seine Seite",
+    "zieht das Match an sich",
+    "macht am Ende den Unterschied",
+    "sichert sich die Punkte",
+    "holt den Erfolg",
+    "gewinnt das Duell",
+    "triumphiert",
+    "setzt sich am Ende durch",
+]
+
+VERBS_DRAMA = [
+    "entscheidet es",
+    "macht Schluss",
+    "setzt den entscheidenden Stich",
+    "zieht es auf seine Seite",
+    "behält die Nerven",
+    "packt es",
+    "beendet das Drama",
+    "setzt das Ausrufezeichen",
+]
+
+# ADJECTIVES (Manner/Style)
+ADJ_TIGHT = [
+    "knapp",
+    "hauchdünn",
+    "mit Minimalvorsprung",
+    "ohne großen Spielraum",
+    "in einer engen Entscheidung",
+    "mit minimalem Abstand",
+    "nach hartem Kampf",
+    "in einem engen Finish",
+]
+
+ADJ_CLEAR = [
+    "souverän",
+    "deutlich",
+    "kontrolliert",
+    "ohne größere Probleme",
+    "mit klarer Linie",
+    "überzeugend",
+    "sicher",
+    "solide",
+    "routiniert",
+]
+
+ADJ_DOM = [
+    "dominant",
+    "überlegen",
+    "eine Klasse zu groß",
+    "über weite Strecken spielbestimmend",
+    "mit klarer Überlegenheit",
+    "nach Belieben",
+    "ohne Gegenwehr",
+    "mit eindrucksvoller Kontrolle",
+]
+
+# QUALIFIERS (Emphasis/Interpretation)
+QUALIFIERS_PATIENCE = [
+    "und belohnt sich für einen stabilen Auftritt",
+    "wobei die Entscheidung erst spät fällt",
+    "nachdem das Spiel lange offen blieb",
+    "und nutzt die entscheidenden Momente",
+    "nach geduldiger Arbeit",
+    "und bleibt in kritischen Phasen konzentriert",
+]
+
+QUALIFIERS_CONTROL = [
+    "und lässt dem Gegner kaum Zugriff",
+    "ohne dabei ins Wanken zu geraten",
+    "und kontrolliert das Spiel über die gesamte Distanz",
+    "mit durchgängiger Spielkontrolle",
+    "ohne ernsthafte Gegenwehr zuzulassen",
+]
+
+QUALIFIERS_STATEMENT = [
+    "und bestätigt damit die eigene Linie",
+    "und setzt damit ein klares Zeichen",
+    "und unterstreicht die aktuelle Form",
+    "und bestätigt die Ambitionen",
+    "und sendet eine deutliche Botschaft",
+]
+
+QUALIFIERS_NEUTRAL = [
+    "und sichert sich wichtige Punkte",
+    "und hält die eigene Serie",
+    "und nimmt den Schwung mit",
+    "und bleibt auf Kurs",
+]
+
+# TEMPORAL BITS
+TEMPORAL_BITS = [
+    "am Ende",
+    "im letzten Drittel",
+    "nach geduldiger Arbeit",
+    "nach frühem Vorteil",
+    "mit zunehmender Spielkontrolle",
+    "in der Schlussphase",
+    "im entscheidenden Moment",
+]
+
+# SPECIAL PURPOSE PHRASES
+SO_PHRASES = [
+    "entscheidet das Penaltyschießen",
+    "behält die Nerven im Shootout",
+    "setzt den Schlusspunkt im SO",
+    "macht es im Penalty-Drama",
+    "trifft im entscheidenden Moment beim SO",
+]
+
+OT_PHRASES = [
+    "entscheidet es in der Verlängerung",
+    "macht es in der OT",
+    "setzt den Stich in der Overtime",
+    "trifft in der Verlängerung",
+    "beendet es in der OT",
+]
+
+SHUTOUT_PHRASES = [
+    "lässt {Loser} ohne Tor stehen",
+    "hält {Loser} aus dem Spiel",
+    "verteidigt sauber — Shutout",
+    "lässt nichts zu gegen {Loser}",
+]
 
 
 # ============================================================
-# TEMPLATE FAMILIES
-# ============================================================
-TEMPLATE_FAMILIES: Dict[str, List[str]] = {
-    "SO_DRAMA": [
-        "{Winner} {VERB_DRAMA} im Shootout.",
-        "{Winner} entscheidet das Penaltyschießen {ADJ_TIGHT}.",
-        "Shootout-Drama: {Winner} {VERB_DRAMA}.",
-        "{Winner} trifft im SO — {ADJ_TIGHT}.",
-        "Penalty-Show: {Winner} {VERB_DRAMA} {ADJ_TIGHT}.",
-        "{ADJ_TIGHT_cap} Entscheidung: {Winner} im Shootout.",
-        "{Winner} behält {STYLE_BITS} die Nerven im SO.",
-        "{Winner} {VERB_DRAMA} — Shootout-Sieg.",
-        "Spannung pur: {Winner} im Penaltyschießen.",
-        "{Winner} setzt den Schlusspunkt im SO.",
-    ],
-    "OT_DRAMA": [
-        "{Winner} {VERB_DRAMA} in der Verlängerung.",
-        "Overtime-Thriller: {Winner} {VERB_WIN}.",
-        "{Winner} treffsicher in der OT {ADJ_TIGHT}.",
-        "Verlängerung bringt Entscheidung: {Winner}.",
-        "{Winner} {VERB_DRAMA} — OT-Sieg.",
-        "{ADJ_TIGHT_cap} OT: {Winner} {VERB_WIN}.",
-        "{Winner} packt es in der Verlängerung.",
-        "Drama in der OT: {Winner} {VERB_DRAMA}.",
-        "{Winner} behält Nerven in der Verlängerung.",
-        "{Winner} setzt Stich in der OT.",
-    ],
-    "SHUTOUT": [
-        "{Winner} shutout {Loser} {ADJ_CLEAR}.",
-        "{Winner} lässt {Loser} ohne Tor stehen.",
-        "Defensive Meisterleistung: {Winner} shutout.",
-        "{Winner} hält {Loser} {STYLE_BITS} aus dem Spiel.",
-        "Torhüter-Show: {Winner} shutout gegen {Loser}.",
-        "{ADJ_CLEAR_cap} Shutout: {Winner} gegen {Loser}.",
-        "{Winner} {VERB_WIN} ohne Gegentor.",
-        "{Winner} verteidigt {ADJ_CLEAR} — Shutout.",
-        "{Loser} findet kein Mittel gegen {Winner}.",
-        "{Winner} {VERB_WIN} — sauberer Shutout.",
-    ],
-    "DOMINATION": [
-        "{Winner} ist {ADJ_DOM} und {VERB_WIN}.",
-        "Einseitiges {NOUN_DUEL}: {Winner} {VERB_WIN} {ADJ_CLEAR}.",
-        "{Winner} {VERB_WIN} — {ADJ_DOM}.",
-        "{ADJ_DOM_cap} Leistung: {Winner} {VERB_WIN}.",
-        "{Winner} dominiert {NOUN_DUEL} {ADJ_CLEAR}.",
-        "{Loser} hat keine Chance gegen {Winner}.",
-        "{Winner} {VERB_WIN} {ADJ_DOM}.",
-        "Überlegenheit pur: {Winner} gegen {Loser}.",
-        "{Winner} zeigt {ADJ_DOM} Spiel.",
-        "{Winner} {VERB_WIN} — gnadenlos.",
-    ],
-    "STATEMENT_WIN": [
-        "{Winner} {VERB_WIN} {ADJ_CLEAR}.",
-        "{Winner} setzt Ausrufezeichen — {ADJ_CLEAR}.",
-        "Statement-Sieg: {Winner} {VERB_WIN}.",
-        "{Winner} {VERB_WIN} {ADJ_CLEAR} — {ADJ_CLEAR_2}.",
-        "{ADJ_CLEAR_cap} Sieg: {Winner} gegen {Loser}.",
-        "{Winner} beeindruckt {ADJ_CLEAR}.",
-        "{Winner} {VERB_WIN} ohne Wenn und Aber.",
-        "{Winner} gibt {ADJ_CLEAR} Antwort.",
-        "{Winner} {VERB_WIN} — kontrolliert.",
-        "{Winner} setzt Zeichen {ADJ_CLEAR}.",
-    ],
-    "UPSET": [
-        "{Winner} überrascht {Loser} {ADJ_TIGHT}.",
-        "Sensation: {Winner} {VERB_WIN} gegen {Loser}.",
-        "{Winner} stoppt Formhoch von {Loser}.",
-        "Upset pur: {Winner} {VERB_DRAMA}.",
-        "{Winner} zieht Überraschung — {ADJ_TIGHT}.",
-        "{ADJ_TIGHT_cap} Upset: {Winner} gegen {Loser}.",
-        "{Winner} {VERB_WIN} — unerwartet.",
-        "{Loser} stolpert über {Winner}.",
-        "{Winner} nutzt Schwäche von {Loser}.",
-        "{Winner} {VERB_DRAMA} — Upset.",
-    ],
-    "GRIND_WIN": [
-        "{Winner} {VERB_WIN} {ADJ_TIGHT}.",
-        "{ADJ_TIGHT_cap} {NOUN_DUEL}: {Winner} {VERB_WIN}.",
-        "{Winner} bleibt stabil und {VERB_WIN} {ADJ_TIGHT}.",
-        "{Winner} {VERB_DRAMA} — knapp.",
-        "Harter Kampf: {Winner} {VERB_WIN} {ADJ_TIGHT}.",
-        "{Winner} setzt sich {ADJ_TIGHT} durch.",
-        "{ADJ_TIGHT_cap} Entscheidung: {Winner} {VERB_WIN}.",
-        "{Winner} behält Nerven {ADJ_TIGHT}.",
-        "{Winner} {VERB_WIN} — hauchdünn.",
-        "{Winner} packt es {ADJ_TIGHT}.",
-    ],
-    "TRACK_MEET": [
-        "{Winner} und {Loser} liefern Tor-Feuerwerk.",
-        "Offensive Schlacht: {Winner} {VERB_WIN}.",
-        "{Winner} gewinnt Tor-Schlacht {ADJ_CLEAR}.",
-        "Spektakel pur: {Winner} gegen {Loser}.",
-        "{Winner} {VERB_WIN} in hohem Score.",
-        "Tor-Rekord: {Winner} {VERB_WIN}.",
-        "{Winner} und {Loser} sorgen für Spektakel.",
-        "{Winner} {VERB_WIN} — torreich.",
-        "Offensive Show: {Winner} triumphiert.",
-        "{Winner} {VERB_WIN} in Tor-Orgie.",
-    ],
-    "LOW_SCORING": [
-        "{Winner} {VERB_WIN} in zähem {NOUN_DUEL}.",
-        "Defensive Schlacht: {Winner} {VERB_DRAMA}.",
-        "{Winner} behält Nervenkostüm {ADJ_TIGHT}.",
-        "Zähes Spiel: {Winner} {VERB_WIN}.",
-        "{Winner} {VERB_WIN} — defensiv stark.",
-        "{ADJ_TIGHT_cap} Duell: {Winner} {VERB_WIN}.",
-        "{Winner} setzt sich in defensivem {NOUN_DUEL} durch.",
-        "{Winner} {VERB_DRAMA} — zäh.",
-        "Nervenkrieg: {Winner} {VERB_WIN}.",
-        "{Winner} {VERB_WIN} — kontrolliert defensiv.",
-    ],
-    "FALLBACK": [
-        "{Winner} {VERB_WIN} gegen {Loser}.",
-        "{Winner} schlägt {Loser} {ADJ_CLEAR}.",
-        "{Winner} {VERB_WIN} — solide.",
-        "{ADJ_CLEAR_cap} Sieg: {Winner}.",
-        "{Winner} triumphiert über {Loser}.",
-        "{Winner} {VERB_WIN} — verdient.",
-        "{Winner} setzt sich gegen {Loser} durch.",
-        "{Winner} {VERB_WIN} — überzeugend.",
-        "{Winner} bezwingt {Loser} {ADJ_CLEAR}.",
-        "{Winner} {VERB_WIN} — stark.",
-    ],
-}
-
-
-# ============================================================
-# MEMORY MANAGEMENT
+# MEMORY MANAGEMENT (Enhanced)
 # ============================================================
 @dataclass
 class NarrativeMemory:
-    global_recent: List[str] = None
-    by_pairing: Dict[str, List[str]] = None
-    by_type: Dict[str, List[str]] = None
-
-    def __post_init__(self):
-        if self.global_recent is None:
-            self.global_recent = []
-        if self.by_pairing is None:
-            self.by_pairing = {}
-        if self.by_type is None:
-            self.by_type = {}
-
+    """Enhanced memory with stronger anti-repeat."""
+    global_recent: List[str] = field(default_factory=list)
+    by_pairing: Dict[str, List[str]] = field(default_factory=dict)
+    by_type: Dict[str, List[str]] = field(default_factory=dict)
+    
     @classmethod
     def load(cls, path: Path) -> 'NarrativeMemory':
         if path.exists():
             with open(path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-            return cls(**data)
+            return cls(
+                global_recent=data.get('global_recent', []),
+                by_pairing=data.get('by_pairing', {}),
+                by_type=data.get('by_type', {})
+            )
         return cls()
 
     def save(self, path: Path):
+        path.parent.mkdir(parents=True, exist_ok=True)
         with open(path, 'w', encoding='utf-8') as f:
             json.dump({
                 'global_recent': self.global_recent,
@@ -194,15 +235,16 @@ class NarrativeMemory:
             }, f, ensure_ascii=False, indent=2)
 
     def add_used(self, phrase_hash: str, pair_key: str, ntype: str):
+        """Add hash to all tracking buckets."""
         self.global_recent.append(phrase_hash)
-        if len(self.global_recent) > 120:
-            self.global_recent = self.global_recent[-120:]
+        if len(self.global_recent) > 150:
+            self.global_recent = self.global_recent[-150:]
 
         if pair_key not in self.by_pairing:
             self.by_pairing[pair_key] = []
         self.by_pairing[pair_key].append(phrase_hash)
-        if len(self.by_pairing[pair_key]) > 20:
-            self.by_pairing[pair_key] = self.by_pairing[pair_key][-20:]
+        if len(self.by_pairing[pair_key]) > 25:
+            self.by_pairing[pair_key] = self.by_pairing[pair_key][-25:]
 
         if ntype not in self.by_type:
             self.by_type[ntype] = []
@@ -210,20 +252,24 @@ class NarrativeMemory:
         if len(self.by_type[ntype]) > 40:
             self.by_type[ntype] = self.by_type[ntype][-40:]
 
-    def is_used(self, phrase_hash: str, pair_key: str, ntype: str) -> bool:
-        if phrase_hash in self.global_recent:
+    def is_recently_used(self, phrase_hash: str, pair_key: str) -> bool:
+        """Check if hash was used recently in global or this pairing."""
+        if phrase_hash in self.global_recent[-150:]:
             return True
         if pair_key in self.by_pairing and phrase_hash in self.by_pairing[pair_key]:
             return True
-        if ntype in self.by_type and phrase_hash in self.by_type[ntype]:
-            return True
         return False
+
+    def is_globally_recent(self, phrase_hash: str) -> bool:
+        """Check if hash is in recent global memory (last 80)."""
+        return phrase_hash in self.global_recent[-80:]
 
 
 # ============================================================
 # FORM SCORING
 # ============================================================
 def form_score(last5: List[str]) -> int:
+    """Calculate form score from last 5 results."""
     score = 0
     for result in last5:
         if result and len(result) > 0:
@@ -242,13 +288,17 @@ def classify_narrative(match: Dict[str, Any], home_form: int, away_form: int) ->
     """
     Classify match narrative type based on priorities.
     
-    Args:
-        match: Dict with home, away, g_home, g_away, overtime, shootout
-        home_form: Form score of home team
-        away_form: Form score of away team
-    
-    Returns:
-        str: Narrative type (SO_DRAMA, OT_DRAMA, SHUTOUT, etc.)
+    Priority order:
+    1. SO_DRAMA (shootout)
+    2. OT_DRAMA (overtime)
+    3. SHUTOUT (winner keeps clean sheet)
+    4. DOMINATION (margin >= 5)
+    5. UPSET (margin >= 3 and winner has worse form by 3+)
+    6. STATEMENT_WIN (margin >= 3)
+    7. GRIND_WIN (margin == 1)
+    8. TRACK_MEET (total goals >= 7)
+    9. LOW_SCORING (total goals <= 3)
+    10. FALLBACK
     """
     g_home = match.get("g_home", 0)
     g_away = match.get("g_away", 0)
@@ -300,131 +350,292 @@ def classify_narrative(match: Dict[str, Any], home_form: int, away_form: int) ->
 
 
 # ============================================================
-# TEMPLATE EXPANSION
+# COMPOSITIONAL SENTENCE GENERATION
 # ============================================================
-def expand_template(template: str, match_ctx: Dict[str, Any]) -> str:
-    """Expand template with tokens and context."""
-    text = template
-
-    # Replace context variables
-    for key, value in match_ctx.items():
-        text = text.replace(f"{{{key}}}", str(value))
-
-    # Replace token pools
-    replacements = {
-        "{VERB_WIN}": random.choice(VERBS_WIN),
-        "{VERB_DRAMA}": random.choice(VERBS_DRAMA),
-        "{ADJ_TIGHT}": random.choice(ADJ_TIGHT),
-        "{ADJ_TIGHT_cap}": random.choice(ADJ_TIGHT_CAP),
-        "{ADJ_CLEAR}": random.choice(ADJ_CLEAR),
-        "{ADJ_CLEAR_cap}": random.choice(ADJ_CLEAR_CAP),
-        "{ADJ_CLEAR_2}": random.choice(ADJ_CLEAR),
-        "{ADJ_DOM}": random.choice(ADJ_DOM),
-        "{ADJ_DOM_cap}": random.choice(ADJ_DOM_CAP),
-        "{NOUN_DUEL}": random.choice(NOUN_DUEL),
-        "{STYLE_BITS}": random.choice(STYLE_BITS),
-    }
-
-    for token, replacement in replacements.items():
-        text = text.replace(token, replacement)
-
-    # Truncate to 78 chars
-    if len(text) > 78:
-        text = text[:75] + "…"
-
-    return text
+def compose_sentence(parts: List[str], punctuation: str = ".") -> str:
+    """Compose sentence from parts with proper punctuation."""
+    # Filter empty parts
+    parts = [p.strip() for p in parts if p and p.strip()]
+    
+    if not parts:
+        return ""
+    
+    if len(parts) == 1:
+        return parts[0] + punctuation
+    
+    # Multi-part composition
+    # Choose structure based on number of parts
+    if len(parts) == 2:
+        # "{PART_A}, {PART_B}."
+        return f"{parts[0]}, {parts[1]}{punctuation}"
+    elif len(parts) == 3:
+        # "{PART_A}, {PART_B} – {PART_C}."
+        return f"{parts[0]}, {parts[1]} – {parts[2]}{punctuation}"
+    else:
+        # Fallback: comma-separate
+        return ", ".join(parts) + punctuation
 
 
-def generate_candidates(ntype: str, match_ctx: Dict[str, Any], count: int = 50) -> List[Tuple[str, str]]:
-    """Generate candidate phrases with hashes."""
+def generate_candidates_compositional(
+    ntype: str,
+    winner: str,
+    loser: str,
+    seed: str,
+    count: int = 100
+) -> List[Tuple[str, str]]:
+    """
+    Generate candidate sentences using compositional structure.
+    
+    Each candidate is built from 2-3 parts:
+    - PART A (optional): Context opener
+    - PART B (required): Core action/result
+    - PART C (optional): Qualifier/interpretation
+    
+    Returns:
+        List of (text, hash) tuples
+    """
+    # Seed random for deterministic generation
+    rng = random.Random(seed)
     candidates = []
-    templates = TEMPLATE_FAMILIES.get(ntype, TEMPLATE_FAMILIES["FALLBACK"])
-
+    
+    # Select token pools based on narrative type
+    if ntype == "SO_DRAMA":
+        openers = OPENERS_DRAMA + OPENERS_TIGHT + [""]
+        core_templates = [f"{{Winner}} {phrase}" for phrase in SO_PHRASES]
+        qualifiers = [""] + QUALIFIERS_PATIENCE + [f"{adj} Entscheidung" for adj in ADJ_TIGHT]
+        
+    elif ntype == "OT_DRAMA":
+        openers = OPENERS_DRAMA + OPENERS_TIGHT + [""]
+        core_templates = [f"{{Winner}} {phrase}" for phrase in OT_PHRASES]
+        qualifiers = [""] + QUALIFIERS_PATIENCE + [f"{adj} Drama" for adj in ADJ_TIGHT]
+        
+    elif ntype == "SHUTOUT":
+        openers = OPENERS_DOM + OPENERS_NEUTRAL + [""]
+        core_templates = [f"{{Winner}} {phrase}" for phrase in SHUTOUT_PHRASES]
+        qualifiers = [""] + QUALIFIERS_CONTROL + ["ohne Gegentor", "saubere Defensive"]
+        
+    elif ntype == "DOMINATION":
+        openers = OPENERS_DOM + [""]
+        core_templates = [f"{{Winner}} {verb} {adj}" for verb in VERBS_WIN for adj in ADJ_DOM]
+        qualifiers = [""] + QUALIFIERS_CONTROL + QUALIFIERS_STATEMENT
+        
+    elif ntype == "STATEMENT_WIN":
+        openers = OPENERS_DOM + OPENERS_NEUTRAL + [""]
+        core_templates = [f"{{Winner}} {verb} {adj}" for verb in VERBS_WIN for adj in ADJ_CLEAR]
+        qualifiers = [""] + QUALIFIERS_STATEMENT + QUALIFIERS_CONTROL
+        
+    elif ntype == "UPSET":
+        openers = OPENERS_UPSET + OPENERS_NEUTRAL
+        core_templates = [f"{{Winner}} {verb} gegen {{Loser}}" for verb in VERBS_WIN]
+        qualifiers = [""] + ["und überrascht"] + QUALIFIERS_STATEMENT
+        
+    elif ntype == "GRIND_WIN":
+        openers = OPENERS_TIGHT + OPENERS_NEUTRAL + [""]
+        core_templates = [f"{{Winner}} {verb} {adj}" for verb in VERBS_WIN for adj in ADJ_TIGHT]
+        qualifiers = [""] + QUALIFIERS_PATIENCE
+        
+    elif ntype == "TRACK_MEET":
+        openers = ["Nach offenem Schlagabtausch", "In einer Torschlacht"] + OPENERS_NEUTRAL + [""]
+        core_templates = [f"{{Winner}} {verb} {adj}" for verb in VERBS_WIN for adj in ADJ_CLEAR + ADJ_TIGHT]
+        qualifiers = [""] + ["in einem Spektakel", "nach Torfestival"]
+        
+    elif ntype == "LOW_SCORING":
+        openers = ["In einer zähen Partie", "Nach defensivem Kampf"] + OPENERS_TIGHT + [""]
+        core_templates = [f"{{Winner}} {verb} {adj}" for verb in VERBS_WIN for adj in ADJ_TIGHT]
+        qualifiers = [""] + QUALIFIERS_PATIENCE + ["defensiv stark"]
+        
+    else:  # FALLBACK
+        openers = OPENERS_NEUTRAL + [""]
+        core_templates = [f"{{Winner}} {verb} {adj}" for verb in VERBS_WIN for adj in ADJ_CLEAR]
+        qualifiers = [""] + QUALIFIERS_NEUTRAL
+    
+    # Generate candidates
     for _ in range(count):
-        template = random.choice(templates)
-        text = expand_template(template, match_ctx)
+        parts = []
+        
+        # PART A (opener) - 50% chance to include (increased from 40%)
+        if rng.random() < 0.5:
+            opener = rng.choice(openers)
+            if opener:
+                parts.append(opener)
+        
+        # PART B (core) - always included
+        core = rng.choice(core_templates)
+        core = core.replace("{Winner}", winner).replace("{Loser}", loser)
+        parts.append(core)
+        
+        # PART C (qualifier) - 60% chance to include (increased from 50%)
+        if rng.random() < 0.6:
+            qualifier = rng.choice(qualifiers)
+            if qualifier:
+                parts.append(qualifier)
+        
+        # Optional: add temporal bit (15% chance, reduced from 20%)
+        if rng.random() < 0.15 and TEMPORAL_BITS:
+            temporal = rng.choice(TEMPORAL_BITS)
+            # Insert before last part if exists
+            if len(parts) > 1:
+                parts.insert(-1, temporal)
+            else:
+                parts.append(temporal)
+        
+        # Compose sentence
+        text = compose_sentence(parts)
+        
+        # Truncate if too long
+        if len(text) > 110:
+            # Find word boundary
+            text = text[:107]
+            last_space = text.rfind(' ')
+            if last_space > 70:
+                text = text[:last_space] + "…"
+            else:
+                text = text + "…"
+        
+        # Generate hash
         phrase_hash = hashlib.sha1(text.encode('utf-8')).hexdigest()[:12]
         candidates.append((text, phrase_hash))
-
+    
     return candidates
 
 
-def select_best_candidate(candidates: List[Tuple[str, str]], memory: NarrativeMemory, pair_key: str, ntype: str, used_openers: set, seed: str) -> Tuple[str, str]:
-    """Select best candidate avoiding repeats."""
-    # Filter out used
-    available = [(text, h) for text, h in candidates if not memory.is_used(h, pair_key, ntype)]
-
+def select_best_candidate(
+    candidates: List[Tuple[str, str]],
+    memory: NarrativeMemory,
+    pair_key: str,
+    ntype: str,
+    used_openers: Set[str],
+    used_adjectives: Set[str],
+    seed: str
+) -> Tuple[str, str]:
+    """
+    Select best candidate with strong anti-repeat and deterministic scoring.
+    
+    Selection strategy:
+    1. Filter out recently used (global + pairing)
+    2. If empty, allow type repeats
+    3. If still empty, allow older global repeats (>80)
+    4. Score remaining candidates
+    5. Pick lowest (score, hash) deterministically
+    """
+    # Phase 1: Strict filtering
+    available = [
+        (text, h) for text, h in candidates 
+        if not memory.is_recently_used(h, pair_key)
+    ]
+    
+    # Phase 2: Relax if needed
     if not available:
-        # Relax: allow type repeats
-        available = [(text, h) for text, h in candidates if not memory.is_used(h, pair_key, "") and not memory.is_used(h, "", "")]
-
+        available = [
+            (text, h) for text, h in candidates 
+            if not memory.is_globally_recent(h)
+        ]
+    
+    # Phase 3: Allow anything (fallback)
     if not available:
-        # Relax more: allow global older than 60
-        recent_hashes = set(memory.global_recent[-60:])
-        available = [(text, h) for text, h in candidates if h not in recent_hashes]
-
-    if not available:
-        # Allow anything
         available = candidates
-
+    
     # Score candidates
     scored = []
     for text, h in available:
-        score = len(text)  # Shorter better
-        if any(ending in text for ending in ENDINGS):
-            score += 10  # Penalize endings
-        opener = text.lower().split()[0]
+        score = 0.0
+        
+        # Prefer length between 70-100 chars
+        length = len(text)
+        if length < 70:
+            score += (70 - length) * 0.5
+        elif length > 100:
+            score += (length - 100) * 0.5
+        
+        # Penalize same opening word as used in this matchday
+        opener = text.lower().split()[0] if text else ""
         if opener in used_openers:
-            score += 5  # Penalize same opener
+            score += 15.0
+        
+        # Penalize reused adjectives (simple detection)
+        words = text.lower().split()
+        for adj_set in [ADJ_TIGHT, ADJ_CLEAR, ADJ_DOM]:
+            for adj in adj_set:
+                adj_lower = adj.lower()
+                if adj_lower in words and adj_lower in used_adjectives:
+                    score += 10.0
+        
+        # Add hash for deterministic tie-breaking
         scored.append((score, h, text))
-
-    # Deterministic sort
+    
+    # Sort deterministically
     scored.sort(key=lambda x: (x[0], x[1]))
-
-    best_text, best_hash = scored[0][2], scored[0][1]
+    
+    best_score, best_hash, best_text = scored[0]
     return best_text, best_hash
 
 
 # ============================================================
 # MAIN GENERATION
 # ============================================================
-def generate_line1(match: Dict[str, Any], ctx: Dict[str, Any], memory: NarrativeMemory, used_openers: set) -> str:
-    """Generate line1 with anti-repeat."""
+def generate_line1(
+    match: Dict[str, Any],
+    ctx: Dict[str, Any],
+    memory: NarrativeMemory,
+    used_openers: Set[str],
+    used_adjectives: Set[str]
+) -> str:
+    """
+    Generate line1 with compositional structure and anti-repeat.
+    
+    Args:
+        match: Match dict with home, away, g_home, g_away, overtime, shootout
+        ctx: Context dict with season, spieltag, home_last5, away_last5
+        memory: NarrativeMemory instance
+        used_openers: Set of opening words used in this matchday
+        used_adjectives: Set of adjectives used in this matchday
+    
+    Returns:
+        Generated line1 text (70-110 chars)
+    """
     home = match['home']
     away = match['away']
     pair_key = f"{home}-{away}"
 
-    # Classify
+    # Classify narrative type
     home_form = form_score(ctx.get('home_last5', []))
     away_form = form_score(ctx.get('away_last5', []))
     ntype = classify_narrative(match, home_form, away_form)
 
-    # Context
+    # Determine winner/loser
     if match['g_home'] > match['g_away']:
         winner, loser = home, away
-    else:
+    elif match['g_away'] > match['g_home']:
         winner, loser = away, home
+    else:
+        # Tie - shouldn't happen in hockey but handle gracefully
+        winner, loser = home, away
 
-    match_ctx = {
-        'Winner': winner,
-        'Loser': loser,
-        'Home': home,
-        'Away': away,
-    }
+    # Build deterministic seed
+    seed = f"{ctx['season']}-{ctx['spieltag']}-{home}-{away}-{match['g_home']}-{match['g_away']}-{ntype}"
 
-    # Candidates
-    candidates = generate_candidates(ntype, match_ctx)
+    # Generate candidates (more for better variety)
+    candidates = generate_candidates_compositional(ntype, winner, loser, seed, count=150)
 
-    # Select
-    seed = f"{ctx['season']}-{ctx['spieltag']}-{home}-{away}-{match['g_home']}-{match['g_away']}"
-    text, phrase_hash = select_best_candidate(candidates, memory, pair_key, ntype, used_openers, seed)
+    # Select best
+    text, phrase_hash = select_best_candidate(
+        candidates, memory, pair_key, ntype, used_openers, used_adjectives, seed
+    )
 
     # Update memory
     memory.add_used(phrase_hash, pair_key, ntype)
 
-    # Update openers
-    opener = text.lower().split()[0]
-    used_openers.add(opener)
+    # Update matchday-level tracking
+    opener = text.lower().split()[0] if text else ""
+    if opener:
+        used_openers.add(opener)
+    
+    # Track adjectives
+    words = text.lower().split()
+    for adj_set in [ADJ_TIGHT, ADJ_CLEAR, ADJ_DOM]:
+        for adj in adj_set:
+            if adj.lower() in words:
+                used_adjectives.add(adj.lower())
 
     return text
 
@@ -436,12 +647,38 @@ def build_narratives_for_matchday(
     spieltag: int = 1,
     memory_path: Optional[Path] = None,
 ) -> Dict[str, Dict[str, Any]]:
-    """Build narratives with memory."""
+    """
+    Build narratives for all matches in a matchday.
+    
+    Args:
+        spieltag_json: JSON with 'games' list
+        latest_json: JSON with team data. Supports two formats:
+            - New format: {'teams': {'TeamName': {'last5': [...]}}}
+            - Old format: {'tabelle_nord': [...], 'tabelle_sued': [...]}
+        season: Season number
+        spieltag: Matchday number
+        memory_path: Optional path to narrative_memory.json
+    
+    Returns:
+        Dict[pair_key, {'line1': str, 'line2': str}]
+    """
     if memory_path is None:
         memory_path = Path(f"replays/saison_{season:02d}/spieltag_{spieltag:02d}/narrative_memory.json")
 
     memory = NarrativeMemory.load(memory_path)
-    used_openers = set()
+    used_openers: Set[str] = set()
+    used_adjectives: Set[str] = set()
+
+    # Convert old format to new format if needed
+    teams_dict = latest_json.get('teams', {})
+    if not teams_dict and ('tabelle_nord' in latest_json or 'tabelle_sued' in latest_json):
+        # Old format - convert
+        teams_dict = {}
+        for table in [latest_json.get('tabelle_nord', []), latest_json.get('tabelle_sued', [])]:
+            for team_entry in table:
+                team_name = team_entry.get('Team', '')
+                if team_name:
+                    teams_dict[team_name] = {'last5': team_entry.get('last5', [])}
 
     narratives = {}
     for match in spieltag_json.get('games', []):
@@ -449,18 +686,18 @@ def build_narratives_for_matchday(
         away = match['away']
         pair_key = f"{home}-{away}"
 
-        # Context
+        # Build context
         ctx = {
             'season': season,
             'spieltag': spieltag,
-            'home_last5': latest_json.get('teams', {}).get(home, {}).get('last5', []),
-            'away_last5': latest_json.get('teams', {}).get(away, {}).get('last5', []),
+            'home_last5': teams_dict.get(home, {}).get('last5', []),
+            'away_last5': teams_dict.get(away, {}).get('last5', []),
         }
 
-        line1 = generate_line1(match, ctx, memory, used_openers)
+        line1 = generate_line1(match, ctx, memory, used_openers, used_adjectives)
         narratives[pair_key] = {
             'line1': line1,
-            'line2': '',  # Keep empty as per schema
+            'line2': '',  # Keep empty per schema
         }
 
     # Save memory
@@ -477,15 +714,136 @@ def write_narratives_json(narratives: Dict[str, Dict[str, Any]], output_path: Pa
         narratives: Dict from build_narratives_for_matchday
         output_path: Path to write narratives.json
     """
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(narratives, f, ensure_ascii=False, indent=2)
 
 
-if __name__ == "__main__":
-    # Example usage
-    match = {'home': 'TeamA', 'away': 'TeamB', 'g_home': 3, 'g_away': 1, 'overtime': False, 'shootout': False}
-    ctx = {'season': 1, 'spieltag': 1, 'home_last5': ['W', 'W', 'L'], 'away_last5': ['L', 'L', 'W']}
+# ============================================================
+# VALIDATION & DEBUG
+# ============================================================
+def validate_diversity(sample_count: int = 300, verbose: bool = True) -> Dict[str, Any]:
+    """
+    Validation mode: Generate many samples and check duplicate rate.
+    
+    Args:
+        sample_count: Number of samples to generate
+        verbose: Print detailed output
+    
+    Returns:
+        Dict with statistics
+    """
+    # Create mock data
+    teams = ["Team A", "Team B", "Team C", "Team D"]
+    narrative_types = [
+        "SO_DRAMA", "OT_DRAMA", "SHUTOUT", "DOMINATION", 
+        "STATEMENT_WIN", "UPSET", "GRIND_WIN", "TRACK_MEET", 
+        "LOW_SCORING", "FALLBACK"
+    ]
+    
     memory = NarrativeMemory()
-    used_openers = set()
-    line1 = generate_line1(match, ctx, memory, used_openers)
-    print(line1)
+    all_texts = []
+    all_hashes = []
+    type_counts = {nt: 0 for nt in narrative_types}
+    
+    if verbose:
+        print(f"🔬 Generating {sample_count} sample narratives...")
+        print("=" * 60)
+    
+    for i in range(sample_count):
+        # Random matchup
+        winner = teams[i % len(teams)]
+        loser = teams[(i + 1) % len(teams)]
+        ntype = narrative_types[i % len(narrative_types)]
+        seed = f"validation-{i}-{ntype}"
+        
+        # Generate
+        candidates = generate_candidates_compositional(ntype, winner, loser, seed, count=50)
+        text, phrase_hash = candidates[0] if candidates else ("", "")
+        
+        all_texts.append(text)
+        all_hashes.append(phrase_hash)
+        type_counts[ntype] += 1
+        
+        if verbose and i < 20:
+            print(f"{i+1:3d}. [{ntype:14s}] {text}")
+    
+    # Calculate statistics
+    unique_texts = len(set(all_texts))
+    unique_hashes = len(set(all_hashes))
+    duplicate_rate = (1 - unique_texts / sample_count) * 100 if sample_count > 0 else 0
+    
+    avg_length = sum(len(t) for t in all_texts) / len(all_texts) if all_texts else 0
+    min_length = min(len(t) for t in all_texts) if all_texts else 0
+    max_length = max(len(t) for t in all_texts) if all_texts else 0
+    
+    stats = {
+        'total_samples': sample_count,
+        'unique_texts': unique_texts,
+        'unique_hashes': unique_hashes,
+        'duplicate_rate': duplicate_rate,
+        'avg_length': avg_length,
+        'min_length': min_length,
+        'max_length': max_length,
+        'type_distribution': type_counts,
+    }
+    
+    if verbose:
+        print("=" * 60)
+        print(f"\n📊 VALIDATION RESULTS:")
+        print(f"   Total samples: {sample_count}")
+        print(f"   Unique texts:  {unique_texts}")
+        print(f"   Duplicate rate: {duplicate_rate:.2f}%")
+        print(f"   Target: <2%")
+        print(f"\n📏 LENGTH STATISTICS:")
+        print(f"   Average: {avg_length:.1f} chars")
+        print(f"   Min:     {min_length} chars")
+        print(f"   Max:     {max_length} chars")
+        print(f"   Target:  70-110 chars")
+        
+        if duplicate_rate < 2.0:
+            print(f"\n✅ PASS: Duplicate rate under 2%")
+        else:
+            print(f"\n⚠️  WARNING: Duplicate rate above 2%")
+    
+    return stats
+
+
+if __name__ == "__main__":
+    import sys
+    
+    if len(sys.argv) > 1 and sys.argv[1] == "--validate":
+        # Run validation
+        validate_diversity(sample_count=300, verbose=True)
+    else:
+        # Quick test
+        print("🎯 Testing compositional narrative generation...\n")
+        
+        match = {
+            'home': 'Eisbären Berlin',
+            'away': 'Adler Mannheim',
+            'g_home': 4,
+            'g_away': 2,
+            'overtime': False,
+            'shootout': False
+        }
+        
+        ctx = {
+            'season': 1,
+            'spieltag': 1,
+            'home_last5': ['W', 'W', 'L', 'W'],
+            'away_last5': ['L', 'L', 'W', 'L']
+        }
+        
+        memory = NarrativeMemory()
+        used_openers = set()
+        used_adjectives = set()
+        
+        print("Generating 10 sample narratives:")
+        print("=" * 60)
+        
+        for i in range(10):
+            line1 = generate_line1(match, ctx, memory, used_openers, used_adjectives)
+            print(f"{i+1:2d}. {line1}")
+        
+        print("\n✅ Test completed successfully!")

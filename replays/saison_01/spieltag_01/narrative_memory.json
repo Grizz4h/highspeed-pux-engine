@@ -1,0 +1,28 @@
+{
+  "global_recent": [
+    "05f5ba2cb1c9",
+    "07ebe2a3d815",
+    "12b55a963cda",
+    "0b54f06b1e6f"
+  ],
+  "by_pairing": {
+    "Team A-Team B": [
+      "05f5ba2cb1c9",
+      "12b55a963cda"
+    ],
+    "Team C-Team D": [
+      "07ebe2a3d815",
+      "0b54f06b1e6f"
+    ]
+  },
+  "by_type": {
+    "FALLBACK": [
+      "05f5ba2cb1c9",
+      "12b55a963cda"
+    ],
+    "OT_DRAMA": [
+      "07ebe2a3d815",
+      "0b54f06b1e6f"
+    ]
+  }
+}
