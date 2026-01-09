@@ -10,6 +10,7 @@ Advanced compositional narrative generation with strong anti-repeat memory.
 """
 
 import json
+import os
 import hashlib
 import random
 from pathlib import Path
@@ -662,8 +663,26 @@ def build_narratives_for_matchday(
     Returns:
         Dict[pair_key, {'line1': str, 'line2': str}]
     """
+    # Determine effective spieltag (prefer value from spieltag_json if present)
+    try:
+        effective_spieltag = int(spieltag_json.get('spieltag', spieltag))
+    except Exception:
+        effective_spieltag = spieltag
+
+    # Default memory path: under HIGHSPEED_DATA_ROOT if available, else local replays/
     if memory_path is None:
-        memory_path = Path(f"replays/saison_{season:02d}/spieltag_{spieltag:02d}/narrative_memory.json")
+        data_root_env = os.environ.get('HIGHSPEED_DATA_ROOT')
+        if data_root_env:
+            base_replays = Path(data_root_env).resolve() / "replays"
+        else:
+            # Prefer system data repo if available
+            sys_data_root = Path("/opt/highspeed/data")
+            if sys_data_root.exists():
+                base_replays = sys_data_root / "replays"
+            else:
+                # Fallback to local repo if nothing else is available
+                base_replays = Path("replays")
+        memory_path = base_replays / f"saison_{season:02d}" / f"spieltag_{effective_spieltag:02d}" / "narrative_memory.json"
 
     memory = NarrativeMemory.load(memory_path)
     used_openers: Set[str] = set()
@@ -680,8 +699,13 @@ def build_narratives_for_matchday(
                 if team_name:
                     teams_dict[team_name] = {'last5': team_entry.get('last5', [])}
 
+    # Support both structures: 'games' (new) and 'results' (legacy)
+    matches_list = spieltag_json.get('games', [])
+    if not matches_list:
+        matches_list = spieltag_json.get('results', [])
+
     narratives = {}
-    for match in spieltag_json.get('games', []):
+    for match in matches_list:
         home = match['home']
         away = match['away']
         pair_key = f"{home}-{away}"
@@ -689,7 +713,7 @@ def build_narratives_for_matchday(
         # Build context
         ctx = {
             'season': season,
-            'spieltag': spieltag,
+            'spieltag': effective_spieltag,
             'home_last5': teams_dict.get(home, {}).get('last5', []),
             'away_last5': teams_dict.get(away, {}).get('last5', []),
         }

@@ -1851,7 +1851,10 @@ def step_regular_season_once() -> Dict[str, Any]:
     try:
         spieltag_json_path = SPIELTAG_DIR / season_folder(season) / f"spieltag_{spieltag:02}.json"
         latest_json_path = STATS_DIR / season_folder(season) / "league" / "latest.json"
+        # Paths for narratives output
         narratives_json_path = SPIELTAG_DIR / season_folder(season) / f"narratives_{spieltag:02}.json"
+        replays_matchday_dir = REPLAY_DIR / season_folder(season) / f"spieltag_{spieltag:02}"
+        narratives_replay_path = replays_matchday_dir / "narratives.json"
         
         # Load the spieltag JSON we just saved
         with open(spieltag_json_path, "r", encoding="utf-8") as f:
@@ -1862,7 +1865,9 @@ def step_regular_season_once() -> Dict[str, Any]:
         if latest_json_path.exists():
             with open(latest_json_path, "r", encoding="utf-8") as f:
                 latest_json = json.load(f)
-        
+
+        # Build latest_for_narrative from either latest.json or fallback
+        latest_for_narrative = None
         if latest_json:
             # Convert latest.json teams to tabelle format for narrative generation
             tabelle_nord = []
@@ -1876,19 +1881,45 @@ def step_regular_season_once() -> Dict[str, Any]:
                     tabelle_nord.append(team_dict)
                 else:
                     tabelle_sued.append(team_dict)
-            
             latest_for_narrative = {
                 "tabelle_nord": tabelle_nord,
                 "tabelle_sued": tabelle_sued,
             }
-            
-            narratives = build_narratives_for_matchday(
-                spieltag_json,
-                latest_for_narrative,
-                season=season,
-            )
-            write_narratives_json(narratives, narratives_json_path)
-            logging.info(f"Narratives written to {narratives_json_path}")
+        else:
+            # Fallback: derive teams from spieltag_json with empty last5
+            teams_seen = set()
+            tabelle_nord = []
+            tabelle_sued = []
+            # Support both keys 'games' and 'results'
+            matches_list = spieltag_json.get("games", []) or spieltag_json.get("results", [])
+            for m in matches_list:
+                for t in (m.get("home"), m.get("away")):
+                    if t and t not in teams_seen:
+                        teams_seen.add(t)
+                        # Conference unknown in fallback; put into 'Nord' arbitrarily
+                        tabelle_nord.append({"Team": t, "last5": []})
+            latest_for_narrative = {
+                "tabelle_nord": tabelle_nord,
+                "tabelle_sued": tabelle_sued,
+            }
+
+        # Generate narratives regardless of latest.json presence
+        narratives = build_narratives_for_matchday(
+            spieltag_json,
+            latest_for_narrative,
+            season=season,
+        )
+        # Write to spieltage (legacy location)
+        write_narratives_json(narratives, narratives_json_path)
+        logging.info(f"Narratives written to {narratives_json_path}")
+
+        # Also write next to replay_matchday.json (requested integration point)
+        try:
+            replays_matchday_dir.mkdir(parents=True, exist_ok=True)
+            write_narratives_json(narratives, narratives_replay_path)
+            logging.info(f"Narratives also written to {narratives_replay_path}")
+        except Exception:
+            logging.warning("Could not write narratives into replays folder; will rely on spieltage path.", exc_info=True)
     except Exception as e:
         logging.error(f"Narrative generation failed: {e}", exc_info=True)
         # Continue execution even if narrative generation fails
