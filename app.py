@@ -9,6 +9,7 @@ import base64
 import subprocess
 import sys
 import os
+import urllib.request
 
 from pathlib import Path
 from typing import Optional, List, Dict, Any
@@ -578,10 +579,44 @@ else:
     st.session_state.rollback_force_push = force_push_rb if st.session_state.get("rollback_chosen") else False
 
 
+def _trigger_workflow_dispatch(repo_owner: str, repo_name: str, event_type: str, token: str) -> tuple[int, str]:
+    """
+    Triggert einen repository_dispatch Event im angegebenen Repo.
+    """
+    if not token:
+        return 1, "ERROR: No token provided for dispatch"
+    
+    url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/dispatches"
+    payload = json.dumps({"event_type": event_type}).encode("utf-8")
+    
+    req = urllib.request.Request(
+        url,
+        data=payload,
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Accept": "application/vnd.github.v3+json",
+            "Content-Type": "application/json"
+        },
+        method="POST"
+    )
+    
+    try:
+        with urllib.request.urlopen(req) as response:
+            if response.status == 204:
+                return 0, f"Dispatch {event_type} triggered successfully"
+            else:
+                return response.status, f"Unexpected response: {response.status}"
+    except urllib.error.HTTPError as e:
+        return e.code, f"HTTP Error: {e.reason}"
+    except Exception as e:
+        return 1, f"ERROR: {str(e)}"
+
+
 def set_pointer(which: str, source_branch: str, full_sha: str) -> tuple[int, str]:
     """
     Setzt Pointer in pointers/dev.json, pointers/prod.json oder pointers/replay.json auf den gegebenen commit.
     Arbeitet nur im Pointers-Repo, ohne Engine-Repo zu berühren.
+    Nach erfolgreichem Push wird ein repository_dispatch Event gefeuert (für replay Pointer).
     """
     if DATA_REPO_PATH.resolve() == POINTERS_REPO_PATH.resolve():
         return 1, "ERROR: Pointer repo darf nicht data repo sein. Konfiguration prüfen!"
@@ -616,7 +651,24 @@ def set_pointer(which: str, source_branch: str, full_sha: str) -> tuple[int, str
         out_all.append(f"$ {' '.join(cmd)}\n{out}".strip())
         if code != 0:
             return code, "\n\n".join(out_all) + f"\n\n[FAIL] step: {label}"
-    return 0, "\n\n".join(out_all) + f"\n\n[OK] {which.upper()} pointer set to {full_sha[:10]}"
+    
+    # After successful push, trigger dispatch for replay pointer
+    result_msg = f"[OK] {which.upper()} pointer set to {full_sha[:10]}"
+    if which == "replay":
+        token = os.environ.get("HIGHSPEED_PAT", "")
+        dispatch_code, dispatch_msg = _trigger_workflow_dispatch(
+            "Grizz4h",
+            "highspeed-pux-data",
+            "replay-pointer-updated",
+            token
+        )
+        out_all.append(f"\n[Dispatch] {dispatch_msg} (code={dispatch_code})")
+        if dispatch_code != 0:
+            result_msg += f" [Dispatch FAILED: {dispatch_msg}]"
+        else:
+            result_msg += f" [Dispatch sent ✓]"
+    
+    return 0, "\n\n".join(out_all) + f"\n\n{result_msg}"
 
     
 

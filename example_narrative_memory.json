@@ -1,0 +1,18 @@
+{
+  "global_recent": [
+    "abc123def456",
+    "ghi789jkl012"
+  ],
+  "by_pairing": {
+    "TeamA-TeamB": [
+      "mno345pqr678",
+      "stu901vwx234"
+    ]
+  },
+  "by_type": {
+    "GRIND_WIN": [
+      "yzab567cdef8",
+      "ghij901klmn2"
+    ]
+  }
+}

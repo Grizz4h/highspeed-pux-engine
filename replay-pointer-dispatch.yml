@@ -1,0 +1,80 @@
+name: Replay Pointer Update (from dispatch)
+
+permissions:
+  contents: write
+
+on:
+  repository_dispatch:
+    types: [replay-pointer-updated]
+
+jobs:
+  update-replay-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Data Repo
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Find Latest Season and Spieltag with Replay Data
+        id: season
+        shell: bash
+        run: |
+          # Find latest season with replay data
+          SEASON=$(ls -d replays/saison_* 2>/dev/null | sort -V | tail -1 | grep -oP 'saison_\K\d+' || echo "01")
+          
+          # Find latest spieltag in that season
+          SPIELTAG=$(ls -d replays/saison_${SEASON}/spieltag_* 2>/dev/null | sort -V | tail -1 | grep -oP 'spieltag_\K\d+' || echo "01")
+          
+          echo "season=$SEASON" >> $GITHUB_OUTPUT
+          echo "spieltag=$SPIELTAG" >> $GITHUB_OUTPUT
+          echo "✅ Found: Saison $SEASON, Spieltag $SPIELTAG"
+
+      - name: Verify Replay Data Exists
+        shell: bash
+        run: |
+          REPLAY_SOURCE="replays/saison_${{ steps.season.outputs.season }}/spieltag_${{ steps.season.outputs.spieltag }}"
+          
+          if [ ! -d "$REPLAY_SOURCE" ]; then
+            echo "❌ Replay-Quelle nicht gefunden: $REPLAY_SOURCE"
+            ls -la replays/saison_${{ steps.season.outputs.season }}/
+            exit 1
+          fi
+          
+          echo "✅ Replay-Quelle gefunden"
+          ls -la "$REPLAY_SOURCE"
+
+      - name: Checkout Web Repo
+        uses: actions/checkout@v4
+        with:
+          repository: Grizz4h/highspeed-web
+          token: ${{ secrets.PUBLISH_TOKEN }}
+          path: web
+          ref: main
+
+      - name: Copy Replay Data to Web Repo
+        shell: bash
+        run: |
+          REPLAY_SOURCE="replays/saison_${{ steps.season.outputs.season }}/spieltag_${{ steps.season.outputs.spieltag }}"
+          WEB_TARGET="web/public/data/replays"
+          
+          mkdir -p "$WEB_TARGET"
+          rsync -av --delete "$REPLAY_SOURCE/" "$WEB_TARGET/"
+          echo "✅ Replay-Daten kopiert von: $REPLAY_SOURCE"
+
+      - name: Commit and Push to Web Repo
+        shell: bash
+        run: |
+          cd web
+          git config user.name "SSOT Publisher"
+          git config user.email "actions@github.com"
+          git add public/data/replays/
+          
+          if git diff --staged --quiet; then
+            echo "ℹ️ Keine Änderungen - nichts zu committen"
+          else
+            git commit -m "chore(replay): update saison_${{ steps.season.outputs.season }}/spieltag_${{ steps.season.outputs.spieltag }}"
+            git push origin main
+            echo "✅ Replay-Daten zu web/main gepusht"
+          fi

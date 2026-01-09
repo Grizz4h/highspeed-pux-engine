@@ -12,6 +12,8 @@ import math
 import os
 import re
 
+from narrative_engine import build_narratives_for_matchday, write_narratives_json
+
 
 # ------------------------------------------------
 # Helper: DataFrame -> records ohne NaN
@@ -1844,6 +1846,52 @@ def step_regular_season_once() -> Dict[str, Any]:
         debug=debug_payload,
         lineups=lineups_payload,
     )
+
+    # Generate narratives for the matchday
+    try:
+        spieltag_json_path = SPIELTAG_DIR / season_folder(season) / f"spieltag_{spieltag:02}.json"
+        latest_json_path = STATS_DIR / season_folder(season) / "league" / "latest.json"
+        narratives_json_path = SPIELTAG_DIR / season_folder(season) / f"narratives_{spieltag:02}.json"
+        
+        # Load the spieltag JSON we just saved
+        with open(spieltag_json_path, "r", encoding="utf-8") as f:
+            spieltag_json = json.load(f)
+        
+        # Load or build latest.json (will exist after save_league_stats_snapshot)
+        latest_json = None
+        if latest_json_path.exists():
+            with open(latest_json_path, "r", encoding="utf-8") as f:
+                latest_json = json.load(f)
+        
+        if latest_json:
+            # Convert latest.json teams to tabelle format for narrative generation
+            tabelle_nord = []
+            tabelle_sued = []
+            for team_info in latest_json.get("teams", []):
+                team_dict = {
+                    "Team": team_info.get("team", ""),
+                    "last5": team_info.get("last5", []),
+                }
+                if team_info.get("conference") == "Nord":
+                    tabelle_nord.append(team_dict)
+                else:
+                    tabelle_sued.append(team_dict)
+            
+            latest_for_narrative = {
+                "tabelle_nord": tabelle_nord,
+                "tabelle_sued": tabelle_sued,
+            }
+            
+            narratives = build_narratives_for_matchday(
+                spieltag_json,
+                latest_for_narrative,
+                season=season,
+            )
+            write_narratives_json(narratives, narratives_json_path)
+            logging.info(f"Narratives written to {narratives_json_path}")
+    except Exception as e:
+        logging.error(f"Narrative generation failed: {e}", exc_info=True)
+        # Continue execution even if narrative generation fails
 
     save_replay_json(season, spieltag, replay_matches)
 
