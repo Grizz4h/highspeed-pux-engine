@@ -182,8 +182,10 @@ def test_generate_starting_six():
         assert "id" in player, "Player missing 'id' field"
         assert "pos" in player, "Player missing 'pos' field"
         assert "team" in player, "Player missing 'team' field"
+        assert "number" in player, "Player missing 'number' field"
         assert player["pos"] in ["F", "D", "G"], f"Invalid position: {player['pos']}"
         assert isinstance(player["team"], str), f"Team should be string, got {type(player['team'])}"
+        assert isinstance(player["number"], int), f"Number should be int, got {type(player['number'])}"
     
     # Validate season state was updated
     assert len(season_state["startingSixAppearances"]) == 6, "All 6 players should have appearances tracked"

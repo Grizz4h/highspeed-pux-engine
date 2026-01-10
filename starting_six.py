@@ -215,7 +215,7 @@ def generate_starting_six(
             "version": 1,
             "seed": int,
             "source": "lineups",
-            "players": [{"id": str, "pos": str, "team": str}, ...],
+            "players": [{"id": str, "pos": str, "team": str, "number": int}, ...],
             "meta": {
                 "fallback_used": bool,
                 "pool_sizes": {"F": int, "D": int, "G": int}
@@ -254,11 +254,11 @@ def generate_starting_six(
     # Build result
     players = []
     for p in selected_forwards:
-        players.append({"id": p["id"], "pos": "F", "team": p["team"]})
+        players.append({"id": p["id"], "pos": "F", "team": p["team"], "number": p.get("number", 0)})
     for p in selected_defenders:
-        players.append({"id": p["id"], "pos": "D", "team": p["team"]})
+        players.append({"id": p["id"], "pos": "D", "team": p["team"], "number": p.get("number", 0)})
     for p in selected_goalies:
-        players.append({"id": p["id"], "pos": "G", "team": p["team"]})
+        players.append({"id": p["id"], "pos": "G", "team": p["team"], "number": p.get("number", 0)})
     
     # Update season state
     for p in selected_forwards + selected_defenders + selected_goalies:

@@ -20,6 +20,90 @@ from typing import Any, Dict, List, Optional
 import pandas as pd
 
 
+def load_lineups_for_spieltag(season: int, spieltag: int) -> Optional[Dict[str, Any]]:
+    """
+    Load lineups for a spieltag from multiple sources.
+    
+    Priority:
+    1. Separate lineups file (spieltag_XX_lineups.json)
+    2. Embedded in spieltag JSON ("lineups" key)
+    3. From debug section (debug.nord_matches / debug.sued_matches)
+    4. Fallback: replay_matchday.json (if it has lineup data)
+    
+    Returns lineup dict with "teams" key, or None if not found.
+    """
+    # Import here to avoid circular imports
+    from LigageneratorV2 import (
+        DATA_ROOT, SPIELTAG_DIR, LINEUP_DIR, REPLAY_DIR, season_folder, build_line_snapshot
+    )
+    
+    # Try separate lineups file first
+    lineup_file = LINEUP_DIR / season_folder(season) / f"spieltag_{spieltag:02}_lineups.json"
+    if lineup_file.exists():
+        with lineup_file.open("r", encoding="utf-8") as f:
+            return json.load(f)
+    
+    # Try spieltag JSON (embedded lineups or debug section)
+    spieltag_file = SPIELTAG_DIR / season_folder(season) / f"spieltag_{spieltag:02}.json"
+    if spieltag_file.exists():
+        with spieltag_file.open("r", encoding="utf-8") as f:
+            data = json.load(f)
+            
+            # Check for direct lineups key
+            if "lineups" in data:
+                return {
+                    "season": season,
+                    "spieltag": spieltag,
+                    "teams": data["lineups"]
+                }
+            
+            # Check debug section (old format)
+            debug = data.get("debug", {})
+            if debug and ("nord_matches" in debug or "sued_matches" in debug):
+                # Extract lineups from debug.nord_matches and debug.sued_matches
+                teams = {}
+                
+                for match in debug.get("nord_matches", []):
+                    for side in ["home", "away"]:
+                        side_data = match.get(side, {})
+                        team_name = side_data.get("team")
+                        lineup = side_data.get("lineup", [])
+                        
+                        if team_name and lineup:
+                            teams[team_name] = build_line_snapshot(lineup)
+                
+                for match in debug.get("sued_matches", []):
+                    for side in ["home", "away"]:
+                        side_data = match.get(side, {})
+                        team_name = side_data.get("team")
+                        lineup = side_data.get("lineup", [])
+                        
+                        if team_name and lineup:
+                            teams[team_name] = build_line_snapshot(lineup)
+                
+                if teams:
+                    return {
+                        "season": season,
+                        "spieltag": spieltag,
+                        "teams": teams
+                    }
+    
+    # Fallback: replay_matchday.json
+    replay_file = REPLAY_DIR / season_folder(season) / f"spieltag_{spieltag:02}" / "replay_matchday.json"
+    if replay_file.exists():
+        with replay_file.open("r", encoding="utf-8") as f:
+            data = json.load(f)
+            
+            # Try to extract lineups from replay data
+            # This is a fallback and might not work perfectly
+            if "games" in data:
+                # We could try to reconstruct lineups from replay data
+                # But for now, return None
+                pass
+    
+    return None
+
+
 def _collect_gp_from_lineup(lineup_json: Dict[str, Any]) -> Dict[str, Dict[str, Any]]:
     """
     Count games played from lineup JSON.
