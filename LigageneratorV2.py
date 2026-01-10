@@ -13,6 +13,13 @@ import os
 import re
 
 from narrative_engine import build_narratives_for_matchday, write_narratives_json
+from starting_six import generate_starting_six
+from player_stats_export import (
+    build_player_stats_for_matchday,
+    merge_into_season_player_stats,
+    write_player_stats_files,
+    load_existing_player_stats,
+)
 
 
 # ------------------------------------------------
@@ -422,6 +429,9 @@ def _init_new_season_state(season: int) -> Dict[str, Any]:
         "stats": _df_to_records_clean(stats),
         "history": [],
         "phase": "regular",
+        # Starting Six tracking
+        "startingSixAppearances": {},
+        "lastStartingSixMatchday": {},
     }
 
 
@@ -543,6 +553,7 @@ def save_replay_json(
     season: int,
     gameday: int,
     replay_matches: List[Dict[str, Any]],
+    starting_six: Optional[Dict[str, Any]] = None,
 ) -> None:
     base_folder = REPLAY_DIR / season_folder(season) / f"spieltag_{gameday:02}"
 
@@ -554,6 +565,10 @@ def save_replay_json(
         "matchday": gameday,
         "games": [],
     }
+    
+    # Add Starting Six if provided
+    if starting_six is not None:
+        matchday_payload["starting_six"] = starting_six
 
     for m in replay_matches:
         home = m["home"]
@@ -1759,6 +1774,12 @@ def step_regular_season_once() -> Dict[str, Any]:
         season = get_next_season_number()
         state = _init_new_season_state(season)
         save_state(state)
+    
+    # Migrate old states that don't have Starting Six tracking
+    if "startingSixAppearances" not in state:
+        state["startingSixAppearances"] = {}
+    if "lastStartingSixMatchday" not in state:
+        state["lastStartingSixMatchday"] = {}
 
     season   = state["season"]
     spieltag = state["spieltag"]
@@ -1847,6 +1868,22 @@ def step_regular_season_once() -> Dict[str, Any]:
         lineups=lineups_payload,
     )
 
+    # Generate Starting Six after lineups are saved (will be embedded in replay JSON)
+    starting_six = None
+    try:
+        # Generate Starting Six using persistent season state
+        starting_six = generate_starting_six(
+            lineups=lineups_payload,
+            season=season,
+            spieltag=spieltag,
+            season_state=state,
+            seed=(season * 1000 + spieltag),
+        )
+        logging.info(f"Starting Six generated: {len(starting_six['players'])} players selected")
+    except Exception as e:
+        logging.error(f"Starting Six generation failed: {e}", exc_info=True)
+        # Continue execution even if Starting Six fails
+
     # Generate narratives for the matchday
     try:
         spieltag_json_path = SPIELTAG_DIR / season_folder(season) / f"spieltag_{spieltag:02}.json"
@@ -1909,22 +1946,17 @@ def step_regular_season_once() -> Dict[str, Any]:
             latest_for_narrative,
             season=season,
         )
-        # Write to spieltage (legacy location)
-        write_narratives_json(narratives, narratives_json_path)
-        logging.info(f"Narratives written to {narratives_json_path}")
-
-        # Also write next to replay_matchday.json (requested integration point)
-        try:
-            replays_matchday_dir.mkdir(parents=True, exist_ok=True)
-            write_narratives_json(narratives, narratives_replay_path)
-            logging.info(f"Narratives also written to {narratives_replay_path}")
-        except Exception:
-            logging.warning("Could not write narratives into replays folder; will rely on spieltage path.", exc_info=True)
+        
+        # Write ONLY to replays/ (not to spieltage/)
+        replays_matchday_dir.mkdir(parents=True, exist_ok=True)
+        write_narratives_json(narratives, narratives_replay_path)
+        logging.info(f"Narratives written to {narratives_replay_path}")
     except Exception as e:
         logging.error(f"Narrative generation failed: {e}", exc_info=True)
         # Continue execution even if narrative generation fails
 
-    save_replay_json(season, spieltag, replay_matches)
+    # Save replay JSON (will include Starting Six and narratives path reference)
+    save_replay_json(season, spieltag, replay_matches, starting_six=starting_six)
 
     # Generate summaries
     import subprocess
@@ -1938,6 +1970,40 @@ def step_regular_season_once() -> Dict[str, Any]:
         player_stats=stats,
     )
 
+    # Export player stats (new)
+    try:
+        # Load lineup JSON we just saved
+        lineup_json_path = LINEUP_DIR / season_folder(season) / f"spieltag_{spieltag:02}_lineups.json"
+        if lineup_json_path.exists():
+            with lineup_json_path.open("r", encoding="utf-8") as f:
+                lineup_json = json.load(f)
+            
+            # Build stats for this matchday
+            all_teams = nord_teams + sued_teams
+            matchday_stats = build_player_stats_for_matchday(
+                lineup_json=lineup_json,
+                player_stats_df=stats,
+                all_teams=all_teams,
+            )
+            
+            # Load existing season stats and merge
+            existing_stats = load_existing_player_stats(STATS_DIR, season)
+            updated_stats = merge_into_season_player_stats(existing_stats, matchday_stats)
+            
+            # Write both latest and snapshot
+            write_player_stats_files(
+                base_stats_dir=STATS_DIR / season_folder(season),
+                season=season,
+                spieltag=spieltag,
+                stats_obj=updated_stats,
+            )
+            logging.info(f"Player stats exported: {len(updated_stats)} players tracked")
+        else:
+            logging.warning(f"Lineup JSON not found at {lineup_json_path}, skipping player stats export")
+    except Exception as e:
+        logging.error(f"Player stats export failed: {e}", exc_info=True)
+        # Continue execution even if player stats export fails
+
     spieltag += 1
     save_state({
         "season": season,
@@ -1949,6 +2015,9 @@ def step_regular_season_once() -> Dict[str, Any]:
         "stats": _df_to_records_clean(stats),
         "history": state.get("history", []),
         "phase": "regular",
+        # Persist Starting Six state
+        "startingSixAppearances": state.get("startingSixAppearances", {}),
+        "lastStartingSixMatchday": state.get("lastStartingSixMatchday", {}),
     })
     return {"status": "ok", "season": season, "spieltag": spieltag}
 
