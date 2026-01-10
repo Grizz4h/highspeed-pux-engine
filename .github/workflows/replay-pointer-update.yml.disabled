@@ -1,0 +1,122 @@
+# DISABLED: Diese Workflow ist redundant. Die echte Pointer-Logik sitzt im Data-Repo.
+# Diese Datei wird nicht mehr benötigt, da:
+# 1. app.py triggert Dispatches nur an Grizz4h/highspeed-pux-data
+# 2. Die Pipeline im Data-Repo läuft und schreibt direkt ins Web-Repo
+# 3. Kein Code schickt Dispatches an dieses pux-engine Repo
+#
+# Falls das doch noch gebraucht wird, kann die Auskommentierung rückgängig gemacht werden.
+#
+# name: Replay Pointer Update
+#
+# on:
+#   repository_dispatch:
+#     types: [replay-pointer-updated]
+#   workflow_dispatch:
+#     inputs:
+#       md_tag:
+#         description: 'MD Tag (z.B. MD08)'
+#         required: true
+#         type: string
+#
+# jobs:
+#   update-replay-data:
+#     runs-on: ubuntu-latest
+#     
+#     steps:
+#       - name: Checkout Pointer Repo
+#         uses: actions/checkout@v4
+#         with:
+#           repository: highspeedDE/pointers
+#           path: pointers
+#       
+#       - name: Checkout Data Repo
+#         uses: actions/checkout@v4
+#         with:
+#           repository: Grizz4h/highspeed-pux-data
+#           token: ${{ secrets.HIGHSPEED_PAT }}
+#           path: data
+#           ref: dev
+#       
+#       - name: Checkout Web Repo
+#         uses: actions/checkout@v4
+#         with:
+#           repository: Grizz4h/highspeed-web
+#           token: ${{ secrets.HIGHSPEED_PAT }}
+#           path: web
+#       
+#       - name: Read Replay Pointer
+#         id: pointer
+#         run: |
+#           COMMIT=$(jq -r '.source_commit' pointers/pointers/replay.json)
+#           echo "commit=$COMMIT" >> $GITHUB_OUTPUT
+#           echo "Replay Commit: $COMMIT"
+#       
+#       - name: Extract MD Tag from Input or Pointer
+#         id: md
+#         run: |
+#           if [ -n "${{ inputs.md_tag }}" ]; then
+#             MD_TAG="${{ inputs.md_tag }}"
+#           else
+#             # Fallback: Versuche MD aus Commit-Message zu extrahieren
+#             cd data
+#             git checkout ${{ steps.pointer.outputs.commit }}
+#             MD_TAG=$(git log -1 --pretty=%s | grep -oP 'MD\d+' || echo "MD01")
+#           fi
+#           echo "md_tag=$MD_TAG" >> $GITHUB_OUTPUT
+#           echo "MD Tag: $MD_TAG"
+#       
+#       - name: Checkout Data to Replay Commit
+#         run: |
+#           cd data
+#           git checkout ${{ steps.pointer.outputs.commit }}
+#       
+#       - name: Find Latest Season and Spieltag
+#         id: season
+#         run: |
+#           cd data
+#           SEASON=$(ls -d replays/saison_* 2>/dev/null | sort -V | tail -1 | grep -oP 'saison_\K\d+' || echo "01")
+#           # Extract matchday from MD tag if provided, else try to read from replay_matchday.json
+#           RAW_MD=$(echo "${{ steps.md.outputs.md_tag }}" | grep -oP 'MD\K\d+' || true)
+#           if [ -n "$RAW_MD" ]; then
+#             SPIELTAG=$(printf "%02d" "$RAW_MD")
+#           else
+#             # Try to detect latest replay_matchday.json and read its matchday
+#             LATEST_MD_JSON=$(ls replays/saison_${SEASON}/spieltag_*/replay_matchday.json 2>/dev/null | sort -V | tail -1 || true)
+#             if [ -n "$LATEST_MD_JSON" ]; then
+#               SPIELTAG=$(jq -r '.matchday' "$LATEST_MD_JSON" 2>/dev/null | awk '{printf "%02d", $0}' )
+#             else
+#               SPIELTAG="01"
+#             fi
+#           fi
+#           echo "season=$SEASON" >> $GITHUB_OUTPUT
+#           echo "spieltag=$SPIELTAG" >> $GITHUB_OUTPUT
+#           echo "Saison: $SEASON, Spieltag: $SPIELTAG"
+#       
+#       - name: Copy Replay Data to Web Repo
+#         run: |
+#           REPLAY_SOURCE="data/replays/saison_${{ steps.season.outputs.season }}/spieltag_${{ steps.season.outputs.spieltag }}"
+#           WEB_TARGET="web/data/replay"
+#           
+#           if [ ! -d "$REPLAY_SOURCE" ]; then
+#             echo "❌ Replay-Quelle nicht gefunden: $REPLAY_SOURCE"
+#             exit 1
+#           fi
+#           
+#           mkdir -p "$WEB_TARGET"
+#           rsync -av --delete "$REPLAY_SOURCE/" "$WEB_TARGET/"
+#           echo "✅ Replay-Daten kopiert"
+#       
+#       - name: Commit and Push to Web Repo
+#         run: |
+#           cd web
+#           git config user.name "GitHub Actions"
+#           git config user.email "actions@github.com"
+#           git add data/replay/
+#           
+#           if git diff --staged --quiet; then
+#             echo "Keine Änderungen - nichts zu committen"
+#           else
+#             git commit -m "chore(replay): update to ${{ steps.md.outputs.md_tag }} (${GITHUB_SHA:0:10})"
+#             git push origin main
+#             echo "✅ Replay-Daten gepusht"
+#           fi
