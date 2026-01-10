@@ -116,27 +116,35 @@ def load_lineups_for_spieltag(season: int, spieltag: int) -> dict:
 
 def load_stats_for_spieltag(season: int, spieltag: int) -> pd.DataFrame:
     """
-    Load player stats (Goals/Assists) from spieltag JSON.
+    Load player stats (Goals/Assists) from spieltag JSON or cumulative stats file.
     
     The stats in spieltag JSON are CUMULATIVE up to that spieltag.
+    If not found, try cumulative_stats_up_to_stXX.json in stats/.
     
     Returns DataFrame with Player, Team, Goals, Assists columns.
     """
     spieltag_file = SPIELTAG_DIR / season_folder(season) / f"spieltag_{spieltag:02}.json"
     
-    if not spieltag_file.exists():
-        print(f"⚠️ Spieltag file not found: {spieltag_file}")
-        return pd.DataFrame(columns=["Player", "Team", "Goals", "Assists"])
+    players_data = []
     
-    with spieltag_file.open("r", encoding="utf-8") as f:
-        data = json.load(f)
-    
-    # Stats are in "players" array - cumulative stats
-    players_data = data.get("players", [])
+    if spieltag_file.exists():
+        with spieltag_file.open("r", encoding="utf-8") as f:
+            data = json.load(f)
+        
+        # Stats are in "players" array - cumulative stats
+        players_data = data.get("players", [])
     
     if not players_data:
-        print(f"   ⚠️ No players data in spieltag JSON")
-        return pd.DataFrame(columns=["Player", "Team", "Goals", "Assists"])
+        # Try cumulative stats file
+        cumulative_file = STATS_DIR / season_folder(season) / "league" / f"cumulative_stats_up_to_st{spieltag:02}.json"
+        if cumulative_file.exists():
+            with cumulative_file.open("r", encoding="utf-8") as f:
+                data = json.load(f)
+            players_data = data.get("players", [])
+            print(f"   ✓ Loaded cumulative stats from {cumulative_file}")
+        else:
+            print(f"   ⚠️ No players data in spieltag JSON and no cumulative stats file")
+            return pd.DataFrame(columns=["Player", "Team", "Goals", "Assists"])
     
     # Convert to DataFrame
     df = pd.DataFrame(players_data)
