@@ -281,6 +281,7 @@ def rebuild_player_stats_from_history(
             season=season,
             spieltag=spieltag,
             stats_obj=snapshot_stats,
+            all_teams=all_teams,
         )
         
         print(f"   ✓ Snapshot saved: player_stats_after_spieltag_{spieltag:02}.json")

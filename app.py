@@ -283,6 +283,11 @@ if "names_status" not in st.session_state:
     st.session_state.names_stdout = ""
     st.session_state.names_stderr = ""
 
+if "migrate_status" not in st.session_state:
+    st.session_state.migrate_status = None  # "ok" | "error"
+    st.session_state.migrate_stdout = ""
+    st.session_state.migrate_stderr = ""
+
 if "browser_season" not in st.session_state:
     st.session_state.browser_season = None
 
@@ -521,6 +526,36 @@ with st.sidebar:
                 st.session_state.names_status = "error"
                 st.session_state.names_stderr = str(e)
 
+    if st.button("🔄 Stats migrieren (player_id)", key="btn_migrate_stats", use_container_width=True):
+        with st.spinner("Stats werden migriert..."):
+            try:
+                env = os.environ.copy()
+                env["PYTHONIOENCODING"] = "utf-8"
+
+                result = subprocess.run(
+                    [sys.executable, str(APP_DIR / "migrate_stats.py")],
+                    cwd=str(APP_DIR),
+                    capture_output=True,
+                    text=False,
+                    env=env,
+                )
+
+                stdout = (result.stdout or b"").decode("utf-8", errors="replace")
+                stderr = (result.stderr or b"").decode("utf-8", errors="replace")
+
+                st.session_state.migrate_stdout = stdout
+                st.session_state.migrate_stderr = stderr
+
+                if result.returncode == 0:
+                    st.session_state.migrate_status = "ok"
+                    st.cache_data.clear()
+                else:
+                    st.session_state.migrate_status = "error"
+
+            except Exception as e:
+                st.session_state.migrate_status = "error"
+                st.session_state.migrate_stderr = str(e)
+
     # --- Reset Save ---
     st.markdown("### Danger Zone")
     if st.button("🧨 Reset Savegame (löscht saves/savegame.json)", key="btn_reset_save", use_container_width=True):
@@ -560,6 +595,18 @@ elif st.session_state.names_status == "error":
         if st.session_state.names_stderr:
             st.markdown("**STDERR**")
             st.code(st.session_state.names_stderr)
+
+if st.session_state.migrate_status == "ok":
+    st.success("✅ Stats erfolgreich migriert.")
+elif st.session_state.migrate_status == "error":
+    st.error("❌ Stats-Migration fehlgeschlagen.")
+    with st.expander("🔍 Details anzeigen"):
+        if st.session_state.migrate_stdout:
+            st.markdown("**STDOUT**")
+            st.code(st.session_state.migrate_stdout)
+        if st.session_state.migrate_stderr:
+            st.markdown("**STDERR**")
+            st.code(st.session_state.migrate_stderr)
 
 # ============================================================
 # Data Repo Controls (SSOT) — safe, explicit, self-explaining

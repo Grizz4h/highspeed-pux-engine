@@ -196,6 +196,15 @@ def build_player_stats_for_matchday(
     # Map names to IDs
     name_to_id = _map_player_name_to_id(player_stats_df, all_teams)
     
+    # Create reverse mapping for names
+    id_to_name = {}
+    for team in all_teams:
+        for player in team.get("Players", []):
+            pid = player.get("id") or player.get("ID") or player.get("Name")
+            name = player.get("Name")
+            if pid and name:
+                id_to_name[pid] = name
+    
     # Build stats map
     stats_map: Dict[str, Dict[str, Any]] = {}
     
@@ -207,6 +216,10 @@ def build_player_stats_for_matchday(
         }
         if "gs" in gp_data:
             stats_map[player_id]["gs"] = gp_data["gs"]
+        
+        # Add name if available
+        if player_id in id_to_name:
+            stats_map[player_id]["name"] = id_to_name[player_id]
     
     # Add goals/assists from player_stats_df
     for _, row in player_stats_df.iterrows():
@@ -282,6 +295,7 @@ def write_player_stats_files(
     season: int,
     spieltag: int,
     stats_obj: Dict[str, Dict[str, Any]],
+    all_teams: List[Dict[str, Any]],
 ) -> None:
     """
     Write player stats to JSON files (atomic writes).
@@ -294,14 +308,21 @@ def write_player_stats_files(
         base_stats_dir: Base directory (e.g., STATS_DIR / season_folder)
         season: Season number
         spieltag: Matchday number
-        stats_obj: Player stats mapping
+        stats_obj: Player stats mapping (player_id -> stats)
     """
+    # Convert to list format with player_id field
+    players_list = []
+    for player_id, stats in stats_obj.items():
+        player_entry = dict(stats)  # Copy stats
+        player_entry["player_id"] = player_id
+        players_list.append(player_entry)
+    
     payload = {
         "version": 1,
         "season": season,
         "as_of_spieltag": spieltag,
         "generated_at": datetime.now().isoformat(),
-        "players": stats_obj,
+        "players": players_list,
     }
     
     league_folder = base_stats_dir / "league"
@@ -323,6 +344,9 @@ def write_player_stats_files(
     
     print(f"📊 Player Stats gespeichert → {latest_path}")
     print(f"📊 Player Stats Snapshot → {snapshot_path}")
+    
+    # Export players.json for web
+    export_players_for_web(base_stats_dir, season, spieltag, all_teams)
 
 
 def load_existing_player_stats(stats_dir: Path, season: int) -> Dict[str, Dict[str, Any]]:
@@ -330,7 +354,7 @@ def load_existing_player_stats(stats_dir: Path, season: int) -> Dict[str, Dict[s
     Load existing player_stats_latest.json if it exists.
     
     Returns:
-        Existing player stats map, or empty dict if not found
+        Existing player stats map (player_id -> stats), or empty dict if not found
     """
     latest_path = stats_dir / f"saison_{season:02}" / "league" / "player_stats_latest.json"
     
@@ -340,10 +364,120 @@ def load_existing_player_stats(stats_dir: Path, season: int) -> Dict[str, Dict[s
     try:
         with latest_path.open("r", encoding="utf-8") as f:
             data = json.load(f)
-        return data.get("players", {})
+        
+        players_list = data.get("players", [])
+        
+        # Convert list to dict keyed by player_id
+        stats_dict = {}
+        for player in players_list:
+            player_id = player.get("player_id")
+            if player_id:
+                # Remove player_id from the stats dict since it's the key
+                stats = dict(player)
+                del stats["player_id"]
+                stats_dict[player_id] = stats
+        
+        return stats_dict
     except Exception as e:
         print(f"⚠️ Could not load existing player stats: {e}")
         return {}
+
+
+def export_players_for_web(
+    base_stats_dir: Path,
+    season: int,
+    spieltag: int,
+    all_teams: List[Dict[str, Any]],
+) -> None:
+    """
+    Export players.json for web consumption.
+    
+    Creates /public/data/saison_XX/league/players.json with display data.
+    This file contains player_id, name, slug, team_slug, portrait path.
+    
+    Args:
+        base_stats_dir: Base directory (e.g., STATS_DIR / season_folder)
+        season: Season number
+        spieltag: Matchday number (for reference)
+        all_teams: List of all teams with player rosters
+    """
+    from LigageneratorV2 import season_folder
+    
+    # Load ID mapping from mapping_player_names.json
+    mapping_file = Path("data/mapping_player_names.json")
+    id_mapping = {}
+    if mapping_file.exists():
+        try:
+            with mapping_file.open("r", encoding="utf-8") as f:
+                name_data = json.load(f)
+                # Convert to dict format
+                for entry in name_data:
+                    player_id = entry.get("player_id")
+                    if player_id:
+                        id_mapping[player_id] = {
+                            "display_name": entry.get("fake", ""),
+                            "real_name": entry.get("real", "")
+                        }
+        except Exception as e:
+            print(f"⚠️ Could not load ID mapping: {e}")
+    
+    # Create reverse mapping: name -> player_id for lookup
+    name_to_id = {}
+    for pid, info in id_mapping.items():
+        display_name = info.get("display_name", "")
+        if display_name:
+            name_to_id[display_name] = pid
+    
+    # Collect all players from teams
+    players_data = []
+    seen_ids = set()
+    
+    for team in all_teams:
+        team_name = team.get("Name", "").strip()
+        team_slug = team_name.lower().replace(" ", "-") if team_name else "unknown"
+        
+        for player in team.get("Players", []):
+            player_name = player.get("Name", "").strip()
+            if not player_name:
+                continue
+            
+            # Get player_id from mapping or name
+            player_id = name_to_id.get(player_name, player_name)
+            
+            # Skip duplicates
+            if player_id in seen_ids:
+                continue
+            seen_ids.add(player_id)
+            
+            # Create slug from name
+            player_slug = player_name.lower().replace(" ", "-").replace("ä", "ae").replace("ö", "oe").replace("ü", "ue").replace("ß", "ss")
+            
+            # Portrait path (placeholder - can be enhanced later)
+            portrait_path = f"/images/players/{season_folder(season)}/{team_slug}/{player_slug}.png"
+            
+            player_entry = {
+                "player_id": player_id,
+                "name": player_name,
+                "slug": player_slug,
+                "team_slug": team_slug,
+                "portrait": portrait_path
+            }
+            
+            players_data.append(player_entry)
+    
+    # Sort by player_id for consistency
+    players_data.sort(key=lambda x: x["player_id"])
+    
+    # Create public directory structure
+    public_dir = base_stats_dir.parent / "public" / "data" / season_folder(season) / "league"
+    public_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Write players.json
+    players_path = public_dir / "players.json"
+    with players_path.open("w", encoding="utf-8") as f:
+        json.dump(players_data, f, indent=2, ensure_ascii=False)
+    
+    print(f"🌐 Web players exported → {players_path}")
 
 
 if __name__ == "__main__":

@@ -36,10 +36,10 @@ SEARCH_DIRS = [
     "data/stats"
 ]
 
-BACKUP_FILE = Path("data/.mapping_backup.json")
+BACKUP_FILE = Path("data/.mapping_player_names_backup.json")
 
-def load_mapping(file_path: Path) -> Dict[str, str]:
-    """Load the player name mapping (real -> fake)."""
+def load_mapping(file_path: Path) -> Dict[str, Dict[str, str]]:
+    """Load the player ID mapping (player_id -> info) from mapping_player_names.json."""
     if not file_path.exists():
         print(f"❌ Mapping file not found: {file_path}")
         return {}
@@ -47,28 +47,36 @@ def load_mapping(file_path: Path) -> Dict[str, str]:
     with file_path.open("r", encoding="utf-8") as f:
         data = json.load(f)
 
-    real_to_fake = {}
-    for entry in data:
-        real = entry.get("real", "").strip()
-        fake = entry.get("fake", "").strip()
-        if real and fake:
-            real_to_fake[real] = fake
+    # Convert from list format to dict format
+    mapping = {}
+    if isinstance(data, list):
+        for entry in data:
+            player_id = entry.get("player_id")
+            if player_id:
+                mapping[player_id] = {
+                    "display_name": entry.get("fake", ""),
+                    "real_name": entry.get("real", "")
+                }
+    else:
+        # Fallback for old dict format
+        mapping = data
 
-    return real_to_fake
+    return mapping
 
-def save_mapping(file_path: Path, mapping: Dict[str, str]) -> None:
+def save_mapping(file_path: Path, mapping: Dict[str, Dict[str, str]]) -> None:
     """Save the mapping to file."""
-    data = [{"real": real, "fake": fake} for real, fake in mapping.items()]
     with file_path.open("w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+        json.dump(mapping, f, indent=2, ensure_ascii=False)
 
-def find_changed_fakes(current: Dict[str, str], previous: Dict[str, str]) -> Dict[str, str]:
-    """Find changed fake names: old_fake -> new_fake"""
+def find_changed_fakes(current: Dict[str, Dict[str, str]], previous: Dict[str, Dict[str, str]]) -> Dict[str, str]:
+    """Find changed display names: old_name -> new_name"""
     changed = {}
-    for real, new_fake in current.items():
-        if real in previous and previous[real] != new_fake:
-            old_fake = previous[real]
-            changed[old_fake] = new_fake
+    for player_id, info in current.items():
+        if player_id in previous:
+            old_name = previous[player_id].get("display_name", "")
+            new_name = info.get("display_name", "")
+            if old_name != new_name and old_name:
+                changed[old_name] = new_name
     return changed
 
 def find_json_files() -> List[Path]:

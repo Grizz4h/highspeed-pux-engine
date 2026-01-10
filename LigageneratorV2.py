@@ -1996,6 +1996,7 @@ def step_regular_season_once() -> Dict[str, Any]:
                 season=season,
                 spieltag=spieltag,
                 stats_obj=updated_stats,
+                all_teams=all_teams,
             )
             logging.info(f"Player stats exported: {len(updated_stats)} players tracked")
         else:
