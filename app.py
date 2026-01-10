@@ -278,6 +278,11 @@ if "pipeline_status" not in st.session_state:
     st.session_state.pipeline_stdout = ""
     st.session_state.pipeline_stderr = ""
 
+if "names_status" not in st.session_state:
+    st.session_state.names_status = None  # "ok" | "error"
+    st.session_state.names_stdout = ""
+    st.session_state.names_stderr = ""
+
 if "browser_season" not in st.session_state:
     st.session_state.browser_season = None
 
@@ -486,6 +491,36 @@ with st.sidebar:
         st.cache_data.clear()
         st.rerun()
 
+    if st.button("👤 Spieler-Namen aktualisieren", key="btn_update_names", use_container_width=True):
+        with st.spinner("Spieler-Namen werden aktualisiert..."):
+            try:
+                env = os.environ.copy()
+                env["PYTHONIOENCODING"] = "utf-8"
+
+                result = subprocess.run(
+                    [sys.executable, str(APP_DIR / "update_player_names.py")],
+                    cwd=str(APP_DIR),
+                    capture_output=True,
+                    text=False,
+                    env=env,
+                )
+
+                stdout = (result.stdout or b"").decode("utf-8", errors="replace")
+                stderr = (result.stderr or b"").decode("utf-8", errors="replace")
+
+                st.session_state.names_stdout = stdout
+                st.session_state.names_stderr = stderr
+
+                if result.returncode == 0:
+                    st.session_state.names_status = "ok"
+                    st.cache_data.clear()
+                else:
+                    st.session_state.names_status = "error"
+
+            except Exception as e:
+                st.session_state.names_status = "error"
+                st.session_state.names_stderr = str(e)
+
     # --- Reset Save ---
     st.markdown("### Danger Zone")
     if st.button("🧨 Reset Savegame (löscht saves/savegame.json)", key="btn_reset_save", use_container_width=True):
@@ -513,6 +548,18 @@ elif st.session_state.pipeline_status == "error":
         if st.session_state.pipeline_stderr:
             st.markdown("**STDERR**")
             st.code(st.session_state.pipeline_stderr)
+
+if st.session_state.names_status == "ok":
+    st.success("✅ Spieler-Namen erfolgreich aktualisiert.")
+elif st.session_state.names_status == "error":
+    st.error("❌ Spieler-Namen-Update fehlgeschlagen.")
+    with st.expander("🔍 Details anzeigen"):
+        if st.session_state.names_stdout:
+            st.markdown("**STDOUT**")
+            st.code(st.session_state.names_stdout)
+        if st.session_state.names_stderr:
+            st.markdown("**STDERR**")
+            st.code(st.session_state.names_stderr)
 
 # ============================================================
 # Data Repo Controls (SSOT) — safe, explicit, self-explaining
