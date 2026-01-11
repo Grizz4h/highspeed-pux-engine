@@ -197,6 +197,7 @@ def build_player_stats_for_matchday(
     lineup_json: Dict[str, Any],
     player_stats_df: pd.DataFrame,
     all_teams: List[Dict[str, Any]],
+    previous_stats: Optional[Dict[str, Dict[str, Any]]] = None,
 ) -> Dict[str, Dict[str, Any]]:
     """
     Build player stats deltas for a single matchday.
@@ -284,6 +285,13 @@ def build_player_stats_for_matchday(
         
         goals = row.get("Goals", 0)
         assists = row.get("Assists", 0)
+        
+        # Calculate deltas if previous_stats available
+        if previous_stats:
+            prev_g = previous_stats.get(player_id, {}).get("g", 0)
+            prev_a = previous_stats.get(player_id, {}).get("a", 0)
+            goals = max(0, goals - prev_g)
+            assists = max(0, assists - prev_a)
         
         # Only add if player exists in lineup (has GP)
         if player_id in stats_map:

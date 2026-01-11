@@ -1913,7 +1913,7 @@ def step_regular_season_once() -> Dict[str, Any]:
         
         # Build deltas for this matchday
         lineup_json = {"season": season, "spieltag": spieltag, "teams": lineups_payload}
-        deltas = build_player_stats_for_matchday(lineup_json, stats, nord_teams + sued_teams)
+        deltas = build_player_stats_for_matchday(lineup_json, stats, nord_teams + sued_teams, existing_stats)
         
         # Merge into season stats
         merged_stats = merge_into_season_player_stats(existing_stats, deltas)
