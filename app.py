@@ -1480,7 +1480,6 @@ with tab_gamedays:
 
     @st.cache_data(show_spinner=False)
     
-    @st.cache_data(show_spinner=False)
     def load_gameday_json(season: int, gameday: int, _sig_season: str) -> Optional[dict]:
         folder = SPIELTAG_DIR / season_folder(season)
         if not folder.exists():
@@ -1653,7 +1652,6 @@ with tab_playoffs:
                 vals.append(int(m.group(1)))
         return sorted(set(vals))
 
-    @st.cache_data(show_spinner=False)
     def load_round_json(season: int, rnd: int, _sig_season: str) -> Optional[dict]:
         folder = PLAYOFF_DIR / season_folder(season)
         if not folder.exists():

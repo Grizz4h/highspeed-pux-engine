@@ -410,13 +410,21 @@ def init_stats() -> pd.DataFrame:
 def _init_new_season_state(season: int) -> Dict[str, Any]:
     nord, sued = _init_frames()
 
-    nsched = create_schedule(nord_teams)
-    ssched = create_schedule(sued_teams)
-
-    nsched = _enforce_novadelta_augsburg_third_match(nsched, nord_teams)
-    ssched = _enforce_novadelta_augsburg_third_match(ssched, sued_teams)
-
-    _save_full_schedule_preview(season, nsched, ssched)
+    # Canon Schedule-Logik: Schedule nur generieren, wenn er fehlt
+    schedule_path = SCHEDULE_DIR / season_folder(season) / "spielplan.json"
+    if schedule_path.exists():
+        with schedule_path.open("r", encoding="utf-8") as f:
+            payload = json.load(f)
+        print(f"✅ Loaded existing schedule from {schedule_path}")
+        nsched = [(m["home"], m["away"]) for md in payload["nord"]["matchdays"] for m in md["matches"]]
+        ssched = [(m["home"], m["away"]) for md in payload["sued"]["matchdays"] for m in md["matches"]]
+    else:
+        nsched = create_schedule(nord_teams)
+        ssched = create_schedule(sued_teams)
+        nsched = _enforce_novadelta_augsburg_third_match(nsched, nord_teams)
+        ssched = _enforce_novadelta_augsburg_third_match(ssched, sued_teams)
+        _save_full_schedule_preview(season, nsched, ssched)
+        print(f"✅ Generated new schedule (first run) and saved to {schedule_path}")
 
     stats = init_stats()
     return {
@@ -1781,6 +1789,7 @@ def step_regular_season_once() -> Dict[str, Any]:
     if "lastStartingSixMatchday" not in state:
         state["lastStartingSixMatchday"] = {}
 
+
     season   = state["season"]
     spieltag = state["spieltag"]
     nord     = pd.DataFrame(state["nord"])
@@ -1788,6 +1797,35 @@ def step_regular_season_once() -> Dict[str, Any]:
     nsched   = state["nsched"]
     ssched   = state["ssched"]
     stats    = pd.DataFrame(state["stats"])
+
+    # === CANON-OVERRIDE: Saison 1, Spieltag 3 ===
+    # Dieser Block kann für Rückbau einfach entfernt werden.
+    if season == 1 and spieltag == 3:
+        print("[CANON-OVERRIDE] Spieltag 3 Saison 1: Schreibe Canon-Daten, keine Simulation!")
+        from pathlib import Path
+        import json
+        # Basisverzeichnis für alle Daten-Operationen
+        DATA_ROOT = Path("/opt/highspeed/data")
+        # Canon-Daten laden (aus data-Repo!)
+        canon_path = DATA_ROOT / "canon_spieltag_03.json"
+        with canon_path.open("r", encoding="utf-8") as f:
+            canon_payload = json.load(f)
+        # Schreibe die Canon-Daten als spieltag_03.json ins data-Repo
+        out_path = DATA_ROOT / "spieltage" / season_folder(season) / f"spieltag_{spieltag:02}.json"
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        with out_path.open("w", encoding="utf-8") as f:
+            json.dump(canon_payload, f, indent=2, ensure_ascii=False)
+        print(f"[CANON-OVERRIDE] Canon-Spieltag gespeichert: {out_path}")
+        # Savegame im data-Repo updaten
+        savegame_path = DATA_ROOT / "saves" / "savegame.json"
+        with savegame_path.open("r", encoding="utf-8") as f:
+            state = json.load(f)
+        state["spieltag"] = spieltag + 1
+        with savegame_path.open("w", encoding="utf-8") as f:
+            json.dump(state, f, indent=2, ensure_ascii=False)
+        print(f"[CANON-OVERRIDE] Savegame aktualisiert: {savegame_path}")
+        return {"status": "canon_override", "season": season, "spieltag": spieltag + 1}
+    # === ENDE CANON-OVERRIDE ===
 
     max_spieltage = (len(nord_teams) - 1) * 2
     if isinstance(spieltag, int) and spieltag > max_spieltage:
@@ -1867,6 +1905,26 @@ def step_regular_season_once() -> Dict[str, Any]:
         debug=debug_payload,
         lineups=lineups_payload,
     )
+
+    # Export player stats after saving spieltag
+    try:
+        # Load existing player stats
+        existing_stats = load_existing_player_stats(STATS_DIR / season_folder(season), season)
+        
+        # Build deltas for this matchday
+        lineup_json = {"season": season, "spieltag": spieltag, "teams": lineups_payload}
+        deltas = build_player_stats_for_matchday(lineup_json, stats, nord_teams + sued_teams)
+        
+        # Merge into season stats
+        merged_stats = merge_into_season_player_stats(existing_stats, deltas)
+        
+        # Write updated player stats
+        write_player_stats_files(STATS_DIR / season_folder(season), season, spieltag, merged_stats, nord_teams + sued_teams)
+        
+        logging.info(f"Player stats exported for season {season} spieltag {spieltag}")
+    except Exception as e:
+        logging.error(f"Player stats export failed: {e}", exc_info=True)
+        # Continue execution
 
     # Generate Starting Six after lineups are saved (will be embedded in replay JSON)
     starting_six = None
