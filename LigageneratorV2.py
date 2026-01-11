@@ -1961,42 +1961,11 @@ def step_regular_season_once() -> Dict[str, Any]:
             with open(latest_json_path, "r", encoding="utf-8") as f:
                 latest_json = json.load(f)
 
-        # Build latest_for_narrative from either latest.json or fallback
-        latest_for_narrative = None
-        if latest_json:
-            # Convert latest.json teams to tabelle format for narrative generation
-            tabelle_nord = []
-            tabelle_sued = []
-            for team_info in latest_json.get("teams", []):
-                team_dict = {
-                    "Team": team_info.get("team", ""),
-                    "last5": team_info.get("last5", []),
-                }
-                if team_info.get("conference") == "Nord":
-                    tabelle_nord.append(team_dict)
-                else:
-                    tabelle_sued.append(team_dict)
-            latest_for_narrative = {
-                "tabelle_nord": tabelle_nord,
-                "tabelle_sued": tabelle_sued,
-            }
-        else:
-            # Fallback: derive teams from spieltag_json with empty last5
-            teams_seen = set()
-            tabelle_nord = []
-            tabelle_sued = []
-            # Support both keys 'games' and 'results'
-            matches_list = spieltag_json.get("games", []) or spieltag_json.get("results", [])
-            for m in matches_list:
-                for t in (m.get("home"), m.get("away")):
-                    if t and t not in teams_seen:
-                        teams_seen.add(t)
-                        # Conference unknown in fallback; put into 'Nord' arbitrarily
-                        tabelle_nord.append({"Team": t, "last5": []})
-            latest_for_narrative = {
-                "tabelle_nord": tabelle_nord,
-                "tabelle_sued": tabelle_sued,
-            }
+        # Build latest_for_narrative from spieltag_json (simpler and more reliable)
+        latest_for_narrative = {
+            "tabelle_nord": spieltag_json.get("tabelle_nord", []),
+            "tabelle_sued": spieltag_json.get("tabelle_sued", []),
+        }
 
         # Generate narratives regardless of latest.json presence
         narratives = build_narratives_for_matchday(
