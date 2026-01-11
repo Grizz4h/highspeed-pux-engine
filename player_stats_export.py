@@ -162,15 +162,34 @@ def _map_player_name_to_id(player_stats_df: pd.DataFrame, all_teams: List[Dict[s
         Dict mapping player_name -> player_id
     """
     name_to_id: Dict[str, str] = {}
-    
+
+    # 1) IDs aus mapping_player_names.json (Fake-Name und Real-Name → player_id)
+    mapping_file = Path("data/mapping_player_names.json")
+    if mapping_file.exists():
+        try:
+            with mapping_file.open("r", encoding="utf-8") as f:
+                mapping_data = json.load(f)
+            for entry in mapping_data:
+                pid = entry.get("player_id")
+                if not pid:
+                    continue
+                fake = entry.get("fake")
+                real = entry.get("real")
+                if fake:
+                    name_to_id[fake] = pid
+                if real:
+                    name_to_id[real] = pid
+        except Exception as e:
+            print(f"⚠️ Konnte mapping_player_names.json nicht laden: {e}")
+
+    # 2) Fallback: IDs aus den Team-Rostern (falls vorhanden)
     for team in all_teams:
         for player in team.get("Players", []):
             name = player.get("Name")
-            # Try multiple ID fields
             pid = player.get("id") or player.get("ID") or player.get("Name")
-            if name and pid:
+            if name and pid and name not in name_to_id:
                 name_to_id[name] = pid
-    
+
     return name_to_id
 
 
@@ -198,28 +217,58 @@ def build_player_stats_for_matchday(
     
     # Create reverse mapping for names
     id_to_name = {}
+
+    # Aus mapping_player_names.json (bevorzugt Fake-Name)
+    mapping_file = Path("data/mapping_player_names.json")
+    mapping_ids = set()
+    if mapping_file.exists():
+        try:
+            with mapping_file.open("r", encoding="utf-8") as f:
+                mapping_data = json.load(f)
+            for entry in mapping_data:
+                pid = entry.get("player_id")
+                fake = entry.get("fake")
+                real = entry.get("real")
+                if pid:
+                    mapping_ids.add(pid)
+                    if fake:
+                        id_to_name[pid] = fake
+                    elif real:
+                        id_to_name[pid] = real
+        except Exception as e:
+            print(f"⚠️ Konnte mapping_player_names.json nicht laden (id_to_name): {e}")
+
+    # Fallback: aus den Team-Rostern
     for team in all_teams:
         for player in team.get("Players", []):
             pid = player.get("id") or player.get("ID") or player.get("Name")
             name = player.get("Name")
-            if pid and name:
+            if pid and name and pid not in id_to_name:
                 id_to_name[pid] = name
     
     # Build stats map
     stats_map: Dict[str, Dict[str, Any]] = {}
     
     # First, add all players from lineups (ensures GP is always set)
-    for player_id, gp_data in gp_map.items():
-        stats_map[player_id] = {
+    for player_name, gp_data in gp_map.items():
+        canonical_id = name_to_id.get(player_name)
+        # Wenn kein Mapping existiert, überspringen (verhindert Namen als ID)
+        if not canonical_id:
+            continue
+        # Optional: Nur IDs akzeptieren, die in der Mapping-Datei stehen
+        if mapping_ids and canonical_id not in mapping_ids:
+            continue
+
+        stats_map[canonical_id] = {
             "pos": gp_data["pos"],
             "gp": gp_data["gp"],
         }
         if "gs" in gp_data:
-            stats_map[player_id]["gs"] = gp_data["gs"]
+            stats_map[canonical_id]["gs"] = gp_data["gs"]
         
         # Add name if available
-        if player_id in id_to_name:
-            stats_map[player_id]["name"] = id_to_name[player_id]
+        if canonical_id in id_to_name:
+            stats_map[canonical_id]["name"] = id_to_name[canonical_id]
     
     # Add goals/assists from player_stats_df
     for _, row in player_stats_df.iterrows():
@@ -227,7 +276,11 @@ def build_player_stats_for_matchday(
         if not player_name:
             continue
         
-        player_id = name_to_id.get(player_name, player_name)
+        player_id = name_to_id.get(player_name)
+        if not player_id:
+            continue
+        if mapping_ids and player_id not in mapping_ids:
+            continue
         
         goals = row.get("Goals", 0)
         assists = row.get("Assists", 0)
@@ -425,15 +478,19 @@ def export_players_for_web(
     name_to_id = {}
     for pid, info in id_mapping.items():
         display_name = info.get("display_name", "")
+        real_name = info.get("real_name", "")
         if display_name:
             name_to_id[display_name] = pid
+        if real_name:
+            name_to_id[real_name] = pid
     
     # Collect all players from teams
     players_data = []
     seen_ids = set()
     
     for team in all_teams:
-        team_name = team.get("Name", "").strip()
+        # Team-Namen aus Engine-Struktur: Feld heißt "Team"
+        team_name = team.get("Team", "").strip()
         team_slug = team_name.lower().replace(" ", "-") if team_name else "unknown"
         
         for player in team.get("Players", []):
