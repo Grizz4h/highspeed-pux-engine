@@ -84,8 +84,9 @@ jobs:
           echo "spieltag=$SPIELTAG" >> $GITHUB_OUTPUT
           echo "Saison: $SEASON, Spieltag: $SPIELTAG"
       
-      - name: Copy Replay Data to Web Repo
+      - name: Copy Data to Web Repo
         run: |
+          # Replay-Daten kopieren
           REPLAY_SOURCE="data/replays/saison_${{ steps.season.outputs.season }}/spieltag_${{ steps.season.outputs.spieltag }}"
           WEB_TARGET="web/data/replay"
           
@@ -97,6 +98,13 @@ jobs:
           mkdir -p "$WEB_TARGET"
           rsync -av --delete "$REPLAY_SOURCE/" "$WEB_TARGET/"
           echo "✅ Replay-Daten kopiert"
+          
+          # Team-Daten kopieren (falls vorhanden)
+          if [ -f "web/data/realeTeams_web.py" ]; then
+            mkdir -p "web/data"
+            cp "web/data/realeTeams_web.py" "web/data/"
+            echo "✅ Team-Daten kopiert"
+          fi
       
       - name: Commit and Push to Web Repo
         run: |
@@ -104,11 +112,12 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add data/replay/
+          git add data/realeTeams_web.py
           
           if git diff --staged --quiet; then
             echo "Keine Änderungen - nichts zu committen"
           else
-            git commit -m "chore(replay): update to ${{ steps.md.outputs.md_tag }} (${GITHUB_SHA:0:10})"
+            git commit -m "chore(data): update replay & teams to ${{ steps.md.outputs.md_tag }} (${GITHUB_SHA:0:10})"
             git push origin main
-            echo "✅ Replay-Daten gepusht"
+            echo "✅ Daten gepusht"
           fi

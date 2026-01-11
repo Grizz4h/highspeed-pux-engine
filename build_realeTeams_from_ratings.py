@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import json
 import pprint
+import shutil
+import subprocess
 from pathlib import Path
 from typing import Any, Dict, List, Tuple, Optional
 
@@ -335,6 +337,43 @@ def write_realeTeams_web_py(nord: List[Dict[str, Any]], sued: List[Dict[str, Any
 
     WEB_OUTPUT_FILE.write_text("\n".join(content), encoding="utf-8")
     print(f"💾 Datei geschrieben: {WEB_OUTPUT_FILE}")
+    
+    # Automatisch ins Web-Repo kopieren (für automatischen Deploy)
+    web_repo_path = BASE_DIR / "web" / "data" / "realeTeams_web.py"
+    try:
+        web_repo_path.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(WEB_OUTPUT_FILE, web_repo_path)
+        print(f"🌐 Datei für Web-Deploy vorbereitet: {web_repo_path}")
+    except Exception as e:
+        print(f"⚠️  Web-Deploy-Vorbereitung fehlgeschlagen: {e}")
+    
+    # Zusätzlich ins Datenrepo kopieren (für Backup/Sync)
+    data_repo_path = Path("/opt/highspeed/data/stats/public/data/saison_01/league/realeTeams_web.py")
+    try:
+        data_repo_path.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(WEB_OUTPUT_FILE, data_repo_path)
+        print(f"📤 Datei automatisch ins Datenrepo kopiert: {data_repo_path}")
+        
+        # Git commit im Datenrepo
+        try:
+            subprocess.run(
+                ["git", "add", "stats/public/data/saison_01/league/realeTeams_web.py"],
+                cwd="/opt/highspeed/data",
+                check=True,
+                capture_output=True
+            )
+            subprocess.run(
+                ["git", "commit", "-m", f"Auto-sync realeTeams_web.py - Pipeline update {Path('.').absolute().name}"],
+                cwd="/opt/highspeed/data",
+                check=True,
+                capture_output=True
+            )
+            print("✅ Automatischer Commit im Datenrepo erstellt")
+        except subprocess.CalledProcessError as e:
+            print(f"⚠️  Git Commit fehlgeschlagen: {e}")
+            
+    except Exception as e:
+        print(f"⚠️  Kopieren ins Datenrepo fehlgeschlagen: {e}")
 
 
 def main() -> None:

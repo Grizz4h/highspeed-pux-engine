@@ -255,6 +255,18 @@ def build_fake_mapping_for_all_players() -> dict[str, str]:
 def main() -> None:
     mapping = build_fake_mapping_for_all_players()
 
+    # Bestehende player_ids laden, falls vorhanden
+    existing_ids = {}
+    if MAPPING_FILE.exists():
+        try:
+            existing_data = json.loads(MAPPING_FILE.read_text(encoding="utf-8"))
+            if isinstance(existing_data, list):
+                for entry in existing_data:
+                    if isinstance(entry, dict) and "real" in entry and "player_id" in entry:
+                        existing_ids[entry["real"]] = entry["player_id"]
+        except:
+            pass  # Falls Datei korrupt, ignorieren
+
     # sortiert nach Nachname, dann Vorname (nur für bessere Lesbarkeit)
     def sort_key(item: tuple[str, str]) -> tuple[str, str]:
         real = item[0]
@@ -265,11 +277,14 @@ def main() -> None:
 
     items_sorted = sorted(mapping.items(), key=sort_key)
 
-    # als Liste von Objekten speichern – gut zum manuellen Editieren
-    out_list = [
-        {"real": real, "fake": fake}
-        for real, fake in items_sorted
-    ]
+    # als Liste von Objekten speichern – player_ids erhalten!
+    out_list = []
+    for real, fake in items_sorted:
+        entry = {"real": real, "fake": fake}
+        # Player ID wiederherstellen, falls vorhanden
+        if real in existing_ids:
+            entry["player_id"] = existing_ids[real]
+        out_list.append(entry)
 
     MAPPING_FILE.write_text(
         json.dumps(out_list, indent=2, ensure_ascii=False),
