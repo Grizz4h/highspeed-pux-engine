@@ -629,31 +629,43 @@ def _load_json(path: Path) -> Dict[str, Any]:
     with path.open("r", encoding="utf-8") as f:
         return json.load(f)
 
-
 def _calc_streak(results: List[str]) -> str:
     if not results:
         return ""
-    last = results[-1]
-    if last not in ("W", "L", "T"):
-        return ""
+
+    def norm(r: str) -> str:
+        if r == "W2":
+            return "W"
+        if r == "L1":
+            return "L"
+        if r == "T":
+            return "T"
+        return r
+
+    last = norm(results[-1])
+    if last not in ("W", "L"):
+        return ""  # kein T-Streak
+
     n = 0
     for r in reversed(results):
-        if r == last:
+        if norm(r) == last:
             n += 1
         else:
             break
     return f"{last}{n}"
-
 
 def _team_points_from_results(results: List[str]) -> int:
     pts = 0
     for r in results:
         if r == "W":
             pts += 3
-        elif r == "T":
+        elif r == "W2":
+            pts += 2
+        elif r == "L1":
             pts += 1
+        # "L" gibt 0
+        # "T" ignorieren wir (soll nicht mehr vorkommen)
     return pts
-
 
 def _safe_mean(vals: List[Any]) -> Optional[float]:
     xs = [v for v in vals if isinstance(v, (int, float))]
@@ -700,11 +712,11 @@ def _build_game_logs_from_spieltage(season: int) -> Dict[str, List[Dict[str, Any
             is_ot_so = r.get("overtime", False) or r.get("shootout", False)
 
             if gh > ga:
-                home_res = "W2" if is_ot_so else "W"
-                away_res = "L1" if is_ot_so else "L"
+                home_res = "W" if is_ot_so else "W"
+                away_res = "L" if is_ot_so else "L"
             elif gh < ga:
-                home_res = "L1" if is_ot_so else "L"
-                away_res = "W2" if is_ot_so else "W"
+                home_res = "L" if is_ot_so else "L"
+                away_res = "W" if is_ot_so else "W"
             else:
                 home_res, away_res = "T", "T"
 
@@ -760,9 +772,9 @@ def save_league_stats_snapshot(
                 "team": team,
                 "conference": conf_name,
                 "gp": gp,
-                "w": results.count("W"),
-                "l": results.count("L"),
-                "t": results.count("T"),
+                "w": results.count("W") + results.count("W2"),
+                "l": results.count("L") + results.count("L1"),
+                "t": 0,
                 "points_table": int(row.get("Points", 0)),
                 "points_from_logs": _team_points_from_results(results),
                 "gf_table": int(row.get("Goals For", 0)),
@@ -1395,7 +1407,18 @@ def simulate_match(
     else:
         # Unentschieden nach allem, aber sollte nicht
         pass
+    # --- Goals For / Against updaten (WICHTIG: sonst bleiben GF/GA/GD überall 0) ---
+    # Safety: falls Spalten fehlen (sollten sie nicht)
+    if "Goals For" not in df.columns:
+        df["Goals For"] = 0
+    if "Goals Against" not in df.columns:
+        df["Goals Against"] = 0
 
+    df.loc[df["Team"] == home, "Goals For"] += int(g_home)
+    df.loc[df["Team"] == home, "Goals Against"] += int(g_away)
+
+    df.loc[df["Team"] == away, "Goals For"] += int(g_away)
+    df.loc[df["Team"] == away, "Goals Against"] += int(g_home)
     # Update last5 für Teams
     if g_home > g_away:
         home_result = "W2" if is_overtime or is_shootout else "W"
@@ -1798,34 +1821,7 @@ def step_regular_season_once() -> Dict[str, Any]:
     ssched   = state["ssched"]
     stats    = pd.DataFrame(state["stats"])
 
-    # === CANON-OVERRIDE: Saison 1, Spieltag 3 ===
-    # Dieser Block kann für Rückbau einfach entfernt werden.
-    if season == 1 and spieltag == 3:
-        print("[CANON-OVERRIDE] Spieltag 3 Saison 1: Schreibe Canon-Daten, keine Simulation!")
-        from pathlib import Path
-        import json
-        # Basisverzeichnis für alle Daten-Operationen
-        DATA_ROOT = Path("/opt/highspeed/data")
-        # Canon-Daten laden (aus data-Repo!)
-        canon_path = DATA_ROOT / "canon_spieltag_03.json"
-        with canon_path.open("r", encoding="utf-8") as f:
-            canon_payload = json.load(f)
-        # Schreibe die Canon-Daten als spieltag_03.json ins data-Repo
-        out_path = DATA_ROOT / "spieltage" / season_folder(season) / f"spieltag_{spieltag:02}.json"
-        out_path.parent.mkdir(parents=True, exist_ok=True)
-        with out_path.open("w", encoding="utf-8") as f:
-            json.dump(canon_payload, f, indent=2, ensure_ascii=False)
-        print(f"[CANON-OVERRIDE] Canon-Spieltag gespeichert: {out_path}")
-        # Savegame im data-Repo updaten
-        savegame_path = DATA_ROOT / "saves" / "savegame.json"
-        with savegame_path.open("r", encoding="utf-8") as f:
-            state = json.load(f)
-        state["spieltag"] = spieltag + 1
-        with savegame_path.open("w", encoding="utf-8") as f:
-            json.dump(state, f, indent=2, ensure_ascii=False)
-        print(f"[CANON-OVERRIDE] Savegame aktualisiert: {savegame_path}")
-        return {"status": "canon_override", "season": season, "spieltag": spieltag + 1}
-    # === ENDE CANON-OVERRIDE ===
+ 
 
     max_spieltage = (len(nord_teams) - 1) * 2
     if isinstance(spieltag, int) and spieltag > max_spieltage:
@@ -1838,7 +1834,9 @@ def step_regular_season_once() -> Dict[str, Any]:
 
     # --- NORD ---
     print("\n— Nord —")
-    today_nord_matches = nsched[:len(nord) // 2]
+    half_nord = len(nord) // 2
+    start_nord = (spieltag - 1) * half_nord
+    today_nord_matches = nsched[start_nord : start_nord + half_nord]
     prepare_lineups_for_matches(nord, today_nord_matches)
 
     lineup_table_nord = _build_lineup_table(nord, today_nord_matches)
@@ -1856,11 +1854,12 @@ def step_regular_season_once() -> Dict[str, Any]:
         print(s)
         results_json.append(j)
         replay_matches.append(replay)
-    nsched = nsched[len(nord) // 2:]
 
     # --- SÜD ---
     print("\n— Süd —")
-    today_sued_matches = ssched[:len(sued) // 2]
+    half_sued = len(sued) // 2
+    start_sued = (spieltag - 1) * half_sued
+    today_sued_matches = ssched[start_sued : start_sued + half_sued]
     prepare_lineups_for_matches(sued, today_sued_matches)
 
     lineup_table_sued = _build_lineup_table(sued, today_sued_matches)
@@ -1878,7 +1877,6 @@ def step_regular_season_once() -> Dict[str, Any]:
         print(s)
         results_json.append(j)
         replay_matches.append(replay)
-    ssched = ssched[len(sued) // 2:]
 
     _print_tables(nord, sued, stats)
 
@@ -2168,6 +2166,17 @@ def _self_tests() -> None:
     print("✅ Self-Tests bestanden")
 
 
+def init_season() -> None:
+    """
+    Initializes nsched and ssched for the season.
+    """
+    global nsched, ssched
+    nsched = create_schedule(nord_teams)
+    ssched = create_schedule(sued_teams)
+    nsched = _enforce_novadelta_augsburg_third_match(nsched, nord_teams)
+    ssched = _enforce_novadelta_augsburg_third_match(ssched, sued_teams)
+
+
 if __name__ == "__main__":
     _ensure_dirs()
     _self_tests()
@@ -2180,6 +2189,12 @@ if __name__ == "__main__":
         print(f"\n🎬 Neue Saison {season} gestartet.")
     else:
         print(f"\n🔄 Saison {state['season']} wird fortgesetzt (Spieltag {state['spieltag']}).")
+
+    season = state['season']
+    init_season()
+    state["nsched"] = nsched
+    state["ssched"] = ssched
+    save_state(state)
 
     print("\nBedienung:")
     print("  [Enter]  → nächsten Spieltag simulieren")
