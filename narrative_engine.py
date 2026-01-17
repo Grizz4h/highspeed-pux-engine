@@ -690,6 +690,15 @@ def build_narratives_for_matchday(
 
     # Convert old format to new format if needed
     teams_dict = latest_json.get('teams', {})
+    if isinstance(teams_dict, list):
+        # If 'teams' is a list, convert to dict
+        temp_dict = {}
+        for item in teams_dict:
+            if isinstance(item, dict):
+                team_name = item.get('Team', '')
+                if team_name:
+                    temp_dict[team_name] = {'last5': item.get('last5', [])}
+        teams_dict = temp_dict
     if not teams_dict and ('tabelle_nord' in latest_json or 'tabelle_sued' in latest_json):
         # Old format - convert
         teams_dict = {}
@@ -698,7 +707,13 @@ def build_narratives_for_matchday(
                 team_name = team_entry.get('Team', '')
                 if team_name:
                     teams_dict[team_name] = {'last5': team_entry.get('last5', [])}
-
+    # If still not found, try from spieltag_json
+    if not teams_dict:
+        for table in [spieltag_json.get('tabelle_nord', []), spieltag_json.get('tabelle_sued', [])]:
+            for team_entry in table:
+                team_name = team_entry.get('Team', '')
+                if team_name:
+                    teams_dict[team_name] = {'last5': team_entry.get('last5', [])}
     # Support both structures: 'games' (new) and 'results' (legacy)
     matches_list = spieltag_json.get('games', [])
     if not matches_list:
@@ -714,8 +729,8 @@ def build_narratives_for_matchday(
         ctx = {
             'season': season,
             'spieltag': effective_spieltag,
-            'home_last5': teams_dict.get(home, {}).get('last5', []),
-            'away_last5': teams_dict.get(away, {}).get('last5', []),
+            'home_last5': (teams_dict.get(home, {}) if isinstance(teams_dict, dict) else {}).get('last5', []),
+            'away_last5': (teams_dict.get(away, {}) if isinstance(teams_dict, dict) else {}).get('last5', []),
         }
 
         line1 = generate_line1(match, ctx, memory, used_openers, used_adjectives)

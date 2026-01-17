@@ -1,0 +1,163 @@
+[
+  {
+    "league": "DEL",
+    "real_team_name": "Eisbären Berlin",
+    "real_code": "BER",
+    "highspeed_name": "Whiteout Berlin",
+    "highspeed_code": "WOB",
+    "conference": "Nord"
+  },
+  {
+    "league": "DEL",
+    "real_team_name": "Grizzlys Wolfsburg",
+    "real_code": "WOB",
+    "highspeed_name": "Wolfsburg Voltsturm",
+    "highspeed_code": "VST",
+    "conference": "Nord"
+  },
+  {
+    "league": "DEL2",
+    "real_team_name": "Krefeld Pinguine",
+    "real_code": "KEV",
+    "highspeed_name": "Krefeld Kernschlag",
+    "highspeed_code": "KKS",
+    "conference": "Nord"
+  },
+  {
+    "league": "DEL2",
+    "real_team_name": "Düsseldorf EG",
+    "real_code": "DEG",
+    "highspeed_name": "Düsseldorf Aurora",
+    "highspeed_code": "DAU",
+    "conference": "Nord"
+  },
+  {
+    "league": "DEL",
+    "real_team_name": "Kölner Haie",
+    "real_code": "KEC",
+    "highspeed_name": "Köln Blitzhaie",
+    "highspeed_code": "KBH",
+    "conference": "Nord"
+  },
+  {
+    "league": "DEL",
+    "real_team_name": "Iserlohn Roosters",
+    "real_code": "IEC",
+    "highspeed_name": "Iserlohn Miners",
+    "highspeed_code": "IMI",
+    "conference": "Nord"
+  },
+  {
+    "league": "DEL2",
+    "real_team_name": "Kassel Huskies",
+    "real_code": "ECK",
+    "highspeed_name": "Kassel Zenit",
+    "highspeed_code": "KZE",
+    "conference": "Nord"
+  },
+  {
+    "league": "DEL2",
+    "real_team_name": "EC Bad Nauheim",
+    "real_code": "ECN",
+    "highspeed_name": "Bad Nauheim Devils",
+    "highspeed_code": "BND",
+    "conference": "Nord"
+  },
+  {
+    "league": "DEL",
+    "real_team_name": "Fischtown Pinguins Bremerhaven",
+    "real_code": "BHV",
+    "highspeed_name": "Bremerhaven Trident",
+    "highspeed_code": "BTR",
+    "conference": "Nord"
+  },
+  {
+    "league": "DEL",
+    "real_team_name": "Löwen Frankfurt",
+    "real_code": "FRA",
+    "highspeed_name": "Frankfurt Core",
+    "highspeed_code": "FCO",
+    "conference": "Nord"
+  },
+
+  {
+    "league": "DEL",
+    "real_team_name": "ERC Ingolstadt",
+    "real_code": "ING",
+    "highspeed_name": "Novadelta Panther",
+    "highspeed_code": "NDP",
+    "conference": "Sued"
+  },
+  {
+    "league": "DEL",
+    "real_team_name": "EHC Red Bull München",
+    "real_code": "MUC",
+    "highspeed_name": "München FluxBullen",
+    "highspeed_code": "MFB",
+    "conference": "Sued"
+  },
+  {
+    "league": "DEL",
+    "real_team_name": "Augsburger Panther",
+    "real_code": "AEV",
+    "highspeed_name": "Augsburg Ferox",
+    "highspeed_code": "AFX",
+    "conference": "Sued"
+  },
+  {
+    "league": "DEL",
+    "real_team_name": "Schwenninger Wild Wings",
+    "real_code": "SWW",
+    "highspeed_name": "Schwenningen Sturmflügel",
+    "highspeed_code": "SSF",
+    "conference": "Sued"
+  },
+  {
+    "league": "DEL",
+    "real_team_name": "Nürnberg Ice Tigers",
+    "real_code": "NIT",
+    "highspeed_name": "Nürnberg Eistiger",
+    "highspeed_code": "NEI",
+    "conference": "Sued"
+  },
+  {
+    "league": "DEL2",
+    "real_team_name": "EV Landshut",
+    "real_code": "EVL",
+    "highspeed_name": "Landshut Lichtkern",
+    "highspeed_code": "LLK",
+    "conference": "Sued"
+  },
+  {
+    "league": "DEL2",
+    "real_team_name": "Eisbären Regensburg",
+    "real_code": "EBR",
+    "highspeed_name": "Regensburg Pulse",
+    "highspeed_code": "RPU",
+    "conference": "Sued"
+  },
+  {
+    "league": "DEL2",
+    "real_team_name": "Ravensburg Towerstars",
+    "real_code": "RVT",
+    "highspeed_name": "Ravensburg Zenit Falken",
+    "highspeed_code": "RZF",
+    "conference": "Sued"
+  },
+  {
+    "league": "DEL",
+    "real_team_name": "Adler Mannheim",
+    "real_code": "MAN",
+    "highspeed_name": "Mannheim Ventus",
+    "highspeed_code": "MVE",
+    "conference": "Sued"
+  },
+  {
+    "league": "DEL",
+    "real_team_name": "Straubing Tigers",
+    "real_code": "STR",
+    "highspeed_name": "Straubing Forest Tigers",
+    "highspeed_code": "SFT",
+    "conference": "Sued"
+  }
+]

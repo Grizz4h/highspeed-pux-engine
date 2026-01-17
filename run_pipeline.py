@@ -37,6 +37,7 @@ REALETEAMS_FILE = BASE_DIR / "realeTeams_live.py"
 
 # Falls du später mal die Reihenfolge ändern willst, musst du nur diese Liste anfassen.
 PIPELINE_STEPS = [
+    ("Players.json regenerieren", "regenerate_players.py"),
     ("DEL2-Fetch (Goalies/Skater etc.)", "del2_fetch.py"),
     ("DEL-Fetch (Goalies/Skater etc.)", "del_fetch.py"),
     ("Merge Baseline (DEL + DEL2)", "merge_players_baseline.py"),

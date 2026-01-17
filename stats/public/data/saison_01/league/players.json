@@ -1,0 +1,3733 @@
+[
+  {
+    "player_id": "UNK_0001",
+    "name": "Petr Abbansodato",
+    "slug": "petr-abbansodato",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/petr-abbansodato.png"
+  },
+  {
+    "player_id": "UNK_0002",
+    "name": "Conred Abdelsauser",
+    "slug": "conred-abdelsauser",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/conred-abdelsauser.png"
+  },
+  {
+    "player_id": "UNK_0003",
+    "name": "Mati Abttli",
+    "slug": "mati-abttli",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/mati-abttli.png"
+  },
+  {
+    "player_id": "UNK_0006",
+    "name": "Ken Agostinov",
+    "slug": "ken-agostinov",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/ken-agostinov.png"
+  },
+  {
+    "player_id": "UNK_0007",
+    "name": "Aleca Ahlrott",
+    "slug": "aleca-ahlrott",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/aleca-ahlrott.png"
+  },
+  {
+    "player_id": "UNK_0009",
+    "name": "Sinani Akdagos",
+    "slug": "sinani-akdagos",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/sinani-akdagos.png"
+  },
+  {
+    "player_id": "UNK_0010",
+    "name": "Eugeni Alanovik",
+    "slug": "eugeni-alanovik",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/eugeni-alanovik.png"
+  },
+  {
+    "player_id": "UNK_0011",
+    "name": "Manu Allberger",
+    "slug": "manu-allberger",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/manu-allberger.png"
+  },
+  {
+    "player_id": "UNK_0012",
+    "name": "Wadi Alliven",
+    "slug": "wadi-alliven",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/wadi-alliven.png"
+  },
+  {
+    "player_id": "UNK_0013",
+    "name": "Toba Ancickvik",
+    "slug": "toba-ancickvik",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/toba-ancickvik.png"
+  },
+  {
+    "player_id": "UNK_0016",
+    "name": "Ale Angaran",
+    "slug": "ale-angaran",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/ale-angaran.png"
+  },
+  {
+    "player_id": "UNK_0018",
+    "name": "Pasco Aquinen",
+    "slug": "pasco-aquinen",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/pasco-aquinen.png"
+  },
+  {
+    "player_id": "UNK_0019",
+    "name": "Daniele Assavolyov",
+    "slug": "daniele-assavolyov",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/daniele-assavolyov.png"
+  },
+  {
+    "player_id": "UNK_0020",
+    "name": "LouisMarca Aubryik",
+    "slug": "louismarca-aubryik",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/louismarca-aubryik.png"
+  },
+  {
+    "player_id": "UNK_0021",
+    "name": "Bradya Austinov",
+    "slug": "bradya-austinov",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/bradya-austinov.png"
+  },
+  {
+    "player_id": "UNK_0024",
+    "name": "Time Bakosan",
+    "slug": "time-bakosan",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/time-bakosan.png"
+  },
+  {
+    "player_id": "UNK_0025",
+    "name": "Maxe Balinov",
+    "slug": "maxe-balinov",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/maxe-balinov.png"
+  },
+  {
+    "player_id": "UNK_0026",
+    "name": "Rilan Barvik",
+    "slug": "rilan-barvik",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/rilan-barvik.png"
+  },
+  {
+    "player_id": "UNK_0027",
+    "name": "Evane Barrattto",
+    "slug": "evane-barrattto",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/evane-barrattto.png"
+  },
+  {
+    "player_id": "UNK_0028",
+    "name": "Michaelo Bartulin",
+    "slug": "michaelo-bartulin",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/michaelo-bartulin.png"
+  },
+  {
+    "player_id": "UNK_0029",
+    "name": "Boazo Basov",
+    "slug": "boazo-basov",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/boazo-basov.png"
+  },
+  {
+    "player_id": "UNK_0030",
+    "name": "Jasonu Bastov",
+    "slug": "jasonu-bastov",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/jasonu-bastov.png"
+  },
+  {
+    "player_id": "UNK_0031",
+    "name": "Mara Baudunov",
+    "slug": "mara-baudunov",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/mara-baudunov.png"
+  },
+  {
+    "player_id": "UNK_0032",
+    "name": "Nicolasa Beaudan",
+    "slug": "nicolasa-beaudan",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/nicolasa-beaudan.png"
+  },
+  {
+    "player_id": "UNK_0035",
+    "name": "Finni Becklek",
+    "slug": "finni-becklek",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/finni-becklek.png"
+  },
+  {
+    "player_id": "UNK_0036",
+    "name": "Ryani Bednarov",
+    "slug": "ryani-bednarov",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/ryani-bednarov.png"
+  },
+  {
+    "player_id": "UNK_0037",
+    "name": "Tima Bendar",
+    "slug": "tima-bendar",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/tima-bendar.png"
+  },
+  {
+    "player_id": "UNK_0038",
+    "name": "Sebu Bengtsvik",
+    "slug": "sebu-bengtsvik",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/sebu-bengtsvik.png"
+  },
+  {
+    "player_id": "UNK_0039",
+    "name": "Krise Bennettto",
+    "slug": "krise-bennettto",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/krise-bennettto.png"
+  },
+  {
+    "player_id": "UNK_0040",
+    "name": "Tylera Benik",
+    "slug": "tylera-benik",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/tylera-benik.png"
+  },
+  {
+    "player_id": "UNK_0041",
+    "name": "Alexe Berardinelik",
+    "slug": "alexe-berardinelik",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/alexe-berardinelik.png"
+  },
+  {
+    "player_id": "UNK_0042",
+    "name": "Wadi Bergmtto",
+    "slug": "wadi-bergmtto",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/wadi-bergmtto.png"
+  },
+  {
+    "player_id": "UNK_0043",
+    "name": "Leane Bergen",
+    "slug": "leane-bergen",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/leane-bergen.png"
+  },
+  {
+    "player_id": "UNK_0044",
+    "name": "Rayanu Bettahsen",
+    "slug": "rayanu-bettahsen",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/rayanu-bettahsen.png"
+  },
+  {
+    "player_id": "UNK_0045",
+    "name": "Anto Bibeaovik",
+    "slug": "anto-bibeaovik",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/anto-bibeaovik.png"
+  },
+  {
+    "player_id": "UNK_0046",
+    "name": "Felixe Bickar",
+    "slug": "felixe-bickar",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/felixe-bickar.png"
+  },
+  {
+    "player_id": "UNK_0047",
+    "name": "Kevine Bickar",
+    "slug": "kevine-bickar",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/kevine-bickar.png"
+  },
+  {
+    "player_id": "UNK_0048",
+    "name": "Phe Bidoulov",
+    "slug": "phe-bidoulov",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/phe-bidoulov.png"
+  },
+  {
+    "player_id": "UNK_0051",
+    "name": "Andre Biresven",
+    "slug": "andre-biresven",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/andre-biresven.png"
+  },
+  {
+    "player_id": "UNK_0052",
+    "name": "Dominiki Bittnlek",
+    "slug": "dominiki-bittnlek",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/dominiki-bittnlek.png"
+  },
+  {
+    "player_id": "UNK_0053",
+    "name": "Michaelo Bitzven",
+    "slug": "michaelo-bitzven",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/michaelo-bitzven.png"
+  },
+  {
+    "player_id": "UNK_0054",
+    "name": "Ale Blankov",
+    "slug": "ale-blankov",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/ale-blankov.png"
+  },
+  {
+    "player_id": "UNK_0056",
+    "name": "Ola Blumenkan",
+    "slug": "ola-blumenkan",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/ola-blumenkan.png"
+  },
+  {
+    "player_id": "UNK_0057",
+    "name": "Kristianu Blumenschro",
+    "slug": "kristianu-blumenschro",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/kristianu-blumenschro.png"
+  },
+  {
+    "player_id": "UNK_0058",
+    "name": "Andrewe Bodnarchro",
+    "slug": "andrewe-bodnarchro",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/andrewe-bodnarchro.png"
+  },
+  {
+    "player_id": "UNK_0060",
+    "name": "Dominiki Bokksen",
+    "slug": "dominiki-bokksen",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/dominiki-bokksen.png"
+  },
+  {
+    "player_id": "UNK_0061",
+    "name": "Tylera Bolandlek",
+    "slug": "tylera-bolandlek",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/tylera-bolandlek.png"
+  },
+  {
+    "player_id": "UNK_0062",
+    "name": "Lennya Boosin",
+    "slug": "lennya-boosin",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/lennya-boosin.png"
+  },
+  {
+    "player_id": "UNK_0063",
+    "name": "Jakuba Borzeckro",
+    "slug": "jakuba-borzeckro",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/jakuba-borzeckro.png"
+  },
+  {
+    "player_id": "UNK_0066",
+    "name": "Madisoni Boweydunov",
+    "slug": "madisoni-boweydunov",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/madisoni-boweydunov.png"
+  },
+  {
+    "player_id": "UNK_0067",
+    "name": "Parkera Bowlestto",
+    "slug": "parkera-bowlestto",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/parkera-bowlestto.png"
+  },
+  {
+    "player_id": "UNK_0068",
+    "name": "Jeri Braccnik",
+    "slug": "jeri-braccnik",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/jeri-braccnik.png"
+  },
+  {
+    "player_id": "UNK_0069",
+    "name": "Camerone Bracar",
+    "slug": "camerone-bracar",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/camerone-bracar.png"
+  },
+  {
+    "player_id": "UNK_0070",
+    "name": "Eriki Bradforovik",
+    "slug": "eriki-bradforovik",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/eriki-bradforovik.png"
+  },
+  {
+    "player_id": "UNK_0072",
+    "name": "Linusa Brandlik",
+    "slug": "linusa-brandlik",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/linusa-brandlik.png"
+  },
+  {
+    "player_id": "UNK_0073",
+    "name": "Marcu Brandtin",
+    "slug": "marcu-brandtin",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/marcu-brandtin.png"
+  },
+  {
+    "player_id": "UNK_0074",
+    "name": "Constantinu Braunovik",
+    "slug": "constantinu-braunovik",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/constantinu-braunovik.png"
+  },
+  {
+    "player_id": "UNK_0076",
+    "name": "Laurine Braunovik",
+    "slug": "laurine-braunovik",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/laurine-braunovik.png"
+  },
+  {
+    "player_id": "UNK_0079",
+    "name": "Codye Brennov",
+    "slug": "codye-brennov",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/codye-brennov.png"
+  },
+  {
+    "player_id": "UNK_0080",
+    "name": "Aleks Bratan",
+    "slug": "aleks-bratan",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/aleks-bratan.png"
+  },
+  {
+    "player_id": "UNK_0081",
+    "name": "Bret Brokan",
+    "slug": "bret-brokan",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/bret-brokan.png"
+  },
+  {
+    "player_id": "UNK_0083",
+    "name": "Adamo Brooksovik",
+    "slug": "adamo-brooksovik",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/adamo-brooksovik.png"
+  },
+  {
+    "player_id": "UNK_0084",
+    "name": "Eriki Browntto",
+    "slug": "eriki-browntto",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/eriki-browntto.png"
+  },
+  {
+    "player_id": "UNK_0085",
+    "name": "Daniele Bruchtto",
+    "slug": "daniele-bruchtto",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/daniele-bruchtto.png"
+  },
+  {
+    "player_id": "UNK_0086",
+    "name": "Phe Bruggissik",
+    "slug": "phe-bruggissik",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/phe-bruggissik.png"
+  },
+  {
+    "player_id": "UNK_0088",
+    "name": "Tima Brunnhubinov",
+    "slug": "tima-brunnhubinov",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/tima-brunnhubinov.png"
+  },
+  {
+    "player_id": "UNK_0089",
+    "name": "Felixe Brücklek",
+    "slug": "felixe-bruecklek",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/felixe-bruecklek.png"
+  },
+  {
+    "player_id": "UNK_0090",
+    "name": "Viktore Buchnik",
+    "slug": "viktore-buchnik",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/viktore-buchnik.png"
+  },
+  {
+    "player_id": "UNK_0091",
+    "name": "Floriani Buglov",
+    "slug": "floriani-buglov",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/floriani-buglov.png"
+  },
+  {
+    "player_id": "UNK_0093",
+    "name": "Nathi Burnsvik",
+    "slug": "nathi-burnsvik",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/nathi-burnsvik.png"
+  },
+  {
+    "player_id": "UNK_0094",
+    "name": "Eriki Buschik",
+    "slug": "eriki-buschik",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/eriki-buschik.png"
+  },
+  {
+    "player_id": "UNK_0095",
+    "name": "Dono Busdekvik",
+    "slug": "dono-busdekvik",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/dono-busdekvik.png"
+  },
+  {
+    "player_id": "UNK_0096",
+    "name": "Ryani Buttonan",
+    "slug": "ryani-buttonan",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/ryani-buttonan.png"
+  },
+  {
+    "player_id": "UNK_0097",
+    "name": "Blainu Byronvik",
+    "slug": "blainu-byronvik",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/blainu-byronvik.png"
+  },
+  {
+    "player_id": "UNK_0098",
+    "name": "Ludwu Byströov",
+    "slug": "ludwu-bystroeov",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/ludwu-bystroeov.png"
+  },
+  {
+    "player_id": "UNK_0099",
+    "name": "Justu Böttninov",
+    "slug": "justu-boettninov",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/justu-boettninov.png"
+  },
+  {
+    "player_id": "UNK_0100",
+    "name": "Justinu Büsingsen",
+    "slug": "justinu-buesingsen",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/justinu-buesingsen.png"
+  },
+  {
+    "player_id": "UNK_0102",
+    "name": "Robino Calstar",
+    "slug": "robino-calstar",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/robino-calstar.png"
+  },
+  {
+    "player_id": "UNK_0103",
+    "name": "Anthonyu Camarven",
+    "slug": "anthonyu-camarven",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/anthonyu-camarven.png"
+  },
+  {
+    "player_id": "UNK_0105",
+    "name": "Davida Cernyinov",
+    "slug": "davida-cernyinov",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/davida-cernyinov.png"
+  },
+  {
+    "player_id": "UNK_0108",
+    "name": "Matto Choupanin",
+    "slug": "matto-choupanin",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/matto-choupanin.png"
+  },
+  {
+    "player_id": "UNK_0109",
+    "name": "Juliano Chrobven",
+    "slug": "juliano-chrobven",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/juliano-chrobven.png"
+  },
+  {
+    "player_id": "UNK_0110",
+    "name": "Sebu Cimmermven",
+    "slug": "sebu-cimmermven",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/sebu-cimmermven.png"
+  },
+  {
+    "player_id": "UNK_0111",
+    "name": "Michaelo Clarkov",
+    "slug": "michaelo-clarkov",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/michaelo-clarkov.png"
+  },
+  {
+    "player_id": "UNK_0112",
+    "name": "Michaelo Connollnik",
+    "slug": "michaelo-connollnik",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/michaelo-connollnik.png"
+  },
+  {
+    "player_id": "UNK_0113",
+    "name": "Coltu Conradtli",
+    "slug": "coltu-conradtli",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/coltu-conradtli.png"
+  },
+  {
+    "player_id": "UNK_0114",
+    "name": "Ericu Cornvik",
+    "slug": "ericu-cornvik",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/ericu-cornvik.png"
+  },
+  {
+    "player_id": "UNK_0115",
+    "name": "Josephu Cramarosan",
+    "slug": "josephu-cramarosan",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/josephu-cramarosan.png"
+  },
+  {
+    "player_id": "UNK_0116",
+    "name": "Robbii Czarnvik",
+    "slug": "robbii-czarnvik",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/robbii-czarnvik.png"
+  },
+  {
+    "player_id": "UNK_0118",
+    "name": "Rileyu Damiansen",
+    "slug": "rileyu-damiansen",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/rileyu-damiansen.png"
+  },
+  {
+    "player_id": "UNK_0119",
+    "name": "Colu Danielsmeiov",
+    "slug": "colu-danielsmeiov",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/colu-danielsmeiov.png"
+  },
+  {
+    "player_id": "UNK_0120",
+    "name": "Stephana Daschnov",
+    "slug": "stephana-daschnov",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/stephana-daschnov.png"
+  },
+  {
+    "player_id": "UNK_0121",
+    "name": "Maximiliana Daubndunov",
+    "slug": "maximiliana-daubndunov",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/maximiliana-daubndunov.png"
+  },
+  {
+    "player_id": "UNK_0122",
+    "name": "Kasparsi Daugaven",
+    "slug": "kasparsi-daugaven",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/kasparsi-daugaven.png"
+  },
+  {
+    "player_id": "UNK_0123",
+    "name": "Christophera DeSousovik",
+    "slug": "christophera-desousovik",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/christophera-desousovik.png"
+  },
+  {
+    "player_id": "UNK_0124",
+    "name": "Jeu Denik",
+    "slug": "jeu-denik",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/jeu-denik.png"
+  },
+  {
+    "player_id": "UNK_0125",
+    "name": "Pata Demetzar",
+    "slug": "pata-demetzar",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/pata-demetzar.png"
+  },
+  {
+    "player_id": "UNK_0126",
+    "name": "Ale Derschven",
+    "slug": "ale-derschven",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/ale-derschven.png"
+  },
+  {
+    "player_id": "UNK_0127",
+    "name": "Hanse Detschin",
+    "slug": "hanse-detschin",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/hanse-detschin.png"
+  },
+  {
+    "player_id": "UNK_0128",
+    "name": "Phe Dietldunov",
+    "slug": "phe-dietldunov",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/phe-dietldunov.png"
+  },
+  {
+    "player_id": "UNK_0130",
+    "name": "Stanislave Dietzlek",
+    "slug": "stanislave-dietzlek",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/stanislave-dietzlek.png"
+  },
+  {
+    "player_id": "UNK_0133",
+    "name": "Samueli DoveMcFalan",
+    "slug": "samueli-dovemcfalan",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/samueli-dovemcfalan.png"
+  },
+  {
+    "player_id": "UNK_0136",
+    "name": "Lucase Dumontsen",
+    "slug": "lucase-dumontsen",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/lucase-dumontsen.png"
+  },
+  {
+    "player_id": "UNK_0137",
+    "name": "Noahi Dunhamro",
+    "slug": "noahi-dunhamro",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/noahi-dunhamro.png"
+  },
+  {
+    "player_id": "UNK_0138",
+    "name": "Zacka Dybowskovik",
+    "slug": "zacka-dybowskovik",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/zacka-dybowskovik.png"
+  },
+  {
+    "player_id": "UNK_0139",
+    "name": "Arko Dziambovik",
+    "slug": "arko-dziambovik",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/arko-dziambovik.png"
+  },
+  {
+    "player_id": "UNK_0144",
+    "name": "Andi Edtli",
+    "slug": "andi-edtli",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/andi-edtli.png"
+  },
+  {
+    "player_id": "UNK_0146",
+    "name": "Josefa Ehamtli",
+    "slug": "josefa-ehamtli",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/josefa-ehamtli.png"
+  },
+  {
+    "player_id": "UNK_0147",
+    "name": "Ale Ehlven",
+    "slug": "ale-ehlven",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/ale-ehlven.png"
+  },
+  {
+    "player_id": "UNK_0148",
+    "name": "Yasino Ehlizov",
+    "slug": "yasino-ehlizov",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/yasino-ehlizov.png"
+  },
+  {
+    "player_id": "UNK_0149",
+    "name": "Juliano Eichinglek",
+    "slug": "juliano-eichinglek",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/juliano-eichinglek.png"
+  },
+  {
+    "player_id": "UNK_0151",
+    "name": "Maximiliana Eisenmengar",
+    "slug": "maximiliana-eisenmengar",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/maximiliana-eisenmengar.png"
+  },
+  {
+    "player_id": "UNK_0152",
+    "name": "Markusu Eisenschmlek",
+    "slug": "markusu-eisenschmlek",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/markusu-eisenschmlek.png"
+  },
+  {
+    "player_id": "UNK_0153",
+    "name": "Marcu ElSaysen",
+    "slug": "marcu-elsaysen",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/marcu-elsaysen.png"
+  },
+  {
+    "player_id": "UNK_0154",
+    "name": "Floriani Eliasov",
+    "slug": "floriani-eliasov",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/floriani-eliasov.png"
+  },
+  {
+    "player_id": "UNK_0155",
+    "name": "Moritzi Eliasov",
+    "slug": "moritzi-eliasov",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/moritzi-eliasov.png"
+  },
+  {
+    "player_id": "UNK_0156",
+    "name": "Morgon Elvik",
+    "slug": "morgon-elvik",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/morgon-elvik.png"
+  },
+  {
+    "player_id": "UNK_0158",
+    "name": "Juliano Elssen",
+    "slug": "juliano-elssen",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/juliano-elssen.png"
+  },
+  {
+    "player_id": "UNK_0159",
+    "name": "Davida Elsninov",
+    "slug": "davida-elsninov",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/davida-elsninov.png"
+  },
+  {
+    "player_id": "UNK_0160",
+    "name": "Nilso Eltenovik",
+    "slug": "nilso-eltenovik",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/nilso-eltenovik.png"
+  },
+  {
+    "player_id": "UNK_0161",
+    "name": "Vlo Emingik",
+    "slug": "vlo-emingik",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/vlo-emingik.png"
+  },
+  {
+    "player_id": "UNK_0162",
+    "name": "Joacimi Erikstli",
+    "slug": "joacimi-erikstli",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/joacimi-erikstli.png"
+  },
+  {
+    "player_id": "UNK_0163",
+    "name": "Mariusi Erken",
+    "slug": "mariusi-erken",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/mariusi-erken.png"
+  },
+  {
+    "player_id": "UNK_0164",
+    "name": "Macoyi Erkampin",
+    "slug": "macoyi-erkampin",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/macoyi-erkampin.png"
+  },
+  {
+    "player_id": "UNK_0165",
+    "name": "Luko Espositov",
+    "slug": "luko-espositov",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/luko-espositov.png"
+  },
+  {
+    "player_id": "UNK_0167",
+    "name": "Maximiliana Fabar",
+    "slug": "maximiliana-fabar",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/maximiliana-fabar.png"
+  },
+  {
+    "player_id": "UNK_0168",
+    "name": "Bencu Farkastto",
+    "slug": "bencu-farkastto",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/bencu-farkastto.png"
+  },
+  {
+    "player_id": "UNK_0169",
+    "name": "Philu Feistov",
+    "slug": "philu-feistov",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/philu-feistov.png"
+  },
+  {
+    "player_id": "UNK_0170",
+    "name": "Bradya Ferguinov",
+    "slug": "bradya-ferguinov",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/bradya-ferguinov.png"
+  },
+  {
+    "player_id": "UNK_0171",
+    "name": "Justinu Fesik",
+    "slug": "justinu-fesik",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/justinu-fesik.png"
+  },
+  {
+    "player_id": "UNK_0173",
+    "name": "Konradu Fiedlsen",
+    "slug": "konradu-fiedlsen",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/konradu-fiedlsen.png"
+  },
+  {
+    "player_id": "UNK_0176",
+    "name": "Daniele Fischbsen",
+    "slug": "daniele-fischbsen",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/daniele-fischbsen.png"
+  },
+  {
+    "player_id": "UNK_0177",
+    "name": "Christophera Fischven",
+    "slug": "christophera-fischven",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/christophera-fischven.png"
+  },
+  {
+    "player_id": "UNK_0180",
+    "name": "Steni Fischven",
+    "slug": "steni-fischven",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/steni-fischven.png"
+  },
+  {
+    "player_id": "UNK_0181",
+    "name": "Tobias Fischer",
+    "slug": "tobias-fischer",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/tobias-fischer.png"
+  },
+  {
+    "player_id": "UNK_0182",
+    "name": "Evane Fitzpatrin",
+    "slug": "evane-fitzpatrin",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/evane-fitzpatrin.png"
+  },
+  {
+    "player_id": "UNK_0183",
+    "name": "Tima Fleischtto",
+    "slug": "tima-fleischtto",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/tima-fleischtto.png"
+  },
+  {
+    "player_id": "UNK_0184",
+    "name": "Nicli Focksvik",
+    "slug": "nicli-focksvik",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/nicli-focksvik.png"
+  },
+  {
+    "player_id": "UNK_0185",
+    "name": "Toba Fohrlven",
+    "slug": "toba-fohrlven",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/toba-fohrlven.png"
+  },
+  {
+    "player_id": "UNK_0187",
+    "name": "Gabo Fontaintto",
+    "slug": "gabo-fontaintto",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/gabo-fontaintto.png"
+  },
+  {
+    "player_id": "UNK_0189",
+    "name": "Maximiliana Franzrnik",
+    "slug": "maximiliana-franzrnik",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/maximiliana-franzrnik.png"
+  },
+  {
+    "player_id": "UNK_0191",
+    "name": "Ale Frieov",
+    "slug": "ale-frieov",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/ale-frieov.png"
+  },
+  {
+    "player_id": "UNK_0192",
+    "name": "Linusa Frötli",
+    "slug": "linusa-froetli",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/linusa-froetli.png"
+  },
+  {
+    "player_id": "UNK_0193",
+    "name": "Rike Gaidven",
+    "slug": "rike-gaidven",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/rike-gaidven.png"
+  },
+  {
+    "player_id": "UNK_0194",
+    "name": "Niko Gajovsknik",
+    "slug": "niko-gajovsknik",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/niko-gajovsknik.png"
+  },
+  {
+    "player_id": "UNK_0195",
+    "name": "Hunti Garlenar",
+    "slug": "hunti-garlenar",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/hunti-garlenar.png"
+  },
+  {
+    "player_id": "UNK_0196",
+    "name": "Michaelo Garteov",
+    "slug": "michaelo-garteov",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/michaelo-garteov.png"
+  },
+  {
+    "player_id": "UNK_0197",
+    "name": "Tylera Gaudetvik",
+    "slug": "tylera-gaudetvik",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/tylera-gaudetvik.png"
+  },
+  {
+    "player_id": "UNK_0198",
+    "name": "Lukasu Gaustto",
+    "slug": "lukasu-gaustto",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/lukasu-gaustto.png"
+  },
+  {
+    "player_id": "UNK_0199",
+    "name": "Leona Gawankvik",
+    "slug": "leona-gawankvik",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/leona-gawankvik.png"
+  },
+  {
+    "player_id": "UNK_0200",
+    "name": "Korbiniani Geibov",
+    "slug": "korbiniani-geibov",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/korbiniani-geibov.png"
+  },
+  {
+    "player_id": "UNK_0201",
+    "name": "Daniele Geigtto",
+    "slug": "daniele-geigtto",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/daniele-geigtto.png"
+  },
+  {
+    "player_id": "UNK_0202",
+    "name": "Nicolasa Geitnar",
+    "slug": "nicolasa-geitnar",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/nicolasa-geitnar.png"
+  },
+  {
+    "player_id": "UNK_0203",
+    "name": "Cha Gerardar",
+    "slug": "cha-gerardar",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/cha-gerardar.png"
+  },
+  {
+    "player_id": "UNK_0204",
+    "name": "Anso Gergik",
+    "slug": "anso-gergik",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/anso-gergik.png"
+  },
+  {
+    "player_id": "UNK_0205",
+    "name": "Tima Gettingsen",
+    "slug": "tima-gettingsen",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/tima-gettingsen.png"
+  },
+  {
+    "player_id": "UNK_0206",
+    "name": "Mateju Giesltto",
+    "slug": "mateju-giesltto",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/mateju-giesltto.png"
+  },
+  {
+    "player_id": "UNK_0207",
+    "name": "Seano Gilestto",
+    "slug": "seano-gilestto",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/seano-gilestto.png"
+  },
+  {
+    "player_id": "UNK_0208",
+    "name": "Johne Gilmoik",
+    "slug": "johne-gilmoik",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/johne-gilmoik.png"
+  },
+  {
+    "player_id": "UNK_0209",
+    "name": "Abbo Girdunov",
+    "slug": "abbo-girdunov",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/abbo-girdunov.png"
+  },
+  {
+    "player_id": "UNK_0210",
+    "name": "Tyi Glovtto",
+    "slug": "tyi-glovtto",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/tyi-glovtto.png"
+  },
+  {
+    "player_id": "UNK_0212",
+    "name": "Maximiliana Glötzlsen",
+    "slug": "maximiliana-gloetzlsen",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/maximiliana-gloetzlsen.png"
+  },
+  {
+    "player_id": "UNK_0213",
+    "name": "Simona Gnypov",
+    "slug": "simona-gnypov",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/simona-gnypov.png"
+  },
+  {
+    "player_id": "UNK_0214",
+    "name": "Philu Gogullik",
+    "slug": "philu-gogullik",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/philu-gogullik.png"
+  },
+  {
+    "player_id": "UNK_0215",
+    "name": "Trevu Goochan",
+    "slug": "trevu-goochan",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/trevu-goochan.png"
+  },
+  {
+    "player_id": "UNK_0218",
+    "name": "Williame Grabtto",
+    "slug": "williame-grabtto",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/williame-grabtto.png"
+  },
+  {
+    "player_id": "UNK_0220",
+    "name": "Anthonyu Grecan",
+    "slug": "anthonyu-grecan",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/anthonyu-grecan.png"
+  },
+  {
+    "player_id": "UNK_0221",
+    "name": "Alexe Greenar",
+    "slug": "alexe-greenar",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/alexe-greenar.png"
+  },
+  {
+    "player_id": "UNK_0222",
+    "name": "Ale Greniov",
+    "slug": "ale-greniov",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/ale-greniov.png"
+  },
+  {
+    "player_id": "UNK_0223",
+    "name": "Yumu Grimmov",
+    "slug": "yumu-grimmov",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/yumu-grimmov.png"
+  },
+  {
+    "player_id": "UNK_0225",
+    "name": "Philu Gründlar",
+    "slug": "philu-gruendlar",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/philu-gruendlar.png"
+  },
+  {
+    "player_id": "UNK_0226",
+    "name": "Kristersi Gudlevskar",
+    "slug": "kristersi-gudlevskar",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/kristersi-gudlevskar.png"
+  },
+  {
+    "player_id": "UNK_0227",
+    "name": "Maxe Görtzik",
+    "slug": "maxe-goertzik",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/maxe-goertzik.png"
+  },
+  {
+    "player_id": "UNK_0229",
+    "name": "Lea Hafenrichtik",
+    "slug": "lea-hafenrichtik",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/lea-hafenrichtik.png"
+  },
+  {
+    "player_id": "UNK_0230",
+    "name": "Pata Hagik",
+    "slug": "pata-hagik",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/pata-hagik.png"
+  },
+  {
+    "player_id": "UNK_0231",
+    "name": "Codye Haiskanov",
+    "slug": "codye-haiskanov",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/codye-haiskanov.png"
+  },
+  {
+    "player_id": "UNK_0232",
+    "name": "Nicholasu Hallorar",
+    "slug": "nicholasu-hallorar",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/nicholasu-hallorar.png"
+  },
+  {
+    "player_id": "UNK_0235",
+    "name": "Kevine Handschdunov",
+    "slug": "kevine-handschdunov",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/kevine-handschdunov.png"
+  },
+  {
+    "player_id": "UNK_0236",
+    "name": "Hendrike Hantto",
+    "slug": "hendrike-hantto",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/hendrike-hantto.png"
+  },
+  {
+    "player_id": "UNK_0237",
+    "name": "Christiana Hankov",
+    "slug": "christiana-hankov",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/christiana-hankov.png"
+  },
+  {
+    "player_id": "UNK_0239",
+    "name": "Martine Hasovik",
+    "slug": "martine-hasovik",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/martine-hasovik.png"
+  },
+  {
+    "player_id": "UNK_0240",
+    "name": "Luka Hauven",
+    "slug": "luka-hauven",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/luka-hauven.png"
+  },
+  {
+    "player_id": "UNK_0241",
+    "name": "Henrike Haukelik",
+    "slug": "henrike-haukelik",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/henrike-haukelik.png"
+  },
+  {
+    "player_id": "UNK_0243",
+    "name": "Jacobe Hayhursan",
+    "slug": "jacobe-hayhursan",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/jacobe-hayhursan.png"
+  },
+  {
+    "player_id": "UNK_0244",
+    "name": "Owene Headricik",
+    "slug": "owene-headricik",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/owene-headricik.png"
+  },
+  {
+    "player_id": "UNK_0245",
+    "name": "Dille Heatheringttto",
+    "slug": "dille-heatheringttto",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/dille-heatheringttto.png"
+  },
+  {
+    "player_id": "UNK_0246",
+    "name": "Elisu Hedov",
+    "slug": "elisu-hedov",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/elisu-hedov.png"
+  },
+  {
+    "player_id": "UNK_0249",
+    "name": "Niki Heiglik",
+    "slug": "niki-heiglik",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/niki-heiglik.png"
+  },
+  {
+    "player_id": "UNK_0250",
+    "name": "Thoma Heiglik",
+    "slug": "thoma-heiglik",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/thoma-heiglik.png"
+  },
+  {
+    "player_id": "UNK_0251",
+    "name": "Maximiliana Heimov",
+    "slug": "maximiliana-heimov",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/maximiliana-heimov.png"
+  },
+  {
+    "player_id": "UNK_0254",
+    "name": "Daniele Henten",
+    "slug": "daniele-henten",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/daniele-henten.png"
+  },
+  {
+    "player_id": "UNK_0256",
+    "name": "Fabianu Herrinov",
+    "slug": "fabianu-herrinov",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/fabianu-herrinov.png"
+  },
+  {
+    "player_id": "UNK_0258",
+    "name": "Jorde Hickmotik",
+    "slug": "jorde-hickmotik",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/jorde-hickmotik.png"
+  },
+  {
+    "player_id": "UNK_0259",
+    "name": "Jake Hildebrro",
+    "slug": "jake-hildebrro",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/jake-hildebrro.png"
+  },
+  {
+    "player_id": "UNK_0260",
+    "name": "Yushirohe Hiranik",
+    "slug": "yushirohe-hiranik",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/yushirohe-hiranik.png"
+  },
+  {
+    "player_id": "UNK_0261",
+    "name": "Akite Hirosdunov",
+    "slug": "akite-hirosdunov",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/akite-hirosdunov.png"
+  },
+  {
+    "player_id": "UNK_0262",
+    "name": "Taro Hirosdunov",
+    "slug": "taro-hirosdunov",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/taro-hirosdunov.png"
+  },
+  {
+    "player_id": "UNK_0265",
+    "name": "Mita Hoelschinov",
+    "slug": "mita-hoelschinov",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/mita-hoelschinov.png"
+  },
+  {
+    "player_id": "UNK_0266",
+    "name": "Joele Hofik",
+    "slug": "joele-hofik",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/joele-hofik.png"
+  },
+  {
+    "player_id": "UNK_0268",
+    "name": "Maximiliana Hopsen",
+    "slug": "maximiliana-hopsen",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/maximiliana-hopsen.png"
+  },
+  {
+    "player_id": "UNK_0269",
+    "name": "Jule Hudacinov",
+    "slug": "jule-hudacinov",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/jule-hudacinov.png"
+  },
+  {
+    "player_id": "UNK_0270",
+    "name": "Leona Hungereckdunov",
+    "slug": "leona-hungereckdunov",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/leona-hungereckdunov.png"
+  },
+  {
+    "player_id": "UNK_0271",
+    "name": "Philu Hungereckdunov",
+    "slug": "philu-hungereckdunov",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/philu-hungereckdunov.png"
+  },
+  {
+    "player_id": "UNK_0272",
+    "name": "Johe Husstli",
+    "slug": "johe-husstli",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/johe-husstli.png"
+  },
+  {
+    "player_id": "UNK_0273",
+    "name": "Håkone Häneltik",
+    "slug": "håkone-haeneltik",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/håkone-haeneltik.png"
+  },
+  {
+    "player_id": "UNK_0274",
+    "name": "Mirke Höfflro",
+    "slug": "mirke-hoefflro",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/mirke-hoefflro.png"
+  },
+  {
+    "player_id": "UNK_0275",
+    "name": "Ericu Hördlinov",
+    "slug": "ericu-hoerdlinov",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/ericu-hoerdlinov.png"
+  },
+  {
+    "player_id": "UNK_0276",
+    "name": "Nikla Hübndunov",
+    "slug": "nikla-huebndunov",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/nikla-huebndunov.png"
+  },
+  {
+    "player_id": "UNK_0277",
+    "name": "Leona Hümar",
+    "slug": "leona-huemar",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/leona-huemar.png"
+  },
+  {
+    "player_id": "UNK_0278",
+    "name": "Leo Hütten",
+    "slug": "leo-huetten",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/leo-huetten.png"
+  },
+  {
+    "player_id": "UNK_0280",
+    "name": "Tore Immvik",
+    "slug": "tore-immvik",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/tore-immvik.png"
+  },
+  {
+    "player_id": "UNK_0282",
+    "name": "Raphaelo Jakovlov",
+    "slug": "raphaelo-jakovlov",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/raphaelo-jakovlov.png"
+  },
+  {
+    "player_id": "UNK_0283",
+    "name": "Kris Jandro",
+    "slug": "kris-jandro",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/kris-jandro.png"
+  },
+  {
+    "player_id": "UNK_0284",
+    "name": "Zigi Jeglicen",
+    "slug": "zigi-jeglicen",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/zigi-jeglicen.png"
+  },
+  {
+    "player_id": "UNK_0285",
+    "name": "Andi Jenikdunov",
+    "slug": "andi-jenikdunov",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/andi-jenikdunov.png"
+  },
+  {
+    "player_id": "UNK_0286",
+    "name": "Nicholasu Jenvik",
+    "slug": "nicholasu-jenvik",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/nicholasu-jenvik.png"
+  },
+  {
+    "player_id": "UNK_0287",
+    "name": "Taro Jentzscven",
+    "slug": "taro-jentzscven",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/taro-jentzscven.png"
+  },
+  {
+    "player_id": "UNK_0290",
+    "name": "Marksi Jirgensdunov",
+    "slug": "marksi-jirgensdunov",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/marksi-jirgensdunov.png"
+  },
+  {
+    "player_id": "UNK_0291",
+    "name": "Coltona Jobksen",
+    "slug": "coltona-jobksen",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/coltona-jobksen.png"
+  },
+  {
+    "player_id": "UNK_0294",
+    "name": "Peytone Jonessen",
+    "slug": "peytone-jonessen",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/peytone-jonessen.png"
+  },
+  {
+    "player_id": "UNK_0295",
+    "name": "Michaelo Joyauxtto",
+    "slug": "michaelo-joyauxtto",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/michaelo-joyauxtto.png"
+  },
+  {
+    "player_id": "UNK_0297",
+    "name": "Lukasu Jungovik",
+    "slug": "lukasu-jungovik",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/lukasu-jungovik.png"
+  },
+  {
+    "player_id": "UNK_0298",
+    "name": "Lukasu Simone Jungovik",
+    "slug": "lukasu-simone-jungovik",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/lukasu-simone-jungovik.png"
+  },
+  {
+    "player_id": "UNK_0299",
+    "name": "Jannu Juvonven",
+    "slug": "jannu-juvonven",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/jannu-juvonven.png"
+  },
+  {
+    "player_id": "UNK_0302",
+    "name": "Aaronu Kaisdunov",
+    "slug": "aaronu-kaisdunov",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/aaronu-kaisdunov.png"
+  },
+  {
+    "player_id": "UNK_0304",
+    "name": "Zachi Kaisdunov",
+    "slug": "zachi-kaisdunov",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/zachi-kaisdunov.png"
+  },
+  {
+    "player_id": "UNK_0305",
+    "name": "Maximiliana Kammerven",
+    "slug": "maximiliana-kammerven",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/maximiliana-kammerven.png"
+  },
+  {
+    "player_id": "UNK_0307",
+    "name": "Ale Karachinov",
+    "slug": "ale-karachinov",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/ale-karachinov.png"
+  },
+  {
+    "player_id": "UNK_0308",
+    "name": "Eriki Karlsdunov",
+    "slug": "eriki-karlsdunov",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/eriki-karlsdunov.png"
+  },
+  {
+    "player_id": "UNK_0310",
+    "name": "Jule Karrsen",
+    "slug": "jule-karrsen",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/jule-karrsen.png"
+  },
+  {
+    "player_id": "UNK_0312",
+    "name": "Oliwo Kasktli",
+    "slug": "oliwo-kasktli",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/oliwo-kasktli.png"
+  },
+  {
+    "player_id": "UNK_0313",
+    "name": "Maximiliana Kastnlek",
+    "slug": "maximiliana-kastnlek",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/maximiliana-kastnlek.png"
+  },
+  {
+    "player_id": "UNK_0314",
+    "name": "Aust Keaten",
+    "slug": "aust-keaten",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/aust-keaten.png"
+  },
+  {
+    "player_id": "UNK_0315",
+    "name": "Romane Kechtov",
+    "slug": "romane-kechtov",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/romane-kechtov.png"
+  },
+  {
+    "player_id": "UNK_0316",
+    "name": "Tristano Keckvik",
+    "slug": "tristano-keckvik",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/tristano-keckvik.png"
+  },
+  {
+    "player_id": "UNK_0317",
+    "name": "Valttera Kemiläinlek",
+    "slug": "valttera-kemilaeinlek",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/valttera-kemilaeinlek.png"
+  },
+  {
+    "player_id": "UNK_0319",
+    "name": "Tanno Kerven",
+    "slug": "tanno-kerven",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/tanno-kerven.png"
+  },
+  {
+    "player_id": "UNK_0320",
+    "name": "Niki Kesslinov",
+    "slug": "niki-kesslinov",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/niki-kesslinov.png"
+  },
+  {
+    "player_id": "UNK_0321",
+    "name": "Flora Ketteren",
+    "slug": "flora-ketteren",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/flora-ketteren.png"
+  },
+  {
+    "player_id": "UNK_0322",
+    "name": "Daniele Kettlik",
+    "slug": "daniele-kettlik",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/daniele-kettlik.png"
+  },
+  {
+    "player_id": "UNK_0324",
+    "name": "Sam Kharbintli",
+    "slug": "sam-kharbintli",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/sam-kharbintli.png"
+  },
+  {
+    "player_id": "UNK_0325",
+    "name": "Pata Khodorenovik",
+    "slug": "pata-khodorenovik",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/pata-khodorenovik.png"
+  },
+  {
+    "player_id": "UNK_0326",
+    "name": "Nine Kindik",
+    "slug": "nine-kindik",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/nine-kindik.png"
+  },
+  {
+    "player_id": "UNK_0327",
+    "name": "Bryco Kindopro",
+    "slug": "bryco-kindopro",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/bryco-kindopro.png"
+  },
+  {
+    "player_id": "UNK_0328",
+    "name": "Liamu Kirkven",
+    "slug": "liamu-kirkven",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/liamu-kirkven.png"
+  },
+  {
+    "player_id": "UNK_0330",
+    "name": "Adriano Kleintli",
+    "slug": "adriano-kleintli",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/adriano-kleintli.png"
+  },
+  {
+    "player_id": "UNK_0333",
+    "name": "Davisa Kochik",
+    "slug": "davisa-kochik",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/davisa-kochik.png"
+  },
+  {
+    "player_id": "UNK_0337",
+    "name": "Carlo Konztli",
+    "slug": "carlo-konztli",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/carlo-konztli.png"
+  },
+  {
+    "player_id": "UNK_0338",
+    "name": "Juliano Kornelllek",
+    "slug": "juliano-kornelllek",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/juliano-kornelllek.png"
+  },
+  {
+    "player_id": "UNK_0340",
+    "name": "Leonharda Koruslek",
+    "slug": "leonharda-koruslek",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/leonharda-koruslek.png"
+  },
+  {
+    "player_id": "UNK_0341",
+    "name": "Fabio Kosvik",
+    "slug": "fabio-kosvik",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/fabio-kosvik.png"
+  },
+  {
+    "player_id": "UNK_0342",
+    "name": "Time Kosvik",
+    "slug": "time-kosvik",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/time-kosvik.png"
+  },
+  {
+    "player_id": "UNK_0343",
+    "name": "Jesso Koskenkornik",
+    "slug": "jesso-koskenkornik",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/jesso-koskenkornik.png"
+  },
+  {
+    "player_id": "UNK_0345",
+    "name": "Johan Krausen",
+    "slug": "johan-krausen",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/johan-krausen.png"
+  },
+  {
+    "player_id": "UNK_0346",
+    "name": "Filip Krausen",
+    "slug": "filip-krausen",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/filip-krausen.png"
+  },
+  {
+    "player_id": "UNK_0347",
+    "name": "Phe Krenindunov",
+    "slug": "phe-krenindunov",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/phe-krenindunov.png"
+  },
+  {
+    "player_id": "UNK_0351",
+    "name": "Lukasu Kriegsen",
+    "slug": "lukasu-kriegsen",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/lukasu-kriegsen.png"
+  },
+  {
+    "player_id": "UNK_0352",
+    "name": "Björnu Kruppen",
+    "slug": "bjoernu-kruppen",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/bjoernu-kruppen.png"
+  },
+  {
+    "player_id": "UNK_0353",
+    "name": "Nicolasa Krämmov",
+    "slug": "nicolasa-kraemmov",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/nicolasa-kraemmov.png"
+  },
+  {
+    "player_id": "UNK_0355",
+    "name": "Geraldo Kuhnnik",
+    "slug": "geraldo-kuhnnik",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/geraldo-kuhnnik.png"
+  },
+  {
+    "player_id": "UNK_0356",
+    "name": "Phe Kuhneksen",
+    "slug": "phe-kuhneksen",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/phe-kuhneksen.png"
+  },
+  {
+    "player_id": "UNK_0357",
+    "name": "Seano Kuklokro",
+    "slug": "seano-kuklokro",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/seano-kuklokro.png"
+  },
+  {
+    "player_id": "UNK_0358",
+    "name": "Moritzi Kukukin",
+    "slug": "moritzi-kukukin",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/moritzi-kukukin.png"
+  },
+  {
+    "player_id": "UNK_0359",
+    "name": "Codye Kunyken",
+    "slug": "codye-kunyken",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/codye-kunyken.png"
+  },
+  {
+    "player_id": "UNK_0360",
+    "name": "Johe Kurrdunov",
+    "slug": "johe-kurrdunov",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/johe-kurrdunov.png"
+  },
+  {
+    "player_id": "UNK_0362",
+    "name": "Lukasu Kälbldunov",
+    "slug": "lukasu-kaelbldunov",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/lukasu-kaelbldunov.png"
+  },
+  {
+    "player_id": "UNK_0363",
+    "name": "Micka Köhltli",
+    "slug": "micka-koehltli",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/micka-koehltli.png"
+  },
+  {
+    "player_id": "UNK_0364",
+    "name": "Tjarka Kölschov",
+    "slug": "tjarka-koelschov",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/tjarka-koelschov.png"
+  },
+  {
+    "player_id": "UNK_0365",
+    "name": "Tome Kühnhacan",
+    "slug": "tome-kuehnhacan",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/tome-kuehnhacan.png"
+  },
+  {
+    "player_id": "UNK_0368",
+    "name": "Jimmya Lambersen",
+    "slug": "jimmya-lambersen",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/jimmya-lambersen.png"
+  },
+  {
+    "player_id": "UNK_0369",
+    "name": "Lestera Lancastinov",
+    "slug": "lestera-lancastinov",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/lestera-lancastinov.png"
+  },
+  {
+    "player_id": "UNK_0370",
+    "name": "Jonasu Langlek",
+    "slug": "jonasu-langlek",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/jonasu-langlek.png"
+  },
+  {
+    "player_id": "UNK_0371",
+    "name": "Thoma Larkinik",
+    "slug": "thoma-larkinik",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/thoma-larkinik.png"
+  },
+  {
+    "player_id": "UNK_0372",
+    "name": "Matiasu Lasen",
+    "slug": "matiasu-lasen",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/matiasu-lasen.png"
+  },
+  {
+    "player_id": "UNK_0373",
+    "name": "Louise Lattvik",
+    "slug": "louise-lattvik",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/louise-lattvik.png"
+  },
+  {
+    "player_id": "UNK_0374",
+    "name": "Nicu Lattvik",
+    "slug": "nicu-lattvik",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/nicu-lattvik.png"
+  },
+  {
+    "player_id": "UNK_0376",
+    "name": "Juliano Lautenschlagov",
+    "slug": "juliano-lautenschlagov",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/juliano-lautenschlagov.png"
+  },
+  {
+    "player_id": "UNK_0378",
+    "name": "Mateju Ledenov",
+    "slug": "mateju-ledenov",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/mateju-ledenov.png"
+  },
+  {
+    "player_id": "UNK_0380",
+    "name": "Danju Leonharik",
+    "slug": "danju-leonharik",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/danju-leonharik.png"
+  },
+  {
+    "player_id": "UNK_0381",
+    "name": "Zaco Leslinik",
+    "slug": "zaco-leslinik",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/zaco-leslinik.png"
+  },
+  {
+    "player_id": "UNK_0382",
+    "name": "Lucase Lessiin",
+    "slug": "lucase-lessiin",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/lucase-lessiin.png"
+  },
+  {
+    "player_id": "UNK_0383",
+    "name": "Jakobu Liljlek",
+    "slug": "jakobu-liljlek",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/jakobu-liljlek.png"
+  },
+  {
+    "player_id": "UNK_0384",
+    "name": "Toba Lindvik",
+    "slug": "toba-lindvik",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/toba-lindvik.png"
+  },
+  {
+    "player_id": "UNK_0385",
+    "name": "Leona Lindlek",
+    "slug": "leona-lindlek",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/leona-lindlek.png"
+  },
+  {
+    "player_id": "UNK_0386",
+    "name": "Turo Lindenvik",
+    "slug": "turo-lindenvik",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/turo-lindenvik.png"
+  },
+  {
+    "player_id": "UNK_0387",
+    "name": "Eliase Lindnov",
+    "slug": "eliase-lindnov",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/eliase-lindnov.png"
+  },
+  {
+    "player_id": "UNK_0389",
+    "name": "Dennise Lobachro",
+    "slug": "dennise-lobachro",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/dennise-lobachro.png"
+  },
+  {
+    "player_id": "UNK_0390",
+    "name": "Stefane Loibldunov",
+    "slug": "stefane-loibldunov",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/stefane-loibldunov.png"
+  },
+  {
+    "player_id": "UNK_0391",
+    "name": "Anthonyu Louisovik",
+    "slug": "anthonyu-louisovik",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/anthonyu-louisovik.png"
+  },
+  {
+    "player_id": "UNK_0393",
+    "name": "Nikla Lunear",
+    "slug": "nikla-lunear",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/nikla-lunear.png"
+  },
+  {
+    "player_id": "UNK_0395",
+    "name": "Robu Lynchen",
+    "slug": "robu-lynchen",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/robu-lynchen.png"
+  },
+  {
+    "player_id": "UNK_0396",
+    "name": "Ryani MacInndunov",
+    "slug": "ryani-macinndunov",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/ryani-macinndunov.png"
+  },
+  {
+    "player_id": "UNK_0397",
+    "name": "Grege MacLeinov",
+    "slug": "grege-macleinov",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/grege-macleinov.png"
+  },
+  {
+    "player_id": "UNK_0398",
+    "name": "Justinu MacPherar",
+    "slug": "justinu-macpherar",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/justinu-macpherar.png"
+  },
+  {
+    "player_id": "UNK_0399",
+    "name": "Spo Machacven",
+    "slug": "spo-machacven",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/spo-machacven.png"
+  },
+  {
+    "player_id": "UNK_0401",
+    "name": "Tylera Maddenro",
+    "slug": "tylera-maddenro",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/tylera-maddenro.png"
+  },
+  {
+    "player_id": "UNK_0402",
+    "name": "Kevine Magintli",
+    "slug": "kevine-magintli",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/kevine-magintli.png"
+  },
+  {
+    "player_id": "UNK_0403",
+    "name": "Colu Maiar",
+    "slug": "colu-maiar",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/colu-maiar.png"
+  },
+  {
+    "player_id": "UNK_0405",
+    "name": "Benu Marshaltto",
+    "slug": "benu-marshaltto",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/benu-marshaltto.png"
+  },
+  {
+    "player_id": "UNK_0406",
+    "name": "Jimmya Martinovlek",
+    "slug": "jimmya-martinovlek",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/jimmya-martinovlek.png"
+  },
+  {
+    "player_id": "UNK_0407",
+    "name": "Ericu Martinstli",
+    "slug": "ericu-martinstli",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/ericu-martinstli.png"
+  },
+  {
+    "player_id": "UNK_0409",
+    "name": "Phe Massovik",
+    "slug": "phe-massovik",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/phe-massovik.png"
+  },
+  {
+    "player_id": "UNK_0410",
+    "name": "Jonathane Matsumik",
+    "slug": "jonathane-matsumik",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/jonathane-matsumik.png"
+  },
+  {
+    "player_id": "UNK_0411",
+    "name": "Nicolasa Mattinlek",
+    "slug": "nicolasa-mattinlek",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/nicolasa-mattinlek.png"
+  },
+  {
+    "player_id": "UNK_0412",
+    "name": "Johano Mattsik",
+    "slug": "johano-mattsik",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/johano-mattsik.png"
+  },
+  {
+    "player_id": "UNK_0413",
+    "name": "Makso Matushkov",
+    "slug": "makso-matushkov",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/makso-matushkov.png"
+  },
+  {
+    "player_id": "UNK_0414",
+    "name": "Rossa Mauerven",
+    "slug": "rossa-mauerven",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/rossa-mauerven.png"
+  },
+  {
+    "player_id": "UNK_0415",
+    "name": "Phe Maurar",
+    "slug": "phe-maurar",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/phe-maurar.png"
+  },
+  {
+    "player_id": "UNK_0416",
+    "name": "Bru Maxwelen",
+    "slug": "bru-maxwelen",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/bru-maxwelen.png"
+  },
+  {
+    "player_id": "UNK_0417",
+    "name": "Jakobu Mayenschtto",
+    "slug": "jakobu-mayenschtto",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/jakobu-mayenschtto.png"
+  },
+  {
+    "player_id": "UNK_0419",
+    "name": "Kyli Mayhewtli",
+    "slug": "kyli-mayhewtli",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/kyli-mayhewtli.png"
+  },
+  {
+    "player_id": "UNK_0423",
+    "name": "Jeri McKennven",
+    "slug": "jeri-mckennven",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/jeri-mckennven.png"
+  },
+  {
+    "player_id": "UNK_0424",
+    "name": "Skyle McKenzvik",
+    "slug": "skyle-mckenzvik",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/skyle-mckenzvik.png"
+  },
+  {
+    "player_id": "UNK_0425",
+    "name": "Ryani McKierntto",
+    "slug": "ryani-mckierntto",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/ryani-mckierntto.png"
+  },
+  {
+    "player_id": "UNK_0430",
+    "name": "Reida McNeilov",
+    "slug": "reida-mcneilov",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/reida-mcneilov.png"
+  },
+  {
+    "player_id": "UNK_0432",
+    "name": "Oliveri Mebusov",
+    "slug": "oliveri-mebusov",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/oliveri-mebusov.png"
+  },
+  {
+    "player_id": "UNK_0433",
+    "name": "Grege Meirelvik",
+    "slug": "grege-meirelvik",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/grege-meirelvik.png"
+  },
+  {
+    "player_id": "UNK_0434",
+    "name": "Juliano Melchiovik",
+    "slug": "juliano-melchiovik",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/juliano-melchiovik.png"
+  },
+  {
+    "player_id": "UNK_0435",
+    "name": "Joshe Melnicov",
+    "slug": "joshe-melnicov",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/joshe-melnicov.png"
+  },
+  {
+    "player_id": "UNK_0436",
+    "name": "Maximiliana Merklov",
+    "slug": "maximiliana-merklov",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/maximiliana-merklov.png"
+  },
+  {
+    "player_id": "UNK_0437",
+    "name": "Ryani Merklik",
+    "slug": "ryani-merklik",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/ryani-merklik.png"
+  },
+  {
+    "player_id": "UNK_0438",
+    "name": "Marcu Michaelsen",
+    "slug": "marcu-michaelsen",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/marcu-michaelsen.png"
+  },
+  {
+    "player_id": "UNK_0440",
+    "name": "Andyo Miellek",
+    "slug": "andyo-miellek",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/andyo-miellek.png"
+  },
+  {
+    "player_id": "UNK_0441",
+    "name": "Darra Mieszkowsovik",
+    "slug": "darra-mieszkowsovik",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/darra-mieszkowsovik.png"
+  },
+  {
+    "player_id": "UNK_0442",
+    "name": "Ericu Mikik",
+    "slug": "ericu-mikik",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/ericu-mikik.png"
+  },
+  {
+    "player_id": "UNK_0444",
+    "name": "Enra Moralin",
+    "slug": "enra-moralin",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/enra-moralin.png"
+  },
+  {
+    "player_id": "UNK_0445",
+    "name": "Davida Morleylek",
+    "slug": "davida-morleylek",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/davida-morleylek.png"
+  },
+  {
+    "player_id": "UNK_0447",
+    "name": "Mateju Mrazekdunov",
+    "slug": "mateju-mrazekdunov",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/mateju-mrazekdunov.png"
+  },
+  {
+    "player_id": "UNK_0449",
+    "name": "Ryani Murphyro",
+    "slug": "ryani-murphyro",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/ryani-murphyro.png"
+  },
+  {
+    "player_id": "UNK_0450",
+    "name": "Bretta Murraytto",
+    "slug": "bretta-murraytto",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/bretta-murraytto.png"
+  },
+  {
+    "player_id": "UNK_0452",
+    "name": "Nicke Mählar",
+    "slug": "nicke-maehlar",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/nicke-maehlar.png"
+  },
+  {
+    "player_id": "UNK_0453",
+    "name": "Roopu Mäkitalik",
+    "slug": "roopu-maekitalik",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/roopu-maekitalik.png"
+  },
+  {
+    "player_id": "UNK_0454",
+    "name": "Janika Mösvik",
+    "slug": "janika-moesvik",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/janika-moesvik.png"
+  },
+  {
+    "player_id": "UNK_0456",
+    "name": "Jonasu Müllar",
+    "slug": "jonasu-muellar",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/jonasu-muellar.png"
+  },
+  {
+    "player_id": "UNK_0458",
+    "name": "Marcu Müllar",
+    "slug": "marcu-muellar",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/marcu-muellar.png"
+  },
+  {
+    "player_id": "UNK_0459",
+    "name": "Marca Müllar",
+    "slug": "marca-muellar",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/marca-muellar.png"
+  },
+  {
+    "player_id": "UNK_0460",
+    "name": "Moritzi Müllar",
+    "slug": "moritzi-muellar",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/moritzi-muellar.png"
+  },
+  {
+    "player_id": "UNK_0461",
+    "name": "Luce Münzenik",
+    "slug": "luce-muenzenik",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/luce-muenzenik.png"
+  },
+  {
+    "player_id": "UNK_0462",
+    "name": "Marca Münzenik",
+    "slug": "marca-muenzenik",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/marca-muenzenik.png"
+  },
+  {
+    "player_id": "UNK_0464",
+    "name": "Juliano Napravndunov",
+    "slug": "juliano-napravndunov",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/juliano-napravndunov.png"
+  },
+  {
+    "player_id": "UNK_0465",
+    "name": "Guillauma Naudlek",
+    "slug": "guillauma-naudlek",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/guillauma-naudlek.png"
+  },
+  {
+    "player_id": "UNK_0466",
+    "name": "Jonasu Neffindunov",
+    "slug": "jonasu-neffindunov",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/jonasu-neffindunov.png"
+  },
+  {
+    "player_id": "UNK_0468",
+    "name": "Matthiasu Nemecov",
+    "slug": "matthiasu-nemecov",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/matthiasu-nemecov.png"
+  },
+  {
+    "player_id": "UNK_0470",
+    "name": "Nicke Neufelov",
+    "slug": "nicke-neufelov",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/nicke-neufelov.png"
+  },
+  {
+    "player_id": "UNK_0471",
+    "name": "Daniele Neuven",
+    "slug": "daniele-neuven",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/daniele-neuven.png"
+  },
+  {
+    "player_id": "UNK_0472",
+    "name": "Maxe Newtonik",
+    "slug": "maxe-newtonik",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/maxe-newtonik.png"
+  },
+  {
+    "player_id": "UNK_0473",
+    "name": "Kevine Niedenar",
+    "slug": "kevine-niedenar",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/kevine-niedenar.png"
+  },
+  {
+    "player_id": "UNK_0474",
+    "name": "Leona Niederen",
+    "slug": "leona-niederen",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/leona-niederen.png"
+  },
+  {
+    "player_id": "UNK_0475",
+    "name": "Mathiaso Niederen",
+    "slug": "mathiaso-niederen",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/mathiaso-niederen.png"
+  },
+  {
+    "player_id": "UNK_0476",
+    "name": "Lui Niehustto",
+    "slug": "lui-niehustto",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/lui-niehustto.png"
+  },
+  {
+    "player_id": "UNK_0478",
+    "name": "Markusu Niemeläinan",
+    "slug": "markusu-niemelaeinan",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/markusu-niemelaeinan.png"
+  },
+  {
+    "player_id": "UNK_0479",
+    "name": "Fabianu Nifosan",
+    "slug": "fabianu-nifosan",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/fabianu-nifosan.png"
+  },
+  {
+    "player_id": "UNK_0480",
+    "name": "Jano Nijenhven",
+    "slug": "jano-nijenhven",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/jano-nijenhven.png"
+  },
+  {
+    "player_id": "UNK_0483",
+    "name": "Marcu Noebellek",
+    "slug": "marcu-noebellek",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/marcu-noebellek.png"
+  },
+  {
+    "player_id": "UNK_0484",
+    "name": "Robino Norelltto",
+    "slug": "robino-norelltto",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/robino-norelltto.png"
+  },
+  {
+    "player_id": "UNK_0485",
+    "name": "Kevine Norénnik",
+    "slug": "kevine-norénnik",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/kevine-norénnik.png"
+  },
+  {
+    "player_id": "UNK_0487",
+    "name": "Daniele OReganovik",
+    "slug": "daniele-oreganovik",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/daniele-oreganovik.png"
+  },
+  {
+    "player_id": "UNK_0488",
+    "name": "Ryani Odudar",
+    "slug": "ryani-odudar",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/ryani-odudar.png"
+  },
+  {
+    "player_id": "UNK_0491",
+    "name": "Ryani Olvik",
+    "slug": "ryani-olvik",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/ryani-olvik.png"
+  },
+  {
+    "player_id": "UNK_0492",
+    "name": "Constantinu Ontlinov",
+    "slug": "constantinu-ontlinov",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/constantinu-ontlinov.png"
+  },
+  {
+    "player_id": "UNK_0493",
+    "name": "Kevine Orendorsen",
+    "slug": "kevine-orendorsen",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/kevine-orendorsen.png"
+  },
+  {
+    "player_id": "UNK_0497",
+    "name": "Veita Oswalddunov",
+    "slug": "veita-oswalddunov",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/veita-oswalddunov.png"
+  },
+  {
+    "player_id": "UNK_0498",
+    "name": "Bro ODonnelov",
+    "slug": "bro-odonnelov",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/bro-odonnelov.png"
+  },
+  {
+    "player_id": "UNK_0499",
+    "name": "Norwinu Panochdunov",
+    "slug": "norwinu-panochdunov",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/norwinu-panochdunov.png"
+  },
+  {
+    "player_id": "UNK_0500",
+    "name": "Mirke Pantkowsov",
+    "slug": "mirke-pantkowsov",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/mirke-pantkowsov.png"
+  },
+  {
+    "player_id": "UNK_0501",
+    "name": "Sei Parkdunov",
+    "slug": "sei-parkdunov",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/sei-parkdunov.png"
+  },
+  {
+    "player_id": "UNK_0503",
+    "name": "Tommye Pasanen",
+    "slug": "tommye-pasanen",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/tommye-pasanen.png"
+  },
+  {
+    "player_id": "UNK_0504",
+    "name": "Adamo Payerlven",
+    "slug": "adamo-payerlven",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/adamo-payerlven.png"
+  },
+  {
+    "player_id": "UNK_0505",
+    "name": "Samueli Payeuren",
+    "slug": "samueli-payeuren",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/samueli-payeuren.png"
+  },
+  {
+    "player_id": "UNK_0507",
+    "name": "Lirono Pellizzvik",
+    "slug": "lirono-pellizzvik",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/lirono-pellizzvik.png"
+  },
+  {
+    "player_id": "UNK_0508",
+    "name": "Maxe Penkininov",
+    "slug": "maxe-penkininov",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/maxe-penkininov.png"
+  },
+  {
+    "player_id": "UNK_0509",
+    "name": "Niko Pertanov",
+    "slug": "niko-pertanov",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/niko-pertanov.png"
+  },
+  {
+    "player_id": "UNK_0511",
+    "name": "Daniele Pfaffengen",
+    "slug": "daniele-pfaffengen",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/daniele-pfaffengen.png"
+  },
+  {
+    "player_id": "UNK_0512",
+    "name": "Denise Pfaffengen",
+    "slug": "denise-pfaffengen",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/denise-pfaffengen.png"
+  },
+  {
+    "player_id": "UNK_0513",
+    "name": "Fabio Pfohlro",
+    "slug": "fabio-pfohlro",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/fabio-pfohlro.png"
+  },
+  {
+    "player_id": "UNK_0514",
+    "name": "Leonharda Pfödersen",
+    "slug": "leonharda-pfoedersen",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/leonharda-pfoedersen.png"
+  },
+  {
+    "player_id": "UNK_0515",
+    "name": "Dan Pietto",
+    "slug": "dan-pietto",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/dan-pietto.png"
+  },
+  {
+    "player_id": "UNK_0516",
+    "name": "Fabi Pilen",
+    "slug": "fabi-pilen",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/fabi-pilen.png"
+  },
+  {
+    "player_id": "UNK_0518",
+    "name": "Matthiasu Plachtven",
+    "slug": "matthiasu-plachtven",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/matthiasu-plachtven.png"
+  },
+  {
+    "player_id": "UNK_0519",
+    "name": "Kyli Platzov",
+    "slug": "kyli-platzov",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/kyli-platzov.png"
+  },
+  {
+    "player_id": "UNK_0520",
+    "name": "Dylane Plouffven",
+    "slug": "dylane-plouffven",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/dylane-plouffven.png"
+  },
+  {
+    "player_id": "UNK_0521",
+    "name": "Villa Pokkvik",
+    "slug": "villa-pokkvik",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/villa-pokkvik.png"
+  },
+  {
+    "player_id": "UNK_0525",
+    "name": "Mils Powlek",
+    "slug": "mils-powlek",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/mils-powlek.png"
+  },
+  {
+    "player_id": "UNK_0527",
+    "name": "Pierri Proti",
+    "slug": "pierri-proti",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/pierri-proti.png"
+  },
+  {
+    "player_id": "UNK_0528",
+    "name": "Cartere Proftin",
+    "slug": "cartere-proftin",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/cartere-proftin.png"
+  },
+  {
+    "player_id": "UNK_0529",
+    "name": "Yannicku Proskov",
+    "slug": "yannicku-proskov",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/yannicku-proskov.png"
+  },
+  {
+    "player_id": "UNK_0530",
+    "name": "Ethano Prowovik",
+    "slug": "ethano-prowovik",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/ethano-prowovik.png"
+  },
+  {
+    "player_id": "UNK_0531",
+    "name": "Garreta Prudenvik",
+    "slug": "garreta-prudenvik",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/garreta-prudenvik.png"
+  },
+  {
+    "player_id": "UNK_0533",
+    "name": "Donáti Pétlek",
+    "slug": "donáti-pétlek",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/donáti-pétlek.png"
+  },
+  {
+    "player_id": "UNK_0534",
+    "name": "Emilo Quaasov",
+    "slug": "emilo-quaasov",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/emilo-quaasov.png"
+  },
+  {
+    "player_id": "UNK_0535",
+    "name": "Tilu Raabov",
+    "slug": "tilu-raabov",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/tilu-raabov.png"
+  },
+  {
+    "player_id": "UNK_0536",
+    "name": "Stevene Raabik",
+    "slug": "stevene-raabik",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/stevene-raabik.png"
+  },
+  {
+    "player_id": "UNK_0538",
+    "name": "Goro Radionik",
+    "slug": "goro-radionik",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/goro-radionik.png"
+  },
+  {
+    "player_id": "UNK_0540",
+    "name": "Jule Ramosinov",
+    "slug": "jule-ramosinov",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/jule-ramosinov.png"
+  },
+  {
+    "player_id": "UNK_0541",
+    "name": "Marki Rasselnik",
+    "slug": "marki-rasselnik",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/marki-rasselnik.png"
+  },
+  {
+    "player_id": "UNK_0542",
+    "name": "Maxima Rauschov",
+    "slug": "maxima-rauschov",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/maxima-rauschov.png"
+  },
+  {
+    "player_id": "UNK_0544",
+    "name": "Kristianu Reichlek",
+    "slug": "kristianu-reichlek",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/kristianu-reichlek.png"
+  },
+  {
+    "player_id": "UNK_0545",
+    "name": "Thoma Reichlek",
+    "slug": "thoma-reichlek",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/thoma-reichlek.png"
+  },
+  {
+    "player_id": "UNK_0546",
+    "name": "Mita Reinknik",
+    "slug": "mita-reinknik",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/mita-reinknik.png"
+  },
+  {
+    "player_id": "UNK_0549",
+    "name": "Maximiliana Rennov",
+    "slug": "maximiliana-rennov",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/maximiliana-rennov.png"
+  },
+  {
+    "player_id": "UNK_0550",
+    "name": "Dani Renoufin",
+    "slug": "dani-renoufin",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/dani-renoufin.png"
+  },
+  {
+    "player_id": "UNK_0551",
+    "name": "Lukasu Ribarov",
+    "slug": "lukasu-ribarov",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/lukasu-ribarov.png"
+  },
+  {
+    "player_id": "UNK_0553",
+    "name": "Toba Riedinov",
+    "slug": "toba-riedinov",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/toba-riedinov.png"
+  },
+  {
+    "player_id": "UNK_0556",
+    "name": "Raphaelo Roedinov",
+    "slug": "raphaelo-roedinov",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/raphaelo-roedinov.png"
+  },
+  {
+    "player_id": "UNK_0559",
+    "name": "Tyi Ronninsen",
+    "slug": "tyi-ronninsen",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/tyi-ronninsen.png"
+  },
+  {
+    "player_id": "UNK_0560",
+    "name": "Philu Proti",
+    "slug": "philu-proti",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/philu-proti.png"
+  },
+  {
+    "player_id": "UNK_0561",
+    "name": "Cartere Rowneyovik",
+    "slug": "cartere-rowneyovik",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/cartere-rowneyovik.png"
+  },
+  {
+    "player_id": "UNK_0562",
+    "name": "Bennu Rossmyinov",
+    "slug": "bennu-rossmyinov",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/bennu-rossmyinov.png"
+  },
+  {
+    "player_id": "UNK_0564",
+    "name": "Time Ruckdäschlek",
+    "slug": "time-ruckdaeschlek",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/time-ruckdaeschlek.png"
+  },
+  {
+    "player_id": "UNK_0565",
+    "name": "Davida Rundqvan",
+    "slug": "davida-rundqvan",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/davida-rundqvan.png"
+  },
+  {
+    "player_id": "UNK_0566",
+    "name": "Sam Ruvek",
+    "slug": "sam-ruvek",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/sam-ruvek.png"
+  },
+  {
+    "player_id": "UNK_0567",
+    "name": "Pata Russelnik",
+    "slug": "pata-russelnik",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/pata-russelnik.png"
+  },
+  {
+    "player_id": "UNK_0569",
+    "name": "Macieji Rutkowstli",
+    "slug": "macieji-rutkowstli",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/macieji-rutkowstli.png"
+  },
+  {
+    "player_id": "UNK_0573",
+    "name": "Noela Saffrro",
+    "slug": "noela-saffrro",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/noela-saffrro.png"
+  },
+  {
+    "player_id": "UNK_0574",
+    "name": "Clemenso Sagven",
+    "slug": "clemenso-sagven",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/clemenso-sagven.png"
+  },
+  {
+    "player_id": "UNK_0576",
+    "name": "Eiriki Salsten",
+    "slug": "eiriki-salsten",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/eiriki-salsten.png"
+  },
+  {
+    "player_id": "UNK_0579",
+    "name": "Mathe Santoslek",
+    "slug": "mathe-santoslek",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/mathe-santoslek.png"
+  },
+  {
+    "player_id": "UNK_0582",
+    "name": "Fabio Sartven",
+    "slug": "fabio-sartven",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/fabio-sartven.png"
+  },
+  {
+    "player_id": "UNK_0584",
+    "name": "Mano Schamsov",
+    "slug": "mano-schamsov",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/mano-schamsov.png"
+  },
+  {
+    "player_id": "UNK_0586",
+    "name": "Felixe Scheven",
+    "slug": "felixe-scheven",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/felixe-scheven.png"
+  },
+  {
+    "player_id": "UNK_0587",
+    "name": "Luisa Scheibengrablek",
+    "slug": "luisa-scheibengrablek",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/luisa-scheibengrablek.png"
+  },
+  {
+    "player_id": "UNK_0589",
+    "name": "Thoma Schemitsik",
+    "slug": "thoma-schemitsik",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/thoma-schemitsik.png"
+  },
+  {
+    "player_id": "UNK_0591",
+    "name": "Christiana Schilinar",
+    "slug": "christiana-schilinar",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/christiana-schilinar.png"
+  },
+  {
+    "player_id": "UNK_0592",
+    "name": "Nicolasa Schindllek",
+    "slug": "nicolasa-schindllek",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/nicolasa-schindllek.png"
+  },
+  {
+    "player_id": "UNK_0594",
+    "name": "Luisa Schinktli",
+    "slug": "luisa-schinktli",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/luisa-schinktli.png"
+  },
+  {
+    "player_id": "UNK_0598",
+    "name": "Marvino Schmidtto",
+    "slug": "marvino-schmidtto",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/marvino-schmidtto.png"
+  },
+  {
+    "player_id": "UNK_0602",
+    "name": "Dano Schmolik",
+    "slug": "dano-schmolik",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/dano-schmolik.png"
+  },
+  {
+    "player_id": "UNK_0603",
+    "name": "Natu Schnarven",
+    "slug": "natu-schnarven",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/natu-schnarven.png"
+  },
+  {
+    "player_id": "UNK_0606",
+    "name": "Vadimu Schreintto",
+    "slug": "vadimu-schreintto",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/vadimu-schreintto.png"
+  },
+  {
+    "player_id": "UNK_0607",
+    "name": "Jule Schultov",
+    "slug": "jule-schultov",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/jule-schultov.png"
+  },
+  {
+    "player_id": "UNK_0609",
+    "name": "Rodione Schumachdunov",
+    "slug": "rodione-schumachdunov",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/rodione-schumachdunov.png"
+  },
+  {
+    "player_id": "UNK_0612",
+    "name": "Andi Schwardunov",
+    "slug": "andi-schwardunov",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/andi-schwardunov.png"
+  },
+  {
+    "player_id": "UNK_0613",
+    "name": "Toba Schwardunov",
+    "slug": "toba-schwardunov",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/toba-schwardunov.png"
+  },
+  {
+    "player_id": "UNK_0615",
+    "name": "Markusu Schweigdunov",
+    "slug": "markusu-schweigdunov",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/markusu-schweigdunov.png"
+  },
+  {
+    "player_id": "UNK_0618",
+    "name": "Justinu Schützan",
+    "slug": "justinu-schuetzan",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/justinu-schuetzan.png"
+  },
+  {
+    "player_id": "UNK_0619",
+    "name": "Simona Schützan",
+    "slug": "simona-schuetzan",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/simona-schuetzan.png"
+  },
+  {
+    "player_id": "UNK_0620",
+    "name": "Tima Schützan",
+    "slug": "tima-schuetzan",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/tima-schuetzan.png"
+  },
+  {
+    "player_id": "UNK_0621",
+    "name": "Justinu Scottro",
+    "slug": "justinu-scottro",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/justinu-scottro.png"
+  },
+  {
+    "player_id": "UNK_0623",
+    "name": "Simona Seidlar",
+    "slug": "simona-seidlar",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/simona-seidlar.png"
+  },
+  {
+    "player_id": "UNK_0624",
+    "name": "Pata Seifervik",
+    "slug": "pata-seifervik",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/pata-seifervik.png"
+  },
+  {
+    "player_id": "UNK_0625",
+    "name": "Jano Sennhenik",
+    "slug": "jano-sennhenik",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/jano-sennhenik.png"
+  },
+  {
+    "player_id": "UNK_0626",
+    "name": "Zachi Senyshyro",
+    "slug": "zachi-senyshyro",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/zachi-senyshyro.png"
+  },
+  {
+    "player_id": "UNK_0627",
+    "name": "Finni Seriktto",
+    "slug": "finni-seriktto",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/finni-seriktto.png"
+  },
+  {
+    "player_id": "UNK_0628",
+    "name": "Simona Sezemsktli",
+    "slug": "simona-sezemsktli",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/simona-sezemsktli.png"
+  },
+  {
+    "player_id": "UNK_0630",
+    "name": "Ilye Sharipovik",
+    "slug": "ilye-sharipovik",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/ilye-sharipovik.png"
+  },
+  {
+    "player_id": "UNK_0631",
+    "name": "Haydeno Shawin",
+    "slug": "haydeno-shawin",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/haydeno-shawin.png"
+  },
+  {
+    "player_id": "UNK_0632",
+    "name": "Rileyu Sheentli",
+    "slug": "rileyu-sheentli",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/rileyu-sheentli.png"
+  },
+  {
+    "player_id": "UNK_0634",
+    "name": "Olego Shilinik",
+    "slug": "olego-shilinik",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/olego-shilinik.png"
+  },
+  {
+    "player_id": "UNK_0635",
+    "name": "Phe Sinnov",
+    "slug": "phe-sinnov",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/phe-sinnov.png"
+  },
+  {
+    "player_id": "UNK_0636",
+    "name": "Leona Sivicen",
+    "slug": "leona-sivicen",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/leona-sivicen.png"
+  },
+  {
+    "player_id": "UNK_0637",
+    "name": "Kevine Slezakdunov",
+    "slug": "kevine-slezakdunov",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/kevine-slezakdunov.png"
+  },
+  {
+    "player_id": "UNK_0638",
+    "name": "Jakina Smallwnik",
+    "slug": "jakina-smallwnik",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/jakina-smallwnik.png"
+  },
+  {
+    "player_id": "UNK_0639",
+    "name": "Adamo Smithar",
+    "slug": "adamo-smithar",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/adamo-smithar.png"
+  },
+  {
+    "player_id": "UNK_0640",
+    "name": "Colino Smithar",
+    "slug": "colino-smithar",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/colino-smithar.png"
+  },
+  {
+    "player_id": "UNK_0641",
+    "name": "Gemeli Smithar",
+    "slug": "gemeli-smithar",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/gemeli-smithar.png"
+  },
+  {
+    "player_id": "UNK_0642",
+    "name": "Zaco Solowlek",
+    "slug": "zaco-solowlek",
+    "team_slug": "mannheim-ventus",
+    "portrait": "/images/players/saison_01/mannheim-ventus/zaco-solowlek.png"
+  },
+  {
+    "player_id": "UNK_0643",
+    "name": "Tylera Spezitto",
+    "slug": "tylera-spezitto",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/tylera-spezitto.png"
+  },
+  {
+    "player_id": "UNK_0644",
+    "name": "Tylora Spinkar",
+    "slug": "tylora-spinkar",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/tylora-spinkar.png"
+  },
+  {
+    "player_id": "UNK_0645",
+    "name": "Tysono Spinkar",
+    "slug": "tysono-spinkar",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/tysono-spinkar.png"
+  },
+  {
+    "player_id": "UNK_0646",
+    "name": "Petr Spornik",
+    "slug": "petr-spornik",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/petr-spornik.png"
+  },
+  {
+    "player_id": "UNK_0647",
+    "name": "Benu Stadldunov",
+    "slug": "benu-stadldunov",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/benu-stadldunov.png"
+  },
+  {
+    "player_id": "UNK_0648",
+    "name": "Reede Starkar",
+    "slug": "reede-starkar",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/reede-starkar.png"
+  },
+  {
+    "player_id": "UNK_0649",
+    "name": "Pasco Stecknik",
+    "slug": "pasco-stecknik",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/pasco-stecknik.png"
+  },
+  {
+    "player_id": "UNK_0651",
+    "name": "Jonasu Stettmov",
+    "slug": "jonasu-stettmov",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/jonasu-stettmov.png"
+  },
+  {
+    "player_id": "UNK_0652",
+    "name": "Davida Stiellek",
+    "slug": "davida-stiellek",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/davida-stiellek.png"
+  },
+  {
+    "player_id": "UNK_0655",
+    "name": "Fri Storminov",
+    "slug": "fri-storminov",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/fri-storminov.png"
+  },
+  {
+    "player_id": "UNK_0657",
+    "name": "Dustino Strahlmeiar",
+    "slug": "dustino-strahlmeiar",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/dustino-strahlmeiar.png"
+  },
+  {
+    "player_id": "UNK_0661",
+    "name": "Oliveri Stümpsen",
+    "slug": "oliveri-stuempsen",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/oliveri-stuempsen.png"
+  },
+  {
+    "player_id": "UNK_0665",
+    "name": "Jorde Szwarzar",
+    "slug": "jorde-szwarzar",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/jorde-szwarzar.png"
+  },
+  {
+    "player_id": "UNK_0667",
+    "name": "Marcu Taberten",
+    "slug": "marcu-taberten",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/marcu-taberten.png"
+  },
+  {
+    "player_id": "UNK_0671",
+    "name": "Simona Thien",
+    "slug": "simona-thien",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/simona-thien.png"
+  },
+  {
+    "player_id": "UNK_0672",
+    "name": "Christiana Thomastto",
+    "slug": "christiana-thomastto",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/christiana-thomastto.png"
+  },
+  {
+    "player_id": "UNK_0674",
+    "name": "Keate Thompov",
+    "slug": "keate-thompov",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/keate-thompov.png"
+  },
+  {
+    "player_id": "UNK_0676",
+    "name": "Fri Tiffelar",
+    "slug": "fri-tiffelar",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/fri-tiffelar.png"
+  },
+  {
+    "player_id": "UNK_0677",
+    "name": "Xavera Tippsen",
+    "slug": "xavera-tippsen",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/xavera-tippsen.png"
+  },
+  {
+    "player_id": "UNK_0678",
+    "name": "Dustino Tokarsktto",
+    "slug": "dustino-tokarsktto",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/dustino-tokarsktto.png"
+  },
+  {
+    "player_id": "UNK_0679",
+    "name": "Luce Tostar",
+    "slug": "luce-tostar",
+    "team_slug": "düsseldorf-aurora",
+    "portrait": "/images/players/saison_01/düsseldorf-aurora/luce-tostar.png"
+  },
+  {
+    "player_id": "UNK_0680",
+    "name": "Nikla Treutlven",
+    "slug": "nikla-treutlven",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/nikla-treutlven.png"
+  },
+  {
+    "player_id": "UNK_0681",
+    "name": "Thoma Trevelyov",
+    "slug": "thoma-trevelyov",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/thoma-trevelyov.png"
+  },
+  {
+    "player_id": "UNK_0684",
+    "name": "Alexe Trivellvik",
+    "slug": "alexe-trivellvik",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/alexe-trivellvik.png"
+  },
+  {
+    "player_id": "UNK_0685",
+    "name": "Coreye Trivinov",
+    "slug": "coreye-trivinov",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/coreye-trivinov.png"
+  },
+  {
+    "player_id": "UNK_0686",
+    "name": "Edwin Tropov",
+    "slug": "edwin-tropov",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/edwin-tropov.png"
+  },
+  {
+    "player_id": "UNK_0689",
+    "name": "Odeeno Tuften",
+    "slug": "odeeno-tuften",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/odeeno-tuften.png"
+  },
+  {
+    "player_id": "UNK_0690",
+    "name": "Parkera Tuomiov",
+    "slug": "parkera-tuomiov",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/parkera-tuomiov.png"
+  },
+  {
+    "player_id": "UNK_0691",
+    "name": "Dominicu Turgetto",
+    "slug": "dominicu-turgetto",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/dominicu-turgetto.png"
+  },
+  {
+    "player_id": "UNK_0694",
+    "name": "Juhanu Tyrväinsen",
+    "slug": "juhanu-tyrvaeinsen",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/juhanu-tyrvaeinsen.png"
+  },
+  {
+    "player_id": "UNK_0695",
+    "name": "Henrike Törnqvven",
+    "slug": "henrike-toernqvven",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/henrike-toernqvven.png"
+  },
+  {
+    "player_id": "UNK_0696",
+    "name": "Ericu Ubtto",
+    "slug": "ericu-ubtto",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/ericu-ubtto.png"
+  },
+  {
+    "player_id": "UNK_0697",
+    "name": "Colino Ugbekilov",
+    "slug": "colino-ugbekilov",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/colino-ugbekilov.png"
+  },
+  {
+    "player_id": "UNK_0698",
+    "name": "Dominiki Uhen",
+    "slug": "dominiki-uhen",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/dominiki-uhen.png"
+  },
+  {
+    "player_id": "UNK_0700",
+    "name": "Jano Urbasik",
+    "slug": "jano-urbasik",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/jano-urbasik.png"
+  },
+  {
+    "player_id": "UNK_0701",
+    "name": "Jakobu Ustorfin",
+    "slug": "jakobu-ustorfin",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/jakobu-ustorfin.png"
+  },
+  {
+    "player_id": "UNK_0702",
+    "name": "Sebu Uvirtli",
+    "slug": "sebu-uvirtli",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/sebu-uvirtli.png"
+  },
+  {
+    "player_id": "UNK_0703",
+    "name": "Yanno Valentin",
+    "slug": "yanno-valentin",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/yanno-valentin.png"
+  },
+  {
+    "player_id": "UNK_0705",
+    "name": "Davisa Vandanven",
+    "slug": "davisa-vandanven",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/davisa-vandanven.png"
+  },
+  {
+    "player_id": "UNK_0706",
+    "name": "Filipi Varejckov",
+    "slug": "filipi-varejckov",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/filipi-varejckov.png"
+  },
+  {
+    "player_id": "UNK_0707",
+    "name": "Taylori Vausan",
+    "slug": "taylori-vausan",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/taylori-vausan.png"
+  },
+  {
+    "player_id": "UNK_0709",
+    "name": "Yannicku Veillenik",
+    "slug": "yannicku-veillenik",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/yannicku-veillenik.png"
+  },
+  {
+    "player_id": "UNK_0711",
+    "name": "Miha Verlicinov",
+    "slug": "miha-verlicinov",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/miha-verlicinov.png"
+  },
+  {
+    "player_id": "UNK_0712",
+    "name": "Markusu Vikingstovik",
+    "slug": "markusu-vikingstovik",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/markusu-vikingstovik.png"
+  },
+  {
+    "player_id": "UNK_0714",
+    "name": "VeliMatta Vittasmäovik",
+    "slug": "velimatta-vittasmaeovik",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/velimatta-vittasmaeovik.png"
+  },
+  {
+    "player_id": "UNK_0718",
+    "name": "Justinu Volekinov",
+    "slug": "justinu-volekinov",
+    "team_slug": "bad-nauheim-devils",
+    "portrait": "/images/players/saison_01/bad-nauheim-devils/justinu-volekinov.png"
+  },
+  {
+    "player_id": "UNK_0721",
+    "name": "Fabio Wagnov",
+    "slug": "fabio-wagnov",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/fabio-wagnov.png"
+  },
+  {
+    "player_id": "UNK_0724",
+    "name": "Moritzi Warneckan",
+    "slug": "moritzi-warneckan",
+    "team_slug": "münchen-fluxbullen",
+    "portrait": "/images/players/saison_01/münchen-fluxbullen/moritzi-warneckan.png"
+  },
+  {
+    "player_id": "UNK_0725",
+    "name": "Jakobu Webik",
+    "slug": "jakobu-webik",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/jakobu-webik.png"
+  },
+  {
+    "player_id": "UNK_0726",
+    "name": "Marcuse Webik",
+    "slug": "marcuse-webik",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/marcuse-webik.png"
+  },
+  {
+    "player_id": "UNK_0727",
+    "name": "Williame Webik",
+    "slug": "williame-webik",
+    "team_slug": "schwenningen-sturmflügel",
+    "portrait": "/images/players/saison_01/schwenningen-sturmflügel/williame-webik.png"
+  },
+  {
+    "player_id": "UNK_0728",
+    "name": "Mati Wedmanovik",
+    "slug": "mati-wedmanovik",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/mati-wedmanovik.png"
+  },
+  {
+    "player_id": "UNK_0729",
+    "name": "Jake Weidnar",
+    "slug": "jake-weidnar",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/jake-weidnar.png"
+  },
+  {
+    "player_id": "UNK_0730",
+    "name": "Hannibalu Weitzdunov",
+    "slug": "hannibalu-weitzdunov",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/hannibalu-weitzdunov.png"
+  },
+  {
+    "player_id": "UNK_0731",
+    "name": "Ale Weissin",
+    "slug": "ale-weissin",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/ale-weissin.png"
+  },
+  {
+    "player_id": "UNK_0733",
+    "name": "Christiana Wejsen",
+    "slug": "christiana-wejsen",
+    "team_slug": "bremerhaven-trident",
+    "portrait": "/images/players/saison_01/bremerhaven-trident/christiana-wejsen.png"
+  },
+  {
+    "player_id": "UNK_0734",
+    "name": "Yannicku Wenzsen",
+    "slug": "yannicku-wenzsen",
+    "team_slug": "landshut-lichtkern",
+    "portrait": "/images/players/saison_01/landshut-lichtkern/yannicku-wenzsen.png"
+  },
+  {
+    "player_id": "UNK_0736",
+    "name": "Mati Whitinov",
+    "slug": "mati-whitinov",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/mati-whitinov.png"
+  },
+  {
+    "player_id": "UNK_0738",
+    "name": "Mano Wiederik",
+    "slug": "mano-wiederik",
+    "team_slug": "whiteout-berlin",
+    "portrait": "/images/players/saison_01/whiteout-berlin/mano-wiederik.png"
+  },
+  {
+    "player_id": "UNK_0739",
+    "name": "Nica Wiensdunov",
+    "slug": "nica-wiensdunov",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/nica-wiensdunov.png"
+  },
+  {
+    "player_id": "UNK_0740",
+    "name": "Jano Wieszinslek",
+    "slug": "jano-wieszinslek",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/jano-wieszinslek.png"
+  },
+  {
+    "player_id": "UNK_0741",
+    "name": "Boda Wildven",
+    "slug": "boda-wildven",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/boda-wildven.png"
+  },
+  {
+    "player_id": "UNK_0742",
+    "name": "Christophera Wilkiinov",
+    "slug": "christophera-wilkiinov",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/christophera-wilkiinov.png"
+  },
+  {
+    "player_id": "UNK_0743",
+    "name": "Devon Willark",
+    "slug": "devon-willark",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/devon-willark.png"
+  },
+  {
+    "player_id": "UNK_0744",
+    "name": "Daniele Wirtvik",
+    "slug": "daniele-wirtvik",
+    "team_slug": "frankfurt-core",
+    "portrait": "/images/players/saison_01/frankfurt-core/daniele-wirtvik.png"
+  },
+  {
+    "player_id": "UNK_0745",
+    "name": "Moritzi Wirthnik",
+    "slug": "moritzi-wirthnik",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/moritzi-wirthnik.png"
+  },
+  {
+    "player_id": "UNK_0746",
+    "name": "Tima Wohlgemtto",
+    "slug": "tima-wohlgemtto",
+    "team_slug": "augsburg-ferox",
+    "portrait": "/images/players/saison_01/augsburg-ferox/tima-wohlgemtto.png"
+  },
+  {
+    "player_id": "UNK_0748",
+    "name": "Kyli Woodik",
+    "slug": "kyli-woodik",
+    "team_slug": "iserlohn-miners",
+    "portrait": "/images/players/saison_01/iserlohn-miners/kyli-woodik.png"
+  },
+  {
+    "player_id": "UNK_0752",
+    "name": "Marki Zengerlov",
+    "slug": "marki-zengerlov",
+    "team_slug": "krefeld-kernschlag",
+    "portrait": "/images/players/saison_01/krefeld-kernschlag/marki-zengerlov.png"
+  },
+  {
+    "player_id": "UNK_0753",
+    "name": "Dominiki Zerhocin",
+    "slug": "dominiki-zerhocin",
+    "team_slug": "novadelta-panther",
+    "portrait": "/images/players/saison_01/novadelta-panther/dominiki-zerhocin.png"
+  },
+  {
+    "player_id": "UNK_0754",
+    "name": "Pasco Zerresvik",
+    "slug": "pasco-zerresvik",
+    "team_slug": "regensburg-pulse",
+    "portrait": "/images/players/saison_01/regensburg-pulse/pasco-zerresvik.png"
+  },
+  {
+    "player_id": "UNK_0756",
+    "name": "Svenu Zieglven",
+    "slug": "svenu-zieglven",
+    "team_slug": "wolfsburg-voltsturm",
+    "portrait": "/images/players/saison_01/wolfsburg-voltsturm/svenu-zieglven.png"
+  },
+  {
+    "player_id": "UNK_0758",
+    "name": "Maxe Ziergiebar",
+    "slug": "maxe-ziergiebar",
+    "team_slug": "köln-blitzhaie",
+    "portrait": "/images/players/saison_01/köln-blitzhaie/maxe-ziergiebar.png"
+  },
+  {
+    "player_id": "UNK_0760",
+    "name": "Marie Zimmerar",
+    "slug": "marie-zimmerar",
+    "team_slug": "straubing-forest-tigers",
+    "portrait": "/images/players/saison_01/straubing-forest-tigers/marie-zimmerar.png"
+  },
+  {
+    "player_id": "UNK_0762",
+    "name": "Luisa Üffingvik",
+    "slug": "luisa-ueffingvik",
+    "team_slug": "nürnberg-eistiger",
+    "portrait": "/images/players/saison_01/nürnberg-eistiger/luisa-ueffingvik.png"
+  },
+  {
+    "player_id": "UNK_0763",
+    "name": "Alexander Pankraz",
+    "slug": "alexander-pankraz",
+    "team_slug": "kassel-zenit",
+    "portrait": "/images/players/saison_01/kassel-zenit/alexander-pankraz.png"
+  },
+  {
+    "player_id": "UNK_0764",
+    "name": "Baran Bruno Cicek",
+    "slug": "baran-bruno-cicek",
+    "team_slug": "ravensburg-zenit-falken",
+    "portrait": "/images/players/saison_01/ravensburg-zenit-falken/baran-bruno-cicek.png"
+  }
+]

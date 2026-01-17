@@ -5,12 +5,14 @@ import random
 import logging
 from datetime import datetime
 from pathlib import Path
+import json
 from typing import Any, Dict, List, Tuple, Optional
 
 import pandas as pd
 import math
 import os
 import re
+
 
 from narrative_engine import build_narratives_for_matchday, write_narratives_json
 from starting_six import generate_starting_six
@@ -53,7 +55,6 @@ def _clean_for_json(obj: Any) -> Any:
         return [_clean_for_json(v) for v in obj]
 
     return obj
-
 import re
 
 # Logging setup
@@ -81,13 +82,14 @@ def to_index(value: str) -> int:
 # Data Root (Single Source of Truth) - HARD FAIL wenn nicht gesetzt
 # ----------------------------
 
-# Ensure HIGHSPEED_DATA_ROOT is always set to the external data repo
 env_root = os.environ.get("HIGHSPEED_DATA_ROOT")
-if not env_root:
-    env_root = "/opt/highspeed/data"
-    os.environ["HIGHSPEED_DATA_ROOT"] = env_root
-    print("⚠️  HIGHSPEED_DATA_ROOT was not set. Defaulting to /opt/highspeed/data.")
-DATA_ROOT = Path(env_root).resolve()
+if env_root:
+    DATA_ROOT = Path(env_root).resolve()
+    print("✅ HIGHSPEED_DATA_ROOT =", DATA_ROOT)
+else:
+    DATA_ROOT = Path("./").resolve()
+    print("[WARN] Schreibe Daten ins Engine-Repo! (HIGHSPEED_DATA_ROOT nicht gesetzt)")
+
 
 SAVEFILE     = DATA_ROOT / "saves" / "savegame.json"
 SPIELTAG_DIR = DATA_ROOT / "spieltage"
@@ -503,7 +505,10 @@ def save_spieltag_json(
         payload["debug"] = debug
     if lineups is not None:
         payload["lineups"] = lineups  # <<< NEU
-    _save_json(SPIELTAG_DIR / season_folder(season), f"spieltag_{gameday:02}.json", payload)
+    # Schreibe Spieltag-JSONs in den Ordner spieltage (lokal oder im Datenrepo, je nach DATA_ROOT)
+    target_folder = SPIELTAG_DIR / season_folder(season)
+    target_folder.mkdir(parents=True, exist_ok=True)
+    _save_json(target_folder, f"spieltag_{gameday:02}.json", payload)
 
     # Auch in stats/ speichern, falls die App das lädt
     teams = []
@@ -632,9 +637,7 @@ def _load_json(path: Path) -> Dict[str, Any]:
     with path.open("r", encoding="utf-8") as f:
         return json.load(f)
 
-
 def _calc_streak(results: List[str]) -> str:
-    """Returns streak like W3/L2 based on last results. Treats W2 as W and L1 as L."""
     if not results:
         return ""
 
@@ -643,11 +646,13 @@ def _calc_streak(results: List[str]) -> str:
             return "W"
         if r == "L1":
             return "L"
+        if r == "T":
+            return "T"
         return r
 
     last = norm(results[-1])
     if last not in ("W", "L"):
-        return ""
+        return ""  # kein T-Streak
 
     n = 0
     for r in reversed(results):
@@ -656,6 +661,7 @@ def _calc_streak(results: List[str]) -> str:
         else:
             break
     return f"{last}{n}"
+
 def _team_points_from_results(results: List[str]) -> int:
     pts = 0
     for r in results:
@@ -665,9 +671,9 @@ def _team_points_from_results(results: List[str]) -> int:
             pts += 2
         elif r == "L1":
             pts += 1
-        # "L" -> 0, "T" should not occur
+        # "L" gibt 0
+        # "T" ignorieren wir (soll nicht mehr vorkommen)
     return pts
-
 
 def _safe_mean(vals: List[Any]) -> Optional[float]:
     xs = [v for v in vals if isinstance(v, (int, float))]
@@ -714,11 +720,11 @@ def _build_game_logs_from_spieltage(season: int) -> Dict[str, List[Dict[str, Any
             is_ot_so = r.get("overtime", False) or r.get("shootout", False)
 
             if gh > ga:
-                home_res = "W2" if is_ot_so else "W"
-                away_res = "L1" if is_ot_so else "L"
+                home_res = "W" if is_ot_so else "W"
+                away_res = "L" if is_ot_so else "L"
             elif gh < ga:
-                home_res = "L1" if is_ot_so else "L"
-                away_res = "W2" if is_ot_so else "W"
+                home_res = "L" if is_ot_so else "L"
+                away_res = "W" if is_ot_so else "W"
             else:
                 home_res, away_res = "T", "T"
 
@@ -752,7 +758,7 @@ def save_league_stats_snapshot(
     """
     Schreibt:
       stats/saison_<season>/league/latest.json
-      stats/saison_<season>/league/after_spieltag_XX_detail.json
+      stats/saison_<season>/league/after_spieltag_XX.json
     """
     logs = _build_game_logs_from_spieltage(season)
 
@@ -840,7 +846,7 @@ def save_league_stats_snapshot(
 
     league_folder.mkdir(parents=True, exist_ok=True)
 
-    _save_json(league_folder, f"after_spieltag_{upto_matchday:02}_detail.json", payload)
+    _save_json(league_folder, f"after_spieltag_{upto_matchday:02}.json", payload)
     _save_json(league_folder, "latest.json", payload)
 
 
@@ -1409,19 +1415,18 @@ def simulate_match(
     else:
         # Unentschieden nach allem, aber sollte nicht
         pass
-
-    # Update Goals For / Goals Against (sonst bleiben GF/GA/GD in Exports 0)
-    for col in ("Goals For", "Goals Against"):
-        if col not in df.columns:
-            df[col] = 0
-    df["Goals For"] = pd.to_numeric(df["Goals For"], errors="coerce").fillna(0).astype(int)
-    df["Goals Against"] = pd.to_numeric(df["Goals Against"], errors="coerce").fillna(0).astype(int)
+    # --- Goals For / Against updaten (WICHTIG: sonst bleiben GF/GA/GD überall 0) ---
+    # Safety: falls Spalten fehlen (sollten sie nicht)
+    if "Goals For" not in df.columns:
+        df["Goals For"] = 0
+    if "Goals Against" not in df.columns:
+        df["Goals Against"] = 0
 
     df.loc[df["Team"] == home, "Goals For"] += int(g_home)
     df.loc[df["Team"] == home, "Goals Against"] += int(g_away)
+
     df.loc[df["Team"] == away, "Goals For"] += int(g_away)
     df.loc[df["Team"] == away, "Goals Against"] += int(g_home)
-
     # Update last5 für Teams
     if g_home > g_away:
         home_result = "W2" if is_overtime or is_shootout else "W"
@@ -1450,6 +1455,8 @@ def simulate_match(
 
     logging.info(f"Updated last5 for {away}: {df.loc[df['Team'] == away, 'last5'].iloc[0]}")
 
+    update_player_stats(home, g_home, df, stats)
+    update_player_stats(away, g_away, df, stats)
 
     res_str = f"{home} {g_home}:{g_away} {away}"
     res_json = {
@@ -1487,16 +1494,6 @@ def simulate_match(
             assister.get("Name") if assister else None,
             assister.get("Number") if assister else None,
         )
-    def _inc_player_stat(team: str, player_name: str, goals: int = 0, assists: int = 0) -> None:
-        if not player_name:
-            return
-        mask = (stats["Team"] == team) & (stats["Player"] == player_name)
-        if not mask.any():
-            return
-        if goals:
-            stats.loc[mask, "Goals"] = stats.loc[mask, "Goals"].fillna(0).astype(int) + int(goals)
-        if assists:
-            stats.loc[mask, "Assists"] = stats.loc[mask, "Assists"].fillna(0).astype(int) + int(assists)
 
     events: List[Dict[str, Any]] = []
     current_index = 0
@@ -1516,13 +1513,6 @@ def simulate_match(
             is_goal = True
 
         player_main, player_main_number, player_secondary, player_secondary_number = _pick_pair(team_key)
-        # Replay ist Source of Truth: Stats werden aus den generierten Replay-Goals abgeleitet
-        if is_goal:
-            team_name = home if team_key == "home" else away
-            if player_main:
-                _inc_player_stat(team_name, str(player_main), goals=1)
-            if player_secondary:
-                _inc_player_stat(team_name, str(player_secondary), assists=1)
 
         seq: List[Tuple[str, str, str]] = [
             ("build_up", "defensive", "none"),
@@ -1575,13 +1565,6 @@ def simulate_match(
         if ot_home > 0 or ot_away > 0:
             team_key = "home" if ot_home > 0 else "away"
             player_main, player_main_number, player_secondary, player_secondary_number = _pick_pair(team_key)
-        # Replay ist Source of Truth: Stats werden aus den generierten Replay-Goals abgeleitet
-        if is_goal:
-            team_name = home if team_key == "home" else away
-            if player_main:
-                _inc_player_stat(team_name, str(player_main), goals=1)
-            if player_secondary:
-                _inc_player_stat(team_name, str(player_secondary), assists=1)
             events.append({
                 "i": current_index,
                 "t": current_index,
@@ -1620,13 +1603,6 @@ def simulate_match(
             if so_home > 0 or so_away > 0:
                 team_key = "home" if so_home > 0 else "away"
                 player_main, player_main_number, player_secondary, player_secondary_number = _pick_pair(team_key)
-        # Replay ist Source of Truth: Stats werden aus den generierten Replay-Goals abgeleitet
-        if is_goal:
-            team_name = home if team_key == "home" else away
-            if player_main:
-                _inc_player_stat(team_name, str(player_main), goals=1)
-            if player_secondary:
-                _inc_player_stat(team_name, str(player_secondary), assists=1)
                 events.append({
                     "i": current_index,
                     "t": current_index,
@@ -1832,6 +1808,285 @@ def read_tables_for_ui() -> Dict[str, Any]:
 
 
 def step_regular_season_once() -> Dict[str, Any]:
+    # --- Zentrale DataFrame-Erstellung für alle Spieler- und Spieltagsdaten ---
+    # Diese Zählung erfolgt NACHDEM die Lineups für den aktuellen Spieltag gespeichert wurden!
+    state = load_state()
+    if not state:
+        season = get_next_season_number()
+        state = _init_new_season_state(season)
+        save_state(state)
+
+    season   = state["season"]
+    spieltag = state["spieltag"]
+    nord     = pd.DataFrame(state["nord"])
+    sued     = pd.DataFrame(state["sued"])
+    nsched   = state["nsched"]
+    ssched   = state["ssched"]
+    stats    = pd.DataFrame(state["stats"])
+
+    # --- DEBUG: Baue das zentrale Stats-DataFrame und alle Statistiken direkt aus den Replay-Events ---
+    try:
+        import glob
+        from collections import defaultdict
+        # Mapping für Player-IDs
+        mapping_file = Path("data/mapping_player_names.json")
+        name_to_id = {}
+        if mapping_file.exists():
+            with mapping_file.open("r", encoding="utf-8") as f:
+                mapping_data = json.load(f)
+            for entry in mapping_data:
+                pid = entry.get("player_id")
+                fake = entry.get("fake")
+                real = entry.get("real")
+                if fake:
+                    name_to_id[fake] = pid
+                if real:
+                    name_to_id[real] = pid
+
+        # Alle Replay-JSONs für diesen Spieltag laden
+        replay_dir = Path(f"replays/saison_{season:02}/spieltag_{spieltag:02}")
+        event_files = list(replay_dir.glob("*.json"))
+        player_stats = defaultdict(lambda: {"Goals": 0, "Assists": 0, "GamesPlayed": 0, "Player": None, "Team": None, "Number": None, "PositionGroup": None})
+        # Teamzuordnung (optional, falls im Replay nicht enthalten)
+        team_map = {}
+        # Alle Spiele durchgehen
+        for ef in event_files:
+            with open(ef, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            home = data.get("home", {}).get("name")
+            away = data.get("away", {}).get("name")
+            events = data.get("events", [])
+            # Zähle GamesPlayed für alle Spieler im Spiel (vereinfachte Annahme: alle Torschützen/Assists haben gespielt)
+            appeared = set()
+            for ev in events:
+                if ev.get("type") == "goal" and ev.get("result") == "goal":
+                    scorer = ev.get("player_main")
+                    assist = ev.get("player_secondary")
+                    team = home if ev.get("team") == "home" else away
+                    # Torschütze
+                    if scorer:
+                        player_stats[scorer]["Goals"] += 1
+                        player_stats[scorer]["Player"] = scorer
+                        player_stats[scorer]["Team"] = team
+                        appeared.add(scorer)
+                    # Assist
+                    if assist:
+                        player_stats[assist]["Assists"] += 1
+                        player_stats[assist]["Player"] = assist
+                        player_stats[assist]["Team"] = team
+                        appeared.add(assist)
+            for p in appeared:
+                player_stats[p]["GamesPlayed"] += 1
+        # DataFrame bauen
+        df_stats = []
+        for pname, stats_row in player_stats.items():
+            pid = name_to_id.get(pname)
+            if not pid:
+                continue
+            entry = {
+                "player_id": pid,
+                "Player": pname,
+                "Team": stats_row.get("Team"),
+                "Number": stats_row.get("Number"),
+                "PositionGroup": stats_row.get("PositionGroup"),
+                "GamesPlayed": stats_row.get("GamesPlayed", 0),
+                "Goals": stats_row.get("Goals", 0),
+                "Assists": stats_row.get("Assists", 0),
+                "Points": stats_row.get("Goals", 0) + stats_row.get("Assists", 0)
+            }
+            df_stats.append(entry)
+        df_stats_df = pd.DataFrame(df_stats)
+        df_stats_json = df_stats_df.to_dict(orient="records")
+        with open(f"data/stats_dataframe_debug_spieltag_{spieltag:02}.json", "w", encoding="utf-8") as f:
+            json.dump(df_stats_json, f, indent=2, ensure_ascii=False)
+        print(f"✅ Replay-basierter Stats DataFrame-Export: data/stats_dataframe_debug_spieltag_{spieltag:02}.json")
+    except Exception as e:
+        print(f"[WARN] Replay-basierter DataFrame-Export fehlgeschlagen: {e}")
+
+    # --- Exportiere Player Stats direkt aus dem zentralen DataFrame nach der Simulation ---
+    try:
+        # Build player_id mapping from mapping_player_names.json
+        mapping_file = Path("data/mapping_player_names.json")
+        name_to_id = {}
+        if mapping_file.exists():
+            with mapping_file.open("r", encoding="utf-8") as f:
+                mapping_data = json.load(f)
+            for entry in mapping_data:
+                pid = entry.get("player_id")
+                fake = entry.get("fake")
+                real = entry.get("real")
+                if fake:
+                    name_to_id[fake] = pid
+                if real:
+                    name_to_id[real] = pid
+
+        player_stats = []
+        for _, row in stats.iterrows():
+            pname = row.get("Player")
+            pid = name_to_id.get(pname)
+            if not pid:
+                continue
+            entry = {
+                "player_id": pid,
+                "Player": pname,
+                "Team": row.get("Team"),
+                "Number": row.get("Number"),
+                "PositionGroup": row.get("PositionGroup"),
+                "GamesPlayed": row.get("GamesPlayed", 0),
+                "Goals": row.get("Goals", 0),
+                "Assists": row.get("Assists", 0),
+                "Points": row.get("Goals", 0) + row.get("Assists", 0)
+            }
+            player_stats.append(entry)
+
+        # --- NEU: Player Stats direkt aus Replay-Events ableiten ---
+        replay_dir = REPLAY_DIR / season_folder(season) / f"spieltag_{spieltag:02}"
+        # Alle Spiele des Spieltags durchsuchen
+        stats_counter = {}
+        # Stats für diesen Spieltag frisch initialisieren
+        stats_counter = {}
+        all_players = set()
+        # Sammle alle Spieler, die im Replay dieses Spieltags überhaupt auftauchen
+        for replay_file in replay_dir.glob("*.json"):
+            if replay_file.name.startswith("narratives") or replay_file.name.startswith("replay_matchday"):
+                continue
+            with open(replay_file, "r", encoding="utf-8") as f:
+                replay = json.load(f)
+            for event in replay.get("events", []):
+                for key in ["player_main", "player_secondary"]:
+                    pname = event.get(key)
+                    if pname:
+                        all_players.add(pname)
+        # Initialisiere alle Spieler mit 0 für diesen Spieltag
+        for pname in all_players:
+            stats_counter[pname] = {"g": 0, "a": 0, "pts": 0, "gp": 1, "name": pname}
+        # Zähle Tore/Assists ausschließlich aus Replay-Events dieses Spieltags
+        for replay_file in replay_dir.glob("*.json"):
+            if replay_file.name.startswith("narratives") or replay_file.name.startswith("replay_matchday"):
+                continue
+            with open(replay_file, "r", encoding="utf-8") as f:
+                replay = json.load(f)
+            for event in replay.get("events", []):
+                if event.get("type") == "goal" and event.get("result") == "goal":
+                    scorer = event.get("player_main")
+                    assist = event.get("player_secondary")
+                    if scorer and scorer in stats_counter:
+                        stats_counter[scorer]["g"] += 1
+                    if assist and assist in stats_counter:
+                        stats_counter[assist]["a"] += 1
+        # Punkte berechnen
+        for entry in stats_counter.values():
+            entry["pts"] = entry["g"] + entry["a"]
+        # Schreibe Einzelspieltag-Stats
+        out_path = STATS_DIR / season_folder(season) / "league" / f"player_stats_after_spieltag_{spieltag:02}.json"
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(out_path, "w", encoding="utf-8") as f:
+            json.dump(list(stats_counter.values()), f, indent=2, ensure_ascii=False)
+        print(f"✅ Player Stats (nur Spieltag {spieltag}, aus Replay) exportiert: {out_path}")
+
+        # --- Akkumuliere alle bisherigen Einzelspieltag-Stats zu player_stats_latest.json ---
+        from collections import defaultdict
+        latest_stats = defaultdict(lambda: {"g": 0, "a": 0, "pts": 0, "gp": 0, "player_id": None, "name": None, "pos": None})
+        for st in range(1, spieltag + 1):
+            st_path = STATS_DIR / season_folder(season) / "league" / f"player_stats_after_spieltag_{st:02}.json"
+            if not st_path.exists():
+                continue
+            with open(st_path, "r", encoding="utf-8") as f:
+                st_stats = json.load(f)
+            for entry in st_stats:
+                pid = entry.get("player_id")
+                if not pid:
+                    continue
+                latest_stats[pid]["player_id"] = pid
+                latest_stats[pid]["name"] = entry.get("name") or entry.get("Player")
+                latest_stats[pid]["pos"] = entry.get("pos") or entry.get("PositionGroup")
+                latest_stats[pid]["g"] += entry.get("g", entry.get("Goals", 0))
+                latest_stats[pid]["a"] += entry.get("a", entry.get("Assists", 0))
+                latest_stats[pid]["pts"] += entry.get("pts", entry.get("Points", 0))
+                latest_stats[pid]["gp"] += entry.get("gp", entry.get("GamesPlayed", 0))
+        latest_stats_list = list(latest_stats.values())
+        latest_path = STATS_DIR / season_folder(season) / "league" / "player_stats_latest.json"
+        with open(latest_path, "w", encoding="utf-8") as f:
+            json.dump({"players": latest_stats_list}, f, indent=2, ensure_ascii=False)
+        print(f"✅ Player Stats (akkumuliert) exportiert: {latest_path}")
+    except Exception as e:
+        print(f"[WARN] Player Stats Export aus Simulation DataFrame fehlgeschlagen: {e}")
+    # --- Patch: Use unique player_id from mapping_player_names.json ---
+    # import json (already imported at top)
+    mapping_file = Path("data/mapping_player_names.json")
+    name_to_id = {}
+    if mapping_file.exists():
+        with mapping_file.open("r", encoding="utf-8") as f:
+            mapping_data = json.load(f)
+        for entry in mapping_data:
+            pid = entry.get("player_id")
+            fake = entry.get("fake")
+            real = entry.get("real")
+            if fake:
+                name_to_id[fake] = pid
+            if real:
+                name_to_id[real] = pid
+
+    # Games Played aus allen gespeicherten Lineups bis zum aktuellen Spieltag zählen
+    from collections import Counter
+    def count_games_played(season, max_spieltag):
+        games_played_counter = Counter()
+        for st in range(1, max_spieltag + 1):
+            lineup = None
+            try:
+                from player_stats_export import load_lineups_for_spieltag
+                lineup = load_lineups_for_spieltag(season, st)
+            except Exception:
+                continue
+            if lineup and "teams" in lineup:
+                for team_data in lineup["teams"].values():
+                    for group in ["forwards", "defense"]:
+                        for line in team_data.get(group, {}).values():
+                            for player in line:
+                                if not player.get("rotation", False):
+                                    pname = player.get("Name")
+                                    pid = name_to_id.get(pname)
+                                    if pid:
+                                        games_played_counter[pid] += 1
+                    goalie = team_data.get("goalie")
+                    if goalie and isinstance(goalie, dict):
+                        pname = goalie.get("Name")
+                        pid = name_to_id.get(pname)
+                        if pid:
+                            games_played_counter[pid] += 1
+        return games_played_counter
+
+    games_played_counter = count_games_played(season, spieltag)
+
+    # Baue DataFrame mit allen Spielern und Stats
+    # Hole alle relevanten Stat-Werte aus dem zentralen DataFrame 'stats'
+    if 'stats' in locals() and stats is not None:
+        df_stats = []
+        for _, row in stats.iterrows():
+            pname = row.get("Player")
+            pid = name_to_id.get(pname)
+            if not pid:
+                continue
+            entry = {
+                "player_id": pid,
+                "Player": pname,
+                "Team": row.get("Team"),
+                "Number": row.get("Number"),
+                "PositionGroup": row.get("PositionGroup"),
+                "GamesPlayed": games_played_counter.get(pid, 0),
+                "Goals": row.get("Goals", 0),
+                "Assists": row.get("Assists", 0),
+                "Points": row.get("Goals", 0) + row.get("Assists", 0)
+            }
+            df_stats.append(entry)
+        df_stats_df = pd.DataFrame(df_stats)
+
+        # Testausgabe: DataFrame als JSON printen (nur für Debug, kann später entfernt werden)
+        df_stats_json = df_stats_df.to_dict(orient="records")
+        with open(f"data/df_stats_spieltag_{spieltag:02}.json", "w", encoding="utf-8") as f:
+            json.dump(df_stats_json, f, indent=2, ensure_ascii=False)
+    else:
+        print("[DEBUG] DataFrame-Export übersprungen: 'stats' nicht gesetzt.")
     state = load_state()
     if not state:
         season = get_next_season_number()
@@ -1852,29 +2107,8 @@ def step_regular_season_once() -> Dict[str, Any]:
     nsched   = state["nsched"]
     ssched   = state["ssched"]
     stats    = pd.DataFrame(state["stats"])
-    # === CANON-OVERRIDE: Saison 1, Spieltag 3 ===
-    # Optional: Wenn canon_spieltag_03.json im Data-Repo existiert, wird Spieltag 3 aus Canon geschrieben.
-    # Wenn nicht vorhanden, wird normal simuliert (kein Crash).
-    if season == 1 and spieltag == 3:
-        canon_path = DATA_ROOT / "canon_spieltag_03.json"
-        if canon_path.exists():
-            print("[CANON-OVERRIDE] Spieltag 3 Saison 1: Schreibe Canon-Daten, keine Simulation!")
-            canon_payload = _load_json(canon_path)
 
-            # Schreibe Canon-Daten als spieltag_03.json ins Data-Repo
-            out_path = SPIELTAG_DIR / season_folder(season) / f"spieltag_{spieltag:02}.json"
-            out_path.parent.mkdir(parents=True, exist_ok=True)
-            with out_path.open("w", encoding="utf-8") as f:
-                json.dump(_clean_for_json(canon_payload), f, indent=2, ensure_ascii=False)
-            print(f"[CANON-OVERRIDE] Canon-Spieltag gespeichert: {out_path}")
-
-            # Savegame updaten (Spieltag +1)
-            state["spieltag"] = spieltag + 1
-            save_state(state)
-            return {"status": "canon_override", "season": season, "spieltag": spieltag + 1}
-        else:
-            logging.warning(f"[CANON-OVERRIDE] Datei fehlt: {canon_path} -> simuliere normal.")
-    # === ENDE CANON-OVERRIDE ===
+ 
 
     max_spieltage = (len(nord_teams) - 1) * 2
     if isinstance(spieltag, int) and spieltag > max_spieltage:
@@ -1957,6 +2191,51 @@ def step_regular_season_once() -> Dict[str, Any]:
         lineups=lineups_payload,
     )
 
+    # --- Player Stats direkt aus zentralem DataFrame und gespeicherten Lineups exportieren ---
+    try:
+        from collections import Counter
+        games_played_counter = Counter()
+        for st in range(1, spieltag + 1):
+            lineup = None
+            try:
+                from player_stats_export import load_lineups_for_spieltag
+                lineup = load_lineups_for_spieltag(season, st)
+            except Exception:
+                continue
+            if lineup and "teams" in lineup:
+                for team_data in lineup["teams"].values():
+                    for group in ["forwards", "defense"]:
+                        for line in team_data.get(group, {}).values():
+                            for player in line:
+                                if not player.get("rotation", False):
+                                    pid = player["id"]
+                                    games_played_counter[pid] += 1
+                    goalie = team_data.get("goalie")
+                    if goalie and isinstance(goalie, dict):
+                        pid = goalie["id"]
+                        games_played_counter[pid] += 1
+
+        stats_export = stats.copy()
+        stats_export["Points"] = stats_export["Goals"] + stats_export["Assists"]
+        # Mapping für Export: Goals → g, Assists → a, Points → pts
+        stats_export["g"] = stats_export["Goals"]
+        stats_export["a"] = stats_export["Assists"]
+        stats_export["pts"] = stats_export["Points"]
+        # Füge Games Played hinzu (mapping nach Player-Name oder player_id, je nach Struktur)
+        if "player_id" in stats_export.columns:
+            stats_export["gp"] = stats_export["player_id"].map(lambda pid: games_played_counter.get(pid, 0))
+        else:
+            stats_export["gp"] = stats_export["Player"].map(lambda name: games_played_counter.get(name, 0))
+        export_fields = [col for col in ["Player", "player_id", "Team", "Number", "PositionGroup", "g", "a", "pts", "gp"] if col in stats_export.columns]
+        player_stats_json = stats_export[export_fields].to_dict(orient="records")
+        out_path = STATS_DIR / season_folder(season) / "league" / f"player_stats_after_spieltag_{spieltag:02}.json"
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(out_path, "w", encoding="utf-8") as f:
+            json.dump(player_stats_json, f, indent=2, ensure_ascii=False)
+        print(f"✅ Player Stats direkt aus DataFrame exportiert: {out_path}")
+    except Exception as e:
+        print(f"[WARN] Player Stats Export aus DataFrame fehlgeschlagen: {e}")
+
     # Generate Starting Six after lineups are saved (will be embedded in replay JSON)
     starting_six = None
     try:
@@ -2036,36 +2315,22 @@ def step_regular_season_once() -> Dict[str, Any]:
             with lineup_json_path.open("r", encoding="utf-8") as f:
                 lineup_json = json.load(f)
             
-            # Build stats for this matchday only (no accumulation)
+            # Build stats for this matchday (akkumuliert aus allen bisherigen Events)
             all_teams = nord_teams + sued_teams
             matchday_stats = build_player_stats_for_matchday(
                 lineup_json=lineup_json,
                 player_stats_df=stats,
                 all_teams=all_teams,
             )
-
-            # Write per-Spieltag snapshot (not cumulative)
+            # Schreibe Stats direkt, ohne Addition mit vorherigen JSONs
             write_player_stats_files(
                 base_stats_dir=STATS_DIR / season_folder(season),
                 season=season,
                 spieltag=spieltag,
                 stats_obj=matchday_stats,
                 all_teams=all_teams,
-                only_snapshot=True
             )
-
-            # Now update cumulative stats for latest.json
-            existing_stats = load_existing_player_stats(STATS_DIR, season)
-            updated_stats = merge_into_season_player_stats(existing_stats, matchday_stats)
-            write_player_stats_files(
-                base_stats_dir=STATS_DIR / season_folder(season),
-                season=season,
-                spieltag=spieltag,
-                stats_obj=updated_stats,
-                all_teams=all_teams,
-                only_latest=True
-            )
-            logging.info(f"Player stats exported: {len(updated_stats)} players tracked")
+            logging.info(f"Player stats exportiert (Replay-basiert)")
         else:
             logging.warning(f"Lineup JSON not found at {lineup_json_path}, skipping player stats export")
     except Exception as e:
