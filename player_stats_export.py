@@ -316,11 +316,14 @@ def build_player_stats_for_matchday(
             goals = max(0, goals - prev_g)
             assists = max(0, assists - prev_a)
         
-        # Ensure player is in stats_map
+        # Only include players with stats if they were dressed (in lineup)
         if player_id not in stats_map:
+            # Skip players with goals/assists who weren't in the lineup
+            if goals > 0 or assists > 0:
+                continue
+            # For players with no stats, still add them if needed (but they shouldn't have stats)
             stats_map[player_id] = {
                 "pos": "F",  # Default
-                "gp": 1,  # Fallback if not in dressed
             }
             if player_id in id_to_name:
                 stats_map[player_id]["name"] = id_to_name[player_id]

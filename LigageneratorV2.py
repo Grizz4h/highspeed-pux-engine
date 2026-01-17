@@ -86,7 +86,8 @@ env_root = os.environ.get("HIGHSPEED_DATA_ROOT")
 if not env_root:
     env_root = "/opt/highspeed/data"
     os.environ["HIGHSPEED_DATA_ROOT"] = env_root
-    print("⚠️  HIGHSPEED_DATA_ROOT was not set. Defaulting to /opt/highspeed/data.")
+# Removed for minimal output
+# print("⚠️  HIGHSPEED_DATA_ROOT was not set. Defaulting to /opt/highspeed/data.")
 DATA_ROOT = Path(env_root).resolve()
 
 SAVEFILE     = DATA_ROOT / "saves" / "savegame.json"
@@ -96,9 +97,11 @@ REPLAY_DIR   = DATA_ROOT / "replays"
 SCHEDULE_DIR = DATA_ROOT / "schedules"
 LINEUP_DIR   = DATA_ROOT / "lineups"
 STATS_DIR    = DATA_ROOT / "stats"
+DATA_DIR     = DATA_ROOT
 
-print("✅ HIGHSPEED_DATA_ROOT =", DATA_ROOT)
-print("✅ SAVEFILE =", SAVEFILE)
+# Removed for minimal output
+# print("✅ HIGHSPEED_DATA_ROOT =", DATA_ROOT)
+# print("✅ SAVEFILE =", SAVEFILE)
 
 def season_folder(season: int) -> str:
     return f"saison_{int(season):02d}"
@@ -262,12 +265,14 @@ def _enforce_novadelta_augsburg_third_match(
 
     team_count = len(teams)
     if team_count % 2 != 0:
-        print("[INFO] Story-Constraint deaktiviert (ungerade Teamanzahl in Conference).")
+        # Removed for minimal output
+        # print("[INFO] Story-Constraint deaktiviert (ungerade Teamanzahl in Conference).")
         return sched
 
     half = team_count // 2
     if len(sched) % half != 0:
-        print("[WARN] _enforce_novadelta_augsburg_third_match: sched-Länge passt nicht zu 'half'")
+        # Removed for minimal output
+        # print("[WARN] _enforce_novadelta_augsburg_third_match: sched-Länge passt nicht zu 'half'")
         return sched
 
     # Schritt A: H/A-Muster für Nova
@@ -310,7 +315,8 @@ def _enforce_novadelta_augsburg_third_match(
     third_day = third_game["day"]
 
     if not third_game["home"]:
-        print("[WARN] 3. Nova-Spiel ist nach H/A-Logik doch nicht Heim – Story-Constraint wird nicht erzwungen.")
+        # Removed for minimal output
+        # print("[WARN] 3. Nova-Spiel ist nach H/A-Logik doch nicht Heim – Story-Constraint wird nicht erzwungen.")
         return sched
 
     target_game: Optional[Dict[str, Any]] = None
@@ -366,7 +372,8 @@ def _save_json(folder: Path, name: str, payload: Dict[str, Any]) -> None:
     cleaned = _clean_for_json(payload)
     with (folder / name).open("w", encoding="utf-8") as f:
         json.dump(cleaned, f, indent=2, ensure_ascii=False)
-    print("📦 JSON gespeichert →", folder / name)
+    # Removed for minimal output
+    # print("📦 JSON gespeichert →", folder / name)
 
 
 def _save_full_schedule_preview(
@@ -390,7 +397,8 @@ def _save_full_schedule_preview(
     target_folder = SCHEDULE_DIR / season_folder(season)
     _save_json(target_folder, "spielplan.json", payload)
 
-    print("📃 Saison-Spielplan gespeichert →", target_folder / "spielplan.json")
+    # Removed for minimal output
+    # print("📃 Saison-Spielplan gespeichert →", target_folder / "spielplan.json")
 
 
 
@@ -418,7 +426,8 @@ def _init_new_season_state(season: int) -> Dict[str, Any]:
     if schedule_path.exists():
         with schedule_path.open("r", encoding="utf-8") as f:
             payload = json.load(f)
-        print(f"✅ Loaded existing schedule from {schedule_path}")
+        # Removed for minimal output
+        # print(f"✅ Loaded existing schedule from {schedule_path}")
         nsched = [(m["home"], m["away"]) for md in payload["nord"]["matchdays"] for m in md["matches"]]
         ssched = [(m["home"], m["away"]) for md in payload["sued"]["matchdays"] for m in md["matches"]]
     else:
@@ -427,7 +436,8 @@ def _init_new_season_state(season: int) -> Dict[str, Any]:
         nsched = _enforce_novadelta_augsburg_third_match(nsched, nord_teams)
         ssched = _enforce_novadelta_augsburg_third_match(ssched, sued_teams)
         _save_full_schedule_preview(season, nsched, ssched)
-        print(f"✅ Generated new schedule (first run) and saved to {schedule_path}")
+        # Removed for minimal output
+        # print(f"✅ Generated new schedule (first run) and saved to {schedule_path}")
 
     stats = init_stats()
     return {
@@ -854,35 +864,37 @@ def _print_tables(nord: pd.DataFrame, sued: pd.DataFrame, stats: pd.DataFrame) -
         return t.sort_values(["Points", "Goals For"], ascending=False)[
             ["Team", "Points", "Goals For", "Goals Against", "GD"]
         ]
-    print("\n📊 Tabelle Nord")
-    print(_prep(nord).to_string(index=False))
-    print("\n📊 Tabelle Süd")
-    print(_prep(sued).to_string(index=False))
+    # Removed print statements for cleaner output
+    # print("\n📊 Tabelle Nord")
+    # print(_prep(nord).to_string(index=False))
+    # print("\n📊 Tabelle Süd")
+    # print(_prep(sued).to_string(index=False))
     s = stats.copy()
     s["Points"] = s["Goals"] + s["Assists"]
     top20 = s.sort_values("Points", ascending=False).head(20)[
         ["Player", "Team", "Goals", "Assists", "Points"]
     ]
-    print("\n⭐ Top-20 Scorer")
-    print(top20.to_string(index=False))
+    # Removed print statements for cleaner output
+    # print("\n⭐ Top-20 Scorer")
+    # print(top20.to_string(index=False))
 
 
 # ------------------------------------------------
 # 6  SIMULATIONSGRUNDSÄTZE + LINEUPS + LINES (NEU)
 # ------------------------------------------------
-def _weighted_pick_by_gp(players: List[Dict[str, Any]], count: int, jitter_factor: float = 0.3) -> List[Dict[str, Any]]:
+def _weighted_pick_by_overall(players: List[Dict[str, Any]], count: int, jitter_factor: float = 1.0) -> List[Dict[str, Any]]:
     if not players or count <= 0:
         return []
 
     scored: List[Tuple[float, Dict[str, Any]]] = []
     for p in players:
-        gp_raw = p.get("GamesPlayed") or 0
+        overall_raw = p.get("overall") or 0
         try:
-            gp = int(gp_raw)
+            overall = float(overall_raw)
         except (TypeError, ValueError):
-            gp = 0
-        noise = random.uniform(-jitter_factor * max(gp, 1), jitter_factor * max(gp, 1))
-        score = gp + noise
+            overall = 0
+        noise = random.uniform(-jitter_factor * max(overall, 1), jitter_factor * max(overall, 1))
+        score = overall + noise
         scored.append((score, p))
 
     scored.sort(key=lambda x: x[0], reverse=True)
@@ -1035,11 +1047,11 @@ def build_lineup(
 
     # WICHTIG: Kopien erzeugen, damit wir das Save-Roster nicht mutieren
     picked: List[Dict[str, Any]] = []
-    picked.extend([dict(p) for p in _weighted_pick_by_gp(ds, min(n_def, len(ds)))])
-    picked.extend([dict(p) for p in _weighted_pick_by_gp(fs, min(n_fwd, len(fs)))])
+    picked.extend([dict(p) for p in _weighted_pick_by_overall(ds, min(n_def, len(ds)))])
+    picked.extend([dict(p) for p in _weighted_pick_by_overall(fs, min(n_fwd, len(fs)))])
 
     if gs:
-        picked.extend([dict(p) for p in _weighted_pick_by_gp(gs, min(n_goalies, len(gs)))])
+        picked.extend([dict(p) for p in _weighted_pick_by_overall(gs, min(n_goalies, len(gs)))])
     else:
         print("[WARN] Team ohne Goalies im Roster – kein G im Lineup.")
 
@@ -1060,12 +1072,13 @@ def build_lineup(
     g_count = sum(1 for p in unique_lineup if str(p.get("PositionGroup", "")).upper() == "G")
 
     if (d_count != n_def) or (f_count != n_fwd) or (g_count != n_goalies):
-        print(f"\n[DEBUG][Lineup Warnung] Team: {team_name}")
-        print(f"   → {d_count}D / {f_count}F / {g_count}G  (Soll: {n_def}D / {n_fwd}F / {n_goalies}G)")
-        if d_count < n_def:
-            print("   -> FEHLENDE Verteidiger:", n_def - d_count)
-        if f_count < n_fwd:
-            print("   -> FEHLENDE Stürmer:", n_def - d_count)
+        # Removed detailed lineup warning prints for cleaner output
+        # print(f"\n[DEBUG][Lineup Warnung] Team: {team_name}")
+        # print(f"   → {d_count}D / {f_count}F / {g_count}G  (Soll: {n_def}D / {n_fwd}F / {n_goalies}G)")
+        # if d_count < n_def:
+        #     print("   -> FEHLENDE Verteidiger:", n_def - d_count)
+        # if f_count < n_fwd:
+        #     print("   -> FEHLENDE Stürmer:", n_def - d_count)
         if g_count < n_goalies:
             print("   -> KEIN GOALIE verfügbar!")
 
@@ -1351,6 +1364,10 @@ def simulate_match(
 
     strength_home = calc_strength(r_h, True)
     strength_away = calc_strength(r_a, False)
+    
+    # Special print for Novadelta Panther games
+    if home == "Novadelta Panther" or away == "Novadelta Panther":
+        print(f"[NDP] {home} vs {away}: Home strength {strength_home:.2f}, Away strength {strength_away:.2f}")
     
     # Saisonale Form-Modulation
     form_home = seasonal_form_factor(matchday, home, run_id=run_id)
@@ -1893,18 +1910,14 @@ def step_regular_season_once() -> Dict[str, Any]:
     prepare_lineups_for_matches(nord, today_nord_matches)
 
     lineup_table_nord = _build_lineup_table(nord, today_nord_matches)
-    if not lineup_table_nord.empty:
-        print("\n📋 Lineups Nord (heute):")
-        print(lineup_table_nord.to_string(index=False))
     strength_nord = _build_strength_panel(nord, today_nord_matches)
-    if not strength_nord.empty:
-        print("\n⚖️ Stärkevergleich Nord:")
-        print(strength_nord.to_string(index=False))
 
     for m in today_nord_matches:
         s, j, replay = simulate_match(nord, *m, stats, "Nord", spieltag, run_id=seed_offset + run_counter)
         run_counter += 1
-        print(s)
+        # Special print for Novadelta Panther results
+        if m[0] == "Novadelta Panther" or m[1] == "Novadelta Panther":
+            print(s)
         results_json.append(j)
         replay_matches.append(replay)
 
@@ -1916,18 +1929,14 @@ def step_regular_season_once() -> Dict[str, Any]:
     prepare_lineups_for_matches(sued, today_sued_matches)
 
     lineup_table_sued = _build_lineup_table(sued, today_sued_matches)
-    if not lineup_table_sued.empty:
-        print("\n📋 Lineups Süd (heute):")
-        print(lineup_table_sued.to_string(index=False))
     strength_sued = _build_strength_panel(sued, today_sued_matches)
-    if not strength_sued.empty:
-        print("\n⚖️ Stärkevergleich Süd:")
-        print(strength_sued.to_string(index=False))
 
     for m in today_sued_matches:
         s, j, replay = simulate_match(sued, *m, stats, "Süd", spieltag, run_id=seed_offset + run_counter)
         run_counter += 1
-        print(s)
+        # Special print for Novadelta Panther results
+        if m[0] == "Novadelta Panther" or m[1] == "Novadelta Panther":
+            print(s)
         results_json.append(j)
         replay_matches.append(replay)
 
@@ -1937,6 +1946,11 @@ def step_regular_season_once() -> Dict[str, Any]:
         "nord_matches": _build_debug_matches_payload(nord, today_nord_matches),
         "sued_matches": _build_debug_matches_payload(sued, today_sued_matches),
     }
+
+    # Save df_stats and debug to saison_01 folder
+    df_stats = pd.DataFrame(results_json)
+    _save_json(DATA_DIR / "saison_01", f"df_stats_spieltag_{spieltag:02}.json", df_stats.to_dict('records'))
+    _save_json(DATA_DIR / "saison_01", f"stats_dataframe_debug_spieltag_{spieltag:02}.json", debug_payload)
 
     # NEU: Lineups payload (Nord+Süd zusammenführen)
     lineups_payload: Dict[str, Any] = {}
@@ -2036,27 +2050,41 @@ def step_regular_season_once() -> Dict[str, Any]:
             with lineup_json_path.open("r", encoding="utf-8") as f:
                 lineup_json = json.load(f)
             
-            # Build stats for this matchday only (no accumulation)
+            # Load existing stats for deltas
+            existing_stats = load_existing_player_stats(STATS_DIR, season)
+            
+            # Load df_stats for player goals/assists
+            df_stats_path = DATA_DIR / "saison_01" / f"df_stats_spieltag_{spieltag:02}.json"
+            if df_stats_path.exists():
+                with df_stats_path.open("r", encoding="utf-8") as f:
+                    df_stats_list = json.load(f)
+                df_stats_df = pd.DataFrame(df_stats_list)
+            else:
+                df_stats_df = pd.DataFrame()
+            
+            # Build stats for this matchday (deltas)
             all_teams = nord_teams + sued_teams
             matchday_stats = build_player_stats_for_matchday(
                 lineup_json=lineup_json,
-                player_stats_df=stats,
+                player_stats_df=df_stats_df,
                 all_teams=all_teams,
+                previous_stats=existing_stats,
             )
 
-            # Write per-Spieltag snapshot (not cumulative)
+            # Merge into cumulative
+            updated_stats = merge_into_season_player_stats(existing_stats, matchday_stats)
+            
+            # Write per-Spieltag snapshot (cumulative)
             write_player_stats_files(
                 base_stats_dir=STATS_DIR / season_folder(season),
                 season=season,
                 spieltag=spieltag,
-                stats_obj=matchday_stats,
+                stats_obj=updated_stats,
                 all_teams=all_teams,
                 only_snapshot=True
             )
 
-            # Now update cumulative stats for latest.json
-            existing_stats = load_existing_player_stats(STATS_DIR, season)
-            updated_stats = merge_into_season_player_stats(existing_stats, matchday_stats)
+            # Write latest (cumulative)
             write_player_stats_files(
                 base_stats_dir=STATS_DIR / season_folder(season),
                 season=season,
