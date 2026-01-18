@@ -124,7 +124,8 @@ def _collect_gp_from_lineup(lineup_json: Dict[str, Any]) -> Dict[str, Dict[str, 
                 if not player.get("rotation", False):
                     pid = player["id"]
                     if pid not in gp_map:
-                        gp_map[pid] = {"gp": 1, "pos": "F"}
+                        gp_map[pid] = {"gp": 0, "pos": "F"}
+                    gp_map[pid]["gp"] += 1
         
         # Defense
         def_data = team_data.get("defense", {})
@@ -134,16 +135,17 @@ def _collect_gp_from_lineup(lineup_json: Dict[str, Any]) -> Dict[str, Dict[str, 
                 if not player.get("rotation", False):
                     pid = player["id"]
                     if pid not in gp_map:
-                        gp_map[pid] = {"gp": 1, "pos": "D"}
+                        gp_map[pid] = {"gp": 0, "pos": "D"}
+                    gp_map[pid]["gp"] += 1
         
         # Goalie (single object, always starter)
         goalie = team_data.get("goalie")
         if goalie and isinstance(goalie, dict):
             pid = goalie["id"]
             if pid not in gp_map:
-                gp_map[pid] = {"gp": 1, "gs": 1, "pos": "G"}
-            else:
-                gp_map[pid]["gs"] = gp_map[pid].get("gs", 0) + 1
+                gp_map[pid] = {"gp": 0, "gs": 0, "pos": "G"}
+            gp_map[pid]["gp"] += 1
+            gp_map[pid]["gs"] = gp_map[pid].get("gs", 0) + 1
     
     return gp_map
 
@@ -191,36 +193,6 @@ def _map_player_name_to_id(player_stats_df: pd.DataFrame, all_teams: List[Dict[s
     return name_to_id
 
 
-def _dressed_set_from_lineups(teams_payload: dict) -> set[str]:
-    dressed = set()
-    for team, snap in (teams_payload or {}).items():
-        if not isinstance(snap, dict):
-            continue
-
-        fw = snap.get("forwards") or {}
-        for _, arr in fw.items():
-            if isinstance(arr, list):
-                for p in arr:
-                    pid = p.get("id") or p.get("name")
-                    if pid:
-                        dressed.add(pid)
-
-        df = snap.get("defense") or {}
-        for _, arr in df.items():
-            if isinstance(arr, list):
-                for p in arr:
-                    pid = p.get("id") or p.get("name")
-                    if pid:
-                        dressed.add(pid)
-
-        g = snap.get("goalie")
-        if isinstance(g, dict):
-            pid = g.get("id") or g.get("name")
-            if pid:
-                dressed.add(pid)
-    return dressed
-
-
 def build_player_stats_for_matchday(
     lineup_json: Dict[str, Any],
     player_stats_df: pd.DataFrame,
@@ -238,9 +210,8 @@ def build_player_stats_for_matchday(
     Returns:
         Dict mapping player_id -> stats dict
     """
-    # Get dressed players
-    teams_payload = lineup_json.get("teams", {})
-    dressed = _dressed_set_from_lineups(teams_payload)
+    # Get GP from lineups
+    gp_map = _collect_gp_from_lineup(lineup_json)
     
     # Map names to IDs
     name_to_id = _map_player_name_to_id(player_stats_df, all_teams)
@@ -279,16 +250,22 @@ def build_player_stats_for_matchday(
     # Build stats map
     stats_map: Dict[str, Dict[str, Any]] = {}
     
-    # First, add all players from dressed (ensures GP is set for this matchday)
-    for player_id in dressed:
-        canonical_id = name_to_id.get(player_id) or player_id  # Fallback to id if no mapping
+    # First, add all players from lineups (ensures GP is always set)
+    for player_name, gp_data in gp_map.items():
+        canonical_id = name_to_id.get(player_name)
+        # Wenn kein Mapping existiert, überspringen (verhindert Namen als ID)
+        if not canonical_id:
+            continue
+        # Optional: Nur IDs akzeptieren, die in der Mapping-Datei stehen
         if mapping_ids and canonical_id not in mapping_ids:
             continue
 
         stats_map[canonical_id] = {
-            "pos": "F",  # Default, can be improved
-            "gp": 1,
+            "pos": gp_data["pos"],
+            "gp": gp_data["gp"],
         }
+        if "gs" in gp_data:
+            stats_map[canonical_id]["gs"] = gp_data["gs"]
         
         # Add name if available
         if canonical_id in id_to_name:
@@ -316,26 +293,16 @@ def build_player_stats_for_matchday(
             goals = max(0, goals - prev_g)
             assists = max(0, assists - prev_a)
         
-        # Only include players with stats if they were dressed (in lineup)
-        if player_id not in stats_map:
-            # Skip players with goals/assists who weren't in the lineup
+        # Only add if player exists in lineup (has GP)
+        if player_id in stats_map:
+            if goals > 0:
+                stats_map[player_id]["g"] = int(goals)
+            if assists > 0:
+                stats_map[player_id]["a"] = int(assists)
+            
+            # Calculate points if we have both
             if goals > 0 or assists > 0:
-                continue
-            # For players with no stats, still add them if needed (but they shouldn't have stats)
-            stats_map[player_id] = {
-                "pos": "F",  # Default
-            }
-            if player_id in id_to_name:
-                stats_map[player_id]["name"] = id_to_name[player_id]
-        
-        if goals > 0:
-            stats_map[player_id]["g"] = int(goals)
-        if assists > 0:
-            stats_map[player_id]["a"] = int(assists)
-        
-        # Calculate points if we have both
-        if goals > 0 or assists > 0:
-            stats_map[player_id]["pts"] = int(goals + assists)
+                stats_map[player_id]["pts"] = int(goals + assists)
     
     return stats_map
 

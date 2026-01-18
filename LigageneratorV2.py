@@ -12,6 +12,9 @@ import math
 import os
 import re
 
+# Define APP_DIR as the directory containing this script
+APP_DIR = Path(__file__).parent.resolve()
+
 from narrative_engine import build_narratives_for_matchday, write_narratives_json
 from starting_six import generate_starting_six
 from player_stats_export import (
@@ -1673,6 +1676,9 @@ def simulate_match(
         "events": events,
     }
 
+    # Spieler-Statistiken für dieses Spiel extrahieren
+    player_stats = stats[(stats["Team"].isin([home, away])) & ((stats["Goals"] > 0) | (stats["Assists"] > 0))]
+    res_json["player_stats"] = player_stats[["Player", "Team", "Goals", "Assists"]].to_dict("records")
     return res_str, res_json, replay_struct
 
 
@@ -1949,8 +1955,8 @@ def step_regular_season_once() -> Dict[str, Any]:
 
     # Save df_stats and debug to saison_01 folder
     df_stats = pd.DataFrame(results_json)
-    _save_json(DATA_DIR / "saison_01", f"df_stats_spieltag_{spieltag:02}.json", df_stats.to_dict('records'))
-    _save_json(DATA_DIR / "saison_01", f"stats_dataframe_debug_spieltag_{spieltag:02}.json", debug_payload)
+    _save_json(APP_DIR / "data" / "saison_01", f"df_stats_spieltag_{spieltag:02}.json", df_stats.to_dict('records'))
+    _save_json(APP_DIR / "data" / "saison_01", f"stats_dataframe_debug_spieltag_{spieltag:02}.json", debug_payload)
 
     # NEU: Lineups payload (Nord+Süd zusammenführen)
     lineups_payload: Dict[str, Any] = {}
@@ -2054,11 +2060,15 @@ def step_regular_season_once() -> Dict[str, Any]:
             existing_stats = load_existing_player_stats(STATS_DIR, season)
             
             # Load df_stats for player goals/assists
-            df_stats_path = DATA_DIR / "saison_01" / f"df_stats_spieltag_{spieltag:02}.json"
+            df_stats_path = APP_DIR / "data" / "saison_01" / f"df_stats_spieltag_{spieltag:02}.json"
             if df_stats_path.exists():
                 with df_stats_path.open("r", encoding="utf-8") as f:
                     df_stats_list = json.load(f)
-                df_stats_df = pd.DataFrame(df_stats_list)
+                # Extrahiere alle player_stats aus allen Spielen
+                player_stats_records = []
+                for match in df_stats_list:
+                    player_stats_records.extend(match.get("player_stats", []))
+                df_stats_df = pd.DataFrame(player_stats_records)
             else:
                 df_stats_df = pd.DataFrame()
             
